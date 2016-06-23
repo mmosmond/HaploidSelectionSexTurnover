@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     29462,        794]
-NotebookOptionsPosition[     27078,        714]
-NotebookOutlinePosition[     27464,        731]
-CellTagsIndexPosition[     27421,        728]
+NotebookDataLength[     35791,        978]
+NotebookOptionsPosition[     32912,        882]
+NotebookOutlinePosition[     33298,        899]
+CellTagsIndexPosition[     33255,        896]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -708,6 +708,174 @@ Cell[BoxData[
    3.675707123327277*^9}, {3.6757071925330353`*^9, 3.675707319486848*^9}, 
    3.675707513296742*^9, 3.67570768217498*^9, {3.675710857628578*^9, 
    3.675710885875184*^9}, {3.675711222477412*^9, 3.67571122814371*^9}}]
+}, Open  ]],
+
+Cell["\<\
+Instead of solving for the genotype frequencies we will instead solve for the \
+difference in the frequency of A in the different gamete/pollen types.\
+\>", "Text",
+ CellChangeTimes->{{3.6757135825548286`*^9, 3.675713633862471*^9}, 
+   3.6757138892769423`*^9}],
+
+Cell["\<\
+The difference in the frequency of A with X in females and X in males is (at \
+equilibrium to first order in selection)\
+\>", "Text",
+ CellChangeTimes->{{3.6757138909855633`*^9, 3.675713959445539*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqdpAXfXm", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"recursions1", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", "0"}], "/.", 
+     RowBox[{"XAf1", "\[Rule]", 
+      RowBox[{"dpAXfXm", "+", "XAm1"}]}]}], ",", "dpAXfXm"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.67571264493021*^9, 3.675712689537509*^9}, {
+  3.675712721625124*^9, 3.675712730987232*^9}, {3.6757136496293707`*^9, 
+  3.6757136649001226`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"dpAXfXm", "\[Rule]", 
+    RowBox[{
+     RowBox[{"2", " ", "hAf", " ", "pA", " ", "sAf"}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["pA", "2"], " ", "sAf"}], "-", 
+     RowBox[{"6", " ", "hAf", " ", 
+      SuperscriptBox["pA", "2"], " ", "sAf"}], "-", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["pA", "3"], " ", "sAf"}], "+", 
+     RowBox[{"4", " ", "hAf", " ", 
+      SuperscriptBox["pA", "3"], " ", "sAf"}], "+", 
+     RowBox[{"pA", " ", "t"}], "-", 
+     RowBox[{
+      SuperscriptBox["pA", "2"], " ", "t"}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.675712649738289*^9, 3.675712661484269*^9}, 
+   3.675712732353135*^9, 3.6757136656167507`*^9}]
+}, Open  ]],
+
+Cell["\<\
+The difference in the frequency of A with X in males and Y is (at equilibrium \
+to first order in selection)\
+\>", "Text",
+ CellChangeTimes->{{3.675713966791181*^9, 3.6757139830606413`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqdpAXmY", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"recursions1", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", "0"}], "/.", 
+       RowBox[{"XAf1", "\[Rule]", 
+        RowBox[{"dpAXfXm", "+", "XAm1"}]}]}], "/.", "eqdpAXfXm"}], "/.", 
+     RowBox[{"XAm1", "\[Rule]", 
+      RowBox[{"dpAXmY", "+", "YA1"}]}]}], ",", "dpAXmY"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6757127688027287`*^9, 3.675712794290226*^9}, {
+  3.6757128674967947`*^9, 3.675712955948361*^9}, {3.675713232210559*^9, 
+  3.675713326592478*^9}, {3.675713674096274*^9, 3.6757136876868258`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"dpAXmY", "\[Rule]", 
+    RowBox[{
+     FractionBox["1", "r"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", "hAf", " ", "pA", " ", "sAf"}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["pA", "2"], " ", "sAf"}], "-", 
+       RowBox[{"6", " ", "hAf", " ", 
+        SuperscriptBox["pA", "2"], " ", "sAf"}], "-", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["pA", "3"], " ", "sAf"}], "+", 
+       RowBox[{"4", " ", "hAf", " ", 
+        SuperscriptBox["pA", "3"], " ", "sAf"}], "-", 
+       RowBox[{"2", " ", "hAf", " ", "pA", " ", "r", " ", "sAf"}], "-", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["pA", "2"], " ", "r", " ", "sAf"}], "+", 
+       RowBox[{"6", " ", "hAf", " ", 
+        SuperscriptBox["pA", "2"], " ", "r", " ", "sAf"}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["pA", "3"], " ", "r", " ", "sAf"}], "-", 
+       RowBox[{"4", " ", "hAf", " ", 
+        SuperscriptBox["pA", "3"], " ", "r", " ", "sAf"}], "+", 
+       RowBox[{"hAm", " ", "pA", " ", "sAm"}], "+", 
+       RowBox[{
+        SuperscriptBox["pA", "2"], " ", "sAm"}], "-", 
+       RowBox[{"3", " ", "hAm", " ", 
+        SuperscriptBox["pA", "2"], " ", "sAm"}], "-", 
+       RowBox[{
+        SuperscriptBox["pA", "3"], " ", "sAm"}], "+", 
+       RowBox[{"2", " ", "hAm", " ", 
+        SuperscriptBox["pA", "3"], " ", "sAm"}], "+", 
+       RowBox[{"pA", " ", "t"}], "-", 
+       RowBox[{
+        SuperscriptBox["pA", "2"], " ", "t"}]}], ")"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.675713327517667*^9, {3.675713675336254*^9, 3.6757136899362087`*^9}}]
+}, Open  ]],
+
+Cell["\<\
+The difference in the frequency of A with X in females and Y is (at \
+equilibrium to first order in selection)\
+\>", "Text",
+ CellChangeTimes->{{3.675713993050933*^9, 3.6757140012817707`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqdpAXfY", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"recursions1", "[", 
+       RowBox[{"[", "3", "]"}], "]"}], "\[Equal]", "0"}], "/.", 
+     RowBox[{"XAf1", "\[Rule]", 
+      RowBox[{"dpAXfY", "+", "YA1"}]}]}], ",", "dpAXfY"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6757133432729*^9, 3.6757133796267223`*^9}, {
+  3.675713699819319*^9, 3.675713703005155*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"dpAXfY", "\[Rule]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "hAm"}], " ", "pA", " ", "sAm"}], "-", 
+      RowBox[{
+       SuperscriptBox["pA", "2"], " ", "sAm"}], "+", 
+      RowBox[{"3", " ", "hAm", " ", 
+       SuperscriptBox["pA", "2"], " ", "sAm"}], "+", 
+      RowBox[{
+       SuperscriptBox["pA", "3"], " ", "sAm"}], "-", 
+      RowBox[{"2", " ", "hAm", " ", 
+       SuperscriptBox["pA", "3"], " ", "sAm"}], "-", 
+      RowBox[{"pA", " ", "t"}], "+", 
+      RowBox[{
+       SuperscriptBox["pA", "2"], " ", "t"}], "+", 
+      RowBox[{"pA", " ", "r", " ", "t"}], "-", 
+      RowBox[{
+       SuperscriptBox["pA", "2"], " ", "r", " ", "t"}]}], "r"]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.675713343667881*^9, 3.675713380152212*^9}, 
+   3.675713703634624*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -793,6 +961,22 @@ Cell[22853, 603, 398, 7, 37, "Text"],
 Cell[CellGroupData[{
 Cell[23276, 614, 1268, 31, 99, "Input"],
 Cell[24547, 647, 2491, 62, 120, "Output"]
+}, Open  ]],
+Cell[27053, 712, 270, 5, 61, "Text"],
+Cell[27326, 719, 211, 4, 37, "Text"],
+Cell[CellGroupData[{
+Cell[27562, 727, 490, 13, 35, "Input"],
+Cell[28055, 742, 725, 18, 42, "Output"]
+}, Open  ]],
+Cell[28795, 763, 200, 4, 37, "Text"],
+Cell[CellGroupData[{
+Cell[29020, 771, 675, 16, 35, "Input"],
+Cell[29698, 789, 1642, 40, 92, "Output"]
+}, Open  ]],
+Cell[31355, 832, 202, 4, 37, "Text"],
+Cell[CellGroupData[{
+Cell[31582, 840, 430, 11, 35, "Input"],
+Cell[32015, 853, 857, 24, 58, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
