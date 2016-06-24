@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     59505,       1658]
-NotebookOptionsPosition[     55190,       1515]
-NotebookOutlinePosition[     55577,       1532]
-CellTagsIndexPosition[     55534,       1529]
+NotebookDataLength[     59601,       1660]
+NotebookOptionsPosition[     55286,       1517]
+NotebookOutlinePosition[     55673,       1534]
+CellTagsIndexPosition[     55630,       1531]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1506,10 +1506,12 @@ Cell["Invasion of a neo-Y", "Section",
 
 Cell["\<\
 Now assume there is a rare mutation at a new locus y, which is a dominant \
-(over the X) masculinizing factor.\
+(over the X) masculinizing factor. Let the frequency of this mutation be py. \
+\
 \>", "Text",
  CellChangeTimes->{{3.675720991883067*^9, 3.675721005320488*^9}, {
-  3.675721610780181*^9, 3.675721650184535*^9}}]
+  3.675721610780181*^9, 3.675721650184535*^9}, {3.6757217143009653`*^9, 
+  3.675721740127996*^9}}]
 }, Open  ]]
 }, Open  ]]
 },
@@ -1657,7 +1659,7 @@ Cell[52526, 1453, 2227, 44, 301, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[54802, 1503, 108, 1, 100, "Section"],
-Cell[54913, 1506, 249, 5, 37, "Text"]
+Cell[54913, 1506, 345, 7, 61, "Text"]
 }, Open  ]]
 }, Open  ]]
 }
