@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     47647,       1319]
-NotebookOptionsPosition[     43949,       1197]
-NotebookOutlinePosition[     44336,       1214]
-CellTagsIndexPosition[     44293,       1211]
+NotebookDataLength[     59505,       1658]
+NotebookOptionsPosition[     55190,       1515]
+NotebookOutlinePosition[     55577,       1532]
+CellTagsIndexPosition[     55534,       1529]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1188,11 +1188,329 @@ Notice that when t=0 we have equation \[OpenCurlyDoubleQuote]avgpASubs\
 Sperm/pollen selection acts to increase the frequency of A (if selected for, \
 t>0).\
 \>", "Text",
- CellChangeTimes->{{3.675718177833785*^9, 3.6757182794849873`*^9}}]
-}, Closed]],
+ CellChangeTimes->{{3.675718177833785*^9, 3.6757182794849873`*^9}}],
+
+Cell["\<\
+Notice that, without sperm/pollen competition, the non-trivial equilibrium \
+does not exist when there is no sexually antagonistic selection\
+\>", "Text",
+ CellChangeTimes->{{3.675721309214287*^9, 3.6757213820811357`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"0", "<", "pA"}], "/.", 
+       RowBox[{"eqpA", "[", 
+        RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
+      RowBox[{"t", "\[Rule]", "0"}]}], ")"}], "&&", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"1", ">", "pA"}], "/.", 
+       RowBox[{"eqpA", "[", 
+        RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
+      RowBox[{"t", "\[Rule]", "0"}]}], ")"}], "&&", 
+    RowBox[{"sAm", ">", "0"}], "&&", 
+    RowBox[{"sAf", ">", "0"}], "&&", 
+    RowBox[{"hAf", ">", "0"}], "&&", 
+    RowBox[{"hAm", ">", "0"}], "&&", 
+    RowBox[{"hAf", "<", "1"}], "&&", 
+    RowBox[{"hAm", "<", "1"}]}], ",", "Reals"}], "]"}]], "Input",
+ CellChangeTimes->{{3.675721205546542*^9, 3.6757213041340637`*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{{3.6757212132856903`*^9, 3.675721304688283*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"0", "<", "pA"}], "/.", 
+       RowBox[{"eqpA", "[", 
+        RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
+      RowBox[{"t", "\[Rule]", "0"}]}], ")"}], "&&", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"1", ">", "pA"}], "/.", 
+       RowBox[{"eqpA", "[", 
+        RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
+      RowBox[{"t", "\[Rule]", "0"}]}], ")"}], "&&", 
+    RowBox[{"sAm", "<", "0"}], "&&", 
+    RowBox[{"sAf", "<", "0"}], "&&", 
+    RowBox[{"hAf", ">", "0"}], "&&", 
+    RowBox[{"hAm", ">", "0"}], "&&", 
+    RowBox[{"hAf", "<", "1"}], "&&", 
+    RowBox[{"hAm", "<", "1"}]}], ",", "Reals"}], "]"}]], "Input",
+ CellChangeTimes->{{3.675721356822701*^9, 3.675721358972645*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.675721359354959*^9}]
+}, Open  ]],
+
+Cell["\<\
+But with sperm/pollen competition it can exist, even without sexually \
+antagonistic selection\
+\>", "Text",
+ CellChangeTimes->{{3.6757213615608473`*^9, 3.6757213940767937`*^9}, {
+  3.675721438770338*^9, 3.675721440381878*^9}, {3.675721584413671*^9, 
+  3.6757215921481323`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"0", "<", "pA"}], "/.", 
+      RowBox[{"eqpA", "[", 
+       RowBox[{"[", "3", "]"}], "]"}]}], ")"}], "&&", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"1", ">", "pA"}], "/.", 
+      RowBox[{"eqpA", "[", 
+       RowBox[{"[", "3", "]"}], "]"}]}], ")"}], "&&", 
+    RowBox[{"sAm", "<", "0"}], "&&", 
+    RowBox[{"sAf", "<", "0"}], "&&", 
+    RowBox[{"hAf", ">", "0"}], "&&", 
+    RowBox[{"hAm", ">", "0"}], "&&", 
+    RowBox[{"hAf", "<", "1"}], "&&", 
+    RowBox[{"hAm", "<", "1"}], "&&", 
+    RowBox[{"t", ">", "0"}]}], ",", "Reals"}], "]"}]], "Input",
+ CellChangeTimes->{{3.675721404126423*^9, 3.6757214202988453`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sAm", "<", "0"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"sAf", "\[LessEqual]", "sAm"}], "&&", 
+      RowBox[{"0", "<", "hAm", "<", "1"}], "&&", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"0", "<", "hAf", "<", 
+           FractionBox[
+            RowBox[{"sAf", "+", "sAm", "-", 
+             RowBox[{"2", " ", "hAm", " ", "sAm"}]}], 
+            RowBox[{"2", " ", "sAf"}]]}], "&&", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "hAf"}], " ", "sAf"}], "-", 
+            RowBox[{"hAm", " ", "sAm"}]}], "<", "t", "<", 
+           RowBox[{
+            RowBox[{"-", "sAf"}], "+", 
+            RowBox[{"hAf", " ", "sAf"}], "-", "sAm", "+", 
+            RowBox[{"hAm", " ", "sAm"}]}]}]}], ")"}], "||", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"sAf", "+", "sAm", "-", 
+             RowBox[{"2", " ", "hAm", " ", "sAm"}]}], 
+            RowBox[{"2", " ", "sAf"}]], "<", "hAf", "<", "1"}], "&&", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "sAf"}], "+", 
+            RowBox[{"hAf", " ", "sAf"}], "-", "sAm", "+", 
+            RowBox[{"hAm", " ", "sAm"}]}], "<", "t", "<", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "hAf"}], " ", "sAf"}], "-", 
+            RowBox[{"hAm", " ", "sAm"}]}]}]}], ")"}]}], ")"}]}], ")"}], "||", 
+    
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"sAm", "<", "sAf", "<", "0"}], "&&", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"0", "<", "hAm", "\[LessEqual]", 
+           FractionBox[
+            RowBox[{
+             RowBox[{"-", "sAf"}], "+", "sAm"}], 
+            RowBox[{"2", " ", "sAm"}]]}], "&&", 
+          RowBox[{"0", "<", "hAf", "<", "1"}], "&&", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "hAf"}], " ", "sAf"}], "-", 
+            RowBox[{"hAm", " ", "sAm"}]}], "<", "t", "<", 
+           RowBox[{
+            RowBox[{"-", "sAf"}], "+", 
+            RowBox[{"hAf", " ", "sAf"}], "-", "sAm", "+", 
+            RowBox[{"hAm", " ", "sAm"}]}]}]}], ")"}], "||", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{
+             RowBox[{"-", "sAf"}], "+", "sAm"}], 
+            RowBox[{"2", " ", "sAm"}]], "<", "hAm", "<", 
+           FractionBox[
+            RowBox[{"sAf", "+", "sAm"}], 
+            RowBox[{"2", " ", "sAm"}]]}], "&&", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"0", "<", "hAf", "<", 
+               FractionBox[
+                RowBox[{"sAf", "+", "sAm", "-", 
+                 RowBox[{"2", " ", "hAm", " ", "sAm"}]}], 
+                RowBox[{"2", " ", "sAf"}]]}], "&&", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "hAf"}], " ", "sAf"}], "-", 
+                RowBox[{"hAm", " ", "sAm"}]}], "<", "t", "<", 
+               RowBox[{
+                RowBox[{"-", "sAf"}], "+", 
+                RowBox[{"hAf", " ", "sAf"}], "-", "sAm", "+", 
+                RowBox[{"hAm", " ", "sAm"}]}]}]}], ")"}], "||", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               FractionBox[
+                RowBox[{"sAf", "+", "sAm", "-", 
+                 RowBox[{"2", " ", "hAm", " ", "sAm"}]}], 
+                RowBox[{"2", " ", "sAf"}]], "<", "hAf", "<", "1"}], "&&", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "sAf"}], "+", 
+                RowBox[{"hAf", " ", "sAf"}], "-", "sAm", "+", 
+                RowBox[{"hAm", " ", "sAm"}]}], "<", "t", "<", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "hAf"}], " ", "sAf"}], "-", 
+                RowBox[{"hAm", " ", "sAm"}]}]}]}], ")"}]}], ")"}]}], ")"}], "||", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"sAf", "+", "sAm"}], 
+            RowBox[{"2", " ", "sAm"}]], "\[LessEqual]", "hAm", "<", "1"}], "&&", 
+          RowBox[{"0", "<", "hAf", "<", "1"}], "&&", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "sAf"}], "+", 
+            RowBox[{"hAf", " ", "sAf"}], "-", "sAm", "+", 
+            RowBox[{"hAm", " ", "sAm"}]}], "<", "t", "<", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "hAf"}], " ", "sAf"}], "-", 
+            RowBox[{"hAm", " ", "sAm"}]}]}]}], ")"}]}], ")"}]}], ")"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{{3.675721408263239*^9, 3.675721421048749*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"pA", "/.", 
+          RowBox[{"eqpA", "[", 
+           RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
+         RowBox[{"sAf", "\[Rule]", 
+          RowBox[{"-", "s"}]}]}], "/.", 
+        RowBox[{"sAm", "\[Rule]", 
+         RowBox[{"-", "s"}]}]}], "/.", 
+       RowBox[{"hAf", "\[Rule]", "h"}]}], "/.", 
+      RowBox[{"hAm", "\[Rule]", "h"}]}], "/.", 
+     RowBox[{"s", "\[Rule]", 
+      RowBox[{"1", "/", "10"}]}]}], "/.", 
+    RowBox[{"h", "\[Rule]", "1"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"1", "/", "10"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.67572144834195*^9, 3.675721547741859*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJwV0HlYjAkAx/GRikh6NKZpipUnzDqSotJqfypCaJNOBqkYrN2KiJERagtT
+ikRlUDqUjJnoeNmp7emwelJylA68HdMxNfNuzXZf2/7xfb7/f4x9A1yPqNFo
+tN3T/f9UORH8LtL456qbEaNTUxROqC38K5dOA2dytm/RJIVBJk98k64LxUnB
+29AJCpvScth8+hLMc7p9b2SUwvfucv8zdDM4q6dYqgYoSAQf1ILom/H+3J+n
+OnoosL59qf2d7oK6wyp5VT2Fak0O8RvdB98tDjclPqdAb9ntHV0SiA0DV3iB
+XhSCzJPbNGTnMPsfw/J5sygsDr6hqAkIg5IVVOJQoMRo0OGpnNJwMP20Q/N9
+lBD9qMNMfheF4vbFrdR8JTzVPzoamEYj+2qI5tFCBZKj9Bl0aSyyXAXNwb4K
+DPWYaZsU3cLS/cyDTgsUqPbxmBcqjwcZJhdyXvcizrwzrrkvASzS4tqGE70I
+FJYGaVD3wA3YuDyT1YtKgxzOWf1kjBhGXHYv64GuaqqSYgmhqbY9qvJ0D2q/
+Htoi2fEQXhp7doca9aBeHCFYVPAIUmtGWUWFHJuM4wo78lPwIN21o/6sHAeS
+lsr3VqWibO3nimVL5BgoOX5ga81j+KuqXW1qurGz37KusTMNOz7pCG+EdMOU
+ygp1G0uHvWxO4hnjbvyR9MHfdTwD+Wv5m5fXduG+82XXfxc8QeBdqww9XhfY
+Etllln4W0qyPFbxhd8GepL6ZMLLRq+XOozd0woAZZvdx5VOcH44cE17pBHey
+XKaxJgdhS8zZynWdOK2Iu9m85RmqjizVu9DYAe2smdy7niKsaap+/ii8Ayy9
+VWF1ns+hdb1/SLC+Ayr7kzXNlmKwPTiTeV9liP8ovBRbKEbZfltxukCGUKdU
+x3wrCU7HNeqZ2spQWn5cV1QiwdF26QZVRzu2MrXHuPa5qAtkzryU0I5lAUFd
+qne5uM4iYrahHZuFkkE7lxconHhfXqdoQ6qkzFDt/QuM6aaLJoVt8KtMcojf
+9xJX7Yrd/ba14dCrnYKuppeIeOryJGawFa9ExfU6x/JQZc4mBh+0gnNN0yaz
+Lw8r5K8vDG1vxcaf2NIZp/Ix0VjRXTTcguA+bQfTiXwwu/UZpSktkPOruo0u
+FUBkRiqiXVqQ2X8w8+JkAbye+If00VpQeuIlVxxViG22a4vjskmwXrVvT9ci
+IJ4blDvsTWLiojpLNpeA/TppTawXCdLOpMdEh8AnDy0F25NExlu/6LQFBEZS
+UlZ4u5GwaGitfWxIwM76w33CmcSuYXJf6hoCtf4WkTwHEhctv558uIdAv3Rg
+//hqEj6j47bf9xIIb7M7H7+KxJYio/k/eBBgaMUkrF5JYo4jR/JgHwEbt+W1
+nBUkEtybBoR+BK7KPRylxiREwQ38+2cI0PULzfgMEnHWI780hxDI2KTuzFhI
+InicaWzEI2Dt6/KrSI+ETbhXaTKfAOdZV/o3XRJvbtfPSo4kkOZgYIi5JLI9
+h740XiNgefyIdb0WiRhD/WyWgMDfMRL3gNkk3B577EqKJdDbsCP2oQYJK+7Z
+RY23CPCn7jyzUp/2W5WgNLhDQHdZa2WN2rSfMq/Y+y6BVCfTLu6Mab/cz7GJ
+iQTWB/I0aDQS/wFx+WwU
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0.5},
+  Method->{},
+  PlotRange->NCache[{{0, 
+      Rational[1, 10]}, {0.5000000102040816, 0.9999999897959184}}, {{
+     0, 0.1}, {0.5000000102040816, 0.9999999897959184}}],
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{{3.675721496083349*^9, 3.675721548166576*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell["Invasion of a neo-Y", "Section",
- CellChangeTimes->{{3.6757182993973627`*^9, 3.6757183075776167`*^9}}]
+ CellChangeTimes->{{3.6757182993973627`*^9, 3.6757183075776167`*^9}}],
+
+Cell["\<\
+Now assume there is a rare mutation at a new locus y, which is a dominant \
+(over the X) masculinizing factor.\
+\>", "Text",
+ CellChangeTimes->{{3.675720991883067*^9, 3.675721005320488*^9}, {
+  3.675721610780181*^9, 3.675721650184535*^9}}]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1166, 539},
@@ -1317,9 +1635,30 @@ Cell[CellGroupData[{
 Cell[42358, 1149, 384, 10, 36, "Input"],
 Cell[42745, 1161, 729, 20, 56, "Output"]
 }, Open  ]],
-Cell[43489, 1184, 321, 6, 61, "Text"]
-}, Closed]],
-Cell[43825, 1193, 108, 1, 62, "Section"]
+Cell[43489, 1184, 321, 6, 61, "Text"],
+Cell[43813, 1192, 232, 4, 61, "Text"],
+Cell[CellGroupData[{
+Cell[44070, 1200, 821, 24, 57, "Input"],
+Cell[44894, 1226, 100, 1, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45031, 1232, 819, 24, 57, "Input"],
+Cell[45853, 1258, 74, 1, 35, "Output"]
+}, Open  ]],
+Cell[45942, 1262, 288, 6, 37, "Text"],
+Cell[CellGroupData[{
+Cell[46255, 1272, 729, 21, 57, "Input"],
+Cell[46987, 1295, 4712, 127, 368, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51736, 1427, 787, 24, 35, "Input"],
+Cell[52526, 1453, 2227, 44, 301, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54802, 1503, 108, 1, 100, "Section"],
+Cell[54913, 1506, 249, 5, 37, "Text"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
