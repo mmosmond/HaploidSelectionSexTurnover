@@ -1,0 +1,4997 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[    175829,       4988]
+NotebookOptionsPosition[    162570,       4575]
+NotebookOutlinePosition[    162956,       4592]
+CellTagsIndexPosition[    162913,       4589]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+SPERM/POLLEN COMPETITION DRIVES SEX CHROMOSOME TURNOVER\
+\>", "Title",
+ CellChangeTimes->{{3.676590571514082*^9, 3.676590585133037*^9}, {
+  3.6765906987978487`*^9, 3.676590709515203*^9}}],
+
+Cell["Michael Scott & Matthew Osmond", "Subtitle",
+ CellChangeTimes->{{3.6756909919076443`*^9, 3.675690999875959*^9}}],
+
+Cell["\<\
+This is much like van Doorn & Kirkpatrick 2007 (Nature 449:909), but with \
+sperm/pollen competition as well. Our hypothesis is that ploidally \
+antagonistic selection will remove the need for sexually antagonistic \
+selection to drive sex chromosome turnover.\t\
+\>", "Text",
+ CellChangeTimes->{{3.675719638233714*^9, 3.675719730889935*^9}, {
+  3.6761377614286613`*^9, 3.6761378391307373`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+1 - Sexually-antagonistic locus on the sex chromosome\
+\>", "Title",
+ CellChangeTimes->{{3.676582480718354*^9, 3.676582483582519*^9}, 
+   3.676583567519174*^9, {3.676583924245014*^9, 3.676583948032938*^9}, 
+   3.676590428624207*^9, 3.676590623083665*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Recursion equations", "Section",
+ CellChangeTimes->{{3.6756910197792797`*^9, 3.675691024113359*^9}, {
+   3.67569412935745*^9, 3.6756941314240303`*^9}, {3.675707349839982*^9, 
+   3.675707351884247*^9}, {3.675709974013658*^9, 3.675709982915987*^9}, {
+   3.6757923469668207`*^9, 3.675792350124728*^9}, {3.6761413144270782`*^9, 
+   3.676141323737258*^9}, {3.676142978381001*^9, 3.67614297923321*^9}, 
+   3.676199586158256*^9, 3.676206073928619*^9, {3.6765825189533577`*^9, 
+   3.676582521678049*^9}}],
+
+Cell["\<\
+We start with haploid selection, which occurs in sperm/pollen only. Let XAm \
+be the frequency of allele 1 at the diallelic autosomal locus A in \
+gametes/pollen with an X allele at the original diallelic sex-determining \
+locus (ie the frequency of A1 in male gametes with X chromosomes). Let YA be \
+the frequency of allele 1 at the diallelic autosomal locus A in \
+gametes/pollen with a Y allele at the diallelic sex-determining locus (ie the \
+frequency of A1 in male gametes with Y chromosomes). Let XAf be the frequency \
+of allele 1 at the diallelic autosomal locus A in eggs (which necessarily \
+have an X allele at the original diallelic sex-determining locus). And let yA \
+be the frequency of allele 1 at the diallelic autosomal locus A in \
+pollen/sperm with a new dominant macculinizing (ie a neo-y) mutation. We \
+assume males make \[Alpha]% of their sperm/pollen with Y (or y). After \
+selection on male gametes/pollen we then have\
+\>", "Text",
+ CellChangeTimes->{{3.675646210075425*^9, 3.6756462139879293`*^9}, {
+  3.675692881948024*^9, 3.675692905462323*^9}, {3.675702634397826*^9, 
+  3.6757026600570383`*^9}, {3.675710000498989*^9, 3.675710437600037*^9}, {
+  3.6757106247367887`*^9, 3.675710626158669*^9}, {3.6761379095010347`*^9, 
+  3.676137962328772*^9}, {3.676584792355638*^9, 3.6765849713109922`*^9}, {
+  3.676585005798175*^9, 3.6765850557890997`*^9}, {3.676585102524021*^9, 
+  3.6765851299230433`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"wbarHapXm", "=", " ", 
+   RowBox[{
+    RowBox[{"wA", " ", "XAm"}], "+", " ", 
+    RowBox[{"wa", " ", "Xam"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wbarHapY", "=", " ", 
+   RowBox[{
+    RowBox[{"wA", " ", "YA"}], "+", " ", 
+    RowBox[{"wa", " ", "Ya"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wbarHapy", "=", " ", 
+   RowBox[{
+    RowBox[{"wA", " ", "xA"}], "+", " ", 
+    RowBox[{"wa", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "xA"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAms", "=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "-", "\[Alpha]"}], ")"}], " ", "wA", " ", 
+    RowBox[{"XAm", "/", "wbarHapXm"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Xams", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "-", "\[Alpha]"}], ")"}], " ", "wa", " ", 
+    RowBox[{"Xam", "/", "wbarHapXm"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"YAs", "=", "  ", 
+   RowBox[{"\[Alpha]", " ", "wA", "*", 
+    RowBox[{"YA", "/", "wbarHapY"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Yas", "=", " ", 
+   RowBox[{"\[Alpha]", " ", "wa", "*", 
+    RowBox[{"Ya", "/", "wbarHapY"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAfs", "=", "XAf"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Xafs", "=", "Xaf"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"yAs", "=", " ", 
+   RowBox[{"\[Alpha]", " ", "wA", " ", "\[Epsilon]y", " ", 
+    RowBox[{"xA", "/", "wbarHapy"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"yas", "=", " ", 
+   RowBox[{"\[Alpha]", " ", "wa", " ", "\[Epsilon]y", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", "xA"}], ")"}], "/", "wbarHapy"}]}]}], ";"}]}], "Input",\
+
+ CellChangeTimes->{{3.675887851245193*^9, 3.675887867834023*^9}, {
+   3.676141999159761*^9, 3.676142091103024*^9}, {3.676142174120762*^9, 
+   3.676142199369879*^9}, {3.676142234237845*^9, 3.6761422412826653`*^9}, {
+   3.676149131909862*^9, 3.67614922213706*^9}, {3.676149379748801*^9, 
+   3.676149430057311*^9}, {3.676149471691319*^9, 3.676149484490981*^9}, {
+   3.676149619753261*^9, 3.676149627248313*^9}, {3.676152777149371*^9, 
+   3.6761528652841263`*^9}, 3.676199586159603*^9, {3.676205759277755*^9, 
+   3.6762057873657627`*^9}}],
+
+Cell["\<\
+where wA and wa describe selection in male gametes/pollen, \[Epsilon]y is the \
+(small) frequency of the neo-y mutation, and xA is the frequency of A in \
+gametes with the neo-y.\
+\>", "Text",
+ CellChangeTimes->{{3.67658509587938*^9, 3.676585096527823*^9}, {
+  3.676585137826956*^9, 3.676585201042717*^9}}],
+
+Cell["\<\
+Check that frequencies of allele 1 in each gametes type sums to the \
+appropriate fraction after haploid selection:\
+\>", "Text",
+ CellChangeTimes->{{3.675691241028049*^9, 3.675691262904736*^9}, {
+   3.675691499842326*^9, 3.675691508954028*^9}, {3.6757021446730413`*^9, 
+   3.6757021466313477`*^9}, 3.67570266834774*^9, {3.675710454342794*^9, 
+   3.675710458811872*^9}, {3.675711308941972*^9, 3.6757113347037287`*^9}, {
+   3.676140458259473*^9, 3.676140486907097*^9}, 3.676199586160721*^9, {
+   3.6762058698955383`*^9, 3.676205873473984*^9}, {3.6765853116814632`*^9, 
+   3.676585327191327*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"1", "-", "\[Alpha]"}], "==", 
+    RowBox[{"XAms", "+", "Xams"}]}], "/.", 
+   RowBox[{"Xam", "\[Rule]", 
+    RowBox[{"1", "-", "XAm"}]}]}], "//", "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Alpha]", "==", 
+    RowBox[{"YAs", "+", "Yas"}]}], "/.", 
+   RowBox[{"Ya", "\[Rule]", 
+    RowBox[{"1", "-", "YA"}]}]}], "//", "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"1", "==", 
+    RowBox[{"XAfs", "+", "Xafs"}]}], "/.", 
+   RowBox[{"Xaf", "\[Rule]", 
+    RowBox[{"1", "-", "XAf"}]}]}], "//", "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Alpha]", " ", "\[Epsilon]y"}], "==", 
+   RowBox[{"yAs", "+", "yas"}]}], "//", "Factor"}]}], "Input",
+ CellChangeTimes->{{3.6762058553075027`*^9, 3.676205862337631*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.676205597799912*^9, 3.676205804339649*^9, 
+  3.676205862891724*^9, 3.6762975094425383`*^9, 3.6763314735315857`*^9, 
+  3.6765707789165363`*^9, 3.676578081579689*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.676205597799912*^9, 3.676205804339649*^9, 
+  3.676205862891724*^9, 3.6762975094425383`*^9, 3.6763314735315857`*^9, 
+  3.6765707789165363`*^9, 3.676578081584096*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.676205597799912*^9, 3.676205804339649*^9, 
+  3.676205862891724*^9, 3.6762975094425383`*^9, 3.6763314735315857`*^9, 
+  3.6765707789165363`*^9, 3.676578081587137*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.676205597799912*^9, 3.676205804339649*^9, 
+  3.676205862891724*^9, 3.6762975094425383`*^9, 3.6763314735315857`*^9, 
+  3.6765707789165363`*^9, 3.6765780815905724`*^9}]
+}, Open  ]],
+
+Cell["\<\
+After random mating, the frequencies of the diploid genotypes are\
+\>", "Text",
+ CellChangeTimes->{{3.675646094888542*^9, 3.675646099390658*^9}, {
+   3.675646217785323*^9, 3.675646250704771*^9}, {3.67570268816877*^9, 
+   3.6757027045136023`*^9}, {3.676143601607935*^9, 3.6761436020295963`*^9}, 
+   3.676199586165538*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"XAXA", "=", 
+   RowBox[{"XAfs", " ", "XAms"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAXa", "=", 
+   RowBox[{
+    RowBox[{"XAfs", " ", "Xams"}], "+", 
+    RowBox[{"Xafs", " ", "XAms"}]}]}], " ", ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"XaXa", "=", 
+    RowBox[{"Xafs", " ", "Xams"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"XAYA", "=", 
+   RowBox[{"XAfs", " ", "YAs"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAYa", "=", 
+   RowBox[{"XAfs", " ", "Yas"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XaYA", "=", 
+   RowBox[{"Xafs", " ", "YAs"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"XaYa", "=", 
+    RowBox[{"Xafs", " ", "Yas"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"XAyA", "=", 
+   RowBox[{"XAfs", " ", "yAs"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAya", "=", 
+   RowBox[{"XAfs", " ", "yas"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XayA", "=", 
+   RowBox[{"Xafs", " ", "yAs"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Xaya", "=", 
+   RowBox[{"Xafs", " ", "yas"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.675646256909181*^9, 3.675646272815617*^9}, {
+   3.675646370257011*^9, 3.67564637079287*^9}, {3.675646404699778*^9, 
+   3.675646517567526*^9}, {3.675646573911735*^9, 3.675646591557143*^9}, {
+   3.675646627619878*^9, 3.67564663177063*^9}, {3.675646667841331*^9, 
+   3.675646747122738*^9}, {3.675691396390801*^9, 3.675691472391663*^9}, {
+   3.675691536695323*^9, 3.675691538414453*^9}, {3.675691639085917*^9, 
+   3.675691650195237*^9}, {3.675691682513646*^9, 3.675691696533524*^9}, {
+   3.675691755294464*^9, 3.6756917629827957`*^9}, {3.675691824386702*^9, 
+   3.675691852603437*^9}, {3.675692700413486*^9, 3.675692712195026*^9}, {
+   3.67569296671769*^9, 3.675692967464675*^9}, {3.6756930389284983`*^9, 
+   3.675693095368285*^9}, {3.675693137308187*^9, 3.675693184356132*^9}, {
+   3.675693221908244*^9, 3.6756932234970217`*^9}, {3.675693268122773*^9, 
+   3.675693270392726*^9}, {3.675693410576119*^9, 3.675693460007984*^9}, {
+   3.675693492300033*^9, 3.675693533360964*^9}, 3.675693600152028*^9, {
+   3.675702177145516*^9, 3.675702196152766*^9}, {3.6757023129704742`*^9, 
+   3.675702317051364*^9}, {3.675792623150811*^9, 3.675792640133086*^9}, {
+   3.675792682078307*^9, 3.675792755658676*^9}, {3.6761425905197153`*^9, 
+   3.676142594326068*^9}, 3.676199586165913*^9}],
+
+Cell["\<\
+Check that frequencies sum to the appropriate fraction\
+\>", "Text",
+ CellChangeTimes->{{3.6761436064259577`*^9, 3.676143611328102*^9}, 
+   3.67619958616654*^9, {3.676205899432912*^9, 3.6762059064641323`*^9}, {
+   3.676585335249318*^9, 3.6765853393839397`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "-", "\[Alpha]"}], "==", 
+     RowBox[{"XAXA", "+", "XAXa", "+", "XaXa"}]}], "/.", 
+    RowBox[{"Xaf", "\[Rule]", 
+     RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+   RowBox[{"Xam", "\[Rule]", 
+    RowBox[{"1", "-", "XAm"}]}]}], "//", "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Alpha]", "==", 
+     RowBox[{"XAYA", "+", "XAYa", "+", "XaYA", "+", "XaYa"}]}], "/.", 
+    RowBox[{"Ya", "\[Rule]", 
+     RowBox[{"1", "-", "YA"}]}]}], "/.", 
+   RowBox[{"Xaf", "\[Rule]", 
+    RowBox[{"1", "-", "XAf"}]}]}], "//", "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Alpha]", " ", "\[Epsilon]y"}], "==", 
+    RowBox[{"XAyA", "+", "XAya", "+", "XayA", "+", "Xaya"}]}], "/.", 
+   RowBox[{"Xaf", "\[Rule]", 
+    RowBox[{"1", "-", "XAf"}]}]}], "//", "Factor"}]}], "Input",
+ CellChangeTimes->{{3.6762058834850693`*^9, 3.676205896199106*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.676205606183573*^9, {3.67620588002642*^9, 3.676205896776825*^9}, 
+   3.67629750955724*^9, 3.676331473646187*^9, 3.676570779000814*^9, 
+   3.676578081694895*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.676205606183573*^9, {3.67620588002642*^9, 3.676205896776825*^9}, 
+   3.67629750955724*^9, 3.676331473646187*^9, 3.676570779000814*^9, 
+   3.676578081699139*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.676205606183573*^9, {3.67620588002642*^9, 3.676205896776825*^9}, 
+   3.67629750955724*^9, 3.676331473646187*^9, 3.676570779000814*^9, 
+   3.676578081701861*^9}]
+}, Open  ]],
+
+Cell["\<\
+After diploid selection (which can differ between males and females) the \
+frequencies of the diploid genotypes in each sex are\
+\>", "Text",
+ CellChangeTimes->{{3.6756467552456417`*^9, 3.67564676342205*^9}, {
+   3.675702725992881*^9, 3.67570275267984*^9}, 3.676199586169319*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"wbarF", "=", 
+    RowBox[{
+     RowBox[{"FAA", " ", "XAXA"}], "+", 
+     RowBox[{"FAa", " ", "XAXa"}], "+", 
+     RowBox[{"Faa", " ", "XaXa"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAXAs", "=", 
+   RowBox[{"FAA", " ", 
+    RowBox[{"XAXA", "/", "wbarF"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAXas", "=", 
+   RowBox[{"FAa", " ", 
+    RowBox[{"XAXa", "/", "wbarF"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"XaXas", "=", 
+    RowBox[{"Faa", " ", 
+     RowBox[{"XaXa", "/", "wbarF"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"wbarM", "=", 
+    RowBox[{
+     RowBox[{"MAA", " ", "XAYA"}], "+", 
+     RowBox[{"MAa", " ", 
+      RowBox[{"(", 
+       RowBox[{"XAYa", "+", "XaYA"}], ")"}]}], "+", 
+     RowBox[{"Maa", " ", "XaYa"}]}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"ignore", " ", "rare", " ", "mutants"}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAYAs", "=", 
+   RowBox[{"MAA", " ", 
+    RowBox[{"XAYA", "/", "wbarM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAYas", "=", 
+   RowBox[{"MAa", " ", 
+    RowBox[{"XAYa", "/", "wbarM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XaYAs", "=", 
+   RowBox[{"MAa", " ", 
+    RowBox[{"XaYA", "/", "wbarM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"XaYas", "=", 
+    RowBox[{"Maa", " ", 
+     RowBox[{"XaYa", "/", "wbarM"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAyAs", "=", 
+   RowBox[{"MAA", " ", 
+    RowBox[{"XAyA", "/", "wbarM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XAyas", "=", 
+   RowBox[{"MAa", " ", 
+    RowBox[{"XAya", "/", "wbarM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"XayAs", "=", 
+   RowBox[{"MAa", " ", 
+    RowBox[{"XayA", "/", "wbarM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Xayas", "=", 
+   RowBox[{"Maa", " ", 
+    RowBox[{"Xaya", "/", "wbarM"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.675646788099258*^9, 3.675646827315172*^9}, {
+   3.675646906255657*^9, 3.6756471746197577`*^9}, {3.6756477305962267`*^9, 
+   3.675647791098443*^9}, {3.675693609968581*^9, 3.6756936401475143`*^9}, {
+   3.675702773030509*^9, 3.675702825109133*^9}, {3.6757958668524837`*^9, 
+   3.675796079670739*^9}, {3.675796179417987*^9, 3.675796260462306*^9}, {
+   3.675796480404418*^9, 3.675796481420582*^9}, {3.675796553441423*^9, 
+   3.67579667834494*^9}, {3.6757967212634993`*^9, 3.67579673565335*^9}, {
+   3.675796766370957*^9, 3.675796913595641*^9}, {3.675796952452533*^9, 
+   3.675796955994008*^9}, {3.6757970625420837`*^9, 3.675797062966584*^9}, {
+   3.675797156973634*^9, 3.675797157898295*^9}, {3.675797509731503*^9, 
+   3.6757975122266283`*^9}, 3.6757987828785143`*^9, {3.675798997687969*^9, 
+   3.675798999203364*^9}, {3.676143759564913*^9, 3.676143876897674*^9}, {
+   3.6761439480553083`*^9, 3.676143948190496*^9}, {3.676146793545115*^9, 
+   3.67614684534789*^9}, 3.6761995861704493`*^9, {3.676205614675086*^9, 
+   3.6762056178719597`*^9}}],
+
+Cell["\<\
+Check that frequencies of diploid genotypes in each sex sum to one after \
+diploid selection:\
+\>", "Text",
+ CellChangeTimes->{{3.67569367511821*^9, 3.6756936990142593`*^9}, {
+   3.675702840764554*^9, 3.675702847452877*^9}, 3.676199586171295*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"1", "==", 
+   RowBox[{"XAXAs", "+", "XAXas", "+", "XaXas"}]}], "//", 
+  "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"1", "\[Equal]", 
+   RowBox[{"XAYAs", "+", "XAYas", "+", "XaYAs", "+", "XaYas"}]}], "//", 
+  "Factor"}]}], "Input"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.676205623884274*^9, 3.6762059177767057`*^9, 
+  3.676297509642558*^9, 3.6763314737147427`*^9, 3.676570779082673*^9, 
+  3.676578081829523*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.676205623884274*^9, 3.6762059177767057`*^9, 
+  3.676297509642558*^9, 3.6763314737147427`*^9, 3.676570779082673*^9, 
+  3.67657808183342*^9}]
+}, Open  ]],
+
+Cell["Finally, meiosis occurs.", "Text",
+ CellChangeTimes->{{3.675647183205927*^9, 3.675647193439426*^9}, {
+   3.675702857268779*^9, 3.6757029057817707`*^9}, 3.676144147033208*^9, 
+   3.676199586173295*^9}],
+
+Cell["Eggs/ovules are produced by females:", "Text",
+ CellChangeTimes->{{3.5358035703823357`*^9, 3.5358035880216312`*^9}, {
+   3.540035348335928*^9, 3.540035358302086*^9}, {3.674493953287428*^9, 
+   3.674494012419855*^9}, 3.675799601278284*^9, {3.676143982806048*^9, 
+   3.676144009190897*^9}, 3.6761995861734257`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"XAfprime", "=", 
+   RowBox[{"XAXAs", "+", 
+    RowBox[{"XAXas", "/", "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Xafprime", "=", 
+   RowBox[{"XaXas", "+", 
+    RowBox[{"XAXas", "/", "2"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.675799680833715*^9, 3.6757996941412067`*^9}, {
+   3.676149324316855*^9, 3.676149325544795*^9}, {3.6761494980620604`*^9, 
+   3.676149499624743*^9}, 3.676199586173596*^9}],
+
+Cell["Check that frequencies sum to one", "Text",
+ CellChangeTimes->{{3.6761441340031767`*^9, 3.676144138482572*^9}, 
+   3.676199586174081*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"1", "==", 
+   RowBox[{"XAfprime", "+", "Xafprime"}]}], "//", "Factor"}]], "Input",
+ CellChangeTimes->{{3.676205922481855*^9, 3.676205923325824*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.6762056328519506`*^9, 3.676205923728698*^9, 
+  3.676297509709491*^9, 3.676331473781797*^9, 3.676570779184855*^9, 
+  3.676578082016883*^9}]
+}, Open  ]],
+
+Cell["Pollen/sperm are produced by males:", "Text",
+ CellChangeTimes->{{3.540035437149768*^9, 3.54003544478056*^9}, {
+   3.540035542732253*^9, 3.540035542939846*^9}, 3.5400356972463627`*^9, {
+   3.540035923604535*^9, 3.540036040586349*^9}, {3.540036213760168*^9, 
+   3.540036242159268*^9}, {3.540036754700008*^9, 3.540036803790543*^9}, {
+   3.54003685846948*^9, 3.540036984706725*^9}, {3.54003701775928*^9, 
+   3.540037032315583*^9}, 3.540038125811358*^9, {3.556916665584009*^9, 
+   3.55691668126228*^9}, {3.5569168428514147`*^9, 3.556916888640827*^9}, {
+   3.556916933311759*^9, 3.556917080494673*^9}, {3.674494049278042*^9, 
+   3.674494087250461*^9}, {3.674677710333157*^9, 3.67467771370854*^9}, 
+   3.67467801036736*^9, {3.675799994654408*^9, 3.675800008557496*^9}, {
+   3.675800063694265*^9, 3.6758001631762867`*^9}, {3.675800903709487*^9, 
+   3.675800910209898*^9}, {3.675897375419611*^9, 3.6758973763555727`*^9}, {
+   3.6761440055263147`*^9, 3.676144020885846*^9}, {3.676147035176601*^9, 
+   3.676147035340662*^9}, {3.676147096324484*^9, 3.676147096477008*^9}, 
+   3.676199586175479*^9, {3.676585350190591*^9, 3.6765853505740633`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"XAmprime", " ", "=", 
+   RowBox[{"XAYAs", "+", 
+    RowBox[{"XAYas", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "r"}], ")"}]}], "+", 
+    RowBox[{"XaYAs", " ", "r"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Xamprime", " ", "=", 
+    RowBox[{
+     RowBox[{"XAYas", " ", "r"}], "+", 
+     RowBox[{"XaYAs", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "r"}], ")"}]}], "+", "XaYas"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"YAprime", " ", "=", 
+   RowBox[{"XAYAs", "+", 
+    RowBox[{"XAYas", " ", "r"}], "+", 
+    RowBox[{"XaYAs", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "r"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Yaprime", " ", "=", 
+   RowBox[{
+    RowBox[{"XAYas", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "r"}], ")"}]}], "+", 
+    RowBox[{"XaYAs", " ", "r"}], "+", "XaYas"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.675800318268052*^9, 3.675800364577742*^9}, {
+   3.675800865098575*^9, 3.675800884623233*^9}, {3.675800930421735*^9, 
+   3.675801014309965*^9}, {3.675801186092061*^9, 3.6758012139661913`*^9}, {
+   3.675801288344637*^9, 3.6758013193919163`*^9}, 3.6758013515875397`*^9, 
+   3.675803064876067*^9, {3.675804066393259*^9, 3.675804153401239*^9}, {
+   3.6758041863032217`*^9, 3.6758043374296703`*^9}, {3.675804379631474*^9, 
+   3.675804405220408*^9}, {3.675804468773355*^9, 3.6758044760993967`*^9}, {
+   3.6758045933291197`*^9, 3.6758046212813377`*^9}, {3.67580471281376*^9, 
+   3.675804990041334*^9}, {3.675807250863433*^9, 3.675807267889496*^9}, {
+   3.6758682828614893`*^9, 3.675868466544877*^9}, {3.675868847460205*^9, 
+   3.675868879272049*^9}, {3.6758689945484457`*^9, 3.675869057323271*^9}, {
+   3.6758692719968433`*^9, 3.675869505863051*^9}, {3.675869548461001*^9, 
+   3.675869585213458*^9}, {3.675869672096408*^9, 3.675869707584916*^9}, {
+   3.6758697924963293`*^9, 3.6758697988408422`*^9}, {3.6758701927023563`*^9, 
+   3.675870195453092*^9}, {3.675884173345504*^9, 3.675884174905342*^9}, 
+   3.675884205449786*^9, {3.675884613602296*^9, 3.675884726757524*^9}, {
+   3.6758847843497334`*^9, 3.675884792191498*^9}, {3.6758877458634987`*^9, 
+   3.67588780384052*^9}, {3.675888599989387*^9, 3.6758886145965652`*^9}, {
+   3.675889229466887*^9, 3.675889260919652*^9}, {3.675889303528616*^9, 
+   3.67588933806083*^9}, {3.675896536777073*^9, 3.67589656979839*^9}, {
+   3.6758966227806807`*^9, 3.67589663667232*^9}, {3.6758966752114058`*^9, 
+   3.675896710149926*^9}, {3.675896944667272*^9, 3.675897162875085*^9}, {
+   3.675897210236834*^9, 3.6758972821423197`*^9}, {3.676144028322125*^9, 
+   3.676144070993865*^9}, {3.6761441769596453`*^9, 3.676144441895192*^9}, {
+   3.676146910825089*^9, 3.6761469144318743`*^9}, {3.6761471000425863`*^9, 
+   3.676147100371335*^9}, 3.676199586175791*^9}],
+
+Cell["\<\
+where r is the recombination rate between the A and original sex-determining \
+locus.\
+\>", "Text",
+ CellChangeTimes->{{3.6765853555309963`*^9, 3.676585413904562*^9}}],
+
+Cell["\<\
+Check that the frequencies of allele 1 sum to one in each gamete type\
+\>", "Text",
+ CellChangeTimes->{{3.6761459247647343`*^9, 3.67614593273203*^9}, {
+   3.6761471061486473`*^9, 3.676147118206574*^9}, 3.676199586176283*^9, {
+   3.676585385785234*^9, 3.676585391764709*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"1", "==", 
+   RowBox[{"XAmprime", "+", "Xamprime"}]}], "//", 
+  "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"1", "==", 
+   RowBox[{"YAprime", "+", "Yaprime"}]}], "//", "Factor"}]}], "Input"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.6762056421181583`*^9, 3.6762059277947693`*^9, 
+  3.676297509791378*^9, 3.676331473847481*^9, 3.6765707792505617`*^9, 
+  3.676578082213728*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.6762056421181583`*^9, 3.6762059277947693`*^9, 
+  3.676297509791378*^9, 3.676331473847481*^9, 3.6765707792505617`*^9, 
+  3.676578082217596*^9}]
+}, Open  ]],
+
+Cell["\<\
+Now, the frequency of allele 1 on the neo-y in the next generation is\
+\>", "Text",
+ CellChangeTimes->{{3.6761471255004587`*^9, 3.676147125916456*^9}, {
+   3.676147502804685*^9, 3.676147521388979*^9}, 3.676199586178114*^9, {
+   3.676205669611494*^9, 3.6762056742255783`*^9}, {3.676577423863628*^9, 
+   3.6765774273909073`*^9}, {3.6765853985170107`*^9, 3.6765853995368843`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"xAprime", "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"XAyAs", "+", 
+     RowBox[{"XAyas", " ", "R"}], "+", 
+     RowBox[{"XayAs", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "R"}], ")"}]}]}], 
+    RowBox[{"XAyAs", "+", 
+     RowBox[{"XAyas", " ", "R"}], "+", 
+     RowBox[{"XayAs", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "R"}], ")"}]}], "+", 
+     RowBox[{"XAyas", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "R"}], ")"}]}], "+", 
+     RowBox[{"XayAs", " ", "R"}], "+", "Xayas"}]], "//", 
+   "Factor"}]}]], "Input",
+ CellChangeTimes->{{3.676206165746891*^9, 3.676206168430148*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "MAa"}], " ", "wA", " ", "xA", " ", "Xaf"}], "+", 
+    RowBox[{"MAa", " ", "R", " ", "wA", " ", "xA", " ", "Xaf"}], "-", 
+    RowBox[{"MAa", " ", "R", " ", "wa", " ", "XAf"}], "+", 
+    RowBox[{"MAa", " ", "R", " ", "wa", " ", "xA", " ", "XAf"}], "-", 
+    RowBox[{"MAA", " ", "wA", " ", "xA", " ", "XAf"}]}], 
+   RowBox[{
+    RowBox[{"Maa", " ", "wa", " ", "Xaf"}], "-", 
+    RowBox[{"Maa", " ", "wa", " ", "xA", " ", "Xaf"}], "+", 
+    RowBox[{"MAa", " ", "wA", " ", "xA", " ", "Xaf"}], "+", 
+    RowBox[{"MAa", " ", "wa", " ", "XAf"}], "-", 
+    RowBox[{"MAa", " ", "wa", " ", "xA", " ", "XAf"}], "+", 
+    RowBox[{"MAA", " ", "wA", " ", "xA", " ", "XAf"}]}]]}]], "Output",
+ CellChangeTimes->{3.676205650451346*^9, 3.676205930962201*^9, 
+  3.6762061690041018`*^9, 3.676297509866753*^9, 3.676331473931458*^9, 
+  3.676570779295562*^9, 3.676578082262344*^9}]
+}, Open  ]],
+
+Cell["\<\
+where R is the recombination rate between the A and novel sex-determining \
+locus.\
+\>", "Text",
+ CellChangeTimes->{{3.6765854389040203`*^9, 3.676585459455586*^9}}],
+
+Cell["\<\
+And the growth rate of the neo-y itself is\
+\>", "Text",
+ CellChangeTimes->{{3.676147800730928*^9, 3.676147823628798*^9}, 
+   3.676199586179883*^9, {3.676577432637713*^9, 3.676577434734714*^9}, {
+   3.67658543455127*^9, 3.676585435382078*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RA", "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"XAyAs", "+", 
+     RowBox[{"XAyas", " ", "R"}], "+", 
+     RowBox[{"XayAs", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "R"}], ")"}]}], "+", 
+     RowBox[{"XAyas", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "R"}], ")"}]}], "+", 
+     RowBox[{"XayAs", " ", "R"}], "+", "Xayas"}], "\[Epsilon]y"], "//", 
+   "Factor"}]}]], "Input"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "Maa"}], " ", "wa", " ", "Xaf"}], "+", 
+     RowBox[{"Maa", " ", "wa", " ", "xA", " ", "Xaf"}], "-", 
+     RowBox[{"MAa", " ", "wA", " ", "xA", " ", "Xaf"}], "-", 
+     RowBox[{"MAa", " ", "wa", " ", "XAf"}], "+", 
+     RowBox[{"MAa", " ", "wa", " ", "xA", " ", "XAf"}], "-", 
+     RowBox[{"MAA", " ", "wA", " ", "xA", " ", "XAf"}]}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"wa", " ", "Ya"}], "+", 
+     RowBox[{"wA", " ", "YA"}]}], ")"}]}], 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "wa"}], "+", 
+     RowBox[{"wa", " ", "xA"}], "-", 
+     RowBox[{"wA", " ", "xA"}]}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Maa", " ", "wa", " ", "Xaf", " ", "Ya"}], "+", 
+     RowBox[{"MAa", " ", "wa", " ", "XAf", " ", "Ya"}], "+", 
+     RowBox[{"MAa", " ", "wA", " ", "Xaf", " ", "YA"}], "+", 
+     RowBox[{"MAA", " ", "wA", " ", "XAf", " ", "YA"}]}], ")"}]}]]], "Output",\
+
+ CellChangeTimes->{3.67620565691848*^9, 3.67620593382829*^9, 
+  3.676297509929885*^9, 3.676331474002404*^9, 3.676570779371256*^9, 
+  3.676578082344108*^9}]
+}, Open  ]],
+
+Cell["\<\
+This collapses to van Doorn and Kirkpatrick\[CloseCurlyQuote]s result under \
+special circumstances (bottom page 3)\
+\>", "Text",
+ CellChangeTimes->{{3.676152735070064*^9, 3.676152754087295*^9}, 
+   3.67619958618145*^9, {3.676582344731991*^9, 3.6765823534894047`*^9}, {
+   3.676585472995944*^9, 3.676585473878415*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"RA", "/.", 
+              RowBox[{"wA", "\[Rule]", "1"}]}], "/.", 
+             RowBox[{"wa", "\[Rule]", "1"}]}], "/.", 
+            RowBox[{"Maa", "\[Rule]", "1"}]}], "/.", 
+           RowBox[{"MAa", "\[Rule]", 
+            RowBox[{"1", "+", 
+             RowBox[{"hAm", " ", "sAm"}]}]}]}], "/.", 
+          RowBox[{"MAA", "\[Rule]", 
+           RowBox[{"1", "+", "sAm"}]}]}], "/.", 
+         RowBox[{"Faa", "\[Rule]", "1"}]}], "/.", 
+        RowBox[{"FAa", "\[Rule]", 
+         RowBox[{"1", "+", 
+          RowBox[{"hAf", " ", "sAf"}]}]}]}], "/.", 
+       RowBox[{"FAA", "\[Rule]", 
+        RowBox[{"1", "+", "sAf"}]}]}], "/.", 
+      RowBox[{"Ya", "\[Rule]", 
+       RowBox[{"1", "-", "YA"}]}]}], "/.", 
+     RowBox[{"Xam", "\[Rule]", 
+      RowBox[{"1", "-", "XAm"}]}]}], "/.", 
+    RowBox[{"Xaf", "\[Rule]", 
+     RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+   RowBox[{"xa", "\[Rule]", 
+    RowBox[{"1", "-", "xA"}]}]}], "//", "FullSimplify"}]], "Input"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"1", "+", 
+   RowBox[{"sAm", " ", "xA", " ", "XAf"}], "+", 
+   RowBox[{"hAm", " ", "sAm", " ", 
+    RowBox[{"(", 
+     RowBox[{"xA", "+", "XAf", "-", 
+      RowBox[{"2", " ", "xA", " ", "XAf"}]}], ")"}]}]}], 
+  RowBox[{"1", "+", 
+   RowBox[{"sAm", " ", "XAf", " ", "YA"}], "+", 
+   RowBox[{"hAm", " ", "sAm", " ", 
+    RowBox[{"(", 
+     RowBox[{"XAf", "+", "YA", "-", 
+      RowBox[{"2", " ", "XAf", " ", "YA"}]}], ")"}]}]}]]], "Output",
+ CellChangeTimes->{3.676205683653319*^9, 3.676205936378998*^9, 
+  3.6762975102260313`*^9, 3.6763314743080997`*^9, 3.676570779560524*^9, 
+  3.676578082634514*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Weak selection approximation", "Section",
+ CellChangeTimes->{{3.675694139646326*^9, 3.6756941429682417`*^9}, 
+   3.6757029847263803`*^9, 3.676206076324637*^9, {3.676582539239078*^9, 
+   3.676582542329505*^9}, {3.676583990586585*^9, 3.676583993478483*^9}}],
+
+Cell["\<\
+To simplify the following analysis we assume weak selection in both haploids \
+(sperm/pollen) and diploids\
+\>", "Text",
+ CellChangeTimes->{{3.675694205010009*^9, 3.675694211923259*^9}, 
+   3.67570298472752*^9, {3.6757030454432507`*^9, 3.6757030568360033`*^9}, {
+   3.676582566945178*^9, 3.6765825689281187`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"weaksel", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"MAA", "\[Rule]", 
+      RowBox[{"1", "+", 
+       RowBox[{"sAm", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MAa", "\[Rule]", 
+      RowBox[{"1", "+", 
+       RowBox[{"hAm", " ", "sAm", " ", "\[Epsilon]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Maa", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FAA", "\[Rule]", 
+      RowBox[{"1", "+", 
+       RowBox[{"sAf", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FAa", "\[Rule]", 
+      RowBox[{"1", "+", 
+       RowBox[{"hAf", " ", "sAf", " ", "\[Epsilon]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Faa", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"wA", "\[Rule]", 
+      RowBox[{"1", "+", 
+       RowBox[{"t", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"wa", "\[Rule]", "1"}]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.67564806523287*^9, 3.675648221558539*^9}, {
+   3.675694367971285*^9, 3.6756943845803022`*^9}, 3.6757029847280283`*^9}],
+
+Cell["\<\
+We will solve for the equilibrium frequency of allele 1 in each of the \
+haploid genotypes. Equilibrium is achieved when the following equations are \
+zero\
+\>", "Text",
+ CellChangeTimes->{{3.675694155902801*^9, 3.675694193760104*^9}, {
+  3.6756944337868023`*^9, 3.6756944351881227`*^9}, {3.6757029847267847`*^9, 
+  3.67570303405547*^9}, {3.675710696458521*^9, 3.675710706286772*^9}, {
+  3.676206098927346*^9, 3.67620611994131*^9}, {3.676582413597246*^9, 
+  3.676582413722025*^9}, {3.676582573510099*^9, 3.676582574660082*^9}, {
+  3.676585485737124*^9, 3.676585487171049*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"differenceEqs", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"XAfprime", "-", "XAf"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"XAmprime", "-", "XAm"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"YAprime", "-", "YA"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"xAprime", "-", "xA"}]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.675647987041369*^9, 3.67564802904979*^9}, {
+   3.675650509895372*^9, 3.675650527299842*^9}, {3.6756941716513157`*^9, 
+   3.6756941738671913`*^9}, {3.675694338488646*^9, 3.675694340978696*^9}, {
+   3.675694394143187*^9, 3.6756944261522427`*^9}, 3.6756944751724463`*^9, 
+   3.675702984727247*^9, {3.675703036868017*^9, 3.675703037688758*^9}, 
+   3.67578824463701*^9, {3.6762061216237183`*^9, 3.676206147752295*^9}, {
+   3.6762061820923433`*^9, 3.676206183709196*^9}}],
+
+Cell["We can write the frequencies as Taylor series", "Text",
+ CellChangeTimes->{{3.675707045047565*^9, 3.6757070543930063`*^9}, {
+  3.675707367038864*^9, 3.675707370179316*^9}, {3.675711803871513*^9, 
+  3.6757118112225847`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"frequenciessub", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"XAf", "\[Rule]", 
+      RowBox[{"XAf0", "+", 
+       RowBox[{"XAf1", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"XAm", "\[Rule]", 
+      RowBox[{"XAm0", "+", 
+       RowBox[{"XAm1", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"YA", "\[Rule]", 
+      RowBox[{"YA0", "+", 
+       RowBox[{"YA1", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"xA", "\[Rule]", 
+      RowBox[{"xA0", "+", 
+       RowBox[{"xA1", " ", "\[Epsilon]"}]}]}]}], "\[IndentingNewLine]", 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.675648297857716*^9, 3.6756483630660057`*^9}, 
+   3.675648454638584*^9, 3.675702984736863*^9, {3.6762068917424583`*^9, 
+   3.676206901931716*^9}}],
+
+Cell["\<\
+Without selection, the recursions for the change in frequency of allele 1 in \
+each gamete/pollen type are\
+\>", "Text",
+ CellChangeTimes->{{3.6757032054455214`*^9, 3.6757032697493563`*^9}, {
+   3.6757098202812138`*^9, 3.675709824765788*^9}, {3.6757117765596933`*^9, 
+   3.6757117850524673`*^9}, {3.675711818872109*^9, 3.6757118199810133`*^9}, 
+   3.6761381565029078`*^9, {3.6765854945288477`*^9, 3.67658549558394*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"differenceEqs0", "=", 
+  RowBox[{"Normal", "[", 
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"differenceEqs", "/.", "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "frequenciessub"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "0"}], "}"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.675703197099375*^9, 3.675703198353765*^9}, {
+  3.675703326603519*^9, 3.675703332003808*^9}, {3.67570336997014*^9, 
+  3.675703373531238*^9}, {3.675707060003501*^9, 3.675707071963544*^9}, {
+  3.675707629815399*^9, 3.675707668691402*^9}, {3.6757098279293118`*^9, 
+  3.6757098635569563`*^9}, {3.675785533464711*^9, 3.675785543888385*^9}, {
+  3.675788240589053*^9, 3.675788247183043*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "XAf0"}], "+", "XAm0"}], ")"}]}], ",", 
+   RowBox[{"XAf0", "-", 
+    RowBox[{"r", " ", "XAf0"}], "-", "XAm0", "+", 
+    RowBox[{"r", " ", "YA0"}]}], ",", 
+   RowBox[{
+    RowBox[{"r", " ", "XAf0"}], "-", 
+    RowBox[{"r", " ", "YA0"}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "R"}], " ", "xA0"}], "+", 
+    RowBox[{"R", " ", "XAf0"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.675703373832204*^9, 3.675707072550578*^9, 3.6757076390361347`*^9, 
+   3.675707669538135*^9, {3.675709828918172*^9, 3.6757098643685303`*^9}, 
+   3.675727585946179*^9, 3.675785428940669*^9, 3.675788254779942*^9, 
+   3.6761381624813623`*^9, 3.676146369707528*^9, 3.676205569877428*^9, 
+   3.676206197071246*^9, 3.676206906572702*^9, 3.676297519938478*^9, 
+   3.676331482213591*^9, 3.676570779809972*^9, 3.676578085302965*^9}]
+}, Open  ]],
+
+Cell["And at equilibrium we have", "Text",
+ CellChangeTimes->{{3.675709831409095*^9, 3.6757098343025913`*^9}, {
+  3.675710744701475*^9, 3.675710745621426*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sol0", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"differenceEqs0", "\[Equal]", "0"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"XAf0", ",", "XAm0", ",", "YA0"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.675709931730151*^9, 3.675709948227565*^9}, 
+   3.676138176648445*^9, {3.676206210111945*^9, 3.676206222819953*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"XAf0", "\[Rule]", "xA0"}], ",", 
+    RowBox[{"XAm0", "\[Rule]", "xA0"}], ",", 
+    RowBox[{"YA0", "\[Rule]", "xA0"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6757098363525476`*^9, {3.6757099323567266`*^9, 3.675709948639193*^9}, 
+   3.675727587389184*^9, 3.675785430130021*^9, 3.67578825590738*^9, {
+   3.676138165134851*^9, 3.676138177014187*^9}, 3.676146369743536*^9, 
+   3.6762055698992853`*^9, {3.676206202720709*^9, 3.676206223421821*^9}, 
+   3.676206909229083*^9, 3.676297519977676*^9, 3.6763314822510242`*^9, 
+   3.676570779849722*^9, 3.676578085332281*^9}]
+}, Open  ]],
+
+Cell["\<\
+So, with no selection, the equilibrium frequency of allele 1 in each \
+gamete/pollen type is equal (and we call this pA).\
+\>", "Text",
+ CellChangeTimes->{{3.675703427939505*^9, 3.6757035626138153`*^9}, {
+   3.675706719194449*^9, 3.675706765062245*^9}, 3.67570996472328*^9, {
+   3.6757107664993973`*^9, 3.675710849444377*^9}, {3.67658549993237*^9, 
+   3.6765855007726107`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Weak linkage approximation", "Subsection",
+ CellChangeTimes->{{3.676583982853201*^9, 3.6765840292901897`*^9}}],
+
+Cell["\<\
+Following van Doorn and Kirkpatrick, when recombination between the A and \
+neo-y loci is strong relative to selection, we can write the frequencies of \
+allele 1 in each haploid type like\
+\>", "Text",
+ CellChangeTimes->{{3.676582681109103*^9, 3.676582711765044*^9}, {
+  3.676583663659438*^9, 3.676583701804626*^9}, {3.676585515481655*^9, 
+  3.676585516714439*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pAsubs", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"XAf", "\[Rule]", 
+      RowBox[{"pA", "+", 
+       RowBox[{
+        FractionBox["1", "3"], "\[Epsilon]", " ", "dpAXY"}], "+", 
+       RowBox[{"\[Epsilon]", " ", "dpAXfXm"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"XAm", "\[Rule]", 
+      RowBox[{"pA", "+", 
+       RowBox[{
+        FractionBox["1", "3"], "\[Epsilon]", " ", "dpAXY"}], "-", 
+       RowBox[{"\[Epsilon]", " ", "dpAXfXm"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"YA", "\[Rule]", 
+      RowBox[{"pA", "-", 
+       RowBox[{"\[Epsilon]", " ", "dpAXY"}], "-", 
+       RowBox[{"\[Epsilon]", " ", "dpAXfXm"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"xA", "\[Rule]", 
+      RowBox[{"pA", "+", 
+       RowBox[{
+        FractionBox["1", "3"], "\[Epsilon]", " ", "dpAXY"}], "-", 
+       RowBox[{"\[Epsilon]", " ", "dpAXfXm"}], "+", 
+       RowBox[{"2", "\[Epsilon]", " ", "dpAxXm"}]}]}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6765806182823467`*^9, 3.67658076569499*^9}, {
+  3.6765808375724983`*^9, 3.676580838499551*^9}, {3.676582796261376*^9, 
+  3.676582801741729*^9}}],
+
+Cell["\<\
+where dpAXY is the difference in the frequency of allele 1 on X vs Y \
+chromosomes, dpAXfXm is the difference in the frequency of allele 1 on female \
+vs male X chromosomes, and dpAxXm is the difference in the frequency of \
+allele 1 on X chromosomes in males with novel vs original sex determination \
+factors.\
+\>", "Text",
+ CellChangeTimes->{{3.676582733558008*^9, 3.6765829061581078`*^9}, {
+  3.676585521925498*^9, 3.676585532659276*^9}}],
+
+Cell["\<\
+We can then approximate the growth rate of the neo-y as\
+\>", "Text",
+ CellChangeTimes->{{3.6765829246041737`*^9, 3.676582949342616*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"approxRA", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"RA", "/.", "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubs"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "2"}], "}"}]}], "]"}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.6765807827359753`*^9, 3.676580854074707*^9}, {
+  3.676582023871292*^9, 3.676582026168914*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "-", 
+   RowBox[{
+    FractionBox["2", "3"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"3", " ", "dpAxXm"}], "+", 
+        RowBox[{"2", " ", "dpAXY"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "pA"}], "+", 
+        RowBox[{"hAm", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", 
+           RowBox[{"2", " ", "pA"}]}], ")"}]}]}], ")"}], " ", "sAm"}], ")"}], 
+    " ", 
+    SuperscriptBox["\[Epsilon]", "2"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "3"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 0, 3, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   1, 0, Rational[-2, 3] (3 $CellContext`dpAxXm + 
+     2 $CellContext`dpAXY) (-$CellContext`pA + $CellContext`hAm (-1 + 
+       2 $CellContext`pA)) $CellContext`sAm}, 0, 3, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.6765808162942142`*^9, 3.676580854374343*^9}, 
+   3.676582026714388*^9}]
+}, Open  ]],
+
+Cell["The recursion for dpAXY is", "Text",
+ CellChangeTimes->{{3.676583004151986*^9, 3.676583011993733*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqdpAXY", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", "XAfprime"}], "+", "XAmprime", "-", 
+             "YAprime"}], ")"}], "-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", "XAf"}], "+", "XAm", "-", "YA"}], ")"}]}], "/.", 
+          "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubs"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.676580883808177*^9, 3.676580896867023*^9}, {
+   3.676580959265214*^9, 3.6765809613463917`*^9}, {3.676581065889534*^9, 
+   3.676581066519405*^9}, 3.676581371277791*^9, 3.676581423427621*^9, {
+   3.6765815851357327`*^9, 3.676581586215435*^9}, 3.676581635398266*^9, 
+   3.676582992439571*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "4"}], " ", "dpAXfXm", " ", "r"}], "-", 
+      FractionBox[
+       RowBox[{"8", " ", "dpAXY", " ", "r"}], "3"], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pA"}], ")"}], " ", "pA", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "pA"}], " ", "sAf"}], "+", 
+         RowBox[{"hAf", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"2", " ", "pA"}]}], ")"}], " ", "sAf"}], "-", 
+         RowBox[{"r", " ", "t"}]}], ")"}]}]}], ")"}], " ", "\[Epsilon]"}], 
+   "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 
+   0, {(-4) $CellContext`dpAXfXm $CellContext`r + 
+    Rational[-8, 3] $CellContext`dpAXY $CellContext`r + 
+    2 (-1 + $CellContext`pA) $CellContext`pA (-$CellContext`pA \
+$CellContext`sAf + $CellContext`hAf (-1 + 
+        2 $CellContext`pA) $CellContext`sAf - $CellContext`r $CellContext`t)},
+    1, 2, 1],
+  Editable->False]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.676580884679142*^9, 3.676580897283772*^9}, 
+   3.676580961878104*^9, 3.676581066981305*^9, 3.676581371726273*^9, 
+   3.676581424061479*^9, 3.676581586516067*^9, 3.676581635801958*^9, 
+   3.676582992441887*^9}]
+}, Open  ]],
+
+Cell["The recursion for dpXfXm is", "Text",
+ CellChangeTimes->{{3.6765830141793623`*^9, 3.676583024449457*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqdpAXfXm", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"XAfprime", "-", "XAmprime"}], ")"}], "-", 
+           RowBox[{"(", 
+            RowBox[{"XAf", "-", "XAm"}], ")"}]}], "/.", "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubs"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.676581112007431*^9, 3.676581139917885*^9}, {
+   3.67658159576521*^9, 3.676581596801098*^9}, 3.676581638264957*^9, 
+   3.67658299244444*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"4", " ", "dpAXY", " ", "r"}], "3"], "+", 
+      RowBox[{"dpAXfXm", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "3"}], "+", 
+         RowBox[{"2", " ", "r"}]}], ")"}]}], "+", 
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pA"}], ")"}], " ", "pA", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", "hAf", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"2", " ", "pA"}]}], ")"}], " ", "sAf"}], "+", 
+         RowBox[{"2", " ", "hAm", " ", "sAm"}], "-", 
+         RowBox[{"2", " ", "pA", " ", 
+          RowBox[{"(", 
+           RowBox[{"sAf", "-", "sAm", "+", 
+            RowBox[{"2", " ", "hAm", " ", "sAm"}]}], ")"}]}], "-", "t", "+", 
+         RowBox[{"2", " ", "r", " ", "t"}]}], ")"}]}]}], ")"}], " ", 
+    "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   Rational[4, 
+       3] $CellContext`dpAXY $CellContext`r + $CellContext`dpAXfXm (-3 + 
+      2 $CellContext`r) + 
+    Rational[1, 2] (-1 + $CellContext`pA) $CellContext`pA (
+      2 $CellContext`hAf (-1 + 2 $CellContext`pA) $CellContext`sAf + 
+      2 $CellContext`hAm $CellContext`sAm - 
+      2 $CellContext`pA ($CellContext`sAf - $CellContext`sAm + 
+       2 $CellContext`hAm $CellContext`sAm) - $CellContext`t + 
+      2 $CellContext`r $CellContext`t)}, 1, 2, 1],
+  Editable->False]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.676581141700481*^9, 3.6765815970517263`*^9, 
+  3.676581638666195*^9, 3.6765829924468*^9}]
+}, Open  ]],
+
+Cell["And at equilibrium we have", "Text",
+ CellChangeTimes->{{3.676583030500333*^9, 3.676583035286235*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dpasubs1", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"eqdpAXY", "\[Equal]", "0"}], ",", 
+        RowBox[{"eqdpAXfXm", "\[Equal]", "0"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"dpAXY", ",", "dpAXfXm"}], "}"}]}], "]"}], "//", "Flatten"}], "//",
+    "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.6765816270811863`*^9, 3.676581707261133*^9}, 
+   3.6765829924489326`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"dpAXY", "\[Rule]", 
+    RowBox[{"-", 
+     RowBox[{
+      FractionBox["1", 
+       RowBox[{"4", " ", "r"}]], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pA"}], ")"}], " ", "pA", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"hAf", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"2", " ", "pA"}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "3"}], "+", 
+            RowBox[{"4", " ", "r"}]}], ")"}], " ", "sAf"}], "+", 
+         RowBox[{"pA", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", " ", "sAf"}], "-", 
+            RowBox[{"4", " ", "r", " ", "sAf"}], "+", 
+            RowBox[{"2", " ", "r", " ", "sAm"}], "-", 
+            RowBox[{"4", " ", "hAm", " ", "r", " ", "sAm"}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", "r", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"hAm", " ", "sAm"}], "+", "t"}], ")"}]}]}], ")"}]}]}]}]}],
+    ",", 
+   RowBox[{"dpAXfXm", "\[Rule]", 
+    RowBox[{
+     FractionBox["1", "6"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "pA"}], ")"}], " ", "pA", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", " ", "hAf", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"2", " ", "pA"}]}], ")"}], " ", "sAf"}], "+", 
+       RowBox[{"2", " ", "hAm", " ", "sAm"}], "+", 
+       RowBox[{"2", " ", "pA", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "2"}], " ", "sAf"}], "+", "sAm", "-", 
+          RowBox[{"2", " ", "hAm", " ", "sAm"}]}], ")"}]}], "-", "t"}], 
+      ")"}]}]}]}], "}"}]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.6765816757750797`*^9, 3.6765817078003407`*^9}, 
+   3.6765829924512672`*^9}]
+}, Open  ]],
+
+Cell["The recursion for dpAxXm is", "Text",
+ CellChangeTimes->{{3.676583039166065*^9, 3.6765830471899357`*^9}, {
+  3.676583094087145*^9, 3.676583095512813*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqdpAxXm", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"xAprime", "-", "XAmprime"}], ")"}], "-", 
+           RowBox[{"(", 
+            RowBox[{"xA", "-", "XAm"}], ")"}]}], "/.", "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubs"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.676583091611586*^9, 3.676583092582191*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"4", " ", "dpAXY", " ", "r"}], "3"], "-", 
+      RowBox[{"2", " ", "dpAxXm", " ", "R"}], "+", 
+      RowBox[{"2", " ", "dpAXfXm", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "r", "+", "R"}], ")"}]}], "+", 
+      RowBox[{"pA", " ", "t"}], "-", 
+      RowBox[{
+       SuperscriptBox["pA", "2"], " ", "t"}], "-", 
+      RowBox[{"pA", " ", "r", " ", "t"}], "+", 
+      RowBox[{
+       SuperscriptBox["pA", "2"], " ", "r", " ", "t"}], "-", 
+      RowBox[{"pA", " ", "R", " ", "t"}], "+", 
+      RowBox[{
+       SuperscriptBox["pA", "2"], " ", "R", " ", "t"}]}], ")"}], " ", 
+    "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   Rational[4, 3] $CellContext`dpAXY $CellContext`r - 
+    2 $CellContext`dpAxXm $CellContext`R + 
+    2 $CellContext`dpAXfXm (-1 + $CellContext`r + $CellContext`R) + \
+$CellContext`pA $CellContext`t - $CellContext`pA^2 $CellContext`t - \
+$CellContext`pA $CellContext`r $CellContext`t + $CellContext`pA^2 \
+$CellContext`r $CellContext`t - $CellContext`pA $CellContext`R $CellContext`t + \
+$CellContext`pA^2 $CellContext`R $CellContext`t}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676583080250073*^9, 3.6765831020183897`*^9}}]
+}, Open  ]],
+
+Cell["And at equilibrium", "Text",
+ CellChangeTimes->{{3.676583104285584*^9, 3.676583107198604*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dpasubs2", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"eqdpAxXm", "\[Equal]", "0"}], "}"}], ",", 
+      RowBox[{"{", "dpAxXm", "}"}]}], "]"}], "//", "Flatten"}], "//", 
+   "FullSimplify"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"dpAxXm", "\[Rule]", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"4", " ", "dpAXY", " ", "r"}], "+", 
+     RowBox[{"6", " ", "dpAXfXm", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "r", "+", "R"}], ")"}]}], "+", 
+     RowBox[{"3", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "pA"}], ")"}], " ", "pA", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "r", "+", "R"}], ")"}], " ", "t"}]}], 
+    RowBox[{"6", " ", "R"}]]}], "}"}]], "Output",
+ CellChangeTimes->{3.676583116384721*^9}]
+}, Open  ]],
+
+Cell["\<\
+Subbing in the previous equilibrium result gives\
+\>", "Text",
+ CellChangeTimes->{{3.6765831206852293`*^9, 3.6765831292482557`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dpasubs3", "=", 
+  RowBox[{
+   RowBox[{"dpasubs2", "/.", "dpasubs1"}], "//", "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.676581989717371*^9, 3.6765820072938843`*^9}, 
+   3.676582992459038*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"dpAxXm", "\[Rule]", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"6", " ", "R"}]], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "pA"}], ")"}], " ", "pA", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"hAf", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"2", " ", "pA"}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"4", " ", "R"}]}], ")"}], " ", "sAf"}], "+", 
+       RowBox[{"pA", " ", 
+        RowBox[{"(", 
+         RowBox[{"sAf", "-", 
+          RowBox[{"4", " ", "R", " ", "sAf"}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             RowBox[{"2", " ", "hAm"}], "+", "R", "-", 
+             RowBox[{"2", " ", "hAm", " ", "R"}]}], ")"}], " ", "sAm"}]}], 
+         ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", "R"}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"hAm", " ", "sAm"}], "+", "t"}], ")"}]}]}], ")"}]}]}]}], 
+  "}"}]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.676582000913072*^9, 3.676582007612401*^9}, 
+   3.676582130802669*^9, 3.676582992459941*^9}]
+}, Open  ]],
+
+Cell["\<\
+Thus, at equilibrium, the growth rate of the rare neo-y is\
+\>", "Text",
+ CellChangeTimes->{{3.676583136027124*^9, 3.6765831599716597`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"appRA", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"approxRA", "/.", "dpasubs1"}], "/.", "dpasubs3"}], "//", 
+   "FullSimplify"}]}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "pA"}], ")"}], " ", "pA", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "pA"}], "+", 
+       RowBox[{"hAm", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"2", " ", "pA"}]}], ")"}]}]}], ")"}], " ", "sAm", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"hAf", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"2", " ", "pA"}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{"r", "-", 
+          RowBox[{"3", " ", "R"}]}], ")"}], " ", "sAf"}], "+", 
+       RowBox[{"pA", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"3", " ", "R", " ", "sAf"}], "-", 
+          RowBox[{"r", " ", 
+           RowBox[{"(", 
+            RowBox[{"sAf", "-", 
+             RowBox[{"2", " ", "sAm"}], "+", 
+             RowBox[{"4", " ", "hAm", " ", "sAm"}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", "r", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"hAm", " ", "sAm"}], "+", "t"}], ")"}]}]}], ")"}], " ", 
+     SuperscriptBox["\[Epsilon]", "2"]}], 
+    RowBox[{"3", " ", "r", " ", "R"}]], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "3"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 0, 3, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   1, 0, Rational[
+     1, 3] (-1 + $CellContext`pA) $CellContext`pA (-$CellContext`pA + \
+$CellContext`hAm (-1 + 
+       2 $CellContext`pA)) $CellContext`r^(-1) $CellContext`R^(-1) \
+$CellContext`sAm ($CellContext`hAf (-1 + 2 $CellContext`pA) ($CellContext`r - 
+       3 $CellContext`R) $CellContext`sAf + $CellContext`pA (
+       3 $CellContext`R $CellContext`sAf - $CellContext`r ($CellContext`sAf - 
+        2 $CellContext`sAm + 4 $CellContext`hAm $CellContext`sAm)) + 
+     2 $CellContext`r ($CellContext`hAm $CellContext`sAm + $CellContext`t))}, 
+   0, 3, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.67658316763675*^9}]
+}, Open  ]],
+
+Cell["\<\
+Finally, when the neo-y is rare, the change in the frequency of allele 1 is\
+\>", "Text",
+ CellChangeTimes->{{3.67571806556964*^9, 3.675718103851286*^9}, {
+  3.6765834391762857`*^9, 3.676583453055295*^9}, {3.676585542401919*^9, 
+  3.676585571067319*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dpA", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Series", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"2", " ", "XAfprime"}], "+", "XAmprime", "+", "YAprime", 
+            "-", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", "XAf"}], "+", "XAm", "+", "YA"}], ")"}]}], "/.", 
+           "weaksel"}], "/.", 
+          RowBox[{"Xaf", "\[Rule]", 
+           RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+         RowBox[{"Ya", "\[Rule]", 
+          RowBox[{"1", "-", "YA"}]}]}], "/.", 
+        RowBox[{"Xam", "\[Rule]", 
+         RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubs"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "/", "4"}],
+    "//", "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.675717647887065*^9, 3.675717697126732*^9}, {
+   3.675717728154462*^9, 3.675717827465465*^9}, {3.675717886726254*^9, 
+   3.6757179766881647`*^9}, {3.675718083857135*^9, 3.6757180905764112`*^9}, 
+   3.67571817039502*^9, {3.675719298161072*^9, 3.675719300128034*^9}, {
+   3.676585605195706*^9, 3.6765856364924994`*^9}, {3.6765857488167763`*^9, 
+   3.6765857509556313`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"hAf", " ", "pA", " ", "sAf"}], "+", 
+      RowBox[{
+       SuperscriptBox["pA", "2"], " ", "sAf"}], "-", 
+      RowBox[{"3", " ", "hAf", " ", 
+       SuperscriptBox["pA", "2"], " ", "sAf"}], "-", 
+      RowBox[{
+       SuperscriptBox["pA", "3"], " ", "sAf"}], "+", 
+      RowBox[{"2", " ", "hAf", " ", 
+       SuperscriptBox["pA", "3"], " ", "sAf"}], "+", 
+      RowBox[{"hAm", " ", "pA", " ", "sAm"}], "+", 
+      RowBox[{
+       SuperscriptBox["pA", "2"], " ", "sAm"}], "-", 
+      RowBox[{"3", " ", "hAm", " ", 
+       SuperscriptBox["pA", "2"], " ", "sAm"}], "-", 
+      RowBox[{
+       SuperscriptBox["pA", "3"], " ", "sAm"}], "+", 
+      RowBox[{"2", " ", "hAm", " ", 
+       SuperscriptBox["pA", "3"], " ", "sAm"}], "+", 
+      RowBox[{"pA", " ", "t"}], "-", 
+      RowBox[{
+       SuperscriptBox["pA", "2"], " ", "t"}]}], ")"}], " ", "\[Epsilon]"}], 
+   "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   Rational[1, 
+      2] ($CellContext`hAf $CellContext`pA $CellContext`sAf + \
+$CellContext`pA^2 $CellContext`sAf - 
+     3 $CellContext`hAf $CellContext`pA^2 $CellContext`sAf - \
+$CellContext`pA^3 $CellContext`sAf + 
+     2 $CellContext`hAf $CellContext`pA^3 $CellContext`sAf + $CellContext`hAm \
+$CellContext`pA $CellContext`sAm + $CellContext`pA^2 $CellContext`sAm - 
+     3 $CellContext`hAm $CellContext`pA^2 $CellContext`sAm - \
+$CellContext`pA^3 $CellContext`sAm + 
+     2 $CellContext`hAm $CellContext`pA^3 $CellContext`sAm + $CellContext`pA \
+$CellContext`t - $CellContext`pA^2 $CellContext`t)}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.675717675625972*^9, 3.675717697744046*^9}, {
+   3.675717736995945*^9, 3.675717827905334*^9}, {3.675717912013361*^9, 
+   3.6757179770805798`*^9}, {3.675718122247941*^9, 3.675718137314794*^9}, 
+   3.675718171232416*^9, {3.675719279665413*^9, 3.6757193043150883`*^9}, 
+   3.675727597413587*^9, 3.675785439649287*^9, 3.67578826604628*^9, 
+   3.676138226117289*^9, 3.676146370223422*^9, 3.676205570352737*^9, 
+   3.676206296389659*^9, {3.67620634706423*^9, 3.676206375228558*^9}, 
+   3.676207128152871*^9, 3.676297520582735*^9, 3.676298332781748*^9, 
+   3.676331483548442*^9, 3.67657078078118*^9, 3.676578087230349*^9, 
+   3.676578734997006*^9, 3.676585638371043*^9, 3.676585752141261*^9}]
+}, Open  ]],
+
+Cell["And at equilibrium we have", "Text",
+ CellChangeTimes->{{3.6757181100991917`*^9, 3.675718119482112*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqpA", "=", 
+  RowBox[{
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"dpA", "\[Equal]", "0"}], ",", "pA"}], "]"}], "//", 
+   "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.675717988879238*^9, 3.67571803095448*^9}, {
+   3.6757181277583733`*^9, 3.6757181353000813`*^9}, {3.6757192734183817`*^9, 
+   3.6757193075868177`*^9}, 3.676585765707481*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"pA", "\[Rule]", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"pA", "\[Rule]", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"pA", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"hAf", " ", "sAf"}], "+", 
+        RowBox[{"hAm", " ", "sAm"}], "+", "t"}], 
+       RowBox[{"sAf", "-", 
+        RowBox[{"2", " ", "hAf", " ", "sAf"}], "+", "sAm", "-", 
+        RowBox[{"2", " ", "hAm", " ", "sAm"}]}]]}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.675717995245247*^9, 3.675718031314158*^9}, {
+   3.675718129676858*^9, 3.675718138913946*^9}, 3.67571817443064*^9, {
+   3.675719281498005*^9, 3.675719308048888*^9}, 3.675727602150854*^9, 
+   3.675785444054607*^9, 3.675788267688079*^9, 3.676138228966215*^9, 
+   3.6761463703060913`*^9, 3.676205570544559*^9, 3.676206298808464*^9, {
+   3.676206349876573*^9, 3.676206377786057*^9}, 3.676207130419146*^9, 
+   3.676297520663327*^9, 3.676331483702094*^9, 3.6765707808531227`*^9, 
+   3.67657808761314*^9, 3.676585666084318*^9, {3.6765857559077997`*^9, 
+   3.676585766096719*^9}}]
+}, Open  ]],
+
+Cell["\<\
+We can now use this in the expression for the neo-y growth rate. To check our \
+work, the growth rate should reduce to Kirkpatrick\[CloseCurlyQuote]s result \
+when there is no haploid selection and there is free recombination between \
+the A locus and the novel sex determination locus\
+\>", "Text",
+ CellChangeTimes->{{3.676583180291844*^9, 3.67658324151683*^9}, {
+  3.676583473577385*^9, 3.676583542975013*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"kirk", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", "-", 
+          RowBox[{"VA", " ", "LA", " ", "SA"}]}], "}"}], "/.", 
+        RowBox[{"VA", "\[Rule]", 
+         RowBox[{"pA", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "pA"}], ")"}]}]}]}], "/.", 
+       RowBox[{"LA", "\[Rule]", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{"2", "r"}]}], ")"}], "/", "r"}]}]}], "/.", 
+      RowBox[{"SA", "\[Rule]", 
+       RowBox[{"\[Sigma]Am", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"\[Sigma]Am", "-", "\[Sigma]Af"}], ")"}], "/", "2"}]}]}]}], 
+     "/.", 
+     RowBox[{"\[Sigma]Am", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"pA", "+", 
+         RowBox[{"hAm", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"2", "pA"}]}], ")"}]}]}], ")"}], "\[Epsilon]", " ", 
+       "sAm"}]}]}], "/.", 
+    RowBox[{"\[Sigma]Af", "\[Rule]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"pA", "+", 
+        RowBox[{"hAf", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{"2", "pA"}]}], ")"}]}]}], ")"}], "\[Epsilon]", " ", 
+      "sAf"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"appRA", "-", "kirk"}], "/.", 
+     RowBox[{"eqpA", "[", 
+      RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
+    RowBox[{"t", "\[Rule]", "0"}]}], "/.", 
+   RowBox[{"R", "\[Rule]", 
+    RowBox[{"1", "/", "2"}]}]}], "//", "FullSimplify"}]}], "Input",
+ CellChangeTimes->{{3.676583329405044*^9, 3.676583346640188*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   SuperscriptBox[
+    RowBox[{"O", "[", "\[Epsilon]", "]"}], "3"],
+   SeriesData[$CellContext`\[Epsilon], 0, {}, 3, 3, 1],
+   Editable->False], "}"}]], "Output",
+ CellChangeTimes->{{3.676583318842709*^9, 3.676583347125813*^9}, 
+   3.676585773825858*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Tight linkage approximation", "Subsection",
+ CellChangeTimes->{{3.676583710887702*^9, 3.676583716758197*^9}, {
+  3.67658401403446*^9, 3.6765840210853662`*^9}}],
+
+Cell["\<\
+When recombination between the original sex-determining locus and the A locus \
+is of the same order (or greater) as selection on the A locus, we can no \
+longer assume the difference in the frequency of allele 1 with the X and Y to \
+be small. Following van Doorn and Kirkpatrick, we use the new change of \
+variables\
+\>", "Text",
+ CellChangeTimes->{{3.676584387492292*^9, 3.6765845086738358`*^9}, {
+  3.676585787423489*^9, 3.6765858117223463`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pAsubsLinked", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"XAf", "\[Rule]", 
+      RowBox[{"pAX", "+", 
+       RowBox[{"\[Epsilon]", " ", "dpAXfXm"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"XAm", "\[Rule]", 
+      RowBox[{"pAX", "-", 
+       RowBox[{"2", "\[Epsilon]", " ", "dpAXfXm"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"YA", "\[Rule]", "pAY"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"xA", "\[Rule]", 
+      RowBox[{"pAX", "+", 
+       RowBox[{"\[Epsilon]", " ", "dpAxX"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"r", "\[Rule]", 
+      RowBox[{"\[Epsilon]", " ", "r1"}]}]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6765845199292593`*^9, 3.6765846288082247`*^9}, {
+  3.676586106483119*^9, 3.6765861065996113`*^9}}],
+
+Cell["\<\
+where pAX and pAY are the average frequencies of allele 1 on X and Y \
+chromosomes and dpAxX is the difference in the frequency of allele 1 with the \
+novel sex-determining factor vs the original sex-determining factor.\
+\>", "Text",
+ CellChangeTimes->{{3.676584639381562*^9, 3.676584686528328*^9}, {
+  3.6765858272906437`*^9, 3.676585890810379*^9}}],
+
+Cell["\<\
+An approximation for the growth rate of the neo-y is then\
+\>", "Text",
+ CellChangeTimes->{{3.6765859536512833`*^9, 3.676585971071102*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"approxRALinked", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"RA", "/.", "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubsLinked"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.676585904062738*^9, 3.676585939513118*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "pAX"}], "+", 
+      RowBox[{"hAm", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"2", " ", "pAX"}]}], ")"}]}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"pAX", "-", "pAY"}], ")"}], " ", "sAm", " ", "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 0, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   1, -(-$CellContext`pAX + $CellContext`hAm (-1 + 
+       2 $CellContext`pAX)) ($CellContext`pAX - $CellContext`pAY) \
+$CellContext`sAm}, 0, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.6765859274394703`*^9, 3.67658593978104*^9}, 
+   3.676586111320175*^9}]
+}, Open  ]],
+
+Cell["\<\
+The difference in the frequency of allele 1 on the X and Y chromosomes is \
+then approximately\
+\>", "Text",
+ CellChangeTimes->{{3.676586056717393*^9, 3.676586083827791*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqpAXYLinked", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", "XAfprime"}], "+", "XAmprime", "-", 
+             RowBox[{"3", "YAprime"}]}], ")"}], "-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", "XAf"}], "+", "XAm", "-", 
+             RowBox[{"3", "YA"}]}], ")"}]}], "/.", "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubsLinked"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.676586002316033*^9, 3.676586014417512*^9}, {
+  3.676586076878158*^9, 3.676586170784618*^9}, {3.676586317308647*^9, 
+  3.67658631805939*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"2", " ", "hAf"}]}], ")"}], " ", 
+       SuperscriptBox["pAX", "3"], " ", "sAf"}], "-", 
+      RowBox[{
+       SuperscriptBox["pAX", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "2"}], "+", 
+            RowBox[{"6", " ", "hAf"}]}], ")"}], " ", "sAf"}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"hAm", "+", "pAY", "-", 
+            RowBox[{"2", " ", "hAm", " ", "pAY"}]}], ")"}], " ", "sAm"}], "+",
+          "t"}], ")"}]}], "+", 
+      RowBox[{"pAX", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "4"}], " ", "r1"}], "+", 
+         RowBox[{"2", " ", "hAf", " ", "sAf"}], "+", 
+         RowBox[{"pAY", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "2"}], "+", 
+            RowBox[{"3", " ", "pAY"}]}], ")"}], " ", "sAm"}], "+", 
+         RowBox[{"hAm", " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            RowBox[{"4", " ", "pAY"}], "-", 
+            RowBox[{"6", " ", 
+             SuperscriptBox["pAY", "2"]}]}], ")"}], " ", "sAm"}], "+", "t"}], 
+        ")"}]}], "+", 
+      RowBox[{"pAY", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"4", " ", "r1"}], "+", 
+         RowBox[{"3", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "pAY"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"hAm", " ", "sAm"}], "+", "t"}], ")"}]}]}], ")"}]}]}], 
+     ")"}], " ", "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   2 (-1 + 2 $CellContext`hAf) $CellContext`pAX^3 $CellContext`sAf - \
+$CellContext`pAX^2 ((-2 + 
+       6 $CellContext`hAf) $CellContext`sAf + ($CellContext`hAm + \
+$CellContext`pAY - 
+       2 $CellContext`hAm $CellContext`pAY) $CellContext`sAm + \
+$CellContext`t) + $CellContext`pAX ((-4) $CellContext`r1 + 
+      2 $CellContext`hAf $CellContext`sAf + $CellContext`pAY (-2 + 
+        3 $CellContext`pAY) $CellContext`sAm + $CellContext`hAm (1 + 
+        4 $CellContext`pAY - 
+        6 $CellContext`pAY^2) $CellContext`sAm + $CellContext`t) + \
+$CellContext`pAY (4 $CellContext`r1 + 
+      3 (-1 + $CellContext`pAY) ($CellContext`hAm $CellContext`sAm + \
+$CellContext`t))}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676586153945653*^9, 3.676586171442275*^9}, 
+   3.6765863290792007`*^9}]
+}, Open  ]],
+
+Cell["\<\
+And the rate of change in the average frequency of allele 1 is\
+\>", "Text",
+ CellChangeTimes->{{3.6765868410016327`*^9, 3.676586856684408*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqpALinked", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", "XAfprime"}], "+", "XAmprime", "+", "YAprime"}], 
+            ")"}], "-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", "XAf"}], "+", "XAm", "+", "YA"}], ")"}]}], "/.", 
+          "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubsLinked"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.676586290411571*^9, 3.676586326914856*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "2"}], " ", 
+       SuperscriptBox["pAX", "3"], " ", "sAf"}], "+", 
+      RowBox[{"2", " ", "hAf", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pAX"}], ")"}], " ", "pAX", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"2", " ", "pAX"}]}], ")"}], " ", "sAf"}], "+", 
+      RowBox[{
+       SuperscriptBox["pAX", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", "sAf"}], "-", 
+         RowBox[{"pAY", " ", "sAm"}], "+", 
+         RowBox[{"hAm", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"2", " ", "pAY"}]}], ")"}], " ", "sAm"}], "-", "t"}], 
+        ")"}]}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pAY"}], ")"}], " ", "pAY", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"hAm", " ", "sAm"}], "+", "t"}], ")"}]}], "+", 
+      RowBox[{"pAX", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2"}], "+", "pAY"}], ")"}]}], " ", "pAY", " ", 
+          "sAm"}], "+", 
+         RowBox[{"hAm", " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            RowBox[{"2", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "2"}], "+", "pAY"}], ")"}], " ", "pAY"}]}], ")"}],
+           " ", "sAm"}], "+", "t"}], ")"}]}]}], ")"}], " ", "\[Epsilon]"}], 
+   "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 
+   0, {(-2) $CellContext`pAX^3 $CellContext`sAf + 
+    2 $CellContext`hAf (-1 + $CellContext`pAX) $CellContext`pAX (-1 + 
+      2 $CellContext`pAX) $CellContext`sAf + $CellContext`pAX^2 (
+      2 $CellContext`sAf - $CellContext`pAY $CellContext`sAm + \
+$CellContext`hAm (-1 + 
+        2 $CellContext`pAY) $CellContext`sAm - $CellContext`t) - (-1 + \
+$CellContext`pAY) $CellContext`pAY ($CellContext`hAm $CellContext`sAm + \
+$CellContext`t) + $CellContext`pAX (-(-2 + $CellContext`pAY) $CellContext`pAY \
+$CellContext`sAm + $CellContext`hAm (1 + 
+        2 (-2 + $CellContext`pAY) $CellContext`pAY) $CellContext`sAm + \
+$CellContext`t)}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676586305528173*^9, 3.67658632732787*^9}}]
+}, Open  ]],
+
+Cell["\<\
+We can simplify these expressions with some new terms\
+\>", "Text",
+ CellChangeTimes->{{3.676586998722804*^9, 3.676587014101894*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"simplesubs", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"\[Sigma]AX", "\[Rule]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", "/", "3"}], 
+        RowBox[{"(", 
+         RowBox[{"pAX", "+", 
+          RowBox[{"hAf", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"2", "pAX"}]}], ")"}]}]}], ")"}], "\[Epsilon]", " ", 
+        "sAf"}], "+", 
+       RowBox[{
+        RowBox[{"1", "/", "3"}], 
+        RowBox[{"(", 
+         RowBox[{"pAY", "+", 
+          RowBox[{"hAm", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"2", "pAY"}]}], ")"}]}]}], ")"}], "\[Epsilon]", " ", 
+        "sAm"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\[Sigma]AY", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"pAX", "+", 
+         RowBox[{"hAm", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"2", "pAX"}]}], ")"}]}]}], ")"}], "\[Epsilon]", " ", 
+       "sAm"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"VAX", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "pAX"}], ")"}], "pAX"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"VAY", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "pAY"}], ")"}], "pAY"}]}]}], "\[IndentingNewLine]", 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.676587015564591*^9, 3.6765871697825403`*^9}, {
+  3.676587208687361*^9, 3.676587250806056*^9}, {3.676587408795269*^9, 
+  3.676587412034004*^9}}],
+
+Cell["\<\
+We can then write the recursion for the difference in the frequency of allele \
+1 with X and Y like\
+\>", "Text",
+ CellChangeTimes->{{3.6765874283259573`*^9, 3.6765874774343576`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eqpAXYLinkedSimp", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "4"}], 
+     RowBox[{"(", 
+      RowBox[{"pAX", "-", "pAY"}], ")"}], "r"}], "+", 
+    RowBox[{"3", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"VAX", " ", "\[Sigma]AX"}], "-", 
+       RowBox[{"VAY", " ", "\[Sigma]AY"}]}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"VAX", "-", 
+       RowBox[{"3", "VAY"}]}], ")"}], "t", " ", "\[Epsilon]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.676587268873069*^9, 3.676587363068524*^9}, {
+  3.6765874819519367`*^9, 3.6765875121539297`*^9}, {3.676587574994731*^9, 
+  3.676587612565858*^9}, {3.676587647581994*^9, 3.6765876509015913`*^9}}],
+
+Cell["Check that this is indeed true", "Text",
+ CellChangeTimes->{{3.6765876911944723`*^9, 3.676587695870624*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"eqpAXYLinkedSimp", "-", "eqpAXYLinked"}], "/.", "simplesubs"}], "/.", 
+   RowBox[{"r", "\[Rule]", 
+    RowBox[{"r1", " ", "\[Epsilon]"}]}]}], "//", "Simplify"}]], "Input",
+ CellChangeTimes->{{3.6765873672201643`*^9, 3.676587396545806*^9}, {
+  3.6765874454428596`*^9, 3.676587451998765*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  SuperscriptBox[
+   RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+  SeriesData[$CellContext`\[Epsilon], 0, {}, 2, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676587367578302*^9, 3.67658745228249*^9}, {
+  3.6765875037854357`*^9, 3.676587533868641*^9}, {3.6765875779876213`*^9, 
+  3.676587614805255*^9}}]
+}, Open  ]],
+
+Cell["\<\
+And therefore at equilibrium we have\
+\>", "Text",
+ CellChangeTimes->{{3.6765877810275507`*^9, 3.676587788258544*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", "==", "eqpAXYLinkedSimp"}], "/.", 
+    RowBox[{
+     RowBox[{"pAX", "-", "pAY"}], "\[Rule]", "dpAXY"}]}], ",", "dpAXY"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6765877155706377`*^9, 3.6765877760793858`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"dpAXY", "\[Rule]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"t", " ", "VAX", " ", "\[Epsilon]"}], "-", 
+      RowBox[{"3", " ", "t", " ", "VAY", " ", "\[Epsilon]"}], "+", 
+      RowBox[{"3", " ", "VAX", " ", "\[Sigma]AX"}], "-", 
+      RowBox[{"3", " ", "VAY", " ", "\[Sigma]AY"}]}], 
+     RowBox[{"4", " ", "r"}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.676587716290772*^9, {3.676587761858404*^9, 3.676587776526894*^9}}]
+}, Open  ]],
+
+Cell["\<\
+Similarly, we can write the change in the frequency of allele 1 as\
+\>", "Text",
+ CellChangeTimes->{{3.67658792359157*^9, 3.6765879381818743`*^9}, {
+  3.676588005294889*^9, 3.676588008267151*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eqpALinkedSimp", "=", 
+   RowBox[{
+    RowBox[{"3", "VAX", " ", "\[Sigma]AX"}], "+", 
+    RowBox[{"VAY", " ", "\[Sigma]AY"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"VAX", "+", "VAY"}], ")"}], "t", " ", "\[Epsilon]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.67658784167068*^9, 3.6765878727494507`*^9}, {
+  3.676587918431789*^9, 3.676587918836789*^9}, {3.676587961818905*^9, 
+  3.6765879875447273`*^9}}],
+
+Cell["\<\
+And check that this is indeed correct\
+\>", "Text",
+ CellChangeTimes->{{3.676587941810792*^9, 3.676587949658692*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"eqpALinkedSimp", "-", "eqpALinked"}], "/.", "simplesubs"}], "/.", 
+   RowBox[{"r", "\[Rule]", 
+    RowBox[{"r1", " ", "\[Epsilon]"}]}]}], "//", "Simplify"}]], "Input",
+ CellChangeTimes->{{3.676587881045948*^9, 3.676587892344213*^9}, 
+   3.676587953632453*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  SuperscriptBox[
+   RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+  SeriesData[$CellContext`\[Epsilon], 0, {}, 2, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.6765878856150703`*^9, 3.676587920230846*^9}, {
+  3.676587953950102*^9, 3.6765879891997633`*^9}}]
+}, Open  ]],
+
+Cell["\<\
+Therefore at equilibrium we have\
+\>", "Text",
+ CellChangeTimes->{{3.676588129625272*^9, 3.6765881375112543`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"variances", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"eqpALinkedSimp", "\[Equal]", "0"}], ",", 
+        RowBox[{"VA", "\[Equal]", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", "VAX"}], "+", "VAY"}], ")"}], "/", "4"}]}]}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"VAX", ",", "VAY"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+   "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.676588047649045*^9, 3.67658812246128*^9}, {
+  3.676588254423493*^9, 3.676588256006276*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"VAX", "\[Rule]", 
+    FractionBox[
+     RowBox[{"4", " ", "VA", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"t", " ", "\[Epsilon]"}], "+", "\[Sigma]AY"}], ")"}]}], 
+     RowBox[{
+      RowBox[{"2", " ", "t", " ", "\[Epsilon]"}], "-", 
+      RowBox[{"3", " ", "\[Sigma]AX"}], "+", 
+      RowBox[{"3", " ", "\[Sigma]AY"}]}]]}], ",", 
+   RowBox[{"VAY", "\[Rule]", 
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{"4", " ", "VA", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"t", " ", "\[Epsilon]"}], "+", 
+         RowBox[{"3", " ", "\[Sigma]AX"}]}], ")"}]}], 
+      RowBox[{
+       RowBox[{"2", " ", "t", " ", "\[Epsilon]"}], "-", 
+       RowBox[{"3", " ", "\[Sigma]AX"}], "+", 
+       RowBox[{"3", " ", "\[Sigma]AY"}]}]]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6765880773201103`*^9, 3.6765881227738943`*^9}, 
+   3.676588256659614*^9}]
+}, Open  ]],
+
+Cell["\<\
+where VA is the average variance in the frequency of allele 1 across all \
+chromosomes.\
+\>", "Text",
+ CellChangeTimes->{{3.6765881434110622`*^9, 3.676588182021234*^9}}],
+
+Cell["\<\
+Finally, we can write the growth rate of the neo-y like\t\
+\>", "Text",
+ CellChangeTimes->{{3.6765882936776333`*^9, 3.676588314084442*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RAsimp", "=", 
+   RowBox[{"1", "-", 
+    RowBox[{"\[Sigma]AY", " ", 
+     FractionBox[
+      RowBox[{"3", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "VAX"}], " ", "\[Sigma]AX"}], "+", 
+         RowBox[{"VAY", " ", "\[Sigma]AY"}]}], ")"}]}], 
+      RowBox[{"4", " ", "r"}]]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.676588205154167*^9, 3.676588290105474*^9}, {
+   3.676589249829822*^9, 3.676589268508422*^9}, 3.676589627623953*^9}],
+
+Cell["\<\
+This reduces to van Doorn and Kirkpatrick\[CloseCurlyQuote]s result in the \
+absence of haploid selection\
+\>", "Text",
+ CellChangeTimes->{{3.67658966015904*^9, 3.676589682287039*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"RAsimp", "/.", "variances"}], "/.", 
+   RowBox[{"t", "\[Rule]", "0"}]}], "//", "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.676589628952403*^9, 3.676589656645438*^9}}],
+
+Cell[BoxData[
+ RowBox[{"1", "-", 
+  FractionBox[
+   RowBox[{"4", " ", "VA", " ", "\[Sigma]AX", " ", 
+    SuperscriptBox["\[Sigma]AY", "2"]}], 
+   RowBox[{
+    RowBox[{"r", " ", "\[Sigma]AX"}], "-", 
+    RowBox[{"r", " ", "\[Sigma]AY"}]}]]}]], "Output",
+ CellChangeTimes->{{3.6765896402718887`*^9, 3.676589656971941*^9}, {
+  3.676590225290619*^9, 3.676590228486988*^9}}]
+}, Open  ]],
+
+Cell["\<\
+And we check that this new expression is actually true\
+\>", "Text",
+ CellChangeTimes->{{3.676589143093421*^9, 3.676589153859576*^9}, {
+  3.676589688182111*^9, 3.67658969041448*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"approxRALinked", "-", "RAsimp"}], "/.", "simplesubs"}], "//", 
+  "Simplify"}]], "Input",
+ CellChangeTimes->{{3.6765902089817057`*^9, 3.676590233225494*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"hAm", "+", "pAX", "-", 
+      RowBox[{"2", " ", "hAm", " ", "pAX"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"pAX", "-", "pAY"}], ")"}], " ", "sAm", " ", "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 
+   0, {($CellContext`hAm + $CellContext`pAX - 
+     2 $CellContext`hAm $CellContext`pAX) ($CellContext`pAX - \
+$CellContext`pAY) $CellContext`sAm}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676590221874711*^9, 3.676590233542173*^9}}]
+}, Open  ]],
+
+Cell["\<\
+It doesn\[CloseCurlyQuote]t seem to be (why?!). But we could instead write \
+the neo-y growth rate like\
+\>", "Text",
+ CellChangeTimes->{{3.676590237085455*^9, 3.6765902815056334`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RAsimp2", "=", 
+   RowBox[{"1", "-", 
+    RowBox[{"\[Sigma]AY", 
+     RowBox[{"(", 
+      RowBox[{"pAY", "-", "pAX"}], ")"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6765900695843554`*^9, 3.676590135075926*^9}, {
+   3.676590213673218*^9, 3.676590218285602*^9}, 3.676590353455987*^9}],
+
+Cell["And this seems to be correct", "Text",
+ CellChangeTimes->{{3.676590255952269*^9, 3.676590268695765*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"approxRALinked", "-", "RAsimp2"}], "/.", "simplesubs"}], "//", 
+  "Simplify"}]], "Input",
+ CellChangeTimes->{{3.6765901210588207`*^9, 3.676590122055189*^9}, 
+   3.676590214695148*^9, 3.676590355090534*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  SuperscriptBox[
+   RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+  SeriesData[$CellContext`\[Epsilon], 0, {}, 2, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676590118186528*^9, 3.6765901364546833`*^9}, 
+   3.676590219839938*^9, {3.6765903475798798`*^9, 3.676590355378357*^9}}]
+}, Open  ]]
+}, Closed]]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+2 - Sexually-antagonistic locus on the autosome\
+\>", "Title",
+ CellChangeTimes->{{3.676582480718354*^9, 3.676582483582519*^9}, 
+   3.676583567519174*^9, {3.676583924245014*^9, 3.676583948032938*^9}, {
+   3.676590426076891*^9, 3.67659043173453*^9}, {3.676590625474045*^9, 
+   3.676590655490799*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Recursion equations", "Section",
+ CellChangeTimes->{{3.6756910197792797`*^9, 3.675691024113359*^9}, {
+   3.67569412935745*^9, 3.6756941314240303`*^9}, {3.675707349839982*^9, 
+   3.675707351884247*^9}, {3.675709974013658*^9, 3.675709982915987*^9}, {
+   3.6757923469668207`*^9, 3.675792350124728*^9}, {3.6761413144270782`*^9, 
+   3.676141323737258*^9}, {3.676142978381001*^9, 3.67614297923321*^9}, 
+   3.676199586158256*^9, 3.676206073928619*^9, {3.6765825189533577`*^9, 
+   3.676582521678049*^9}}],
+
+Cell["\<\
+Let Uaf be the frequency of allele 1 at the diallelic autosomal locus in \
+gametes/pollen from females. Let Uam be the frequency of allele 1 at the \
+diallelic autosomal locus in gametes/pollen from males without the novel \
+sex-determining factor. And let ua be the frequency of allele 1 at the \
+diallelic autosomal locus a in male gametes with a new dominant macculinizing \
+(ie a neo-y) mutation.
+
+We start with haploid selection, which occurs in sperm/pollen only. After \
+selection on male gametes/pollen we then have\
+\>", "Text",
+ CellChangeTimes->{{3.675646210075425*^9, 3.6756462139879293`*^9}, {
+   3.675692881948024*^9, 3.675692905462323*^9}, {3.675702634397826*^9, 
+   3.6757026600570383`*^9}, {3.675710000498989*^9, 3.675710437600037*^9}, {
+   3.6757106247367887`*^9, 3.675710626158669*^9}, {3.6761379095010347`*^9, 
+   3.676137962328772*^9}, {3.676584792355638*^9, 3.6765849713109922`*^9}, {
+   3.676585005798175*^9, 3.6765850557890997`*^9}, {3.676585102524021*^9, 
+   3.6765851299230433`*^9}, {3.676590823860627*^9, 3.676590839779654*^9}, {
+   3.676590875810676*^9, 3.676590875903017*^9}, {3.6765909117730713`*^9, 
+   3.6765910662386723`*^9}, {3.6765911289849443`*^9, 3.676591135997581*^9}, {
+   3.676591212862588*^9, 3.676591221655038*^9}, {3.676591335176506*^9, 
+   3.676591339142761*^9}, 3.6765914907222347`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"wbarHapNorm", "=", 
+   RowBox[{
+    RowBox[{"w1", " ", "Uam"}], "+", 
+    RowBox[{"w2", " ", "Ua2m"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wbarHapMut", "=", 
+   RowBox[{
+    RowBox[{"w1", " ", "ua"}], "+", 
+    RowBox[{"w2", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "ua"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Uafs", "=", "Uaf"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ua2fs", "=", "Ua2f"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Uams", "=", 
+   RowBox[{"w1", " ", 
+    RowBox[{"Uam", "/", "wbarHapNorm"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ua2ms", "=", 
+   RowBox[{"w2", " ", 
+    RowBox[{"Ua2m", "/", "wbarHapNorm"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uas", "=", 
+   RowBox[{"w1", " ", "\[Epsilon]y", " ", 
+    RowBox[{"ua", "/", "wbarHapMut"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ua2s", "=", 
+   RowBox[{"w2", " ", "\[Epsilon]y", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", "ua"}], ")"}], "/", "wbarHapMut"}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.676591302258444*^9, 3.676591315124917*^9}, {
+  3.676591348753888*^9, 3.6765915468978653`*^9}, {3.67659165594836*^9, 
+  3.676591663702364*^9}, {3.6765975615701647`*^9, 3.6765975655441647`*^9}, {
+  3.676597751969797*^9, 3.676597781695898*^9}}],
+
+Cell["\<\
+where w1 and w2 describe selection in male gametes/pollen.\
+\>", "Text",
+ CellChangeTimes->{{3.67658509587938*^9, 3.676585096527823*^9}, {
+  3.676585137826956*^9, 3.676585201042717*^9}, {3.676591571453911*^9, 
+  3.676591578996791*^9}}],
+
+Cell["\<\
+Check that frequencies of allele 1 in each gamete type sums to one (or \
+\[Epsilon]y) after haploid selection:\
+\>", "Text",
+ CellChangeTimes->{{3.675691241028049*^9, 3.675691262904736*^9}, {
+   3.675691499842326*^9, 3.675691508954028*^9}, {3.6757021446730413`*^9, 
+   3.6757021466313477`*^9}, 3.67570266834774*^9, {3.675710454342794*^9, 
+   3.675710458811872*^9}, {3.675711308941972*^9, 3.6757113347037287`*^9}, {
+   3.676140458259473*^9, 3.676140486907097*^9}, 3.676199586160721*^9, {
+   3.6762058698955383`*^9, 3.676205873473984*^9}, {3.6765853116814632`*^9, 
+   3.676585327191327*^9}, {3.676591637350059*^9, 3.676591646225706*^9}, {
+   3.676597582059869*^9, 3.676597584398119*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"1", "\[Equal]", 
+    RowBox[{"Uafs", "+", "Ua2fs"}]}], "/.", 
+   RowBox[{"Ua2f", "\[Rule]", 
+    RowBox[{"1", "-", "Uaf"}]}]}], "//", "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"1", "\[Equal]", 
+   RowBox[{"Uams", "+", "Ua2ms"}]}], "//", 
+  "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Epsilon]y", "\[Equal]", 
+   RowBox[{"uas", "+", "ua2s"}]}], "//", "Factor"}]}], "Input",
+ CellChangeTimes->{{3.6762058553075027`*^9, 3.676205862337631*^9}, {
+  3.6765915830533733`*^9, 3.676591652164034*^9}, {3.676591683730233*^9, 
+  3.6765916852580853`*^9}, {3.676597576467992*^9, 3.676597577346527*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.676205597799912*^9, 3.676205804339649*^9, 3.676205862891724*^9, 
+   3.6762975094425383`*^9, 3.6763314735315857`*^9, 3.6765707789165363`*^9, 
+   3.676578081579689*^9, 3.676591627887863*^9, 3.676591686090045*^9, {
+   3.676597570506279*^9, 3.676597577773156*^9}, {3.676597758330493*^9, 
+   3.6765977840325623`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.676205597799912*^9, 3.676205804339649*^9, 3.676205862891724*^9, 
+   3.6762975094425383`*^9, 3.6763314735315857`*^9, 3.6765707789165363`*^9, 
+   3.676578081579689*^9, 3.676591627887863*^9, 3.676591686090045*^9, {
+   3.676597570506279*^9, 3.676597577773156*^9}, {3.676597758330493*^9, 
+   3.6765977840380917`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.676205597799912*^9, 3.676205804339649*^9, 3.676205862891724*^9, 
+   3.6762975094425383`*^9, 3.6763314735315857`*^9, 3.6765707789165363`*^9, 
+   3.676578081579689*^9, 3.676591627887863*^9, 3.676591686090045*^9, {
+   3.676597570506279*^9, 3.676597577773156*^9}, {3.676597758330493*^9, 
+   3.676597784045046*^9}}]
+}, Open  ]],
+
+Cell["\<\
+After random mating, the frequencies of the diploid genotypes are\
+\>", "Text",
+ CellChangeTimes->{{3.675646094888542*^9, 3.675646099390658*^9}, {
+   3.675646217785323*^9, 3.675646250704771*^9}, {3.67570268816877*^9, 
+   3.6757027045136023`*^9}, {3.676143601607935*^9, 3.6761436020295963`*^9}, 
+   3.676199586165538*^9, {3.676592083618394*^9, 3.676592094749234*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"U11", "=", 
+   RowBox[{"Uafs", " ", "Uams"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"U12", "=", 
+   RowBox[{
+    RowBox[{"Uafs", " ", "Ua2ms"}], "+", 
+    RowBox[{"Ua2fs", " ", "Uams"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"U22", "=", 
+    RowBox[{"Ua2fs", " ", "Ua2ms"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u11", "=", 
+   RowBox[{"Uafs", " ", "uas"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u12", "=", 
+   RowBox[{"Uafs", " ", "ua2s"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u21", "=", 
+   RowBox[{"Ua2fs", " ", "uas"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u22", "=", 
+   RowBox[{"Ua2fs", " ", "ua2s"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.676591785658654*^9, 3.676591875634739*^9}, {
+  3.676592100645649*^9, 3.676592107350806*^9}, {3.676592164910439*^9, 
+  3.6765922129565067`*^9}, {3.6765979737415237`*^9, 3.6765979773618727`*^9}, {
+  3.676598319043231*^9, 3.676598363848834*^9}}],
+
+Cell["\<\
+Check that frequencies sum to one (or \[Epsilon]y)\
+\>", "Text",
+ CellChangeTimes->{{3.6761436064259577`*^9, 3.676143611328102*^9}, 
+   3.67619958616654*^9, {3.676205899432912*^9, 3.6762059064641323`*^9}, {
+   3.676585335249318*^9, 3.6765853393839397`*^9}, {3.676592050244409*^9, 
+   3.676592050914007*^9}, {3.6765984017856693`*^9, 3.67659840482583*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"1", "\[Equal]", 
+    RowBox[{"U11", "+", "U12", "+", "U22"}]}], "/.", 
+   RowBox[{"Ua2f", "\[Rule]", 
+    RowBox[{"1", "-", "Uaf"}]}]}], "//", "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Epsilon]y", "\[Equal]", 
+    RowBox[{"u11", "+", "u12", "+", "u21", "+", "u22"}]}], "/.", 
+   RowBox[{"Ua2f", "\[Rule]", 
+    RowBox[{"1", "-", "Uaf"}]}]}], "//", "Factor"}]}], "Input",
+ CellChangeTimes->{{3.6762058834850693`*^9, 3.676205896199106*^9}, {
+  3.676592056730194*^9, 3.676592070403585*^9}, {3.67659221838793*^9, 
+  3.676592228256633*^9}, {3.676598409361492*^9, 3.676598423360735*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.676205606183573*^9, {3.67620588002642*^9, 3.676205896776825*^9}, 
+   3.67629750955724*^9, 3.676331473646187*^9, 3.676570779000814*^9, 
+   3.676578081694895*^9, {3.676592063719864*^9, 3.6765920707036552`*^9}, 
+   3.676592228541748*^9, 3.6765975916762047`*^9, 3.6765977875479*^9, {
+   3.6765983944882393`*^9, 3.676598423656665*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.676205606183573*^9, {3.67620588002642*^9, 3.676205896776825*^9}, 
+   3.67629750955724*^9, 3.676331473646187*^9, 3.676570779000814*^9, 
+   3.676578081694895*^9, {3.676592063719864*^9, 3.6765920707036552`*^9}, 
+   3.676592228541748*^9, 3.6765975916762047`*^9, 3.6765977875479*^9, {
+   3.6765983944882393`*^9, 3.6765984236627083`*^9}}]
+}, Open  ]],
+
+Cell["\<\
+After diploid selection (which can differ between males and females) the \
+frequencies of the diploid genotypes in each type are\
+\>", "Text",
+ CellChangeTimes->{{3.6756467552456417`*^9, 3.67564676342205*^9}, {
+   3.675702725992881*^9, 3.67570275267984*^9}, 3.676199586169319*^9, {
+   3.676592319467599*^9, 3.676592320795741*^9}, {3.676596722837615*^9, 
+   3.676596723664468*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"wbarNormF", "=", 
+    RowBox[{
+     RowBox[{"F11", " ", "U11"}], "+", 
+     RowBox[{"F12", " ", "U12"}], "+", 
+     RowBox[{"F22", " ", "U22"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"U11Fs", "=", 
+   RowBox[{"F11", " ", 
+    RowBox[{"U11", "/", "wbarNormF"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"U12Fs", "=", 
+   RowBox[{"F12", " ", 
+    RowBox[{"U12", "/", "wbarNormF"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"U22Fs", "=", 
+    RowBox[{"F22", " ", 
+     RowBox[{"U22", "/", "wbarNormF"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"wbarNormM", "=", 
+    RowBox[{
+     RowBox[{"M11", " ", "U11"}], "+", 
+     RowBox[{"M12", " ", "U12"}], "+", 
+     RowBox[{"M22", " ", "U22"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"U11Ms", "=", 
+   RowBox[{"M11", " ", 
+    RowBox[{"U11", "/", "wbarNormM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"U12Ms", "=", 
+   RowBox[{"M12", " ", 
+    RowBox[{"U12", "/", "wbarNormM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"U22Ms", "=", 
+    RowBox[{"M22", " ", 
+     RowBox[{"U22", "/", "wbarNormM"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u11s", "=", 
+   RowBox[{"M11", " ", 
+    RowBox[{"u11", "/", "wbarNormM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u12s", "=", 
+   RowBox[{"M12", " ", 
+    RowBox[{"u12", "/", "wbarNormM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u21s", "=", 
+   RowBox[{"M12", " ", 
+    RowBox[{"u21", "/", "wbarNormM"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u22s", "=", 
+   RowBox[{"M22", " ", 
+    RowBox[{"u22", "/", "wbarNormM"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.675646788099258*^9, 3.675646827315172*^9}, {
+   3.675646906255657*^9, 3.6756471746197577`*^9}, {3.6756477305962267`*^9, 
+   3.675647791098443*^9}, {3.675693609968581*^9, 3.6756936401475143`*^9}, {
+   3.675702773030509*^9, 3.675702825109133*^9}, {3.6757958668524837`*^9, 
+   3.675796079670739*^9}, {3.675796179417987*^9, 3.675796260462306*^9}, {
+   3.675796480404418*^9, 3.675796481420582*^9}, {3.675796553441423*^9, 
+   3.67579667834494*^9}, {3.6757967212634993`*^9, 3.67579673565335*^9}, {
+   3.675796766370957*^9, 3.675796913595641*^9}, {3.675796952452533*^9, 
+   3.675796955994008*^9}, {3.6757970625420837`*^9, 3.675797062966584*^9}, {
+   3.675797156973634*^9, 3.675797157898295*^9}, {3.675797509731503*^9, 
+   3.6757975122266283`*^9}, 3.6757987828785143`*^9, {3.675798997687969*^9, 
+   3.675798999203364*^9}, {3.676143759564913*^9, 3.676143876897674*^9}, {
+   3.6761439480553083`*^9, 3.676143948190496*^9}, {3.676146793545115*^9, 
+   3.67614684534789*^9}, 3.6761995861704493`*^9, {3.676205614675086*^9, 
+   3.6762056178719597`*^9}, {3.6765922566422033`*^9, 
+   3.6765923893054256`*^9}, {3.676592424880999*^9, 3.676592431662187*^9}, {
+   3.676596680754417*^9, 3.676596762938966*^9}, {3.676597273953532*^9, 
+   3.676597284833105*^9}, {3.6765973486014137`*^9, 3.676597352337788*^9}}],
+
+Cell["\<\
+Check that frequencies of diploid genotypes in each type sum to one after \
+diploid selection:\
+\>", "Text",
+ CellChangeTimes->{{3.67569367511821*^9, 3.6756936990142593`*^9}, {
+   3.675702840764554*^9, 3.675702847452877*^9}, 3.676199586171295*^9, {
+   3.67659244090353*^9, 3.676592442249076*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"1", "\[Equal]", 
+   RowBox[{"U11Fs", "+", "U12Fs", "+", "U22Fs"}]}], "//", 
+  "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"1", "\[Equal]", 
+   RowBox[{"U11Ms", "+", "U12Ms", "+", "U22Ms"}]}], "//", 
+  "Factor"}]}], "Input",
+ CellChangeTimes->{{3.67659239463146*^9, 3.6765924200078382`*^9}, {
+  3.6765967706267138`*^9, 3.6765967838805933`*^9}, {3.676597294610506*^9, 
+  3.676597357598895*^9}, {3.6765973909188623`*^9, 3.6765973910462837`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.676205623884274*^9, 3.6762059177767057`*^9, 3.676297509642558*^9, 
+   3.6763314737147427`*^9, 3.676570779082673*^9, 3.676578081829523*^9, {
+   3.676592415164344*^9, 3.6765924333489933`*^9}, {3.676596773008422*^9, 
+   3.676596784208274*^9}, {3.676597286927443*^9, 3.6765973543136053`*^9}, 
+   3.676597391415662*^9, 3.676597597624454*^9, 3.6765977912826967`*^9, 
+   3.676598431724527*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.676205623884274*^9, 3.6762059177767057`*^9, 3.676297509642558*^9, 
+   3.6763314737147427`*^9, 3.676570779082673*^9, 3.676578081829523*^9, {
+   3.676592415164344*^9, 3.6765924333489933`*^9}, {3.676596773008422*^9, 
+   3.676596784208274*^9}, {3.676597286927443*^9, 3.6765973543136053`*^9}, 
+   3.676597391415662*^9, 3.676597597624454*^9, 3.6765977912826967`*^9, 
+   3.676598431730152*^9}]
+}, Open  ]],
+
+Cell["\<\
+Finally, meiosis occurs, making haploid genotype frequencies in the next \
+generation\
+\>", "Text",
+ CellChangeTimes->{{3.675647183205927*^9, 3.675647193439426*^9}, {
+   3.675702857268779*^9, 3.6757029057817707`*^9}, 3.676144147033208*^9, 
+   3.676199586173295*^9, {3.676596814973461*^9, 3.6765968284820547`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Uafprime", "=", 
+   RowBox[{"U11Fs", "+", 
+    RowBox[{"U12Fs", "/", "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Ua2fprime", "=", 
+    RowBox[{
+     RowBox[{"U12Fs", "/", "2"}], "+", "U22Fs"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Uamprime", "=", 
+   RowBox[{"U11Ms", "+", 
+    RowBox[{"U12Ms", "/", "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Ua2mprime", "=", 
+    RowBox[{
+     RowBox[{"U12Ms", "/", "2"}], "+", "U22Ms"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uaprime", "=", 
+   FractionBox[
+    RowBox[{"u11s", "+", 
+     RowBox[{"r", " ", "u12s"}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "-", "r"}], ")"}], "u21s"}]}], 
+    RowBox[{"u11s", "+", "u12s", "+", "u21s", "+", "u22s"}]]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ua2prime", "=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "-", "r"}], ")"}], " ", "u12s"}], "+", 
+     RowBox[{"r", " ", "u21s"}], "+", "u22s"}], 
+    RowBox[{"u11s", "+", "u12s", "+", "u21s", "+", "u22s"}]]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.67659655753181*^9, 3.676596655142392*^9}, {
+  3.676596791665905*^9, 3.676596806526969*^9}, {3.676596871390563*^9, 
+  3.676596872807981*^9}, {3.676596905987131*^9, 3.676596942832615*^9}, {
+  3.676596973597427*^9, 3.6765970214552298`*^9}, {3.6765971278658037`*^9, 
+  3.6765971450234222`*^9}}],
+
+Cell["Check they sum to one", "Text",
+ CellChangeTimes->{{3.676597026775292*^9, 3.676597029582807*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"1", "==", 
+   RowBox[{"Uafprime", "+", "Ua2fprime"}]}], "//", 
+  "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"1", "==", 
+   RowBox[{"Uamprime", "+", "Ua2mprime"}]}], "//", 
+  "Factor"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"1", "\[Equal]", 
+   RowBox[{"uaprime", "+", "ua2prime"}]}], "//", "Factor"}]}], "Input",
+ CellChangeTimes->{{3.676597030983678*^9, 3.6765971518053217`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.676597043635612*^9, 3.676597152240251*^9}, 
+   3.6765973975651617`*^9, 3.6765976021743603`*^9, 3.676597794413267*^9, 
+   3.676598435423264*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.676597043635612*^9, 3.676597152240251*^9}, 
+   3.6765973975651617`*^9, 3.6765976021743603`*^9, 3.676597794413267*^9, 
+   3.6765984354288197`*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.676597043635612*^9, 3.676597152240251*^9}, 
+   3.6765973975651617`*^9, 3.6765976021743603`*^9, 3.676597794413267*^9, 
+   3.676598435435214*^9}]
+}, Open  ]],
+
+Cell["\<\
+The growth rate of the neo-y is then\
+\>", "Text",
+ CellChangeTimes->{{3.676147800730928*^9, 3.676147823628798*^9}, 
+   3.676199586179883*^9, {3.676577432637713*^9, 3.676577434734714*^9}, {
+   3.67658543455127*^9, 3.676585435382078*^9}, {3.6765972040499983`*^9, 
+   3.676597207105626*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Ra", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"u11s", "+", "u12s", "+", "u21s", "+", "u22s"}], 
+       "\[Epsilon]y"], "/.", 
+      RowBox[{"Ua2f", "\[Rule]", 
+       RowBox[{"1", "-", "Uaf"}]}]}], "/.", 
+     RowBox[{"Ua2m", "\[Rule]", 
+      RowBox[{"1", "-", "Uam"}]}]}], "/.", 
+    RowBox[{"ua2", "\[Rule]", 
+     RowBox[{"1", "-", "ua"}]}]}], "//", "Factor"}]}]], "Input",
+ CellChangeTimes->{{3.676597212300687*^9, 3.6765972212658863`*^9}, {
+  3.676597678220644*^9, 3.676597730292595*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "M12"}], " ", "ua", " ", "w1"}], "-", 
+      RowBox[{"M11", " ", "ua", " ", "Uaf", " ", "w1"}], "+", 
+      RowBox[{"M12", " ", "ua", " ", "Uaf", " ", "w1"}], "-", 
+      RowBox[{"M22", " ", "w2"}], "+", 
+      RowBox[{"M22", " ", "ua", " ", "w2"}], "-", 
+      RowBox[{"M12", " ", "Uaf", " ", "w2"}], "+", 
+      RowBox[{"M22", " ", "Uaf", " ", "w2"}], "+", 
+      RowBox[{"M12", " ", "ua", " ", "Uaf", " ", "w2"}], "-", 
+      RowBox[{"M22", " ", "ua", " ", "Uaf", " ", "w2"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Uam", " ", "w1"}], "+", "w2", "-", 
+      RowBox[{"Uam", " ", "w2"}]}], ")"}]}], ")"}], "/", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"ua", " ", "w1"}], "+", "w2", "-", 
+      RowBox[{"ua", " ", "w2"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "M12"}], " ", "Uam", " ", "w1"}], "-", 
+      RowBox[{"M11", " ", "Uaf", " ", "Uam", " ", "w1"}], "+", 
+      RowBox[{"M12", " ", "Uaf", " ", "Uam", " ", "w1"}], "-", 
+      RowBox[{"M22", " ", "w2"}], "-", 
+      RowBox[{"M12", " ", "Uaf", " ", "w2"}], "+", 
+      RowBox[{"M22", " ", "Uaf", " ", "w2"}], "+", 
+      RowBox[{"M22", " ", "Uam", " ", "w2"}], "+", 
+      RowBox[{"M12", " ", "Uaf", " ", "Uam", " ", "w2"}], "-", 
+      RowBox[{"M22", " ", "Uaf", " ", "Uam", " ", "w2"}]}], ")"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.67620565691848*^9, 3.67620593382829*^9, 3.676297509929885*^9, 
+   3.676331474002404*^9, 3.676570779371256*^9, 3.676578082344108*^9, {
+   3.676597219426836*^9, 3.67659722154193*^9}, 3.676597400767928*^9, 
+   3.676597604943564*^9, {3.676597680947068*^9, 3.6765977306327047`*^9}, 
+   3.676597797548922*^9, 3.67659807174549*^9, 3.676598437357263*^9}]
+}, Open  ]],
+
+Cell["\<\
+This collapses to van Doorn and Kirkpatrick\[CloseCurlyQuote]s result under \
+special circumstances (top of page 11)\
+\>", "Text",
+ CellChangeTimes->{{3.676152735070064*^9, 3.676152754087295*^9}, 
+   3.67619958618145*^9, {3.676582344731991*^9, 3.6765823534894047`*^9}, {
+   3.676585472995944*^9, 3.676585473878415*^9}, {3.67659816012106*^9, 
+   3.676598164017507*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"Ra", "/.", 
+             RowBox[{"w1", "\[Rule]", "1"}]}], "/.", 
+            RowBox[{"w2", "\[Rule]", "1"}]}], "/.", 
+           RowBox[{"M22", "\[Rule]", "1"}]}], "/.", 
+          RowBox[{"M12", "\[Rule]", 
+           RowBox[{"1", "+", 
+            RowBox[{"hAm", " ", "sAm"}]}]}]}], "/.", 
+         RowBox[{"M11", "\[Rule]", 
+          RowBox[{"1", "+", "sAm"}]}]}], "/.", 
+        RowBox[{"F11", "\[Rule]", "1"}]}], "/.", 
+       RowBox[{"F12", "\[Rule]", 
+        RowBox[{"1", "+", 
+         RowBox[{"hAf", " ", "sAf"}]}]}]}], "/.", 
+      RowBox[{"F22", "\[Rule]", 
+       RowBox[{"1", "+", "sAf"}]}]}], "/.", 
+     RowBox[{"Ua2f", "\[Rule]", 
+      RowBox[{"1", "-", "Uaf"}]}]}], "/.", 
+    RowBox[{"Ua2m", "\[Rule]", 
+     RowBox[{"1", "-", "Uam"}]}]}], "/.", 
+   RowBox[{"ua2", "\[Rule]", 
+    RowBox[{"1", "-", "ua"}]}]}], "//", "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.676597416643531*^9, 3.6765975273733177`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"1", "+", 
+   RowBox[{"sAm", " ", "ua", " ", "Uaf"}], "+", 
+   RowBox[{"hAm", " ", "sAm", " ", 
+    RowBox[{"(", 
+     RowBox[{"ua", "+", "Uaf", "-", 
+      RowBox[{"2", " ", "ua", " ", "Uaf"}]}], ")"}]}]}], 
+  RowBox[{"1", "+", 
+   RowBox[{"sAm", " ", "Uaf", " ", "Uam"}], "+", 
+   RowBox[{"hAm", " ", "sAm", " ", 
+    RowBox[{"(", 
+     RowBox[{"Uaf", "+", "Uam", "-", 
+      RowBox[{"2", " ", "Uaf", " ", "Uam"}]}], ")"}]}]}]]], "Output",
+ CellChangeTimes->{{3.676597523721302*^9, 3.676597527721096*^9}, 
+   3.676598076055019*^9, 3.676598181697709*^9, 3.676598447948914*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Weak selection approximation", "Section",
+ CellChangeTimes->{{3.675694139646326*^9, 3.6756941429682417`*^9}, 
+   3.6757029847263803`*^9, 3.676206076324637*^9, {3.676582539239078*^9, 
+   3.676582542329505*^9}, {3.676583990586585*^9, 3.676583993478483*^9}}],
+
+Cell["\<\
+To simplify the following analysis we assume weak selection in both haploids \
+(sperm/pollen) and diploids\
+\>", "Text",
+ CellChangeTimes->{{3.675694205010009*^9, 3.675694211923259*^9}, 
+   3.67570298472752*^9, {3.6757030454432507`*^9, 3.6757030568360033`*^9}, {
+   3.676582566945178*^9, 3.6765825689281187`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"weaksel", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"M11", "\[Rule]", 
+      RowBox[{"1", "+", 
+       RowBox[{"sAm", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"M12", "\[Rule]", 
+      RowBox[{"1", "+", 
+       RowBox[{"hAm", " ", "sAm", " ", "\[Epsilon]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"M22", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"F11", "\[Rule]", 
+      RowBox[{"1", "+", 
+       RowBox[{"sAf", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"F12", "\[Rule]", 
+      RowBox[{"1", "+", 
+       RowBox[{"hAf", " ", "sAf", " ", "\[Epsilon]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"F22", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"w1", "\[Rule]", 
+      RowBox[{"1", "+", 
+       RowBox[{"t", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"w2", "\[Rule]", "1"}]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.67564806523287*^9, 3.675648221558539*^9}, {
+   3.675694367971285*^9, 3.6756943845803022`*^9}, 3.6757029847280283`*^9, {
+   3.676598795905435*^9, 3.676598811558284*^9}}],
+
+Cell["\<\
+We will solve for the equilibrium frequency of allele 1 in each of the \
+haploid genotypes. Equilibrium is achieved when the following equations are \
+zero\
+\>", "Text",
+ CellChangeTimes->{{3.675694155902801*^9, 3.675694193760104*^9}, {
+  3.6756944337868023`*^9, 3.6756944351881227`*^9}, {3.6757029847267847`*^9, 
+  3.67570303405547*^9}, {3.675710696458521*^9, 3.675710706286772*^9}, {
+  3.676206098927346*^9, 3.67620611994131*^9}, {3.676582413597246*^9, 
+  3.676582413722025*^9}, {3.676582573510099*^9, 3.676582574660082*^9}, {
+  3.676585485737124*^9, 3.676585487171049*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"differenceEqs", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Uafprime", "-", "Uaf"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Uamprime", "-", "Uam"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"uaprime", "-", "ua"}]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.675647987041369*^9, 3.67564802904979*^9}, {
+   3.675650509895372*^9, 3.675650527299842*^9}, {3.6756941716513157`*^9, 
+   3.6756941738671913`*^9}, {3.675694338488646*^9, 3.675694340978696*^9}, {
+   3.675694394143187*^9, 3.6756944261522427`*^9}, 3.6756944751724463`*^9, 
+   3.675702984727247*^9, {3.675703036868017*^9, 3.675703037688758*^9}, 
+   3.67578824463701*^9, {3.6762061216237183`*^9, 3.676206147752295*^9}, {
+   3.6762061820923433`*^9, 3.676206183709196*^9}, {3.676598587243538*^9, 
+   3.676598622770487*^9}}],
+
+Cell["We can write the frequencies as Taylor series", "Text",
+ CellChangeTimes->{{3.675707045047565*^9, 3.6757070543930063`*^9}, {
+  3.675707367038864*^9, 3.675707370179316*^9}, {3.675711803871513*^9, 
+  3.6757118112225847`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"frequenciessub", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Uaf", "\[Rule]", 
+      RowBox[{"Uaf0", "+", 
+       RowBox[{"Uaf1", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Uam", "\[Rule]", 
+      RowBox[{"Uam0", "+", 
+       RowBox[{"Uam1", " ", "\[Epsilon]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"ua", "\[Rule]", 
+      RowBox[{"ua0", "+", 
+       RowBox[{"ua1", " ", "\[Epsilon]"}]}]}]}], "\[IndentingNewLine]", 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.675648297857716*^9, 3.6756483630660057`*^9}, 
+   3.675648454638584*^9, 3.675702984736863*^9, {3.6762068917424583`*^9, 
+   3.676206901931716*^9}, {3.6765986492853107`*^9, 3.676598681213398*^9}}],
+
+Cell["\<\
+Without selection, the recursions for the change in frequency of allele 1 in \
+each gamete/pollen type are\
+\>", "Text",
+ CellChangeTimes->{{3.6757032054455214`*^9, 3.6757032697493563`*^9}, {
+   3.6757098202812138`*^9, 3.675709824765788*^9}, {3.6757117765596933`*^9, 
+   3.6757117850524673`*^9}, {3.675711818872109*^9, 3.6757118199810133`*^9}, 
+   3.6761381565029078`*^9, {3.6765854945288477`*^9, 3.67658549558394*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"differenceEqs0", "=", 
+  RowBox[{
+   RowBox[{"Normal", "[", 
+    RowBox[{"Series", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"differenceEqs", "/.", "weaksel"}], "/.", 
+          RowBox[{"Ua2f", "\[Rule]", 
+           RowBox[{"1", "-", "Uaf"}]}]}], "/.", 
+         RowBox[{"Ua2m", "\[Rule]", 
+          RowBox[{"1", "-", "Uam"}]}]}], "/.", 
+        RowBox[{"ua2", "\[Rule]", 
+         RowBox[{"1", "-", "ua"}]}]}], "/.", "frequenciessub"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Epsilon]", ",", "0", ",", "0"}], "}"}]}], "]"}], "]"}], "//",
+    "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.675703197099375*^9, 3.675703198353765*^9}, {
+  3.675703326603519*^9, 3.675703332003808*^9}, {3.67570336997014*^9, 
+  3.675703373531238*^9}, {3.675707060003501*^9, 3.675707071963544*^9}, {
+  3.675707629815399*^9, 3.675707668691402*^9}, {3.6757098279293118`*^9, 
+  3.6757098635569563`*^9}, {3.675785533464711*^9, 3.675785543888385*^9}, {
+  3.675788240589053*^9, 3.675788247183043*^9}, {3.676598697354722*^9, 
+  3.6765987436174307`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "Uaf0"}], "+", "Uam0"}], ")"}]}], ",", 
+   FractionBox[
+    RowBox[{"Uaf0", "-", "Uam0"}], "2"], ",", 
+   RowBox[{"r", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "ua0"}], "+", "Uaf0"}], ")"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.675703373832204*^9, 3.675707072550578*^9, 3.6757076390361347`*^9, 
+   3.675707669538135*^9, {3.675709828918172*^9, 3.6757098643685303`*^9}, 
+   3.675727585946179*^9, 3.675785428940669*^9, 3.675788254779942*^9, 
+   3.6761381624813623`*^9, 3.676146369707528*^9, 3.676205569877428*^9, 
+   3.676206197071246*^9, 3.676206906572702*^9, 3.676297519938478*^9, 
+   3.676331482213591*^9, 3.676570779809972*^9, 3.676578085302965*^9, {
+   3.6765987277397633`*^9, 3.676598744109421*^9}, 3.676598822677321*^9}]
+}, Open  ]],
+
+Cell["And at equilibrium we have", "Text",
+ CellChangeTimes->{{3.675709831409095*^9, 3.6757098343025913`*^9}, {
+  3.675710744701475*^9, 3.675710745621426*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sol0", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"differenceEqs0", "\[Equal]", "0"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"Uaf0", ",", "Uam0", ",", "ua0"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.675709931730151*^9, 3.675709948227565*^9}, 
+   3.676138176648445*^9, {3.676206210111945*^9, 3.676206222819953*^9}, {
+   3.676598829374902*^9, 3.6765988346041718`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Uam0", "\[Rule]", "Uaf0"}], ",", 
+    RowBox[{"ua0", "\[Rule]", "Uaf0"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6757098363525476`*^9, {3.6757099323567266`*^9, 3.675709948639193*^9}, 
+   3.675727587389184*^9, 3.675785430130021*^9, 3.67578825590738*^9, {
+   3.676138165134851*^9, 3.676138177014187*^9}, 3.676146369743536*^9, 
+   3.6762055698992853`*^9, {3.676206202720709*^9, 3.676206223421821*^9}, 
+   3.676206909229083*^9, 3.676297519977676*^9, 3.6763314822510242`*^9, 
+   3.676570779849722*^9, 3.676578085332281*^9, {3.676598825604751*^9, 
+   3.6765988353392363`*^9}}]
+}, Open  ]],
+
+Cell["\<\
+So, with no selection, the equilibrium frequency of allele 1 in each \
+gamete/pollen type is equal (and we call this pa).\
+\>", "Text",
+ CellChangeTimes->{{3.675703427939505*^9, 3.6757035626138153`*^9}, {
+   3.675706719194449*^9, 3.675706765062245*^9}, 3.67570996472328*^9, {
+   3.6757107664993973`*^9, 3.675710849444377*^9}, {3.67658549993237*^9, 
+   3.6765855007726107`*^9}, {3.676598907075387*^9, 3.6765989071765842`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Weak linkage approximation", "Subsection",
+ CellChangeTimes->{{3.676583982853201*^9, 3.6765840292901897`*^9}}],
+
+Cell["\<\
+Following van Doorn and Kirkpatrick, when recombination between the A and \
+neo-y loci is strong relative to selection, we can write the frequencies of \
+allele 1 in each haploid type like\
+\>", "Text",
+ CellChangeTimes->{{3.676582681109103*^9, 3.676582711765044*^9}, {
+  3.676583663659438*^9, 3.676583701804626*^9}, {3.676585515481655*^9, 
+  3.676585516714439*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pAsubs", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Uaf", "\[Rule]", 
+      RowBox[{"pa", "+", 
+       RowBox[{
+        FractionBox["1", "2"], "\[Epsilon]", " ", "dpaFM"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Uam", "\[Rule]", 
+      RowBox[{"pa", "-", 
+       RowBox[{
+        FractionBox["1", "2"], "\[Epsilon]", " ", "dpaFM"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"ua", "\[Rule]", 
+      RowBox[{"pa", "-", 
+       RowBox[{
+        FractionBox["1", "2"], "\[Epsilon]", " ", "dpaFM"}], "+", 
+       RowBox[{"\[Epsilon]", " ", "dpauM"}]}]}]}], "\[IndentingNewLine]", 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6765806182823467`*^9, 3.67658076569499*^9}, {
+  3.6765808375724983`*^9, 3.676580838499551*^9}, {3.676582796261376*^9, 
+  3.676582801741729*^9}, {3.6765988801593113`*^9, 3.676598994345292*^9}}],
+
+Cell["\<\
+where dpaFM is the difference in the frequency of allele 1 from maternal vs \
+paternal chromosomes, dpauM is the difference in the frequency of allele 1 in \
+gametes from males with novel vs original sex determination factors.\
+\>", "Text",
+ CellChangeTimes->{{3.676582733558008*^9, 3.6765829061581078`*^9}, {
+  3.676585521925498*^9, 3.676585532659276*^9}, {3.676599010392915*^9, 
+  3.67659908321743*^9}}],
+
+Cell["\<\
+The recursion for the frequency of allele 1 is\
+\>", "Text",
+ CellChangeTimes->{{3.676583004151986*^9, 3.676583011993733*^9}, {
+  3.676599118451302*^9, 3.6765991185581427`*^9}, {3.676599268417396*^9, 
+  3.67659928003961*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqdpa", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"Uafprime", "+", "Uamprime"}], ")"}], "-", 
+           RowBox[{"(", 
+            RowBox[{"Uaf", "+", "Uam"}], ")"}]}], "/.", "weaksel"}], "/.", 
+         RowBox[{"Ua2f", "\[Rule]", 
+          RowBox[{"1", "-", "Uaf"}]}]}], "/.", 
+        RowBox[{"Ua2m", "\[Rule]", 
+         RowBox[{"1", "-", "Uam"}]}]}], "/.", 
+       RowBox[{"ua2", "\[Rule]", 
+        RowBox[{"1", "-", "ua"}]}]}], "/.", "pAsubs"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{
+  3.6765992407574587`*^9, {3.676599282980401*^9, 3.6765992834508257`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "pa"}], ")"}], " ", "pa", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"hAf", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"2", " ", "pa"}]}], ")"}], " ", "sAf"}], "-", 
+      RowBox[{"hAm", " ", "sAm"}], "-", 
+      RowBox[{"pa", " ", 
+       RowBox[{"(", 
+        RowBox[{"sAf", "+", "sAm", "-", 
+         RowBox[{"2", " ", "hAm", " ", "sAm"}]}], ")"}]}], "-", "t"}], ")"}], 
+    " ", "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 
+   0, {(-1 + $CellContext`pa) $CellContext`pa ($CellContext`hAf (-1 + 
+       2 $CellContext`pa) $CellContext`sAf - $CellContext`hAm \
+$CellContext`sAm - $CellContext`pa ($CellContext`sAf + $CellContext`sAm - 
+      2 $CellContext`hAm $CellContext`sAm) - $CellContext`t)}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676599223468927*^9, 3.6765992411869802`*^9}, 
+   3.676599284356538*^9}]
+}, Open  ]],
+
+Cell["The recursion for dpaFM is", "Text",
+ CellChangeTimes->{{3.6765830141793623`*^9, 3.676583024449457*^9}, {
+  3.676599291638212*^9, 3.676599292512381*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqdpaFM", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"Uafprime", "-", "Uamprime"}], ")"}], "-", 
+           RowBox[{"(", 
+            RowBox[{"Uaf", "-", "Uam"}], ")"}]}], "/.", "weaksel"}], "/.", 
+         RowBox[{"Ua2f", "\[Rule]", 
+          RowBox[{"1", "-", "Uaf"}]}]}], "/.", 
+        RowBox[{"Ua2m", "\[Rule]", 
+         RowBox[{"1", "-", "Uam"}]}]}], "/.", 
+       RowBox[{"ua2", "\[Rule]", 
+        RowBox[{"1", "-", "ua"}]}]}], "/.", "pAsubs"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.676599443815421*^9, 3.6765994484902477`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "dpaFM"}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pa"}], ")"}], " ", "pa", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"hAf", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"2", " ", "pa"}]}], ")"}], " ", "sAf"}], "+", 
+         RowBox[{"hAm", " ", "sAm"}], "+", 
+         RowBox[{"pa", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "sAf"}], "+", "sAm", "-", 
+            RowBox[{"2", " ", "hAm", " ", "sAm"}]}], ")"}]}]}], ")"}]}]}], 
+     ")"}], " ", "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 
+   0, {-$CellContext`dpaFM + (-1 + $CellContext`pa) $CellContext`pa \
+($CellContext`hAf (-1 + 
+        2 $CellContext`pa) $CellContext`sAf + $CellContext`hAm \
+$CellContext`sAm + $CellContext`pa (-$CellContext`sAf + $CellContext`sAm - 
+        2 $CellContext`hAm $CellContext`sAm))}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.676599324123406*^9, 3.6765994501126127`*^9}]
+}, Open  ]],
+
+Cell["And the recursion for dpauM is", "Text",
+ CellChangeTimes->{{3.6765993334895277`*^9, 3.676599344090538*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqdpauM", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"uaprime", "-", "Uamprime"}], ")"}], "-", 
+           RowBox[{"(", 
+            RowBox[{"ua", "-", "Uam"}], ")"}]}], "/.", "weaksel"}], "/.", 
+         RowBox[{"Ua2f", "\[Rule]", 
+          RowBox[{"1", "-", "Uaf"}]}]}], "/.", 
+        RowBox[{"Ua2m", "\[Rule]", 
+         RowBox[{"1", "-", "Uam"}]}]}], "/.", 
+       RowBox[{"ua2", "\[Rule]", 
+        RowBox[{"1", "-", "ua"}]}]}], "/.", "pAsubs"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.676599347588275*^9, 3.6765993698254623`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "2"}], " ", "dpauM", " ", "r"}], "+", 
+      RowBox[{"dpaFM", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"2", " ", "r"}]}], ")"}]}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pa"}], ")"}], " ", "pa", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"2", " ", "r"}]}], ")"}], " ", "t"}]}], ")"}], " ", 
+    "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   Rational[1, 
+      2] ((-2) $CellContext`dpauM $CellContext`r + $CellContext`dpaFM (-1 + 
+       2 $CellContext`r) + (-1 + $CellContext`pa) $CellContext`pa (-1 + 
+       2 $CellContext`r) $CellContext`t)}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.676599371500928*^9}]
+}, Open  ]],
+
+Cell["And at equilibrium we have", "Text",
+ CellChangeTimes->{{3.676583030500333*^9, 3.676583035286235*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"pasubs", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"eqdpa", "\[Equal]", "0"}], "}"}], ",", 
+      RowBox[{"{", "pa", "}"}]}], "]"}], "//", "Flatten"}], "//", 
+   "FullSimplify"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"pa", "\[Rule]", "0"}], ",", 
+   RowBox[{"pa", "\[Rule]", "1"}], ",", 
+   RowBox[{"pa", "\[Rule]", 
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"hAf", " ", "sAf"}], "+", 
+       RowBox[{"hAm", " ", "sAm"}], "+", "t"}], 
+      RowBox[{"sAf", "-", 
+       RowBox[{"2", " ", "hAf", " ", "sAf"}], "+", "sAm", "-", 
+       RowBox[{"2", " ", "hAm", " ", "sAm"}]}]]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.676599416276472*^9}]
+}, Open  ]],
+
+Cell["and", "Text",
+ CellChangeTimes->{{3.676583104285584*^9, 3.676583107198604*^9}, {
+  3.6765994332324657`*^9, 3.676599433454892*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dpasubs2", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"eqdpaFM", "\[Equal]", "0"}], ",", 
+        RowBox[{"eqdpauM", "\[Equal]", "0"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"dpaFM", ",", "dpauM"}], "}"}]}], "]"}], "//", "Flatten"}], "//",
+    "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.676599436895089*^9, 3.676599477747817*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"dpaFM", "\[Rule]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "pa"}], ")"}], " ", "pa", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"hAf", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"2", " ", "pa"}]}], ")"}], " ", "sAf"}], "+", 
+       RowBox[{"hAm", " ", "sAm"}], "+", 
+       RowBox[{"pa", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "sAf"}], "+", "sAm", "-", 
+          RowBox[{"2", " ", "hAm", " ", "sAm"}]}], ")"}]}]}], ")"}]}]}], ",", 
+   
+   RowBox[{"dpauM", "\[Rule]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "pa"}], ")"}], " ", "pa", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"2", " ", "r"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"hAf", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", 
+           RowBox[{"2", " ", "pa"}]}], ")"}], " ", "sAf"}], "+", 
+        RowBox[{"hAm", " ", "sAm"}], "+", 
+        RowBox[{"pa", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "sAf"}], "+", "sAm", "-", 
+           RowBox[{"2", " ", "hAm", " ", "sAm"}]}], ")"}]}], "+", "t"}], 
+       ")"}]}], 
+     RowBox[{"2", " ", "r"}]]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.676583116384721*^9, 3.676599478740364*^9}]
+}, Open  ]],
+
+Cell["\<\
+Thus, at equilibrium, the growth rate of the rare neo-y is approximately\
+\>", "Text",
+ CellChangeTimes->{{3.676583136027124*^9, 3.6765831599716597`*^9}, {
+  3.6765996382028847`*^9, 3.676599640009192*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"appRa", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Series", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Ra", "/.", "weaksel"}], "/.", "pAsubs"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\[Epsilon]", ",", "0", ",", "2"}], "}"}]}], "]"}], "/.", 
+     "dpasubs1"}], "/.", "dpasubs2"}], "//", "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.676599503234515*^9, 3.676599626552767*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "pa"}], ")"}], " ", "pa", " ", 
+     RowBox[{"(", 
+      RowBox[{"hAm", "+", "pa", "-", 
+       RowBox[{"2", " ", "hAm", " ", "pa"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       RowBox[{"2", " ", "r"}]}], ")"}], " ", "sAm", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"hAf", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"2", " ", "pa"}]}], ")"}], " ", "sAf"}], "+", 
+       RowBox[{"hAm", " ", "sAm"}], "+", 
+       RowBox[{"pa", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "sAf"}], "+", "sAm", "-", 
+          RowBox[{"2", " ", "hAm", " ", "sAm"}]}], ")"}]}], "+", "t"}], ")"}],
+      " ", 
+     SuperscriptBox["\[Epsilon]", "2"]}], 
+    RowBox[{"2", " ", "r"}]], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "3"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 0, 3, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   1, 0, Rational[
+     1, 2] (-1 + $CellContext`pa) $CellContext`pa ($CellContext`hAm + \
+$CellContext`pa - 2 $CellContext`hAm $CellContext`pa) $CellContext`r^(-1) (-1 + 
+     2 $CellContext`r) $CellContext`sAm ($CellContext`hAf (-1 + 
+       2 $CellContext`pa) $CellContext`sAf + $CellContext`hAm \
+$CellContext`sAm + $CellContext`pa (-$CellContext`sAf + $CellContext`sAm - 
+       2 $CellContext`hAm $CellContext`sAm) + $CellContext`t)}, 0, 3, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{
+  3.67658316763675*^9, 3.676599505613056*^9, {3.676599537288444*^9, 
+   3.676599626853903*^9}}]
+}, Open  ]],
+
+Cell["\<\
+To check our work, the growth rate should reduce to Kirkpatrick\
+\[CloseCurlyQuote]s result when there is no haploid selection\
+\>", "Text",
+ CellChangeTimes->{{3.676583180291844*^9, 3.67658324151683*^9}, {
+  3.676583473577385*^9, 3.676583542975013*^9}, {3.6765996581047573`*^9, 
+  3.676599671621295*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"kirk", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", "+", 
+          RowBox[{"Va", " ", "La", " ", "Sa"}]}], "}"}], "/.", 
+        RowBox[{"Va", "\[Rule]", 
+         RowBox[{"pa", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "pa"}], ")"}]}]}]}], "/.", 
+       RowBox[{"La", "\[Rule]", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{"2", "r"}]}], ")"}], "/", "r"}]}]}], "/.", 
+      RowBox[{"Sa", "\[Rule]", 
+       RowBox[{"\[Sigma]am", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"\[Sigma]am", "-", "\[Sigma]af"}], ")"}], "/", "2"}]}]}]}], 
+     "/.", 
+     RowBox[{"\[Sigma]am", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"pa", "+", 
+         RowBox[{"hAm", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"2", "pa"}]}], ")"}]}]}], ")"}], "\[Epsilon]", " ", 
+       "sAm"}]}]}], "/.", 
+    RowBox[{"\[Sigma]af", "\[Rule]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"pa", "+", 
+        RowBox[{"hAf", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{"2", "pa"}]}], ")"}]}]}], ")"}], "\[Epsilon]", " ", 
+      "sAf"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"appRa", "-", "kirk"}], "/.", 
+   RowBox[{"t", "\[Rule]", "0"}]}], "//", "FullSimplify"}]}], "Input",
+ CellChangeTimes->{{3.676583329405044*^9, 3.676583346640188*^9}, {
+  3.6765996787967253`*^9, 3.676599740461314*^9}, {3.676599792548341*^9, 
+  3.676599809173608*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   SuperscriptBox[
+    RowBox[{"O", "[", "\[Epsilon]", "]"}], "3"],
+   SeriesData[$CellContext`\[Epsilon], 0, {}, 3, 3, 1],
+   Editable->False], "}"}]], "Output",
+ CellChangeTimes->{{3.676583318842709*^9, 3.676583347125813*^9}, 
+   3.676585773825858*^9, {3.676599735238654*^9, 3.676599740924233*^9}, {
+   3.6765997987158117`*^9, 3.676599810608121*^9}}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Tight linkage approximation (yet to be done)\
+\>", "Subsection",
+ CellChangeTimes->{{3.676583710887702*^9, 3.676583716758197*^9}, {
+  3.67658401403446*^9, 3.6765840210853662`*^9}, {3.6765998151083107`*^9, 
+  3.6765998180064917`*^9}}],
+
+Cell["\<\
+When recombination between the original sex-determining locus and the A locus \
+is of the same order (or greater) as selection on the A locus, we can no \
+longer assume the difference in the frequency of allele 1 with the X and Y to \
+be small. Following van Doorn and Kirkpatrick, we use the new change of \
+variables\
+\>", "Text",
+ CellChangeTimes->{{3.676584387492292*^9, 3.6765845086738358`*^9}, {
+  3.676585787423489*^9, 3.6765858117223463`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pAsubsLinked", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"XAf", "\[Rule]", 
+      RowBox[{"pAX", "+", 
+       RowBox[{"\[Epsilon]", " ", "dpAXfXm"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"XAm", "\[Rule]", 
+      RowBox[{"pAX", "-", 
+       RowBox[{"2", "\[Epsilon]", " ", "dpAXfXm"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"YA", "\[Rule]", "pAY"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"xA", "\[Rule]", 
+      RowBox[{"pAX", "+", 
+       RowBox[{"\[Epsilon]", " ", "dpAxX"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"r", "\[Rule]", 
+      RowBox[{"\[Epsilon]", " ", "r1"}]}]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6765845199292593`*^9, 3.6765846288082247`*^9}, {
+  3.676586106483119*^9, 3.6765861065996113`*^9}}],
+
+Cell["\<\
+where pAX and pAY are the average frequencies of allele 1 on X and Y \
+chromosomes and dpAxX is the difference in the frequency of allele 1 with the \
+novel sex-determining factor vs the original sex-determining factor.\
+\>", "Text",
+ CellChangeTimes->{{3.676584639381562*^9, 3.676584686528328*^9}, {
+  3.6765858272906437`*^9, 3.676585890810379*^9}}],
+
+Cell["\<\
+An approximation for the growth rate of the neo-y is then\
+\>", "Text",
+ CellChangeTimes->{{3.6765859536512833`*^9, 3.676585971071102*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"approxRALinked", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"RA", "/.", "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubsLinked"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.676585904062738*^9, 3.676585939513118*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "pAX"}], "+", 
+      RowBox[{"hAm", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"2", " ", "pAX"}]}], ")"}]}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"pAX", "-", "pAY"}], ")"}], " ", "sAm", " ", "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 0, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   1, -(-$CellContext`pAX + $CellContext`hAm (-1 + 
+       2 $CellContext`pAX)) ($CellContext`pAX - $CellContext`pAY) \
+$CellContext`sAm}, 0, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.6765859274394703`*^9, 3.67658593978104*^9}, 
+   3.676586111320175*^9}]
+}, Open  ]],
+
+Cell["\<\
+The difference in the frequency of allele 1 on the X and Y chromosomes is \
+then approximately\
+\>", "Text",
+ CellChangeTimes->{{3.676586056717393*^9, 3.676586083827791*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqpAXYLinked", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", "XAfprime"}], "+", "XAmprime", "-", 
+             RowBox[{"3", "YAprime"}]}], ")"}], "-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", "XAf"}], "+", "XAm", "-", 
+             RowBox[{"3", "YA"}]}], ")"}]}], "/.", "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubsLinked"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.676586002316033*^9, 3.676586014417512*^9}, {
+  3.676586076878158*^9, 3.676586170784618*^9}, {3.676586317308647*^9, 
+  3.67658631805939*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"2", " ", "hAf"}]}], ")"}], " ", 
+       SuperscriptBox["pAX", "3"], " ", "sAf"}], "-", 
+      RowBox[{
+       SuperscriptBox["pAX", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "2"}], "+", 
+            RowBox[{"6", " ", "hAf"}]}], ")"}], " ", "sAf"}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"hAm", "+", "pAY", "-", 
+            RowBox[{"2", " ", "hAm", " ", "pAY"}]}], ")"}], " ", "sAm"}], "+",
+          "t"}], ")"}]}], "+", 
+      RowBox[{"pAX", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "4"}], " ", "r1"}], "+", 
+         RowBox[{"2", " ", "hAf", " ", "sAf"}], "+", 
+         RowBox[{"pAY", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "2"}], "+", 
+            RowBox[{"3", " ", "pAY"}]}], ")"}], " ", "sAm"}], "+", 
+         RowBox[{"hAm", " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            RowBox[{"4", " ", "pAY"}], "-", 
+            RowBox[{"6", " ", 
+             SuperscriptBox["pAY", "2"]}]}], ")"}], " ", "sAm"}], "+", "t"}], 
+        ")"}]}], "+", 
+      RowBox[{"pAY", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"4", " ", "r1"}], "+", 
+         RowBox[{"3", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "pAY"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"hAm", " ", "sAm"}], "+", "t"}], ")"}]}]}], ")"}]}]}], 
+     ")"}], " ", "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   2 (-1 + 2 $CellContext`hAf) $CellContext`pAX^3 $CellContext`sAf - \
+$CellContext`pAX^2 ((-2 + 
+       6 $CellContext`hAf) $CellContext`sAf + ($CellContext`hAm + \
+$CellContext`pAY - 
+       2 $CellContext`hAm $CellContext`pAY) $CellContext`sAm + \
+$CellContext`t) + $CellContext`pAX ((-4) $CellContext`r1 + 
+      2 $CellContext`hAf $CellContext`sAf + $CellContext`pAY (-2 + 
+        3 $CellContext`pAY) $CellContext`sAm + $CellContext`hAm (1 + 
+        4 $CellContext`pAY - 
+        6 $CellContext`pAY^2) $CellContext`sAm + $CellContext`t) + \
+$CellContext`pAY (4 $CellContext`r1 + 
+      3 (-1 + $CellContext`pAY) ($CellContext`hAm $CellContext`sAm + \
+$CellContext`t))}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676586153945653*^9, 3.676586171442275*^9}, 
+   3.6765863290792007`*^9}]
+}, Open  ]],
+
+Cell["\<\
+And the rate of change in the average frequency of allele 1 is\
+\>", "Text",
+ CellChangeTimes->{{3.6765868410016327`*^9, 3.676586856684408*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqpALinked", "=", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", "XAfprime"}], "+", "XAmprime", "+", "YAprime"}], 
+            ")"}], "-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", "XAf"}], "+", "XAm", "+", "YA"}], ")"}]}], "/.", 
+          "weaksel"}], "/.", 
+         RowBox[{"Xaf", "\[Rule]", 
+          RowBox[{"1", "-", "XAf"}]}]}], "/.", 
+        RowBox[{"Ya", "\[Rule]", 
+         RowBox[{"1", "-", "YA"}]}]}], "/.", 
+       RowBox[{"Xam", "\[Rule]", 
+        RowBox[{"1", "-", "XAm"}]}]}], "/.", "pAsubsLinked"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "//", 
+   "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.676586290411571*^9, 3.676586326914856*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "2"}], " ", 
+       SuperscriptBox["pAX", "3"], " ", "sAf"}], "+", 
+      RowBox[{"2", " ", "hAf", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pAX"}], ")"}], " ", "pAX", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"2", " ", "pAX"}]}], ")"}], " ", "sAf"}], "+", 
+      RowBox[{
+       SuperscriptBox["pAX", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", "sAf"}], "-", 
+         RowBox[{"pAY", " ", "sAm"}], "+", 
+         RowBox[{"hAm", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"2", " ", "pAY"}]}], ")"}], " ", "sAm"}], "-", "t"}], 
+        ")"}]}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pAY"}], ")"}], " ", "pAY", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"hAm", " ", "sAm"}], "+", "t"}], ")"}]}], "+", 
+      RowBox[{"pAX", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2"}], "+", "pAY"}], ")"}]}], " ", "pAY", " ", 
+          "sAm"}], "+", 
+         RowBox[{"hAm", " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            RowBox[{"2", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "2"}], "+", "pAY"}], ")"}], " ", "pAY"}]}], ")"}],
+           " ", "sAm"}], "+", "t"}], ")"}]}]}], ")"}], " ", "\[Epsilon]"}], 
+   "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 
+   0, {(-2) $CellContext`pAX^3 $CellContext`sAf + 
+    2 $CellContext`hAf (-1 + $CellContext`pAX) $CellContext`pAX (-1 + 
+      2 $CellContext`pAX) $CellContext`sAf + $CellContext`pAX^2 (
+      2 $CellContext`sAf - $CellContext`pAY $CellContext`sAm + \
+$CellContext`hAm (-1 + 
+        2 $CellContext`pAY) $CellContext`sAm - $CellContext`t) - (-1 + \
+$CellContext`pAY) $CellContext`pAY ($CellContext`hAm $CellContext`sAm + \
+$CellContext`t) + $CellContext`pAX (-(-2 + $CellContext`pAY) $CellContext`pAY \
+$CellContext`sAm + $CellContext`hAm (1 + 
+        2 (-2 + $CellContext`pAY) $CellContext`pAY) $CellContext`sAm + \
+$CellContext`t)}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676586305528173*^9, 3.67658632732787*^9}}]
+}, Open  ]],
+
+Cell["\<\
+We can simplify these expressions with some new terms\
+\>", "Text",
+ CellChangeTimes->{{3.676586998722804*^9, 3.676587014101894*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"simplesubs", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"\[Sigma]AX", "\[Rule]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", "/", "3"}], 
+        RowBox[{"(", 
+         RowBox[{"pAX", "+", 
+          RowBox[{"hAf", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"2", "pAX"}]}], ")"}]}]}], ")"}], "\[Epsilon]", " ", 
+        "sAf"}], "+", 
+       RowBox[{
+        RowBox[{"1", "/", "3"}], 
+        RowBox[{"(", 
+         RowBox[{"pAY", "+", 
+          RowBox[{"hAm", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"2", "pAY"}]}], ")"}]}]}], ")"}], "\[Epsilon]", " ", 
+        "sAm"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\[Sigma]AY", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"pAX", "+", 
+         RowBox[{"hAm", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"2", "pAX"}]}], ")"}]}]}], ")"}], "\[Epsilon]", " ", 
+       "sAm"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"VAX", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "pAX"}], ")"}], "pAX"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"VAY", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "pAY"}], ")"}], "pAY"}]}]}], "\[IndentingNewLine]", 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.676587015564591*^9, 3.6765871697825403`*^9}, {
+  3.676587208687361*^9, 3.676587250806056*^9}, {3.676587408795269*^9, 
+  3.676587412034004*^9}}],
+
+Cell["\<\
+We can then write the recursion for the difference in the frequency of allele \
+1 with X and Y like\
+\>", "Text",
+ CellChangeTimes->{{3.6765874283259573`*^9, 3.6765874774343576`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eqpAXYLinkedSimp", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "4"}], 
+     RowBox[{"(", 
+      RowBox[{"pAX", "-", "pAY"}], ")"}], "r"}], "+", 
+    RowBox[{"3", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"VAX", " ", "\[Sigma]AX"}], "-", 
+       RowBox[{"VAY", " ", "\[Sigma]AY"}]}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"VAX", "-", 
+       RowBox[{"3", "VAY"}]}], ")"}], "t", " ", "\[Epsilon]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.676587268873069*^9, 3.676587363068524*^9}, {
+  3.6765874819519367`*^9, 3.6765875121539297`*^9}, {3.676587574994731*^9, 
+  3.676587612565858*^9}, {3.676587647581994*^9, 3.6765876509015913`*^9}}],
+
+Cell["Check that this is indeed true", "Text",
+ CellChangeTimes->{{3.6765876911944723`*^9, 3.676587695870624*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"eqpAXYLinkedSimp", "-", "eqpAXYLinked"}], "/.", "simplesubs"}], "/.", 
+   RowBox[{"r", "\[Rule]", 
+    RowBox[{"r1", " ", "\[Epsilon]"}]}]}], "//", "Simplify"}]], "Input",
+ CellChangeTimes->{{3.6765873672201643`*^9, 3.676587396545806*^9}, {
+  3.6765874454428596`*^9, 3.676587451998765*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  SuperscriptBox[
+   RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+  SeriesData[$CellContext`\[Epsilon], 0, {}, 2, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676587367578302*^9, 3.67658745228249*^9}, {
+  3.6765875037854357`*^9, 3.676587533868641*^9}, {3.6765875779876213`*^9, 
+  3.676587614805255*^9}}]
+}, Open  ]],
+
+Cell["\<\
+And therefore at equilibrium we have\
+\>", "Text",
+ CellChangeTimes->{{3.6765877810275507`*^9, 3.676587788258544*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", "==", "eqpAXYLinkedSimp"}], "/.", 
+    RowBox[{
+     RowBox[{"pAX", "-", "pAY"}], "\[Rule]", "dpAXY"}]}], ",", "dpAXY"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6765877155706377`*^9, 3.6765877760793858`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"dpAXY", "\[Rule]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"t", " ", "VAX", " ", "\[Epsilon]"}], "-", 
+      RowBox[{"3", " ", "t", " ", "VAY", " ", "\[Epsilon]"}], "+", 
+      RowBox[{"3", " ", "VAX", " ", "\[Sigma]AX"}], "-", 
+      RowBox[{"3", " ", "VAY", " ", "\[Sigma]AY"}]}], 
+     RowBox[{"4", " ", "r"}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.676587716290772*^9, {3.676587761858404*^9, 3.676587776526894*^9}}]
+}, Open  ]],
+
+Cell["\<\
+Similarly, we can write the change in the frequency of allele 1 as\
+\>", "Text",
+ CellChangeTimes->{{3.67658792359157*^9, 3.6765879381818743`*^9}, {
+  3.676588005294889*^9, 3.676588008267151*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eqpALinkedSimp", "=", 
+   RowBox[{
+    RowBox[{"3", "VAX", " ", "\[Sigma]AX"}], "+", 
+    RowBox[{"VAY", " ", "\[Sigma]AY"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"VAX", "+", "VAY"}], ")"}], "t", " ", "\[Epsilon]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.67658784167068*^9, 3.6765878727494507`*^9}, {
+  3.676587918431789*^9, 3.676587918836789*^9}, {3.676587961818905*^9, 
+  3.6765879875447273`*^9}}],
+
+Cell["\<\
+And check that this is indeed correct\
+\>", "Text",
+ CellChangeTimes->{{3.676587941810792*^9, 3.676587949658692*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"eqpALinkedSimp", "-", "eqpALinked"}], "/.", "simplesubs"}], "/.", 
+   RowBox[{"r", "\[Rule]", 
+    RowBox[{"r1", " ", "\[Epsilon]"}]}]}], "//", "Simplify"}]], "Input",
+ CellChangeTimes->{{3.676587881045948*^9, 3.676587892344213*^9}, 
+   3.676587953632453*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  SuperscriptBox[
+   RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+  SeriesData[$CellContext`\[Epsilon], 0, {}, 2, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.6765878856150703`*^9, 3.676587920230846*^9}, {
+  3.676587953950102*^9, 3.6765879891997633`*^9}}]
+}, Open  ]],
+
+Cell["\<\
+Therefore at equilibrium we have\
+\>", "Text",
+ CellChangeTimes->{{3.676588129625272*^9, 3.6765881375112543`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"variances", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"eqpALinkedSimp", "\[Equal]", "0"}], ",", 
+        RowBox[{"VA", "\[Equal]", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", "VAX"}], "+", "VAY"}], ")"}], "/", "4"}]}]}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"VAX", ",", "VAY"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+   "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.676588047649045*^9, 3.67658812246128*^9}, {
+  3.676588254423493*^9, 3.676588256006276*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"VAX", "\[Rule]", 
+    FractionBox[
+     RowBox[{"4", " ", "VA", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"t", " ", "\[Epsilon]"}], "+", "\[Sigma]AY"}], ")"}]}], 
+     RowBox[{
+      RowBox[{"2", " ", "t", " ", "\[Epsilon]"}], "-", 
+      RowBox[{"3", " ", "\[Sigma]AX"}], "+", 
+      RowBox[{"3", " ", "\[Sigma]AY"}]}]]}], ",", 
+   RowBox[{"VAY", "\[Rule]", 
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{"4", " ", "VA", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"t", " ", "\[Epsilon]"}], "+", 
+         RowBox[{"3", " ", "\[Sigma]AX"}]}], ")"}]}], 
+      RowBox[{
+       RowBox[{"2", " ", "t", " ", "\[Epsilon]"}], "-", 
+       RowBox[{"3", " ", "\[Sigma]AX"}], "+", 
+       RowBox[{"3", " ", "\[Sigma]AY"}]}]]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6765880773201103`*^9, 3.6765881227738943`*^9}, 
+   3.676588256659614*^9}]
+}, Open  ]],
+
+Cell["\<\
+where VA is the average variance in the frequency of allele 1 across all \
+chromosomes.\
+\>", "Text",
+ CellChangeTimes->{{3.6765881434110622`*^9, 3.676588182021234*^9}}],
+
+Cell["\<\
+Finally, we can write the growth rate of the neo-y like\t\
+\>", "Text",
+ CellChangeTimes->{{3.6765882936776333`*^9, 3.676588314084442*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RAsimp", "=", 
+   RowBox[{"1", "-", 
+    RowBox[{"\[Sigma]AY", " ", 
+     FractionBox[
+      RowBox[{"3", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "VAX"}], " ", "\[Sigma]AX"}], "+", 
+         RowBox[{"VAY", " ", "\[Sigma]AY"}]}], ")"}]}], 
+      RowBox[{"4", " ", "r"}]]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.676588205154167*^9, 3.676588290105474*^9}, {
+   3.676589249829822*^9, 3.676589268508422*^9}, 3.676589627623953*^9}],
+
+Cell["\<\
+This reduces to van Doorn and Kirkpatrick\[CloseCurlyQuote]s result in the \
+absence of haploid selection\
+\>", "Text",
+ CellChangeTimes->{{3.67658966015904*^9, 3.676589682287039*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"RAsimp", "/.", "variances"}], "/.", 
+   RowBox[{"t", "\[Rule]", "0"}]}], "//", "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.676589628952403*^9, 3.676589656645438*^9}}],
+
+Cell[BoxData[
+ RowBox[{"1", "-", 
+  FractionBox[
+   RowBox[{"4", " ", "VA", " ", "\[Sigma]AX", " ", 
+    SuperscriptBox["\[Sigma]AY", "2"]}], 
+   RowBox[{
+    RowBox[{"r", " ", "\[Sigma]AX"}], "-", 
+    RowBox[{"r", " ", "\[Sigma]AY"}]}]]}]], "Output",
+ CellChangeTimes->{{3.6765896402718887`*^9, 3.676589656971941*^9}, {
+  3.676590225290619*^9, 3.676590228486988*^9}}]
+}, Open  ]],
+
+Cell["\<\
+And we check that this new expression is actually true\
+\>", "Text",
+ CellChangeTimes->{{3.676589143093421*^9, 3.676589153859576*^9}, {
+  3.676589688182111*^9, 3.67658969041448*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"approxRALinked", "-", "RAsimp"}], "/.", "simplesubs"}], "//", 
+  "Simplify"}]], "Input",
+ CellChangeTimes->{{3.6765902089817057`*^9, 3.676590233225494*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"hAm", "+", "pAX", "-", 
+      RowBox[{"2", " ", "hAm", " ", "pAX"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"pAX", "-", "pAY"}], ")"}], " ", "sAm", " ", "\[Epsilon]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 
+   0, {($CellContext`hAm + $CellContext`pAX - 
+     2 $CellContext`hAm $CellContext`pAX) ($CellContext`pAX - \
+$CellContext`pAY) $CellContext`sAm}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676590221874711*^9, 3.676590233542173*^9}}]
+}, Open  ]],
+
+Cell["\<\
+It doesn\[CloseCurlyQuote]t seem to be (why?!). But we could instead write \
+the neo-y growth rate like\
+\>", "Text",
+ CellChangeTimes->{{3.676590237085455*^9, 3.6765902815056334`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RAsimp2", "=", 
+   RowBox[{"1", "-", 
+    RowBox[{"\[Sigma]AY", 
+     RowBox[{"(", 
+      RowBox[{"pAY", "-", "pAX"}], ")"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6765900695843554`*^9, 3.676590135075926*^9}, {
+   3.676590213673218*^9, 3.676590218285602*^9}, 3.676590353455987*^9}],
+
+Cell["And this seems to be correct", "Text",
+ CellChangeTimes->{{3.676590255952269*^9, 3.676590268695765*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"approxRALinked", "-", "RAsimp2"}], "/.", "simplesubs"}], "//", 
+  "Simplify"}]], "Input",
+ CellChangeTimes->{{3.6765901210588207`*^9, 3.676590122055189*^9}, 
+   3.676590214695148*^9, 3.676590355090534*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  SuperscriptBox[
+   RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+  SeriesData[$CellContext`\[Epsilon], 0, {}, 2, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.676590118186528*^9, 3.6765901364546833`*^9}, 
+   3.676590219839938*^9, {3.6765903475798798`*^9, 3.676590355378357*^9}}]
+}, Open  ]]
+}, Closed]]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1366, 719},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 197, 4, 183, "Title"],
+Cell[779, 28, 118, 1, 62, "Subtitle"],
+Cell[900, 31, 405, 7, 61, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1342, 43, 264, 5, 114, "Title"],
+Cell[CellGroupData[{
+Cell[1631, 52, 502, 7, 100, "Section"],
+Cell[2136, 61, 1436, 21, 195, "Text"],
+Cell[3575, 84, 2321, 60, 307, "Input"],
+Cell[5899, 146, 316, 6, 76, "Text"],
+Cell[6218, 154, 604, 10, 46, "Text"],
+Cell[CellGroupData[{
+Cell[6847, 168, 838, 24, 123, "Input"],
+Cell[7688, 194, 217, 3, 43, "Output"],
+Cell[7908, 199, 217, 3, 43, "Output"],
+Cell[8128, 204, 217, 3, 43, "Output"],
+Cell[8348, 209, 219, 3, 43, "Output"]
+}, Open  ]],
+Cell[8582, 215, 330, 6, 46, "Text"],
+Cell[8915, 223, 2496, 55, 360, "Input"],
+Cell[11414, 280, 271, 5, 46, "Text"],
+Cell[CellGroupData[{
+Cell[11710, 289, 975, 27, 97, "Input"],
+Cell[12688, 318, 216, 4, 43, "Output"],
+Cell[12907, 324, 216, 4, 43, "Output"],
+Cell[13126, 330, 216, 4, 43, "Output"]
+}, Open  ]],
+Cell[13357, 337, 289, 5, 46, "Text"],
+Cell[13649, 344, 3195, 83, 465, "Input"],
+Cell[16847, 429, 256, 5, 46, "Text"],
+Cell[CellGroupData[{
+Cell[17128, 438, 279, 8, 71, "Input"],
+Cell[17410, 448, 193, 3, 43, "Output"],
+Cell[17606, 453, 192, 3, 43, "Output"]
+}, Open  ]],
+Cell[17813, 459, 206, 3, 46, "Text"],
+Cell[18022, 464, 318, 4, 46, "Text"],
+Cell[18343, 470, 457, 11, 71, "Input"],
+Cell[18803, 483, 143, 2, 46, "Text"],
+Cell[CellGroupData[{
+Cell[18971, 489, 183, 4, 43, "Input"],
+Cell[19157, 495, 191, 3, 43, "Output"]
+}, Open  ]],
+Cell[19363, 501, 1141, 15, 46, "Text"],
+Cell[20507, 518, 2843, 56, 150, "Input"],
+Cell[23353, 576, 177, 4, 46, "Text"],
+Cell[23533, 582, 284, 5, 46, "Text"],
+Cell[CellGroupData[{
+Cell[23842, 591, 238, 7, 71, "Input"],
+Cell[24083, 600, 195, 3, 43, "Output"],
+Cell[24281, 605, 195, 3, 43, "Output"]
+}, Open  ]],
+Cell[24491, 611, 387, 6, 46, "Text"],
+Cell[CellGroupData[{
+Cell[24903, 621, 633, 19, 77, "Input"],
+Cell[25539, 642, 945, 19, 70, "Output"]
+}, Open  ]],
+Cell[26499, 664, 174, 4, 46, "Text"],
+Cell[26676, 670, 253, 5, 46, "Text"],
+Cell[CellGroupData[{
+Cell[26954, 679, 418, 13, 77, "Input"],
+Cell[27375, 694, 1172, 31, 72, "Output"]
+}, Open  ]],
+Cell[28562, 728, 328, 6, 46, "Text"],
+Cell[CellGroupData[{
+Cell[28915, 738, 1175, 35, 71, "Input"],
+Cell[30093, 775, 638, 16, 72, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[30780, 797, 261, 3, 62, "Section"],
+Cell[31044, 802, 323, 6, 46, "Text"],
+Cell[31370, 810, 1167, 27, 281, "Input"],
+Cell[32540, 839, 586, 10, 46, "Text"],
+Cell[33129, 851, 890, 16, 176, "Input"],
+Cell[34022, 869, 229, 3, 46, "Text"],
+Cell[34254, 874, 847, 20, 176, "Input"],
+Cell[35104, 896, 429, 7, 46, "Text"],
+Cell[CellGroupData[{
+Cell[35558, 907, 1017, 24, 43, "Input"],
+Cell[36578, 933, 950, 24, 68, "Output"]
+}, Open  ]],
+Cell[37543, 960, 159, 2, 46, "Text"],
+Cell[CellGroupData[{
+Cell[37727, 966, 360, 8, 43, "Input"],
+Cell[38090, 976, 644, 13, 43, "Output"]
+}, Open  ]],
+Cell[38749, 992, 387, 7, 46, "Text"],
+Cell[CellGroupData[{
+Cell[39161, 1003, 116, 1, 67, "Subsection"],
+Cell[39280, 1006, 376, 7, 76, "Text"],
+Cell[39659, 1015, 1203, 28, 311, "Input"],
+Cell[40865, 1045, 452, 8, 76, "Text"],
+Cell[41320, 1055, 147, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[41492, 1062, 701, 20, 45, "Input"],
+Cell[42196, 1084, 1097, 32, 70, "Output"]
+}, Open  ]],
+Cell[43308, 1119, 108, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[43441, 1124, 1188, 32, 97, "Input"],
+Cell[44632, 1158, 1575, 43, 71, "Output"]
+}, Open  ]],
+Cell[46222, 1204, 111, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[46358, 1209, 925, 26, 71, "Input"],
+Cell[47286, 1237, 1916, 51, 71, "Output"]
+}, Open  ]],
+Cell[49217, 1291, 108, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[49350, 1296, 488, 14, 45, "Input"],
+Cell[49841, 1312, 1969, 59, 123, "Output"]
+}, Open  ]],
+Cell[51825, 1374, 160, 2, 46, "Text"],
+Cell[CellGroupData[{
+Cell[52010, 1380, 826, 24, 71, "Input"],
+Cell[52839, 1406, 1516, 37, 71, "Output"]
+}, Open  ]],
+Cell[54370, 1446, 100, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[54495, 1451, 287, 9, 45, "Input"],
+Cell[54785, 1462, 605, 18, 70, "Output"]
+}, Open  ]],
+Cell[55405, 1483, 142, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[55572, 1490, 220, 5, 45, "Input"],
+Cell[55795, 1497, 1389, 43, 70, "Output"]
+}, Open  ]],
+Cell[57199, 1543, 150, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[57374, 1550, 164, 5, 45, "Input"],
+Cell[57541, 1557, 2157, 58, 101, "Output"]
+}, Open  ]],
+Cell[59713, 1618, 264, 5, 46, "Text"],
+Cell[CellGroupData[{
+Cell[60002, 1627, 1251, 32, 97, "Input"],
+Cell[61256, 1661, 2573, 56, 101, "Output"]
+}, Open  ]],
+Cell[63844, 1720, 110, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[63979, 1725, 380, 9, 45, "Input"],
+Cell[64362, 1736, 1136, 26, 70, "Output"]
+}, Open  ]],
+Cell[65513, 1765, 423, 7, 76, "Text"],
+Cell[CellGroupData[{
+Cell[65961, 1776, 1680, 54, 97, "Input"],
+Cell[67644, 1832, 304, 8, 52, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[67997, 1846, 165, 2, 53, "Subsection"],
+Cell[68165, 1850, 461, 8, 106, "Text"],
+Cell[68629, 1860, 849, 20, 202, "Input"],
+Cell[69481, 1882, 360, 6, 76, "Text"],
+Cell[69844, 1890, 149, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[70018, 1897, 662, 19, 45, "Input"],
+Cell[70683, 1918, 881, 25, 48, "Output"]
+}, Open  ]],
+Cell[71579, 1946, 184, 4, 46, "Text"],
+Cell[CellGroupData[{
+Cell[71788, 1954, 1082, 30, 97, "Input"],
+Cell[72873, 1986, 2803, 77, 87, "Output"]
+}, Open  ]],
+Cell[75691, 2066, 154, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[75870, 2073, 949, 28, 97, "Input"],
+Cell[76822, 2103, 2623, 72, 87, "Output"]
+}, Open  ]],
+Cell[79460, 2178, 143, 3, 46, "Text"],
+Cell[79606, 2183, 1554, 46, 176, "Input"],
+Cell[81163, 2231, 193, 4, 46, "Text"],
+Cell[81359, 2237, 708, 20, 43, "Input"],
+Cell[82070, 2259, 114, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[82209, 2264, 350, 8, 45, "Input"],
+Cell[82562, 2274, 352, 8, 48, "Output"]
+}, Open  ]],
+Cell[82929, 2285, 128, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[83082, 2292, 289, 8, 43, "Input"],
+Cell[83374, 2302, 495, 12, 68, "Output"]
+}, Open  ]],
+Cell[83884, 2317, 206, 4, 46, "Text"],
+Cell[84093, 2323, 457, 12, 43, "Input"],
+Cell[84553, 2337, 127, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[84705, 2344, 319, 8, 45, "Input"],
+Cell[85027, 2354, 304, 7, 48, "Output"]
+}, Open  ]],
+Cell[85346, 2364, 124, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[85495, 2371, 629, 19, 45, "Input"],
+Cell[86127, 2392, 924, 26, 70, "Output"]
+}, Open  ]],
+Cell[87066, 2421, 179, 4, 46, "Text"],
+Cell[87248, 2427, 149, 3, 46, "Text"],
+Cell[87400, 2432, 506, 14, 72, "Input"],
+Cell[87909, 2448, 194, 4, 46, "Text"],
+Cell[CellGroupData[{
+Cell[88128, 2456, 219, 5, 45, "Input"],
+Cell[88350, 2463, 369, 9, 73, "Output"]
+}, Open  ]],
+Cell[88734, 2475, 192, 4, 46, "Text"],
+Cell[CellGroupData[{
+Cell[88951, 2483, 203, 5, 45, "Input"],
+Cell[89157, 2490, 737, 19, 48, "Output"]
+}, Open  ]],
+Cell[89909, 2512, 195, 4, 46, "Text"],
+Cell[90107, 2518, 323, 8, 43, "Input"],
+Cell[90433, 2528, 110, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[90568, 2533, 252, 6, 45, "Input"],
+Cell[90823, 2541, 327, 7, 48, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[91223, 2556, 309, 6, 114, "Title"],
+Cell[CellGroupData[{
+Cell[91557, 2566, 502, 7, 100, "Section"],
+Cell[92062, 2575, 1341, 21, 165, "Text"],
+Cell[93406, 2598, 1405, 39, 228, "Input"],
+Cell[94814, 2639, 245, 5, 46, "Text"],
+Cell[95062, 2646, 695, 11, 46, "Text"],
+Cell[CellGroupData[{
+Cell[95782, 2661, 665, 16, 97, "Input"],
+Cell[96450, 2679, 368, 6, 43, "Output"],
+Cell[96821, 2687, 368, 6, 43, "Output"],
+Cell[97192, 2695, 366, 6, 43, "Output"]
+}, Open  ]],
+Cell[97573, 2704, 376, 6, 46, "Text"],
+Cell[97952, 2712, 1067, 29, 228, "Input"],
+Cell[99022, 2743, 364, 6, 46, "Text"],
+Cell[CellGroupData[{
+Cell[99411, 2753, 658, 15, 71, "Input"],
+Cell[100072, 2770, 386, 6, 43, "Output"],
+Cell[100461, 2778, 388, 6, 43, "Output"]
+}, Open  ]],
+Cell[100864, 2787, 390, 7, 46, "Text"],
+Cell[101257, 2796, 3200, 78, 438, "Input"],
+Cell[104460, 2876, 306, 6, 46, "Text"],
+Cell[CellGroupData[{
+Cell[104791, 2886, 490, 11, 71, "Input"],
+Cell[105284, 2899, 442, 7, 43, "Output"],
+Cell[105729, 2908, 442, 7, 43, "Output"]
+}, Open  ]],
+Cell[106186, 2918, 323, 6, 46, "Text"],
+Cell[106512, 2926, 1538, 45, 293, "Input"],
+Cell[108053, 2973, 103, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[108181, 2978, 436, 12, 97, "Input"],
+Cell[108620, 2992, 197, 3, 43, "Output"],
+Cell[108820, 2997, 199, 3, 43, "Output"],
+Cell[109022, 3002, 197, 3, 43, "Output"]
+}, Open  ]],
+Cell[109234, 3008, 299, 6, 46, "Text"],
+Cell[CellGroupData[{
+Cell[109558, 3018, 567, 16, 77, "Input"],
+Cell[110128, 3036, 1871, 44, 97, "Output"]
+}, Open  ]],
+Cell[112014, 3083, 378, 7, 46, "Text"],
+Cell[CellGroupData[{
+Cell[112417, 3094, 1134, 33, 71, "Input"],
+Cell[113554, 3129, 615, 15, 115, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[114218, 3150, 261, 3, 62, "Section"],
+Cell[114482, 3155, 323, 6, 46, "Text"],
+Cell[114808, 3163, 1217, 28, 281, "Input"],
+Cell[116028, 3193, 586, 10, 46, "Text"],
+Cell[116617, 3205, 874, 16, 150, "Input"],
+Cell[117494, 3223, 229, 3, 46, "Text"],
+Cell[117726, 3228, 761, 17, 150, "Input"],
+Cell[118490, 3247, 429, 7, 46, "Text"],
+Cell[CellGroupData[{
+Cell[118944, 3258, 1118, 26, 71, "Input"],
+Cell[120065, 3286, 885, 21, 68, "Output"]
+}, Open  ]],
+Cell[120965, 3310, 159, 2, 46, "Text"],
+Cell[CellGroupData[{
+Cell[121149, 3316, 412, 9, 43, "Input"],
+Cell[121564, 3327, 652, 13, 43, "Output"]
+}, Open  ]],
+Cell[122231, 3343, 435, 7, 46, "Text"],
+Cell[CellGroupData[{
+Cell[122691, 3354, 116, 1, 67, "Subsection"],
+Cell[122810, 3357, 376, 7, 76, "Text"],
+Cell[123189, 3366, 910, 23, 280, "Input"],
+Cell[124102, 3391, 415, 7, 76, "Text"],
+Cell[124520, 3400, 235, 5, 46, "Text"],
+Cell[CellGroupData[{
+Cell[124780, 3409, 857, 25, 71, "Input"],
+Cell[125640, 3436, 1206, 32, 48, "Output"]
+}, Open  ]],
+Cell[126861, 3471, 159, 2, 46, "Text"],
+Cell[CellGroupData[{
+Cell[127045, 3477, 832, 24, 71, "Input"],
+Cell[127880, 3503, 1347, 37, 48, "Output"]
+}, Open  ]],
+Cell[129242, 3543, 114, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[129381, 3548, 830, 24, 71, "Input"],
+Cell[130214, 3574, 1144, 34, 68, "Output"]
+}, Open  ]],
+Cell[131373, 3611, 108, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[131506, 3616, 278, 9, 45, "Input"],
+Cell[131787, 3627, 498, 14, 70, "Output"]
+}, Open  ]],
+Cell[132300, 3644, 136, 2, 46, "Text"],
+Cell[CellGroupData[{
+Cell[132461, 3650, 454, 13, 45, "Input"],
+Cell[132918, 3665, 1491, 47, 112, "Output"]
+}, Open  ]],
+Cell[134424, 3715, 215, 4, 46, "Text"],
+Cell[CellGroupData[{
+Cell[134664, 3723, 431, 12, 45, "Input"],
+Cell[135098, 3737, 1770, 47, 72, "Output"]
+}, Open  ]],
+Cell[136883, 3787, 315, 6, 46, "Text"],
+Cell[CellGroupData[{
+Cell[137223, 3797, 1610, 50, 97, "Input"],
+Cell[138836, 3849, 402, 9, 52, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[139287, 3864, 243, 5, 53, "Subsection"],
+Cell[139533, 3871, 461, 8, 106, "Text"],
+Cell[139997, 3881, 849, 20, 202, "Input"],
+Cell[140849, 3903, 360, 6, 76, "Text"],
+Cell[141212, 3911, 149, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[141386, 3918, 662, 19, 45, "Input"],
+Cell[142051, 3939, 881, 25, 48, "Output"]
+}, Open  ]],
+Cell[142947, 3967, 184, 4, 46, "Text"],
+Cell[CellGroupData[{
+Cell[143156, 3975, 1082, 30, 97, "Input"],
+Cell[144241, 4007, 2803, 77, 87, "Output"]
+}, Open  ]],
+Cell[147059, 4087, 154, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[147238, 4094, 949, 28, 97, "Input"],
+Cell[148190, 4124, 2623, 72, 87, "Output"]
+}, Open  ]],
+Cell[150828, 4199, 143, 3, 46, "Text"],
+Cell[150974, 4204, 1554, 46, 176, "Input"],
+Cell[152531, 4252, 193, 4, 46, "Text"],
+Cell[152727, 4258, 708, 20, 43, "Input"],
+Cell[153438, 4280, 114, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[153577, 4285, 350, 8, 45, "Input"],
+Cell[153930, 4295, 352, 8, 48, "Output"]
+}, Open  ]],
+Cell[154297, 4306, 128, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[154450, 4313, 289, 8, 43, "Input"],
+Cell[154742, 4323, 495, 12, 68, "Output"]
+}, Open  ]],
+Cell[155252, 4338, 206, 4, 46, "Text"],
+Cell[155461, 4344, 457, 12, 43, "Input"],
+Cell[155921, 4358, 127, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[156073, 4365, 319, 8, 45, "Input"],
+Cell[156395, 4375, 304, 7, 48, "Output"]
+}, Open  ]],
+Cell[156714, 4385, 124, 3, 46, "Text"],
+Cell[CellGroupData[{
+Cell[156863, 4392, 629, 19, 45, "Input"],
+Cell[157495, 4413, 924, 26, 70, "Output"]
+}, Open  ]],
+Cell[158434, 4442, 179, 4, 46, "Text"],
+Cell[158616, 4448, 149, 3, 46, "Text"],
+Cell[158768, 4453, 506, 14, 72, "Input"],
+Cell[159277, 4469, 194, 4, 46, "Text"],
+Cell[CellGroupData[{
+Cell[159496, 4477, 219, 5, 45, "Input"],
+Cell[159718, 4484, 369, 9, 73, "Output"]
+}, Open  ]],
+Cell[160102, 4496, 192, 4, 46, "Text"],
+Cell[CellGroupData[{
+Cell[160319, 4504, 203, 5, 45, "Input"],
+Cell[160525, 4511, 737, 19, 48, "Output"]
+}, Open  ]],
+Cell[161277, 4533, 195, 4, 46, "Text"],
+Cell[161475, 4539, 323, 8, 43, "Input"],
+Cell[161801, 4549, 110, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[161936, 4554, 252, 6, 45, "Input"],
+Cell[162191, 4562, 327, 7, 48, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
