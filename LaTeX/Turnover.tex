@@ -161,6 +161,47 @@ The maintenance of polymorphism at loci that experience sex specific selection i
 
 \textcolor{red}{NOTE RE: DRIVE. I expect drive (that occurs specifically in one sex, e.g., during spermatogenesis) to behave almost exactly like haploid selection. That is, I think that a XY-linked driver that is maintained by selection (e.g., because it causes sterility when homozygous, which is common in known drive systems) will only favour invasion of a more tightly linked neo-Y (worsening sex ratio biases) and could favour invasion of a neo-W. This may run counter to generic expectations from new sex chromosome systems evolving to balance the sex ratio. So, do you think it would significantly enhance the paper to model drive explicitly or just discuss it as being similar???}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Model}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%genetic system
+We will consider a three locus model.
+Locus \textbf{X} is the ancestral sex-determining region (SDR), with alleles $X$ and $Y$ (or $Z$ and $W$).
+Locus \textbf{A} is a region under selection, with alleles $A$ and $a$.
+And locus \textbf{M} is a novel sex-determining region, with alleles $M$ and $m$.
+With genotype $MM$ at locus \textbf{M}, the sex of a zygote is determined by the genotype at locus \textbf{X} ($XX$ become females and $XY$ males, or $ZW$ become females and $ZZ$ males).
+With at least one $m$ allele at locus \textbf{M}, a zygote develops as a female with probability $k$ and as a male with probability $1-k$.
+With $k=0$, the novel sex determiner is a masculinizer (e.g., a neo-Y chromosome) and with $k=1$ the novel sex determiner is a feminizer (e.g, a neo-W chromosome).
+With intermediate $k$, locus \textbf{M} is interpreted as an environmental sex-determining region.
+
+%life-cycle
+The life-cycle begins with haploid gametes/gametophytes experiencing selection that depends on their allele at the \textbf{A} locus.
+Gametes/gametophytes from males then mate randomly with gametes/gametophytes from females.
+The resulting zygotes develop as males or females, depending on their genotypes at the \textbf{X} and \textbf{M} loci.
+There is then a period of diploid selection that again depends on genotypes at the \textbf{A} locus, followed by meiosis with recombination. 
+Recombination occurs between loci \textbf{X} and \textbf{A} with probability $r$, between loci \textbf{A} and \textbf{M} with probability $R$, and between loci \textbf{X} and \textbf{M} with probability $\chi$. %is chi really the prob of rec in our recursion equations?
+Any order of the loci can be modelled with appropriate choices of $r$, $R$, and $\chi$.
+We track the frequency of haploid genotypes produced by each sex from one generation to the next (recursion equations in Sup.\ Mat.).
+
+%what were going to do, briefly
+With allele $M$ fixed at the \textbf{M} locus, sex is determined by locus \textbf{X} and an equilibrium is reached at locus \textbf{A}. %where, importantly, locus \textbf{A} can be stably polymorphic. %the dynamics can be described by the frequency of $A$ in gametes/gametophytes from the homogametic sex and the frequencies of $A$ in the two types of gametes/gametophytes from the heterogametic sex.
+We then examine the ability of a rare, novel sex-determiner $m$ to increase in frequency at this equilibrium.
+Numerical simulations are used to examine when an invading mutation goes to fixation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Results}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%resident equilibrium
+With allele $M$ fixed, we follow the dynamics of the frequency of $A$ in gametes/gametophytes from the homogametic sex (e.g., in eggs from an XX female, $p_{Xf}$) and the frequencies of $A$ in the two types of gametes/gametophytes from the heterogametic sex (e.g., in sperm from an XY male that are X-bearing, $p_{Xm}$, and Y-bearing, $p_{Ym}$).
+Assuming selection is weak relative to recombination, the differences in the frequencies of $A$ in each type of gamete/gametophyte are small, and we can solve for the mean frequency of $A$ across all types ($p_A$) as well as the difference in the frequencies of $A$ between two of the three types, to first order in selection.
+Linear stability analysis can then be used to determine the stability of this equilibrium.
+Without haploid selection this reduces to the results of \citep{vanDoorn:2010hu}.
+
+%external stability/turnover
+
+
 \linenumbers
 \modulolinenumbers[2]
 
