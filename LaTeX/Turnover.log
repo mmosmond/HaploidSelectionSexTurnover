@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  30 AUG 2016 12:51
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  30 AUG 2016 15:22
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -327,22 +327,26 @@ Overfull \hbox (31.30371pt too wide) in paragraph at lines 29--29
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3]
-Overfull \hbox (4.10841pt too wide) in paragraph at lines 100--105
+[2]
+Overfull \hbox (4.10841pt too wide) in paragraph at lines 87--92
 []\OT1/cmr/m/n/12 Predominant the-o-ries in which new sex de-ter-mi-na-tion sys
 -tems are favoured
  []
 
-[4] [5] [6] [7] [8]
+[3] [4] [5] [6] [7]
 
-LaTeX Warning: Reference `ch:sexchromosomes' on page 9 undefined on input line 
-186.
+LaTeX Warning: Reference `ch:sexchromosomes' on page 8 undefined on input line 
+177.
 
-(./Turnover.bbl [9] [10] [11]
+(./Turnover.bbl [8] [9] [10] [11]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ê in font cmr12!
- [12] [13] [14]) [15] (./Turnover.aux)
+ [12]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+ [13] [14]) [15] (./Turnover.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -352,13 +356,13 @@ LaTeX Warning: There were undefined references.
 ### semi simple group (level 1) entered at line 22 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5062 strings out of 493633
- 74879 string characters out of 3143378
- 154331 words of memory out of 3000000
- 8293 multiletter control sequences out of 15000+200000
+ 5070 strings out of 493633
+ 75031 string characters out of 3143378
+ 154532 words of memory out of 3000000
+ 8301 multiletter control sequences out of 15000+200000
  10881 words of font info for 39 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 38i,7n,39p,714b,1136s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,39p,714b,1148s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
@@ -369,7 +373,7 @@ r17.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
 fb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 >
-Output written on Turnover.pdf (15 pages, 139871 bytes).
+Output written on Turnover.pdf (15 pages, 138169 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream

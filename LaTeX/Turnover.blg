@@ -5,45 +5,45 @@ The style file: amnatnat.bst.bst
 Database file #1: sex_chromosomes.bib.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty journal in Charnov:1977tx
-You've used 57 entries,
+You've used 59 entries,
             3251 wiz_defined-function locations,
-            1046 strings with 15474 characters,
-and the built_in function-call counts, 36087 in all, are:
-= -- 3068
-> -- 1809
-< -- 31
-+ -- 606
-- -- 549
-* -- 2633
-:= -- 5874
-add.period$ -- 227
-call.type$ -- 57
-change.case$ -- 465
-chr.to.int$ -- 57
-cite$ -- 58
-duplicate$ -- 2512
-empty$ -- 2497
-format.name$ -- 742
-if$ -- 7120
+            1062 strings with 16040 characters,
+and the built_in function-call counts, 37772 in all, are:
+= -- 3208
+> -- 1924
+< -- 30
++ -- 644
+- -- 585
+* -- 2777
+:= -- 6142
+add.period$ -- 235
+call.type$ -- 59
+change.case$ -- 488
+chr.to.int$ -- 59
+cite$ -- 60
+duplicate$ -- 2622
+empty$ -- 2593
+format.name$ -- 788
+if$ -- 7445
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 520
-newline$ -- 288
-num.names$ -- 228
-pop$ -- 994
+missing$ -- 543
+newline$ -- 298
+num.names$ -- 236
+pop$ -- 1036
 preamble$ -- 1
-purify$ -- 411
+purify$ -- 431
 quote$ -- 0
-skip$ -- 734
+skip$ -- 756
 stack$ -- 0
-substring$ -- 1939
-swap$ -- 1148
-text.length$ -- 2
+substring$ -- 2030
+swap$ -- 1205
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 504
+type$ -- 525
 warning$ -- 1
-while$ -- 272
+while$ -- 284
 width$ -- 0
-write$ -- 738
+write$ -- 764
 (There was 1 warning)
