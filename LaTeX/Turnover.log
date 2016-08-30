@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  29 AUG 2016 11:59
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  30 AUG 2016 12:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -328,21 +328,21 @@ Overfull \hbox (31.30371pt too wide) in paragraph at lines 29--29
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] [3]
-Overfull \hbox (4.10841pt too wide) in paragraph at lines 93--98
+Overfull \hbox (4.10841pt too wide) in paragraph at lines 100--105
 []\OT1/cmr/m/n/12 Predominant the-o-ries in which new sex de-ter-mi-na-tion sys
 -tems are favoured
  []
 
-[4] [5] [6] [7] [8] [9]
+[4] [5] [6] [7] [8]
 
-LaTeX Warning: Reference `ch:sexchromosomes' on page 10 undefined on input line
- 197.
+LaTeX Warning: Reference `ch:sexchromosomes' on page 9 undefined on input line 
+186.
 
-(./Turnover.bbl [10] [11] [12]
+(./Turnover.bbl [9] [10] [11]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ê in font cmr12!
- [13] [14] [15]) [16] (./Turnover.aux)
+ [12] [13] [14]) [15] (./Turnover.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -352,13 +352,13 @@ LaTeX Warning: There were undefined references.
 ### semi simple group (level 1) entered at line 22 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5047 strings out of 493633
- 74552 string characters out of 3143378
- 154057 words of memory out of 3000000
- 8278 multiletter control sequences out of 15000+200000
+ 5062 strings out of 493633
+ 74879 string characters out of 3143378
+ 154331 words of memory out of 3000000
+ 8293 multiletter control sequences out of 15000+200000
  10881 words of font info for 39 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 38i,7n,39p,714b,1138s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,39p,714b,1136s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
@@ -369,10 +369,10 @@ r17.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
 fb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 >
-Output written on Turnover.pdf (16 pages, 140977 bytes).
+Output written on Turnover.pdf (15 pages, 139871 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

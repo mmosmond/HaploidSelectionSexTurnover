@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{57}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Arunkumar et~al.(2013)Arunkumar, Josephs, Williamson, and
@@ -38,6 +38,10 @@ Charlesworth, D., and J.~E. Mank. 2010.
 \newblock {The birds and the bees and the flowers and the trees: lessons from
   genetic mapping of sex determination in plants and animals}.
 \newblock Genetics 186:9--31.
+
+\bibitem[{Charnov and Bull(1977)}]{Charnov:1977tx}
+Charnov, E.~L., and J.~Bull. 1977.
+\newblock {When is sex environmentally determined?} 266:828--830.
 
 \bibitem[{Clarke et~al.(2004)Clarke, Khan, and Siddique}]{Clarke:2004ir}
 Clarke, H.~J., T.~N. Khan, and K.~H.~M. Siddique. 2004.
@@ -207,6 +211,12 @@ Otto, S.~P., M.~F. Scott, and S.~Immler. 2015.
 \newblock {Evolution of haploid selection in predominantly diploid organisms}.
 \newblock Proceedings of the National {\ldots} .
 
+\bibitem[{Pen et~al.(2010)Pen, Uller, Feldmeyer, Harts, While, and
+  Wapstra}]{Pen:2010kk}
+Pen, I., T.~Uller, B.~Feldmeyer, A.~Harts, G.~M. While, and E.~Wapstra. 2010.
+\newblock {Climate-driven population divergence in sex-determining systems}.
+\newblock Nature 468:436--438.
+
 \bibitem[{Ravikumar et~al.(2012)Ravikumar, Chaitra, Choukimath, and
   Soregaon}]{Ravikumar:2012ej}
 Ravikumar, R.~L., G.~N. Chaitra, A.~M. Choukimath, and C.~D. Soregaon. 2012.
@@ -307,6 +317,22 @@ Vibranovski, M.~D., D.~S. Chalopin, H.~F. Lopes, M.~Long, and T.~L. Karr. 2010.
 Vicoso, B., and D.~Bachtrog. 2015.
 \newblock {Numerous transitions of sex chromosomes in Diptera.}
 \newblock PLoS Biol 13:e1002078.
+
+\bibitem[{Vuillleumier et~al.(2007)Vuillleumier, Lande, van Alphen, and
+  Seehausen}]{Vuillleumier:2007bh}
+Vuillleumier, S., R.~Lande, J.~J.~M. van Alphen, and O.~Seehausen. 2007.
+\newblock {Invasion and fixation of sex-reversal genes}.
+\newblock Journal of Evolutionary Biology 20:913--920.
+
+\bibitem[{Werren and Taylor(1984)}]{Werren:1984tl}
+Werren, J.~H., and P.~D. Taylor. 1984.
+\newblock {The effects of population recruitment on sex ratio selection}.
+\newblock The American Naturalist 124:143--148.
+
+\bibitem[{Wilson and Colwell(1981)}]{Wilson:1981vm}
+Wilson, D.~S., and R.~K. Colwell. 1981.
+\newblock {Evolution of sex ratio in structured demes}.
+\newblock Evolution 35:882--897.
 
 \bibitem[{Yano et~al.(2012)Yano, Nicol, Jouanno, Quillet, Fostier, Guyomard,
   and Guiguen}]{Yano:2012di}
