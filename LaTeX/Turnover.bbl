@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{59}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Arunkumar et~al.(2013)Arunkumar, Josephs, Williamson, and
@@ -39,17 +39,27 @@ Charlesworth, D., and J.~E. Mank. 2010.
   genetic mapping of sex determination in plants and animals}.
 \newblock Genetics 186:9--31.
 
+\bibitem[{Charnov and Bull(1977)}]{Charnov:1977tx}
+Charnov, E.~L., and J.~Bull. 1977.
+\newblock {When is sex environmentally determined?} 266:828--830.
+
 \bibitem[{Clarke et~al.(2004)Clarke, Khan, and Siddique}]{Clarke:2004ir}
 Clarke, H.~J., T.~N. Khan, and K.~H.~M. Siddique. 2004.
 \newblock {Pollen selection for chilling tolerance at hybridisation leads to
   improved chickpea cultivars}.
 \newblock Euphytica 139:65--74.
 
-\bibitem[{Feldman and Otto(1989)}]{Feldman:1989gm}
-Feldman, M.~W., and S.~P. Otto. 1989.
-\newblock {More on recombination and selection in the modifier theory of
-  sex-ratio distortion}.
-\newblock Theoretical Population Biology 35:207--225.
+\bibitem[{Conover and Heins(1987)}]{Conover:1987in}
+Conover, D.~O., and S.~W. Heins. 1987.
+\newblock {Adaptive variation in environmental and genetic sex determination in
+  a fish}.
+\newblock Nature 326:496--498.
+
+\bibitem[{Ezaz et~al.(2009)Ezaz, Sarre, and O'Meally}]{Ezaz:2009tk}
+Ezaz, T., S.~D. Sarre, and D.~O'Meally. 2009.
+\newblock {Sex chromosome evolution in lizards: independent origins and rapid
+  transitions}.
+\newblock Cytogenetic and Genome Research 127:249--260.
 
 \bibitem[{Frank(1989)}]{Frank:1989vl}
 Frank, S.~A. 1989.
@@ -104,10 +114,18 @@ Hillis, D.~M., and D.~M. Green. 1990.
   history of amphibians}.
 \newblock Journal of Evolutionary Biology 3:49--64.
 
-\bibitem[{Holman et~al.(2015)Holman, Price, Wedell, and Kokko}]{Holman:2015en}
-Holman, L., T.~A.~R. Price, N.~Wedell, and H.~Kokko. 2015.
-\newblock {Coevolutionary dynamics of polyandry and sex-linked meiotic drive}.
-\newblock Evolution 69:709--720.
+\bibitem[{Holleley et~al.(2015)Holleley, O'Meally, Sarre, Marshall~Graves,
+  Ezaz, Matsubara, Azad, Zhang, and Georges}]{Holleley:2015hc}
+Holleley, C.~E., D.~O'Meally, S.~D. Sarre, J.~A. Marshall~Graves, T.~Ezaz,
+  K.~Matsubara, B.~Azad, X.~Zhang, and A.~Georges. 2015.
+\newblock {Sex reversal triggers the rapid transition from genetic to
+  temperature-dependent sex}.
+\newblock Nature 523:79--82.
+
+\bibitem[{Hormaza and Herrero(1996)}]{Hormaza:1996cv}
+Hormaza, J.~I., and M.~Herrero. 1996.
+\newblock {Male gametophytic selection as a plant breeding tool}.
+\newblock Scientia horticulturae 65:321--333.
 
 \bibitem[{Hough et~al.(2013)Hough, Immler, Barrett, and Otto}]{Hough:2013uo}
 Hough, J., S.~Immler, S.~Barrett, and S.~P. Otto. 2013.
@@ -159,11 +177,6 @@ Li, J., R.~B. Phillips, A.~S. Harwood, B.~F. Koop, and W.~S. Davidson. 2011.
   Salmon \emph{(Salmo salar)} and Rainbow Trout \emph{(Oncorhynchus mykiss)}}.
 \newblock Cytogenetic and Genome Research 133:25--33.
 
-\bibitem[{Lloyd(1974)}]{Lloyd:1974tz}
-Lloyd, D.~G. 1974.
-\newblock {Female-predominant sex ratios in angiosperms}, vol.~32.
-\newblock Heredity.
-
 \bibitem[{Mank et~al.(2006)Mank, Promislow, and Avise}]{Mank:2006bt}
 Mank, J.~E., D.~E.~L. Promislow, and J.~C. Avise. 2006.
 \newblock {Evolution of alternative sex‐determining mechanisms in teleost
@@ -187,6 +200,12 @@ Moore, J.~C., and J.~R. Pannell. 2011.
 \newblock {Sexual selection in plants}.
 \newblock Current Biology 21:R176--R182.
 
+\bibitem[{Mulcahy et~al.(1996)Mulcahy, Sari-Gorla, and
+  Mulcahy}]{Mulcahy:1996ha}
+Mulcahy, D.~L., M.~Sari-Gorla, and G.~B. Mulcahy. 1996.
+\newblock {Pollen selection - past, present and future}.
+\newblock Sexual Plant Reproduction 9:353--356.
+
 \bibitem[{Myosho et~al.(2012)Myosho, Otake, Masuyama, Matsuda, Kuroki,
   Fujiyama, Naruse, Hamaguchi, and Sakaizumi}]{Myosho:2012fv}
 Myosho, T., H.~Otake, H.~Masuyama, M.~Matsuda, Y.~Kuroki, A.~Fujiyama,
@@ -206,6 +225,18 @@ Ogata, M., Y.~Hasegawa, H.~Ohtani, M.~Mineyama, and I.~Miura. 2007.
 Otto, S.~P., M.~F. Scott, and S.~Immler. 2015.
 \newblock {Evolution of haploid selection in predominantly diploid organisms}.
 \newblock Proceedings of the National {\ldots} .
+
+\bibitem[{Pen et~al.(2010)Pen, Uller, Feldmeyer, Harts, While, and
+  Wapstra}]{Pen:2010kk}
+Pen, I., T.~Uller, B.~Feldmeyer, A.~Harts, G.~M. While, and E.~Wapstra. 2010.
+\newblock {Climate-driven population divergence in sex-determining systems}.
+\newblock Nature 468:436--438.
+
+\bibitem[{Pokorn{\'a} and Kratochv{\'\i}l(2009)}]{Pokorna:2009ui}
+Pokorn{\'a}, M., and L.~Kratochv{\'\i}l. 2009.
+\newblock {Phylogeny of sex‐determining mechanisms in squamate reptiles: are
+  sex chromosomes an evolutionary trap?}
+\newblock Zoological Journal of the {\ldots} 156:168--183.
 
 \bibitem[{Ravikumar et~al.(2012)Ravikumar, Chaitra, Choukimath, and
   Soregaon}]{Ravikumar:2012ej}
@@ -268,12 +299,6 @@ Stalker, H.~D. 1961.
   Paramelanica}.
 \newblock Genetics .
 
-\bibitem[{Stehlik and Barrett(2005)}]{Stehlik:2005ul}
-Stehlik, I., and S.~Barrett. 2005.
-\newblock {Mechanisms governing sex-ratio variation in dioecious \emph{Rumex
-  nivalis}}.
-\newblock Evolution 59:814--825.
-
 \bibitem[{Travers and Shea(2001)}]{Travers:2001}
 Travers, S.~E., and K.~Shea. 2001.
 \newblock {Selection on pollen competitive ability in relation to stochastic
@@ -307,6 +332,22 @@ Vibranovski, M.~D., D.~S. Chalopin, H.~F. Lopes, M.~Long, and T.~L. Karr. 2010.
 Vicoso, B., and D.~Bachtrog. 2015.
 \newblock {Numerous transitions of sex chromosomes in Diptera.}
 \newblock PLoS Biol 13:e1002078.
+
+\bibitem[{Vuillleumier et~al.(2007)Vuillleumier, Lande, van Alphen, and
+  Seehausen}]{Vuillleumier:2007bh}
+Vuillleumier, S., R.~Lande, J.~J.~M. van Alphen, and O.~Seehausen. 2007.
+\newblock {Invasion and fixation of sex-reversal genes}.
+\newblock Journal of Evolutionary Biology 20:913--920.
+
+\bibitem[{Werren and Taylor(1984)}]{Werren:1984tl}
+Werren, J.~H., and P.~D. Taylor. 1984.
+\newblock {The effects of population recruitment on sex ratio selection}.
+\newblock The American Naturalist 124:143--148.
+
+\bibitem[{Wilson and Colwell(1981)}]{Wilson:1981vm}
+Wilson, D.~S., and R.~K. Colwell. 1981.
+\newblock {Evolution of sex ratio in structured demes}.
+\newblock Evolution 35:882--897.
 
 \bibitem[{Yano et~al.(2012)Yano, Nicol, Jouanno, Quillet, Fostier, Guyomard,
   and Guiguen}]{Yano:2012di}
