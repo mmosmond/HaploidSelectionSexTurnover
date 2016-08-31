@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{58}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Arunkumar et~al.(2013)Arunkumar, Josephs, Williamson, and
@@ -41,13 +41,20 @@ Charlesworth, D., and J.~E. Mank. 2010.
 
 \bibitem[{Charnov and Bull(1977)}]{Charnov:1977tx}
 Charnov, E.~L., and J.~Bull. 1977.
-\newblock {When is sex environmentally determined?} 266:828--830.
+\newblock {When is sex environmentally determined?}
+\newblock Nature 266:828--830.
 
 \bibitem[{Clarke et~al.(2004)Clarke, Khan, and Siddique}]{Clarke:2004ir}
 Clarke, H.~J., T.~N. Khan, and K.~H.~M. Siddique. 2004.
 \newblock {Pollen selection for chilling tolerance at hybridisation leads to
   improved chickpea cultivars}.
 \newblock Euphytica 139:65--74.
+
+\bibitem[{Conn and Blum(1981)}]{Conn:1981uw}
+Conn, J.~S., and U.~Blum. 1981.
+\newblock {Sex ratio of \emph{Rumex hastatulus}: the effect of environmental
+  factors and certation}.
+\newblock Evolution 35:1108--1116.
 
 \bibitem[{Conover and Heins(1987)}]{Conover:1987in}
 Conover, D.~O., and S.~W. Heins. 1987.
@@ -60,6 +67,18 @@ Ezaz, T., S.~D. Sarre, and D.~O'Meally. 2009.
 \newblock {Sex chromosome evolution in lizards: independent origins and rapid
   transitions}.
 \newblock Cytogenetic and Genome Research 127:249--260.
+
+\bibitem[{Field et~al.(2012)Field, Pickup, and Barrett}]{Field:2012fd}
+Field, D.~L., M.~Pickup, and S.~C.~H. Barrett. 2012.
+\newblock {The influence of pollination intensity on fertilization success,
+  progeny sex ratio, and fitness in a wind-pollinated, dioecious plant}.
+\newblock International Journal of Plant Sciences 173:184--191.
+
+\bibitem[{Field et~al.(2013)Field, Pickup, and Barrett}]{Field:2013cc}
+---{}---{}---. 2013.
+\newblock {Comparative analyses of sex-ratio variation in dioecious flowering
+  plants.}
+\newblock Evolution 67:661--672.
 
 \bibitem[{Frank(1989)}]{Frank:1989vl}
 Frank, S.~A. 1989.
@@ -81,7 +100,7 @@ Gossmann, T.~I., M.~W. Schmid, U.~Grossniklaus, and K.~J. Schmid. 2014.
 
 \bibitem[{Hamilton(1967)}]{Hamilton:1967ts}
 Hamilton, W.~D. 1967.
-\newblock {Extraordinary sex ratios.}
+\newblock {Extraordinary sex ratios}.
 \newblock Science 156:477--488.
 
 \bibitem[{Hedhly et~al.(2004)Hedhly, Hormaza, and Herrero}]{Hedhly:2004iv}
@@ -165,6 +184,11 @@ Li, J., R.~B. Phillips, A.~S. Harwood, B.~F. Koop, and W.~S. Davidson. 2011.
   trutta)} and Their Comparison with the Corresponding Chromosomes in Atlantic
   Salmon \emph{(Salmo salar)} and Rainbow Trout \emph{(Oncorhynchus mykiss)}}.
 \newblock Cytogenetic and Genome Research 133:25--33.
+
+\bibitem[{Lloyd(1974)}]{Lloyd:1974tz}
+Lloyd, D.~G. 1974.
+\newblock {Female-predominant sex ratios in angiosperms}, vol.~32.
+\newblock Heredity.
 
 \bibitem[{Mank et~al.(2006)Mank, Promislow, and Avise}]{Mank:2006bt}
 Mank, J.~E., D.~E.~L. Promislow, and J.~C. Avise. 2006.
@@ -255,6 +279,18 @@ Stalker, H.~D. 1961.
 \newblock {The Genetic Systems Modifying Meiotic Drive in Drosophila
   Paramelanica}.
 \newblock Genetics .
+
+\bibitem[{Stehlik and Barrett(2005)}]{Stehlik:2005ul}
+Stehlik, I., and S.~Barrett. 2005.
+\newblock {Mechanisms governing sex-ratio variation in dioecious \emph{Rumex
+  nivalis}}.
+\newblock Evolution 59:814--825.
+
+\bibitem[{Stehlik and Barrett(2006)}]{Stehlik:2006to}
+Stehlik, I., and S.~C.~H. Barrett. 2006.
+\newblock {Pollination intensity influences sex ratios in dioecious Rumex
+  nivalis, a wind-pollinated plant.}
+\newblock Evolution 60:1207--1214.
 
 \bibitem[{Travers and Shea(2001)}]{Travers:2001}
 Travers, S.~E., and K.~Shea. 2001.
