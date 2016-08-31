@@ -140,10 +140,11 @@ With $k=0$, the novel sex determiner is a masculinizer (e.g., a neo-Y chromosome
 With intermediate $k$, locus \textbf{M} is interpreted as an environmental sex-determining region.
 
 %life-cycle
-The life-cycle begins with haploid gametes/gametophytes experiencing selection that depends on their allele at the \textbf{A} locus.
+The life-cycle begins with competition between haploid gametes/gametophytes within each sex, where selection depends on the sex of the diploid they came from and their allele at the \textbf{A} locus.
 Gametes/gametophytes from males then mate randomly with gametes/gametophytes from females.
 The resulting zygotes develop as males or females, depending on their genotypes at the \textbf{X} and \textbf{M} loci.
-There is then a period of diploid selection that again depends on genotypes at the \textbf{A} locus, followed by meiosis with recombination. 
+Diploids then compete with others of the same sex, where selection depends on the sex of the individual and its genotype at the \textbf{A} locus.
+This is followed by meiosis with recombination. 
 Recombination occurs between loci \textbf{X} and \textbf{A} with probability $r$, between loci \textbf{A} and \textbf{M} with probability $R$, and between loci \textbf{X} and \textbf{M} with probability $\chi$. %is chi really the prob of rec in our recursion equations?
 Any order of the loci can be modelled with appropriate choices of $r$, $R$, and $\chi$.
 We track the frequency of haploid genotypes produced by each sex from one generation to the next (recursion equations in Sup.\ Mat.).
@@ -157,14 +158,48 @@ Numerical simulations are used to examine when an invading mutation goes to fixa
 \section*{Results}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-%resident equilibrium
+\subsection*{Resident equilibrium and stability}
 With allele $M$ fixed, we follow the dynamics of the frequency of $A$ in gametes/gametophytes from the homogametic sex (e.g., in eggs from an XX female, $p_{Xf}$) and the frequencies of $A$ in the two types of gametes/gametophytes from the heterogametic sex (e.g., in sperm from an XY male that are X-bearing, $p_{Xm}$, and Y-bearing, $p_{Ym}$).
 Assuming selection is weak relative to recombination, the differences in the frequencies of $A$ in each type of gamete/gametophyte are small, and we can solve for the mean frequency of $A$ across all types ($p_A$) as well as the difference in the frequencies of $A$ between two of the three types, to first order in selection.
 Linear stability analysis can then be used to determine the stability of this equilibrium.
-Without haploid selection this reduces to the results of \citep{vanDoorn:2010hu}.
+With no haploid selection and $k=0$ (neo-$Y$ invading a $ZW$ system) or $k=1$ (neo-$W$ invading an $XY$ system), our results reduce to those of \cite{vanDoorn:2010hu}.
 
-%external stability/turnover
+\subsection*{Sex chromosome turnover}
+The spread of a rare mutant $m$ at the \textbf{M} locus in such a population is determined by the leading eigenvalue, $\lambda$, of the system described by the equations for the next generation frequency of haploid genotypes with the mutation. %, evaluated at the above equilibrium.
+Below we present the results for invasion into an $XY$ system assuming equal dominance coefficients in the two sexes, no competition among gametes/gametophytes from females, and linear arrangement \textbf{X}\textbf{A}\textbf{M}.
+Equivalent results for invasions into a $ZW$ system are given in the Sup.\ Mat.
 
+\subsubsection*{Neo-$Y$}
+
+The growth rate of a rare, dominant neo-$Y$ region ($k=0$) is
+\begin{equation}
+\lambda_{Y,XY} = 1 + V_A \frac{(r - R)}{r R} \frac{s_f^2}{\left( s_f + s_m \right)^2} t_m^2,
+\end{equation}
+where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $s_f$ and $s_m$ are the respective selection coefficients for $A$ in diploid females and males, and $t_m$ is the selection coefficient for $A$ in gametes/gametophytes from males.
+The neo-Y can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$) and there is selection among females ($s_f\neq0$) and gametes/gametophytes from males ($t_m\neq0$).
+%write in general form without weak selection
+
+\subsubsection*{Neo-$W$}
+
+The growth rate of a rare, dominant neo-$W$ region ($k=1$) is
+\begin{equation}
+\lambda_{W,XY} = 1 + V_A \frac{s_f \left( (2 r (1-R) +R) s_f + (1- 2r) R s_m \right)}{2 r R \left( s_f + s_m \right)^2} t_m^2.
+\end{equation}
+In this case, even when the novel sex-determining locus is in looser linkage with the selected locus than is the ancestral sex-determining locus, $r<R$, a novel sex-determiner can invade.
+For example, with $R=1/2$ the neo-W invades if there is some linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t_m\neq0$), and there is selection for or against $A$ in both males and females ($s_m s_f >0$) that is stronger in females than in males ($|s_f| > |s_m|$).
+%write in general form without weak selection
+
+\subsubsection*{Neo-ESD}
+
+The growth rate of a rare, dominant neo-ESD region that produces males or females with equal probability ($k=1/2$) is
+\begin{equation}
+\lambda_{ESD,XY} = 1 + \frac{(\lambda_{Y,XY} - 1) + (\lambda_{W,XY} -1)}{4} \Big|_{R=1/2}
+%V_A \frac{r}{1-2r}  \frac{s_{f} \left( s_m - 3 s_f\right) }{8 \left( s_{f} + s_{m} \right)^2} t_{m}^2.
+\end{equation}
+Thus the $k=1/2$ case gets half of the advantages of a neo-$W$ and half that of a neo-$Y$.  
+Recombination between the selected locus and the novel sex-determining locus, $R$, doesn't enter into the $k=1/2$ results because sex is essentially randomized each generation, %as if the novel sex-determiner were on an unlinked site that half the time acts as a neo-$W$ and half the time as a neo-$Y$.
+preventing associations from building up between allele $A$ and sex.  
+%write in general form without weak selection
 
 \linenumbers
 \modulolinenumbers[2]
