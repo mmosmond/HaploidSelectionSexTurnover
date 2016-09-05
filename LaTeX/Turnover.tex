@@ -177,29 +177,68 @@ Equivalent results for invasions into a $ZW$ system are given in the Sup.\ Mat.
 
 \subsubsection*{Neo-$Y$}
 
-The growth rate of a rare, dominant neo-$Y$ region ($k=0$) is
+%write in general form without weak selection
+Without assuming weak selection, a rare, dominant neo-$Y$ ($k=0$) will invade when the average invasion fitness of $XAy$ and $Yay$ haplotypes is greater than one, $(\lambda_A + \lambda_a)/2 >1$ (where $\lambda_i$ are the two eigenvalues when $R=r=0$).
+When the average invasion fitness of the haplotypes is less than one the neo-$Y$ does not invade.
+Otherwise neo-$Y$ invasion requires
 \begin{equation}
-\lambda_{Y,XY} = 1 + V_A \frac{(r - R)}{r R} \frac{s_f^2}{\left( s_f + s_m \right)^2} t_m^2,
+r R \left[ \frac{p_{Xf} w_{m,a}}{\lambda_a - 1} + \frac{(1 - p_{Xf}) w_{m,A}}{\lambda_A - 1} \right] w_{m,Aa} < \nu_m
+\end{equation}
+where $w_{m,i}$ is the relative viability fitness of males depending on their genotype at the \textbf{A} locus (with $i\in\{AA,Aa,aa\}$), and 
+$\nu_m = 
+  p_{Xf} p_{Ym} w_{a,m} w_{AA,m} +
+  p_{Xf} (1-p_{Ym}) w_{a,m} w_{Aa,m} +
+  (1-p_{Xf}) p_{Ym} w_{a,m} w_{Aa,m} +
+  (1-p_{Xf}) (1-p_{Ym}) w_{a, m} w_{aa,m}$
+is the mean relative fitness of resident males.
+Neo-$Y$ invasion therefore occurs for any recombination rates, $r$ and $R$, when the term inside the square brackets is negative.
+This occurs when the net flow of recombinants is from the less fit haplotype to the more fit.
+Assuming $\lambda_A>1$ and $\lambda_a<1$ without loss of generality, this is $(1 - p_{Xf}) w_{m,A} (\lambda_a -1) < p_{Xf} w_{m,a} (\lambda_A -1)$.
+When the net flow of recombinants is from the more fit haplotype to the less fit, neo-$Y$ invasion can still occur when the rates of recombination are small enough.
+
+%weak selection
+Assuming weak selection, we can solve for the invasion fitness of the neo-$Y$ more directly, giving
+\begin{equation}
+\lambda_{Y,XY} \approx 1 + V_A \frac{(r - R)}{r R} \frac{s_f^2}{\left( s_f + s_m \right)^2} t_m^2,
 \end{equation}
 where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $s_f$ and $s_m$ are the respective selection coefficients for $A$ in diploid females and males, and $t_m$ is the selection coefficient for $A$ in gametes/gametophytes from males.
-The neo-Y can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$) and there is selection among females ($s_f\neq0$) and gametes/gametophytes from males ($t_m\neq0$).
-%write in general form without weak selection
+The neo-$Y$ can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$) and there is selection among females ($s_f\neq0$) and gametes/gametophytes from males ($t_m\neq0$).
 
 \subsubsection*{Neo-$W$}
 
-The growth rate of a rare, dominant neo-$W$ region ($k=1$) is
+%write in general form without weak selection
+Without assuming weak selection, a rare, dominant neo-$W$ ($k=1$) will invade when the average invasion fitness of $XAW$ and $XaW$ haplotypes is greater than one, $(\lambda_A + \lambda_a)/2 > 1$ (the two eigenvalues when $R=0$).
+When the average invasion fitness of the haplotypes is less than one the neo-$W$ does not invade.
+Otherwise neo-$W$ invasion requires
 \begin{equation}
-\lambda_{W,XY} = 1 + V_A \frac{s_f \left( (2 r (1-R) +R) s_f + (1- 2r) R s_m \right)}{2 r R \left( s_f + s_m \right)^2} t_m^2.
+R \left[ \frac{\bar{p}_m w_{m,A}}{\lambda_a - 1} + \frac{(1 - \bar{p}_m) w_{m,a}}{\lambda_A - 1} \right] w_{f,Aa} < \nu_f
+\end{equation}
+where $\bar{p}_m = (p_{Ym}+p_{Xm}) / 2$ is the mean frequency of $A$ in gametes/gametophytes from males, $w_{f,i}$ is the relative viability fitness of females depending on their genotype at the \textbf{A} locus (with $i\in\{AA,Aa,aa\}$), and 
+$\nu_f = 
+  p_{Xf} p_{Xm} w_{a,m} w_{AA,f} +
+  p_{Xf} (1-p_{Xm}) w_{a,m} w_{Aa,f} +
+  (1-p_{Xf}) p_{Xm} w_{a,m} w_{Aa,f} +
+  (1-p_{Xf}) (1-p_{Xm}) w_{a, m} w_{aa,f}$
+is the mean relative fitness of resident females. 
+The rate of recombination between the \textbf{X} and \textbf{A} loci, $r$, does not explicitly appear (in contrast to the neo-$W$ case) because females are homozygous at the \textbf{X} locus with an $XY$ system.
+Neo-$W$ invasion therefore occurs with any recombination rate, $R$, when the term inside the square brackets is negative.
+This occurs when the net flow of recombinants is from the less fit haplotype to the more fit.
+Assuming $\lambda_A>1$ and $\lambda_a<1$ without loss of generality, this is $(1 - \bar{p}_m) w_{m,a} (\lambda_a -1) < \bar{p}_m w_{m,A} (\lambda_A -1)$.
+When the net flow of recombinants is from the more fit haplotype to the less fit, neo-$W$ invasion can still occur when the rate of recombination is small enough.
+
+%weak selection
+Assuming weak selection, we can solve for the invasion fitness of the neo-$W$ more directly, giving
+\begin{equation}
+\lambda_{W,XY} \approx 1 + V_A \frac{s_f \left( (2 r (1-R) +R) s_f + (1- 2r) R s_m \right)}{2 r R \left( s_f + s_m \right)^2} t_m^2.
 \end{equation}
 In this case, even when the novel sex-determining locus is in looser linkage with the selected locus than is the ancestral sex-determining locus, $r<R$, a novel sex-determiner can invade.
-For example, with $R=1/2$ the neo-W invades if there is some linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t_m\neq0$), and there is selection for or against $A$ in both males and females ($s_m s_f >0$) that is stronger in females than in males ($|s_f| > |s_m|$).
-%write in general form without weak selection
+For example, with $R=1/2$ the neo-$W$ invades if there is some linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t_m\neq0$), and there is selection for or against $A$ in both males and females ($s_m s_f >0$) that is stronger in females than in males ($|s_f| > |s_m|$).
 
 \subsubsection*{Neo-ESD}
 
 The growth rate of a rare, dominant neo-ESD region that produces males or females with equal probability ($k=1/2$) is
 \begin{equation}
-\lambda_{ESD,XY} = 1 + \frac{(\lambda_{Y,XY} - 1) + (\lambda_{W,XY} -1)}{4} \Big|_{R=1/2}
+\lambda_{ESD,XY} \approx 1 + \frac{(\lambda_{Y,XY} - 1) + (\lambda_{W,XY} -1)}{4} \Big|_{R=1/2}
 %V_A \frac{r}{1-2r}  \frac{s_{f} \left( s_m - 3 s_f\right) }{8 \left( s_{f} + s_{m} \right)^2} t_{m}^2.
 \end{equation}
 Thus the $k=1/2$ case gets half of the advantages of a neo-$W$ and half that of a neo-$Y$.  
