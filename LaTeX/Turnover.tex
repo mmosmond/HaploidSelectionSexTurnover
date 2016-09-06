@@ -143,12 +143,13 @@ And locus \textbf{M} is a novel sex-determining region, with alleles $M$ and $m$
 With genotype $MM$ at locus \textbf{M}, the sex of a zygote is determined by the genotype at locus \textbf{X} ($XX$ become females and $XY$ males, or $ZW$ become females and $ZZ$ males).
 With at least one $m$ allele at locus \textbf{M}, a zygote develops as a female with probability $k$ and as a male with probability $1-k$.
 With $k=0$, the novel sex determiner is a masculinizer (e.g., a neo-Y chromosome) and with $k=1$ the novel sex determiner is a feminizer (e.g, a neo-W chromosome).
-With intermediate $k$, locus \textbf{M} is interpreted as an environmental sex-determining region.
+With intermediate $k$, locus \textbf{M} is interpreted as an offspring controlled environmental sex-determining region.
+Finally, we also analyze a model of maternally-controlled environmental sex-determination, where mothers with at least one $m$ allele produce daughters with probability $k$. 
 
 %life-cycle
 The life-cycle begins with competition between haploid gametes/gametophytes from each sex, where selection depends on the sex of the diploid they came from and their allele at the \textbf{A} locus.
 Gametes/gametophytes from males then mate randomly with gametes/gametophytes from females.
-The resulting zygotes develop as males or females, depending on their genotypes at the \textbf{X} and \textbf{M} loci.
+The resulting zygotes develop as males or females, depending on their genotypes at the \textbf{X} and \textbf{M} loci (or the \textbf{M} genotype of their mother).
 Diploids compete with others of the same sex, where selection depends on the sex of the individual and its genotype at the \textbf{A} locus.
 This is followed by meiosis with recombination. 
 Recombination occurs between loci \textbf{X} and \textbf{A} with probability $r$, between loci \textbf{A} and \textbf{M} with probability $R$, and between loci \textbf{X} and \textbf{M} with probability $\chi$. %is chi really the prob of rec in our recursion equations?
@@ -172,7 +173,7 @@ With no haploid selection our results reduce to those of \cite{vanDoorn:2010hu} 
 
 \subsection*{Sex chromosome turnover}
 The spread of a rare mutant $m$ at the \textbf{M} locus in such a population is determined by the leading eigenvalue, $\lambda$, of the system described by the equations for the next generation frequency of haploid genotypes with the mutation. %, evaluated at the above equilibrium.
-Below we present the results for invasion into an $XY$ system assuming no competition among gametes/gametophytes from females, and linear arrangement \textbf{X}\textbf{A}\textbf{M}. %equal dominance coefficients in the two sexes,
+Below we present the results for invasion into an $XY$ system assuming no competition among gametes/gametophytes from females and linear arrangement \textbf{X}\textbf{A}\textbf{M}. %equal dominance coefficients in the two sexes,
 Equivalent results for invasions into a $ZW$ system are given in the Sup.\ Mat.
 
 \subsubsection*{Neo-$Y$}
@@ -199,9 +200,9 @@ When the net flow of double recombinants is from the more fit to the less fit ha
 %weak selection
 Assuming weak selection, we can solve for the invasion fitness of the neo-$Y$ explicitly, giving
 \begin{equation}
-\lambda_{Y,XY} \approx 1 + V_A \frac{(r - R)}{r R} \frac{s_f^2}{\left( s_f + s_m \right)^2} t_m^2,
+\lambda_{Y,XY} \approx 1 + V_A \frac{(r - R)s_f}{r R} \frac{s_f}{\left( s_f + s_m \right)^2} t_m^2,
 \end{equation}
-where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $s_f$ and $s_m$ are the respective selection coefficients for $A$ in diploid females and males, and $t_m$ is the selection coefficient for $A$ in gametes/gametophytes from males.
+where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $s_f$ and $s_m$ are the respective selection coefficients for $A$ in diploid females and males, $t_m$ is the selection coefficient for $A$ in gametes/gametophytes from males, and we've assumed equal dominance coefficients in the two sexes.
 The neo-$Y$ can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$) and there is selection among both females ($s_f\neq0$) and gametes/gametophytes from males ($t_m\neq0$).
 
 \subsubsection*{Neo-$W$}
@@ -228,22 +229,57 @@ And when the net flow of recombinants is from the more fit to the less fit  hapl
 %weak selection
 Assuming weak selection, we can solve for the invasion fitness of the neo-$W$ explicitly, giving
 \begin{equation}
-\lambda_{W,XY} \approx 1 + V_A \frac{s_f \left( (2 r (1-R) +R) s_f + (1- 2r) R s_m \right)}{2 r R \left( s_f + s_m \right)^2} t_m^2.
+\lambda_{W,XY} \approx 1 + V_A \frac{(2r(1-R)-R) s_f + (1-2r)R s_m }{2 r R} \frac{s_f}{ \left( s_f + s_m \right)^2} t_m^2,
 \end{equation}
+where we've once again assumed equal dominance coefficients in the two sexes.
 In this case, even when the novel sex-determining locus is in looser linkage with the selected locus than is the ancestral sex-determining locus, $r<R$, a novel sex-determiner can invade.
 For example, with $R=1/2$ the neo-$W$ invades if there is any linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t_m\neq0$), and there is selection for or against $A$ in both males and females ($s_m s_f >0$) that is stronger in females than in males ($|s_f| > |s_m|$).
 
-\subsubsection*{Neo-ESD}
+\subsubsection*{Offspring-controlled neo-ESD}
 
-The growth rate of a rare, dominant neo-ESD region that produces males or females with equal probability ($k=1/2$) is
+The growth rate of a rare, dominant offspring-controlled neo-ESD region that produces males or females with equal probability ($k=1/2$) is
 \begin{equation}
-\lambda_{ESD,XY} \approx 1 + \frac{(\lambda_{Y,XY} - 1) + (\lambda_{W,XY} -1)}{4} \Big|_{R=1/2}
+\lambda_{ESD,XY} \approx 1 + \frac{1}{2}\frac{(\lambda_{Y,XY} - 1) + (\lambda_{W,XY} -1)}{2} \Big|_{R=1/2}
 %V_A \frac{r}{1-2r}  \frac{s_{f} \left( s_m - 3 s_f\right) }{8 \left( s_{f} + s_{m} \right)^2} t_{m}^2.
 \end{equation}
-Thus the $k=1/2$ case gets half of the advantages of a neo-$W$ and half that of a neo-$Y$ (BUT WHY THE 4?).  
+Thus with $k=1/2$ the neo-ESD gets half of the advantages of a neo-$W$ and half that of a neo-$Y$, but only has an effect one half of the time (the other half of the time it produces the same sex as the ancestral system would have).  
 Recombination between the selected locus and the novel sex-determining locus, $R$, doesn't enter into the $k=1/2$ results because sex is essentially randomized each generation, %as if the novel sex-determiner were on an unlinked site that half the time acts as a neo-$W$ and half the time as a neo-$Y$.
 preventing associations from building up between allele $A$ and sex.  
-%write in general form without weak selection
+
+\subsubsection*{Maternally-controlled neo-ESD}
+
+For all $k$ that we explore, the invasion fitness can be written
+
+\begin{equation}
+\lambda \approx 1 + V_A C_k B,
+\end{equation}
+where
+%\begin{equation}
+%V_A = \frac{- \left[ t_m + h (s_{f}+s_{m}) \right] \left[ t_m + (1-h) (s_{f}+s_{m}) \right]}{(1-2h)^2(s_{f}+s_{m})^2}
+%\end{equation}
+%is the variance in $A$ ($V_A>0$ when the polymorphic resident equilibrium is stable), 
+%with $h$ the dominance coefficient (equal in both sexes), 
+\begin{equation}
+B = \frac{s_f}{2r R(s_{f}+s_{m})^2} t_m^2
+\end{equation}
+and $C_k$ is a term that depends on $k$:
+
+%k=0
+\begin{equation}
+C_0 = 
+\end{equation}
+
+%k=1
+\begin{equation}
+C_1 = - \left[ (2r(1-R)-R) s_f + (1-2r)R s_m \right]
+\end{equation}
+
+%k=1/2
+\begin{equation}
+C_{1/2} = 
+\end{equation}
+
+In the case of $k=1$ the maternal and offspring controlled results are the same (which makes sense because we are here concerned only with the passage of mutations through females).	
 
 \linenumbers
 \modulolinenumbers[2]
