@@ -173,8 +173,8 @@ With no haploid selection our results reduce to those of \cite{vanDoorn:2010hu} 
 
 \subsection*{Sex chromosome turnover}
 The spread of a rare mutant $m$ at the \textbf{M} locus in such a population is determined by the leading eigenvalue, $\lambda$, of the system described by the equations for the next generation frequency of haploid genotypes with the mutation. %, evaluated at the above equilibrium.
-Below we present the results for invasion into an $XY$ system assuming no competition among gametes/gametophytes from females and linear arrangement \textbf{X}\textbf{A}\textbf{M}. %equal dominance coefficients in the two sexes,
-Equivalent results for invasions into a $ZW$ system are given in the Sup.\ Mat.
+Below we present the results for invasion into an $XY$ system assuming no competition among gametes/gametophytes from females and linear arrangement \textbf{X}\textbf{A}\textbf{M} (SAY SOMETHING HERE ABOUT OTHER ARRANGEMENTS). %equal dominance coefficients in the two sexes,
+Equivalent results for invasions into a $ZW$ system can be derived by consistently switching the roles of males and females \citep{vanDoorn:2010hu}.
 
 \subsubsection*{Neo-$Y$}
 
@@ -200,9 +200,9 @@ When the net flow of double recombinants is from the more fit to the less fit ha
 %weak selection
 Assuming weak selection, we can solve for the invasion fitness of the neo-$Y$ explicitly, giving
 \begin{equation}
-\lambda_{Y,XY} \approx 1 + V_A \frac{(r - R)s_f}{r R} \frac{s_f}{\left( s_f + s_m \right)^2} t_m^2,
+\lambda_{Y,XY} \approx 1 + V_A S_A (r - R)s_f,
 \end{equation}
-where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $s_f$ and $s_m$ are the respective selection coefficients for $A$ in diploid females and males, $t_m$ is the selection coefficient for $A$ in gametes/gametophytes from males, and we've assumed equal dominance coefficients in the two sexes.
+where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $S_A = s_f/ \left[ r R \left( s_f + s_m \right)^2 t_m^2 \right]$ (INTERPRETATION), $s_f$ and $s_m$ are the respective selection coefficients for $A$ in diploid females and males, $t_m$ is the selection coefficient for $A$ in gametes/gametophytes from males, and we've assumed equal dominance coefficients in the two sexes.
 The neo-$Y$ can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$) and there is selection among both females ($s_f\neq0$) and gametes/gametophytes from males ($t_m\neq0$).
 
 \subsubsection*{Neo-$W$}
@@ -229,7 +229,7 @@ And when the net flow of recombinants is from the more fit to the less fit  hapl
 %weak selection
 Assuming weak selection, we can solve for the invasion fitness of the neo-$W$ explicitly, giving
 \begin{equation}
-\lambda_{W,XY} \approx 1 + V_A \frac{(2r(1-R)-R) s_f + (1-2r)R s_m }{2 r R} \frac{s_f}{ \left( s_f + s_m \right)^2} t_m^2,
+\lambda_{W,XY} \approx 1 + V_A S_A \frac{(2r(1-R)-R) s_f + (1-2r)R s_m }{2},
 \end{equation}
 where we've once again assumed equal dominance coefficients in the two sexes.
 In this case, even when the novel sex-determining locus is in looser linkage with the selected locus than is the ancestral sex-determining locus, $r<R$, a novel sex-determiner can invade.
@@ -251,7 +251,7 @@ preventing associations from building up between allele $A$ and sex.
 For all $k$ that we explore, the invasion fitness can be written
 
 \begin{equation}
-\lambda \approx 1 + V_A C_k B,
+\lambda \approx 1 + V_A S_A C_k,
 \end{equation}
 where
 %\begin{equation}
@@ -259,27 +259,25 @@ where
 %\end{equation}
 %is the variance in $A$ ($V_A>0$ when the polymorphic resident equilibrium is stable), 
 %with $h$ the dominance coefficient (equal in both sexes), 
-\begin{equation}
-B = \frac{s_f}{2r R(s_{f}+s_{m})^2} t_m^2
-\end{equation}
-and $C_k$ is a term that depends on $k$:
+$C_k$ is a term that depends on $k$:
 
 %k=0
 \begin{equation}
-C_0 = 
+C_0 = big \; ugly \; term
 \end{equation}
 
 %k=1
 \begin{equation}
-C_1 = - \left[ (2r(1-R)-R) s_f + (1-2r)R s_m \right]
+C_1 = \frac{\left[ (2r(1-R)-R) s_f + (1-2r)R s_m \right]}{2}
 \end{equation}
 
 %k=1/2
 \begin{equation}
-C_{1/2} = 
+C_{1/2} = even \; bigger, \; uglier \; term
 \end{equation}
 
-In the case of $k=1$ the maternal and offspring controlled results are the same (which makes sense because we are here concerned only with the passage of mutations through females).	
+In the case of $k=1$ the maternal- and offspring-controlled results are the same since mutation is then only concerned with the passage of mutations through females.
+However, with $k\neq0$ the mutant dynamics differ.	
 
 \linenumbers
 \modulolinenumbers[2]
