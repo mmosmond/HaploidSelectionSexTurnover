@@ -268,14 +268,14 @@ Assuming weak selection, we can solve for the invasion fitness of the new sex -d
 \begin{equation}
 \lambda_{m,XY} \approx 1 + V_A S_A C_m,
 \end{equation}
-where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $S_A = s^f (t^m)^2 / \left[ r R \left( s^f + s^m \right)^2 \right]$ (INTERPRETATION?), $s^f$ and $s^m$ are the respective selection coefficients for $A$ in diploid females and males, $t^m$ is the selection coefficient for $A$ in gametes/gametophytes from males, and we've assumed equal dominance coefficients in the two sexes.
+where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $S_A = s^f (t^m)^2 / \left[ r R \left( s^f + s^m \right)^2 \right]$ (\textcolor{red}{INTERPRETATION? LOSE THE R?}), $s^f$ and $s^m$ are the respective selection coefficients for $A$ in diploid females and males, $t^m$ is the selection coefficient for $A$ in gametes/gametophytes from males, and we've assumed equal dominance coefficients in the two sexes.
 
 For the neo-$Y$ we have $C_Y = (r - R)s^f $.
 The neo-$Y$ can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$) and there is selection among both females ($s^f\neq0$) and gametes/gametophytes from males ($t^m\neq0$).
 
 For the neo-$W$ we have $C_W = [(2r(1-R)-R) s^f + (1-2r)R s^m]/2$.
 In this case, even when the novel sex-determining locus is in looser linkage with the selected locus than is the ancestral sex-determining locus, $r<R$, a neo-$W$ can invade.
-For example, with $R=1/2$ the neo-$W$ invades if there is any linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t^m\neq0$), and there is selection for or against $A$ in both males and females ($s^m s^f >0$) that is stronger in females than in males ($|s^f| > |s^m|$).
+For example, with $R=1/2$ the neo-$W$ invades if there is any linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t^m\neq0$), and there is selection for or against $A$ in both males and females ($s^m s^f >0$) that is stronger in males than in females ($|s^m| > |s^f|$).
 
 %\subsubsection*{Neo-$W$}
 %
@@ -353,7 +353,7 @@ $C_k$ is a term that depends on $k$.
 %However, with $k\neq1$ the results with maternal control differ from those with offspring control.
 Of particular interest is $k=1/2$ (i.e., when the mother perfectly balances the sex ratio of her offspring).
 When both recombination rates are small we have $C_{1/2} \approx R(s^m - s^f)/8 = \lim_{r \rightarrow 0} C_W/4$.
-This implies that, at least under tight linkage, maternal ESD can invade whenever a neo-$W$ can.
+This implies that, at least under tight linkage, the invasion of maternal ESD is independent of $R$ (because $S_A\propto R^{-1}$) and can invade whenever a neo-$W$ can.
 
 \linenumbers
 \modulolinenumbers[2]
