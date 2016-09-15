@@ -166,81 +166,154 @@ Numerical simulations are used to examine when an invading mutation goes to fixa
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{Resident equilibrium and stability}
-With allele $M$ fixed, we follow the dynamics of the frequency of $A$ in gametes/gametophytes from the homogametic sex (e.g., in eggs from an XX female, $p_{Xf}$) and the frequencies of $A$ in the two types of gametes/gametophytes from the heterogametic sex (e.g., in sperm from an XY male that are X-bearing, $p_{Xm}$, and Y-bearing, $p_{Ym}$).
+With allele $M$ fixed, we follow the dynamics of the frequency of $A$ in gametes/gametophytes from the homogametic sex (e.g., in eggs from an XX female, $p^f_X$) and the frequencies of $A$ in the two types of gametes/gametophytes from the heterogametic sex (e.g., in sperm from an XY male that are X-bearing, $p^m_X$, and Y-bearing, $p^m_Y$).
 Assuming selection is weak relative to recombination, the differences in the frequencies of $A$ in each type of gamete/gametophyte are small, and we can solve for the mean frequency of $A$ across all types ($p_A$) as well as the difference in the frequencies of $A$ between two of the three types, to first order in selection.
 Linear stability analysis can then be used to determine the stability of this equilibrium.
 With no haploid selection our results reduce to those of \cite{vanDoorn:2010hu} when $k=0$ (neo-$Y$ invading a $ZW$ system) or when $k=1$ (neo-$W$ invading an $XY$ system).
 
 \subsection*{Sex chromosome turnover}
 The spread of a rare mutant $m$ at the \textbf{M} locus in such a population is determined by the leading eigenvalue, $\lambda$, of the system described by the equations for the next generation frequency of haploid genotypes with the mutation. %, evaluated at the above equilibrium.
-Below we present the results for invasion into an $XY$ system assuming no competition among gametes/gametophytes from females and linear arrangement \textbf{X}\textbf{A}\textbf{M} (SAY SOMETHING HERE ABOUT OTHER ARRANGEMENTS). %equal dominance coefficients in the two sexes,
+Below we present the results for invasion into an $XY$ system assuming no competition among gametes/gametophytes from females and linear arrangement \textbf{X}\textbf{A}\textbf{M}. %(SAY SOMETHING HERE ABOUT OTHER ARRANGEMENTS?). %equal dominance coefficients in the two sexes,
 Equivalent results for invasions into a $ZW$ system can be derived by consistently switching the roles of males and females \citep{vanDoorn:2010hu}.
 
-\subsubsection*{Neo-$Y$}
+%\subsubsection*{Neo-$Y$}
+%
+%%write in general form without weak selection
+%A rare, dominant neo-$Y$ ($k=0$) is always expected to invade the ancestral $XY$ system when the average growth rate of mutant haplotypes ($Am$ and $am$) is positive, $(g_A + g_a)/2 > 0$. %($g_i = where $\lambda_i$ are the two eigenvalues when $R=r=0$; the \textbf{X} locus does not affect the dynamics).
+%When the growth rates of the mutant haplotypes without recombination ($R=0$) are negative, $g_i^* < 0 \; \forall \; i \in \{A,a\}$, where $g_i < g_i^*$, the neo-$Y$ does not invade.
+%Otherwise, the mutant allele increases in frequency on one \textbf{A} background and declines on the other and neo-$Y$ invasion requires
+%\begin{equation}
+%R \left[ \frac{p^f_X w_{m,a}}{g_A^*} + \frac{(1 - p^f_X) w_{m,A}}{g_a^*} \right] w_{m,Aa} < \nu_m,
+%\end{equation}
+%where $w_{m,i}$ is the relative viability fitness of males depending on their haploid or diploid genotype at the \textbf{A} locus (with $i\in\{A,a,AA,Aa,aa\}$) and
+%$\nu_m = 
+%  p^f_X p_{Ym} w^m_{a} w^m_{AA} +
+%  p^f_X (1-p_{Ym}) w^m_{a} w^m_{AA} +
+%  (1-p^f_X) p_{Ym} w^m_{a} w^m_{AA} +
+%  (1-p^f_X) (1-p_{Ym}) w^m_a w^m_{AA}$
+%is the mean relative fitness of resident males.
+%%and $g_j^*$ is the growth rate of $X^m$ and $Ym$ haplotypes when on an $A$ ($j=A$)  or $a$ background ($j=a$).
+%Neo-$Y$ invasion therefore occurs for any recombination rate, $R$, when the net flow of double recombinants is from the less fit to the more fit \textbf{A} background (making the term inside the square brackets negative).
+%%Assuming $g_A^* > 0$ and $g_a^* < 0$ without loss of generality, this is $-(1 - p^f_X) w_{m,A} g_a^* < p^f_X w_{m,a} g_A^*$.
+%When the net flow of double recombinants is from the more fit to the less fit haplotype, neo-$Y$ invasion can still occur when the rate of recombination is small enough.
+%
+%%weak selection
+%Assuming weak selection, we can solve for the invasion fitness of the neo-$Y$ explicitly, giving
+%\begin{equation}
+%\lambda_{Y,XY} \approx 1 + V_A S_A (r - R)s^f,
+%\end{equation}
+%where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $S_A = s^f/ \left[ r R \left( s^f + s^m \right)^2 t_m^2 \right]$ (INTERPRETATION), $s^f$ and $s^m$ are the respective selection coefficients for $A$ in diploid females and males, $t_m$ is the selection coefficient for $A$ in gametes/gametophytes from males, and we've assumed equal dominance coefficients in the two sexes.
+%The neo-$Y$ can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$) and there is selection among both females ($s^f\neq0$) and gametes/gametophytes from males ($t_m\neq0$).
+%
+%\subsubsection*{Neo-$W$}
+%
+%%write in general form without weak selection
+%Similarly, a rare, dominant neo-$W$ ($k=1$) will invade the ancestral $XY$ system whenever the average growth rate of $XAm$ and $Xam$ haplotypes is positive, $(g_A + g_a) / 2 > 1$. 
+%When the growth rates of the mutant haplotypes without recombination ($R=0$) are negative, $g_i^* < 0 \; \forall \; i \in \{A,a\}$, where $g_i < g_i^*$, the neo-$W$ does not invade.
+%Otherwise neo-$W$ invasion requires
+%\begin{equation}
+%R \left[ \frac{\bar{p}_m w_{m,A}}{g_a^*} + \frac{(1 - \bar{p}_m) w_{m,a}}{g_A^*} \right] w_{f,Aa} < \nu_f
+%\end{equation}
+%where $\bar{p}_m = (p_{Ym}+p^m_X) / 2$ is the mean frequency of $A$ in gametes/gametophytes from males, $w_{f,i}$ is the relative viability fitness of females depending on their diploid genotype at the \textbf{A} locus (with $i\in\{AA,Aa,aa\}$), and 
+%$\nu_f = 
+%  p^f_X p^m_X w^m_{a} w_{AA,f} +
+%  p^f_X (1-p^m_X) w^m_{a} w_{Aa,f} +
+%  (1-p^f_X) p^m_X w^m_{a} w_{Aa,f} +
+%  (1-p^f_X) (1-p^m_X) w^m_a w_{aa,f}$
+%is the mean relative fitness of resident females. 
+%%The rate of recombination between the \textbf{X} and \textbf{A} loci, $r$, does not explicitly appear because females are homozygous at the \textbf{X} locus with an ancestral $XY$ system.
+%As in the case of the neo-$Y$, neo-$W$ invasion therefore occurs with any recombination rate, $R$, when the net flow of recombinants is from the less fit to the more fit haplotype.
+%%Assuming $g_A^*>0$ and $g_a^*<0$ without loss of generality, this is $(1 - \bar{p}_m) w_{m,a} g_a^*< \bar{p}_m w_{m,A} g_A^*$.
+%And when the net flow of recombinants is from the more fit to the less fit  haplotype, neo-$W$ invasion can still occur when the rate of recombination is small enough.
+%
+%%weak selection
+%Assuming weak selection, we can solve for the invasion fitness of the neo-$W$ explicitly, giving
+%\begin{equation}
+%\lambda_{W,XY} \approx 1 + V_A S_A \frac{(2r(1-R)-R) s^f + (1-2r)R s^m }{2},
+%\end{equation}
+%where we've once again assumed equal dominance coefficients in the two sexes.
+%In this case, even when the novel sex-determining locus is in looser linkage with the selected locus than is the ancestral sex-determining locus, $r<R$, a novel sex-determiner can invade.
+%For example, with $R=1/2$ the neo-$W$ invades if there is any linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t_m\neq0$), and there is selection for or against $A$ in both males and females ($s^m s^f >0$) that is stronger in females than in males ($|s^f| > |s^m|$).
+
+\subsubsection*{Neo-$Y$ and neo-$W$}
 
 %write in general form without weak selection
-A rare, dominant neo-$Y$ ($k=0$) is always expected to invade the ancestral $XY$ system when the average growth rate of mutant haplotypes ($XAm$ and $Yam$) is positive, $(g_A + g_a)/2 > 0$ (growth rate is unaffected by the allele at the \textbf{X} locus, but recombination between it and the other loci can still destroy the haplotype). %($g_i = where $\lambda_i$ are the two eigenvalues when $R=r=0$; the \textbf{X} locus does not affect the dynamics).
-Defining $g_i^*$ as the growth rate of $Xm$ and $Ym$ haplotypes when on an $A$ ($i=A$) or $a$ background ($i=a$), then $g_i^* < g_i$, and if the $Xm$ and $Ym$ haplotypes decline on both \textbf{A} backgrounds ($g_i^* < 0 \; \forall \; i$) the neo-$Y$ does not invade.
-Otherwise, the $Xm$ and $Ym$ haplotypes grow on one \textbf{A} background and decline on the other and neo-$Y$ invasion requires
-\begin{equation}
-r R \left[ \frac{p_{Xf} w_{m,a}}{g_a^*} + \frac{(1 - p_{Xf}) w_{m,A}}{g_A^*} \right] w_{m,Aa} < \nu_m,
+A rare, dominant neo-$Y$ ($k=0$) or neo-$W$ ($k=1$) is always expected to invade an ancestral $XY$ system when the average growth rate of the mutant haplotypes ($Am$ and $am$) is positive, $(g_A + g_a)/2 > 0$. %($g_i = where $\lambda_i$ are the two eigenvalues when $R=r=0$; the \textbf{X} locus does not affect the dynamics).
+When the growth rates of the mutant haplotypes without recombination ($R=0$) are negative, $g_i^* < 0 \; \forall \; i \in \{A,a\}$, where $g_i < g_i^*$, the new sex-determining allele does not invade.
+
+Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other and invasion requires
+\begin{equation}\label{eq:neoYR}
+R \left[ \frac{p^f_X w^m_a}{g_A^*} + \frac{(1 - p^f_X) w^m_A}{g_a^*} \right] w^m_{Aa} < \nu^m,
 \end{equation}
-where $w_{m,i}$ is the relative viability fitness of males depending on their haploid or diploid genotype at the \textbf{A} locus (with $i\in\{A,a,AA,Aa,aa\}$) and
-$\nu_m = 
-  p_{Xf} p_{Ym} w_{a,m} w_{AA,m} +
-  p_{Xf} (1-p_{Ym}) w_{a,m} w_{Aa,m} +
-  (1-p_{Xf}) p_{Ym} w_{a,m} w_{Aa,m} +
-  (1-p_{Xf}) (1-p_{Ym}) w_{a, m} w_{aa,m}$
-is the mean relative fitness of resident males.
-%and $g_j^*$ is the growth rate of $Xm$ and $Ym$ haplotypes when on an $A$ ($j=A$)  or $a$ background ($j=a$).
-Neo-$Y$ invasion therefore occurs for any recombination rates, $r$ and $R$, when the net flow of double recombinants is from the less fit to the more fit \textbf{A} background (making the term inside the square brackets negative).
-%Assuming $g_A^* > 0$ and $g_a^* < 0$ without loss of generality, this is $-(1 - p_{Xf}) w_{m,A} g_a^* < p_{Xf} w_{m,a} g_A^*$.
-When the net flow of double recombinants is from the more fit to the less fit haplotype, neo-$Y$ invasion can still occur when the rates of recombination are small enough.
+for the neo-$Y$, and 
+\begin{equation}\label{eq:neoWR}
+R \left[  \frac{(1 - \bar{p}^m) w^m_{a}}{g_A^*} + \frac{\bar{p}^m w^m_{A}}{g_a^*} \right] w^f_{Aa} < \nu^f
+\end{equation}
+for the neo-$W$.
+Here $\bar{p}^m = (p^m_X+p^m_Y)/2$ is the average frequency of $A$ in males, $w^i_{j}$ is the relative viability fitness of sex $i\in\{m,f\}$ depending on their haploid or diploid genotype at the \textbf{A} locus (with $j\in\{A,a,AA,Aa,aa\}$) and
+$\nu^i = 
+  p^f_X p^m_{\textbf{X}^i} w^m_{a} w^i_{AA} +
+  p^f_X (1-p^m_{\textbf{X}^i}) w^m_{a} w^i_{Aa} +
+  (1-p^f_X) p^m_{\textbf{X}^i} w^m_{a} w^i_{Aa} +
+  (1-p^f_X) (1-p^m_{\textbf{X}^i}) w^m_a w^i_{aa}$,
+with $\textbf{X}^m = Y$ and $\textbf{X}^f = X$, is the mean relative fitness of resident individuals of sex $i$.
+%and $g_j^*$ is the growth rate of $X^m$ and $Ym$ haplotypes when on an $A$ ($j=A$)  or $a$ background ($j=a$).
+
+The new sex-determining allele is therefore expected to invade for any recombination rate, $R$, when the net flow of double recombinants is from the less fit to the more fit \textbf{A} background (making the term inside the square brackets negative).
+%Assuming $g_A^* > 0$ and $g_a^* < 0$ without loss of generality, this is $-(1 - p^f_X) w_{m,A} g_a^* < p^f_X w_{m,a} g_A^*$.
+When the net flow of double recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus is small enough.
 
 %weak selection
-Assuming weak selection, we can solve for the invasion fitness of the neo-$Y$ explicitly, giving
+Assuming weak selection, we can solve for the invasion fitness of the new sex -determining alleles explicitly, giving
 \begin{equation}
-\lambda_{Y,XY} \approx 1 + V_A S_A (r - R)s_f,
+\lambda_{m,XY} \approx 1 + V_A S_A C_m,
 \end{equation}
-where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $S_A = s_f/ \left[ r R \left( s_f + s_m \right)^2 t_m^2 \right]$ (INTERPRETATION), $s_f$ and $s_m$ are the respective selection coefficients for $A$ in diploid females and males, $t_m$ is the selection coefficient for $A$ in gametes/gametophytes from males, and we've assumed equal dominance coefficients in the two sexes.
-The neo-$Y$ can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$) and there is selection among both females ($s_f\neq0$) and gametes/gametophytes from males ($t_m\neq0$).
+where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $S_A = s^f (t^m)^2 / \left[ r R \left( s^f + s^m \right)^2 \right]$ (INTERPRETATION?), $s^f$ and $s^m$ are the respective selection coefficients for $A$ in diploid females and males, $t^m$ is the selection coefficient for $A$ in gametes/gametophytes from males, and we've assumed equal dominance coefficients in the two sexes.
 
-\subsubsection*{Neo-$W$}
+For the neo-$Y$ we have $C_Y = (r - R)s^f $.
+The neo-$Y$ can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$) and there is selection among both females ($s^f\neq0$) and gametes/gametophytes from males ($t^m\neq0$).
 
-%write in general form without weak selection
-Similarly, a rare, dominant neo-$W$ ($k=1$) will invade the ancestral $XY$ system whenever the average growth rate of $XAm$ and $Xam$ haplotypes is positive, $(g_A + g_a) / 2 > 1$. 
-When the growth rates of mutant haplotypes without recombination ($R=0$) are negative, $g_i^* < 0 \; \forall \; i \in \{A,a\}$, where $g_i < g_i^*$, the neo-$W$ does not invade.
-Otherwise neo-$W$ invasion requires
-\begin{equation}
-R \left[ \frac{\bar{p}_m w_{m,A}}{g_a^*} + \frac{(1 - \bar{p}_m) w_{m,a}}{g_A^*} \right] w_{f,Aa} < \nu_f
-\end{equation}
-where $\bar{p}_m = (p_{Ym}+p_{Xm}) / 2$ is the mean frequency of $A$ in gametes/gametophytes from males, $w_{f,i}$ is the relative viability fitness of females depending on their diploid genotype at the \textbf{A} locus (with $i\in\{AA,Aa,aa\}$), and 
-$\nu_f = 
-  p_{Xf} p_{Xm} w_{a,m} w_{AA,f} +
-  p_{Xf} (1-p_{Xm}) w_{a,m} w_{Aa,f} +
-  (1-p_{Xf}) p_{Xm} w_{a,m} w_{Aa,f} +
-  (1-p_{Xf}) (1-p_{Xm}) w_{a, m} w_{aa,f}$
-is the mean relative fitness of resident females. 
-%The rate of recombination between the \textbf{X} and \textbf{A} loci, $r$, does not explicitly appear because females are homozygous at the \textbf{X} locus with an ancestral $XY$ system.
-As in the case of the neo-$Y$, neo-$W$ invasion therefore occurs with any recombination rate, $R$, when the net flow of recombinants is from the less fit to the more fit haplotype.
-%Assuming $g_A^*>0$ and $g_a^*<0$ without loss of generality, this is $(1 - \bar{p}_m) w_{m,a} g_a^*< \bar{p}_m w_{m,A} g_A^*$.
-And when the net flow of recombinants is from the more fit to the less fit  haplotype, neo-$W$ invasion can still occur when the rate of recombination is small enough.
+For the neo-$W$ we have $C_W = [(2r(1-R)-R) s^f + (1-2r)R s^m]/2$.
+In this case, even when the novel sex-determining locus is in looser linkage with the selected locus than is the ancestral sex-determining locus, $r<R$, a neo-$W$ can invade.
+For example, with $R=1/2$ the neo-$W$ invades if there is any linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t^m\neq0$), and there is selection for or against $A$ in both males and females ($s^m s^f >0$) that is stronger in females than in males ($|s^f| > |s^m|$).
 
-%weak selection
-Assuming weak selection, we can solve for the invasion fitness of the neo-$W$ explicitly, giving
-\begin{equation}
-\lambda_{W,XY} \approx 1 + V_A S_A \frac{(2r(1-R)-R) s_f + (1-2r)R s_m }{2},
-\end{equation}
-where we've once again assumed equal dominance coefficients in the two sexes.
-In this case, even when the novel sex-determining locus is in looser linkage with the selected locus than is the ancestral sex-determining locus, $r<R$, a novel sex-determiner can invade.
-For example, with $R=1/2$ the neo-$W$ invades if there is any linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t_m\neq0$), and there is selection for or against $A$ in both males and females ($s_m s_f >0$) that is stronger in females than in males ($|s_f| > |s_m|$).
+%\subsubsection*{Neo-$W$}
+%
+%%write in general form without weak selection
+%Similarly, a rare, dominant neo-$W$ ($k=1$) will invade the ancestral $XY$ system whenever the average growth rate of $XAm$ and $Xam$ haplotypes is positive, $(g_A + g_a) / 2 > 1$. 
+%When the growth rates of the mutant haplotypes without recombination ($R=0$) are negative, $g_i^* < 0 \; \forall \; i \in \{A,a\}$, where $g_i < g_i^*$, the neo-$W$ does not invade.
+%Otherwise neo-$W$ invasion requires
+%\begin{equation}
+%R \left[ \frac{\bar{p}_m w_{m,A}}{g_a^*} + \frac{(1 - \bar{p}_m) w_{m,a}}{g_A^*} \right] w_{f,Aa} < \nu_f
+%\end{equation}
+%where $\bar{p}_m = (p_{Ym}+p^m_X) / 2$ is the mean frequency of $A$ in gametes/gametophytes from males, $w_{f,i}$ is the relative viability fitness of females depending on their diploid genotype at the \textbf{A} locus (with $i\in\{AA,Aa,aa\}$), and 
+%$\nu_f = 
+%  p^f_X p^m_X w^m_{a} w_{AA,f} +
+%  p^f_X (1-p^m_X) w^m_{a} w_{Aa,f} +
+%  (1-p^f_X) p^m_X w^m_{a} w_{Aa,f} +
+%  (1-p^f_X) (1-p^m_X) w^m_a w_{aa,f}$
+%is the mean relative fitness of resident females. 
+%%The rate of recombination between the \textbf{X} and \textbf{A} loci, $r$, does not explicitly appear because females are homozygous at the \textbf{X} locus with an ancestral $XY$ system.
+%As in the case of the neo-$Y$, neo-$W$ invasion therefore occurs with any recombination rate, $R$, when the net flow of recombinants is from the less fit to the more fit haplotype.
+%%Assuming $g_A^*>0$ and $g_a^*<0$ without loss of generality, this is $(1 - \bar{p}_m) w_{m,a} g_a^*< \bar{p}_m w_{m,A} g_A^*$.
+%And when the net flow of recombinants is from the more fit to the less fit  haplotype, neo-$W$ invasion can still occur when the rate of recombination is small enough.
+%
+%%weak selection
+%Assuming weak selection, we can solve for the invasion fitness of the neo-$W$ explicitly, giving
+%\begin{equation}
+%\lambda_{W,XY} \approx 1 + V_A S_A \frac{(2r(1-R)-R) s^f + (1-2r)R s^m }{2},
+%\end{equation}
+%where we've once again assumed equal dominance coefficients in the two sexes.
+%In this case, even when the novel sex-determining locus is in looser linkage with the selected locus than is the ancestral sex-determining locus, $r<R$, a novel sex-determiner can invade.
+%For example, with $R=1/2$ the neo-$W$ invades if there is any linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t_m\neq0$), and there is selection for or against $A$ in both males and females ($s^m s^f >0$) that is stronger in females than in males ($|s^f| > |s^m|$).
+
 
 \subsubsection*{Offspring-controlled neo-ESD}
 
 The growth rate of a rare, dominant offspring-controlled neo-ESD region that produces males or females with equal probability ($k=1/2$) is
 \begin{equation}
 \lambda_{ESD,XY} \approx 1 + \frac{1}{2}\frac{(\lambda_{Y,XY} - 1) + (\lambda_{W,XY} -1)}{2} \Big|_{R=1/2}
-%V_A \frac{r}{1-2r}  \frac{s_{f} \left( s_m - 3 s_f\right) }{8 \left( s_{f} + s_{m} \right)^2} t_{m}^2.
+%V_A \frac{r}{1-2r}  \frac{s_{f} \left( s^m - 3 s^f\right) }{8 \left( s_{f} + s_{m} \right)^2} t_{m}^2.
 \end{equation}
 Thus with $k=1/2$ the neo-ESD gets half of the advantages of a neo-$W$ and half that of a neo-$Y$, but only has an effect one half of the time (the other half of the time it produces the same sex as the ancestral system would have).  
 Recombination between the selected locus and the novel sex-determining locus, $R$, doesn't enter into the $k=1/2$ results because sex is essentially randomized each generation, %as if the novel sex-determiner were on an unlinked site that half the time acts as a neo-$W$ and half the time as a neo-$Y$.
@@ -248,10 +321,10 @@ preventing associations from building up between allele $A$ and sex.
 
 \subsubsection*{Maternally-controlled neo-ESD}
 
-For all $k$ that we explore, the invasion fitness can be written
-
+One might think that when the sex of a zygote is under the control of its mother, there would be strong selection to balance the sex ratio among zygotes. 
+However, we find that, as with offspring control, assuming weak selection the invasion fitness of a sex-determiner that is maternally controlled can be written
 \begin{equation}
-\lambda \approx 1 + V_A S_A C_k,
+\lambda_{k,XY} \approx 1 + V_A S_A C_k,
 \end{equation}
 where
 %\begin{equation}
@@ -259,25 +332,28 @@ where
 %\end{equation}
 %is the variance in $A$ ($V_A>0$ when the polymorphic resident equilibrium is stable), 
 %with $h$ the dominance coefficient (equal in both sexes), 
-$C_k$ is a term that depends on $k$:
-
-%k=0
-\begin{equation}
-C_0 = big \; ugly \; term
-\end{equation}
-
-%k=1
-\begin{equation}
-C_1 = \frac{\left[ (2r(1-R)-R) s_f + (1-2r)R s_m \right]}{2}
-\end{equation}
-
-%k=1/2
-\begin{equation}
-C_{1/2} = even \; bigger, \; uglier \; term
-\end{equation}
-
-In the case of $k=1$ the maternal- and offspring-controlled results are the same since mutation is then only concerned with the passage of mutations through females.
-However, with $k\neq0$ the mutant dynamics differ.	
+$C_k$ is a term that depends on $k$.
+%
+%%k=0
+%\begin{equation}
+%C_0 = big \; ugly \; term
+%\end{equation}
+%
+%%k=1
+%\begin{equation}
+%C_1 = \frac{\left[ (2r(1-R)-R) s^f + (1-2r)R s^m \right]}{2}
+%\end{equation}
+%
+%%k=1/2
+%\begin{equation}
+%C_{1/2} = even \; bigger, \; uglier \; term
+%\end{equation}
+%
+%When $k=1$ the maternal- and offspring-controlled results are the same, $C_1 = C_W$, since the mutation remains in females (and hence mutant daughters always have mutant mothers).
+%However, with $k\neq1$ the results with maternal control differ from those with offspring control.
+Of particular interest is $k=1/2$ (i.e., when the mother perfectly balances the sex ratio of her offspring).
+When both recombination rates are small we have $C_{1/2} \approx R(s^m - s^f)/8 = \lim_{r \rightarrow 0} C_W/4$.
+This implies that, at least under tight linkage, maternal ESD can invade whenever a neo-$W$ can.
 
 \linenumbers
 \modulolinenumbers[2]
