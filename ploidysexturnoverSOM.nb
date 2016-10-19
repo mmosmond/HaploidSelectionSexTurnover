@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[   1530356,      36596]
-NotebookOptionsPosition[   1483530,      35213]
-NotebookOutlinePosition[   1483885,      35229]
-CellTagsIndexPosition[   1483842,      35226]
+NotebookDataLength[   1535032,      36583]
+NotebookOptionsPosition[   1489326,      35233]
+NotebookOutlinePosition[   1489681,      35249]
+CellTagsIndexPosition[   1489638,      35246]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28833,12 +28833,13 @@ Cell[BoxData[
   3.681745102327985*^9}}],
 
 Cell["\<\
-Segregation rules with meiotic drive (heterozygotes at the viablilty locus  \
-(y) produce \[Alpha]% A haploids and 1-\[Alpha]% a haploids before selection)\
-\
+Segregation rules with male-specific meiotic drive (males who are \
+heterozygous at the viablilty locus produce \[Alpha]% A haplotypes and 1-\
+\[Alpha]% a haplotypes before selection)\
 \>", "Text",
  CellChangeTimes->{{3.681790868073222*^9, 3.681790870347493*^9}, {
-  3.685446858741933*^9, 3.685446956639217*^9}}],
+   3.685446858741933*^9, 3.685446956639217*^9}, 3.6857145520961437`*^9, {
+   3.6857576759958067`*^9, 3.685757725711156*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -28875,15 +28876,27 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z1_", ",",
-         "sex_", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
       "\[Alpha]"}], " ", ",", "\[IndentingNewLine]", 
      RowBox[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z1_", ",",
-         "sex_", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{"(", 
        RowBox[{"1", "-", "\[Alpha]"}], ")"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z1_", ",",
+         "female", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{"1", "/", "2"}]}], " ", ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z1_", ",",
+         "female", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{"1", "/", "2"}]}], ",", "\[IndentingNewLine]", 
      RowBox[{
       SubscriptBox["pseg", 
        RowBox[{
@@ -28908,7 +28921,7 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z1_", ",",
-         "sex_", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{"\[Alpha]", 
        RowBox[{"(", 
         RowBox[{"1", "-", "r"}], ")"}]}]}], ",", "\[IndentingNewLine]", 
@@ -28916,7 +28929,7 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z1_", ",",
-         "sex_", ",", "x2_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x2_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{
        RowBox[{"(", 
         RowBox[{"1", "-", "\[Alpha]"}], ")"}], 
@@ -28926,13 +28939,13 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z1_", ",",
-         "sex_", ",", "x2_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x2_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{"\[Alpha]", " ", "r"}]}], ",", "\[IndentingNewLine]", 
      RowBox[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z1_", ",",
-         "sex_", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{
        RowBox[{"(", 
         RowBox[{"1", "-", "\[Alpha]"}], ")"}], "r"}]}], ",", 
@@ -28941,7 +28954,7 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{"\[Alpha]", 
        RowBox[{"(", 
         RowBox[{"1", "-", "R"}], ")"}]}]}], ",", "\[IndentingNewLine]", 
@@ -28949,7 +28962,7 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x1_", ",", "y2_", ",", "z2_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y2_", ",", "z2_"}]], "\[Rule]", 
       RowBox[{
        RowBox[{"(", 
         RowBox[{"1", "-", "\[Alpha]"}], ")"}], 
@@ -28959,7 +28972,7 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{
        RowBox[{"(", 
         RowBox[{"1", "-", "\[Alpha]"}], ")"}], " ", "R"}]}], ",", 
@@ -28968,8 +28981,68 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x1_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
       RowBox[{"\[Alpha]", " ", "R"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z1_", ",",
+         "female", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "r"}], ")"}], "/", "2"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z1_", ",",
+         "female", ",", "x2_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "r"}], ")"}], "/", "2"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z1_", ",",
+         "female", ",", "x2_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{"r", "/", "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z1_", ",",
+         "female", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{"r", "/", "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "R"}], ")"}], "/", "2"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x1_", ",", "y2_", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "R"}], ")"}], "/", "2"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", " ", 
+      RowBox[{"R", "/", "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x1_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{"R", "/", "2"}]}], ",", "\[IndentingNewLine]", 
      RowBox[{
       SubscriptBox["pseg", 
        RowBox[{
@@ -29040,7 +29113,7 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{"\[Alpha]", 
        RowBox[{"(", 
         RowBox[{"1", "-", "r"}], ")"}], 
@@ -29050,7 +29123,7 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x2_", ",", "y2_", ",", "z2_"}]], "\[Rule]", 
+         "male", ",", "x2_", ",", "y2_", ",", "z2_"}]], "\[Rule]", 
       RowBox[{
        RowBox[{"(", 
         RowBox[{"1", "-", "\[Alpha]"}], ")"}], 
@@ -29062,7 +29135,7 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x2_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x2_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{"\[Alpha]", " ", "r", 
        RowBox[{"(", 
         RowBox[{"1", "-", "R"}], ")"}]}]}], ",", "\[IndentingNewLine]", 
@@ -29070,7 +29143,7 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x1_", ",", "y2_", ",", "z2_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y2_", ",", "z2_"}]], "\[Rule]", 
       RowBox[{
        RowBox[{"(", 
         RowBox[{"1", "-", "\[Alpha]"}], ")"}], "r", 
@@ -29080,7 +29153,7 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{
        RowBox[{"(", 
         RowBox[{"1", "-", "\[Alpha]"}], ")"}], " ", "r", " ", "R"}]}], ",", 
@@ -29089,14 +29162,14 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x2_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
+         "male", ",", "x2_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
       RowBox[{"\[Alpha]", " ", "r", " ", "R"}]}], ",", "\[IndentingNewLine]", 
      
      RowBox[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x1_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
+         "male", ",", "x1_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
       RowBox[{"\[Alpha]", 
        RowBox[{"(", 
         RowBox[{"1", "-", "r"}], ")"}], "R"}]}], ",", "\[IndentingNewLine]", 
@@ -29104,13 +29177,89 @@ Cell[BoxData[{
       SubscriptBox["pseg", 
        RowBox[{
        "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
-         "sex_", ",", "x2_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
+         "male", ",", "x2_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
       RowBox[{
        RowBox[{"(", 
         RowBox[{"1", "-", "\[Alpha]"}], ")"}], 
        RowBox[{"(", 
-        RowBox[{"1", "-", "r"}], ")"}], "R"}]}]}], "\[IndentingNewLine]", 
-    "}"}]}], ";"}], "\[IndentingNewLine]", 
+        RowBox[{"1", "-", "r"}], ")"}], "R"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "r"}], ")"}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", "R"}], ")"}], "/", "2"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x2_", ",", "y2_", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "r"}], ")"}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", "R"}], ")"}], "/", "2"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x2_", ",", "y1_", ",", "z1_"}]], "\[Rule]", " ", 
+      RowBox[{"r", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", "R"}], ")"}], "/", "2"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x1_", ",", "y2_", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{"r", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", "R"}], ")"}], "/", "2"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x1_", ",", "y2_", ",", "z1_"}]], "\[Rule]", " ", 
+      RowBox[{"r", " ", 
+       RowBox[{"R", "/", "2"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x2_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{"r", " ", 
+       RowBox[{"R", "/", "2"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x1_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "r"}], ")"}], 
+       RowBox[{"R", "/", "2"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",",
+         "female", ",", "x2_", ",", "y2_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "r"}], ")"}], 
+       RowBox[{"R", "/", "2"}]}]}]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"pseg4", "=", 
    RowBox[{
@@ -29148,7 +29297,7 @@ Cell[BoxData[{
    3.681790594196591*^9, 3.681790651669318*^9}, {3.685446566599594*^9, 
    3.685446613301856*^9}, {3.6854466594783163`*^9, 3.685446674108594*^9}, {
    3.685446725576165*^9, 3.685446846752988*^9}, {3.685448456509159*^9, 
-   3.6854484978796*^9}}],
+   3.6854484978796*^9}, {3.6857145713840637`*^9, 3.6857148559052753`*^9}}],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -29451,7 +29600,7 @@ Cell[BoxData[
    3.682144710656866*^9, 3.682920602235833*^9, 3.683816896620468*^9, 
    3.685447428394968*^9, 3.685447470963046*^9, {3.685447518239092*^9, 
    3.685447551041255*^9}, 3.68544760753404*^9, {3.685448523510034*^9, 
-   3.685448534771299*^9}}]
+   3.685448534771299*^9}, 3.685714880361951*^9}]
 }, Open  ]],
 
 Cell["And at equilibrium we have", "Text",
@@ -29500,7 +29649,8 @@ Cell[BoxData[
    3.68204953688428*^9, 3.682133260085647*^9, 3.682144710692371*^9, 
    3.682920602269578*^9, 3.6838168987110786`*^9, {3.685447443795883*^9, 
    3.685447473562731*^9}, {3.6854475212148733`*^9, 3.68544755601586*^9}, 
-   3.6854476094171667`*^9, {3.68544852733103*^9, 3.6854485372973547`*^9}}]
+   3.6854476094171667`*^9, {3.68544852733103*^9, 3.6854485372973547`*^9}, 
+   3.6857148803900003`*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -29693,7 +29843,7 @@ Cell[BoxData[
    3.681790718133628*^9, 3.6818910339655*^9, 3.681891180964037*^9, 
    3.6818976536741257`*^9, 3.682049536979245*^9, 3.682133260162579*^9, 
    3.6821447107713137`*^9, 3.682920602347398*^9, 3.6838169016427097`*^9, 
-   3.685447621692202*^9, 3.68544854176237*^9}]
+   3.685447621692202*^9, 3.68544854176237*^9, 3.685714880495698*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -29958,7 +30108,8 @@ Cell[BoxData[
    3.681790667017806*^9, 3.6817907228467083`*^9}, 3.68189115135784*^9, 
    3.68189118399726*^9, 3.681897653939054*^9, 3.682049537294879*^9, 
    3.68213326045788*^9, 3.682144711078505*^9, 3.682920602613758*^9, 
-   3.683816905354411*^9, 3.685447628167561*^9, 3.685448544843561*^9}]
+   3.683816905354411*^9, 3.685447628167561*^9, 3.685448544843561*^9, 
+   3.685714880860889*^9}]
 }, Open  ]],
 
 Cell["van Doorn and Kirkpatrick 2007 (SOM, page 6) give", "Text",
@@ -30017,7 +30168,7 @@ Cell[BoxData[
 
 Cell[BoxData["1"], "Output",
  CellChangeTimes->{3.68381643126058*^9, 3.683816935211462*^9, 
-  3.685447634985633*^9, 3.6854485513142433`*^9}]
+  3.685447634985633*^9, 3.6854485513142433`*^9, 3.6857148809233437`*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -30218,7 +30369,8 @@ Cell[BoxData[
    3.678544350475233*^9, 3.6785534771527643`*^9, {3.678763086474922*^9, 
    3.678763105806613*^9}, 3.678763147295204*^9, 3.678764294518174*^9, 
    3.679938038784348*^9, 3.6818914653253813`*^9, 3.68204958152876*^9, 
-   3.6838169949280853`*^9, 3.6854476868085957`*^9, 3.685448580767845*^9}]
+   3.6838169949280853`*^9, 3.6854476868085957`*^9, 3.685448580767845*^9, 
+   3.685714926177607*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -30281,7 +30433,8 @@ Cell[BoxData[
   3.677954755005115*^9, 3.67802833026289*^9, 3.678542695110661*^9, 
   3.678544350508951*^9, 3.6785534771809893`*^9, 3.678764340415372*^9, 
   3.679938038827969*^9, 3.681891469022283*^9, 3.6820495815687017`*^9, 
-  3.6838169949696007`*^9, 3.6854476869202137`*^9, 3.685448580832035*^9}]
+  3.6838169949696007`*^9, 3.6854476869202137`*^9, 3.685448580832035*^9, 
+  3.685714926212899*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -30362,7 +30515,8 @@ Cell[BoxData[
   3.677954755059959*^9, 3.678028330301626*^9, 3.678542695160199*^9, 
   3.678544350541535*^9, 3.678553477213879*^9, 3.6787643713788443`*^9, 
   3.679938038868807*^9, 3.681891477103898*^9, 3.682049581624468*^9, 
-  3.683816995016447*^9, 3.68544774904847*^9, 3.685448580952512*^9}]
+  3.683816995016447*^9, 3.68544774904847*^9, 3.685448580952512*^9, 
+  3.68571492627384*^9}]
 }, Open  ]],
 
 Cell["With weak selection first order term in the eigenvalues is", "Text",
@@ -30418,7 +30572,7 @@ Cell[BoxData[
   3.6780283303292913`*^9, 3.678542695210258*^9, 3.678544350574987*^9, 
   3.678553477245347*^9, 3.678764374849228*^9, 3.6799380389071827`*^9, 
   3.681891479187998*^9, 3.68204958168464*^9, 3.683816995050934*^9, 
-  3.685447752189396*^9, 3.6854485810330343`*^9}]
+  3.685447752189396*^9, 3.6854485810330343`*^9, 3.6857149263113937`*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -30490,7 +30644,7 @@ Cell[BoxData[
 
 Cell[BoxData["False"], "Output",
  CellChangeTimes->{3.683817484782662*^9, 3.685447823641561*^9, 
-  3.6854485811664467`*^9}]
+  3.6854485811664467`*^9, 3.6857149264312477`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -30526,7 +30680,7 @@ Cell[BoxData[
 Cell[BoxData["False"], "Output",
  CellChangeTimes->{
   3.683817483146956*^9, {3.68381759583457*^9, 3.6838176034167233`*^9}, 
-   3.685447825441432*^9, 3.685448581232883*^9}]
+   3.685447825441432*^9, 3.685448581232883*^9, 3.68571492647791*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -30700,7 +30854,7 @@ Cell[BoxData[
    SubscriptBox["sHap", "female"], "\[Equal]", "0"}]}]], "Output",
  CellChangeTimes->{
   3.683817567318308*^9, {3.6838176065043707`*^9, 3.683817644837654*^9}, 
-   3.6854478272766037`*^9, 3.685448581315556*^9}]
+   3.6854478272766037`*^9, 3.685448581315556*^9, 3.685714926529635*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -30767,7 +30921,7 @@ Cell[BoxData[
   RowBox[{
    SubscriptBox["sHap", "female"], "\[Equal]", "0"}]}]], "Output",
  CellChangeTimes->{{3.683817731363207*^9, 3.683817755724894*^9}, 
-   3.68544783092465*^9, 3.6854485813829412`*^9}]
+   3.68544783092465*^9, 3.6854485813829412`*^9, 3.6857149265784197`*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -30936,7 +31090,7 @@ Cell[BoxData[
   3.6817912904181232`*^9, 3.681897678037388*^9, 3.6818978610140123`*^9, 
   3.6820497316138678`*^9, 3.682133520244061*^9, 3.682144967179885*^9, 
   3.683818429675231*^9, 3.685448128302168*^9, 3.685448356222982*^9, 
-  3.685448905781351*^9}]
+  3.685448905781351*^9, 3.685715187418065*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -30968,102 +31122,117 @@ Cell[BoxData[{
       RowBox[{"{", 
        RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "]"}], "//",
     "Factor"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"Solve", "[", 
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"%", "\[Equal]", "0"}], ",", "\[Delta]\[Lambda]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Collect", "[", 
   RowBox[{
-   RowBox[{"%", "\[Equal]", "0"}], ",", "\[Delta]\[Lambda]"}], 
-  "]"}]}], "Input",
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"\[Delta]\[Lambda]", "/.", "%"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "-", "pA"}], ")"}], " ", 
+      RowBox[{"pA", " ", "/", "VA"}]}], ")"}]}], ",", "\[Alpha]1", ",", 
+   "Simplify"}], "]"}]}], "Input",
  CellChangeTimes->{{3.675900203768065*^9, 3.67590021603231*^9}, {
    3.675900300123855*^9, 3.675900338446018*^9}, 3.675900430018834*^9, {
    3.676722303506366*^9, 3.6767223232575293`*^9}, 3.676723478586155*^9, 
    3.676723712223565*^9, {3.677427876523703*^9, 3.677427886199647*^9}, 
    3.6774395304086657`*^9, {3.677964777073876*^9, 3.677964783312694*^9}, 
-   3.67876574278687*^9, {3.678765813083859*^9, 3.6787658141807957`*^9}}],
+   3.67876574278687*^9, {3.678765813083859*^9, 3.6787658141807957`*^9}, {
+   3.6857153479147987`*^9, 3.685715348100605*^9}, 3.685717380028427*^9, {
+   3.6857174167886677`*^9, 3.685717446587056*^9}, {3.6857175701267548`*^9, 
+   3.685717578409399*^9}, {3.685717738344397*^9, 3.685717738617187*^9}, 
+   3.685717806213335*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"{", 
-   RowBox[{"\[Delta]\[Lambda]", "\[Rule]", 
-    RowBox[{"4", " ", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"-", "pA"}], " ", "\[Alpha]1"}], "+", 
-       RowBox[{"2", " ", "k", " ", "pA", " ", "\[Alpha]1"}], "+", 
-       RowBox[{
-        SuperscriptBox["pA", "2"], " ", "\[Alpha]1"}], "-", 
-       RowBox[{"2", " ", "k", " ", 
-        SuperscriptBox["pA", "2"], " ", "\[Alpha]1"}], "+", 
-       RowBox[{"2", " ", "pA", " ", "R", " ", "\[Alpha]1"}], "-", 
-       RowBox[{"4", " ", "k", " ", "pA", " ", "R", " ", "\[Alpha]1"}], "-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["pA", "2"], " ", "R", " ", "\[Alpha]1"}], "+", 
-       RowBox[{"4", " ", "k", " ", 
-        SuperscriptBox["pA", "2"], " ", "R", " ", "\[Alpha]1"}]}], ")"}]}]}], 
-   "}"}], "}"}]], "Output",
+  RowBox[{"4", " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     RowBox[{"3", " ", "k"}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["k", "2"]}]}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     RowBox[{"2", " ", "R"}]}], ")"}], " ", "VA", " ", "\[Alpha]1"}], 
+  "}"}]], "Output",
  CellChangeTimes->{3.679940325616682*^9, 3.681791452846795*^9, 
   3.6818976780691843`*^9, 3.681897955622849*^9, 3.682133618737681*^9, 
   3.6821450651729116`*^9, 3.683818521005826*^9, 3.685448197517071*^9, 
-  3.685449014036992*^9}]
+  3.685449014036992*^9, 3.6857152909929247`*^9, 3.68571665280177*^9, 
+  3.685717440394429*^9, 3.685717509119959*^9, 3.685717640108186*^9, 
+  3.685717730192974*^9, 3.6857178014340887`*^9, 3.685717868503242*^9}]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Collect", "[", 
+Cell[TextData[{
+ "which is positive if R\[NotEqual]1/2, VA\[NotEqual]0, and\n",
+ Cell[BoxData[
   RowBox[{
-   RowBox[{"4", " ", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"-", "pA"}], " ", "\[Alpha]1"}], "+", 
-       RowBox[{"2", " ", "k", " ", "pA", " ", "\[Alpha]1"}], "+", 
-       RowBox[{
-        SuperscriptBox["pA", "2"], " ", "\[Alpha]1"}], "-", 
-       RowBox[{"2", " ", "k", " ", 
-        SuperscriptBox["pA", "2"], " ", "\[Alpha]1"}], "+", 
-       RowBox[{"2", " ", "pA", " ", "R", " ", "\[Alpha]1"}], "-", 
-       RowBox[{"4", " ", "k", " ", "pA", " ", "R", " ", "\[Alpha]1"}], "-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["pA", "2"], " ", "R", " ", "\[Alpha]1"}], "+", 
-       RowBox[{"4", " ", "k", " ", 
-        SuperscriptBox["pA", "2"], " ", "R", " ", "\[Alpha]1"}]}], ")"}], "/", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{"1", "-", "pA"}], ")"}], " ", 
-       RowBox[{"pA", " ", "/", "VA"}]}], ")"}]}]}], ",", "\[Alpha]1", ",", 
-   "Simplify"}], "]"}]], "Input",
- CellChangeTimes->{{3.685450334121623*^9, 3.685450349271978*^9}, {
-  3.685450385331588*^9, 3.685450413355595*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"-", "4"}], " ", 
-  RowBox[{"(", 
-   RowBox[{
-    RowBox[{"-", "1"}], "+", 
-    RowBox[{"2", " ", "k"}]}], ")"}], " ", 
-  RowBox[{"(", 
-   RowBox[{
-    RowBox[{"-", "1"}], "+", 
-    RowBox[{"2", " ", "R"}]}], ")"}], " ", "VA", " ", "\[Alpha]1"}]], "Output",\
-
- CellChangeTimes->{{3.685450340707196*^9, 3.685450349574471*^9}, {
-  3.68545039532522*^9, 3.685450413692601*^9}}]
-}, Open  ]],
-
-Cell["\<\
-which can only be positive if (1/2 - k) \[Alpha]1 < 0, ie 
-a) if the neo sex factor causes offspring to be male more often than female, \
-k < 1/2, when \[Alpha]1 > 0 (drive in favour of A)
-b) if the neo sex factor causes offspring to be female more often than male, \
-k > 1/2, when \[Alpha]1 < 0 (drive in favour of a)\
-\>", "Text",
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     RowBox[{"3", " ", "k"}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["k", "2"]}]}], ")"}], " ", "\[Alpha]1"}]],
+  CellChangeTimes->{3.679940325616682*^9, 3.681791452846795*^9, 
+   3.6818976780691843`*^9, 3.681897955622849*^9, 3.682133618737681*^9, 
+   3.6821450651729116`*^9, 3.683818521005826*^9, 3.685448197517071*^9, 
+   3.685449014036992*^9, 3.6857152909929247`*^9, 3.68571665280177*^9, 
+   3.685717440394429*^9, 3.685717509119959*^9, 3.685717640108186*^9, 
+   3.685717730192974*^9, 3.685717801435771*^9}],
+ " < 0\n",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     RowBox[{"2", " ", "k"}]}], ")"}], 
+   RowBox[{"(", 
+    RowBox[{"1", "-", "k"}], ")"}], " ", "\[Alpha]1"}]],
+  CellChangeTimes->{3.679940325616682*^9, 3.681791452846795*^9, 
+   3.6818976780691843`*^9, 3.681897955622849*^9, 3.682133618737681*^9, 
+   3.6821450651729116`*^9, 3.683818521005826*^9, 3.685448197517071*^9, 
+   3.685449014036992*^9, 3.6857152909929247`*^9, 3.68571665280177*^9, 
+   3.685717440394429*^9, 3.685717509119959*^9, 3.685717640108186*^9, 
+   3.685717730192974*^9, 3.685717801435771*^9}],
+ " < 0\n",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     RowBox[{"2", " ", "k"}]}], ")"}], "\[Alpha]1"}]],
+  CellChangeTimes->{3.679940325616682*^9, 3.681791452846795*^9, 
+   3.6818976780691843`*^9, 3.681897955622849*^9, 3.682133618737681*^9, 
+   3.6821450651729116`*^9, 3.683818521005826*^9, 3.685448197517071*^9, 
+   3.685449014036992*^9, 3.6857152909929247`*^9, 3.68571665280177*^9, 
+   3.685717440394429*^9, 3.685717509119959*^9, 3.685717640108186*^9, 
+   3.685717730192974*^9, 3.685717801435771*^9}],
+ " < 0 and k\[NotEqual]1\nie \na) Invasion if the neo sex factor causes \
+offspring to be male more often than female, 0 \[LessEqual] k < 1/2, when \
+there is drive in favour of A, \[Alpha]1 > 0.\nb) Invasion if the neo sex \
+factor causes offspring to be female more often than male, 1/2 < k < 1, when \
+there is drive in favour of a, \[Alpha]1 < 0."
+}], "Text",
  CellChangeTimes->{{3.685450473628742*^9, 3.6854505324503107`*^9}, {
   3.685450580149776*^9, 3.6854506159127903`*^9}, {3.68545068633162*^9, 
   3.685450801939636*^9}, {3.6855260137272863`*^9, 3.685526058355555*^9}, {
-  3.685526185842271*^9, 3.685526238849819*^9}}],
+  3.685526185842271*^9, 3.685526238849819*^9}, {3.685717814842579*^9, 
+  3.685717843644104*^9}, {3.685717877113893*^9, 3.685717915728924*^9}, {
+  3.6857574580616903`*^9, 3.685757494391975*^9}, {3.6857575475650597`*^9, 
+  3.6857576061627703`*^9}, {3.685757903541699*^9, 3.685757942737471*^9}, {
+  3.685758144076025*^9, 3.685758194776556*^9}}],
+
+Cell["\<\
+WHY? We have not yet assumed anything about the viability of A vs a! Somehow \
+being male (with drive) is good when A is driving and being female (without \
+drive) is good when a is driving.\
+\>", "Text",
+ CellChangeTimes->{{3.685758113756464*^9, 3.685758114676613*^9}, {
+  3.6857582591055326`*^9, 3.685758350476313*^9}}],
 
 Cell[CellGroupData[{
 
@@ -31077,6 +31246,12 @@ Cell[TextData[{
 }], "Subsubsection",
  CellChangeTimes->{{3.685525948622394*^9, 3.6855259523398314`*^9}, {
   3.685526456404396*^9, 3.6855264696150217`*^9}}],
+
+Cell["\<\
+Drive seems to overpower selection, so lets make it a bit weaker and look at \
+the joint effects of drive and (especially diploid) selection\
+\>", "Text",
+ CellChangeTimes->{{3.685758448779704*^9, 3.6857584852478437`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -31112,7 +31287,7 @@ Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"{", 
    RowBox[{"\[Delta]\[Lambda]", "\[Rule]", "0"}], "}"}], "}"}]], "Output",
- CellChangeTimes->{3.685505510108392*^9}]
+ CellChangeTimes->{3.685505510108392*^9, 3.685715377714003*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -31254,10 +31429,15 @@ Cell[BoxData[
       RowBox[{
        RowBox[{
         RowBox[{"-", "4"}], " ", "R", " ", "\[Alpha]1"}], "+", 
-       RowBox[{"8", " ", "k", " ", "R", " ", "\[Alpha]1"}], "+", 
+       RowBox[{"12", " ", "k", " ", "R", " ", "\[Alpha]1"}], "-", 
+       RowBox[{"8", " ", 
+        SuperscriptBox["k", "2"], " ", "R", " ", "\[Alpha]1"}], "+", 
        RowBox[{"8", " ", 
         SuperscriptBox["R", "2"], " ", "\[Alpha]1"}], "-", 
-       RowBox[{"16", " ", "k", " ", 
+       RowBox[{"24", " ", "k", " ", 
+        SuperscriptBox["R", "2"], " ", "\[Alpha]1"}], "+", 
+       RowBox[{"16", " ", 
+        SuperscriptBox["k", "2"], " ", 
         SuperscriptBox["R", "2"], " ", "\[Alpha]1"}], "+", 
        RowBox[{
         SuperscriptBox["k", "2"], " ", 
@@ -31399,7 +31579,7 @@ Cell[BoxData[
              RowBox[{"3", " ", "k", " ", "R"}]}], ")"}], " ", 
            SubscriptBox["sHap", "male"]}]}], ")"}]}]}], ")"}]}]}]}], 
   "}"}]], "Output",
- CellChangeTimes->{3.685526612628276*^9}]
+ CellChangeTimes->{3.685526612628276*^9, 3.6857160307390137`*^9}]
 }, Open  ]],
 
 Cell["Then we can put in all the differences", "Text",
@@ -31756,10 +31936,15 @@ Cell[BoxData[
            RowBox[{
             RowBox[{
              RowBox[{"-", "4"}], " ", "R", " ", "\[Alpha]1"}], "+", 
-            RowBox[{"8", " ", "k", " ", "R", " ", "\[Alpha]1"}], "+", 
+            RowBox[{"12", " ", "k", " ", "R", " ", "\[Alpha]1"}], "-", 
+            RowBox[{"8", " ", 
+             SuperscriptBox["k", "2"], " ", "R", " ", "\[Alpha]1"}], "+", 
             RowBox[{"8", " ", 
              SuperscriptBox["R", "2"], " ", "\[Alpha]1"}], "-", 
-            RowBox[{"16", " ", "k", " ", 
+            RowBox[{"24", " ", "k", " ", 
+             SuperscriptBox["R", "2"], " ", "\[Alpha]1"}], "+", 
+            RowBox[{"16", " ", 
+             SuperscriptBox["k", "2"], " ", 
              SuperscriptBox["R", "2"], " ", "\[Alpha]1"}], "+", 
             RowBox[{
              SuperscriptBox["k", "2"], " ", 
@@ -32061,7 +32246,7 @@ Cell[BoxData[
   3.679940701704034*^9, 3.6817921627895327`*^9, 3.681897678154975*^9, 
    3.681898633649233*^9, 3.682134322779213*^9, 3.682145754055648*^9, 
    3.6838191362399*^9, {3.6855273862545347`*^9, 3.6855274131549053`*^9}, 
-   3.6855274435291023`*^9}]
+   3.6855274435291023`*^9, 3.685716040822126*^9}]
 }, Open  ]],
 
 Cell["Print to avoid re-running all the above:", "Text",
@@ -32071,26 +32256,10 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"tester", "=", 
    RowBox[{"{", 
-    RowBox[{"-", 
-     RowBox[{
+    RowBox[{
+     RowBox[{"-", 
       RowBox[{"(", 
        RowBox[{
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"-", "1"}], "+", 
-             SubscriptBox["h", "female"]}], ")"}], " ", 
-           SubscriptBox["sDip", "female"]}], "+", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"-", "1"}], "+", 
-             SubscriptBox["h", "male"]}], ")"}], " ", 
-           SubscriptBox["sDip", "male"]}], "-", 
-          SubscriptBox["sHap", "female"], "-", 
-          SubscriptBox["sHap", "male"]}], ")"}], " ", 
         RowBox[{"(", 
          RowBox[{
           RowBox[{
@@ -32103,241 +32272,621 @@ Cell[BoxData[
           SubscriptBox["sHap", "male"]}], ")"}], " ", 
         RowBox[{"(", 
          RowBox[{
-          RowBox[{
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "female"]}], "-", 
-          RowBox[{
-           SubscriptBox["h", "male"], " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           RowBox[{"(", 
-            RowBox[{
-             SubscriptBox["sDip", "female"], "+", 
-             RowBox[{"2", " ", 
-              SubscriptBox["sHap", "female"]}]}], ")"}]}], "-", 
-          RowBox[{
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "male"]}], "+", 
-          RowBox[{
-           SubscriptBox["h", "female"], " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           RowBox[{"(", 
-            RowBox[{
-             SubscriptBox["sDip", "male"], "+", 
-             RowBox[{"2", " ", 
-              SubscriptBox["sHap", "male"]}]}], ")"}]}]}], ")"}], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"-", 
-            SuperscriptBox["k", "2"]}], " ", "R", " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "female"]}], "+", 
-          RowBox[{"2", " ", 
-           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "female"]}], "-", 
-          RowBox[{"2", " ", "r", " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "female"]}], "+", 
-          RowBox[{"8", " ", "k", " ", "r", " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "female"]}], "-", 
-          RowBox[{"8", " ", 
-           SuperscriptBox["k", "2"], " ", "r", " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "female"]}], "+", 
-          RowBox[{"2", " ", "R", " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "female"]}], "-", 
-          RowBox[{"4", " ", "k", " ", "R", " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "female"]}], "+", 
-          RowBox[{"3", " ", 
-           SuperscriptBox["k", "2"], " ", "R", " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "female"]}], "-", 
-          RowBox[{"8", " ", "k", " ", "r", " ", "R", " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "female"]}], "+", 
-          RowBox[{"10", " ", 
-           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "female"]}], "+", 
-          RowBox[{"2", " ", "r", " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "male"]}], "-", 
-          RowBox[{"8", " ", "k", " ", "r", " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "male"]}], "+", 
-          RowBox[{"8", " ", 
-           SuperscriptBox["k", "2"], " ", "r", " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "male"]}], "-", 
-          RowBox[{"2", " ", "R", " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "male"]}], "+", 
-          RowBox[{"4", " ", "k", " ", "R", " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "male"]}], "-", 
-          RowBox[{"3", " ", 
-           SuperscriptBox["k", "2"], " ", "R", " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "male"]}], "+", 
-          RowBox[{"8", " ", "k", " ", "r", " ", "R", " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "male"]}], "-", 
-          RowBox[{"10", " ", 
-           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
-           SubscriptBox["sDip", "female"], " ", 
-           SubscriptBox["sHap", "male"]}], "+", 
-          RowBox[{
-           SuperscriptBox["k", "2"], " ", "R", " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "male"]}], "-", 
-          RowBox[{"2", " ", 
-           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
-           SubscriptBox["sDip", "male"], " ", 
-           SubscriptBox["sHap", "male"]}], "-", 
-          RowBox[{"2", " ", 
-           SubscriptBox["h", "male"], " ", 
-           SubscriptBox["sDip", "male"], " ", 
+          RowBox[{"k", " ", 
            RowBox[{"(", 
             RowBox[{
              RowBox[{
               RowBox[{"(", 
                RowBox[{
-                RowBox[{"r", " ", 
-                 RowBox[{"(", 
-                  RowBox[{
-                   RowBox[{"-", "1"}], "-", 
-                   RowBox[{"4", " ", "k", " ", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}], "+", 
-                   RowBox[{"4", " ", 
-                    SuperscriptBox["k", "2"], " ", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}]}], ")"}]}], "+", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"1", "-", 
-                   RowBox[{"2", " ", "k"}], "+", 
-                   RowBox[{"2", " ", 
-                    SuperscriptBox["k", "2"]}]}], ")"}], " ", "R"}]}], ")"}], 
-              " ", 
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["h", "female"]}], ")"}], " ", 
               SubscriptBox["sDip", "female"]}], "+", 
              RowBox[{
               RowBox[{"(", 
                RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["h", "male"]}], ")"}], " ", 
+              SubscriptBox["sDip", "male"]}], "-", 
+             SubscriptBox["sHap", "female"], "-", 
+             SubscriptBox["sHap", "male"]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", 
+               RowBox[{"(", 
                 RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"2", "-", 
-                   RowBox[{"4", " ", "k"}], "+", 
-                   RowBox[{"3", " ", 
-                    SuperscriptBox["k", "2"]}]}], ")"}], " ", "R"}], "+", 
-                RowBox[{"2", " ", "r", " ", 
+                 SubscriptBox["sDip", "female"], "-", 
+                 SubscriptBox["sDip", "male"]}], ")"}]}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["sHap", "female"], "+", 
+                SubscriptBox["sHap", "male"]}], ")"}]}], "-", 
+             RowBox[{"2", " ", 
+              SubscriptBox["h", "male"], " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["sDip", "female"], "+", 
+                SubscriptBox["sHap", "female"], "+", 
+                SubscriptBox["sHap", "male"]}], ")"}]}], "+", 
+             RowBox[{"2", " ", 
+              SubscriptBox["h", "female"], " ", 
+              SubscriptBox["sDip", "female"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["sDip", "male"], "+", 
+                SubscriptBox["sHap", "female"], "+", 
+                SubscriptBox["sHap", "male"]}], ")"}]}]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", 
+              SubscriptBox["sDip", "female"], " ", 
+              SubscriptBox["sHap", "female"]}], "-", 
+             RowBox[{"k", " ", 
+              SubscriptBox["sDip", "female"], " ", 
+              SubscriptBox["sHap", "female"]}], "-", 
+             RowBox[{"2", " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              SubscriptBox["sHap", "female"]}], "+", 
+             RowBox[{"3", " ", "k", " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              SubscriptBox["sHap", "female"]}], "+", 
+             RowBox[{"2", " ", 
+              SubscriptBox["sDip", "female"], " ", 
+              SubscriptBox["sHap", "male"]}], "-", 
+             RowBox[{"3", " ", "k", " ", 
+              SubscriptBox["sDip", "female"], " ", 
+              SubscriptBox["sHap", "male"]}], "-", 
+             RowBox[{"2", " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              SubscriptBox["sHap", "male"]}], "+", 
+             RowBox[{"k", " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              SubscriptBox["sHap", "male"]}], "-", 
+             RowBox[{"2", " ", 
+              SubscriptBox["h", "male"], " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
                  RowBox[{"(", 
                   RowBox[{
-                   RowBox[{"-", "1"}], "-", 
-                   RowBox[{"4", " ", "k", " ", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}], "+", 
-                   RowBox[{
-                    SuperscriptBox["k", "2"], " ", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"-", "4"}], "+", 
-                    RowBox[{"5", " ", "R"}]}], ")"}]}]}], ")"}]}]}], ")"}], 
-              " ", 
-              SubscriptBox["sHap", "female"]}], "+", 
-             RowBox[{
-              SuperscriptBox["k", "2"], " ", 
+                   RowBox[{"-", "1"}], "+", "k"}], ")"}], " ", 
+                 SubscriptBox["sDip", "female"]}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "2"}], "+", 
+                   RowBox[{"3", " ", "k"}]}], ")"}], " ", 
+                 SubscriptBox["sHap", "female"]}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "2"}], "+", "k"}], ")"}], " ", 
+                 SubscriptBox["sHap", "male"]}]}], ")"}]}], "+", 
+             RowBox[{"2", " ", 
+              SubscriptBox["h", "female"], " ", 
+              SubscriptBox["sDip", "female"], " ", 
               RowBox[{"(", 
-               RowBox[{"1", "-", 
-                RowBox[{"2", " ", "r"}]}], ")"}], " ", "R", " ", 
-              SubscriptBox["sHap", "male"]}]}], ")"}]}], "+", 
-          RowBox[{"2", " ", 
-           SubscriptBox["h", "female"], " ", 
-           SubscriptBox["sDip", "female"], " ", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", "k"}], ")"}], " ", 
+                 SubscriptBox["sDip", "male"]}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "2"}], "+", "k"}], ")"}], " ", 
+                 SubscriptBox["sHap", "female"]}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "2"}], "+", 
+                   RowBox[{"3", " ", "k"}]}], ")"}], " ", 
+                 SubscriptBox["sHap", "male"]}]}], ")"}]}]}], ")"}]}], "+", 
+          RowBox[{
+           RowBox[{"1", "/", "r"}], 
            RowBox[{"(", 
             RowBox[{
              RowBox[{
               RowBox[{"(", 
                RowBox[{
-                RowBox[{"r", " ", 
-                 RowBox[{"(", 
-                  RowBox[{
-                   RowBox[{"-", "1"}], "-", 
-                   RowBox[{"4", " ", "k", " ", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}], "+", 
-                   RowBox[{"4", " ", 
-                    SuperscriptBox["k", "2"], " ", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}]}], ")"}]}], "+", 
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["h", "female"]}], ")"}], " ", 
+              SubscriptBox["sDip", "female"]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["h", "male"]}], ")"}], " ", 
+              SubscriptBox["sDip", "male"]}], "-", 
+             SubscriptBox["sHap", "female"], "-", 
+             SubscriptBox["sHap", "male"]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["k", "2"]}], " ", 
+              SubscriptBox["sDip", "female"], " ", 
+              SubscriptBox["sHap", "female"]}], "+", 
+             RowBox[{"2", " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              SubscriptBox["sHap", "female"]}], "-", 
+             RowBox[{"4", " ", "k", " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              SubscriptBox["sHap", "female"]}], "+", 
+             RowBox[{"3", " ", 
+              SuperscriptBox["k", "2"], " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              SubscriptBox["sHap", "female"]}], "-", 
+             RowBox[{"2", " ", 
+              SubscriptBox["sDip", "female"], " ", 
+              SubscriptBox["sHap", "male"]}], "+", 
+             RowBox[{"4", " ", "k", " ", 
+              SubscriptBox["sDip", "female"], " ", 
+              SubscriptBox["sHap", "male"]}], "-", 
+             RowBox[{"3", " ", 
+              SuperscriptBox["k", "2"], " ", 
+              SubscriptBox["sDip", "female"], " ", 
+              SubscriptBox["sHap", "male"]}], "+", 
+             RowBox[{
+              SuperscriptBox["k", "2"], " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              SubscriptBox["sHap", "male"]}], "-", 
+             RowBox[{"2", " ", 
+              SubscriptBox["h", "male"], " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              RowBox[{"(", 
+               RowBox[{
                 RowBox[{
                  RowBox[{"(", 
                   RowBox[{"1", "-", 
                    RowBox[{"2", " ", "k"}], "+", 
                    RowBox[{"2", " ", 
-                    SuperscriptBox["k", "2"]}]}], ")"}], " ", "R"}]}], ")"}], 
-              " ", 
-              SubscriptBox["sDip", "male"]}], "+", 
-             RowBox[{
-              SuperscriptBox["k", "2"], " ", 
-              RowBox[{"(", 
-               RowBox[{"1", "-", 
-                RowBox[{"2", " ", "r"}]}], ")"}], " ", "R", " ", 
-              SubscriptBox["sHap", "female"]}], "+", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{
+                    SuperscriptBox["k", "2"]}]}], ")"}], " ", 
+                 SubscriptBox["sDip", "female"]}], "+", 
                 RowBox[{
                  RowBox[{"(", 
                   RowBox[{"2", "-", 
                    RowBox[{"4", " ", "k"}], "+", 
                    RowBox[{"3", " ", 
-                    SuperscriptBox["k", "2"]}]}], ")"}], " ", "R"}], "+", 
-                RowBox[{"2", " ", "r", " ", 
+                    SuperscriptBox["k", "2"]}]}], ")"}], " ", 
+                 SubscriptBox["sHap", "female"]}], "+", 
+                RowBox[{
+                 SuperscriptBox["k", "2"], " ", 
+                 SubscriptBox["sHap", "male"]}]}], ")"}]}], "+", 
+             RowBox[{"2", " ", 
+              SubscriptBox["h", "female"], " ", 
+              SubscriptBox["sDip", "female"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", 
+                   RowBox[{"2", " ", "k"}], "+", 
+                   RowBox[{"2", " ", 
+                    SuperscriptBox["k", "2"]}]}], ")"}], " ", 
+                 SubscriptBox["sDip", "male"]}], "+", 
+                RowBox[{
+                 SuperscriptBox["k", "2"], " ", 
+                 SubscriptBox["sHap", "female"]}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"2", "-", 
+                   RowBox[{"4", " ", "k"}], "+", 
+                   RowBox[{"3", " ", 
+                    SuperscriptBox["k", "2"]}]}], ")"}], " ", 
+                 SubscriptBox["sHap", "male"]}]}], ")"}]}]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                RowBox[{"2", " ", 
+                 SubscriptBox["h", "male"]}]}], ")"}], " ", 
+              SubscriptBox["sDip", "male"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "2"}], " ", "\[Alpha]1"}], "+", 
+                RowBox[{"4", " ", "r", " ", "\[Alpha]1"}], "+", 
+                RowBox[{
                  RowBox[{"(", 
                   RowBox[{
-                   RowBox[{"-", "1"}], "-", 
-                   RowBox[{"4", " ", "k", " ", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}], "+", 
+                   RowBox[{"-", "1"}], "+", "r"}], ")"}], " ", 
+                 SubscriptBox["sHap", "female"]}], "-", 
+                RowBox[{"r", " ", 
+                 SubscriptBox["sHap", "male"]}]}], ")"}]}], "+", 
+             RowBox[{
+              SubscriptBox["sDip", "female"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", "\[Alpha]1"}], "-", 
+                RowBox[{"4", " ", "r", " ", "\[Alpha]1"}], "-", 
+                RowBox[{
+                 SubscriptBox["h", "male"], " ", 
+                 SubscriptBox["sDip", "male"]}], "-", 
+                RowBox[{"r", " ", 
+                 SubscriptBox["sHap", "female"]}], "-", 
+                SubscriptBox["sHap", "male"], "+", 
+                RowBox[{"r", " ", 
+                 SubscriptBox["sHap", "male"]}], "+", 
+                RowBox[{
+                 SubscriptBox["h", "female"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
                    RowBox[{
-                    SuperscriptBox["k", "2"], " ", 
+                    RowBox[{"-", "4"}], " ", "\[Alpha]1"}], "+", 
+                   RowBox[{"8", " ", "r", " ", "\[Alpha]1"}], "+", 
+                   SubscriptBox["sDip", "male"], "+", 
+                   RowBox[{"2", " ", "r", " ", 
+                    SubscriptBox["sHap", "female"]}], "+", 
+                   RowBox[{"2", " ", 
+                    SubscriptBox["sHap", "male"]}], "-", 
+                   RowBox[{"2", " ", "r", " ", 
+                    SubscriptBox["sHap", "male"]}]}], ")"}]}]}], ")"}]}]}], 
+            ")"}]}], "+", 
+          RowBox[{
+           RowBox[{"1", "/", "R"}], "2", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"2", " ", 
+                  SubscriptBox["h", "female"]}]}], ")"}], " ", 
+               SubscriptBox["sDip", "female"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"2", " ", 
+                  SubscriptBox["h", "male"]}]}], ")"}], " ", 
+               SubscriptBox["sDip", "male"]}]}], ")"}], "3"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             FractionBox[
+              RowBox[{
+               RowBox[{
+                SubscriptBox["h", "female"], " ", 
+                SubscriptBox["sDip", "female"]}], "+", 
+               RowBox[{
+                SubscriptBox["h", "male"], " ", 
+                SubscriptBox["sDip", "male"]}], "+", 
+               SubscriptBox["sHap", "female"], "+", 
+               SubscriptBox["sHap", "male"]}], 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  RowBox[{"2", " ", 
+                   SubscriptBox["h", "female"]}]}], ")"}], " ", 
+                SubscriptBox["sDip", "female"]}], "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  RowBox[{"2", " ", 
+                   SubscriptBox["h", "male"]}]}], ")"}], " ", 
+                SubscriptBox["sDip", "male"]}]}]]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "4"}], " ", "R", " ", "\[Alpha]1"}], "+", 
+             RowBox[{"12", " ", "k", " ", "R", " ", "\[Alpha]1"}], "-", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["k", "2"], " ", "R", " ", "\[Alpha]1"}], "+", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["R", "2"], " ", "\[Alpha]1"}], "-", 
+             RowBox[{"24", " ", "k", " ", 
+              SuperscriptBox["R", "2"], " ", "\[Alpha]1"}], "+", 
+             RowBox[{"16", " ", 
+              SuperscriptBox["k", "2"], " ", 
+              SuperscriptBox["R", "2"], " ", "\[Alpha]1"}], "+", 
+             RowBox[{
+              SuperscriptBox["k", "2"], " ", 
+              SubsuperscriptBox["sHap", "female", "2"]}], "+", 
+             RowBox[{"k", " ", "R", " ", 
+              SubsuperscriptBox["sHap", "female", "2"]}], "-", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["k", "2"], " ", "R", " ", 
+              SubsuperscriptBox["sHap", "female", "2"]}], "+", 
+             RowBox[{"2", " ", "k", " ", 
+              SubscriptBox["sHap", "female"], " ", 
+              SubscriptBox["sHap", "male"]}], "-", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["k", "2"], " ", 
+              SubscriptBox["sHap", "female"], " ", 
+              SubscriptBox["sHap", "male"]}], "+", 
+             RowBox[{"R", " ", 
+              SubscriptBox["sHap", "female"], " ", 
+              SubscriptBox["sHap", "male"]}], "-", 
+             RowBox[{"4", " ", "k", " ", "R", " ", 
+              SubscriptBox["sHap", "female"], " ", 
+              SubscriptBox["sHap", "male"]}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["k", "2"], " ", "R", " ", 
+              SubscriptBox["sHap", "female"], " ", 
+              SubscriptBox["sHap", "male"]}], "+", 
+             SubsuperscriptBox["sHap", "male", "2"], "-", 
+             RowBox[{"2", " ", "k", " ", 
+              SubsuperscriptBox["sHap", "male", "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["k", "2"], " ", 
+              SubsuperscriptBox["sHap", "male", "2"]}], "-", 
+             RowBox[{"R", " ", 
+              SubsuperscriptBox["sHap", "male", "2"]}], "+", 
+             RowBox[{"3", " ", "k", " ", "R", " ", 
+              SubsuperscriptBox["sHap", "male", "2"]}], "-", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["k", "2"], " ", "R", " ", 
+              SubsuperscriptBox["sHap", "male", "2"]}], "+", 
+             FractionBox[
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", "k"}], ")"}], " ", 
+               SubscriptBox["sDip", "male"], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "R"}], "+", 
+                    RowBox[{"k", " ", 
                     RowBox[{"(", 
                     RowBox[{
-                    RowBox[{"-", "4"}], "+", 
-                    RowBox[{"5", " ", "R"}]}], ")"}]}]}], ")"}]}]}], ")"}], 
-              " ", 
-              SubscriptBox["sHap", "male"]}]}], ")"}]}]}], ")"}]}], ")"}], 
-      "/", 
-      RowBox[{"(", 
-       RowBox[{"2", " ", "r", " ", "R", " ", 
-        SuperscriptBox[
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{"1", "-", 
-              RowBox[{"2", " ", 
-               SubscriptBox["h", "female"]}]}], ")"}], " ", 
-            SubscriptBox["sDip", "female"]}], "+", 
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{"1", "-", 
-              RowBox[{"2", " ", 
-               SubscriptBox["h", "male"]}]}], ")"}], " ", 
-            SubscriptBox["sDip", "male"]}]}], ")"}], "4"]}], ")"}]}]}], 
-    "}"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.682930061025495*^9, 3.682930066031076*^9}}],
+                    RowBox[{"-", "2"}], "+", 
+                    RowBox[{"3", " ", "R"}]}], ")"}]}]}], ")"}], " ", 
+                  SubscriptBox["sHap", "female"]}], "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "2"}], "+", 
+                    RowBox[{"k", " ", 
+                    RowBox[{"(", 
+                    RowBox[{"2", "-", 
+                    RowBox[{"3", " ", "R"}]}], ")"}]}], "+", "R"}], ")"}], 
+                  " ", 
+                  SubscriptBox["sHap", "male"]}]}], ")"}], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  SubscriptBox["h", "female"], " ", 
+                  SubscriptBox["sDip", "female"]}], "+", 
+                 SubscriptBox["sHap", "female"], "+", 
+                 SubscriptBox["sHap", "male"], "-", 
+                 RowBox[{
+                  SubscriptBox["h", "male"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SubscriptBox["sDip", "female"], "+", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["sHap", "female"], "+", 
+                    SubscriptBox["sHap", "male"]}], ")"}]}]}], ")"}]}]}], 
+                ")"}]}], 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  RowBox[{"2", " ", 
+                   SubscriptBox["h", "female"]}]}], ")"}], " ", 
+                SubscriptBox["sDip", "female"]}], "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  RowBox[{"2", " ", 
+                   SubscriptBox["h", "male"]}]}], ")"}], " ", 
+                SubscriptBox["sDip", "male"]}]}]], "+", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", "k"}], ")"}], "2"], " ", 
+               SubsuperscriptBox["sDip", "male", "2"], " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   SubscriptBox["h", "female"], " ", 
+                   SubscriptBox["sDip", "female"]}], "+", 
+                  SubscriptBox["sHap", "female"], "+", 
+                  SubscriptBox["sHap", "male"], "-", 
+                  RowBox[{
+                   SubscriptBox["h", "male"], " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["sDip", "female"], "+", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["sHap", "female"], "+", 
+                    SubscriptBox["sHap", "male"]}], ")"}]}]}], ")"}]}]}], 
+                 ")"}], "2"]}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"2", " ", 
+                    SubscriptBox["h", "female"]}]}], ")"}], " ", 
+                  SubscriptBox["sDip", "female"]}], "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"2", " ", 
+                    SubscriptBox["h", "male"]}]}], ")"}], " ", 
+                  SubscriptBox["sDip", "male"]}]}], ")"}], "2"]], "+", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["k", "2"], " ", 
+               SubsuperscriptBox["sDip", "female", "2"], " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   SubscriptBox["h", "male"], " ", 
+                   SubscriptBox["sDip", "male"]}], "+", 
+                  SubscriptBox["sHap", "female"], "+", 
+                  SubscriptBox["sHap", "male"], "-", 
+                  RowBox[{
+                   SubscriptBox["h", "female"], " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["sDip", "male"], "+", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["sHap", "female"], "+", 
+                    SubscriptBox["sHap", "male"]}], ")"}]}]}], ")"}]}]}], 
+                 ")"}], "2"]}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"2", " ", 
+                    SubscriptBox["h", "female"]}]}], ")"}], " ", 
+                  SubscriptBox["sDip", "female"]}], "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"2", " ", 
+                    SubscriptBox["h", "male"]}]}], ")"}], " ", 
+                  SubscriptBox["sDip", "male"]}]}], ")"}], "2"]], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"k", " ", 
+                SubscriptBox["sDip", "female"], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   SubscriptBox["h", "male"], " ", 
+                   SubscriptBox["sDip", "male"]}], "+", 
+                  SubscriptBox["sHap", "female"], "+", 
+                  SubscriptBox["sHap", "male"], "-", 
+                  RowBox[{
+                   SubscriptBox["h", "female"], " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["sDip", "male"], "+", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["sHap", "female"], "+", 
+                    SubscriptBox["sHap", "male"]}], ")"}]}]}], ")"}]}]}], 
+                 ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"k", " ", 
+                    RowBox[{"(", 
+                    RowBox[{"2", "-", 
+                    RowBox[{"3", " ", "R"}]}], ")"}]}], "+", 
+                    RowBox[{"2", " ", "R"}]}], ")"}], " ", 
+                   SubscriptBox["sHap", "female"]}], "+", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"2", "-", 
+                    RowBox[{"2", " ", "R"}], "+", 
+                    RowBox[{"k", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], "+", 
+                    RowBox[{"3", " ", "R"}]}], ")"}]}]}], ")"}], " ", 
+                   SubscriptBox["sHap", "male"]}], "-", 
+                  FractionBox[
+                   RowBox[{"2", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", "k"}], ")"}], " ", 
+                    SubscriptBox["sDip", "male"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    SubscriptBox["h", "female"], " ", 
+                    SubscriptBox["sDip", "female"]}], "+", 
+                    SubscriptBox["sHap", "female"], "+", 
+                    SubscriptBox["sHap", "male"], "-", 
+                    RowBox[{
+                    SubscriptBox["h", "male"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["sDip", "female"], "+", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["sHap", "female"], "+", 
+                    SubscriptBox["sHap", "male"]}], ")"}]}]}], ")"}]}]}], 
+                    ")"}]}], 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"2", " ", 
+                    SubscriptBox["h", "female"]}]}], ")"}], " ", 
+                    SubscriptBox["sDip", "female"]}], "+", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"2", " ", 
+                    SubscriptBox["h", "male"]}]}], ")"}], " ", 
+                    SubscriptBox["sDip", "male"]}]}]]}], ")"}]}], ")"}], "/", 
+              
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", 
+                   RowBox[{"2", " ", 
+                    SubscriptBox["h", "female"]}]}], ")"}], " ", 
+                 SubscriptBox["sDip", "female"]}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", 
+                   RowBox[{"2", " ", 
+                    SubscriptBox["h", "male"]}]}], ")"}], " ", 
+                 SubscriptBox["sDip", "male"]}]}], ")"}]}]}], ")"}]}]}], 
+         ")"}]}], ")"}]}], "/", 
+     RowBox[{"(", 
+      RowBox[{"2", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["sDip", "female"], "-", 
+          RowBox[{"2", " ", 
+           SubscriptBox["h", "female"], " ", 
+           SubscriptBox["sDip", "female"]}], "+", 
+          SubscriptBox["sDip", "male"], "-", 
+          RowBox[{"2", " ", 
+           SubscriptBox["h", "male"], " ", 
+           SubscriptBox["sDip", "male"]}]}], ")"}], "4"]}], ")"}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.682930061025495*^9, 3.682930066031076*^9}, 
+   3.685717954850648*^9}],
 
 Cell[TextData[StyleBox["1) Dominant masculinizer (neo-Y)",
  FontWeight->"Bold"]], "Text",
@@ -32376,7 +32925,8 @@ Cell[BoxData[
 
  CellChangeTimes->{{3.682930495856263*^9, 3.682930496038054*^9}, {
    3.682930718171624*^9, 3.682930718594324*^9}, 3.682935040615438*^9, 
-   3.68293513007069*^9, {3.68552747979904*^9, 3.6855275305109863`*^9}}],
+   3.68293513007069*^9, {3.68552747979904*^9, 3.6855275305109863`*^9}, {
+   3.685758722314773*^9, 3.685758760813417*^9}, 3.685758831853703*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -32389,7 +32939,9 @@ Cell[BoxData[
  CellChangeTimes->{
   3.68293050092279*^9, 3.682930718912271*^9, 3.682935041470999*^9, 
    3.682935130784491*^9, 3.6838191368724537`*^9, 3.6855274656108103`*^9, {
-   3.685527498412036*^9, 3.68552753098361*^9}}]
+   3.685527498412036*^9, 3.68552753098361*^9}, 3.685716041005438*^9, 
+   3.6857179592954903`*^9, {3.685758722940092*^9, 3.685758761610982*^9}, 
+   3.685758832604195*^9}]
 }, Open  ]],
 
 Cell["b) invading a ZW system", "Text",
@@ -32444,232 +32996,15 @@ Cell[BoxData[
   "}"}]], "Output",
  CellChangeTimes->{
   3.682930532288938*^9, 3.682930725629126*^9, {3.682935137202014*^9, 
-   3.6829351579850388`*^9}, 3.6838191369344673`*^9, 3.685527549916073*^9}]
+   3.6829351579850388`*^9}, 3.6838191369344673`*^9, 3.685527549916073*^9, 
+   3.6857160410565443`*^9, 3.685717962013794*^9}]
 }, Open  ]],
 
 Cell["\<\
-With no haploid selection or drive we have\
+these are somehow just the same as the case where \[Alpha]1 was order \
+\[Epsilon] and k=0\
 \>", "Text",
- CellChangeTimes->{{3.683819961987114*^9, 3.683819973363739*^9}, {
-   3.683820069863657*^9, 3.683820070500739*^9}, 3.685527583482608*^9, {
-   3.6855276397243433`*^9, 3.685527640745266*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"vDK07", "=", 
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        RowBox[{"tester", "/", 
-         RowBox[{"(", 
-          RowBox[{"pA", 
-           RowBox[{"(", 
-            RowBox[{"1", "-", "pA"}], ")"}]}], ")"}]}], "*", "VA"}], "/.", 
-       RowBox[{"realsol", "[", 
-        RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
-      RowBox[{
-       SubscriptBox["sHap", "i_"], "\[Rule]", "0"}]}], "/.", 
-     RowBox[{"k", "\[Rule]", "0"}]}], "/.", 
-    RowBox[{"\[Alpha]1", "\[Rule]", "0"}]}], "//", 
-   "FullSimplify"}]}]], "Input",
- CellChangeTimes->{{3.683820004976385*^9, 3.683820062860423*^9}, 
-   3.683820144319437*^9, 3.68382031317869*^9, {3.683859363159645*^9, 
-   3.6838593722340393`*^9}, {3.6838598012621927`*^9, 3.683859826921618*^9}, {
-   3.685527615284719*^9, 3.6855276353593082`*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  FractionBox[
-   RowBox[{
-    RowBox[{"(", 
-     RowBox[{"r", "-", "R"}], ")"}], " ", "VA", " ", 
-    SuperscriptBox[
-     RowBox[{"(", 
-      RowBox[{
-       SubscriptBox["h", "female"], "-", 
-       SubscriptBox["h", "male"]}], ")"}], "2"], " ", 
-    SubsuperscriptBox["sDip", "female", "2"], " ", 
-    SubsuperscriptBox["sDip", "male", "2"]}], 
-   RowBox[{"r", " ", "R", " ", 
-    SuperscriptBox[
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"-", "1"}], "+", 
-          RowBox[{"2", " ", 
-           SubscriptBox["h", "female"]}]}], ")"}], " ", 
-        SubscriptBox["sDip", "female"]}], "+", 
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"-", "1"}], "+", 
-          RowBox[{"2", " ", 
-           SubscriptBox["h", "male"]}]}], ")"}], " ", 
-        SubscriptBox["sDip", "male"]}]}], ")"}], "2"]}]], "}"}]], "Output",
- CellChangeTimes->{{3.6838200081001263`*^9, 3.683820063187394*^9}, 
-   3.683820144739327*^9, 3.683820313578493*^9, 3.6838593740143147`*^9, {
-   3.683859801979072*^9, 3.683859827546485*^9}, 3.685527587795499*^9, {
-   3.685527618546802*^9, 3.685527635882247*^9}}]
-}, Open  ]],
-
-Cell["\<\
-so that positivity requires, in addition to tighter linkage R<r, sexually \
-antagonistic selection (for VA>0) and differences in the dominance \
-coefficients between sexes.\
-\>", "Text",
- CellChangeTimes->{{3.683820086998822*^9, 3.683820137545643*^9}, {
-  3.683820172170022*^9, 3.683820196450255*^9}}],
-
-Cell["\<\
-And we see that this reduces to the result of van Doorn and Kirkpatrick 2007 \
-(SOM, top of page 7) with R=1/2\
-\>", "Text",
- CellChangeTimes->{{3.6838596700779867`*^9, 3.683859702792492*^9}, {
-  3.6838598392023163`*^9, 3.683859848773402*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"vK1", "=", 
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        RowBox[{
-         RowBox[{
-          RowBox[{
-           RowBox[{"-", "VA"}], " ", 
-           SubscriptBox["S", "A"], 
-           SubscriptBox["L", "A"]}], "/.", 
-          RowBox[{
-           SubscriptBox["S", "A"], "\[Rule]", 
-           RowBox[{
-            SubscriptBox["\[Sigma]", "male"], 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{
-               SubscriptBox["\[Sigma]", "male"], "-", 
-               SubscriptBox["\[Sigma]", "female"]}], ")"}], "/", "2"}]}]}]}], 
-         "/.", 
-         RowBox[{
-          SubscriptBox["L", "A"], "\[Rule]", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"1", "-", 
-             RowBox[{"2", "r"}]}], ")"}], "/", "r"}]}]}], "/.", 
-        RowBox[{"R", "\[Rule]", 
-         RowBox[{"1", "/", "2"}]}]}], "/.", 
-       RowBox[{
-        SubscriptBox["\[Sigma]", "i_"], "\[Rule]", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{"pA", "+", 
-           RowBox[{
-            SubscriptBox["h", "i"], 
-            RowBox[{"(", 
-             RowBox[{"1", "-", 
-              RowBox[{"2", "pA"}]}], ")"}]}]}], ")"}], 
-         SubscriptBox["sDip", "i"]}]}]}], "/.", 
-      RowBox[{"realsol", "[", 
-       RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
-     RowBox[{
-      SubscriptBox["sHap", "i_"], "\[Rule]", "0"}]}], "//", "Simplify"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"vK1", "/", "vDK07"}], "/.", 
-   RowBox[{"R", "\[Rule]", 
-    RowBox[{"1", "/", "2"}]}]}], "//", "FullSimplify"}]}], "Input",
- CellChangeTimes->{{3.683859014776146*^9, 3.683859081122615*^9}, {
-  3.683859132295431*^9, 3.6838593217471724`*^9}, {3.683859354576673*^9, 
-  3.683859355630741*^9}, {3.683859646351268*^9, 3.683859663447597*^9}, {
-  3.683859707970025*^9, 3.683859711832922*^9}, {3.683859842243608*^9, 
-  3.683859843790534*^9}, {3.6838599293460007`*^9, 3.683859933283943*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", "1", "}"}]], "Output",
- CellChangeTimes->{{3.683859233909803*^9, 3.683859322400282*^9}, 
-   3.683859356480666*^9, {3.6838596470077*^9, 3.683859663891958*^9}, 
-   3.683859712158799*^9, 3.683859844162202*^9, {3.6838599304825706`*^9, 
-   3.683859933601242*^9}, 3.68552765005307*^9}]
-}, Open  ]],
-
-Cell["\<\
-and to the result of van Doorn and Kirkpatrick 2007 (SOM, top of page 13) \
-with r=1/2\
-\>", "Text",
- CellChangeTimes->{{3.683860002059668*^9, 3.683860024594473*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"vK2", "=", 
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        RowBox[{
-         RowBox[{
-          RowBox[{"VA", " ", 
-           SubscriptBox["S", "A"], 
-           SubscriptBox["L", "A"]}], "/.", 
-          RowBox[{
-           SubscriptBox["S", "A"], "\[Rule]", 
-           RowBox[{
-            SubscriptBox["\[Sigma]", "male"], 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{
-               SubscriptBox["\[Sigma]", "male"], "-", 
-               SubscriptBox["\[Sigma]", "female"]}], ")"}], "/", "2"}]}]}]}], 
-         "/.", 
-         RowBox[{
-          SubscriptBox["L", "A"], "\[Rule]", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"1", "-", 
-             RowBox[{"2", "R"}]}], ")"}], "/", "R"}]}]}], "/.", 
-        RowBox[{"r", "\[Rule]", 
-         RowBox[{"1", "/", "2"}]}]}], "/.", 
-       RowBox[{
-        SubscriptBox["\[Sigma]", "i_"], "\[Rule]", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{"pA", "+", 
-           RowBox[{
-            SubscriptBox["h", "i"], 
-            RowBox[{"(", 
-             RowBox[{"1", "-", 
-              RowBox[{"2", "pA"}]}], ")"}]}]}], ")"}], 
-         SubscriptBox["sDip", "i"]}]}]}], "/.", 
-      RowBox[{"realsol", "[", 
-       RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
-     RowBox[{
-      SubscriptBox["sHap", "i_"], "\[Rule]", "0"}]}], "//", "Simplify"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"vK2", "/", "vDK07"}], "/.", 
-   RowBox[{"r", "\[Rule]", 
-    RowBox[{"1", "/", "2"}]}]}], "//", "FullSimplify"}]}], "Input",
- CellChangeTimes->{{3.68385992257852*^9, 3.683859951383355*^9}, {
-  3.683859983451351*^9, 3.683859997162365*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", "1", "}"}]], "Output",
- CellChangeTimes->{{3.6838599439999743`*^9, 3.683859951850771*^9}, {
-   3.683859986733872*^9, 3.683859997451723*^9}, 3.6855276538350983`*^9}]
-}, Open  ]],
+ CellChangeTimes->{{3.68575867172484*^9, 3.685758692593305*^9}}],
 
 Cell[TextData[StyleBox["2) Dominant feminizer (neo-W)",
  FontWeight->"Bold"]], "Text",
@@ -32714,17 +33049,12 @@ Cell[BoxData[
   3.685527658756337*^9, 3.6855276754229183`*^9}}],
 
 Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"(", 
-    RowBox[{"4", "-", 
-     RowBox[{"8", " ", "R"}]}], ")"}], " ", "VA", " ", "\[Alpha]1"}], 
-  "}"}]], "Output",
+ RowBox[{"{", "0", "}"}]], "Output",
  CellChangeTimes->{
   3.682930077645269*^9, 3.682930166729516*^9, {3.682930395119266*^9, 
    3.682930396586781*^9}, 3.682930657492775*^9, 3.682934799885385*^9, {
    3.682935050505561*^9, 3.682935091800971*^9}, 3.6838191366137*^9, 
-   3.685527676221045*^9}]
+   3.685527676221045*^9, 3.685716041473254*^9, 3.6857179996308317`*^9}]
 }, Open  ]],
 
 Cell["b) invading a ZW system", "Text",
@@ -32772,87 +33102,13 @@ Cell[BoxData[{
   3.685527708481818*^9, 3.685527715841412*^9}}],
 
 Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"(", 
-    RowBox[{"4", "-", 
-     RowBox[{"8", " ", "R"}]}], ")"}], " ", "VA", " ", "\[Alpha]1"}], 
-  "}"}]], "Output",
+ RowBox[{"{", "0", "}"}]], "Output",
  CellChangeTimes->{{3.682930190913101*^9, 3.682930232464683*^9}, 
    3.682930411914551*^9, 3.682930630626625*^9, {3.6829348815184317`*^9, 
    3.682934951312151*^9}, {3.682934984112999*^9, 3.682934986864356*^9}, 
-   3.68293510686029*^9, 3.683819136800584*^9, 3.685527717555155*^9}]
+   3.68293510686029*^9, 3.683819136800584*^9, 3.685527717555155*^9, 
+   3.685716041522707*^9, 3.6857180059813004`*^9}]
 }, Open  ]],
-
-Cell["\<\
-Note that with no haploid selection or drive we have\
-\>", "Text",
- CellChangeTimes->{{3.683819961987114*^9, 3.683819973363739*^9}, {
-  3.683820069863657*^9, 3.683820070500739*^9}, {3.685527724860714*^9, 
-  3.685527729252255*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{"tester", "/", 
-        RowBox[{"(", 
-         RowBox[{"pA", 
-          RowBox[{"(", 
-           RowBox[{"1", "-", "pA"}], ")"}]}], ")"}]}], "*", "VA"}], "/.", 
-      RowBox[{"realsol", "[", 
-       RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
-     RowBox[{"k", "\[Rule]", "1"}]}], "/.", 
-    RowBox[{
-     SubscriptBox["sHap", "i_"], "\[Rule]", "0"}]}], "/.", 
-   RowBox[{"\[Alpha]1", "\[Rule]", "0"}]}], "//", "Simplify"}]], "Input",
- CellChangeTimes->{{3.683820004976385*^9, 3.683820062860423*^9}, 
-   3.683820144319437*^9, 3.683820264127204*^9, 3.6838203096518*^9, {
-   3.685527731104905*^9, 3.685527761194396*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  FractionBox[
-   RowBox[{
-    RowBox[{"(", 
-     RowBox[{"r", "-", "R"}], ")"}], " ", "VA", " ", 
-    SuperscriptBox[
-     RowBox[{"(", 
-      RowBox[{
-       SubscriptBox["h", "female"], "-", 
-       SubscriptBox["h", "male"]}], ")"}], "2"], " ", 
-    SubsuperscriptBox["sDip", "female", "2"], " ", 
-    SubsuperscriptBox["sDip", "male", "2"]}], 
-   RowBox[{"r", " ", "R", " ", 
-    SuperscriptBox[
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"-", "1"}], "+", 
-          RowBox[{"2", " ", 
-           SubscriptBox["h", "female"]}]}], ")"}], " ", 
-        SubscriptBox["sDip", "female"]}], "+", 
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"-", "1"}], "+", 
-          RowBox[{"2", " ", 
-           SubscriptBox["h", "male"]}]}], ")"}], " ", 
-        SubscriptBox["sDip", "male"]}]}], ")"}], "2"]}]], "}"}]], "Output",
- CellChangeTimes->{{3.6838200081001263`*^9, 3.683820063187394*^9}, 
-   3.683820144739327*^9, 3.683820264560059*^9, 3.6838203102111*^9, {
-   3.685527734355784*^9, 3.685527761590966*^9}}]
-}, Open  ]],
-
-Cell["which is the same as a neo-Y invading an XY system.", "Text",
- CellChangeTimes->{{3.68382032458018*^9, 3.683820359027546*^9}}],
 
 Cell[TextData[StyleBox["3) Perfect ESD (half females, half males) ",
  FontWeight->"Bold"]], "Text",
@@ -32905,7 +33161,7 @@ Cell[BoxData[
    3.681898633956902*^9, 3.682134323129363*^9, 3.682145754380763*^9, {
    3.682930564206584*^9, 3.682930582074843*^9}, 3.682930738879339*^9, 
    3.682935171304976*^9, 3.682935321856833*^9, 3.683819136978011*^9, 
-   3.685527785961767*^9}]
+   3.685527785961767*^9, 3.685716041588283*^9, 3.6857180289828463`*^9}]
 }, Open  ]],
 
 Cell["b) invading a ZW system", "Text",
@@ -32961,119 +33217,9 @@ Cell[BoxData[
  RowBox[{"{", "0", "}"}]], "Output",
  CellChangeTimes->{{3.682930750362327*^9, 3.682930760313807*^9}, {
    3.6829351751629143`*^9, 3.682935188518745*^9}, 3.683819137020445*^9, 
-   3.685527801609375*^9}]
-}, Open  ]],
-
-Cell["\<\
-This is R times the average of the feminizer and masculinizer with free \
-recombination R=1/2\
-\>", "Text",
- CellChangeTimes->{{3.681792540682475*^9, 3.681792541604417*^9}, {
-  3.6817925859813223`*^9, 3.681792612735476*^9}, {3.68214853292664*^9, 
-  3.682148567035874*^9}, {3.682935456177763*^9, 3.682935468201387*^9}, {
-  3.6829355685035686`*^9, 3.682935581839847*^9}, {3.68381523519454*^9, 
-  3.683815238620298*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"Factor", "[", 
-   RowBox[{
-    RowBox[{"R", "/", "2"}], "*", 
-    RowBox[{"(", 
-     RowBox[{"selFeminizerXY", "+", "selMasculinizerXY"}], ")"}]}], "]"}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"0", "\[Equal]", 
-   RowBox[{
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{"%", "-", "selESDsimpXY"}], "/.", 
-      RowBox[{"R", "\[Rule]", 
-       RowBox[{"1", "/", "2"}]}]}], ")"}], "[", 
-    RowBox[{"[", "1", "]"}], "]"}]}], "//", "FullSimplify"}]}], "Input",
- CellChangeTimes->{{3.678844514479877*^9, 3.6788445688209267`*^9}, {
-  3.681792422364336*^9, 3.681792423971106*^9}, {3.681792482271418*^9, 
-  3.6817925101834507`*^9}, {3.682049601699399*^9, 3.68204963397768*^9}, {
-  3.6829307779789333`*^9, 3.682930797011935*^9}, {3.68293085515897*^9, 
-  3.6829309014328527`*^9}, {3.682935209833358*^9, 3.6829352946880207`*^9}, {
-  3.682935361372465*^9, 3.68293537936237*^9}, {3.682935417391333*^9, 
-  3.682935446286798*^9}, {3.682935697187887*^9, 3.682935753801828*^9}}],
-
-Cell[BoxData["True"], "Output",
- CellChangeTimes->{{3.678844536699091*^9, 3.678844569511002*^9}, 
-   3.6799388228166437`*^9, {3.6817924095595284`*^9, 3.681792424694335*^9}, {
-   3.681792487145247*^9, 3.681792511128744*^9}, 3.681897678809434*^9, 
-   3.681898634012019*^9, 3.682134323162809*^9, 3.682145754426463*^9, {
-   3.682930787964546*^9, 3.6829307973650427`*^9}, {3.682930866500527*^9, 
-   3.682930901868948*^9}, {3.6829352043718348`*^9, 3.682935218222232*^9}, {
-   3.68293525330481*^9, 3.682935314877096*^9}, {3.682935362492547*^9, 
-   3.682935379725898*^9}, {3.68293542457626*^9, 3.682935446943697*^9}, 
-   3.682935712306611*^9, {3.682935747553588*^9, 3.682935754154738*^9}, 
-   3.68381913705301*^9, 3.685527834309194*^9}]
-}, Open  ]],
-
-Cell["\<\
-Note that R is involved if the ESD is not perfect (k \[NotEqual] 1/2) (when \
-k=1/2 the R cancels out with the 1/R in the SA term)\
-\>", "Text",
- CellChangeTimes->{{3.678767485915291*^9, 3.678767501230596*^9}, {
-  3.678767765444089*^9, 3.6787677924628277`*^9}, {3.678844623873992*^9, 
-  3.678844626159936*^9}, {3.6788449648037577`*^9, 3.678844995984447*^9}, {
-  3.681792641368907*^9, 3.6817926537341433`*^9}, {3.6818950176296787`*^9, 
-  3.681895024308425*^9}, {3.6829354966246223`*^9, 3.682935520880041*^9}, {
-  3.683815263495261*^9, 3.68381526948603*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Collect", "[", 
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{"tester", "/", 
-        RowBox[{"(", 
-         RowBox[{"pA", 
-          RowBox[{"(", 
-           RowBox[{"1", "-", "pA"}], ")"}]}], ")"}]}], "*", "VA"}], "/.", 
-      RowBox[{"realsol", "[", 
-       RowBox[{"[", "3", "]"}], "]"}]}], "/.", 
-     RowBox[{
-      SubscriptBox["h", "sex_"], "\[Rule]", "h"}]}], "/.", 
-    RowBox[{
-     SubscriptBox["sHap", "sex_"], "\[Rule]", "0"}]}], ",", 
-   RowBox[{"{", "\[Alpha]1", "}"}], ",", "Simplify"}], "]"}]], "Input",
- CellChangeTimes->{
-  3.6788447547878647`*^9, {3.678844814211166*^9, 3.678844815350346*^9}, 
-   3.6788449921754913`*^9, {3.681792658887372*^9, 3.681792684333521*^9}, {
-   3.6829309143767033`*^9, 3.682930920923337*^9}, 3.6829354894522257`*^9, {
-   3.685527812171701*^9, 3.685527822983827*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"-", "4"}], " ", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"-", "1"}], "+", 
-     RowBox[{"2", " ", "k"}]}], ")"}], " ", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"-", "1"}], "+", 
-     RowBox[{"2", " ", "R"}]}], ")"}], " ", "VA", " ", "\[Alpha]1"}], 
-  "}"}]], "Output",
- CellChangeTimes->{
-  3.678767539397587*^9, 3.678770145319853*^9, 3.6788447560867357`*^9, {
-   3.678844807892462*^9, 3.678844815643482*^9}, 3.6788449926094522`*^9, 
-   3.679938822900567*^9, 3.681792684811819*^9, 3.681897678859838*^9, 
-   3.6818986341040173`*^9, 3.68213432321026*^9, 3.6821457544674587`*^9, {
-   3.6829309158885508`*^9, 3.682930921596448*^9}, 3.682935490032586*^9, 
-   3.683819137202325*^9, 3.685527824626951*^9}]
+   3.685527801609375*^9, 3.685716041622818*^9, 3.685718031781567*^9}]
 }, Open  ]]
-}, Closed]]
+}, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -33338,7 +33484,8 @@ Cell[BoxData[
    3.682070046092381*^9, 3.682072425383737*^9, 3.6820724627438173`*^9, 
    3.682072512278058*^9, 3.682075712311488*^9, 3.682135615311754*^9, {
    3.6829209199419947`*^9, 3.682920944479432*^9}, {3.685529827354039*^9, 
-   3.6855298370676517`*^9}, {3.685529908335615*^9, 3.685529929293446*^9}}]
+   3.6855298370676517`*^9}, {3.685529908335615*^9, 3.685529929293446*^9}, 
+   3.685716478836873*^9}]
 }, Open  ]],
 
 Cell["The b coefficient is", "Text",
@@ -33416,7 +33563,8 @@ Cell[BoxData[
    3.6820700462040453`*^9, {3.6820701628009157`*^9, 3.6820701901485033`*^9}, 
    3.682072427850009*^9, 3.6820724646921577`*^9, 3.682072515013473*^9, 
    3.6820757148563128`*^9, 3.6821356154205933`*^9, {3.682920922414143*^9, 
-   3.682920947681261*^9}, 3.68552984126343*^9, 3.685529935684054*^9}]
+   3.682920947681261*^9}, 3.68552984126343*^9, 3.685529935684054*^9, 
+   3.685716478922028*^9}]
 }, Open  ]],
 
 Cell["The c coefficient is", "Text",
@@ -33517,7 +33665,8 @@ Cell[BoxData[
    3.681904012826597*^9, 3.681904017883568*^9}, 3.6820699539500103`*^9, 
    3.682070046309187*^9, 3.682072429864416*^9, 3.68207246656255*^9, 
    3.682072518396834*^9, 3.68207571717325*^9, 3.682135615512971*^9, 
-   3.6829209545588217`*^9, 3.685529851485553*^9, 3.685529951401218*^9}]
+   3.6829209545588217`*^9, 3.685529851485553*^9, 3.685529951401218*^9, 
+   3.685716479029351*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -33615,7 +33764,7 @@ Cell[BoxData[
    3.681902457853252*^9, 3.681902460302452*^9}, 3.681902853590461*^9, 
    3.681903688647355*^9, 3.681903731276161*^9, 3.68190424567815*^9, 
    3.68205090085511*^9, 3.682067861612368*^9, 3.68214132999995*^9, 
-   3.6855312705730762`*^9}]
+   3.6855312705730762`*^9, 3.685716548186652*^9}]
 }, Open  ]],
 
 Cell["the b coefficient is", "Text",
@@ -33657,10 +33806,10 @@ Cell[BoxData[
          RowBox[{"a", ",", "male"}]], " ", 
         SubscriptBox["wDip", 
          RowBox[{"a", ",", "a", ",", "female"}]]}], "+", 
-       RowBox[{"2", " ", "pAveM", " ", 
+       RowBox[{"pAveM", " ", 
         RowBox[{"(", 
          RowBox[{
-          RowBox[{"-", "1"}], "+", "R"}], ")"}], " ", "\[Alpha]", " ", 
+          RowBox[{"-", "1"}], "+", "R"}], ")"}], " ", 
         SubscriptBox["wHap", 
          RowBox[{"A", ",", "male"}]], " ", 
         SubscriptBox["wDip", 
@@ -33670,13 +33819,13 @@ Cell[BoxData[
       RowBox[{"A", ",", "female"}]], " ", 
      RowBox[{"(", 
       RowBox[{
-       RowBox[{"2", " ", 
+       RowBox[{
         RowBox[{"(", 
          RowBox[{
           RowBox[{"-", "1"}], "+", "pAveM"}], ")"}], " ", 
         RowBox[{"(", 
          RowBox[{
-          RowBox[{"-", "1"}], "+", "R"}], ")"}], " ", "\[Alpha]", " ", 
+          RowBox[{"-", "1"}], "+", "R"}], ")"}], " ", 
         SubscriptBox["wHap", 
          RowBox[{"a", ",", "male"}]], " ", 
         SubscriptBox["wDip", 
@@ -33691,7 +33840,8 @@ Cell[BoxData[
    3.681902191673566*^9, 3.681902201585752*^9}, {3.681902468585396*^9, 
    3.6819025217737637`*^9}, {3.681902847721582*^9, 3.681902878859128*^9}, 
    3.681904245827611*^9, 3.681904302410067*^9, 3.6820509010117617`*^9, 
-   3.6820678630338707`*^9, 3.6821413300795107`*^9, 3.685531270722204*^9}]
+   3.6820678630338707`*^9, 3.6821413300795107`*^9, 3.685531270722204*^9, 
+   3.685716548262754*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -33721,7 +33871,8 @@ Cell[BoxData[
    3.6820509750975637`*^9}}],
 
 Cell[BoxData[
- RowBox[{"4", " ", 
+ RowBox[{
+  RowBox[{"-", "4"}], " ", 
   SubscriptBox["wHap", 
    RowBox[{"a", ",", "female"}]], " ", 
   SubscriptBox["wHap", 
@@ -33729,25 +33880,24 @@ Cell[BoxData[
   RowBox[{"(", 
    RowBox[{
     RowBox[{
-     RowBox[{"-", "2"}], " ", 
      SuperscriptBox[
       RowBox[{"(", 
        RowBox[{
         RowBox[{"-", "1"}], "+", "pAveM"}], ")"}], "2"], " ", 
      RowBox[{"(", 
       RowBox[{
-       RowBox[{"-", "1"}], "+", "R"}], ")"}], " ", "\[Alpha]", " ", 
+       RowBox[{"-", "1"}], "+", "R"}], ")"}], " ", 
      SubsuperscriptBox["wHap", 
       RowBox[{"a", ",", "male"}], "2"], " ", 
      SubscriptBox["wDip", 
       RowBox[{"a", ",", "a", ",", "female"}]], " ", 
      SubscriptBox["wDip", 
-      RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
-    RowBox[{"2", " ", 
+      RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+    RowBox[{
      SuperscriptBox["pAveM", "2"], " ", 
      RowBox[{"(", 
       RowBox[{
-       RowBox[{"-", "1"}], "+", "R"}], ")"}], " ", "\[Alpha]", " ", 
+       RowBox[{"-", "1"}], "+", "R"}], ")"}], " ", 
      SubsuperscriptBox["wHap", 
       RowBox[{"A", ",", "male"}], "2"], " ", 
      SubscriptBox["wDip", 
@@ -33764,22 +33914,15 @@ Cell[BoxData[
       RowBox[{"A", ",", "male"}]], " ", 
      RowBox[{"(", 
       RowBox[{
-       RowBox[{"4", " ", 
+       RowBox[{
         RowBox[{"(", 
          RowBox[{
-          SuperscriptBox["\[Alpha]", "2"], "-", 
-          RowBox[{"2", " ", "R", " ", 
-           SuperscriptBox["\[Alpha]", "2"]}], "+", 
-          RowBox[{
-           SuperscriptBox["R", "2"], " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"-", "1"}], "+", 
-             RowBox[{"2", " ", "\[Alpha]"}]}], ")"}]}]}], ")"}], " ", 
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"2", " ", "R"}]}], ")"}], " ", 
         SubscriptBox["wDip", 
          RowBox[{"a", ",", "A", ",", "female"}]], " ", 
         SubscriptBox["wDip", 
-         RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+         RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
        RowBox[{
         SubscriptBox["wDip", 
          RowBox[{"a", ",", "a", ",", "female"}]], " ", 
@@ -33791,9 +33934,9 @@ Cell[BoxData[
    3.6819030461006117`*^9}, {3.681903090378714*^9, 3.681903109252812*^9}, 
    3.681904245942725*^9, 3.6819043098248053`*^9, {3.682050973149679*^9, 
    3.68205097568729*^9}, 3.682067865314228*^9, 3.682141330127816*^9, 
-   3.685531270845912*^9}]
+   3.685531270845912*^9, 3.685716548308051*^9}]
 }, Open  ]]
-}, Open  ]]
+}, Closed]]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -33891,7 +34034,7 @@ Cell[BoxData[
   "}"}]], "Output",
  CellChangeTimes->{{3.68207260895572*^9, 3.682072626981361*^9}, 
    3.682073800386057*^9, 3.682075726053172*^9, 3.682135616835877*^9, 
-   3.6829209690058537`*^9, 3.6855299787777767`*^9}]
+   3.6829209690058537`*^9, 3.6855299787777767`*^9, 3.6857165497146597`*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -33994,7 +34137,7 @@ Cell[BoxData[{
 Cell[BoxData[
  RowBox[{"gmean", ">", "0"}]], "Output",
  CellChangeTimes->{3.68292100540563*^9, 3.682921045569826*^9, 
-  3.685529987606135*^9}]
+  3.685529987606135*^9, 3.685716550175064*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -34145,19 +34288,19 @@ Cell[BoxData[
    3.682135896839862*^9, 3.682135908064682*^9}, {3.682136566301485*^9, 
    3.6821365787637997`*^9}, {3.682141100107986*^9, 3.682141110445961*^9}, {
    3.682142543362563*^9, 3.682142638724777*^9}, {3.682921077347794*^9, 
-   3.682921100549272*^9}, 3.685529994390254*^9}]
+   3.682921100549272*^9}, 3.685529994390254*^9, 3.6857165504664383`*^9}]
 }, Open  ]],
 
 Cell["which can be rearranged into", "Text",
  CellChangeTimes->{{3.682076957315551*^9, 3.682076963194953*^9}}],
 
 Cell[BoxData[
- RowBox[{" ", 
+ RowBox[{
   RowBox[{
    RowBox[{
-    RowBox[{"2", 
+    RowBox[{"2", "  ", "R", " ", 
      RowBox[{"(", 
-      RowBox[{"1", "-", "\[Alpha]"}], ")"}], "R", " ", 
+      RowBox[{"1", "-", "\[Alpha]"}], ")"}], " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{"gAs", " ", "pXf", " ", 
@@ -34175,13 +34318,13 @@ Cell[BoxData[
      SubscriptBox["wDip", 
       RowBox[{"A", ",", "a", ",", "male"}]]}], "-", 
     FractionBox[
-     RowBox[{"2", 
+     RowBox[{"4", " ", 
       RowBox[{"(", 
        RowBox[{"1", "-", "pXf"}], ")"}], " ", "pXf", " ", 
       SuperscriptBox["R", "2"], " ", 
       RowBox[{"(", 
-       RowBox[{
-        RowBox[{"1", "/", "2"}], "-", " ", "\[Alpha]"}], ")"}], " ", 
+       RowBox[{"1", "-", 
+        RowBox[{"2", " ", "\[Alpha]"}]}], ")"}], " ", 
       SubscriptBox["wHap", 
        RowBox[{"a", ",", "female"}]], " ", 
       SubscriptBox["wHap", 
@@ -34192,11 +34335,11 @@ Cell[BoxData[
        RowBox[{"A", ",", "male"}]], " ", 
       SubsuperscriptBox["wDip", 
        RowBox[{"A", ",", "a", ",", "male"}], "2"]}], "meanM"]}], ">", 
-   RowBox[{"gas", " ", "gAs", " ", "meanM"}]}]}]], "Input",
+   RowBox[{"gas", " ", "gAs", " ", "meanM"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.6855301360420017`*^9, 3.685530249194461*^9}, {
    3.685530313218573*^9, 3.685530316143889*^9}, {3.685530395625374*^9, 
    3.6855303995610847`*^9}, 3.68553051228017*^9, {3.68553061733228*^9, 
-   3.685530634940534*^9}}],
+   3.685530634940534*^9}, {3.685718127466453*^9, 3.685718194092719*^9}}],
 
 Cell["\<\
 If both ga>0 and gA>0 then 2a+b>0 and the neo-Y invades. If both gas<0 and \
@@ -34216,41 +34359,39 @@ negative. Dividing through and flipping the inequality:\
    3.6821411586928167`*^9}, {3.682141684924884*^9, 3.682141710615905*^9}}],
 
 Cell[BoxData[
- RowBox[{" ", 
+ RowBox[{
   RowBox[{
    RowBox[{
-    RowBox[{"2", 
+    RowBox[{"2", "  ", "R", " ", 
      RowBox[{"(", 
-      RowBox[{"1", "-", "\[Alpha]"}], ")"}], "R", 
+      RowBox[{"1", "-", "\[Alpha]"}], ")"}], " ", 
      RowBox[{"(", 
-      StyleBox[" ",
-       FontSize->12], 
       RowBox[{
        FractionBox[
-        RowBox[{"pXf", " ", 
-         SubscriptBox["wHap", 
-          RowBox[{"a", ",", "male"}]], 
-         SubscriptBox["wHap", 
-          RowBox[{"A", ",", "female"}]]}], "gAs"], "+", 
-       FractionBox[
         RowBox[{" ", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{"1", "-", "pXf"}], ")"}], " ", 
+         RowBox[{"pXf", " ", 
           SubscriptBox["wHap", 
-           RowBox[{"a", ",", "female"}]], " ", 
+           RowBox[{"a", ",", "male"}]], " ", 
           SubscriptBox["wHap", 
-           RowBox[{"A", ",", "male"}]]}]}], "gas"]}], ")"}], " ", 
+           RowBox[{"A", ",", "female"}]]}]}], "gas"], "+", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "-", "pXf"}], ")"}], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}]], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "male"}]]}], "gAs"]}], ")"}], " ", 
      SubscriptBox["wDip", 
       RowBox[{"A", ",", "a", ",", "male"}]]}], "-", 
     FractionBox[
-     RowBox[{"2", 
+     RowBox[{"4", " ", 
       RowBox[{"(", 
        RowBox[{"1", "-", "pXf"}], ")"}], " ", "pXf", " ", 
       SuperscriptBox["R", "2"], " ", 
       RowBox[{"(", 
-       RowBox[{
-        RowBox[{"1", "/", "2"}], "-", " ", "\[Alpha]"}], ")"}], " ", 
+       RowBox[{"1", "-", 
+        RowBox[{"2", " ", "\[Alpha]"}]}], ")"}], " ", 
       SubscriptBox["wHap", 
        RowBox[{"a", ",", "female"}]], " ", 
       SubscriptBox["wHap", 
@@ -34261,8 +34402,8 @@ Cell[BoxData[
        RowBox[{"A", ",", "male"}]], " ", 
       SubsuperscriptBox["wDip", 
        RowBox[{"A", ",", "a", ",", "male"}], "2"]}], 
-     RowBox[{"gas", " ", "gAs", " ", "meanM"}]]}], "<", "meanM"}]}]], "Input",\
-
+     RowBox[{"meanM", " ", "gas", " ", "gAs"}]]}], "<", "meanM"}], 
+  ";"}]], "Input",
  CellChangeTimes->{{3.678845120164757*^9, 3.6788451205308228`*^9}, {
    3.678845164017808*^9, 3.678845206833847*^9}, {3.678846328050565*^9, 
    3.678846331194606*^9}, 3.681904868185891*^9, {3.6820566735977182`*^9, 
@@ -34275,7 +34416,7 @@ Cell[BoxData[
    3.682135987552332*^9}, {3.682141123172954*^9, 3.6821411245639353`*^9}, 
    3.682921411743918*^9, {3.685530502304582*^9, 3.68553053029379*^9}, {
    3.685530613534748*^9, 3.685530614468807*^9}, {3.685530876639811*^9, 
-   3.6855308807445917`*^9}}],
+   3.6855308807445917`*^9}, {3.685718215503768*^9, 3.6857182547371187`*^9}}],
 
 Cell["\<\
 If \[Alpha]=1/2 we recover the no drive case. If, instead, there is no \
@@ -34286,58 +34427,55 @@ haploid selection then we have\
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{" ", 
+ RowBox[{
   RowBox[{
    RowBox[{
-    RowBox[{
-     RowBox[{"2", 
-      RowBox[{"(", 
-       RowBox[{"1", "-", "\[Alpha]"}], ")"}], "R", 
-      RowBox[{"(", 
-       StyleBox[" ",
-        FontSize->12], 
-       RowBox[{
-        FractionBox[
+    RowBox[{"2", "  ", "R", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "\[Alpha]"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        RowBox[{" ", 
          RowBox[{"pXf", " ", 
           SubscriptBox["wHap", 
-           RowBox[{"a", ",", "male"}]], 
+           RowBox[{"a", ",", "male"}]], " ", 
           SubscriptBox["wHap", 
-           RowBox[{"A", ",", "female"}]]}], "gAs"], "+", 
-        FractionBox[
-         RowBox[{" ", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"1", "-", "pXf"}], ")"}], " ", 
-           SubscriptBox["wHap", 
-            RowBox[{"a", ",", "female"}]], " ", 
-           SubscriptBox["wHap", 
-            RowBox[{"A", ",", "male"}]]}]}], "gas"]}], ")"}], " ", 
-      SubscriptBox["wDip", 
-       RowBox[{"A", ",", "a", ",", "male"}]]}], "-", 
-     FractionBox[
-      RowBox[{"2", 
-       RowBox[{"(", 
-        RowBox[{"1", "-", "pXf"}], ")"}], " ", "pXf", " ", 
-       SuperscriptBox["R", "2"], " ", 
-       RowBox[{"(", 
+           RowBox[{"A", ",", "female"}]]}]}], "gas"], "+", 
+       FractionBox[
         RowBox[{
-         RowBox[{"1", "/", "2"}], "-", " ", "\[Alpha]"}], ")"}], " ", 
-       SubscriptBox["wHap", 
-        RowBox[{"a", ",", "female"}]], " ", 
-       SubscriptBox["wHap", 
-        RowBox[{"a", ",", "male"}]], " ", 
-       SubscriptBox["wHap", 
-        RowBox[{"A", ",", "female"}]], " ", 
-       SubscriptBox["wHap", 
-        RowBox[{"A", ",", "male"}]], " ", 
-       SubsuperscriptBox["wDip", 
-        RowBox[{"A", ",", "a", ",", "male"}], "2"]}], 
-      RowBox[{"gas", " ", "gAs", " ", "meanM"}]]}], "<", "meanM"}], "/.", 
-   RowBox[{
-    SubscriptBox["wHap", 
-     RowBox[{"i_", ",", "j_"}]], "\[Rule]", "1"}]}]}]], "Input",
+         RowBox[{"(", 
+          RowBox[{"1", "-", "pXf"}], ")"}], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}]], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "male"}]]}], "gAs"]}], ")"}], " ", 
+     SubscriptBox["wDip", 
+      RowBox[{"A", ",", "a", ",", "male"}]]}], "-", 
+    FractionBox[
+     RowBox[{"4", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "pXf"}], ")"}], " ", "pXf", " ", 
+      SuperscriptBox["R", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        RowBox[{"2", " ", "\[Alpha]"}]}], ")"}], " ", 
+      SubscriptBox["wHap", 
+       RowBox[{"a", ",", "female"}]], " ", 
+      SubscriptBox["wHap", 
+       RowBox[{"a", ",", "male"}]], " ", 
+      SubscriptBox["wHap", 
+       RowBox[{"A", ",", "female"}]], " ", 
+      SubscriptBox["wHap", 
+       RowBox[{"A", ",", "male"}]], " ", 
+      SubsuperscriptBox["wDip", 
+       RowBox[{"A", ",", "a", ",", "male"}], "2"]}], 
+     RowBox[{"meanM", " ", "gas", " ", "gAs"}]]}], "<", "meanM"}], "/.", 
+  RowBox[{
+   SubscriptBox["wHap", 
+    RowBox[{"i_", ",", "j_"}]], "\[Rule]", "1"}]}]], "Input",
  CellChangeTimes->{{3.685530676498001*^9, 3.685530716121373*^9}, 
-   3.6855308181446133`*^9, 3.685530889028912*^9}],
+   3.6855308181446133`*^9, 3.685530889028912*^9, 3.685718269469812*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -34346,27 +34484,28 @@ Cell[BoxData[
     RowBox[{"(", 
      RowBox[{
       FractionBox[
-       RowBox[{"1", "-", "pXf"}], "gas"], "+", 
-      FractionBox["pXf", "gAs"]}], ")"}], " ", "R", " ", 
+       RowBox[{"1", "-", "pXf"}], "gAs"], "+", 
+      FractionBox["pXf", "gas"]}], ")"}], " ", "R", " ", 
     RowBox[{"(", 
      RowBox[{"1", "-", "\[Alpha]"}], ")"}], " ", 
     SubscriptBox["wDip", 
      RowBox[{"A", ",", "a", ",", "male"}]]}], "-", 
    FractionBox[
-    RowBox[{"2", " ", 
+    RowBox[{"4", " ", 
      RowBox[{"(", 
       RowBox[{"1", "-", "pXf"}], ")"}], " ", "pXf", " ", 
      SuperscriptBox["R", "2"], " ", 
      RowBox[{"(", 
-      RowBox[{
-       FractionBox["1", "2"], "-", "\[Alpha]"}], ")"}], " ", 
+      RowBox[{"1", "-", 
+       RowBox[{"2", " ", "\[Alpha]"}]}], ")"}], " ", 
      SubsuperscriptBox["wDip", 
       RowBox[{"A", ",", "a", ",", "male"}], "2"]}], 
     RowBox[{"gas", " ", "gAs", " ", "meanM"}]]}], "<", "meanM"}]], "Output",
  CellChangeTimes->{{3.685530688467557*^9, 3.6855307165702877`*^9}, 
-   3.685530818823543*^9, 3.6855308899246397`*^9}]
+   3.685530818823543*^9, 3.6855308899246397`*^9, 3.685716550640958*^9, 
+   3.685718270773924*^9}]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -34429,7 +34568,7 @@ Cell[BoxData[
           RowBox[{"a", ",", "male"}]], " ", 
          SubscriptBox["wDip", 
           RowBox[{"a", ",", "a", ",", "female"}]]}], "-", 
-        RowBox[{"2", " ", "pAveM", " ", "\[Alpha]", " ", 
+        RowBox[{"pAveM", " ", 
          SubscriptBox["wHap", 
           RowBox[{"A", ",", "male"}]], " ", 
          SubscriptBox["wDip", 
@@ -34442,10 +34581,10 @@ Cell[BoxData[
        RowBox[{"A", ",", "female"}]], " ", 
       RowBox[{"(", 
        RowBox[{
-        RowBox[{"2", " ", 
+        RowBox[{
          RowBox[{"(", 
           RowBox[{
-           RowBox[{"-", "1"}], "+", "pAveM"}], ")"}], " ", "\[Alpha]", " ", 
+           RowBox[{"-", "1"}], "+", "pAveM"}], ")"}], " ", 
          SubscriptBox["wHap", 
           RowBox[{"a", ",", "male"}]], " ", 
          SubscriptBox["wDip", 
@@ -34462,7 +34601,7 @@ Cell[BoxData[
    3.681904257578438*^9}, 3.681904320533412*^9, 3.681904973448106*^9, {
    3.681918104779442*^9, 3.681918113935005*^9}, {3.681918177268292*^9, 
    3.681918195251687*^9}, 3.6820509796532917`*^9, 3.682067867288456*^9, 
-   3.6821413305913*^9, 3.685531272979574*^9}]
+   3.6821413305913*^9, 3.685531272979574*^9, 3.685716551043758*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -34557,18 +34696,17 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"(", 
      RowBox[{"gaR0", "+", "gAR0"}], ")"}], " ", "meanF"}], "+", 
-   RowBox[{"2", " ", 
+   RowBox[{
     RowBox[{"(", 
      RowBox[{
-      RowBox[{"-", "1"}], "+", "pAveM"}], ")"}], " ", "R", " ", "\[Alpha]", 
-    " ", 
+      RowBox[{"-", "1"}], "+", "pAveM"}], ")"}], " ", "R", " ", 
     SubscriptBox["wHap", 
      RowBox[{"a", ",", "male"}]], " ", 
     SubscriptBox["wHap", 
      RowBox[{"A", ",", "female"}]], " ", 
     SubscriptBox["wDip", 
      RowBox[{"A", ",", "a", ",", "female"}]]}]}], ">", 
-  RowBox[{"2", " ", "pAveM", " ", "R", " ", "\[Alpha]", " ", 
+  RowBox[{"pAveM", " ", "R", " ", 
    SubscriptBox["wHap", 
     RowBox[{"a", ",", "female"}]], " ", 
    SubscriptBox["wHap", 
@@ -34581,7 +34719,7 @@ Cell[BoxData[
    3.6819169862835627`*^9, {3.6819170194611177`*^9, 3.6819170422821217`*^9}, 
    3.6819171630559587`*^9, 3.681917195922757*^9, 3.682054686536769*^9, 
    3.682067871437381*^9, 3.682141331031554*^9, 3.682141365134034*^9, 
-   3.68553127350327*^9}]
+   3.68553127350327*^9, 3.685716551409717*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -34614,7 +34752,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"(", 
      RowBox[{"gaR0", "+", "gAR0"}], ")"}], " ", "meanF"}], "+", 
-   RowBox[{"2", " ", "R", " ", "\[Alpha]", " ", 
+   RowBox[{"R", " ", 
     RowBox[{"(", 
      RowBox[{
       RowBox[{
@@ -34630,7 +34768,7 @@ Cell[BoxData[
      RowBox[{"A", ",", "a", ",", "female"}]]}]}], ">", "0"}]], "Output",
  CellChangeTimes->{3.681917128502346*^9, 3.6819171650046377`*^9, 
   3.681917199198641*^9, 3.682067878138625*^9, 3.6821413311467733`*^9, 
-  3.682141370122883*^9, 3.685531273573718*^9}]
+  3.682141370122883*^9, 3.685531273573718*^9, 3.6857165514727182`*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -34738,7 +34876,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.68191839577896*^9, 3.681918419133647*^9}, 
    3.681918470286449*^9, {3.681918870254158*^9, 3.6819188780079813`*^9}, 
    3.681918908932249*^9, 3.6820678797229843`*^9, 3.6820755708955708`*^9, 
-   3.682076174531219*^9, 3.682141454119433*^9, 3.685531274062457*^9}]
+   3.682076174531219*^9, 3.682141454119433*^9, 3.685531274062457*^9, 
+   3.6857165517508793`*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -34802,45 +34941,25 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{
   RowBox[{
-   RowBox[{"gaR0", " ", "gAR0", " ", 
-    SuperscriptBox["meanF", "3"]}], "+", 
-   RowBox[{
-    SuperscriptBox["meanF", "2"], " ", "R", " ", 
+   RowBox[{"gaR0", " ", "gAR0", " ", "meanF"}], "+", 
+   RowBox[{"R", " ", 
     RowBox[{"(", 
      RowBox[{
-      RowBox[{"2", " ", "gaR0", " ", 
+      RowBox[{"gaR0", " ", 
        RowBox[{"(", 
         RowBox[{
-         RowBox[{"-", "1"}], "+", "pAveM"}], ")"}], " ", "\[Alpha]", " ", 
+         RowBox[{"-", "1"}], "+", "pAveM"}], ")"}], " ", 
        SubscriptBox["wHap", 
         RowBox[{"a", ",", "male"}]], " ", 
        SubscriptBox["wHap", 
         RowBox[{"A", ",", "female"}]]}], "-", 
-      RowBox[{"2", " ", "gAR0", " ", "pAveM", " ", "\[Alpha]", " ", 
+      RowBox[{"gAR0", " ", "pAveM", " ", 
        SubscriptBox["wHap", 
         RowBox[{"a", ",", "female"}]], " ", 
        SubscriptBox["wHap", 
         RowBox[{"A", ",", "male"}]]}]}], ")"}], " ", 
     SubscriptBox["wDip", 
-     RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
-   RowBox[{"4", " ", "meanF", " ", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{"-", "1"}], "+", "pAveM"}], ")"}], " ", "pAveM", " ", 
-    SuperscriptBox["R", "2"], " ", 
-    RowBox[{"(", 
-     RowBox[{"1", "-", 
-      RowBox[{"2", " ", "\[Alpha]"}]}], ")"}], " ", 
-    SubscriptBox["wHap", 
-     RowBox[{"a", ",", "female"}]], " ", 
-    SubscriptBox["wHap", 
-     RowBox[{"a", ",", "male"}]], " ", 
-    SubscriptBox["wHap", 
-     RowBox[{"A", ",", "female"}]], " ", 
-    SubscriptBox["wHap", 
-     RowBox[{"A", ",", "male"}]], " ", 
-    SubsuperscriptBox["wDip", 
-     RowBox[{"A", ",", "a", ",", "female"}], "2"]}]}], "<", "0"}]], "Output",
+     RowBox[{"A", ",", "a", ",", "female"}]]}]}], "<", "0"}]], "Output",
  CellChangeTimes->{
   3.681918572925273*^9, 3.681918606886701*^9, {3.6819187308962708`*^9, 
    3.68191874093325*^9}, {3.6819187831120443`*^9, 3.6819188104237127`*^9}, 
@@ -34848,203 +34967,14 @@ Cell[BoxData[
    3.681918991796973*^9}, 3.682067849014511*^9, 3.6820678823357773`*^9, {
    3.6820761277323503`*^9, 3.6820761470841093`*^9}, {3.682076180147532*^9, 
    3.682076203757696*^9}, 3.682141540351841*^9, 3.6821415716569557`*^9, 
-   3.6855312744566307`*^9}]
+   3.6855312744566307`*^9, 3.685716551921935*^9}]
 }, Open  ]],
 
-Cell["We can rearrange this into", "Text",
- CellChangeTimes->{{3.682057081828285*^9, 3.682057090379334*^9}, {
-  3.682057506051239*^9, 3.682057506085292*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"2", " ", "\[Alpha]", " ", "meanF", " ", "R", " ", 
-    RowBox[{"(", " ", 
-     RowBox[{
-      RowBox[{"gaR0", " ", 
-       RowBox[{"(", 
-        RowBox[{"1", "-", "pAveM"}], ")"}], " ", 
-       SubscriptBox["wHap", 
-        RowBox[{"a", ",", "male"}]], " ", 
-       SubscriptBox["wHap", 
-        RowBox[{"A", ",", "female"}]]}], "+", " ", 
-      RowBox[{"gAR0", " ", "pAveM", "  ", 
-       SubscriptBox["wHap", 
-        RowBox[{"a", ",", "female"}]], " ", 
-       SubscriptBox["wHap", 
-        RowBox[{"A", ",", "male"}]]}]}], ")"}], " ", 
-    SubscriptBox["wDip", 
-     RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
-   RowBox[{"2", " ", 
-    RowBox[{"(", 
-     RowBox[{"1", "-", "pAveM"}], ")"}], " ", "pAveM", " ", 
-    SuperscriptBox["R", "2"], " ", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{"1", "/", "2"}], "-", " ", "\[Alpha]"}], ")"}], " ", 
-    SubscriptBox["wHap", 
-     RowBox[{"a", ",", "female"}]], " ", 
-    SubscriptBox["wHap", 
-     RowBox[{"a", ",", "male"}]], " ", 
-    SubscriptBox["wHap", 
-     RowBox[{"A", ",", "female"}]], " ", 
-    SubscriptBox["wHap", 
-     RowBox[{"A", ",", "male"}]], " ", 
-    SubsuperscriptBox["wDip", 
-     RowBox[{"A", ",", "a", ",", "female"}], "2"]}]}], ">", 
-  RowBox[{"gaR0", " ", "gAR0", " ", 
-   SuperscriptBox["meanF", "2"]}]}]], "Input",
- CellChangeTimes->{{3.685533875678803*^9, 3.685533974639311*^9}}],
-
 Cell["\<\
-If both gA>0 and gA>0 then 2a+b>0 and the modifier invades. If both gAR0<0 \
-and gaR0<0 then a+b+c<0 is never true and the modifier will not invade. So \
-the interesting part is when one gR0 is positive and one negative. If we \
-assume, without loss of generality, that gAR0>0 and gaR0<0, the product gAR0 \
-gaR0 is negative. Dividing through and flipping the inequality:\
+which is the same as the case without drive.\
 \>", "Text",
- CellChangeTimes->{{3.678845089552334*^9, 3.678845160444935*^9}, 
-   3.678846328049347*^9, 3.681904868185585*^9, {3.682056686187016*^9, 
-   3.682056729646557*^9}, {3.682056760907091*^9, 3.6820567859103727`*^9}, {
-   3.6820568469095783`*^9, 3.682056944805656*^9}, {3.68205710368909*^9, 
-   3.682057103898336*^9}, {3.682067950834725*^9, 3.6820679520530567`*^9}, {
-   3.682163120154984*^9, 3.682163203206229*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"2", " ", "\[Alpha]", "  ", "R", " ", 
-    RowBox[{"(", " ", 
-     RowBox[{
-      FractionBox[
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{"1", "-", "pAveM"}], ")"}], " ", 
-        SubscriptBox["wHap", 
-         RowBox[{"a", ",", "male"}]], " ", 
-        SubscriptBox["wHap", 
-         RowBox[{"A", ",", "female"}]]}], "gAR0"], "+", "  ", 
-      FractionBox[
-       RowBox[{"pAveM", "  ", 
-        SubscriptBox["wHap", 
-         RowBox[{"a", ",", "female"}]], " ", 
-        SubscriptBox["wHap", 
-         RowBox[{"A", ",", "male"}]]}], 
-       RowBox[{"gaR0", " "}]]}], ")"}], " ", 
-    SubscriptBox["wDip", 
-     RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
-   FractionBox[
-    RowBox[{"2", " ", 
-     RowBox[{"(", 
-      RowBox[{"1", "-", "pAveM"}], ")"}], " ", "pAveM", " ", 
-     SuperscriptBox["R", "2"], " ", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"1", "/", "2"}], "-", " ", "\[Alpha]"}], ")"}], " ", 
-     SubscriptBox["wHap", 
-      RowBox[{"a", ",", "female"}]], " ", 
-     SubscriptBox["wHap", 
-      RowBox[{"a", ",", "male"}]], " ", 
-     SubscriptBox["wHap", 
-      RowBox[{"A", ",", "female"}]], " ", 
-     SubscriptBox["wHap", 
-      RowBox[{"A", ",", "male"}]], " ", 
-     SubsuperscriptBox["wDip", 
-      RowBox[{"A", ",", "a", ",", "female"}], "2"]}], 
-    RowBox[{"gAR0", " ", "gaR0", " ", "meanF"}]]}], "<", " ", 
-  "meanF"}]], "Input",
- CellChangeTimes->{{3.678845120164757*^9, 3.6788451205308228`*^9}, {
-   3.678845164017808*^9, 3.678845206833847*^9}, {3.678846328050565*^9, 
-   3.678846331194606*^9}, 3.681904868185891*^9, {3.6820566735977182`*^9, 
-   3.682056680097406*^9}, {3.6820569521544743`*^9, 3.682056966932479*^9}, {
-   3.682057001450542*^9, 3.68205701341922*^9}, {3.682057109642288*^9, 
-   3.682057196629991*^9}, {3.682057281250379*^9, 3.682057304119631*^9}, 
-   3.68205747025915*^9, {3.682057634053491*^9, 3.682057666531451*^9}, 
-   3.682067941675747*^9, {3.682067996958975*^9, 3.682068001789633*^9}, {
-   3.682142982762663*^9, 3.682142985906283*^9}, {3.685533998168928*^9, 
-   3.6855340531257353`*^9}}],
-
-Cell["\<\
-and without haploid selection we have\
-\>", "Text",
- CellChangeTimes->{{3.685534132617318*^9, 3.685534138611417*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{"2", " ", "\[Alpha]", "  ", "R", " ", 
-     RowBox[{"(", " ", 
-      RowBox[{
-       FractionBox[
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{"1", "-", "pAveM"}], ")"}], " ", 
-         SubscriptBox["wHap", 
-          RowBox[{"a", ",", "male"}]], " ", 
-         SubscriptBox["wHap", 
-          RowBox[{"A", ",", "female"}]]}], "gAR0"], "+", "  ", 
-       FractionBox[
-        RowBox[{"pAveM", "  ", 
-         SubscriptBox["wHap", 
-          RowBox[{"a", ",", "female"}]], " ", 
-         SubscriptBox["wHap", 
-          RowBox[{"A", ",", "male"}]]}], 
-        RowBox[{"gaR0", " "}]]}], ")"}], " ", 
-     SubscriptBox["wDip", 
-      RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
-    FractionBox[
-     RowBox[{"2", " ", 
-      RowBox[{"(", 
-       RowBox[{"1", "-", "pAveM"}], ")"}], " ", "pAveM", " ", 
-      SuperscriptBox["R", "2"], " ", 
-      RowBox[{"(", 
-       RowBox[{
-        RowBox[{"1", "/", "2"}], "-", " ", "\[Alpha]"}], ")"}], " ", 
-      SubscriptBox["wHap", 
-       RowBox[{"a", ",", "female"}]], " ", 
-      SubscriptBox["wHap", 
-       RowBox[{"a", ",", "male"}]], " ", 
-      SubscriptBox["wHap", 
-       RowBox[{"A", ",", "female"}]], " ", 
-      SubscriptBox["wHap", 
-       RowBox[{"A", ",", "male"}]], " ", 
-      SubsuperscriptBox["wDip", 
-       RowBox[{"A", ",", "a", ",", "female"}], "2"]}], 
-     RowBox[{"gAR0", " ", "gaR0", " ", "meanF"}]]}], "<", " ", "meanF"}], "/.", 
-  RowBox[{
-   SubscriptBox["wHap", 
-    RowBox[{"i_", ",", "j_"}]], "\[Rule]", "1"}]}]], "Input",
- CellChangeTimes->{{3.685534140472622*^9, 3.685534162951707*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"2", " ", 
-    RowBox[{"(", 
-     RowBox[{
-      FractionBox[
-       RowBox[{"1", "-", "pAveM"}], "gAR0"], "+", 
-      FractionBox["pAveM", "gaR0"]}], ")"}], " ", "R", " ", "\[Alpha]", " ", 
-    SubscriptBox["wDip", 
-     RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
-   FractionBox[
-    RowBox[{"2", " ", 
-     RowBox[{"(", 
-      RowBox[{"1", "-", "pAveM"}], ")"}], " ", "pAveM", " ", 
-     SuperscriptBox["R", "2"], " ", 
-     RowBox[{"(", 
-      RowBox[{
-       FractionBox["1", "2"], "-", "\[Alpha]"}], ")"}], " ", 
-     SubsuperscriptBox["wDip", 
-      RowBox[{"A", ",", "a", ",", "female"}], "2"]}], 
-    RowBox[{"gaR0", " ", "gAR0", " ", "meanF"}]]}], "<", "meanF"}]], "Output",\
-
- CellChangeTimes->{{3.685534160251499*^9, 3.685534163277566*^9}}]
-}, Open  ]]
-}, Open  ]]
+ CellChangeTimes->{{3.685718330486311*^9, 3.6857183393232517`*^9}}]
+}, Closed]]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -35064,15 +34994,16 @@ equalize the sex ratio.\
   3.683815328868087*^9, 3.683815338740596*^9}}],
 
 Cell["\<\
-We also see the same result as Kozielska et al 2010 (Heredity 104:100), \
-where, without diploid or haploid selection, the W invades if the Y is \
-\[OpenCurlyQuote]driving\[CloseCurlyQuote] (A driving and Y linked with A) \
-and the resident equilibrium is A fixed on the X and lost on the Y\
+Kozielska et al 2010 (Heredity 104:100) found that, without diploid or \
+haploid selection, the W invades if the Y is \[OpenCurlyQuote]driving\
+\[CloseCurlyQuote] and the resident equilibrium is A fixed on the X and lost \
+on the Y\
 \>", "Text",
  CellChangeTimes->{{3.678547246454558*^9, 3.6785473231291*^9}, {
   3.67884385326229*^9, 3.678843853832396*^9}, {3.683815375229047*^9, 
   3.683815425254546*^9}, {3.685534301990655*^9, 3.6855343031618853`*^9}, {
-  3.6855348365915337`*^9, 3.685534844589179*^9}}],
+  3.6855348365915337`*^9, 3.685534844589179*^9}, {3.685719901799705*^9, 
+  3.685719922996429*^9}}],
 
 Cell[CellGroupData[{
 
@@ -35083,130 +35014,219 @@ Cell[BoxData[{
     RowBox[{
      RowBox[{"pXf", "\[Rule]", "1"}], ",", 
      RowBox[{"pXm", "\[Rule]", "1"}], ",", 
-     RowBox[{"pYm", "\[Rule]", "0"}]}], "}"}]}], ";"}], "\n", 
- RowBox[{
+     RowBox[{"pYm", "\[Rule]", "0"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Simplify", "[", 
   RowBox[{
    RowBox[{
-    RowBox[{"Solve", "[", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"Normal", "[", 
-        RowBox[{"Series", "[", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"charpoly\[Alpha]1", "/.", "weaksel"}], "/.", 
-             "tryKozi"}], "/.", 
-            RowBox[{"\[Lambda]", "\[Rule]", 
-             RowBox[{"1", "+", 
-              RowBox[{"\[Delta]\[Lambda]", "*", "\[Epsilon]"}]}]}]}], ")"}], 
-          ",", 
-          RowBox[{"{", 
-           RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "]"}], 
-       "\[Equal]", "0"}], ",", "\[Delta]\[Lambda]"}], "]"}], "/.", 
     RowBox[{
-     SubscriptBox["sDip", "sex_"], "\[Rule]", "0"}]}], "/.", 
-   RowBox[{
-    SubscriptBox["sHap", "sex_"], "\[Rule]", "0"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{"Collect", "[", 
-  RowBox[{
-   RowBox[{"\[Delta]\[Lambda]", "/.", "%"}], ",", "\[Alpha]1"}], 
-  "]"}]}], "Input",
- CellChangeTimes->{{3.678546860181889*^9, 3.678546878743849*^9}, 
-   3.683815408569525*^9, {3.6855342794968863`*^9, 3.685534338233738*^9}}],
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"0", "==", "charpoly\[Alpha]1"}], "/.", "tryKozi"}], ",", 
+       "\[Lambda]"}], "]"}], "/.", 
+     RowBox[{
+      SubscriptBox["wDip", 
+       RowBox[{"yM_", ",", "yP_", ",", "sex_"}]], "\[Rule]", "1"}]}], "/.", 
+    RowBox[{
+     SubscriptBox["wHap", 
+      RowBox[{"y_", ",", "sex_"}]], "\[Rule]", "1"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"R", ">", "0"}], ",", 
+     RowBox[{"0", "\[LessEqual]", "\[Alpha]", "\[LessEqual]", "1"}]}], 
+    "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6821475678259163`*^9, 3.682147766019215*^9}, {
+  3.6855344238558817`*^9, 3.685534474847128*^9}, {3.685534730127399*^9, 
+  3.685534730783793*^9}, {3.6857184258261213`*^9, 3.685718426461087*^9}, {
+  3.68571865389108*^9, 3.685718655259359*^9}, {3.68571874991378*^9, 
+  3.685718765517205*^9}, {3.6857198761726837`*^9, 3.68571988590238*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   FractionBox["1", "4"], " ", 
-   RowBox[{"(", 
-    RowBox[{"4", "-", 
-     RowBox[{"8", " ", "R"}]}], ")"}], " ", "\[Alpha]1"}], "}"}]], "Output",
- CellChangeTimes->{{3.6821474024879293`*^9, 3.682147425072431*^9}, 
-   3.682147463069479*^9, {3.6821474933592033`*^9, 3.6821475038093767`*^9}, {
-   3.685534270656537*^9, 3.685534338914496*^9}}]
+   RowBox[{"{", 
+    RowBox[{"\[Lambda]", "\[Rule]", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Lambda]", "\[Rule]", 
+     RowBox[{"1", "-", "R"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.682147609979455*^9, 3.682147634214789*^9}, {
+   3.682147674849794*^9, 3.682147713203792*^9}, 3.682147766770252*^9, {
+   3.6855344177212048`*^9, 3.6855344754183187`*^9}, 3.685534731561679*^9, 
+   3.685716552199039*^9, 3.6857183651246367`*^9, 3.6857184269949503`*^9, 
+   3.685718655750692*^9, {3.68571875410462*^9, 3.68571876602265*^9}, {
+   3.685719882557488*^9, 3.685719886641502*^9}}]
 }, Open  ]],
 
 Cell["\<\
-But this is not a stable resident equilibrium. It can only happen if r=0 and \
-A mutates to a on the Y (or a mutates to A on the X) and no more mutations \
-occur.\
+We don\[CloseCurlyQuote]t find this here because we are looking at the A \
+driving, not the Y. Thus the W gets no benefit from the Y haplotypes it \
+receives (and these are linked with a alleles besides). But a driving A can \
+allow a neo-Y to invade\
 \>", "Text",
- CellChangeTimes->{{3.67854735250668*^9, 3.6785474199657097`*^9}, 
-   3.6838153499361963`*^9}],
-
-Cell["We can also do this without assuming weak selection", "Text",
- CellChangeTimes->{{3.678548000504784*^9, 3.678548009157091*^9}}],
+ CellChangeTimes->{{3.6857199351393213`*^9, 3.685719995277853*^9}, {
+   3.685756867405643*^9, 3.685756881509853*^9}, 3.685756999735964*^9, {
+   3.685757061023921*^9, 3.685757064973913*^9}, {3.685757105252715*^9, 
+   3.685757184969219*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Collect", "[", 
-  RowBox[{
-   RowBox[{"Simplify", "[", 
+ RowBox[{
+  RowBox[{"Simplify", "[", 
+   RowBox[{
     RowBox[{
      RowBox[{
-      RowBox[{
-       RowBox[{"Solve", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"0", "==", "charpoly\[Alpha]1"}], "/.", "tryKozi"}], ",", 
-         "\[Lambda]"}], "]"}], "/.", 
+      RowBox[{"Solve", "[", 
        RowBox[{
-        SubscriptBox["wDip", 
-         RowBox[{"yM_", ",", "yP_", ",", "female"}]], "\[Rule]", "1"}]}], "/.", 
+        RowBox[{
+         RowBox[{"0", "==", "charpoly\[Alpha]0"}], "/.", "tryKozi"}], ",", 
+        "\[Lambda]"}], "]"}], "/.", 
       RowBox[{
-       SubscriptBox["wHap", 
-        RowBox[{"y_", ",", "sex_"}]], "\[Rule]", "1"}]}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"R", ">", "0"}], ",", 
-       RowBox[{"0", "\[LessEqual]", "\[Alpha]", "\[LessEqual]", "1"}]}], 
-      "}"}]}], "]"}], ",", "\[Alpha]"}], "]"}]], "Input",
- CellChangeTimes->{{3.6821475678259163`*^9, 3.682147766019215*^9}, {
-  3.6855344238558817`*^9, 3.685534474847128*^9}, {3.685534730127399*^9, 
-  3.685534730783793*^9}}],
+       SubscriptBox["wDip", 
+        RowBox[{"yM_", ",", "yP_", ",", "sex_"}]], "\[Rule]", "1"}]}], "/.", 
+     RowBox[{
+      SubscriptBox["wHap", 
+       RowBox[{"y_", ",", "sex_"}]], "\[Rule]", "1"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"R", ">", "0"}], ",", 
+      RowBox[{"0", "\[LessEqual]", "\[Alpha]", "\[LessEqual]", "1"}]}], 
+     "}"}]}], "]"}], "//", "Flatten"}]], "Input",
+ CellChangeTimes->{{3.68571997952218*^9, 3.685719979776124*^9}, {
+  3.68572015171621*^9, 3.6857201527170362`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   RowBox[{"{", 
-    RowBox[{"\[Lambda]", "\[Rule]", 
-     RowBox[{
-      FractionBox["1", "2"], "+", "R", "+", 
+   RowBox[{"\[Lambda]", "\[Rule]", 
+    RowBox[{"2", " ", 
+     RowBox[{"(", 
       RowBox[{
-       RowBox[{"(", 
-        RowBox[{"1", "-", 
-         RowBox[{"2", " ", "R"}]}], ")"}], " ", "\[Alpha]"}]}]}], "}"}], ",", 
-   
-   RowBox[{"{", 
-    RowBox[{"\[Lambda]", "\[Rule]", 
-     RowBox[{
-      FractionBox["1", "2"], "-", "R", "+", "\[Alpha]"}]}], "}"}]}], 
-  "}"}]], "Output",
- CellChangeTimes->{{3.682147609979455*^9, 3.682147634214789*^9}, {
-   3.682147674849794*^9, 3.682147713203792*^9}, 3.682147766770252*^9, {
-   3.6855344177212048`*^9, 3.6855344754183187`*^9}, 3.685534731561679*^9}]
+       RowBox[{"-", "1"}], "+", "R"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "\[Alpha]"}], ")"}]}]}], ",", 
+   RowBox[{"\[Lambda]", "\[Rule]", "1"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.685719980194326*^9, 3.6857200129446*^9, {3.685720137465248*^9, 
+   3.685720192135614*^9}}]
 }, Open  ]],
 
-Cell[TextData[{
- "Again, invasion occurs if the Y is \[OpenCurlyQuote]driving\
-\[CloseCurlyQuote] (",
- Cell[BoxData[
-  RowBox[{
-   RowBox[{"\[Alpha]", "-", "R"}], ">", 
-   RowBox[{"1", "/", "2"}]}]],
-  CellChangeTimes->{{3.682147609979455*^9, 3.682147634214789*^9}, {
-    3.682147674849794*^9, 3.682147713203792*^9}, 3.682147766770252*^9}],
- ", ie drive in favour of A and W linked with it enough to favour its spread)."
-}], "Text",
+Cell["when", "Text",
  CellChangeTimes->{{3.6788438284022417`*^9, 3.678843832008451*^9}, {
-  3.678843891799221*^9, 3.678843943006238*^9}, {3.682147803000388*^9, 
-  3.682147810070758*^9}, {3.68381544304078*^9, 3.683815443467724*^9}, {
-  3.685534505087484*^9, 3.685534510371689*^9}, {3.685534704328248*^9, 
-  3.685534705760598*^9}, {3.685534746512784*^9, 3.685534814426661*^9}}]
+   3.678843891799221*^9, 3.678843943006238*^9}, {3.682147803000388*^9, 
+   3.682147810070758*^9}, {3.68381544304078*^9, 3.683815443467724*^9}, {
+   3.685534505087484*^9, 3.685534510371689*^9}, {3.685534704328248*^9, 
+   3.685534705760598*^9}, {3.685534746512784*^9, 3.685534814426661*^9}, 
+   3.685718688495637*^9, {3.685718865155917*^9, 3.685718882647031*^9}, {
+   3.6857200025920267`*^9, 3.6857200029199877`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"1", "<", 
+     RowBox[{"(", 
+      RowBox[{"\[Lambda]", "/.", "%"}], ")"}]}], "&&", 
+    RowBox[{"0", "\[LessEqual]", "R", "\[LessEqual]", 
+     RowBox[{"1", "/", "2"}]}]}], ",", "\[Alpha]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6857186728005342`*^9, 3.685718680323029*^9}, {
+   3.685718715916293*^9, 3.685718732119383*^9}, {3.6857187987835817`*^9, 
+   3.685718806740652*^9}, 3.685718839325698*^9, {3.685720007228982*^9, 
+   3.685720011227397*^9}, {3.685720129834247*^9, 3.68572019075695*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"0", "\[LessEqual]", "R", "\[LessEqual]", 
+   FractionBox["1", "2"]}], "&&", 
+  RowBox[{"\[Alpha]", "<", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     RowBox[{"2", " ", "R"}]}], 
+    RowBox[{
+     RowBox[{"-", "2"}], "+", 
+     RowBox[{"2", " ", "R"}]}]]}]}]], "Output",
+ CellChangeTimes->{
+  3.685718680769144*^9, {3.6857187174024773`*^9, 3.685718733502304*^9}, {
+   3.685718799154791*^9, 3.6857188070555563`*^9}, 3.685718840073394*^9, 
+   3.685720015428207*^9, {3.6857201407416153`*^9, 3.685720193501368*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     RowBox[{"2", " ", "R"}]}], 
+    RowBox[{
+     RowBox[{"-", "2"}], "+", 
+     RowBox[{"2", " ", "R"}]}]], ",", 
+   RowBox[{"{", 
+    RowBox[{"R", ",", "0", ",", 
+     RowBox[{"1", "/", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.685720035227515*^9, 3.685720046444066*^9}, 
+   3.685720202820874*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJwV1Hk4FHgAxvGhsWrbXKlMpRpRK10rWR3rVRSRlJkiuZ4S0bFEl2NFhoio
+lawjQklC5dqHccQ05TaGuczML9aKpehA9MTqj/f5/v3+86Ef/93+pCKFQrGd
+3fdanxzg1Q7uMW2IZ03NzBBQzZf6EpouTBaeOlw9TbAlIzmtmGYEcaby3eBv
+BDYtwufpNAswPvq1fpkicPCYqLpNY8JtMmPB6BiBbFOUeRzNA0u9OI3iIYLM
+RXaRMbQAhAStN0gREoTNLV4bTYvAeKxQ0lJI4Hj0ftHoh0Qc1GqqH2USzJ8J
+c7ZckQENp0h3sxk59A69H6i/kQP0jASy8uS41LoNyZ/zQCW2htHWciwpUZcr
+KBSBa7di1/iIDGW95s1tO5/DQ8DQz7ohQ51P+rKjwyW4VpE9Jl0jw9ia31QL
+zpbjKL3iMocrheJkvtoyvQoYPl5VaugshfGMexmjkI2v2y4aeY93oznCqJW7
+rgZazuplJxO6sTJhaDLvfS1qDavn0Vd2Y2iCyLs21+FOCtPq/XMJcv6rbFS5
+WQ9KuFpZ23YJVLRzR/r6ONgdYxUy+EKMWO9Sz0xdLrYU0O29Dogxbpbfdyr0
+FUS5H5mUVhECDDkli+tf44JNqJI2QwRSyLnBozdCkLh2OrxRiK8+nan6gU0I
+kkkZXDMhDHYpT3tWNiPXcfjLIFsAyyy617MlrXhg2nmavk6AS9puOj3ObXgT
+djbAKb0L64cPzxfatiPad3lwsWoXFqqOzuVMtaMsyPxMg18nqDWpRavTeMhs
+Lv5hr4SP00aV4nk2HfDqeRTr8Asf+fuOZ1aPd4ArG98YHtmBsaGlav1JfCyb
+mOMf0ctDKcNyTqJFJ8JjBwrcDHgItWJllPR3wkU+emRrUDvoMmtRNqsLUH1c
+zb/dhu2/RiTSDAVgfg4wV1ZqhfOKtkkFvgCr/g3cvzqyGWONcb2+YULQ9F/U
+ZIkbkUx1DbDXFeGCnX6H1c4GLJSXZilyREj71n5GKeUVlELCmNv8xHit01mj
+/PIlKHmuRb0aEmS9DQk0oXBwPqUoTqNOgv5Pi69vptahyuD6XPVz3Tg/ffqh
+8FsN1K3Prw9XkUJNR0E8vIgN6YZ2/hW2FP23PNTinpXj6T3o9rnKEGwUulvR
+txguRcbq2tMyWGyRmIpNCnGVdT9M+liORy0tjoqXc1AwoJ2qsp9A7N+l5a2Y
+hOvpLHf5AQIDA52gnU/uwMP+nV7hIYJbMcnzFI7cwXI2+6mtA4G39GmqS14i
+YuKPcWOPE4g0ftL3sPsTp4z/+vDjFYIn3E9R2ckJ0InQtFJ+SPBiVZZWJiIx
+bRK8QPiIwDPmmDw8ngXxu386HuYTRI0ZKVqSCCQ4FLvsfUbg5G1t4f/HNcys
+s/dnsQn29VzgOVVehZQXf28On4BelUKtdr2IvyMnTvC7CDSjNBpypwKQuMNN
+P1tEkKzHtGQk+cPmwcaS3XKCKm3eppFmX1RcbmkIGyQwv3m2ye+cJ5I2bI0/
+NDz7X8A45pJ1An69aUz6CIGZsaZjU5c7ft5/htR+JihnCdY6XzwCqkJnTsIE
+wdv+W/Q9koN4U7rDx33WmVbxdtGJwL1g+2Rv2jzr0L2UJZrRwca4u3L+2He3
+ys1DG2sHD5v+D8QzbP0=
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  Method->{},
+  PlotRange->NCache[{{0, 
+      Rational[1, 2]}, {0., 0.49999999489795904`}}, {{0, 0.5}, {0., 
+     0.49999999489795904`}}],
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{3.685720046872336*^9, 3.685720203368784*^9}]
+}, Open  ]],
+
+Cell["\<\
+So that with complete linkage between the neo-Y and the A locus (R=0) any \
+drive in favour of the little a allele will allow a neo-Y to invade. As the \
+linkage becomes weaker the strength of drive must increase to compensate for \
+loss of the haplotype by recombination.  \
+\>", "Text",
+ CellChangeTimes->{{3.685757207054493*^9, 3.6857573446475487`*^9}}]
 }, Closed]]
 }, Closed]]
 }, Open  ]]
@@ -36248,353 +36268,320 @@ Cell[1240490, 28716, 101, 1, 30, "Text"],
 Cell[1240594, 28719, 2197, 64, 60, "Input"],
 Cell[1242794, 28785, 91, 1, 30, "Text"],
 Cell[1242888, 28788, 1497, 44, 56, "Input"],
-Cell[1244388, 28834, 296, 6, 30, "Text"],
-Cell[1244687, 28842, 12751, 308, 861, "Input"],
-Cell[1257441, 29152, 1563, 40, 53, "Input"]
+Cell[1244388, 28834, 399, 7, 30, "Text"],
+Cell[1244790, 28843, 18595, 456, 1257, "Input"],
+Cell[1263388, 29301, 1563, 40, 53, "Input"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1259041, 29197, 545, 7, 50, "Section"],
-Cell[1259589, 29206, 131, 1, 30, "Text"],
-Cell[1259723, 29209, 1938, 47, 220, "Input"],
-Cell[1261664, 29258, 560, 9, 30, "Text"],
-Cell[1262227, 29269, 1428, 35, 117, "Input"],
-Cell[1263658, 29306, 481, 8, 30, "Text"],
-Cell[1264142, 29316, 2192, 55, 205, "Input"],
-Cell[1266337, 29373, 229, 3, 30, "Text"],
-Cell[1266569, 29378, 758, 17, 97, "Input"],
-Cell[1267330, 29397, 365, 6, 30, "Text"],
+Cell[1264988, 29346, 545, 7, 50, "Section"],
+Cell[1265536, 29355, 131, 1, 30, "Text"],
+Cell[1265670, 29358, 1938, 47, 220, "Input"],
+Cell[1267611, 29407, 560, 9, 30, "Text"],
+Cell[1268174, 29418, 1428, 35, 117, "Input"],
+Cell[1269605, 29455, 481, 8, 30, "Text"],
+Cell[1270089, 29465, 2192, 55, 205, "Input"],
+Cell[1272284, 29522, 229, 3, 30, "Text"],
+Cell[1272516, 29527, 758, 17, 97, "Input"],
+Cell[1273277, 29546, 365, 6, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1267720, 29407, 599, 15, 28, "Input"],
-Cell[1268322, 29424, 1271, 29, 47, "Output"]
+Cell[1273667, 29556, 599, 15, 28, "Input"],
+Cell[1274269, 29573, 1293, 29, 47, "Output"]
 }, Open  ]],
-Cell[1269608, 29456, 159, 2, 30, "Text"],
+Cell[1275577, 29605, 159, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1269792, 29462, 685, 14, 28, "Input"],
-Cell[1270480, 29478, 1533, 24, 28, "Output"]
+Cell[1275761, 29611, 685, 14, 28, "Input"],
+Cell[1276449, 29627, 1561, 25, 28, "Output"]
 }, Open  ]],
-Cell[1272028, 29505, 390, 7, 30, "Text"],
-Cell[1272421, 29514, 467, 8, 30, "Text"],
+Cell[1278025, 29655, 390, 7, 30, "Text"],
+Cell[1278418, 29664, 467, 8, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1272913, 29526, 1256, 26, 28, "Input"],
-Cell[1274172, 29554, 5884, 141, 171, "Output"]
+Cell[1278910, 29676, 1256, 26, 28, "Input"],
+Cell[1280169, 29704, 5906, 141, 171, "Output"]
 }, Open  ]],
-Cell[1280071, 29698, 257, 5, 30, "Text"],
+Cell[1286090, 29848, 257, 5, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1280353, 29707, 639, 17, 28, "Input"],
-Cell[1280995, 29726, 9553, 234, 223, "Output"]
+Cell[1286372, 29857, 639, 17, 28, "Input"],
+Cell[1287014, 29876, 9579, 235, 223, "Output"]
 }, Open  ]],
-Cell[1290563, 29963, 231, 3, 30, "Text"],
-Cell[1290797, 29968, 787, 26, 53, "Input"],
-Cell[1291587, 29996, 206, 4, 30, "Text"],
+Cell[1296608, 30114, 231, 3, 30, "Text"],
+Cell[1296842, 30119, 787, 26, 53, "Input"],
+Cell[1297632, 30147, 206, 4, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1291818, 30004, 363, 11, 37, "Input"],
-Cell[1292184, 30017, 140, 2, 28, "Output"]
+Cell[1297863, 30155, 363, 11, 37, "Input"],
+Cell[1298229, 30168, 164, 2, 28, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1292373, 30025, 636, 10, 50, "Section"],
-Cell[1293012, 30037, 214, 4, 30, "Text"],
-Cell[1293229, 30043, 204, 4, 30, "Text"],
-Cell[1293436, 30049, 2718, 74, 227, "Input"],
-Cell[1296157, 30125, 134, 1, 30, "Text"],
-Cell[1296294, 30128, 398, 10, 28, "Input"],
-Cell[1296695, 30140, 262, 5, 30, "Text"],
-Cell[1296960, 30147, 224, 5, 30, "Text"],
+Cell[1298442, 30176, 636, 10, 50, "Section"],
+Cell[1299081, 30188, 214, 4, 30, "Text"],
+Cell[1299298, 30194, 204, 4, 30, "Text"],
+Cell[1299505, 30200, 2718, 74, 227, "Input"],
+Cell[1302226, 30276, 134, 1, 30, "Text"],
+Cell[1302363, 30279, 398, 10, 28, "Input"],
+Cell[1302764, 30291, 262, 5, 30, "Text"],
+Cell[1303029, 30298, 224, 5, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1297209, 30156, 945, 26, 63, "Input"],
-Cell[1298157, 30184, 1439, 36, 48, "Output"]
+Cell[1303278, 30307, 945, 26, 63, "Input"],
+Cell[1304226, 30335, 1465, 37, 48, "Output"]
 }, Open  ]],
-Cell[1299611, 30223, 132, 3, 30, "Text"],
-Cell[1299746, 30228, 193, 2, 30, "Text"],
+Cell[1305706, 30375, 132, 3, 30, "Text"],
+Cell[1305841, 30380, 193, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1299964, 30234, 952, 24, 46, "Input"],
-Cell[1300919, 30260, 993, 23, 47, "Output"]
+Cell[1306059, 30386, 952, 24, 46, "Input"],
+Cell[1307014, 30412, 1018, 24, 47, "Output"]
 }, Open  ]],
-Cell[1301927, 30286, 160, 3, 30, "Text"],
-Cell[1302090, 30291, 174, 4, 30, "Text"],
+Cell[1308047, 30439, 160, 3, 30, "Text"],
+Cell[1308210, 30444, 174, 4, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1302289, 30299, 1154, 28, 63, "Input"],
-Cell[1303446, 30329, 1400, 35, 48, "Output"]
+Cell[1308409, 30452, 1154, 28, 63, "Input"],
+Cell[1309566, 30482, 1424, 36, 48, "Output"]
 }, Open  ]],
-Cell[1304861, 30367, 116, 1, 30, "Text"],
+Cell[1311005, 30521, 116, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1305002, 30372, 980, 25, 46, "Input"],
-Cell[1305985, 30399, 928, 21, 47, "Output"]
+Cell[1311146, 30526, 980, 25, 46, "Input"],
+Cell[1312129, 30553, 952, 21, 47, "Output"]
 }, Open  ]],
-Cell[1306928, 30423, 211, 4, 30, "Text"],
-Cell[1307142, 30429, 285, 6, 30, "Text"],
-Cell[1307430, 30437, 543, 15, 28, "Input"],
-Cell[1307976, 30454, 316, 6, 30, "Text"],
+Cell[1313096, 30577, 211, 4, 30, "Text"],
+Cell[1313310, 30583, 285, 6, 30, "Text"],
+Cell[1313598, 30591, 543, 15, 28, "Input"],
+Cell[1314144, 30608, 316, 6, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1308317, 30464, 830, 24, 36, "Input"],
-Cell[1309150, 30490, 123, 2, 28, "Output"]
+Cell[1314485, 30618, 830, 24, 36, "Input"],
+Cell[1315318, 30644, 147, 2, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1309310, 30497, 885, 26, 36, "Input"],
-Cell[1310198, 30525, 172, 3, 28, "Output"]
+Cell[1315502, 30651, 885, 26, 36, "Input"],
+Cell[1316390, 30679, 193, 3, 28, "Output"]
 }, Open  ]],
-Cell[1310385, 30531, 369, 7, 49, "Text"],
+Cell[1316598, 30685, 369, 7, 49, "Text"],
 Cell[CellGroupData[{
-Cell[1310779, 30542, 836, 24, 31, "Input"],
-Cell[1311618, 30568, 4809, 134, 267, "Output"]
+Cell[1316992, 30696, 836, 24, 31, "Input"],
+Cell[1317831, 30722, 4831, 134, 267, "Output"]
 }, Open  ]],
-Cell[1316442, 30705, 324, 6, 49, "Text"],
+Cell[1322677, 30859, 324, 6, 49, "Text"],
 Cell[CellGroupData[{
-Cell[1316791, 30715, 888, 28, 35, "Input"],
-Cell[1317682, 30745, 809, 24, 52, "Output"]
+Cell[1323026, 30869, 888, 28, 35, "Input"],
+Cell[1323917, 30899, 833, 24, 52, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1318540, 30775, 709, 9, 50, "Section"],
-Cell[1319252, 30786, 474, 8, 30, "Text"],
-Cell[1319729, 30796, 586, 8, 30, "Text"],
-Cell[1320318, 30806, 2401, 63, 57, "Input"],
-Cell[1322722, 30871, 116, 1, 30, "Text"],
-Cell[1322841, 30874, 396, 10, 28, "Input"],
-Cell[1323240, 30886, 250, 5, 30, "Text"],
+Cell[1324799, 30929, 709, 9, 50, "Section"],
+Cell[1325511, 30940, 474, 8, 30, "Text"],
+Cell[1325988, 30950, 586, 8, 30, "Text"],
+Cell[1326577, 30960, 2401, 63, 57, "Input"],
+Cell[1328981, 31025, 116, 1, 30, "Text"],
+Cell[1329100, 31028, 396, 10, 28, "Input"],
+Cell[1329499, 31040, 250, 5, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1323515, 30895, 588, 16, 46, "Input"],
-Cell[1324106, 30913, 1022, 25, 28, "Output"]
+Cell[1329774, 31049, 588, 16, 46, "Input"],
+Cell[1330365, 31067, 1044, 25, 28, "Output"]
 }, Open  ]],
-Cell[1325143, 30941, 144, 3, 30, "Text"],
-Cell[1325290, 30946, 118, 1, 30, "Text"],
+Cell[1331424, 31095, 144, 3, 30, "Text"],
+Cell[1331571, 31100, 118, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1325433, 30951, 1175, 28, 46, "Input"],
-Cell[1326611, 30981, 1072, 24, 35, "Output"]
+Cell[1331714, 31105, 1791, 44, 63, "Input"],
+Cell[1333508, 31151, 766, 18, 35, "Output"]
 }, Open  ]],
+Cell[1334289, 31172, 2711, 54, 149, "Text"],
+Cell[1337003, 31228, 331, 6, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1327720, 31010, 1115, 27, 35, "Input"],
-Cell[1328838, 31039, 407, 13, 28, "Output"]
-}, Open  ]],
-Cell[1329260, 31055, 606, 10, 68, "Text"],
+Cell[1337359, 31238, 302, 9, 35, "Subsubsection"],
+Cell[1337664, 31249, 232, 4, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1329891, 31069, 302, 9, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[1330218, 31082, 937, 26, 46, "Input"],
-Cell[1331158, 31110, 161, 4, 28, "Output"]
+Cell[1337921, 31257, 937, 26, 46, "Input"],
+Cell[1338861, 31285, 183, 4, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1331356, 31119, 1453, 41, 80, "Input"],
-Cell[1332812, 31162, 8353, 239, 175, "Output"]
+Cell[1339081, 31294, 1453, 41, 80, "Input"],
+Cell[1340537, 31337, 8601, 244, 190, "Output"]
 }, Open  ]],
-Cell[1341180, 31404, 122, 1, 30, "Text"],
+Cell[1349153, 31584, 122, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1341327, 31409, 823, 20, 28, "Input"],
-Cell[1342153, 31431, 25335, 632, 609, "Output"]
+Cell[1349300, 31589, 823, 20, 28, "Input"],
+Cell[1350126, 31611, 25606, 637, 609, "Output"]
 }, Open  ]],
-Cell[1367503, 32066, 124, 1, 30, "Text"],
-Cell[1367630, 32069, 10773, 270, 218, "Input"],
-Cell[1378406, 32341, 378, 5, 30, "Text"],
-Cell[1378787, 32348, 106, 1, 30, "Text"],
+Cell[1375747, 32251, 124, 1, 30, "Text"],
+Cell[1375874, 32254, 26106, 634, 710, "Input"],
+Cell[1401983, 32890, 378, 5, 30, "Text"],
+Cell[1402364, 32897, 106, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1378918, 32353, 923, 25, 36, "Input"],
-Cell[1379844, 32380, 412, 11, 28, "Output"]
+Cell[1402495, 32902, 995, 26, 36, "Input"],
+Cell[1403493, 32930, 534, 13, 62, "Output"]
 }, Open  ]],
-Cell[1380271, 32394, 107, 1, 30, "Text"],
+Cell[1404042, 32946, 107, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1380403, 32399, 1343, 35, 54, "Input"],
-Cell[1381749, 32436, 366, 10, 28, "Output"]
+Cell[1404174, 32951, 1343, 35, 54, "Input"],
+Cell[1405520, 32988, 416, 11, 28, "Output"]
 }, Open  ]],
-Cell[1382130, 32449, 256, 5, 30, "Text"],
+Cell[1405951, 33002, 179, 4, 30, "Text"],
+Cell[1406133, 33008, 370, 5, 30, "Text"],
+Cell[1406506, 33015, 206, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1382411, 32458, 852, 23, 34, "Input"],
-Cell[1383266, 32483, 1203, 34, 55, "Output"]
+Cell[1406737, 33022, 979, 26, 36, "Input"],
+Cell[1407719, 33050, 353, 6, 28, "Output"]
 }, Open  ]],
-Cell[1384484, 32520, 311, 6, 30, "Text"],
-Cell[1384798, 32528, 253, 5, 30, "Text"],
+Cell[1408087, 33059, 135, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1385076, 32537, 2002, 57, 50, "Input"],
-Cell[1387081, 32596, 307, 5, 28, "Output"]
+Cell[1408247, 33065, 1379, 36, 54, "Input"],
+Cell[1409629, 33103, 381, 6, 28, "Output"]
 }, Open  ]],
-Cell[1387403, 32604, 176, 4, 30, "Text"],
+Cell[1410025, 33112, 366, 5, 30, "Text"],
+Cell[1410394, 33119, 106, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1387604, 32612, 1731, 53, 50, "Input"],
-Cell[1389338, 32667, 192, 3, 28, "Output"]
+Cell[1410525, 33124, 1127, 28, 36, "Input"],
+Cell[1411655, 33154, 569, 9, 28, "Output"]
 }, Open  ]],
-Cell[1389545, 32673, 370, 5, 30, "Text"],
-Cell[1389918, 32680, 206, 3, 30, "Text"],
+Cell[1412239, 33166, 156, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1390149, 32687, 979, 26, 36, "Input"],
-Cell[1391131, 32715, 427, 11, 28, "Output"]
+Cell[1412420, 33172, 1590, 41, 54, "Input"],
+Cell[1414013, 33215, 260, 4, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1414334, 33226, 458, 6, 50, "Section"],
+Cell[CellGroupData[{
+Cell[1414817, 33236, 115, 1, 44, "Subsection"],
+Cell[1414935, 33239, 326, 4, 30, "Text"],
+Cell[1415264, 33245, 687, 11, 30, "Text"],
+Cell[1415954, 33258, 1814, 46, 110, "Input"],
+Cell[1417771, 33306, 205, 4, 30, "Text"],
+Cell[1417979, 33312, 1854, 47, 110, "Input"],
+Cell[CellGroupData[{
+Cell[1419858, 33363, 147, 2, 35, "Subsubsection"],
+Cell[1420008, 33367, 180, 4, 30, "Text"],
+Cell[1420191, 33373, 340, 8, 28, "Input"],
+Cell[1420534, 33383, 163, 2, 30, "Text"],
+Cell[1420700, 33387, 1311, 30, 80, "Input"],
+Cell[1422014, 33419, 867, 24, 80, "Input"],
+Cell[1422884, 33445, 396, 5, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1423305, 33454, 759, 14, 34, "Input"],
+Cell[1424067, 33470, 1117, 17, 32, "Output"]
 }, Open  ]],
-Cell[1391573, 32729, 135, 2, 30, "Text"],
+Cell[1425199, 33490, 176, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1391733, 32735, 1379, 36, 54, "Input"],
-Cell[1393115, 32773, 451, 10, 28, "Output"]
+Cell[1425400, 33496, 488, 10, 28, "Input"],
+Cell[1425891, 33508, 2168, 58, 52, "Output"]
 }, Open  ]],
-Cell[1393581, 32786, 240, 5, 30, "Text"],
+Cell[1428074, 33569, 153, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1393846, 32795, 719, 20, 34, "Input"],
-Cell[1394568, 32817, 1127, 33, 55, "Output"]
+Cell[1428252, 33575, 400, 6, 28, "Input"],
+Cell[1428655, 33583, 3056, 85, 58, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1431760, 33674, 145, 2, 29, "Subsubsection"],
+Cell[1431908, 33678, 142, 1, 30, "Text"],
+Cell[1432053, 33681, 291, 7, 28, "Input"],
+Cell[1432347, 33690, 179, 2, 30, "Text"],
+Cell[1432529, 33694, 1313, 30, 80, "Input"],
+Cell[1433845, 33726, 396, 5, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1434266, 33735, 759, 14, 34, "Input"],
+Cell[1435028, 33751, 938, 15, 32, "Output"]
 }, Open  ]],
-Cell[1395710, 32853, 132, 1, 30, "Text"],
-Cell[1395845, 32856, 366, 5, 30, "Text"],
-Cell[1396214, 32863, 106, 1, 30, "Text"],
+Cell[1435981, 33769, 228, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1396345, 32868, 1127, 28, 36, "Input"],
-Cell[1397475, 32898, 523, 9, 28, "Output"]
+Cell[1436234, 33776, 574, 13, 28, "Input"],
+Cell[1436811, 33791, 1867, 52, 57, "Output"]
 }, Open  ]],
-Cell[1398013, 32910, 156, 2, 30, "Text"],
+Cell[1438693, 33846, 202, 4, 30, "Text"],
+Cell[1438898, 33852, 209, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1398194, 32916, 1590, 41, 54, "Input"],
-Cell[1399787, 32959, 216, 4, 28, "Output"]
-}, Open  ]],
-Cell[1400018, 32966, 427, 8, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1400470, 32978, 1013, 23, 46, "Input"],
-Cell[1401486, 33003, 728, 10, 62, "Output"]
-}, Open  ]],
-Cell[1402229, 33016, 566, 9, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1402820, 33029, 872, 23, 36, "Input"],
-Cell[1403695, 33054, 756, 19, 28, "Output"]
+Cell[1439132, 33859, 558, 11, 28, "Input"],
+Cell[1439693, 33872, 2276, 64, 58, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1404512, 33080, 458, 6, 50, "Section"],
+Cell[1442030, 33943, 354, 5, 36, "Subsection"],
 Cell[CellGroupData[{
-Cell[1404995, 33090, 115, 1, 44, "Subsection"],
-Cell[1405113, 33093, 326, 4, 30, "Text"],
-Cell[1405442, 33099, 687, 11, 30, "Text"],
-Cell[1406132, 33112, 1814, 46, 110, "Input"],
-Cell[1407949, 33160, 205, 4, 30, "Text"],
-Cell[1408157, 33166, 1854, 47, 110, "Input"],
+Cell[1442409, 33952, 124, 2, 35, "Subsubsection"],
+Cell[1442536, 33956, 188, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1410036, 33217, 147, 2, 35, "Subsubsection"],
-Cell[1410186, 33221, 180, 4, 30, "Text"],
-Cell[1410369, 33227, 340, 8, 28, "Input"],
-Cell[1410712, 33237, 163, 2, 30, "Text"],
-Cell[1410878, 33241, 1311, 30, 80, "Input"],
-Cell[1412192, 33273, 867, 24, 80, "Input"],
-Cell[1413062, 33299, 396, 5, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1413483, 33308, 759, 14, 34, "Input"],
-Cell[1414245, 33324, 1091, 16, 32, "Output"]
+Cell[1442749, 33962, 734, 21, 28, "Input"],
+Cell[1443486, 33985, 1766, 51, 53, "Output"]
 }, Open  ]],
-Cell[1415351, 33343, 176, 2, 30, "Text"],
+Cell[1445267, 34039, 757, 12, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1415552, 33349, 488, 10, 28, "Input"],
-Cell[1416043, 33361, 2142, 57, 52, "Output"]
+Cell[1446049, 34055, 2549, 79, 119, "Input"],
+Cell[1448601, 34136, 164, 3, 28, "Output"]
 }, Open  ]],
-Cell[1418200, 33421, 153, 2, 30, "Text"],
+Cell[1448780, 34142, 412, 7, 30, "Text"],
+Cell[1449195, 34151, 1231, 32, 57, "Input"],
+Cell[1450429, 34185, 483, 6, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1418378, 33427, 400, 6, 28, "Input"],
-Cell[1418781, 33435, 3030, 84, 58, "Output"]
+Cell[1450937, 34195, 1386, 35, 57, "Input"],
+Cell[1452326, 34232, 2438, 58, 58, "Output"]
+}, Open  ]],
+Cell[1454779, 34293, 110, 1, 30, "Text"],
+Cell[1454892, 34296, 1714, 45, 73, "Input"],
+Cell[1456609, 34343, 1037, 15, 49, "Text"],
+Cell[1457649, 34360, 2453, 58, 57, "Input"],
+Cell[1460105, 34420, 193, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1460323, 34428, 1729, 49, 81, "Input"],
+Cell[1462055, 34479, 938, 26, 55, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1421860, 33525, 145, 2, 29, "Subsubsection"],
-Cell[1422008, 33529, 142, 1, 30, "Text"],
-Cell[1422153, 33532, 291, 7, 28, "Input"],
-Cell[1422447, 33541, 179, 2, 30, "Text"],
-Cell[1422629, 33545, 1313, 30, 80, "Input"],
-Cell[1423945, 33577, 396, 5, 30, "Text"],
+Cell[1463042, 34511, 98, 1, 29, "Subsubsection"],
+Cell[1463143, 34514, 295, 6, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1424366, 33586, 759, 14, 34, "Input"],
-Cell[1425128, 33602, 916, 15, 32, "Output"]
+Cell[1463463, 34524, 1055, 26, 28, "Input"],
+Cell[1464521, 34552, 1834, 51, 53, "Output"]
 }, Open  ]],
-Cell[1426059, 33620, 228, 3, 30, "Text"],
+Cell[1466370, 34606, 369, 6, 49, "Text"],
+Cell[1466742, 34614, 474, 8, 49, "Text"],
+Cell[1467219, 34624, 968, 30, 57, "Input"],
+Cell[1468190, 34656, 181, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1426312, 33627, 574, 13, 28, "Input"],
-Cell[1426889, 33642, 1895, 51, 57, "Output"]
+Cell[1468396, 34662, 1046, 28, 35, "Input"],
+Cell[1469445, 34692, 1133, 29, 33, "Output"]
 }, Open  ]],
-Cell[1428799, 33696, 202, 4, 30, "Text"],
-Cell[1429004, 33702, 209, 3, 30, "Text"],
+Cell[1470593, 34724, 237, 4, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1429238, 33709, 558, 11, 28, "Input"],
-Cell[1429799, 33722, 2593, 71, 58, "Output"]
-}, Open  ]]
-}, Open  ]]
+Cell[1470855, 34732, 488, 14, 34, "Input"],
+Cell[1471346, 34748, 787, 22, 35, "Output"]
+}, Open  ]],
+Cell[1472148, 34773, 632, 10, 49, "Text"],
+Cell[CellGroupData[{
+Cell[1472805, 34787, 2926, 84, 100, "Input"],
+Cell[1475734, 34873, 365, 6, 28, "Output"]
+}, Open  ]],
+Cell[1476114, 34882, 213, 4, 30, "Text"],
+Cell[1476330, 34888, 431, 7, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1476786, 34899, 1461, 39, 56, "Input"],
+Cell[1478250, 34940, 1226, 29, 35, "Output"]
+}, Open  ]],
+Cell[1479491, 34972, 136, 3, 30, "Text"]
+}, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1432453, 33800, 354, 5, 36, "Subsection"],
+Cell[1479676, 34981, 374, 5, 36, "Subsection"],
+Cell[1480053, 34988, 238, 5, 30, "Text"],
+Cell[1480294, 34995, 564, 10, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1432832, 33809, 124, 2, 35, "Subsubsection"],
-Cell[1432959, 33813, 188, 2, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1433172, 33819, 734, 21, 28, "Input"],
-Cell[1433909, 33842, 1742, 51, 53, "Output"]
+Cell[1480883, 35009, 1231, 32, 53, "Input"],
+Cell[1482117, 35043, 633, 13, 28, "Output"]
 }, Open  ]],
-Cell[1435666, 33896, 757, 12, 30, "Text"],
+Cell[1482765, 35059, 514, 9, 49, "Text"],
 Cell[CellGroupData[{
-Cell[1436448, 33912, 2549, 79, 119, "Input"],
-Cell[1439000, 33993, 142, 3, 28, "Output"]
+Cell[1483304, 35072, 799, 23, 36, "Input"],
+Cell[1484106, 35097, 458, 14, 28, "Output"]
 }, Open  ]],
-Cell[1439157, 33999, 412, 7, 30, "Text"],
-Cell[1439572, 34008, 1231, 32, 57, "Input"],
-Cell[1440806, 34042, 483, 6, 30, "Text"],
+Cell[1484579, 35114, 505, 7, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1441314, 34052, 1386, 35, 57, "Input"],
-Cell[1442703, 34089, 2414, 58, 58, "Output"]
-}, Open  ]],
-Cell[1445132, 34150, 110, 1, 30, "Text"],
-Cell[1445245, 34153, 1657, 45, 73, "Input"],
-Cell[1446905, 34200, 1037, 15, 49, "Text"],
-Cell[1447945, 34217, 2428, 60, 77, "Input"],
-Cell[1450376, 34279, 193, 4, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1450594, 34287, 1797, 52, 81, "Input"],
-Cell[1452394, 34341, 888, 25, 57, "Output"]
-}, Open  ]]
+Cell[1485109, 35125, 571, 12, 28, "Input"],
+Cell[1485683, 35139, 565, 15, 47, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1453331, 34372, 98, 1, 35, "Subsubsection"],
-Cell[1453432, 34375, 295, 6, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1453752, 34385, 1055, 26, 28, "Input"],
-Cell[1454810, 34413, 1866, 51, 53, "Output"]
+Cell[1486285, 35159, 423, 14, 48, "Input"],
+Cell[1486711, 35175, 2194, 44, 242, "Output"]
 }, Open  ]],
-Cell[1456691, 34467, 369, 6, 49, "Text"],
-Cell[1457063, 34475, 474, 8, 49, "Text"],
-Cell[1457540, 34485, 968, 30, 57, "Input"],
-Cell[1458511, 34517, 181, 2, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1458717, 34523, 1046, 28, 35, "Input"],
-Cell[1459766, 34553, 1170, 30, 33, "Output"]
-}, Open  ]],
-Cell[1460951, 34586, 237, 4, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1461213, 34594, 488, 14, 34, "Input"],
-Cell[1461704, 34610, 790, 22, 35, "Output"]
-}, Open  ]],
-Cell[1462509, 34635, 632, 10, 49, "Text"],
-Cell[CellGroupData[{
-Cell[1463166, 34649, 2926, 84, 100, "Input"],
-Cell[1466095, 34735, 337, 5, 28, "Output"]
-}, Open  ]],
-Cell[1466447, 34743, 213, 4, 30, "Text"],
-Cell[1466663, 34749, 431, 7, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1467119, 34760, 1461, 39, 56, "Input"],
-Cell[1468583, 34801, 1950, 49, 58, "Output"]
-}, Open  ]],
-Cell[1470548, 34853, 157, 2, 30, "Text"],
-Cell[1470708, 34857, 1413, 39, 58, "Input"],
-Cell[1472124, 34898, 806, 12, 49, "Text"],
-Cell[1472933, 34912, 2108, 52, 103, "Input"],
-Cell[1475044, 34966, 127, 3, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1475196, 34973, 1637, 46, 103, "Input"],
-Cell[1476836, 35021, 803, 23, 57, "Output"]
-}, Open  ]]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1477700, 35051, 374, 5, 36, "Subsection"],
-Cell[1478077, 35058, 238, 5, 30, "Text"],
-Cell[1478318, 35065, 574, 9, 49, "Text"],
-Cell[CellGroupData[{
-Cell[1478917, 35078, 1348, 39, 67, "Input"],
-Cell[1480268, 35119, 382, 9, 47, "Output"]
-}, Open  ]],
-Cell[1480665, 35131, 281, 6, 30, "Text"],
-Cell[1480949, 35139, 133, 1, 30, "Text"],
-Cell[CellGroupData[{
-Cell[1481107, 35144, 908, 25, 36, "Input"],
-Cell[1482018, 35171, 670, 19, 47, "Output"]
-}, Open  ]],
-Cell[1482703, 35193, 787, 15, 30, "Text"]
+Cell[1488920, 35222, 366, 6, 49, "Text"]
 }, Closed]]
 }, Closed]]
 }, Open  ]]
