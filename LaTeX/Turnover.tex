@@ -47,10 +47,11 @@ Contributions:
 \begin{abstract}
 Sex determination systems are remarkably dynamic; many studied taxa display transitions of sex-determining genes between chromosomes or the evolution of new sex-determining systems. 
 %Predominant theories in which new sex-determining systems are favoured by selection involve sex ratio selection or fitness differences between sexes (e.g., sexually antagonistic selection). 
-Here, we utilize population genetic models to study the spread of novel sex-determining systems where we also include 
+Here, we utilize population genetic models to study the spread of novel sex-determining systems when there is
+%where we also include 
 %a period of selection during the haploid stage produced by one sex, e.g., pollen or sperm competition. 
 haploid gametic selection, e.g., pollen or sperm competition.
-Haploid selected loci experience a form of sex-specific selection (because gametic competition occurs predominantly among haploids produced by males) and can also cause sex ratios at birth to become biased (because sex ratios are determined by the fertilization success of X- versus Y-bearing pollen/sperm). 
+Haploid selected loci experience a form of sex-specific selection (because gametic competition occurs predominantly among haploids produced by males) and can cause sex ratios at birth to become biased (because sex ratios are determined by the fertilization success of X- versus Y-bearing pollen/sperm). 
 We find that the evolution of sex determination systems where mothers determine sex at birth (e.g., environmental sex determination where sex is determined at birth) is influenced by classic Fisherian sex ratio selection. {\color{red}(Maybe not true???)}
 However, notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by gametic selection because sex ratios become biased after parental provisioning has occurred (even if pollen/sperm competition occurs within the mother). 
 In addition, we find that linkage of an ancestral sex chromosome to a locus under haploid selection can favour transitions between male and female heterogamety (e.g., XY to ZW), which is not the case for any forms of diploid sex specific selection (e.g., sexually antagonistic selection).
@@ -151,9 +152,10 @@ The life-cycle begins with competition between haploid gametes/gametophytes from
 Gametes/gametophytes from males then pair randomly with gametes/gametophytes from females.
 The resulting zygotes develop as males or females, depending on their genotypes at the \textbf{X} and \textbf{M} loci (or the \textbf{M} genotype of their mother in the case of maternal control).
 Diploids compete with others of the same sex, where selection depends on the sex of the individual and its genotype at the \textbf{A} locus.
-This is followed by meiosis with recombination. 
+This is followed by meiosis with recombination and sex-specific meiotic drive. 
 Recombination occurs between loci \textbf{X} and \textbf{A} with probability $r$, between loci \textbf{A} and \textbf{M} with probability $R$, and between loci \textbf{X} and \textbf{M} with probability $\chi$. %is chi really the prob of rec in our recursion equations?
 Any order of the loci can be modelled with appropriate choices of $r$, $R$, and $\chi$.
+We model meiotic drive at the viability locus only; individuals of sex $i$ who are heterozygous at the \textbf{A} locus produce haploids bearing allele $A$ with probability $\alpha^i$.
 We track the frequency of haploid genotypes produced by each sex from one generation to the next (recursion equations in Sup.\ Mat.).
 
 %what were going to do, briefly
@@ -166,16 +168,17 @@ Numerical simulations are used to examine when an invading mutation goes to fixa
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{Resident equilibrium and stability}
-With allele $M$ fixed, we follow the dynamics of the frequency of $A$ in gametes/gametophytes from the homogametic sex (e.g., in eggs from an XX female, $p^f_X$) and the frequencies of $A$ in the two types of gametes/gametophytes from the heterogametic sex (e.g., in sperm from an XY male that are X-bearing, $p^m_X$, and Y-bearing, $p^m_Y$).
-Assuming selection is weak relative to recombination, the differences in the frequencies of $A$ in each type of gamete/gametophyte are small, and we can solve for the mean frequency of $A$ across all types ($p_A$) as well as the difference in the frequencies of $A$ between two of the three types, to first order in selection.
+With allele $M$ fixed, we follow the dynamics of the frequency of $A$ in gametes/gametophytes from the homogametic sex (e.g., in eggs from an XX female, $p^f_X$), the frequencies of $A$ in the two types of gametes/gametophytes from the heterogametic sex (e.g., in sperm from an XY male that are X-bearing, $p^m_X$, and Y-bearing, $p^m_Y$), and the frequencies of the sex-determining factors in gametes/gametophytes from the heterogametic sex (e.g., the frequency of Y in sperm, $q$).
+Assuming selection and meiotic drive are weak relative to recombination, the differences in the frequencies of $A$ in each type of gamete/gametophyte are small, as is the bias in the sex-determining factor from the heterogametic sex, and we can solve for the mean frequency of $A$ across all types ($p_A$), the difference in the frequencies of $A$ between two of the three types, and the bias in the frequency of the sex-determining factor, to first order in selection.
 Linear stability analysis can then be used to determine the stability of this equilibrium.
-With no haploid selection our results reduce to those of \cite{vanDoorn:2007eu}. %when $k=0$ (neo-$Y$ invading a $ZW$ system) or when $k=1$ (neo-$W$ invading an $XY$ system) (\textcolor{red}{CHECK}).
-However, with haploid selection a stable polymorphism at locus \textbf{A} no longer requires sexually antagonistic selection, as it can also be achieved by ploidally-antagonistic selection.
+Without haploid selection or meiotic drive our results reduce to those of \cite{vanDoorn:2007eu}. %when $k=0$ (neo-$Y$ invading a $ZW$ system) or when $k=1$ (neo-$W$ invading an $XY$ system) (\textcolor{red}{CHECK}).
+However, with haploid selection or meiotic drive a stable polymorphism at locus \textbf{A} no longer requires sexually antagonistic selection. %, as it can also be achieved by ploidally-antagonistic selection.
 
 \subsection*{Sex chromosome turnover}
 The spread of a rare mutant $m$ at the \textbf{M} locus in such a population is determined by the leading eigenvalue, $\lambda$, of the system described by the equations for the next generation frequency of haploid genotypes with the mutation. %, evaluated at the above equilibrium.
-Below we present the results for invasion into an $XY$ system assuming no competition among gametes/gametophytes from females and linear arrangement \textbf{X}\textbf{A}\textbf{M}. %(i.e., $\chi = r R$). %(SAY SOMETHING HERE ABOUT OTHER ARRANGEMENTS?). %equal dominance coefficients in the two sexes,
+Below we present the results for invasion into an $XY$ system assuming no competition among gametes/gametophytes from females, no meiotic drive in females, and linear arrangement \textbf{X}\textbf{A}\textbf{M}. %(i.e., $\chi = r R$). %(SAY SOMETHING HERE ABOUT OTHER ARRANGEMENTS?). %equal dominance coefficients in the two sexes,
 Equivalent results for invasions into a $ZW$ system can be derived by consistently switching the roles of males and females \citep{vanDoorn:2010hu}.
+
 
 %\subsubsection*{Neo-$Y$}
 %
@@ -244,7 +247,7 @@ When the growth rates of the mutant haplotypes without recombination ($R=0$) are
 
 Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires
 \begin{equation}\label{eq:neoYR}
-R \left[ \frac{p^f_X w^m_a}{g_A^*} + \frac{(1 - p^f_X) w^m_A}{g_a^*} \right] w^m_{Aa} < \nu^m,
+R \left[ \frac{p^f_X w^m_a (1-\alpha^m)}{g_A^*} + \frac{(1 - p^f_X) w^m_A \alpha^m}{g_a^*} \right] w^m_{Aa} < \nu^m,
 \end{equation}
 for the neo-$Y$, and 
 \begin{equation}\label{eq:neoWR}
@@ -259,26 +262,31 @@ $\nu^i =
   (1-p^f_X) (1-p^m_{\textbf{X}^i}) w^m_a w^i_{aa}$,
 with $\textbf{X}^m = Y$ and $\textbf{X}^f = X$, is the mean relative fitness of resident individuals of sex $i$.
 %and $g_j^*$ is the growth rate of $X^m$ and $Ym$ haplotypes when on an $A$ ($j=A$)  or $a$ background ($j=a$).
+Although male meiotic drive does not explicitly appear in Equation \ref{eq:neoWR}, it does affect the average frequency of $A$ in gametes/gametophytes from males, $\bar{p}^m$, and thus can play a role in neo-W invasion.
 
-The new sex-determining allele is therefore expected to invade for any recombination rate, $R$, when the net flow of double recombinants is from the less fit to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative).
+Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele is expected to invade for any recombination rate, $R$, when the net flow of double recombinants is from the less fit to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative).
 %Assuming $g_A^* > 0$ and $g_a^* < 0$ without loss of generality, this is $-(1 - p^f_X) w_{m,A} g_a^* < p^f_X w_{m,a} g_A^*$.
 When the net flow of double recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus, $R$, is small enough.
 
 %weak selection
-Assuming weak selection, we can solve for the invasion fitness of the new sex-determining allele, $m$, into the ancestral $XY$ system explicitly, giving
+Assuming weak selection and meiotic drive, we can explicitly solve for the invasion fitness of the new sex-determining allele, $m$, into the ancestral $XY$ system, giving
 \begin{equation}
 \lambda_{m,XY} \approx 1 + V_A S_A C_m,
 \end{equation}
-where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus, $S_A = s^f (t^m)^2 / \left[ r R \left( s^f + s^m \right)^2 \right]$ (\textcolor{red}{INTERPRETATION?}), $s^f$ and $s^m$ are the respective selection coefficients for $A$ in diploid females and males, $t^m$ is the selection coefficient for $A$ in gametes/gametophytes from males, and we've assumed equal dominance coefficients in the two sexes.
+where $V_A = p_A(1-p_A)$ is the variance at the \textbf{A} locus.
+We will consider haploid selection and meiotic drive separately.
+With haploid selection and no drive we have $S_A = s^f (t^m)^2 / \left[ r R \left( s^f + s^m \right)^2 \right]$, where $s^f$ and $s^m$ are the respective selection coefficients for $A$ in diploid females and males, $t^m$ is the selection coefficient for $A$ in gametes/gametophytes from males, and we've assumed equal dominance coefficients in the two sexes.
+With drive and no haploid selection we replace $t^m$ with $\alpha^m-1/2$.
 
-For the neo-$Y$ we have $C_Y = (r - R)s^f $.
-The neo-$Y$ can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$) and there is selection among both females ($s^f\neq0$) and gametes/gametophytes from males ($t^m\neq0$).
-This reduces to the weak linkage results of \cite{vanDoorn:2007eu} when we do not assume equal dominance coefficients in the two sexes, there is no haploid selection, and there is free recombination between locus \textbf{A} and one of the sex-determining regions.
+For the neo-$Y$ we have $C_Y = (r - R)s^f $ with haploid selection and $C_Y = 4(r - R)s^f $ with drive.
+The neo-$Y$ can therefore invade whenever it is in tighter linkage with the selected locus than the ancestral sex-determining locus, $r>R$, provided locus \textbf{A} is polymorphic ($V_A>0$), there is diploid selection in females ($s^f\neq0$), and there is either haploid selection in gametes/gametophytes from males ($t^m\neq0$) or meiotic drive in males ($\alpha^m\neq1/2$).
+This reduces to the weak-linkage results of \cite{vanDoorn:2007eu} when we do not assume equal dominance coefficients in the two sexes, there is no haploid selection or meiotic drive, and there is free recombination between locus \textbf{A} and one of the sex-determining regions.
 
-For the neo-$W$ we have $C_W = [(2r(1-R)-R) s^f + (1-2r)R s^m]/2$.
+For the neo-$W$ we have $C_W = [(2r(1-R)-R) s^f + (1-2r)R s^m]/2$ with haploid selection and $C_W = 4[r(1-2R) s^f + (1-2r)R s^m]/2$ with drive.
 In this case, even when the novel sex-determining locus is in looser linkage with the selected locus than the ancestral sex-determining locus is, $r<R$, a neo-$W$ can invade.
-For example, with $R=1/2$ the neo-$W$ invades if there is any linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t^m\neq0$), and there is selection for or against $A$ in both males and females ($s^m s^f >0$) that is stronger in males than in females ($|s^m| > |s^f|$).
-This reduces to the weak linkage results of \cite[][Equation 3]{vanDoorn:2010hu} when we do not assume equal dominance coefficients in the two sexes and there is no haploid selection.
+For example, $R=1/2$ the neo-$W$ invades if there is any linkage between the ancestral sex-determining and selected loci ($r<1/2$), there is selection among gametes/gametophytes in males ($t^m\neq0$), and there is selection for or against $A$ in both males and females ($s^m s^f >0$) that is stronger in males than in females ($|s^m| > |s^f|$).
+With meiotic drive and $R=1/2$, all that is required for neo-W invasion is $r<1/2$ and $s^m s^f >0$.
+Our results reduce to the weak-linkage results of \cite[][Equation 3]{vanDoorn:2010hu} when we do not assume equal dominance coefficients in the two sexes and there is no haploid selection or meiotic drive.
 
 %\subsubsection*{Neo-$W$}
 %
