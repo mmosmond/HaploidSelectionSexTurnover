@@ -139,50 +139,135 @@ The maintenance of polymorphism at loci that experience sex specific selection i
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 %genetic system
-We consider a three locus model.
+We consider the transition between an ancestral and novel sex determination systems using a three locus model.
 Locus \textbf{X} is the ancestral sex-determining region, with alleles $X$ and $Y$ (or $Z$ and $W$).
-Locus \textbf{A} is a region under selection, with alleles $A$ and $a$.
-And locus \textbf{M} is a novel sex-determining region, with alleles $M$ and $m$.
-With genotype $MM$ at locus \textbf{M}, the sex of a zygote is determined by the genotype at locus \textbf{X} ($XX$ become females and $XY$ become males, or $ZW$ become females and $ZZ$ become males).
-With at least one $m$ allele at locus \textbf{M}, a zygote develops as a female with probability $k$ and as a male with probability $1-k$.
-With $k=0$, the novel sex determiner is a masculinizer (i.e., a neo-Y) and with $k=1$ the novel sex determiner is a feminizer (i.e., a neo-W).
-With intermediate $k$, locus \textbf{M} is interpreted as an offspring controlled environmental sex-determining region.
+Locus \textbf{A} is a locus under selection, with alleles $A$ and $a$.
+Locus \textbf{M} is a novel sex-determining region, at which the null allele ($M$) is initially fixed in the population such that sex of zygotes is determined by the genotype at the ancestral sex-determining region, \textbf{X} ($XX$ become females and $XY$ become males, or $ZW$ become females and $ZZ$ become males). 
+To evaluate the evolution of new sex-determination systems, we consider the invasion, fixation, maintenance, and/or loss of novel sex-determining alleles ($m$) at the \textbf{M} locus. 
+%We only do invasion analytically though (is this sentence still ok?)
+We assume that the \textbf{M} locus is dominant over the \textbf{X} locus such that zygotes with at least one $m$ allele at locus \textbf{M}, a zygote develops as a female with probability $k$ and as a male with probability $1-k$, regardless of the \textbf{X} locus genotype.
+With $k=0$, the $m$ allele is a masculinizer (i.e., a neo-Y) and with $k=1$ the $m$ allele is a feminizer (i.e., a neo-W).
+With intermediate $k$, the $m$ allele confers environmental sex determination such that zygotes develop as females in a proportion ($k$) of the environments they experience. 
 Finally, we also analyze a model of maternally-controlled environmental sex-determination (ESD), where mothers with at least one $m$ allele produce daughters with probability $k$. 
 
 %life-cycle
-The life-cycle begins with competition between haploid gametes/gametophytes (hereafter gametes) from each sex, where selection depends on the sex of the diploid they came from and their allele at the \textbf{A} locus.
-Gametes from males then pair randomly with gametes from females.
-The resulting zygotes develop as males or females, depending on their genotypes at the \textbf{X} and \textbf{M} loci (and the \textbf{M} genotype of their mother in the case of maternal control).
-Diploids compete with others of the same sex, where selection depends on the sex of the individual and its genotype at the \textbf{A} locus.
-This is followed by meiosis with recombination and sex-specific meiotic drive. 
-Recombination occurs between loci \textbf{X} and \textbf{A} with probability $r$, between loci \textbf{A} and \textbf{M} with probability $R$, and between loci \textbf{X} and \textbf{M} with probability $\chi$. %is chi really the prob of rec in our recursion equations?
-Any order of the loci can be modelled with appropriate choices of $r$, $R$, and $\chi$.
-We model meiotic drive at the viability locus only; individuals of sex $i$ who are heterozygous at the \textbf{A} locus produce haploids bearing allele $A$ with probability $\alpha^i$.
-We track the frequency of haploid genotypes produced by each sex from one generation to the next (recursion equations in Sup.\ Mat.).
+In each generation, we census the genotype frequencies in male and female gametes/gametophytes (hereafter gametes) before haploid competition (recursion equations in Sup.\ Mat.). 
+First, competition occurs among male gametes (sperm/pollen competition) and among female gametes (egg/ovule competition). 
+Selection during haploid competition depends on the \textbf{A} locus genotype, fitnesses are $w_{A}^m$ and $w_{a}^m$ for male gametes and $w_{A}^f$ and $w_{a}^f$ for female gametes, see table \ref{tab:fitnesstable}. 
+Random mating then occurs between male and female gametes.
+The resulting zygotes develop as males or females, depending on their genotypes at the \textbf{X} and \textbf{M} loci (and the \textbf{M} genotype of their mother in the case of maternal control) as described above.
+Diploid males and females then experience selection, male fitness is given by $w_{h}^{m}$ and female fitness by $w_{h}^{f}$, where $h$ is the genotype at the \textbf{A} locus ($h \in AA, Aa, aa$).  
+%Diploids compete with others of the same sex, where selection depends on the sex of the individual and its genotype at the \textbf{A} locus.
+The next generation of gametes are then produced by meiosis, during which recombination and sex-specific meiotic drive can occur. 
+Recombination occurs between loci \textbf{X} and \textbf{A} with probability $r$, between loci \textbf{A} and \textbf{M} with probability $R$, and between loci \textbf{X} and \textbf{M} with probability $\chi$.
+Therefore, any order of the loci can be modelled with appropriate choices of $r$, $R$, and $\chi$ (see Table \ref{tab:chisubstitutions}). 
+Males/females that are heterozygous at the \textbf{A} locus experience meiotic drive; $Aa$ heterozgotes of sex $d$ produce gametes bearing allele $A$ with probability $\alpha^d$. 
+Thus, the \textbf{A} locus experience sex-specific haploid competition, diploid selection and/or meiotic drive. 
 
+\begin{table}[ht]
+\centering
+\smallskip
+\caption{Fitness of different genotypes in sex $d$}
+\begin{tabular}{l c }
+\hline\hline
+  Genotype & Fitness \\ [0.5ex] \hline
+  Haploid Competition & \\
+  A & $w_{A}^d = 1+t^d$ \\
+  a & $w_{a}^d = 1$ \\
+  Diploid Selection & \\
+  AA & $w_{AA}^d = 1+ s^d$ \\
+  Aa & $w_{Aa}^d = 1+h^k s^d$ \\
+  aa & $w_{aa}^d = 1$ \\
+  \hline \hline
+  \label{tab:fitnesstable}
+ \end{tabular}
+\end{table}
+
+%Info moved above
 %what were going to do, briefly
-With allele $M$ fixed at the \textbf{M} locus, sex is determined by locus \textbf{X} and an equilibrium is reached at locus \textbf{A}. %where, importantly, locus \textbf{A} can be stably polymorphic. %the dynamics can be described by the frequency of $A$ in gametes/gametophytes from the homogametic sex and the frequencies of $A$ in the two types of gametes/gametophytes from the heterogametic sex.
-We then examine the ability of a rare, novel sex-determiner, $m$, to increase in frequency from this equilibrium.
-Numerical simulations are used to examine when an invading mutation goes to fixation.
+%With allele $M$ fixed at the \textbf{M} locus, sex is determined by locus \textbf{X} and an equilibrium is reached at locus \textbf{A}. %where, importantly, locus \textbf{A} can be stably polymorphic. %the dynamics can be described by the frequency of $A$ in gametes/gametophytes from the homogametic sex and the frequencies of $A$ in the two types of gametes/gametophytes from the heterogametic sex.
+%We then examine the ability of a rare, novel sex-determiner, $m$, to increase in frequency from this equilibrium.
+%Numerical simulations are used to examine when an invading mutation goes to fixation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Results}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
+The only asymmetry between males and females in our model is that, under the ancestral sex determination system, males develop with genotype $XY$ (or $ZZ$) and females with genotype $XX$ (or $ZW$). 
+Therefore, without loss of generality, we primarily present results for ancestral $XY$ sex determination. 
+Ancestral $ZW$ sex determination can be considered by changing the notation such that $X$ becomes $Z$, $Y$ becomes $W$ and the labelling of male and female selection terms are reversed. 
+
+%I think this should be moved below because we have some 'results' where we don't assume weak selection but we only have the equilibrium calculated analytically for weak selection. 
 \subsection*{Resident equilibrium and stability}
-With allele $M$ fixed, we follow the dynamics of the frequency of $A$ in gametes from the homogametic sex (e.g., in eggs from an XX female, $p^f_X$), the frequencies of $A$ in the two types of gametes from the heterogametic sex (e.g., in sperm from an XY male that are X-bearing, $p^m_X$, and Y-bearing, $p^m_Y$), and the frequencies of the sex-determining factors in gametes from the heterogametic sex (e.g., the frequency of Y in sperm, $q$).
-Assuming selection and meiotic drive are weak relative to recombination, the differences in the frequencies of $A$ in each type of gamete are small, as is the bias in the sex-determining factor from the heterogametic sex, and we can solve for the mean frequency of $A$ across all types ($p_A$), the difference in the frequencies of $A$ between two of the three types, and the bias in the frequency of the sex-determining factor, to first order in selection.
-Linear stability analysis can then be used to determine the stability of this equilibrium.
-Without haploid selection or meiotic drive our results reduce to those of \cite{vanDoorn:2007eu}. %when $k=0$ (neo-$Y$ invading a $ZW$ system) or when $k=1$ (neo-$W$ invading an $XY$ system) (\textcolor{red}{CHECK}).
-However, with haploid selection or meiotic drive a stable polymorphism at locus \textbf{A} no longer requires sexually antagonistic selection. %, as it can also be achieved by ploidally-antagonistic selection.
+In the resident population (allele $M$ fixed), we follow the frequency of $A$ in female gametes (eggs) from an XX female, $p^f_X$, and in X-bearing, $p^m_X$, and Y-bearing, $p^m_Y$, male gametes (sperm). 
+We also track the total frequency of Y-bearing male gametes (sperm), $q$, which may deviate from $1/2$ due to meiotic drive in males. 
+
+Various forms of selection can maintain a polymorphism at the \textbf{A} locus, including sexually antagonistic selection, overdominance and conflicts between diploid selection and selection upon haploid genotypes \citep[ploidally antagonistic selection,][]{Immler:2012tl} or a combination of these selective regimes. 
+Here, we assume that selection and meiotic drive are weak relative to recombination ($s^k$ and $t^k$ of order $\epsilon$ and $\alpha^k=1/2+\alpha_{\Delta}^k$, where $\alpha_{\Delta}^k$ is of order $\epsilon$). 
+The maintenance of a polymorphism at the \textbf{A} locus then requires that
+
+\begin{equation}
+\begin{split}
+0&<-((1-h^f)s^f +(1-h^m) s^m + t^f +t^m + 2\alpha_{\Delta}^f+2\alpha_{\Delta}^m)\\
+%
+0&<(h^f s^f +h^m s^m + t^f +t^m + 2\alpha_{\Delta}^f+2\alpha_{\Delta}^m).
+\end{split}
+\end{equation}
+
+Given that a polymorphism is maintained at the \textbf{A} locus by selection, with weak selection and drive, to leading order, the frequencies of $A$ in each type of gamete are the same ($\hat{p}^f_X=\hat{p}^m_X=\hat{p}^m_Y=\bar{p}$) and given by 
+
+\begin{equation}
+\bar{p}=\frac{h^f s^f + h^m s^m +t^f+t^m+2\alpha_{\Delta}^f+2\alpha_{\Delta}^m}
+{(2h^f-1)s^f+(2h^m-1)s^m}
++O(\epsilon)
+.
+\label{eq:pAve}
+\end{equation}
+
+\noindent
+Differences in frequency between gamete types are of order $\epsilon$ to leading order and given by
+
+\begin{equation}
+\begin{split}
+\hat{p}^m_X-\hat{p}^f_X&=V_{A}\big{(}C^m - C^f \big{)}
++O(\epsilon^2)\\
+%
+\hat{p}^m_Y-\hat{p}^f_X&=V_{A}\big{(}C^m - C^f+(1-2r)(t^m-t^f)\big{)}/2r
++O(\epsilon^2)\\
+%
+\hat{p}^m_Y-\hat{p}^m_X&=V_{A}\big{(}C^m - C^f+(t^m-t^f)\big{)}(1-2r)/2r
++O(\epsilon^2)
+\end{split}
+\end{equation}
+
+\noindent
+where $V_{A}=\bar{p}(1-\bar{p})$ is the variance in the frequency of $A$ and $C^d=(\bar{p}+(1-2\bar{p})h^d) s^d +2\alpha_{\Delta}^d$. 
+The frequency of Y among male gametes is proportional to the difference in $A$ allele frequency on X- and Y-bearing male gametes, $q=\alpha_{\Delta}^m(\hat{p}^m_Y-\hat{p}^m_X)+O(\epsilon^3)$.
+Without haploid competition or drive ($\alpha_{\Delta}^d=t^d=0$), these results reduce to those of \citet{vanDoorn:2007eu}.
+
+
+% the differences in the frequencies of $A$ in each type of gamete are small, as is the bias in the sex-determining factor from the heterogametic sex, and we can solve for the mean frequency of $A$ across all types ($p_A$), the difference in the frequencies of $A$ between two of the three types, and the bias in the frequency of the sex-determining factor, to first order in selection.
+%Linear stability analysis can then be used to determine the stability of this equilibrium.
+%Without haploid selection or meiotic drive our results reduce to those of \cite{vanDoorn:2007eu}. %when $k=0$ (neo-$Y$ invading a $ZW$ system) or when $k=1$ (neo-$W$ invading an $XY$ system) (\textcolor{red}{CHECK}).
+%However, with haploid selection or meiotic drive a stable polymorphism at locus \textbf{A} no longer requires sexually antagonistic selection. %, as it can also be achieved by ploidally-antagonistic selection.
 
 \subsection*{Sex chromosome turnover}
-The spread of a rare mutant $m$ at the \textbf{M} locus in such a population is determined by the leading eigenvalue, $\lambda$, of the system described by the equations for the next generation frequency of haploid genotypes with the mutation. %, evaluated at the above equilibrium.
-Below we present the analytic results for invasion into an $XY$ system assuming no competition among gametes from females, no meiotic drive in females, and linear arrangement \textbf{X}\textbf{A}\textbf{M}. %(i.e., $\chi = r R$). %(SAY SOMETHING HERE ABOUT OTHER ARRANGEMENTS?). %equal dominance coefficients in the two sexes,
-Equivalent results for invasions into a $ZW$ system are derived by consistently switching the roles of males and females. %\citep{vanDoorn:2010hu}.
+The evolution of a new sex determination system requires that a rare mutant, $m$, at the novel sex-determining locus  increases in frequency when rare. 
+The spread of a rare mutant $m$ at the \textbf{M} locus is determined by the leading eigenvalue, $\lambda$, of the system described by the equations for the next generation frequency of haploid genotypes with the mutation, (\ref{eq:recursions}c), (\ref{eq:recursions}d), (\ref{eq:recursions}g), (\ref{eq:recursions}h). %, evaluated at the above equilibrium.
+%Here, we assume loci are arranged in the order \textbf{X}\textbf{A}\textbf{M} (i.e., $\chi=(1-r)R+(1-R)r$). 
+%Invasion is numerically evaluated for different locus arrangements in figure \ref{fig:InvasionVsCentiMorgans}, with qualitatively similar results. %(i.e., $\chi = r R$). %(SAY SOMETHING HERE ABOUT OTHER ARRANGEMENTS?). %equal dominance coefficients in the two sexes,
+
+\subsubsection*{Neo-$Y$}
+
+Invasion of a rare, dominant neo-$Y$ ($k=0$) is determined by the largest eigenvalue that solves the characteristic polynomial
+
+\begin{equation}
+a \lambda^2+ b \lambda + c =0
+\label{eq:charpoly_neoY}
+\end{equation}
 
 
-%\subsubsection*{Neo-$Y$}
+
 %
 %%write in general form without weak selection
 %A rare, dominant neo-$Y$ ($k=0$) is always expected to invade the ancestral $XY$ system when the average growth rate of mutant haplotypes ($Am$ and $am$) is positive, $(g_A + g_a)/2 > 0$. %($g_i = where $\lambda_i$ are the two eigenvalues when $R=r=0$; the \textbf{X} locus does not affect the dynamics).
@@ -436,6 +521,7 @@ Thus, a feedback could occur between population densities and haploid selection,
 \bibliographystyle{amnatnat.bst}
 \bibliography{sex_chromosomes.bib}
 
+\newpage
 \section*{Figures}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -519,6 +605,177 @@ Parameters: $k=0$, $s^f = s^m = t^f = t^m = 0$, $\alpha^m = 0.4$, $\alpha^f = 1/
 \label{fig:CounterKozi}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\setcounter{equation}{0}
+\renewcommand{\theequation}{S.\arabic{equation}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{S.\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{S.\arabic{table}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section*{Appendix}
+
+\subsection*{Recursion Equations}
+\label{app:recurs}
+
+In each generation we census the genotype frequencies in male and female gametes/gametophytes (hereafter, gametes) before haploid competition. 
+Before haploid competition, the frequencies of X-bearing male and female gametes are given by $X_{i}^{m}$ and $X_{i}^{f}$ and the frequencies of Y-bearing gametes are given by $Y_{i}^{m}$ and $Y_{i}^{f}$ where the index $i$ specifies genotypes $MA=1$, $Ma=2$, $mA=3$, and $ma=4$. 
+Competition then occurs among gametes of the same sex (e.g., among eggs and among sperm separately) according to the \textbf{A} locus allele, $g$ ($g\in A$, $a$, see Table \ref{tab:fitnesstable}), carried by individuals with genotype $i$.
+The genotype frequencies after haploid competition are $X_{i}^{d,s}= w_{g}X_{i}^{d}/\bar{w}_{H}^{d}$ and $Y_{i}^{d,s}= w_{g}Y_{i}^{d}/\bar{w}_{H}^{d}$, where $\bar{w}_{H}^{d}=\sum_{i=1}^{4} w_{g}X_{i}^{d}+w_{g}Y_{i}^{d}$ is the mean fitness of male ($d=m$) or female ($d=f$) gametes. 
+Random mating then occurs between gametes to produce diploid zygotes with genotype $ij$ at the \textbf{A} and \textbf{M} loci, such that $XX$ zygotes are denoted $xx_{ij}$, $XY$ zygotes are $xy_{ij}$, and $YY$ zygotes are $yy_{ij}$. 
+In $XX$ and $YY$ zygotes, individuals with genotype $ij$ are equivalent to those with genotype $ji$. 
+For simplicity, we denote the frequency of genotype $ij$ in $XX$ and $YY$ zygotes to the average of these frequencies, $xx_{ij}=(X_{i}^{f,s}X_{j}^{m,s}+X_{j}^{f,s}X_{i}^{m,s})/2$ and $yy_{ij}=(Y_{i}^{f,s}Y_{j}^{m,s}+Y_{j}^{f,s}Y_{i}^{m,s})/2$. 
+
+Denoting the \textbf{M} locus genotype by $b$ ($b\in MM$, $Mm$, $mm$) and the \textbf{X} locus genotype by $c$ ($c\in XX$, $XY$, $YY$), zygotes develop as females with probability $k_{bc}$. 
+Therefore, the frequencies of $XX$ females are given by $xx_{ij}^{f}=k_{bc}xx_{ij}$, $XY$ females are given by $xy_{ij}^{f}=k_{bc}xy_{ij}$, and $YY$ females are given by $yy_{ij}^{f}=k_{bc}xy_{ij}$. 
+Similarly, $XX$ male frequencies are $xx_{ij}^{m}=(1-k_{bc})xx_{ij}$, $XY$ male frequencies are $xy_{ij}^{m}=(1-k_{bc})xy_{ij}$, and $YY$ males frequencies are $yy_{ij}^{m}=(1-k_{bc})xy_{ij}$.
+This notation allows both the ancestral and novel sex-determining regions to determine zygotic sex according to an $XY$ system, a $ZW$ system, or an environmental sex-determining system. 
+In addition, we can consider any dominance relationship between the two sex-determining loci. 
+Typically, we assume that the ancestral sex-determining system (\textbf{X} locus) is $XY$ ($k_{MMXX}=1$ and $k_{MMXY}=k_{MMYY}=0$) and recessive to a dominant novel sex-determining locus, \textbf{M} ($k_{Mmc}=k_{mmc}=k$). 
+
+
+Selection among diploids then occurs according to the diploid genotype at the \textbf{A} locus, $h$, for an individual of type $ij$ ($h \in AA$, $Aa$, $aa$, see Table \ref{tab:fitnesstable}). 
+The diploid frequencies after selection in sex $d$ are given by $xx_{ij}^{d,s}=w_{h}^{d} xx_{ij}/\bar{w}^{d}$, $xy_{ij}^{d,s}=w_{h}^{d} xy_{ij}/\bar{w}^{d}$, and $yy_{ij}^{d,s}=w_{h}^{d} yy_{ij}/\bar{w}^{d}$, where $\bar{w}^{d}= \sum_{i=1}^{4}\sum_{j=1}^{4}w_{h}^{d}xx_{ij}+w_{h}^{d}xy_{ij}+w_{h}^{d}yy_{ij}$ is the mean fitness of individuals of sex $d$. 
+
+Finally, these diploids undergo meiosis to produce the next generation of gametes. 
+Recombination and sex-specific meiotic drive occur during meiosis.
+%We can also assume that recombination is sex specific and/or affected by the M locus - but generally we don't so I just describe $R=R_{f}=R, r_{MM,d}=r_{Mm,d}=r_{mm,d}=r, \chi_{m}=\chi_{f}=\chi$.
+Here, we allow the relative locations of the SDR, \textbf{A}, and \textbf{M} loci to be generic by using three parameters to describe the recombination rates between them. $R$ is the recombination rate between the \textbf{A} locus and the \textbf{M} locus, $\chi$ is the recombination rate between the \textbf{M} locus and the \textbf{X} locus, and $r$ is the recombination rate between the \textbf{A} locus and the \textbf{X} locus. 
+Table \ref{tab:chisubstitutions} gives substitutions for $\chi$ for defined relative locus locations.
+During meiosis in sex $d$, meiotic drive occurs such that, in $Aa$ heterozygotes, a fraction $\alpha_{d}$ of gametes produced carry the $A$ allele and $(1-\alpha^d)$ carry the $a$ allele. 
+
+\begin{table}[ht]
+\centering
+\smallskip
+\caption{$\chi$ substitutions for different loci orders (assuming no interference)}
+\begin{tabular}{l l}
+\hline\hline
+  Order of loci &   \\ [0.5ex] \hline
+  SDR-A-M & $\chi=R(1-r)+r(1-R)$  \\
+  SDR-M-A & $\chi=(r-R)/(1-2R)$ \\
+  A-SDR-M & $\chi=(R-r)/(1-2r)$ \\
+  \hline \hline
+  \label{tab:chisubstitutions}
+ \end{tabular}
+\end{table}
+
+Among gametes from sex $d$ (sperm/pollen when $d=m$, eggs/ovules when $d=f$), the frequency of haplotypes (before haploid competition) in the next generation are given by
+
+\begin{subequations}
+\begin{equation}
+\begin{split}
+X_{MA}^{d'}=&xx_{11}^{d,s}+xx_{13}^{d,s}/2+(xx_{12}^{d,s}+xx_{14}^{d,s})\alpha^d\\
+&-R(xx_{14}^{d,s}-xx_{23}^{d,s}) \alpha^d\\
+&+(xy_{11}^{d,s}+xy_{13}^{d,s})/2+(xy_{12}^{d,s}+xy_{14}^{d,s})\alpha^d\\
+&- r(xy_{12}^{d,s}-xy_{21}^{d,s})\alpha^d - \chi(xy_{13}^{d,s}-xy_{31}^{d,s})/2\\
+&+\big{\{}-(R+r+\chi)xy_{14}^{d,s} +(r+\chi-R)xy_{41}^{d,s}\\
+&+(R+r-\chi) xy_{23}^{d,s}+(R+\chi-r)xy_{32}^{d,s}\big{\}}\alpha^d/2
+\end{split}
+\end{equation}
+%
+\begin{equation}
+\begin{split}
+X_{Ma}^{d'}=&xx_{22}^{d,s}+xx_{24}^{d,s}/2+(xx_{12}^{d,s}+xx_{23}^{d,s})\alpha^d\\
+&-R(xx_{23}^{d,s}-xx_{14}^{d,s}) \alpha^d\\
+&(xy_{22}^{d,s}+xy_{24}^{d,s})/2+(xy_{21}^{d,s}+xy_{23}^{d,s})(1-\alpha^d)\\
+&- r(xy_{21}^{d,s}-xy_{12}^{d,s})(1-\alpha^d) - \chi(xy_{24}^{d,s}-xy_{42}^{d,s})/2\\
+&+\big{\{}-(R+r+\chi)xy_{23}^{d,s}+(r+\chi-R)xy_{32}^{d,s}\\
+&+(R+r-\chi) xy_{14}^{d,s}+(R+\chi-r)xy_{41}^{d,s}\big{\}}(1-\alpha^d)/2
+\end{split}
+\end{equation}
+%
+\begin{equation}
+\begin{split}
+X_{mA}^{d'}=&xx_{33}^{d,s}+xx_{13}^{d,s}/2+(xx_{23}^{d,s}+xx_{34}^{d,s})\alpha^d\\
+&-R(xx_{23}^{d,s}-xx_{14}^{d,s}) \alpha^d\\
+&(xy_{33}^{d,s}+xy_{31}^{d,s})/2+(xy_{32}^{d,s}+xy_{34}^{d,s})\alpha^d\\
+&- r(xy_{34}^{d,s}-xy_{43}^{d,s}) \alpha^d - \chi(xy_{31}^{d,s}-xy_{13}^{d,s})/2\\
+&+\big{\{}-(R+r+\chi)xy_{32}^{d,s} +(r+\chi-R)xy_{23}^{d,s}\\
+&+(R+r-\chi) xy_{41}^{d,s}+(R+\chi-r)xy_{14}^{d,s}\big{\}} \alpha^d/2
+\end{split}
+\end{equation}
+%
+\begin{equation}
+\begin{split}
+X_{ma}^{d'}=&xx_{44}^{d,s}+xx_{34}^{d,s}/2+(xx_{14}^{d,s}+xx_{24}^{d,s})\alpha^d\\
+&-R(xx_{14}^{d,s}-xx_{23}^{d,s}) \alpha^d\\
+&(xy_{44}^{d,s}+xy_{42}^{d,s})/2+(xy_{41}^{d,s}+xy_{43}^{d,s})(1-\alpha^d)\\
+&- r(xy_{43}^{d,s}-xy_{34}^{d,s})(1-\alpha^d) - \chi(xy_{42}^{d,s}-xy_{24}^{d,s})/2\\
+&+\big{\{}-(R+r+\chi)xy_{41}^{d,s}+(r+\chi-R)xy_{14}^{d,s}\\
+&+(R+r-\chi) xy_{32}^{d,s}+(R+\chi-r)xy_{23}^{d,s}\big{\}}(1-\alpha^d)/2
+\end{split}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%
+%
+\begin{equation}
+\begin{split}
+Y_{MA}^{d'}=&yy_{11}^{d,s}+yy_{13}^{d,s}/2+(yy_{12}^{d,s}+yy_{14}^{d,s})\alpha^d\\
+&-R(yy_{14}^{d,s}-yy_{23}^{d,s}) \alpha^d\\
+&(xy_{11}^{d,s}+xy_{31}^{d,s})/2+(xy_{21}^{d,s}+xy_{41}^{d,s})\alpha^d\\
+&- r(xy_{21}^{d,s}-xy_{12}^{d,s})\alpha^d - \chi(xy_{31}^{d,s}-xy_{13}^{d,s})/2\\
+&+\big{\{} - (R+r+\chi)xy_{41}^{d,s} + (r+\chi-R)xy_{14}^{d,s}\\
+& + (R+r-\chi)xy_{32}^{d,s} + (R+\chi-r) xy_{23}^{d,s}\big{\}}\alpha^d/2
+\end{split}
+\end{equation}
+%
+\begin{equation}
+\begin{split}
+Y_{Ma}^{d'}=&yy_{22}^{d,s}+yy_{24}^{d,s}/2+(yy_{12}^{d,s}+yy_{23}^{d,s})\alpha^d\\
+&-R(yy_{23}^{d,s}-yy_{14}^{d,s}) \alpha^d\\
+&(xy_{22}^{d,s}+xy_{42}^{d,s})/2+(xy_{12}^{d,s}+xy_{32}^{d,s})(1-\alpha^d)\\
+&- r(xy_{12}^{d,s}-xy_{21}^{d,s})(1-\alpha^d) - \chi(xy_{42}^{d,s}-xy_{24}^{d,s})/2\\
+&+\big{\{}-(R+r+\chi)xy_{32}^{d,s} +(r+\chi-R) xy_{23}^{d,s}\\
+&+(R+r-\chi)xy_{41}^{d,s}+(R+\chi-r)xy_{14}^{d,s}\big{\}}(1-\alpha^d)/2
+\end{split}
+\end{equation}
+%
+\begin{equation}
+\begin{split}
+Y_{mA}^{d'}=&yy_{33}^{d,s}+yy_{13}^{d,s}/2+(yy_{23}^{d,s}+yy_{34}^{d,s})\alpha^d\\
+&-R(yy_{23}^{d,s}-yy_{14}^{d,s}) \alpha^d\\
+&(xy_{33}^{d,s}+xy_{13}^{d,s})/2+(xy_{23}^{d,s}+xy_{43}^{d,s})\alpha^d\\
+&- r(xy_{43}^{d,s}-xy_{34}^{d,s})\alpha^d - \chi(xy_{13}^{d,s}-xy_{31}^{d,s})/2\\
+&+\big{\{}-(R+r+\chi)xy_{23}^{d,s} +(r+\chi-R)xy_{32}^{d,s}\\
+&+(R+r-\chi) xy_{14}^{d,s} + (R+\chi-r) xy_{41}^{d,s}\big{\}}\alpha^d/2
+\end{split}
+\end{equation}
+%
+\begin{equation}
+\begin{split}
+Y_{ma}^{d'}=&yy_{44}^{d,s}+yy_{34}^{d,s}/2+(yy_{14}^{d,s}+yy_{24}^{d,s})\alpha^d\\
+&-R(yy_{14}^{d,s}-yy_{23}^{d,s}) \alpha^d\\
+&(xy_{44}^{d,s}+xy_{24}^{d,s})/2+(xy_{14}^{d,s}+xy_{34}^{d,s})(1-\alpha^d)\\
+&- r(xy_{34}^{d,s}-xy_{43}^{d,s})(1-\alpha^d) - \chi(xy_{24}^{d,s}-xy_{42}^{d,s})/2\\
+&+\big{\{}-(R+r+\chi) xy_{14}^{d,s} + (r+\chi-R)xy_{41}^{d,s}\\
+&+(R+r-\chi) xy_{23}^{d,s} + (R+\chi-r) xy_{32}^{d,s}\big{\}}(1-\alpha^d)/2
+\end{split}
+\end{equation}
+\label{eq:recursions}
+\end{subequations}
+
+\noindent
+The full system is therefore described by 16 recurrence equations (three loci, each with two alleles, and two gamete sexes yields 16 combinations). 
+However, some diploid types are not produced under a given sex determination system. 
+For example, with the $M$ allele fixed and ancestral $XY$ sex determination, there are no $XX$ males, $XY$ females, or $YY$ females ($xx_{11}^{m}$, $xx_{12}^{m}$, $xx_{22}^m$, $xy_{11}^{f}$, $xy_{12}^{f}$, $xy_{22}^f$, $yy_{11}^{f}$, $yy_{12}^{f}$, and $yy_{22}^f$ are all 0). 
+In this case, the system only involves six recursion equations because there is only one \textbf{M} locus allele and no Y-bearing female gametes. 
+This six-equation system yields equilibrium \eqref{eq:pAve}. 
+Within this resident population (when $m$ is absent) we describe frequencies among different gamete types, which are given by $X_{MA}^{f}=p_{Xf}$, $X_{Ma}^{f}=(1-p_{Xf})$, $X_{MA}^{m}=(1-q)p_{Xm}$, $X_{Ma}^{m}=(1-q)(1-p_{Xm})$, $Y_{MA}^{m}=q p_{Ym}$, and $Y_{Ma}^{m}=q(1-p_{Ym})$.
 
 \end{document}
 
