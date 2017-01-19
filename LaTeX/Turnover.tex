@@ -15,6 +15,8 @@
 \usepackage[numbers]{natbib}
 \bibpunct{(}{)}{,}{a}{}{;} 
 
+\usepackage[flushleft]{threeparttable}
+
 \usepackage[font={scriptsize}]{caption}
 
 \usepackage{lineno} %gives line numbers with \lineno command
@@ -145,13 +147,13 @@ Locus \textbf{A} is a locus under selection, with alleles $A$ and $a$.
 Locus \textbf{M} is a novel sex-determining region, at which the null allele ($M$) is initially fixed in the population such that sex of zygotes is determined by the genotype at the ancestral sex-determining region, \textbf{X} ($XX$ become females and $XY$ become males, or $ZW$ become females and $ZZ$ become males). 
 To evaluate the evolution of new sex-determination systems, we consider the invasion, fixation, maintenance, and/or loss of novel sex-determining alleles ($m$) at the \textbf{M} locus. 
 %We only do invasion analytically though (is this sentence still ok?)
-We assume that the \textbf{M} locus is dominant over the \textbf{X} locus such that zygotes with at least one $m$ allele at locus \textbf{M}, a zygote develops as a female with probability $k$ and as a male with probability $1-k$, regardless of the \textbf{X} locus genotype.
+We assume that the \textbf{M} locus is dominant over the \textbf{X} locus such that zygotes with at least one $m$ allele develop as females with probability $k$ and as males with probability $1-k$, regardless of the \textbf{X} locus genotype.
 With $k=0$, the $m$ allele is a masculinizer (i.e., a neo-Y) and with $k=1$ the $m$ allele is a feminizer (i.e., a neo-W).
 With intermediate $k$, the $m$ allele confers environmental sex determination such that zygotes develop as females in a proportion ($k$) of the environments they experience. 
 Finally, we also analyze a model of maternally-controlled environmental sex-determination (ESD), where mothers with at least one $m$ allele produce daughters with probability $k$. 
 
 %life-cycle
-In each generation, we census the genotype frequencies in male and female gametes/gametophytes (hereafter gametes) before haploid competition (recursion equations in Sup.\ Mat.). 
+In each generation, we census the genotype frequencies in male and female gametes/gametophytes (hereafter gametes) before haploid competition (see Sup.\ Mat. for recursion equations). 
 First, competition occurs among male gametes (sperm/pollen competition) and among female gametes (egg/ovule competition). 
 Selection during haploid competition depends on the \textbf{A} locus genotype, fitnesses are $w_{A}^m$ and $w_{a}^m$ for male gametes and $w_{A}^f$ and $w_{a}^f$ for female gametes, see table \ref{tab:fitnesstable}. 
 Random mating then occurs between male and female gametes.
@@ -162,7 +164,7 @@ The next generation of gametes are then produced by meiosis, during which recomb
 Recombination occurs between loci \textbf{X} and \textbf{A} with probability $r$, between loci \textbf{A} and \textbf{M} with probability $R$, and between loci \textbf{X} and \textbf{M} with probability $\chi$.
 Therefore, any order of the loci can be modelled with appropriate choices of $r$, $R$, and $\chi$ (see Table \ref{tab:chisubstitutions}). 
 Males/females that are heterozygous at the \textbf{A} locus experience meiotic drive; $Aa$ heterozgotes of sex $d$ produce gametes bearing allele $A$ with probability $\alpha^d$. 
-Thus, the \textbf{A} locus experience sex-specific haploid competition, diploid selection and/or meiotic drive. 
+Thus, the \textbf{A} locus can experience sex-specific haploid competition, diploid selection and/or meiotic drive. 
 
 \begin{table}[ht]
 \centering
@@ -170,14 +172,16 @@ Thus, the \textbf{A} locus experience sex-specific haploid competition, diploid 
 \caption{Fitness of different genotypes in sex $d$}
 \begin{tabular}{l c }
 \hline\hline
-  Genotype & Fitness \\ [0.5ex] \hline
-  Haploid Competition & \\
+  Genotype & Fitness during haploid competition \\ [0.5ex] \hline
   A & $w_{A}^d = 1+t^d$ \\
-  a & $w_{a}^d = 1$ \\
-  Diploid Selection & \\
+  a & $w_{a}^d = 1$ \\ [0.5ex] \hline
+  Genotype & Fitness during diploid selection \\ [0.5ex] \hline
   AA & $w_{AA}^d = 1+ s^d$ \\
   Aa & $w_{Aa}^d = 1+h^k s^d$ \\
-  aa & $w_{aa}^d = 1$ \\
+  aa & $w_{aa}^d = 1$ \\ [0.5ex] \hline
+  Genotype & Tranmission during meiosis in $Aa$ heterozygotes \\ [0.5ex] \hline
+  A & $\alpha^d=1/2+\alpha_{\Delta}^{d}$ \\
+  a & $(1-\alpha^d)=1/2-\alpha_{\Delta}^{d}$ \\
   \hline \hline
   \label{tab:fitnesstable}
  \end{tabular}
@@ -203,7 +207,7 @@ In the resident population (allele $M$ fixed), we follow the frequency of $A$ in
 We also track the total frequency of Y-bearing male gametes (sperm), $q$, which may deviate from $1/2$ due to meiotic drive in males. 
 
 Various forms of selection can maintain a polymorphism at the \textbf{A} locus, including sexually antagonistic selection, overdominance and conflicts between diploid selection and selection upon haploid genotypes \citep[ploidally antagonistic selection,][]{Immler:2012tl} or a combination of these selective regimes. 
-Here, we assume that selection and meiotic drive are weak relative to recombination ($s^k$ and $t^k$ of order $\epsilon$ and $\alpha^k=1/2+\alpha_{\Delta}^k$, where $\alpha_{\Delta}^k$ is of order $\epsilon$). 
+Here, we assume that selection and meiotic drive are weak relative to recombination ($s^k$, $t^k$, $\alpha_{\Delta}^k$ of order $\epsilon$). 
 The maintenance of a polymorphism at the \textbf{A} locus then requires that
 
 \begin{equation}
@@ -238,11 +242,12 @@ Differences in frequency between gamete types are of order $\epsilon$ to leading
 \hat{p}^m_Y-\hat{p}^m_X&=V_{A}\big{(}C^m - C^f+(t^m-t^f)\big{)}(1-2r)/2r
 +O(\epsilon^2)
 \end{split}
+\label{eq:freq_diffs}
 \end{equation}
 
 \noindent
 where $V_{A}=\bar{p}(1-\bar{p})$ is the variance in the frequency of $A$ and $C^d=(\bar{p}+(1-2\bar{p})h^d) s^d +2\alpha_{\Delta}^d$. 
-The frequency of Y among male gametes is proportional to the difference in $A$ allele frequency on X- and Y-bearing male gametes, $q=\alpha_{\Delta}^m(\hat{p}^m_Y-\hat{p}^m_X)+O(\epsilon^3)$.
+The frequency of Y among male gametes is proportional to the difference in $A$ allele frequency on X- and Y-bearing male gametes, $q=1/2+\alpha_{\Delta}^m(\hat{p}^m_Y-\hat{p}^m_X)+O(\epsilon^3)$.
 Without haploid competition or drive ($\alpha_{\Delta}^d=t^d=0$), these results reduce to those of \citet{vanDoorn:2007eu}.
 
 
@@ -255,7 +260,7 @@ Without haploid competition or drive ($\alpha_{\Delta}^d=t^d=0$), these results 
 The evolution of a new sex determination system requires that a rare mutant, $m$, at the novel sex-determining locus  increases in frequency when rare. 
 The spread of a rare mutant $m$ at the \textbf{M} locus is determined by the leading eigenvalue, $\lambda$, of the system described by the next generation frequency of eggs and sperm carrying the mutation, (\ref{eq:recursions}c), (\ref{eq:recursions}d), (\ref{eq:recursions}g), (\ref{eq:recursions}h), which is an eight equation system. %, evaluated at the above equilibrium.
 %Thus, the system describing the change in frequency of the $m$ allele consists of eight recursion equations. 
-Dominant neo-Y chromosomes (when $k=0$) or neo-W chromosomes (when $k=1$) are only found in male diploids (neo-Y) or female diploids (neo-W) such that their long term growth rate depends only on the change in frequency of $m$-bearing gametes produced by males (for a neo-Y) or by females (for a neo-W). 
+Dominant neo-Y chromosomes (when $k=0$) or neo-W chromosomes (when $k=1$) are only found in male diploids (neo-Y) or female diploids (neo-W) such that their growth rate ultimately depends only on the change in frequency of $m$-bearing gametes produced by males (for a neo-Y) or by females (for a neo-W). 
 Furthermore, if the $m$ allele is fully dominant over the ancestral sex-determining system, phenotypes are not affected by the genotype at the ancestral sex-determining region (\textbf{X} locus). 
 Therefore, the invasion of rare mutant neo-Y or neo-W chromosomes can be described by a simpler, two equation system, the largest eigenvalue of which solves the characteristic polynomial
 
@@ -265,9 +270,9 @@ Therefore, the invasion of rare mutant neo-Y or neo-W chromosomes can be describ
 \end{equation}
 
 \noindent
-where $b$ is the average of the growth rates of the two haplotypes that carry the $m$ allele ($mA$ and $ma$), $b=(\lambda_{mA}^{m}+\lambda_{ma}^{m})/2$, and $c$ also involves the fitness of $m$ alleles when they recombine onto the other \textbf{A} background in a heterozygote, $c=\lambda_{mA}\lambda_{ma}+\rho_{mA}\rho_{ma}$. 
+where $b$ is the average of the growth rates of the two haplotypes that carry the $m$ allele ($mA$ and $ma$), $b=(\lambda_{mA}^{m}+\lambda_{ma}^{m})/2$, and $c$ also involves the fitness of $m$ alleles when they recombine onto the other \textbf{A} background in a heterozygote, $c=\lambda_{mA}\lambda_{ma}+\rho_{mA}\rho_{ma}$, see table \ref{tab:haplotype_growth}.
 
-\begin{table}[ht]
+\begin{threeparttable}[ht]
 \centering
 \smallskip
 \caption{Parameters determining invasion (equation \ref{eq:charpoly_neoY}) for neo-Y or neo-W chromosomes}
@@ -275,20 +280,73 @@ where $b$ is the average of the growth rates of the two haplotypes that carry th
 \hline\hline
    \noalign{\vskip 0.5ex}
    neo-Y ($k=0$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
-  $\lambda_{mA}=\{p_{Xf} w_{A}^{f} w_{A}^{m} w_{AA}^{m}+(1-p_{Xf}) w_{a}^{f} w_{A}^{m} w_{Aa}^{m}\alpha^m(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m$ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\lambda_{ma}=\{(1-p_{Xf}) w_{a}^{f} w_{a}^{m} w_{aa}^{m}+p_{Xf} w_{A}^{f} w_{a}^{m} w_{Aa}^{m}(1-\alpha^m)(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m $ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R \{(1-p_{Xf}) w_{a}^{f} w_{A}^{m} w_{Aa}^{m} (1-\alpha_{m})\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R\{p_{Xf} w_{A}^{f} w_{a}^{m} w_{Aa}^{m} \alpha_{m}\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m$\\ [1ex] \hline 
+  $\lambda_{mA}=\{p_{X}^{f} w_{A}^{f} w_{A}^{m} w_{AA}^{m}+(1-p_{X}^{f}) w_{a}^{f} w_{A}^{m} w_{Aa}^{m}\alpha^m(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m$ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{ma}=\{(1-p_{X}^{f}) w_{a}^{f} w_{a}^{m} w_{aa}^{m}+p_{X}^{f} w_{A}^{f} w_{a}^{m} w_{Aa}^{m}(1-\alpha^m)(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{mA}=R \{(1-p_{X}^{f}) w_{a}^{f} w_{A}^{m} w_{Aa}^{m} (1-\alpha_{m})\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R\{p_{X}^{f} w_{A}^{f} w_{a}^{m} w_{Aa}^{m} \alpha_{m}\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m$\\ [1ex] \hline 
   \noalign{\vskip 0.5ex}
-  neo-W ($k=1$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
-  $\lambda_{mA}=\{\bar{p}_{m} w_{A}^{m} w_{A}^{f} w_{AA}^{f}+(1-\bar{p}_{m}) w_{a}^{m} w_{A}^{f} w_{Aa}^{f}\alpha^f(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f$ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\lambda_{ma}=\{(1-\bar{p}_{m}) w_{a}^{m} w_{a}^{f} w_{aa}^{f}+\bar{p}_{m} w_{A}^{m} w_{a}^{f} w_{Aa}^{f}(1-\alpha^f)(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f $ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R \{(1-\bar{p}_{m}) w_{a}^{m} w_{A}^{f} w_{Aa}^{f} (1-\alpha_{f})\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R\{\bar{p}_{m} w_{A}^{m} w_{a}^{f} w_{Aa}^{f} \alpha_{f}\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f$\\ [1ex] 
-  \hline \hline
+  neo-W ($k=1$) \** \\ [0.5ex] \hline \noalign{\vskip 1ex}
+  $\lambda_{mA}=\{\bar{p}^{m} w_{A}^{m} w_{A}^{f} w_{AA}^{f}+(1-\bar{p}^{m}) w_{a}^{m} w_{A}^{f} w_{Aa}^{f}\alpha^f(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f$ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{ma}=\{(1-\bar{p}^{m}) w_{a}^{m} w_{a}^{f} w_{aa}^{f}+\bar{p}^{m} w_{A}^{m} w_{a}^{f} w_{Aa}^{f}(1-\alpha^f)(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{mA}=R \{(1-\bar{p}^{m}) w_{a}^{m} w_{A}^{f} w_{Aa}^{f} (1-\alpha_{f})\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R\{\bar{p}^{m} w_{A}^{m} w_{a}^{f} w_{Aa}^{f} \alpha_{f}\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f$\\ [1ex] 
+  \hline \hline 
+   \end{tabular}
+      \begin{tablenotes}
+      \scriptsize
+      \item \** $\bar{p}^{m}=p_{Y}^{m}q+p_{X}^{m}(1-q)$ is the average frequency of the $A$ allele among X- and Y-bearing male gametes (pollen/sperm). 
+    \end{tablenotes}
   \label{tab:haplotype_growth}
- \end{tabular}
-\end{table}
+\end{threeparttable}
+
+Equation \eqref{eq:charpoly_neoY} and table \ref{tab:haplotype_growth} illustrate a number of key points about the invasion of neo-Y and neo-W mutations. 
+For a neo-Y, invasion depends on the relative \textcolor{red}{(is this right, is relative fitness divided by mean fitness or difference from 1???)} fitness of $A$-bearing and $a$-bearing male gametes (i.e., in sperm only, not eggs). 
+The fitness of male gametes partly depends on the allele carried by the female gamete that they mate with (e.g., $A$ with probability $p_{X}^{f} w_{A}^{f}/\bar{w}_{H}^{f}$).
+Similarly, invasion of a neo-W depends on the relative fitness of $A$-bearing and $a$-bearing female gametes. 
+However, in the case of a neo-W, the allele carried by the male gamete that they mate with can come from either an X-bearing or a Y-bearing sperm (e.g., $A$ with probability $\bar{p}^{m} w_{A}^{m}/\bar{w}_{H}^{m}$, where $\bar{p}^{m}=p_{Y}^{m}q+p_{X}^{m}(1-q)$). In either case, the zygote will then develop as a female due to the presence of a neo-W. 
+By contrast, females that do not carry the neo-W, only result from matings with X-bearing sperm (e.g., matings with $A$-bearing sperm occur with probability $\bar{p}_{X}^{m} w_{A}^{m}/\bar{w}_{H}^{m}$). 
+If the \textbf{A} locus is initially linked to the ancestral sex-determining locus, \textbf{X}, (i.e., $r<1/2$) the frequency of the $A$ allele among X- and Y-bearing sperm can differ (equation \ref{eq:freq_diffs}). 
+Thus, eggs with and without a neo-W differ in the frequency of alleles they obtain from mating with male gametes. 
+
+Previous research suggests, when the ancestral sex-determining locus is linked to a locus that experiences haploid selection (e.g., meiotic drive), a new, unlinked sex-determining locus can invade in order to restore equal sex ratios \citep{Kozielska:2010vm}. 
+Our model provides a good opportunity to determine whether Fisherian sex ratio selection provides a useful explanation for the evolution of new sex-determining loci in other contexts. 
+Consider, for example, the case where the \textbf{A} locus is linked to the ancestral-SDR ($r<1/2$) and experiences meiotic drive in males only (e.g., during spermatogenesis but not during oogenesis, $\alpha^m \neq 1/2$, $\alpha^f=1/2$). 
+We will also disregard haploid competition ($t^f=t^m=0$) such that zygotic sex ratios can only be biased by meiotic drive in males. 
+In this case, the zygotic sex ratio can be initially biased only if the ancestral sex-determining system is XY. 
+If the ancestral sex-determining system is ZW, the zygotic sex ratio will be 1:1 because diploid sex is determined by the proportion of Z-bearing versus W-bearing eggs (and meiosis in females is fair).
+Thus, if the zygotic sex ratio is crucial to the evolution of new genetic sex-determining systems, invasion into ZW and XY systems will be distinct. 
+However, we find that invasion of new homogametic systems (XY to XY, or ZW to ZW) and heterogametic systems (XY to ZW or ZY to XY) occur under the same conditions. 
+That is, $\lambda_{XY,XY}=\lambda_{ZW,ZW}$ and $\lambda_{XY,ZW}=\lambda_{ZW,XY}$, where $\lambda_{i,j}$ indicates the growth rate of a new mutant giving sex-determining system $j$ in a population in which sex is ancestrally determined by system $i$. 
+
+
+We are particularly concerned with whether or not a rare neo-sex-determining region increases in frequency, which occurs when the largest eigenvalue, $\lambda$, that solves \eqref{eq:charpoly_neoY} is greater than one. 
+If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur (if $\left\{(\lambda_{mA}-1)+ (\lambda_{ma}-1) \right\}/2>0$, $\lambda>1$). 
+If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$ \textcolor{red}{is this notation valid?}), the $m$ allele will not invade. 
+Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires
+\begin{equation}\label{eq:neoYR}
+R \left[ 
+\frac{p^f_X w^m_a (1-\alpha^m)}{(\lambda_{mA}-1)\bar{w}_{H}^{m}} + 
+\frac{(1 - p^f_X) w^m_A \alpha^m \bar{w}_{H}^{m}}{(\lambda_{ma}-1)\bar{w}_{H}^{m}} \right] 
+\frac{w^m_{Aa}}{\bar{w}^m} < 1,
+\end{equation}
+
+\noindent
+for the neo-$Y$, and 
+
+\noindent
+\begin{equation}\label{eq:neoWR}
+R \left[  
+\frac{(1 - \bar{p}^m) w^m_{a}}{(\lambda_{mA}-1)\bar{w}_{H}^{m}} + 
+\frac{\bar{p}^m w^m_{A}}{(\lambda_{ma}-1)\bar{w}_{H}^{m}} \right] 
+\frac{w^f_{Aa}}{\bar{w}^f} < 1
+\end{equation}
+
+\noindent
+for the neo-$W$.
+
+Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele is expected to invade for any recombination rate, $R$, when the net flow of double recombinants is from the less fit to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative).
+%Assuming $g_A^* > 0$ and $g_a^* < 0$ without loss of generality, this is $-(1 - p^f_X) w_{m,A} g_a^* < p^f_X w_{m,a} g_A^*$.
+When the net flow of double recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus, $R$, is small enough.
 
 
 %
@@ -363,27 +421,27 @@ where $b$ is the average of the growth rates of the two haplotypes that carry th
 %=======
 %>>>>>>> c89cd9e1d25a76e5bffdd1ee7574884f24c08070
 %write in general form without weak selection
-A rare, dominant neo-$Y$ ($k=0$) or neo-$W$ ($k=1$) is always expected to invade an ancestral $XY$ system when the average growth rate of the mutant haplotypes ($Am$ and $am$) is positive, $(g_A + g_a)/2 > 0$. %($g_i = where $\lambda_i$ are the two eigenvalues when $R=r=0$; the \textbf{X} locus does not affect the dynamics).
-When the growth rates of the mutant haplotypes without recombination ($R=0$) are negative, $g_i^* < 0 \; \forall \; i \in \{A,a\}$, where $g_i < g_i^*$, the new sex-determining allele does not invade.
+%A rare, dominant neo-$Y$ ($k=0$) or neo-$W$ ($k=1$) is always expected to invade an ancestral $XY$ system when the average growth rate of the mutant haplotypes ($Am$ and $am$) is positive, $(g_A + g_a)/2 > 0$. %($g_i = where $\lambda_i$ are the two eigenvalues when $R=r=0$; the \textbf{X} locus does not affect the dynamics).
+%When the growth rates of the mutant haplotypes without recombination ($R=0$) are negative, $g_i^* < 0 \; \forall \; i \in \{A,a\}$, where $g_i < g_i^*$, the new sex-determining allele does not invade.
 
-Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires
-\begin{equation}\label{eq:neoYR}
-R \left[ \frac{p^f_X w^m_a (1-\alpha^m)}{g_A^*} + \frac{(1 - p^f_X) w^m_A \alpha^m}{g_a^*} \right] w^m_{Aa} < \nu^m,
-\end{equation}
-for the neo-$Y$, and 
-\begin{equation}\label{eq:neoWR}
-R \left[  \frac{(1 - \bar{p}^m) w^m_{a}}{g_A^*} + \frac{\bar{p}^m w^m_{A}}{g_a^*} \right] w^f_{Aa} < \nu^f
-\end{equation}
-for the neo-$W$.
-Here $\bar{p}^m = (1-q) p^m_X+ q p^m_Y$ is the average frequency of $A$ in gametes produced by males, $w^i_{j}$ is the relative viability fitness of sex $i\in\{m,f\}$ depending on their haploid or diploid genotype at the \textbf{A} locus (with $j\in\{A,a,AA,Aa,aa\}$) and
-$\nu^i = 
-  p^f_X p^m_{\textbf{X}^i} w^m_{a} w^i_{AA} +
-  p^f_X (1-p^m_{\textbf{X}^i}) w^m_{a} w^i_{Aa} +
-  (1-p^f_X) p^m_{\textbf{X}^i} w^m_{a} w^i_{Aa} +
-  (1-p^f_X) (1-p^m_{\textbf{X}^i}) w^m_a w^i_{aa}$,
-with $\textbf{X}^m = Y$ and $\textbf{X}^f = X$, is the mean relative fitness of resident individuals of sex $i$.
+%Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires
+%\begin{equation}\label{eq:neoYR}
+%R \left[ \frac{p^f_X w^m_a (1-\alpha^m)}{g_A^*} + \frac{(1 - p^f_X) w^m_A \alpha^m}{g_a^*} \right] w^m_{Aa} < \nu^m,
+%\end{equation}
+%for the neo-$Y$, and 
+%\begin{equation}\label{eq:neoWR}
+%R \left[  \frac{(1 - \bar{p}^m) w^m_{a}}{g_A^*} + \frac{\bar{p}^m w^m_{A}}{g_a^*} \right] w^f_{Aa} < \nu^f
+%\end{equation}
+%for the neo-$W$.
+%Here $\bar{p}^m = (1-q) p^m_X+ q p^m_Y$ is the average frequency of $A$ in gametes produced by males, $w^i_{j}$ is the relative viability fitness of sex $i\in\{m,f\}$ depending on their haploid or diploid genotype at the \textbf{A} locus (with $j\in\{A,a,AA,Aa,aa\}$) and
+%$\nu^i = 
+%  p^f_X p^m_{\textbf{X}^i} w^m_{a} w^i_{AA} +
+%  p^f_X (1-p^m_{\textbf{X}^i}) w^m_{a} w^i_{Aa} +
+%  (1-p^f_X) p^m_{\textbf{X}^i} w^m_{a} w^i_{Aa} +
+%  (1-p^f_X) (1-p^m_{\textbf{X}^i}) w^m_a w^i_{aa}$,
+%with $\textbf{X}^m = Y$ and $\textbf{X}^f = X$, is the mean relative fitness of resident individuals of sex $i$.
 %and $g_j^*$ is the growth rate of $X^m$ and $Ym$ haplotypes when on an $A$ ($j=A$)  or $a$ background ($j=a$).
-Although male meiotic drive does not explicitly appear in Equation \ref{eq:neoWR}, it does affect the average frequency of $A$ in gametes from males, $\bar{p}^m$, and thus can play a role in neo-W invasion.
+%Although male meiotic drive does not explicitly appear in Equation \ref{eq:neoWR}, it does affect the average frequency of $A$ in gametes from males, $\bar{p}^m$, and thus can play a role in neo-W invasion.
 
 Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele is expected to invade for any recombination rate, $R$, when the net flow of double recombinants is from the less fit to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative).
 %Assuming $g_A^* > 0$ and $g_a^* < 0$ without loss of generality, this is $-(1 - p^f_X) w_{m,A} g_a^* < p^f_X w_{m,a} g_A^*$.
@@ -492,6 +550,17 @@ This implies that, at least under tight linkage, the invasion of maternally-cont
 
 Brief results summary. 
 
+Fisherian sex ratio selection follows from the fact that, for a given locus, half of the genetic material is inherited from a male, and half from a female. 
+Thus, if the population sex ratio is biased towards females, the average per-individual contribution of genetic material to the next generation from males is greater than the contribution from females (and vice versa for male-biased sex ratios). 
+Therefore, an autosomal mutation that increases investment in males will spread via the higher per-individual contributions made by males. 
+In other words, the success of a non-sex-determining, autosomal mutant depends, in equal parts, on the contributions made by both males and females to the next generation.
+However, the mutations we consider here, neo-sex-determining alleles, do not follow the same inheritance rules. 
+For example, invasion of a dominant neo-Y depends on the number of neo-Y alleles contributed to the next generation by males only (equation \ref{eq:charpoly_neoY} and Table \ref{tab:haplotype_growth}) because neo-Y alleles will only be found in males. 
+
+
+Sex ratio biases caused by haploid competition or meiotic drive have been shown to exert selection on various modifiers, which evolve to restore an equal sex ratio. 
+
+
 DRAFT (improve): In \citet{Ubeda:2015fx}, the new sex determining locus spreads because it arises in linkage with a locus that experiences drive. They assume that drive occurs predominantly in one sex, e.g., during spermatogenesis or a 'killer' sperm. A driving allele is maintained at an intermediate frequency by selection, e.g., because it causes male sterility when homozygous (because all male sperm are killed). Y chromosomes that arise in linkage with the driving allele spread because they allow drive to occur more often, thus genetic sex determination with a sex ratio bias evolves. 
 Thus \citet{Ubeda:2015fx} also find that genetic sex determiners can invade, despite causing sex ratios to become biased. 
 Finally, they show that autosomal 'restorers' that negate the effects of meiotic drive can invade and restore an equal sex ratio. 
@@ -504,17 +573,6 @@ For example, the intensity of pollen competition can be manipulated by altering 
 Where the X and Y have fitness differences, \citet{Hough:2013uo} and \citet{Otto:2015va} demonstrated that mothers should generally evolve to balance sex ratios by reducing the intensity of haploid competition. 
 
 {\color{red}{Despite the fact that sex ratio restorers can evolve, we find that sex chromosome turnover occurs regardless of sex ratio bias (Figure 3).}}
-
-Fisherian sex ratio selection follows from the fact that, for a given locus, half of the genetic material is inherited from a male, and half from a female. 
-Thus, if the population sex ratio is biased towards females, the average per-individual contribution of genetic material to the next generation from males is greater than the contribution from females (and vice versa for male-biased sex ratios). 
-Therefore, an autosomal mutation that increases investment in males will spread via the higher per-individual contributions made by males. 
-In other words, the success of a non-sex-determining, autosomal mutant depends, in equal parts, on the contributions made by both males and females to the next generation.
-However, the mutations we consider here, neo-sex-determining alleles, do not follow the same inheritance rules. 
-For example, invasion of a dominant neo-Y depends on the number of neo-Y alleles contributed to the next generation by males only (equation \ref{eq:charpoly_neoY} and Table \ref{tab:haplotype_growth}) because neo-Y alleles will only be found in males. 
-
-
-Sex ratio biases caused by haploid competition or meiotic drive have been shown to exert selection on various modifiers, which evolve to restore an equal sex ratio. 
-
 
 {\color{blue}
 FROM THESIS:
