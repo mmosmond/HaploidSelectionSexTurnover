@@ -253,19 +253,42 @@ Without haploid competition or drive ($\alpha_{\Delta}^d=t^d=0$), these results 
 
 \subsection*{Sex chromosome turnover}
 The evolution of a new sex determination system requires that a rare mutant, $m$, at the novel sex-determining locus  increases in frequency when rare. 
-The spread of a rare mutant $m$ at the \textbf{M} locus is determined by the leading eigenvalue, $\lambda$, of the system described by the equations for the next generation frequency of haploid genotypes with the mutation, (\ref{eq:recursions}c), (\ref{eq:recursions}d), (\ref{eq:recursions}g), (\ref{eq:recursions}h). %, evaluated at the above equilibrium.
-%Here, we assume loci are arranged in the order \textbf{X}\textbf{A}\textbf{M} (i.e., $\chi=(1-r)R+(1-R)r$). 
-%Invasion is numerically evaluated for different locus arrangements in figure \ref{fig:InvasionVsCentiMorgans}, with qualitatively similar results. %(i.e., $\chi = r R$). %(SAY SOMETHING HERE ABOUT OTHER ARRANGEMENTS?). %equal dominance coefficients in the two sexes,
-
-\subsubsection*{Neo-$Y$}
-
-Invasion of a rare, dominant neo-$Y$ ($k=0$) is determined by the largest eigenvalue that solves the characteristic polynomial
+The spread of a rare mutant $m$ at the \textbf{M} locus is determined by the leading eigenvalue, $\lambda$, of the system described by the next generation frequency of eggs and sperm carrying the mutation, (\ref{eq:recursions}c), (\ref{eq:recursions}d), (\ref{eq:recursions}g), (\ref{eq:recursions}h), which is an eight equation system. %, evaluated at the above equilibrium.
+%Thus, the system describing the change in frequency of the $m$ allele consists of eight recursion equations. 
+Dominant neo-Y chromosomes (when $k=0$) or neo-W chromosomes (when $k=1$) are only found in male diploids (neo-Y) or female diploids (neo-W) such that their long term growth rate depends only on the change in frequency of $m$-bearing gametes produced by males (for a neo-Y) or by females (for a neo-W). 
+Furthermore, if the $m$ allele is fully dominant over the ancestral sex-determining system, phenotypes are not affected by the genotype at the ancestral sex-determining region (\textbf{X} locus). 
+Therefore, the invasion of rare mutant neo-Y or neo-W chromosomes can be described by a simpler, two equation system, the largest eigenvalue of which solves the characteristic polynomial
 
 \begin{equation}
-a \lambda^2+ b \lambda + c =0
+\lambda^2+ b \lambda + c =0
 \label{eq:charpoly_neoY}
 \end{equation}
 
+\noindent
+where $b$ is the average of the growth rates of the two haplotypes that carry the $m$ allele ($mA$ and $ma$), $b=(\lambda_{mA}^{m}+\lambda_{ma}^{m})/2$, and $c$ also involves the fitness of $m$ alleles when they recombine onto the other \textbf{A} background in a heterozygote, $c=\lambda_{mA}\lambda_{ma}+\rho_{mA}\rho_{ma}$. 
+
+\begin{table}[ht]
+\centering
+\smallskip
+\caption{Parameters determining invasion (equation \ref{eq:charpoly_neoY}) for neo-Y or neo-W chromosomes}
+\begin{tabular}{l}
+\hline\hline
+   \noalign{\vskip 0.5ex}
+   neo-Y ($k=0$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
+  $\lambda_{mA}=\{p_{Xf} w_{A}^{f} w_{A}^{m} w_{AA}^{m}+(1-p_{Xf}) w_{a}^{f} w_{A}^{m} w_{Aa}^{m}\alpha^m(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m$ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{ma}=\{(1-p_{Xf}) w_{a}^{f} w_{a}^{m} w_{aa}^{m}+p_{Xf} w_{A}^{f} w_{a}^{m} w_{Aa}^{m}(1-\alpha^m)(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{mA}=R \{(1-p_{Xf}) w_{a}^{f} w_{A}^{m} w_{Aa}^{m} (1-\alpha_{m})\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R\{p_{Xf} w_{A}^{f} w_{a}^{m} w_{Aa}^{m} \alpha_{m}\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^m$\\ [1ex] \hline 
+  \noalign{\vskip 0.5ex}
+  neo-W ($k=1$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
+  $\lambda_{mA}=\{\bar{p}_{m} w_{A}^{m} w_{A}^{f} w_{AA}^{f}+(1-\bar{p}_{m}) w_{a}^{m} w_{A}^{f} w_{Aa}^{f}\alpha^f(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f$ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{ma}=\{(1-\bar{p}_{m}) w_{a}^{m} w_{a}^{f} w_{aa}^{f}+\bar{p}_{m} w_{A}^{m} w_{a}^{f} w_{Aa}^{f}(1-\alpha^f)(1-R)\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{mA}=R \{(1-\bar{p}_{m}) w_{a}^{m} w_{A}^{f} w_{Aa}^{f} (1-\alpha_{f})\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R\{\bar{p}_{m} w_{A}^{m} w_{a}^{f} w_{Aa}^{f} \alpha_{f}\}/ \bar{w}_{H}^{f} \bar{w}_{H}^{m} \bar{w}^f$\\ [1ex] 
+  \hline \hline
+  \label{tab:haplotype_growth}
+ \end{tabular}
+\end{table}
 
 
 %
@@ -482,6 +505,17 @@ Where the X and Y have fitness differences, \citet{Hough:2013uo} and \citet{Otto
 
 {\color{red}{Despite the fact that sex ratio restorers can evolve, we find that sex chromosome turnover occurs regardless of sex ratio bias (Figure 3).}}
 
+Fisherian sex ratio selection follows from the fact that, for a given locus, half of the genetic material is inherited from a male, and half from a female. 
+Thus, if the population sex ratio is biased towards females, the average per-individual contribution of genetic material to the next generation from males is greater than the contribution from females (and vice versa for male-biased sex ratios). 
+Therefore, an autosomal mutation that increases investment in males will spread via the higher per-individual contributions made by males. 
+In other words, the success of a non-sex-determining, autosomal mutant depends, in equal parts, on the contributions made by both males and females to the next generation.
+However, the mutations we consider here, neo-sex-determining alleles, do not follow the same inheritance rules. 
+For example, invasion of a dominant neo-Y depends on the number of neo-Y alleles contributed to the next generation by males only (equation \ref{eq:charpoly_neoY} and Table \ref{tab:haplotype_growth}) because neo-Y alleles will only be found in males. 
+
+
+Sex ratio biases caused by haploid competition or meiotic drive have been shown to exert selection on various modifiers, which evolve to restore an equal sex ratio. 
+
+
 {\color{blue}
 FROM THESIS:
 However, reducing competition among haploids also reduces the potential for harmful deleterious mutations to be purged. 
@@ -498,6 +532,8 @@ In addition, I found that stronger sex ratio biases can be favoured by paternal 
 }
 
 \textcolor{red}{\noindent Discuss patterns that might be looked for:}
+
+Taken at face value, our results indicate that transitions in heterogametey (XY to ZW or vice versa) are more likely to be favoured by selection if there is selection upon both haploid and diploid genotypes rather than diploid selection alone. 
 
 In broadcast spawning animal species (e.g., corals, many fish) and species where sperm typically requires greater longevity, haploid selection may be stronger because transcripts shared during spermatogenesis may become depleted \citep{Immler:2014im}. 
 \textcolor{red}{also, mating systems (e.g., fewer alleles are available during haploid competition in monogamous species), selfing rates, and estimates of pollen limitation could be used as indicators of the intensity of haploid selection}
@@ -657,7 +693,7 @@ Finally, these diploids undergo meiosis to produce the next generation of gamete
 Recombination and sex-specific meiotic drive occur during meiosis.
 %We can also assume that recombination is sex specific and/or affected by the M locus - but generally we don't so I just describe $R=R_{f}=R, r_{MM,d}=r_{Mm,d}=r_{mm,d}=r, \chi_{m}=\chi_{f}=\chi$.
 Here, we allow the relative locations of the SDR, \textbf{A}, and \textbf{M} loci to be generic by using three parameters to describe the recombination rates between them. $R$ is the recombination rate between the \textbf{A} locus and the \textbf{M} locus, $\chi$ is the recombination rate between the \textbf{M} locus and the \textbf{X} locus, and $r$ is the recombination rate between the \textbf{A} locus and the \textbf{X} locus. 
-Table \ref{tab:chisubstitutions} gives substitutions for $\chi$ for defined relative locus locations.
+Table \ref{tab:chisubstitutions} gives substitutions for $\chi$ for defined relative locations of these loci.
 During meiosis in sex $d$, meiotic drive occurs such that, in $Aa$ heterozygotes, a fraction $\alpha_{d}$ of gametes produced carry the $A$ allele and $(1-\alpha^d)$ carry the $a$ allele. 
 
 \begin{table}[ht]
