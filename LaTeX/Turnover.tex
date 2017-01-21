@@ -27,7 +27,7 @@
 \begin{document}
 
 \title{Gametic Selection, Sex Ratio Bias, and Transitions Between Sex Determination Systems}
-\author{Michael F Scott$*^1$ and Matthew M Osmond$*^2$, and Sarah P Otto$^2$}
+\author{Michael F Scott$^{*1}$ and Matthew M Osmond$^{*2}$, and Sarah P Otto$^2$}
 \date{}
 \maketitle
 \noindent
@@ -50,15 +50,16 @@ Contributions:
 \modulolinenumbers[2]
 
 \begin{abstract}
-Sex determination systems are remarkably dynamic; many studied taxa display transitions of sex-determining genes between chromosomes or the evolution of new sex-determining systems. 
+Sex determination systems are remarkably dynamic; many studied taxa display transitions between sex-determining genes across chromosomes or the evolution of new sex-determining systems. 
 %Predominant theories in which new sex-determining systems are favoured by selection involve sex ratio selection or fitness differences between sexes (e.g., sexually antagonistic selection). 
 Here, we utilize population genetic models to study the spread of novel sex-determiners in systems with 
 %a period of selection during the haploid stage produced by one sex, e.g., pollen or sperm competition. 
 haploid gametic selection, e.g., pollen or sperm competition.
-Haploid selected loci experience a form of sex-specific selection (because gametic competition occurs predominantly among haploids produced by males) and can cause sex ratios at birth to become biased (because sex ratios are determined by the fertilization success of X- versus Y-bearing pollen/sperm). 
+Haploid selected loci experience a form of sex-specific selection when gametic competition occurs predominantly among haploids produced by one sex (e.g.,  pollen competition).
+This can cause sex ratios at birth to become biased as sex ratios are determined by the fertilization success of X- versus Y-bearing pollen/sperm (or Z- versus W-bearing eggs). 
 %We find that the evolution of sex determination systems where mothers determine sex at birth (e.g., environmental sex determination where sex is determined at birth) is influenced by classic Fisherian sex ratio selection. {\color{red}(Maybe not true???)}
 %However, notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by gametic selection because sex ratios become biased after parental provisioning has occurred (even if pollen/sperm competition occurs within the mother). 
-Notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by gametic selection because sex ratios become biased after parental provisioning has occurred (even if pollen/sperm competition occurs within the mother). 
+Notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by gametic selection because sex ratios become biased after parental provisioning has occurred, even if pollen/sperm competition occurs within the mother (e.g., pollen competition in stigma). 
 In addition, we find that linkage of an ancestral sex chromosome to a locus under haploid selection can favour transitions between male and female heterogamety (e.g., XY to ZW), which is not the case for any forms of diploid sex specific selection (e.g., sexually antagonistic selection).
 During these transitions, new sex-determining alleles spread despite breaking up favourable associations that build up between ancestral sex-determining loci and selected loci, reducing population mean fitness. 
 Furthermore, a period of selection among haploids can favour the stable maintenance of polymorphic sex determination systems. 
@@ -111,7 +112,7 @@ Selection among haploid genotypes is thought to occur primarily among pollen/spe
 Haploid selection may be particularly common in plants, in which 60-70\% of all genes are expressed in the male gametophyte and these genes exhibit stronger signatures of selection than random genes \citep{Borg:2009jpa,Arunkumar:2013iq,Gossmann:2014dua}.
 In addition, artificial selection pressures applied to male gametophytes cause the frequency of resistant alleles to increase \citep[e.g.,][]{Hormaza:1996cv,Ravikumar:2003uo,Hedhly:2004iv,Clarke:2004ir}. 
 A smaller (but non-negligible) proportion of genes are thought to be expressed and selected in animal sperm, although precise estimates are uncertain \citep{Zheng:2001fi,JOSEPH:2004haa,Vibranovski:2010et}.
-\textcolor{red}{add something about meiotic drive here?}  
+%\textcolor{red}{add something about meiotic drive here?}  
 
 There are various ways in which a period of haploid selection could influence transitions between sex determination systems. 
 Firstly, if we assume that haploid selection at any particular locus predominantly occurs in one sex (e.g., pollen/sperm competition), then such loci experience a form of sex-specific selection. 
@@ -141,7 +142,7 @@ The maintenance of polymorphism at loci that experience sex specific selection i
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 %genetic system
-We consider the transition between an ancestral and novel sex determination systems using a three locus model.
+We consider the transition between ancestral and novel sex determination systems using a three locus model.
 Locus \textbf{X} is the ancestral sex-determining region, with alleles $X$ and $Y$ (or $Z$ and $W$).
 Locus \textbf{A} is a locus under selection, with alleles $A$ and $a$.
 Locus \textbf{M} is a novel sex-determining region, at which the null allele ($M$) is initially fixed in the population such that sex of zygotes is determined by the genotype at the ancestral sex-determining region, \textbf{X} ($XX$ become females and $XY$ become males, or $ZW$ become females and $ZZ$ become males). 
@@ -204,9 +205,10 @@ Ancestral $ZW$ sex determination can be considered by changing the notation such
 %I think this should be moved below because we have some 'results' where we don't assume weak selection but we only have the equilibrium calculated analytically for weak selection. 
 \subsection*{Resident equilibrium and stability}
 In the resident population (allele $M$ fixed), we follow the frequency of $A$ in female gametes (eggs) from an XX female, $p^f_X$, and in X-bearing, $p^m_X$, and Y-bearing, $p^m_Y$, male gametes (sperm). 
-We also track the total frequency of Y-bearing male gametes (sperm), $q$, which may deviate from $1/2$ due to meiotic drive in males. 
+We also track the total frequency of Y-bearing male gametes, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
 
 Various forms of selection can maintain a polymorphism at the \textbf{A} locus, including sexually antagonistic selection, overdominance and conflicts between diploid selection and selection upon haploid genotypes \citep[ploidally antagonistic selection,][]{Immler:2012tl} or a combination of these selective regimes. 
+In particular special cases, e.g., no sex-differences in selection or meiotic drive ($s^m=s^f$, $h^m=h^f$, and $\alpha^m=\alpha^f=1/2$), equilibrium allele frequency and stability can be calculated analytically without assuming weak selection. 
 Here, we assume that selection and meiotic drive are weak relative to recombination ($s^k$, $t^k$, $\alpha_{\Delta}^k$ of order $\epsilon$). 
 The maintenance of a polymorphism at the \textbf{A} locus then requires that
 
@@ -220,7 +222,7 @@ The maintenance of a polymorphism at the \textbf{A} locus then requires that
 
 \noindent
 which indicates that a polymorphism is maintained under various selective regimes. 
-In particular special cases, e.g., no sex-differences in selection or meiotic drive ($s^m=s^f$, $h^m=h^f$, and $\alpha^m=\alpha^f=1/2$), equilibrium allele frequency and stability can be calculated analytically without assuming weak selection. 
+%In particular special cases, e.g., no sex-differences in selection or meiotic drive ($s^m=s^f$, $h^m=h^f$, and $\alpha^m=\alpha^f=1/2$), equilibrium allele frequency and stability can be calculated analytically without assuming weak selection. 
 %Here, we focus on the case where selection is weak relative to recombination so that we make fewer assumptions about the form of selection. 
 
 Given that a polymorphism is maintained at the \textbf{A} locus by selection, with weak selection and drive, to leading order, the frequencies of $A$ in each type of gamete are the same ($\hat{p}^f_X=\hat{p}^m_X=\hat{p}^m_Y=\bar{p}$) and given by 
@@ -252,7 +254,7 @@ Differences in frequency between gamete types are of order $\epsilon$ to leading
 
 \noindent
 where $V_{A}=\bar{p}(1-\bar{p})$ is the variance in the frequency of $A$ and $D^d=\big{(} \bar{p}s^d+(1-\bar{p})h^d s^d\big{)} -\big{(} \bar{p}h^d s^d+(1-\bar{p}) \big{)}$ corresponds to the difference in fitness between $A$ and $a$ alleles in diploids of sex $d$ ($\bar{p}$ is the leading-order probability of mating with an $A$-bearing gamete from the opposite sex). 
-The frequency of Y among male gametes is depends upon the difference in $A$ allele frequency on X- and Y-bearing male gametes and the strength of meiotic drive in favour of the $A$ allele, $q=1/2+\alpha_{\Delta}^m(\hat{p}^m_Y-\hat{p}^m_X)/2+O(\epsilon^3)$.
+The frequency of Y among male gametes depends upon the difference in $A$ allele frequency on X- and Y-bearing male gametes and the strength of meiotic drive in favour of the $A$ allele, $q=1/2+\alpha_{\Delta}^m(\hat{p}^m_Y-\hat{p}^m_X)/2+O(\epsilon^3)$.
 Without haploid competition or drive ($\alpha_{\Delta}^d=t^d=0$), these results reduce to those of \citet{vanDoorn:2007eu}.
 
 
