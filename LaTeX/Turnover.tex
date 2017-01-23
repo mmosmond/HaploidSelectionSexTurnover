@@ -58,7 +58,7 @@ haploid gametic selection, e.g., pollen or sperm competition.
 Haploid selected loci experience a form of sex-specific selection (because gametic competition occurs predominantly among haploids produced by males) and can cause sex ratios at birth to become biased (because sex ratios are determined by the fertilization success of X- versus Y-bearing pollen/sperm). 
 %We find that the evolution of sex determination systems where mothers determine sex at birth (e.g., environmental sex determination where sex is determined at birth) is influenced by classic Fisherian sex ratio selection. {\color{red}(Maybe not true???)}
 %However, notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by gametic selection because sex ratios become biased after parental provisioning has occurred (even if pollen/sperm competition occurs within the mother). 
-Notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by gametic selection because sex ratios become biased after parental provisioning has occurred (even if pollen/sperm competition occurs within the mother). 
+Notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by haploid competition or meiotic drive. 
 In addition, we find that linkage of an ancestral sex chromosome to a locus under haploid selection can favour transitions between male and female heterogamety (e.g., XY to ZW), which is not the case for any forms of diploid sex specific selection (e.g., sexually antagonistic selection).
 During these transitions, new sex-determining alleles spread despite breaking up favourable associations that build up between ancestral sex-determining loci and selected loci, reducing population mean fitness. 
 Furthermore, a period of selection among haploids can favour the stable maintenance of polymorphic sex determination systems. 
@@ -220,8 +220,8 @@ The maintenance of a polymorphism at the \textbf{A} locus then requires that
 
 \noindent
 which indicates that a polymorphism is maintained under various selective regimes. 
-In particular special cases, e.g., no sex-differences in selection or meiotic drive ($s^m=s^f$, $h^m=h^f$, and $\alpha^m=\alpha^f=1/2$), equilibrium allele frequency and stability can be calculated analytically without assuming weak selection. 
-%Here, we focus on the case where selection is weak relative to recombination so that we make fewer assumptions about the form of selection. 
+In particular special cases, e.g., no sex-differences in selection or meiotic drive ($s^m=s^f$, $h^m=h^f$, and $\alpha^m=\alpha^f=1/2$), the equilibrium allele frequency and stability can be calculated analytically without assuming weak selection. 
+However, here, we focus on weak selection and make fewer fitness assumptions. 
 
 Given that a polymorphism is maintained at the \textbf{A} locus by selection, with weak selection and drive, to leading order, the frequencies of $A$ in each type of gamete are the same ($\hat{p}^f_X=\hat{p}^m_X=\hat{p}^m_Y=\bar{p}$) and given by 
 
@@ -252,7 +252,7 @@ Differences in frequency between gamete types are of order $\epsilon$ to leading
 
 \noindent
 where $V_{A}=\bar{p}(1-\bar{p})$ is the variance in the frequency of $A$ and $D^d=\big{(} \bar{p}s^d+(1-\bar{p})h^d s^d\big{)} -\big{(} \bar{p}h^d s^d+(1-\bar{p}) \big{)}$ corresponds to the difference in fitness between $A$ and $a$ alleles in diploids of sex $d$ ($\bar{p}$ is the leading-order probability of mating with an $A$-bearing gamete from the opposite sex). 
-The frequency of Y among male gametes is depends upon the difference in $A$ allele frequency on X- and Y-bearing male gametes and the strength of meiotic drive in favour of the $A$ allele, $q=1/2+\alpha_{\Delta}^m(\hat{p}^m_Y-\hat{p}^m_X)/2+O(\epsilon^3)$.
+The frequency of Y among male gametes depends upon the difference in $A$ allele frequency on X- and Y-bearing male gametes and the strength of meiotic drive in favour of the $A$ allele in males, $q=1/2+\alpha_{\Delta}^m(\hat{p}^m_Y-\hat{p}^m_X)/2+O(\epsilon^3)$.
 Without haploid competition or drive ($\alpha_{\Delta}^d=t^d=0$), these results reduce to those of \citet{vanDoorn:2007eu}.
 
 
@@ -365,11 +365,9 @@ where $V_{A}=\bar{p}(1-\bar{p})$ is the variance in the frequency of $A$ and $S_
 
 \textcolor{red}{It may seem counterintuitive that, if the $A$ allele is more common on the ancestral-Y than the ancestral-X, and only favoured during haploid selection in males}
 
-
 \textcolor{red}{although our predictions also perform well when recombination is small, see figure \ref{fig:WinvasionLowR}. We would have to add a line showing what invasion fitness the weak selection approximation would give and add dots to this figure (dots that are currently connected by a line), as in (vD\&K, 2010) }
 
 %Sex ratios
-\textcolor{red}{Add figure w/ drive that explains this.}
 Previous research suggests, when the ancestral sex-determining locus is linked to a locus that experiences haploid selection (e.g., meiotic drive), a new, unlinked sex-determining locus can invade in order to restore equal sex ratios \citep{Kozielska:2010vm}. 
 Our model provides a good opportunity to determine whether Fisherian sex ratio selection provides a useful explanation for the evolution of new sex-determining loci in other contexts. 
 Consider, for example, the case where the \textbf{A} locus is linked to the ancestral-SDR ($r<1/2$) and experiences meiotic drive in males only (e.g., during spermatogenesis but not during oogenesis, $\alpha^m \neq 1/2$, $\alpha^f=1/2$). 
@@ -379,6 +377,7 @@ If the ancestral sex-determining system is ZW, the zygotic sex ratio will be 1:1
 Thus, if the zygotic sex ratio is crucial to the evolution of new genetic sex-determining systems, invasion into ZW and XY systems will be distinct. 
 However, we find that invasion of new homogametic systems (XY to XY, or ZW to ZW) and heterogametic systems (XY to ZW or ZY to XY) occur under the same conditions. 
 That is, $\lambda_{Y',XY}=\lambda_{W',ZW}$ and $\lambda_{Y',ZW}=\lambda_{W',XY}$. 
+\textcolor{red}{Add figure w/ drive, showing sex ratio to explain this.}
 
 %
 %%write in general form without weak selection
@@ -642,39 +641,69 @@ Thus, a feedback could occur between population densities and haploid selection,
 
 \newpage
 \section*{Figures}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Heterogametic transitions with/without sex ratio change
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{Combination_Turnover}\\
+\caption{
+\textcolor{red}{Could add titles to the columns/rows: neo-W for row 1, neo-Y for row 3, $r=0.5$, $R=0.05$ for column 1 and $r=0.05$, $R=0.5$ for column 2. \& possibly adjust padding (too much whitespace?). Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).}
+}
+\label{fig:Combination_Turnover}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Chromosomal Positions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{Combination_Centimorgan}\\
+\caption{
+\textcolor{red}{A sexual antagonism (no haploid selection), B drive (no haploid competition), equal selection in sexes ($s^f=s^m$), C \& D Pollen/Sperm competition only (no drive). C allele favoured in pollen/sperm competition selected against less in males ($t<0$, $s^f, s^m >0$, $s^f<s^f$). D allele favoured in pollen/sperm competition selected against more in males than females ($t<0$, $s^f, s^m >0$, $s^f>s^f$). I suspect that panel C has a region where no equilibrium is maintained (CHECK! Maybe include different parameters here). Currently use different parameters for B than using in figure \ref{fig:Combination_Turnover} (selection/drive twice as strong in turnover figure)}
+}
+\label{fig:Combination_Centimorgans}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %W invades XY and fixes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-\centering
-\includegraphics[width=0.5\linewidth]{FreqWLowR}\\
-\includegraphics[width=0.5\linewidth]{SexRatioLowR}\\
-\includegraphics[width=0.5\linewidth]{MeanDipFitLowR}
-\caption{
-Haploid selection allows a neo-$W$ to invade an ancestral $XY$ system and fix (\textbf{A}) despite temporarily biasing the sex ratio further (\textbf{B}) and decreasing mean diploid viability fitness (\textbf{C}).
-Complete turnover between genetic sex-determination systems occurs despite the neo-$W$ being less tightly linked to the selected locus than the ancestral sex-determining locus is, $R>r$.
-Parameters: $k=1$, $s^f = 0.05$, $s^m = 0.15$, $h^f = h^m = 0.7$, $t^f = 0$, $t^m = -0.1$, $\alpha^m = \alpha^f = 1/2$, $r=0.01$, $R=0.05$.
-}
-\label{fig:WinvasionLowR}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.5\linewidth]{FreqWLowR}\\
+%\includegraphics[width=0.5\linewidth]{SexRatioLowR}\\
+%\includegraphics[width=0.5\linewidth]{MeanDipFitLowR}
+%\caption{
+%Haploid selection allows a neo-$W$ to invade an ancestral $XY$ system and fix (\textbf{A}) despite temporarily biasing the sex ratio further (\textbf{B}) and decreasing mean diploid viability fitness (\textbf{C}).
+%Complete turnover between genetic sex-determination systems occurs despite the neo-$W$ being less tightly linked to the selected locus than the ancestral sex-determining locus is, $R>r$.
+%Parameters: $k=1$, $s^f = 0.05$, $s^m = 0.15$, $h^f = h^m = 0.7$, $t^f = 0$, $t^m = -0.1$, $\alpha^m = \alpha^f = 1/2$, $r=0.01$, $R=0.05$.
+%}
+%\label{fig:WinvasionLowR}
+%\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %W invades XY but does not fix
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-\centering
-\includegraphics[width=0.5\linewidth]{FreqWHighR}\\
-\includegraphics[width=0.5\linewidth]{SexRatioHighR}\\
-\includegraphics[width=0.5\linewidth]{MeanDipFitHighR}
-\caption{
-Haploid selection allows a completely unlinked neo-$W$ to invade an ancestral $XY$ system (\textbf{A}) despite further biasing the sex ratio (\textbf{B}) and decreasing mean diploid viability fitness (\textbf{C}).
-The neo-$W$ does not fix (although variation at the \textbf{A} locus is maintained, $V_A>0$), resulting in a polymorphic sex-determination system.
-Parameters as in Figure \ref{fig:WinvasionLowR} but with $R=0.5$.
-}
-\label{fig:WinvasionHighR}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.5\linewidth]{FreqWHighR}\\
+%\includegraphics[width=0.5\linewidth]{SexRatioHighR}\\
+%\includegraphics[width=0.5\linewidth]{MeanDipFitHighR}
+%\caption{
+%Haploid selection allows a completely unlinked neo-$W$ to invade an ancestral $XY$ system (\textbf{A}) despite further biasing the sex ratio (\textbf{B}) and decreasing mean diploid viability fitness (\textbf{C}).
+%The neo-$W$ does not fix (although variation at the \textbf{A} locus is maintained, $V_A>0$), resulting in a polymorphic sex-determination system.
+%Parameters as in Figure \ref{fig:WinvasionLowR} but with $R=0.5$.
+%}
+%\label{fig:WinvasionHighR}
+%\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -694,35 +723,35 @@ Parameters as in Figure \ref{fig:WinvasionLowR} but with $R=0.5$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %W invasion versus position of selected locus
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-\centering
+%\begin{figure}
+%\centering
 %\includegraphics[width=0.5\linewidth]{InvasionVsCentiMorgans}
-\includegraphics[width=0.5\linewidth]{InvasionVsCentiMorgansAllOrders}
-\caption{
-Haploid selection allows a neo-$W$ to invade an ancestral $XY$ system regardless of how tightly it and the ancestral sex-determining locus are linked to the selected locus. 
-The ancestral sex-determining locus is located at -0.05 and the novel sex-determining locus is located at 0.05 (corresponding to the peaks of invasion fitness), such that the probability of a cross-over between them is $\approx0.1$.
-The x-axis gives the position of the locus under haploid selection.
-We used Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert from map distance (centiMorgans) to the probability of a cross-over event. 
-Parameters as in Figure \ref{fig:WinvasionLowR}.
-}
-\label{fig:InvasionVsCentiMorgans}
-\end{figure}
+%\includegraphics[width=0.5\linewidth]{InvasionVsCentiMorgansAllOrders}
+%\caption{
+%Haploid selection allows a neo-$W$ to invade an ancestral $XY$ system regardless of how tightly it and the ancestral sex-determining locus are linked to the selected locus. 
+%The ancestral sex-determining locus is located at -0.05 and the novel sex-determining locus is located at 0.05 (corresponding to the peaks of invasion fitness), such that the probability of a cross-over between them is $\approx0.1$.
+%The x-axis gives the position of the locus under haploid selection.
+%We used Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert from map distance (centiMorgans) to the probability of a cross-over event. 
+%Parameters as in Figure \ref{fig:WinvasionLowR}.
+%}
+%\label{fig:InvasionVsCentiMorgans}
+%\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Y invades ZW and fixes (counter example to Kozi explanation)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-\centering
-\includegraphics[width=0.5\linewidth]{FreqWCounterKozi}\\
-\includegraphics[width=0.5\linewidth]{SexRatioCounterKozi}\\
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.5\linewidth]{FreqWCounterKozi}\\
+%\includegraphics[width=0.5\linewidth]{SexRatioCounterKozi}\\
 %\includegraphics[width=0.5\linewidth]{MeanDipFitCounterKozi}
-\caption{
-Meiotic drive allows a neo-$Y$ to invade an ancestral $ZW$ system and fix (\textbf{A}) despite temporarily biasing the sex ratio (\textbf{B}). %and decreasing mean diploid viability fitness (\textbf{C}).
-Parameters: $k=0$, $s^f = s^m = t^f = t^m = 0$, $\alpha^m = 0.4$, $\alpha^f = 1/2$, $r=0$, $R=0$.
-}
-\label{fig:CounterKozi}
-\end{figure}
+%\caption{
+%Meiotic drive allows a neo-$Y$ to invade an ancestral $ZW$ system and fix (\textbf{A}) despite temporarily biasing the sex ratio (\textbf{B}). %and decreasing mean diploid viability fitness (\textbf{C}).
+%Parameters: $k=0$, $s^f = s^m = t^f = t^m = 0$, $\alpha^m = 0.4$, $\alpha^f = 1/2$, $r=0$, $R=0$.
+%}
+%\label{fig:CounterKozi}
+%\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -895,6 +924,21 @@ For example, with the $M$ allele fixed and ancestral $XY$ sex determination, the
 In this case, the system only involves six recursion equations because there is only one \textbf{M} locus allele and no Y-bearing female gametes. 
 This six-equation system yields equilibrium \eqref{eq:pAve}. 
 Within this resident population (when $m$ is absent) we describe frequencies among different gamete types, which are given by $X_{MA}^{f}=p_{Xf}$, $X_{Ma}^{f}=(1-p_{Xf})$, $X_{MA}^{m}=(1-q)p_{Xm}$, $X_{Ma}^{m}=(1-q)(1-p_{Xm})$, $Y_{MA}^{m}=q p_{Ym}$, and $Y_{Ma}^{m}=q(1-p_{Ym})$.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Changes in mean fitness
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{Combination_MeanFit}\\
+\caption{
+\textcolor{red}{Could add titles to the columns/rows: neo-W for row 1, neo-Y for row 3, $r=0.5$, $R=0.05$ for column 1 and $r=0.05$, $R=0.5$ for column 2. \& possibly adjust padding (too much whitespace?). Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).}
+}
+\label{fig:Combination_MeanFit}
+\end{figure}
+
 
 \end{document}
 
