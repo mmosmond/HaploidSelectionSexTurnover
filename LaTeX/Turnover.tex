@@ -27,7 +27,7 @@
 
 \begin{document}
 
-\title{Gametic Selection, Sex Ratio Bias, and Transitions Between Sex Determination Systems}
+\title{Gametic Selection, Meiotic Drive, Sex Ratio Bias, and Transitions Between Sex Determination Systems}
 \author{Michael F Scott$*^1$ and Matthew M Osmond$*^2$, and Sarah P Otto$^2$}
 \date{}
 \maketitle
@@ -52,26 +52,25 @@ Contributions:
 
 \begin{abstract}
 Sex determination systems are remarkably dynamic; many studied taxa display transitions of sex-determining genes between chromosomes or the evolution of entirely new sex-determining systems. 
-%Predominant theories in which new sex-determining systems are favoured by selection involve sex ratio selection or fitness differences between sexes (e.g., sexually antagonistic selection). 
-Here, we utilize population genetic models to study the spread of novel sex-determiners in systems with 
-%a period of selection during the haploid stage produced by one sex, e.g., pollen or sperm competition. 
-haploid gametic selection, e.g., pollen or sperm competition.
-Haploid selected loci experience a form of sex-specific selection (because gametic competition occurs predominantly among haploids produced by males) and can cause sex ratios at birth to become biased (because sex ratios are determined by the fertilization success of X- versus Y-bearing pollen/sperm). 
-%We find that the evolution of sex determination systems where mothers determine sex at birth (e.g., environmental sex determination where sex is determined at birth) is influenced by classic Fisherian sex ratio selection. {\color{red}(Maybe not true???)}
-%However, notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by gametic selection because sex ratios become biased after parental provisioning has occurred (even if pollen/sperm competition occurs within the mother). 
-Notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by haploid competition or meiotic drive. 
-In addition, we find that linkage of an ancestral sex chromosome to a locus under haploid selection can favour transitions between male and female heterogamety (e.g., XY to ZW), which is not the case for any forms of diploid sex specific selection (e.g., sexually antagonistic selection).
-During these transitions, new sex-determining alleles spread despite breaking up favourable associations that build up between ancestral sex-determining loci and selected loci, reducing population mean fitness. 
+Predominant theories in which new sex-determining systems are favoured by selection involve sex ratio selection or sex-specific selection (e.g., sexually antagonistic selection). 
+Here, we utilize population genetic models to study the spread of novel sex-determiners when there is a period of sex-specific haploid selection. 
+Many loci experience selection on their haploid genotypes during gametic competition (e.g., pollen/sperm competition) or meiosis (i.e., meiotic drive). 
+Haploid selected loci typically experience a form of sex-specific selection because meiotic drive and/or gametic competition occurs predominantly in one sex or the other. 
+In addition, haploid selection can cause the zygotic sex ratio to become biased because sex ratios are determined by the fertilization success of X- versus Y-bearing pollen/sperm. 
+Notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by haploid selection. 
+In addition, we find that, with haploid selection, transitions between male and female heterogamety (XY to ZW or ZW to XY) can occur despite breaking up favourable associations the between ancestral sex-determining locus and selected loci.
+These transitions occur because an unlinked neo-Y (neo-W) can have higher fitness in males (females), even if the population mean fitness is reduced. 
+Such transitions are not possible with diploid selection alone, in which case tighter linkage increases the fitness of both males and females. 
 Furthermore, a period of selection among haploids can favour the stable maintenance of polymorphic sex determination systems. 
 Thus, our models offer several new insights to be explored as information about sex determination in non-model taxa accumulates.
-
-%[Approx 320 words]
 \end{abstract}
 
 \newpage
 
 \section*{Introduction}
 
+
+%Mine Brandvain & coop for citations, and mention their paper (recombination modifiers drive). Has lots of citations for male/female specific drivers. 
 %CHECK THROUGHOUT: use of sex-determination SYSTEMS versus MECHANISMS. 
 
 Animals and angiosperms exhibit extremely diverse sex determination systems \citep[reviewed in][]{Bull:1983vi,Charlesworth:2010it,Beukeboom:2014vb,Bachtrog:2014bx}. 
@@ -627,7 +626,12 @@ This implies that, at least under tight linkage, the invasion of maternally-cont
 
 \section*{Discussion}
 
-Brief results summary. 
+If there is genetic variation maintained by sexually-antagonistic selection, new sex-determining systems can evolve. 
+In particular, transitions to new sex-determining systems can occur when new sex-determining regions are more closely linked to a sexually antagonistic locus.
+Here, we show that, genetic variation at loci that experience haploid selection can also generate selection in favour of new sex-determining systems. 
+Closer linkage can again favour transitions to new sex-determining systems. 
+However, with haploid selection, heterogametic transitions (XY to ZW or ZW to XY) can also occur when the new sex-determining region is less closely linked to the locus under selection. 
+
 
 Fisherian sex ratio selection follows from the fact that, for an autosomal locus, half of the genetic material is inherited from a male, and half from a female. 
 Thus, if the population sex ratio is biased towards females, the average per-individual contribution of genetic material to the next generation from males is greater than the contribution from females (and vice versa for male-biased sex ratios). 
@@ -979,7 +983,40 @@ However, some diploid types are not produced under a given sex determination sys
 For example, with the $M$ allele fixed and ancestral $XY$ sex determination, there are no $XX$ males, $XY$ females, or $YY$ females ($xx_{11}^{\male}$, $xx_{12}^{\male}$, $xx_{22}^\male$, $xy_{11}^{\female}$, $xy_{12}^{\female}$, $xy_{22}^\female$, $yy_{11}^{\female}$, $yy_{12}^{\female}$, and $yy_{22}^\female$ are all 0). 
 In this case, the system only involves six recursion equations because there is only one \textbf{M} locus allele and no Y-bearing female gametes. 
 This six-equation system yields equilibrium \eqref{eq:pAve}. 
-Within this resident population (when $m$ is absent) we describe frequencies among different gamete types, which are given by $X_{MA}^{\female}=p_{Xf}$, $X_{Ma}^{\female}=(1-p_{Xf})$, $X_{MA}^{\male}=(1-q)p_{Xm}$, $X_{Ma}^{\male}=(1-q)(1-p_{Xm})$, $Y_{MA}^{\male}=q p_{Ym}$, and $Y_{Ma}^{\male}=q(1-p_{Ym})$.
+Within this resident population (when $m$ is absent) we describe frequencies among different gamete types, which are given by $X_{MA}^{\female}=p_{Xf}$, $X_{Ma}^{\female}=(1-p_{Xf})$, $X_{MA}^{\male}=(1-q)p_{Xm}$, $X_{Ma}^{\male}=(1-q)(1-p_{Xm})$, $Y_{MA}^{\male}=q p_{Ym}$, and $Y_{Ma}^{\male}=q(1-p_{Ym})$. In this resident population, the mean fitnesses are given in table \ref{tab:meanfitnesses}.
+
+\begin{table}[ht]
+\centering
+\smallskip
+\caption{mean fitnesses in resident ($M$ fixed, XY sex determination) }
+\begin{tabular}{l l }
+\hline\hline
+  Sex \& Life Cycle Stage & Mean Fitness \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  female gametes ($\bar{w}_H^\female$) & 
+  $p_X^\female w_A^\female + (1-p_X^\female) w_a^\female$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  male gametes ($\bar{w}_H^\male$) & 
+  $\bar{p}^{\male} w_A^\male + (1-\bar{p}^{\male}) w_a^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  females ($\bar{w}^\female$) & 
+  $\begin{array}{l}  \{ p_X^\female w_A^\female (1-q) p_X^\male w_A^\male w_{AA}^\female + \\
+  (1 - p_X^\female) w_a^\female (1-q) p_X^\male w_A^\male w_{Aa}^\female + \\
+  p_X^\female w_A^\female (1-q) (1 - p_X^\male) w_a^\male w_{Aa}^\female + \\
+  (1-p_X^\female) w_a^\female (1-q) (1 - p_X^\male) w_a^\male w_{aa}^\female \} / \{ \bar{w}_H^\female \bar{w}_H^\male\}
+  \end{array} 
+  $ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  males ($\bar{w}^\male$) & 
+  $\begin{array}{l} \{ p_X^\female w_A^\female q p_Y^\male w_A^\male w_{AA}^\male + \\
+  (1 - p_X^\female) w_a^\female q p_Y^\male w_A^\male w_{Aa}^\male + \\
+  p_X^\female w_A^\female q (1 - p_Y^\male) w_a^\male w_{Aa}^\male + \\
+  (1-p_X^\female) w_a^\female q (1 - p_Y^\male) w_a^\male w_{aa}^\male \} / \{ \bar{w}_H^\male \bar{w}_H^\male\} 
+  \end{array}
+  $ \\ [0.5ex]  \noalign{\vskip 0.5ex}
+  \hline \hline
+  \label{tab:meanfitnesses}
+ \end{tabular}
+\end{table}
+
+
+
 
 \newpage
 
