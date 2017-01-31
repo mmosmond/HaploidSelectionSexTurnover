@@ -70,7 +70,6 @@ Thus, our models offer several new insights to be explored as information about 
 \section*{Introduction}
 
 
-%Mine Brandvain & coop for citations, and mention their paper (recombination modifiers drive). Has lots of citations for male/female specific drivers. 
 %CHECK THROUGHOUT: use of sex-determination SYSTEMS versus MECHANISMS. 
 
 Animals and angiosperms exhibit extremely diverse sex determination systems \citep[reviewed in][]{Bull:1983vi,Charlesworth:2010it,Beukeboom:2014vb,Bachtrog:2014bx}. 
@@ -105,36 +104,28 @@ For example, \citet{Kozielska:2010vm} consider systems in which the ancestral se
 They find that new, unlinked sex-determining loci (masculinizing or feminizing mutations, i.e., neo-Y or neo-W loci) can then spread, restoring an even sex ratio. 
 
 %\textcolor{red}{We add haploid selection:}
-
-Here, we use mathematical models to find the conditions under which new sex determination systems are favoured by selection when there is a period of selection among haploid gametes/gametophytes. 
-Selection among haploid genotypes is thought to occur primarily among pollen/sperm, which can compete whenever there are more pollen/sperm than required for fertilization \citep{Mulcahy:1996ha,JOSEPH:2004haa}. 
-Haploid selection may be particularly common in plants, in which 60-70\% of all genes are expressed in the male gametophyte and these genes exhibit stronger signatures of selection than random genes \citep{Borg:2009jpa,Arunkumar:2013iq,Gossmann:2014dua}.
+Here, we use mathematical models to find the conditions under which new sex determination systems are favoured when loci experience haploid selection. 
+Haploid genotypes at many loci experience selection during gamete competition and/or meiotic drive \citep{Mulcahy:1996ha,JOSEPH:2004haa}.
+Competition among gametes/gametophytes (e.g., sperm/pollen competition) is distinct from meiotic drive because drive only occurs among heterozygotes whereas gametes from homozygous parents can participate in gamete competition. 
+We use the term `haploid selection' to encompass both proceses. 
+Meiotic drive refers to the biased (non-mendelian) segregation of genotypes during gamete production and is almost always sex-specific, e.g., occurring either during the production of male or female gametes only \textcolor{red}{(Ubeda and Haig, 2005; Lindholm et al. 2016)}.
+Because there are typically more pollen/sperm than required for fertilization, haploid competition is also typically sex specific, occurring primarily among male gametes.
+Haploid competition may be particularly common in plants, in which 60-70\% of all genes are expressed in the male gametophyte and these genes exhibit stronger signatures of selection than random genes \citep{Borg:2009jpa,Arunkumar:2013iq,Gossmann:2014dua}.
 In addition, artificial selection pressures applied to male gametophytes cause the frequency of resistant alleles to increase \citep[e.g.,][]{Hormaza:1996cv,Ravikumar:2003uo,Hedhly:2004iv,Clarke:2004ir}. 
-A smaller (but non-negligible) proportion of genes are thought to be expressed and selected in animal sperm, although precise estimates are uncertain \citep{Zheng:2001fi,JOSEPH:2004haa,Vibranovski:2010et}.
-\textcolor{red}{add something about meiotic drive here?}  
+A smaller (but non-negligible) proportion of genes are thought to be expressed and selected during competition in animal sperm, although precise estimates are uncertain \citep{Zheng:2001fi,JOSEPH:2004haa,Vibranovski:2010et}. 
 
 There are various ways in which a period of haploid selection could influence transitions between sex determination systems. 
-Firstly, if we assume that haploid selection at any particular locus predominantly occurs in one sex (e.g., pollen/sperm competition), then such loci experience a form of sex-specific selection. 
+Firstly, if we assume that haploid selection at any particular locus predominantly occurs in one sex (e.g., meiotic drive during spermatogenesis or pollen/sperm competition), then such loci experience a form of sex-specific selection. 
 In this respect, we might expect that haploid selection might affect transitions between sex determination systems in a similar manner to sex-specific diploid selection \citep[as explored by][]{vanDoorn:2007eu,vanDoorn:2010hu}. 
-That is, new masculizing mutations (neo-Y chromosomes) could be favoured via linkage associations with alleles that are beneficial in pollen/sperm. 
-However, sex ratios can also become biased if there is linkage between the sex-determining region and a locus that harbours genetic variation in haploid fitness. 
-For example, differences in fitness between X- and Y-bearing pollen tubes can cause the sex ratio among seeds to become biased when there is pollen competition \citep{Lloyd:1974tz,Conn:1981uw,Stehlik:2005ul,Stehlik:2006to,Field:2012fd,Field:2013cc}.
-It is not immediately clear how the spread of new sex determination systems would be influenced by the combination of sex ratio biases and favourable associations between haploid selected loci and sex-determining regions. 
+That is, new masculizing mutations (neo-Y chromosomes) could be favoured via linkage associations with alleles that are beneficial in the male haploid stage. 
+However, sex ratios can also become biased by linkage between the sex-determining region and a locus that harbours genetic variation in haploid fitness. 
+For example, there are several known cases of sex ratio bias caused by sex-linked meiotic drive alleles \citep[][, Chapter 3]{Burt:2006} or selection among X- and Y-bearing pollen \citep{Lloyd:1974tz,Conn:1981uw,Stehlik:2005ul,Stehlik:2006to,Field:2012fd,Field:2013cc}. 
+It is not immediately clear how the spread of new sex determination systems would be influenced by the combination of sex ratio biases and associations between haploid selected loci and sex-determining regions. 
 
 Surprisingly, our models show that haploid selection influences the evolution of new sex determination systems in a way that is distinct from both diploid sex-specific selection and sex ratio selection. 
 We find that new genetic sex determination systems are not affected by any sex ratio biases caused by associations between sex-determining regions and haploid selected loci. 
 In addition, we find that associations that build up between an ancestral sex-determining locus and a haploid-selected locus can favour transitions between male and female heterogamety (e.g., a neo-W allele arising at a previously autosomal locus spreads in an ancestrally XY system), despite the fact that these ancestral associations were built up by selection. 
 This does not occur in models that do not include haploid selection. 
-
-\textcolor{red}{NOTE RE: DRIVE. I expect drive (that occurs specifically in one sex, e.g., during spermatogenesis) to behave almost exactly like haploid selection. That is, I think that a XY-linked driver that is maintained by selection (e.g., because it causes sterility when homozygous, which is common in known drive systems) will only favour invasion of a more tightly linked neo-Y (worsening sex ratio biases) and could favour invasion of a neo-W. This may run counter to generic expectations from new sex chromosome systems evolving to balance the sex ratio. So, do you think it would significantly enhance the paper to model drive explicitly or just discuss it as being similar???}
-
-{\color{blue} 
-FOR RESULTS?
-
-FROM PREVIOUS PAPER:
-The maintenance of polymorphism at loci that experience sex specific selection in both haploid and diploid phases was considered by Immler et al. \cite{Immler:2012tl}, demonstrating that polymorphisms can be maintained by sexually antagonistic selection or overdominance as well as by conflicting selection pressures in haploids and diploids (haploid-diploid conflict or ploidally antagonistic selection) or a combination of these selective regimes.  
-}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Model}
@@ -385,7 +376,7 @@ Secondly, we can simplify cases where $R>r$ using the special case where $R=1/2$
 In table \ref{tab:specialcases} we give the conditions where invasion occurs where we further assume that haploid selection only occurs during one phase in one sex (e.g., during male meiosis only) and equal dominance, $h^\female=h^\male$. 
 Where there is no haploid competition and meiotic drive in one sex only, an unlinked neo-W can invade as long as the same allele is favoured in male and female diploid selection ($s^\female s^\male>0$, see Figure \ref{fig:Combination_Centimorgans}B), which is 50\% of the parameter space. 
 Where there is no meiotic drive and haploid competition occurs in one sex only, an unlinked neo-W can invade as long as the same allele is favoured in male and female diploid selection and there are sex differences in selection of one type ($-s^\female(s^\female-s^\male)>0$, see Figure \ref{fig:Combination_Centimorgans}C,D), which is 25\% of the parameter space. 
-These special cases indicate that neo-W invasion when $R>r$ can occur for a relatively large fraction of parameter space. 
+These special cases indicate that neo-W invasion can occur for a relatively large fraction of parameter space, even if $R>r$. 
 
 \begin{table}[ht]
 \centering
@@ -627,11 +618,16 @@ This implies that, at least under tight linkage, the invasion of maternally-cont
 \section*{Discussion}
 
 If there is genetic variation maintained by sexually-antagonistic selection, new sex-determining systems can evolve. 
-In particular, transitions to new sex-determining systems can occur when new sex-determining regions are more closely linked to a sexually antagonistic locus.
-Here, we show that, genetic variation at loci that experience haploid selection can also generate selection in favour of new sex-determining systems. 
-Closer linkage can again favour transitions to new sex-determining systems. 
+In particular, transitions to new sex-determining systems can occur when new sex-determining regions are more closely linked to a sexually-antagonistic locus.
+Here, we show that genetic variation at loci that experience haploid selection can also generate selection in favour of new sex-determining systems. 
+Closer linkage can again favour new sex-determining alleles. 
 However, with haploid selection, heterogametic transitions (XY to ZW or ZW to XY) can also occur when the new sex-determining region is less closely linked to the locus under selection. 
 
+Neo-W (neo-Y) alleles invade when their fitness in females (males) is greater than the mean fitness of females (males) under the ancestral sex determination system.
+With sexually antagonistic selection (between diploid sexes) only, linkage between a selected locus and the sex-determining region strengthens associations between male beneficial alleles and the male-determining allele (Y or Z) and between female beneficial alleles and the female-determining allele (X or W). 
+Thus, the mean fitness of both males and females increases with closer linkage to the sex-determining region. 
+Therefore, new sex-determining alleles only invade if they are more closely linked than the ancestral sex-determining region. 
+However, if there is haploid selection on loci linked to an XY (ZW) sex-determining region, there are equilibria for which the mean fitness of females (males) or males is lower than it would be without sex-linkage, allowing unlinked neo-W (neo-Y) alleles to invade, see figure \ref{fig:Combination_MeanFit}. 
 
 Fisherian sex ratio selection follows from the fact that, for an autosomal locus, half of the genetic material is inherited from a male, and half from a female. 
 Thus, if the population sex ratio is biased towards females, the average per-individual contribution of genetic material to the next generation from males is greater than the contribution from females (and vice versa for male-biased sex ratios). 
@@ -644,9 +640,9 @@ Even mutants that are equally likely to be found in males or females, such as an
 Thus, despite the fact that sex ratio biases caused by haploid competition or meiotic drive have been shown to exert selection on various autosomal modifiers \citep{Stalker:1961th,Smith:1975ft,Frank:1989vl,Hough:2013uo,Ubeda:2015fx, Otto:2015va}, we do not find evidence that Fisherian sex ratio selection acting upon neo-sex-determination systems (e.g., see Figure \ref{fig:Combination_Turnover}). 
 
 
-DRAFT (improve): In \citet{Ubeda:2015fx}, the new sex determining locus spreads because it arises in linkage with a locus that experiences drive. They assume that drive occurs predominantly in one sex, e.g., during spermatogenesis or a 'killer' sperm. A driving allele is maintained at an intermediate frequency by selection, e.g., because it causes male sterility when homozygous (because all male sperm are killed). Y chromosomes that arise in linkage with the driving allele spread because they allow drive to occur more often, thus genetic sex determination with a sex ratio bias evolves. 
-Thus \citet{Ubeda:2015fx} also find that genetic sex determiners can invade, despite causing sex ratios to become biased. 
-Finally, they show that autosomal 'restorers' that negate the effects of meiotic drive can invade and restore an equal sex ratio. 
+%DRAFT (improve): In \citet{Ubeda:2015fx}, the new sex determining locus spreads because it arises in linkage with a locus that experiences drive. They assume that drive occurs predominantly in one sex, e.g., during spermatogenesis or a 'killer' sperm. A driving allele is maintained at an intermediate frequency by selection, e.g., because it causes male sterility when homozygous (because all male sperm are killed). Y chromosomes that arise in linkage with the driving allele spread because they allow drive to occur more often, thus genetic sex determination with a sex ratio bias evolves. 
+%Thus \citet{Ubeda:2015fx} also find that genetic sex determiners can invade, despite causing sex ratios to become biased. 
+%Finally, they show that autosomal 'restorers' that negate the effects of meiotic drive can invade and restore an equal sex ratio. 
 
 We only consider selection at the \textbf{A} locus, the sex-determining regions do not experience direct selection except via their associations with sex and \textbf{A} locus alleles. 
 However, in some cases, there may be significant degeneration around the sex-limited allele (Y or W) in the ancestral sex determining region. That is, recessive deleterious mutations and/or deletions may fix around the Y or W allele \citealt{Rice:1996ke,Charlesworth:2000cc,Bachtrog:2006ed,Marais:2008hm}). 
@@ -656,6 +652,11 @@ They note that YY lethality can prevent neo-W (and Y) fixing but that even very 
 
 \textcolor{red}{\noindent Discuss patterns that might be looked for:}
 
+Evolutionary events, such as the transition between one sex-determination system and another, are generally difficult to observe directly. 
+One observation would be the presence of sexually antagonistic variation linked to neo-sex chromosomes - example from cichlids (debated, i believe). 
+Our model could be examined in a similar manner, although we find that genes that experience haploid selection that are near either the neo- or ancestral-sex-determining locus could have been involved in favouring a transition between sex-determining systems. 
+
+A complementary method of investigating evolutionary transitions is via comparative methods. 
 Taken at face value, our results indicate that transitions in heterogametey (XY to ZW or vice versa) are more likely to be favoured by selection if there is selection upon both haploid and diploid genotypes rather than diploid selection alone. 
 
 In broadcast spawning animal species (e.g., corals, many fish) and species where sperm typically requires greater longevity, haploid selection may be stronger because transcripts shared during spermatogenesis may become depleted \citep{Immler:2014im}. 
