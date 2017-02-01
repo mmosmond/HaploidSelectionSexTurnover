@@ -255,13 +255,13 @@ Without haploid competition or drive ($\alpha_{\Delta}^\Hermaphrodite=t^\Hermaph
 %Without haploid selection or meiotic drive our results reduce to those of \cite{vanDoorn:2007eu}. %when $k=0$ (neo-$Y$ invading a $ZW$ system) or when $k=1$ (neo-$W$ invading an $XY$ system) (\textcolor{red}{CHECK}).
 %However, with haploid selection or meiotic drive a stable polymorphism at locus \textbf{A} no longer requires sexually antagonistic selection. %, as it can also be achieved by ploidally-antagonistic selection.
 
-\subsection*{Sex chromosome turnover}
-The evolution of a new sex determination system requires that a rare mutant, $m$, at the novel sex-determining locus  increases in frequency when rare. 
+\subsection*{Turnover between sex-determination systems} 
+The evolution of a new sex determination system requires that a rare mutant allele, $m$, at the novel sex-determining locus  increases in frequency when rare. 
 The spread of a rare mutant $m$ at the \textbf{M} locus is determined by the leading eigenvalue, $\lambda$, of the system described by the next generation frequency of eggs and sperm carrying the mutation, (\ref{eq:recursions}c), (\ref{eq:recursions}d), (\ref{eq:recursions}g), (\ref{eq:recursions}h), which is an eight equation system. %, evaluated at the above equilibrium.
 %Thus, the system describing the change in frequency of the $m$ allele consists of eight recursion equations. 
-Dominant neo-Y chromosomes (when $k=0$) or neo-W chromosomes (when $k=1$) are only found in male diploids (neo-Y) or female diploids (neo-W) such that their growth rate ultimately depends only on the change in frequency of $m$-bearing gametes produced by males (for a neo-Y) or by females (for a neo-W). 
+Dominant neo-Y (when $k=0$) or neo-W alleles (when $k=1$) are only found in male diploids (neo-Y) or female diploids (neo-W) such that their growth rate ultimately depends only on the change in frequency of $m$-bearing gametes produced by males (for a neo-Y) or by females (for a neo-W). 
 Furthermore, if the $m$ allele is fully dominant over the ancestral sex-determining system, phenotypes are not affected by the genotype at the ancestral sex-determining region (\textbf{X} locus). 
-Therefore, the invasion of rare mutant neo-Y or neo-W chromosomes can be simplified and given by the largest eigenvalue that solves the quadratic characteristic polynomial
+Therefore, the invasion of rare mutant neo-Y or neo-W alleles can be simplified and given by the largest eigenvalue that solves the quadratic characteristic polynomial
 
 \begin{equation}
 \lambda^2+ b \lambda + c =0
@@ -274,51 +274,52 @@ where $b$ is the average of the growth rates of the two haplotypes that carry th
 \begin{threeparttable}[ht]
 \centering
 \smallskip
-\caption{Parameters determining invasion (equation \ref{eq:charpoly_neoY}) for neo-Y or neo-W chromosomes}
+\caption{Parameters determining invasion (equation \ref{eq:charpoly_neoY}) for neo-Y or neo-W alleles}
 \begin{tabular}{l}
 \hline\hline
    \noalign{\vskip 0.5ex}
    neo-Y ($k=0$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
-  $\lambda_{mA}=\{p_{X}^{\female} w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male}+(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male}\alpha^\male(1-R)\}/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male$ \} \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{mA}=\{p_{X}^{\female} w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male}+(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male}\alpha^\male(1-R)\}/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male\} $\\ [0.5ex] \noalign{\vskip 0.5ex}
   $\lambda_{ma}=\{(1-p_{X}^{\female}) w_{a}^{\female} w_{a}^{\male} w_{aa}^{\male}+p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male}(1-\alpha^\male)(1-R)\}/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \}$ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R \{(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} (1-\alpha_{m})\}/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R\{p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} \alpha_{m}\}/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \}$\\ [1ex] \hline 
+  $\rho_{mA}=R (1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} (1-\alpha^{\male})/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} \alpha^{\male}/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \}$\\ [1ex] \hline 
   \noalign{\vskip 0.5ex}
   neo-W ($k=1$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
   $\lambda_{mA}=\{\bar{p}^{\male} w_{A}^{\male} w_{A}^{\female} w_{AA}^{\female}+(1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female}\alpha^\female(1-R)\}/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \}$ \\ [0.5ex] \noalign{\vskip 0.5ex}
   $\lambda_{ma}=\{(1-\bar{p}^{\male}) w_{a}^{\male} w_{a}^{\female} w_{aa}^{\female}+\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female}(1-\alpha^\female)(1-R)\}/ \{\bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \}$ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R \{(1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female} (1-\alpha_{f})\}/ \{\bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R\{\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female} \alpha_{f}\}/ \{\bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \}$\\ [1ex] 
+  $\rho_{mA}=R (1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female} (1-\alpha^{\female})/ \{\bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female} \alpha^{\female}/ \{\bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \}$\\ [1ex] 
   \hline \hline 
    \end{tabular}
       \begin{tablenotes}
       \scriptsize
       \item $\bar{p}^{\male}=p_{Y}^{\male}q+p_{X}^{\male}(1-q)$ is the average frequency of the $A$ allele among X- and Y-bearing male gametes 
-      \item $\bar{w}_H^\female = p_X^\female w_A^\female + (1-p_X^\female) w_a^\female$ is the mean fitness of female gametes
-      \item $\bar{w}_H^\male = \bar{p}^{\male} w_A^\male + (1-\bar{p}^{\male}) w_a^\male$ is the mean fitness of male gametes
-       \item $\bar{w}^\female = \{ p_X^\female w_A^\female (1-q) p_X^\male w_A^\male w_{AA}^\female + (1 - p_X^\female) w_a^\female (1-q) p_X^\male w_A^\male w_{Aa}^\female + p_X^\female w_A^\female (1-q) (1 - p_X^\male) w_a^\male w_{Aa}^\female + (1-p_X^\female) w_a^\female (1-q) (1 - p_X^\male) w_a^\male w_{aa}^\female \} / \{ \bar{w}_H^\female \bar{w}_H^\male\}$ is the mean fitness of females
-       \item $\bar{w}^\male = \{ p_X^\female w_A^\female q p_Y^\male w_A^\male w_{AA}^\male + (1 - p_X^\female) w_a^\female q p_Y^\male w_A^\male w_{Aa}^\male + p_X^\female w_A^\female q (1 - p_Y^\male) w_a^\male w_{Aa}^\male + (1-p_X^\female) w_a^\female q (1 - p_Y^\male) w_a^\male w_{aa}^\male \} / \{ \bar{w}_H^\male \bar{w}_H^\male\}$ is the mean fitness of males
+      \item $\bar{w}_H^\female = p_X^\female w_A^\female + (1-p_X^\female) w_a^\female$ is the mean fitness of female gametes during haploid competition
+      \item $\bar{w}_H^\male = \bar{p}^{\male} w_A^\male + (1-\bar{p}^{\male}) w_a^\male$ is the mean fitness of male gametes during haploid competition
+       \item $\bar{w}^\female = \{ p_X^\female w_A^\female (1-q) p_X^\male w_A^\male w_{AA}^\female + (1 - p_X^\female) w_a^\female (1-q) p_X^\male w_A^\male w_{Aa}^\female + p_X^\female w_A^\female (1-q) (1 - p_X^\male) w_a^\male w_{Aa}^\female + (1-p_X^\female) w_a^\female (1-q) (1 - p_X^\male) w_a^\male w_{aa}^\female \} / \{ \bar{w}_H^\female \bar{w}_H^\male\}$ is the mean fitness of females during diploid competition
+       \item $\bar{w}^\male = \{ p_X^\female w_A^\female q p_Y^\male w_A^\male w_{AA}^\male + (1 - p_X^\female) w_a^\female q p_Y^\male w_A^\male w_{Aa}^\male + p_X^\female w_A^\female q (1 - p_Y^\male) w_a^\male w_{Aa}^\male + (1-p_X^\female) w_a^\female q (1 - p_Y^\male) w_a^\male w_{aa}^\male \} / \{ \bar{w}_H^\male \bar{w}_H^\male\}$ is the mean fitness of males during diploid competition
     \end{tablenotes}
   \label{tab:haplotype_growth}
 \end{threeparttable}
 
 Equation \eqref{eq:charpoly_neoY} and table \ref{tab:haplotype_growth} illustrate a number of key points about the invasion of neo-Y and neo-W mutations. 
-For a neo-Y, invasion depends on the relative \textcolor{red}{(is this right, is relative fitness divided by mean fitness or difference from 1???)} fitness of $A$-bearing and $a$-bearing male gametes (i.e., in sperm only, not eggs). 
-The fitness of male gametes partly depends on the allele carried by the female gamete that they mate with (e.g., $A$ with probability $p_{X}^{\female} w_{A}^{\female}/\bar{w}_{H}^{\female}$).
-Similarly, invasion of a neo-W depends on the relative fitness of $A$-bearing and $a$-bearing female gametes. 
-However, in the case of a neo-W, the allele carried by the male gamete that they mate with can come from either an X-bearing or a Y-bearing sperm (e.g., $A$ with probability $\bar{p}^{\male} w_{A}^{\male}/\bar{w}_{H}^{\male}$, where $\bar{p}^{\male}=p_{Y}^{\male}q+p_{X}^{\male}(1-q)$). In either case, the zygote will then develop as a female due to the presence of a neo-W. 
-By contrast, females that do not carry the neo-W, only result from matings with X-bearing sperm (e.g., matings with $A$-bearing sperm occur with probability $\bar{p}_{X}^{\male} w_{A}^{\male}/\bar{w}_{H}^{\male}$). 
+For a neo-Y, invasion depends on the relative lifetime fitness of $A$-bearing and $a$-bearing male gametes (i.e., in sperm only). 
+The lifetime fitness of male gametes partly depends on the allele carried by the female gamete that they mate with (e.g., $A$ with probability $p_{X}^{\female} w_{A}^{\female}/\bar{w}_{H}^{\female}$).
+Similarly, invasion of a neo-W depends on the relative lifetime fitness of $A$-bearing and $a$-bearing female gametes (i.e., in eggs only). 
+However, in the case of a neo-W, the allele carried by the male gamete that they mate with can come from either an X-bearing or a Y-bearing sperm (e.g., $A$ with probability $\bar{p}^{\male} w_{A}^{\male}/\bar{w}_{H}^{\male}$). 
+In either case, the zygote will then develop as a female due to the presence of a neo-W. 
+By contrast, females that do not carry the neo-W only result from matings with X-bearing sperm (e.g., matings with $A$-bearing sperm occur with probability $\bar{p}_{X}^{\male} w_{A}^{\male}/\bar{w}_{H}^{\male}$). 
 If the \textbf{A} locus is initially linked to the ancestral sex-determining locus, \textbf{X}, (i.e., $r<1/2$) the frequency of the $A$ allele among X- and Y-bearing sperm can differ (equation \ref{eq:freq_diffs}). 
 Thus, eggs with and without a neo-W differ in the frequency of $A$ alleles they obtain from mating with male gametes. 
 
 We are particularly concerned with whether or not a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, that solves \eqref{eq:charpoly_neoY} is greater than one. 
-If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur (if $\left\{(\lambda_{mA}-1)+ (\lambda_{ma}-1) \right\}/2>0$, $\lambda>1$). 
-If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$ \textcolor{red}{is this notation valid?}), the $m$ allele will not invade. 
+If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur (if $\left\{(\lambda_{mA}-1)+ (\lambda_{ma}-1) \right\}/2 > 0$, $\lambda > 1$). 
+If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$), the $m$ allele will not invade. 
 Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires
 \begin{equation}\label{eq:neoYR}
 R \left[ 
-\frac{p^\female_X w^\male_a (1-\alpha^\male)}{(\lambda_{mA}-1)\bar{w}_{H}^{\male}} + 
-\frac{(1 - p^\female_X) w^\male_A \alpha^\male \bar{w}_{H}^{\male}}{(\lambda_{ma}-1)\bar{w}_{H}^{\male}} \right] 
+\frac{p^\female_X w^\female_A w^\male_a (1-\alpha^\male)}{ \bar{w}^\female_H \bar{w}^\male_H (\lambda_{mA}-1)} + 
+\frac{(1 - p^\female_X) w^\female_a w^\male_A \alpha^\male}{ \bar{w}^\female_H \bar{w}^\male_H (\lambda_{ma}-1)} \right] 
 \frac{w^\male_{Aa}}{\bar{w}^\male} < 1,
 \end{equation}
 
@@ -327,14 +328,14 @@ for the neo-$Y$, and
 
 \noindent
 \begin{equation}\label{eq:neoWR}
-R \left[  
-\frac{(1 - \bar{p}^\male) w^\male_{a}}{(\lambda_{mA}-1)\bar{w}_{H}^{\male}} + 
-\frac{\bar{p}^\male w^\male_{A}}{(\lambda_{ma}-1)\bar{w}_{H}^{\male}} \right] 
-\frac{w^\female_{Aa}}{\bar{w}^\female} < 1
+R \left[ 
+\frac{\bar{p}^\male w^\male_A w^\female_a (1-\alpha^\female)}{ \bar{w}^\male_H \bar{w}^\female_H (\lambda_{mA}-1)} + 
+\frac{(1 - \bar{p}^\male) w^\male_a w^\female_A \alpha^\female}{ \bar{w}^\male_H \bar{w}^\female_H (\lambda_{ma}-1)} \right] 
+\frac{w^\male_{Aa}}{\bar{w}^\male} < 1,
 \end{equation}
 
 \noindent
-\textcolor{red}{FIX THESE EQUATIONS...}
+\textcolor{red}{FIX THESE EQUATIONS... i changed them a little, is this okay now? (mmo)}
 for the neo-$W$. Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele, $m$, is expected to invade for any recombination rate, $R$, when the net flow of recombinants is from the less fit (smaller $\lambda_{mi}$) to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative). \textcolor{red}{Q: is it definitely possible to have negative square brackets for a equilibria maintained by selection?}
 %Assuming $g_A^* > 0$ and $g_a^* < 0$ without loss of generality, this is $-(1 - p^\female_X) w_{m,A} g_a^* < p^\female_X w_{m,a} g_A^*$.
 When the net flow of recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus, $R$, is small enough. \textcolor{red}{Q:Is it the case that sometimes the square brackets are positive and invasion occurs for $R=1/2$? In which case it might be better to have slightly different phrasing here.}
@@ -572,10 +573,11 @@ That is, we can show that $\lambda_{Y',XY}=\lambda_{W',ZW}$ and $\lambda_{Y',ZW}
 
 The growth rate of a rare, dominant offspring-controlled neo-ESD region that produces males or females with equal probability ($k=1/2$) is
 \begin{equation}
-\lambda_{ESD,XY} \approx 1 + \frac{1}{2}\frac{(\lambda_{Y,XY} - 1) + (\lambda_{W,XY} -1)}{2} \Big|_{R=1/2}
+\lambda_{ESD} \approx 1 + \frac{1}{2}\frac{(\lambda_{Y,XY} - 1) + (\lambda_{W,XY} -1)}{2} \Big|_{R=1/2},
 %V_A \frac{r}{1-2r}  \frac{s_{f} \left( s^\male - 3 s^\female\right) }{8 \left( s_{f} + s_{m} \right)^2} t_{m}^2.
 \label{eq:lambda_ESD}
 \end{equation}
+which is the same for invasion into an ancestrally XY or ZW system.
 Thus with $k=1/2$ the neo-ESD gets half of the advantages of a neo-$W$ and half that of a neo-$Y$, but only has an effect one half of the time (the other half of the time it produces the same sex as the ancestral system would have).  
 Recombination between the selected locus and the novel sex-determining locus, $R$, doesn't enter into the $k=1/2$ results because sex is essentially randomized each generation, %as if the novel sex-determiner were on an unlinked site that half the time acts as a neo-$W$ and half the time as a neo-$Y$.
 preventing associations from building up between allele $A$ and sex.  
