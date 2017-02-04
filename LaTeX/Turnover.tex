@@ -210,22 +210,22 @@ $\lambda^2+ b \lambda + c =0$.
 %
 %\noindent
 %where $b$ is the average of the growth rates of the two haplotypes that carry the $m$ allele ($mA$ and $ma$), $b=(\lambda_{mA}+\lambda_{ma})/2$, and $c$ also involves the fitness of $m$ alleles when they recombine onto the other \textbf{A} background in a heterozygote, $c=\lambda_{mA}\lambda_{ma}+\rho_{mA}\rho_{ma}$ (see table \ref{tab:haplotype_growth}).
-In this case $b= - (\lambda_{mA} + \lambda_{ma})$ and $c = \lambda_{mA} \lambda_{ma} -\rho_{mA} \rho_{ma}$, where $2\lambda_{mi}-1$ is the growth rate of mutant haplotypes on background $i\in\{A,a\}$, accounting for loss due to recombination in heterozygotes, and $\rho_{mi}-1$ is the rate of addition of mutant haplotypes onto background $i\in\{A,a\}$ due to recombination in heterozygotes (see table \ref{tab:haplotype_growth}).
-\textcolor{red}{check these interpretations as there are weird 2s in table 2}
+In this case $b= - (\lambda_{mA} + \lambda_{ma})$ and $c = \lambda_{mA} \lambda_{ma} -\rho_{mA} \rho_{ma}$, where $2\lambda_{mi}-1$ is the growth rate of mutant haplotypes on background $i\in\{A,a\}$, accounting for loss due to recombination, and $\rho_{mi}-1$ is the rate of addition of mutant haplotypes onto background $i\in\{A,a\}$ due to recombination (see table \ref{tab:haplotype_growth}).
+\textcolor{red}{check these interpretations as there are now two 2s in the lambdas of table 2. perhaps the 2 in the denominator is needed because the frequency of males sums to one as does the frequency of females? the two in the numerator is from heterozygotes (like Hardy-Weinberg)?}
 
 \begin{threeparttable}[ht]
 \centering
 \smallskip
 %\caption{Parameters determining invasion (equation \ref{eq:charpoly_neoY}) for neo-Y or neo-W alleles}
-\caption{Parameters determining invasion of neo-Y or neo-W alleles into ancestral XY system}
+\caption{Parameters determining invasion of mutant neo-Y and neo-W alleles into an ancestrally XY system}
 \begin{tabular}{l}
 \hline\hline
    \noalign{\vskip 0.5ex}
    neo-Y ($k=0$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
-  $\lambda_{mA}=\{p_{X}^{\female} w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male}+2(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male}\alpha^\male(1-R)\}/ \{ 2 \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male\} $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\lambda_{ma}=\{(1-p_{X}^{\female}) w_{a}^{\female} w_{a}^{\male} w_{aa}^{\male}+2p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male}(1-\alpha^\male)(1-R)\}/ \{ 2 \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \}$ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R (1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^{\male}/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} (1 - \alpha^{\male})/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \}$\\ [1ex] \hline 
+  $\lambda_{mA}=\{p_{X}^{\female} w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male} + 2(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^\male (1 - r_{AM})\}/ \{ 2 \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male\} $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{ma}=\{(1-p_{X}^{\female}) w_{a}^{\female} w_{a}^{\male} w_{aa}^{\male} + 2p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male}(1 - \alpha^\male) (1 - r_{AM})\}/ \{ 2 \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \}$ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{mA}=r_{AM} (1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^{\male}/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=r_{AM} p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} (1 - \alpha^{\male})/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \}$\\ [1ex] \hline 
   \noalign{\vskip 0.5ex}
   neo-W ($k=1$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
   $\lambda_{mA}=\{\bar{p}^{\male} w_{A}^{\male} w_{A}^{\female} w_{AA}^{\female}+2(1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female}\alpha^\female(1-R)\}/ \{ 2 \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \}$ \\ [0.5ex] \noalign{\vskip 0.5ex}
@@ -237,6 +237,7 @@ In this case $b= - (\lambda_{mA} + \lambda_{ma})$ and $c = \lambda_{mA} \lambda_
       \begin{tablenotes}
       \scriptsize
       \item $\bar{p}^{\male}=p_{Y}^{\male}q+p_{X}^{\male}(1-q)$ is the average frequency of the $A$ allele among X- and Y-bearing male gametes.
+      \item $r_{AM}$ is the probability of recombination between loci \textbf{A} and \textbf{M}.
       \item See Table \ref{tab:meanfitnesses} for expressions of mean fitnesses.
 %      \item $\bar{w}_H^\female = p_X^\female w_A^\female + (1-p_X^\female) w_a^\female$ is the mean fitness of female gametes during gametic competition
 %      \item $\bar{w}_H^\male = \bar{p}^{\male} w_A^\male + (1-\bar{p}^{\male}) w_a^\male$ is the mean fitness of male gametes during gametic competition
@@ -262,7 +263,7 @@ If the average change in frequency of the two haplotypes that carry the $m$ alle
 If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$), the $m$ allele will not invade. 
 Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires
 \begin{equation}\label{eq:neoYR}
-R \left[ 
+r_{AM} \left[ 
 \frac{p^\female_X w^\female_A w^\male_a (1-\alpha^\male)}{ \bar{w}^\female_H \bar{w}^\male_H (\lambda_{mA}-1)} + 
 %p^\female_X \frac{w^\female_A}{\bar{w}^\female_H} \frac{w^\male_a(1-\alpha^\male)}{\bar{w}^\male_H} \frac{1}{\lambda_{mA}-1} + 
 \frac{(1 - p^\female_X) w^\female_a w^\male_A \alpha^\male}{ \bar{w}^\female_H \bar{w}^\male_H (\lambda_{ma}-1)} 
@@ -283,9 +284,9 @@ R \left[
 \end{equation}
 
 \noindent
-for the neo-$W$. Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele, $m$, is expected to invade for any recombination rate, $R$, when the net flow of recombinants is from the less fit (smaller $\lambda_{mi}$) to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative). \textcolor{red}{Q: is it definitely possible to have negative square brackets for a equilibria maintained by selection?}
+for the neo-$W$. Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele, $m$, is expected to invade for any probability of recombination between loci \textbf{A} and \textbf{M}, $r_{AM}$, when the net flow of recombinants is from the less fit (smaller $\lambda_{mi}$) to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative). \textcolor{red}{Q: is it definitely possible to have negative square brackets for a equilibria maintained by selection?}
 %Assuming $g_A^* > 0$ and $g_a^* < 0$ without loss of generality, this is $-(1 - p^\female_X) w_{m,A} g_a^* < p^\female_X w_{m,a} g_A^*$.
-When the net flow of recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus, $R$, is small enough. \textcolor{red}{Q:Is it the case that sometimes the square brackets are positive and invasion occurs for $R=1/2$? In which case it might be better to have slightly different phrasing here.}
+When the net flow of recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus is small enough. \textcolor{red}{Q:Is it the case that sometimes the square brackets are positive and invasion occurs for $r_{AM}=1/2$? In which case it might be better to have slightly different phrasing here.}
 
 %weak selection
 We can explicitly determine the conditions under which invasion occurs if we assume that the $A$ allele reaches an equilibrium frequency under the ancestral sex-determination system before the neo-sex-determination system ($m$) arises. 
