@@ -1,4 +1,4 @@
-\begin{thebibliography}{57}
+\begin{thebibliography}{72}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Arunkumar et~al.(2013)Arunkumar, Josephs, Williamson, and
@@ -55,10 +55,21 @@ Charlesworth, D., and J.~E. Mank. 2010.
   genetic mapping of sex determination in plants and animals}.
 \newblock Genetics 186:9--31.
 
+\bibitem[{Charnov(1982)}]{Charnov:1982wg}
+Charnov, E.~L. 1982.
+\newblock {The theory of sex allocation.}
+\newblock Monographs in population biology.
+
 \bibitem[{Charnov and Bull(1977)}]{Charnov:1977tx}
 Charnov, E.~L., and J.~Bull. 1977.
 \newblock {When is sex environmentally determined?}
 \newblock Nature 266:828--830.
+
+\bibitem[{Chase(2007)}]{Chase:2007bf}
+Chase, C.~D. 2007.
+\newblock {Cytoplasmic male sterility: a window to the world of plant
+  mitochondrial-nuclear interactions.}
+\newblock Trends in Genetics 23:81--90.
 
 \bibitem[{Clarke et~al.(2004)Clarke, Khan, and Siddique}]{Clarke:2004ir}
 Clarke, H.~J., T.~N. Khan, and K.~H.~M. Siddique. 2004.
@@ -133,6 +144,11 @@ Holleley, C.~E., D.~O'Meally, S.~D. Sarre, J.~A. Marshall~Graves, T.~Ezaz,
   temperature-dependent sex}.
 \newblock Nature 523:79--82.
 
+\bibitem[{Holman et~al.(2015)Holman, Price, Wedell, and Kokko}]{Holman:2015en}
+Holman, L., T.~A.~R. Price, N.~Wedell, and H.~Kokko. 2015.
+\newblock {Coevolutionary dynamics of polyandry and sex-linked meiotic drive}.
+\newblock Evolution 69:709--720.
+
 \bibitem[{Hormaza and Herrero(1996)}]{Hormaza:1996cv}
 Hormaza, J.~I., and M.~Herrero. 1996.
 \newblock {Male gametophytic selection as a plant breeding tool}.
@@ -142,6 +158,12 @@ Hormaza, J.~I., and M.~Herrero. 1996.
 Hough, J., S.~Immler, S.~Barrett, and S.~P. Otto. 2013.
 \newblock {Evolutionarily stable sex ratios and mutation load}.
 \newblock Evolution 7:1915--1925.
+
+\bibitem[{Hurst and Pomiankowski(1991)}]{Hurst:1991uh}
+Hurst, L.~D., and A.~Pomiankowski. 1991.
+\newblock {Causes of sex ratio bias may account for unisexual sterility in
+  hybrids: a new explanation of Haldane's rule and related phenomena.}
+\newblock Genetics 128:841--858.
 
 \bibitem[{Immler et~al.(2012)Immler, Arnqvist, and Otto}]{Immler:2012tl}
 Immler, S., G.~Arnqvist, and S.~P. Otto. 2012.
@@ -156,6 +178,12 @@ Immler, S., C.~Hotzy, G.~Alavioon, E.~Petersson, and G.~Arnqvist. 2014.
   development in Atlantic salmon}.
 \newblock Biology letters 10:20131040.
 
+\bibitem[{Jordan and Charlesworth(2011)}]{Jordan:2011fj}
+Jordan, C.~Y., and D.~Charlesworth. 2011.
+\newblock {The potential for sexually antagonistic polymorphism in different
+  genome regions}.
+\newblock Evolution 66:505--516.
+
 \bibitem[{Joseph and Kirkpatrick(2004)}]{JOSEPH:2004haa}
 Joseph, S., and M.~Kirkpatrick. 2004.
 \newblock {Haploid selection in animals}.
@@ -168,6 +196,12 @@ Kozielska, M., F.~J. Weissing, L.~W. Beukeboom, and I.~Pen. 2010.
   mechanisms}.
 \newblock Heredity 104:100--112.
 
+\bibitem[{Lenormand and Dutheil(2005)}]{Lenormand:2005vb}
+Lenormand, T., and J.~Dutheil. 2005.
+\newblock {Recombination difference between sexes: a role for haploid
+  selection}.
+\newblock PLoS Biol 3:e63.
+
 \bibitem[{Li et~al.(2011)Li, Phillips, Harwood, Koop, and Davidson}]{Li:2011fm}
 Li, J., R.~B. Phillips, A.~S. Harwood, B.~F. Koop, and W.~S. Davidson. 2011.
 \newblock {Identification of the Sex Chromosomes of Brown Trout \emph{(Salmo
@@ -175,10 +209,27 @@ Li, J., R.~B. Phillips, A.~S. Harwood, B.~F. Koop, and W.~S. Davidson. 2011.
   Salmon \emph{(Salmo salar)} and Rainbow Trout \emph{(Oncorhynchus mykiss)}}.
 \newblock Cytogenetic and Genome Research 133:25--33.
 
+\bibitem[{Lindholm and Breden(2002)}]{Lindholm:2002dw}
+Lindholm, A., and F.~Breden. 2002.
+\newblock {Sex chromosomes and sexual selection in poeciliid fishes.}
+\newblock The American Naturalist 160 Suppl 6:S214--24.
+
+\bibitem[{Lindholm et~al.(2016)Lindholm, Dyer, Firman, Fishman, Forstmeier,
+  Holman, Johannesson, Knief, Kokko, Larracuente, Manser, Montchamp-Moreau,
+  Petrosyan, Pomiankowski, Presgraves, Safronova, Sutter, Unckless, Verspoor,
+  Wedell, Wilkinson, and Price}]{Lindholm:2016cw}
+Lindholm, A.~K., K.~A. Dyer, R.~C. Firman, L.~Fishman, W.~Forstmeier,
+  L.~Holman, H.~Johannesson, U.~Knief, H.~Kokko, A.~M. Larracuente, A.~Manser,
+  C.~Montchamp-Moreau, V.~G. Petrosyan, A.~Pomiankowski, D.~C. Presgraves,
+  L.~D. Safronova, A.~Sutter, R.~L. Unckless, R.~L. Verspoor, N.~Wedell, G.~S.
+  Wilkinson, and T.~A.~R. Price. 2016.
+\newblock {The Ecology and Evolutionary Dynamics of Meiotic Drive.}
+\newblock Trends in Ecology {\&} Evolution 31:315--326.
+
 \bibitem[{Lloyd(1974)}]{Lloyd:1974tz}
 Lloyd, D.~G. 1974.
-\newblock {Female-predominant sex ratios in angiosperms}, vol.~32.
-\newblock Heredity.
+\newblock {Female-predominant sex ratios in angiosperms}.
+\newblock Heredity 32:35--44.
 
 \bibitem[{Mank et~al.(2006)Mank, Promislow, and Avise}]{Mank:2006bt}
 Mank, J.~E., D.~E.~L. Promislow, and J.~C. Avise. 2006.
@@ -197,7 +248,7 @@ Marais, G. A.~B., M.~Nicolas, R.~Bergero, P.~Chambrier, E.~Kejnovsky,
 \bibitem[{Ming et~al.(2011)Ming, Bendahmane, and Renner}]{Ming:2011iy}
 Ming, R., A.~Bendahmane, and S.~S. Renner. 2011.
 \newblock {Sex chromosomes in land plants}.
-\newblock dx.doi.org 62:485--514.
+\newblock Annu. Rev. Plant Biol. 62:485--514.
 
 \bibitem[{Mulcahy et~al.(1996)Mulcahy, Sari-Gorla, and
   Mulcahy}]{Mulcahy:1996ha}
@@ -223,7 +274,7 @@ Ogata, M., Y.~Hasegawa, H.~Ohtani, M.~Mineyama, and I.~Miura. 2007.
 \bibitem[{Otto et~al.(2015)Otto, Scott, and Immler}]{Otto:2015va}
 Otto, S.~P., M.~F. Scott, and S.~Immler. 2015.
 \newblock {Evolution of haploid selection in predominantly diploid organisms}.
-\newblock Proceedings of the National {\ldots} .
+\newblock Proc Natl Acad Sci 112:15952--15957.
 
 \bibitem[{Pen et~al.(2010)Pen, Uller, Feldmeyer, Harts, While, and
   Wapstra}]{Pen:2010kk}
@@ -244,8 +295,15 @@ Ravikumar, R.~L., B.~S. Patil, and P.~M. Salimath. 2003.
   stress}.
 \newblock Euphytica 133:371--376.
 
+\bibitem[{Rice(1987)}]{Rice:1987hs}
+Rice, W.~R. 1987.
+\newblock {The accumulation of sexually antagonistic genes as a selective agent
+  promoting the evolution of reduced recombination between primitive sex
+  chromosomes}.
+\newblock Evolution 41:911.
+
 \bibitem[{Rice(1996)}]{Rice:1996ke}
-Rice, W.~R. 1996.
+---{}---{}---. 1996.
 \newblock {Evolution of the Y Sex Chromosome in Animals}.
 \newblock BioScience 46:331--343.
 
@@ -275,7 +333,7 @@ Smith, D. A.~S. 1975.
 Stalker, H.~D. 1961.
 \newblock {The Genetic Systems Modifying Meiotic Drive in Drosophila
   Paramelanica}.
-\newblock Genetics .
+\newblock Genetics 46:177--202.
 
 \bibitem[{Stehlik and Barrett(2005)}]{Stehlik:2005ul}
 Stehlik, I., and S.~Barrett. 2005.
@@ -288,6 +346,31 @@ Stehlik, I., and S.~C.~H. Barrett. 2006.
 \newblock {Pollination intensity influences sex ratios in dioecious Rumex
   nivalis, a wind-pollinated plant.}
 \newblock Evolution 60:1207--1214.
+
+\bibitem[{Taylor and Jaenike(2002)}]{Taylor:2002wu}
+Taylor, J.~E., and J.~Jaenike. 2002.
+\newblock {Sperm competition and the dynamics of X chromosome drive: stability
+  and extinction.}
+\newblock Genetics 160:1721--1731.
+
+\bibitem[{Tripathi et~al.(2009)Tripathi, Hoffmann, Willing, Lanz, Weigel, and
+  Dreyer}]{Tripathi:2009cw}
+Tripathi, N., M.~Hoffmann, E.-M. Willing, C.~Lanz, D.~Weigel, and C.~Dreyer.
+  2009.
+\newblock {Genetic linkage map of the guppy, Poecilia reticulata, and
+  quantitative trait loci analysis of male size and colour variation.}
+\newblock Proceedings. Biological sciences / The Royal Society 276:2195--2208.
+
+\bibitem[{Trivers and Willard(1973)}]{Trivers:1973wb}
+Trivers, R.~L., and D.~E. Willard. 1973.
+\newblock {Natural selection of parental ability to vary the sex ratio of
+  offspring.}
+\newblock Science 179:90--92.
+
+\bibitem[{{\'U}beda and Haig(2005)}]{Ubeda:2005gw}
+{\'U}beda, F., and D.~Haig. 2005.
+\newblock {On the evolutionary stability of Mendelian segregation.}
+\newblock Genetics 170:1345--1357.
 
 \bibitem[{{\'U}beda et~al.(2015){\'U}beda, Patten, and Wild}]{Ubeda:2015fx}
 {\'U}beda, F., M.~M. Patten, and G.~Wild. 2015.
@@ -323,10 +406,20 @@ Vuillleumier, S., R.~Lande, J.~J.~M. van Alphen, and O.~Seehausen. 2007.
 \newblock {Invasion and fixation of sex-reversal genes}.
 \newblock Journal of Evolutionary Biology 20:913--920.
 
+\bibitem[{Werren and Beukeboom(1998)}]{Werren:1998co}
+Werren, J.~H., and L.~W. Beukeboom. 1998.
+\newblock {SEX DETERMINATION, SEX RATIOS, AND GENETIC CONFLICT}.
+\newblock Annual Review of Ecology and Systematics 29:233--261.
+
 \bibitem[{Werren and Taylor(1984)}]{Werren:1984tl}
 Werren, J.~H., and P.~D. Taylor. 1984.
 \newblock {The effects of population recruitment on sex ratio selection}.
 \newblock The American Naturalist 124:143--148.
+
+\bibitem[{West(2009)}]{West:2009we}
+West, S. 2009.
+\newblock {Sex allocation}.
+\newblock Princeton University Pres.
 
 \bibitem[{Wilson and Colwell(1981)}]{Wilson:1981vm}
 Wilson, D.~S., and R.~K. Colwell. 1981.
