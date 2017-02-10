@@ -1,4 +1,4 @@
-\begin{thebibliography}{72}
+\begin{thebibliography}{74}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Arunkumar et~al.(2013)Arunkumar, Josephs, Williamson, and
@@ -107,6 +107,11 @@ Field, D.~L., M.~Pickup, and S.~C.~H. Barrett. 2012.
   plants.}
 \newblock Evolution 67:661--672.
 
+\bibitem[{Fisher(1930)}]{Fisher:1930wy}
+Fisher, R. 1930.
+\newblock {The genetical theory of natural selection}.
+\newblock Clarendon Press, London.
+
 \bibitem[{Frank(1989)}]{Frank:1989vl}
 Frank, S.~A. 1989.
 \newblock {The Evolutionary Dynamics of Cytoplasmic Male Sterility}.
@@ -118,6 +123,12 @@ Gossmann, T.~I., M.~W. Schmid, U.~Grossniklaus, and K.~J. Schmid. 2014.
 \newblock {Selection-driven evolution of sex-biased genes Is consistent with
   sexual selection in \emph{Arabidopsis thaliana}}.
 \newblock Molecular biology and evolution 31:574--583.
+
+\bibitem[{Haldane(1919)}]{Haldane1919}
+Haldane, J. B.~S. 1919.
+\newblock {The combination of linkage values and the calculation of distances
+  between the loci of linked factors}.
+\newblock Journal of Genetics 8:299--309.
 
 \bibitem[{Hamilton(1967)}]{Hamilton:1967ts}
 Hamilton, W.~D. 1967.
