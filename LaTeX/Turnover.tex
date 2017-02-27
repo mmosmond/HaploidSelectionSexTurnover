@@ -230,14 +230,14 @@ We also track the fraction of male gametes that are Y-bearing, $q$, which may de
    neo-Y ($k=0$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
   $\lambda_{mA}=\{p_{X}^{\female} w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male} + 2(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^\male (1 - R)\}/ \{2q \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male\} $\\ [0.5ex] \noalign{\vskip 0.5ex}
   $\lambda_{ma}=\{(1-p_{X}^{\female}) w_{a}^{\female} w_{a}^{\male} w_{aa}^{\male} + 2p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male}(1 - \alpha^\male) (1 - R)\}/ \{ 2q \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \}$ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R (1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^{\male}/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} (1 - \alpha^{\male})/ \{ \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \}$\\ [1ex] \hline 
+  $\rho_{mA}=R (1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^{\male}/ \{ q \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} (1 - \alpha^{\male})/ \{ q \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\male \}$\\ [1ex] \hline 
   \noalign{\vskip 0.5ex}
   neo-W ($k=1$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
   $\lambda_{mA}=\{\bar{p}^{\male} w_{A}^{\male} w_{A}^{\female} w_{AA}^{\female}+2(1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female}\alpha^\female(1-R)\}/ \{ 2(1-q) \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \}$ \\ [0.5ex] \noalign{\vskip 0.5ex}
   $\lambda_{ma}=\{(1-\bar{p}^{\male}) w_{a}^{\male} w_{a}^{\female} w_{aa}^{\female}+2\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female}(1-\alpha^\female)(1-R)\}/ \{2(1-q) \bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \}$ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R (1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female} \alpha^{\female}/ \{\bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female} (1-\alpha^{\female})/ \{\bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \}$\\ [1ex] 
+  $\rho_{mA}=R (1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female} \alpha^{\female}/ \{(1-q)\bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female} (1-\alpha^{\female})/ \{(1-q)\bar{w}_{H}^{\female} \bar{w}_{H}^{\male} \bar{w}^\female \}$\\ [1ex] 
   \hline \hline 
    \end{tabular}
       \begin{tablenotes}
@@ -842,17 +842,17 @@ Within this resident population (when $m$ is absent) we can then describe freque
   male gametes ($\bar{w}_H^\male$) & 
   $\bar{p}^{\male} w_A^\male + (1-\bar{p}^{\male}) w_a^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
   females ($\bar{w}^\female$) & 
-  $\begin{array}{l}  \{ p_X^\female w_A^\female (1-q) p_X^\male w_A^\male w_{AA}^\female + \\
-  (1 - p_X^\female) w_a^\female (1-q) p_X^\male w_A^\male w_{Aa}^\female + \\
-  p_X^\female w_A^\female (1-q) (1 - p_X^\male) w_a^\male w_{Aa}^\female + \\
-  (1-p_X^\female) w_a^\female (1-q) (1 - p_X^\male) w_a^\male w_{aa}^\female \} / \{ \bar{w}_H^\female \bar{w}_H^\male\}
+  $\begin{array}{l}  \{ p_X^\female w_A^\female p_X^\male w_A^\male w_{AA}^\female + \\
+  (1 - p_X^\female) w_a^\female p_X^\male w_A^\male w_{Aa}^\female + \\
+  p_X^\female w_A^\female (1 - p_X^\male) w_a^\male w_{Aa}^\female + \\
+  (1-p_X^\female) w_a^\female (1 - p_X^\male) w_a^\male w_{aa}^\female \} / \{ \bar{w}_H^\female \bar{w}_H^\male\}
   \end{array} 
   $ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
   males ($\bar{w}^\male$) & 
-  $\begin{array}{l} \{ p_X^\female w_A^\female q p_Y^\male w_A^\male w_{AA}^\male + \\
-  (1 - p_X^\female) w_a^\female q p_Y^\male w_A^\male w_{Aa}^\male + \\
-  p_X^\female w_A^\female q (1 - p_Y^\male) w_a^\male w_{Aa}^\male + \\
-  (1-p_X^\female) w_a^\female q (1 - p_Y^\male) w_a^\male w_{aa}^\male \} / \{ \bar{w}_H^\male \bar{w}_H^\male\} 
+  $\begin{array}{l} \{ p_X^\female w_A^\female  p_Y^\male w_A^\male w_{AA}^\male + \\
+  (1 - p_X^\female) w_a^\female  p_Y^\male w_A^\male w_{Aa}^\male + \\
+  p_X^\female w_A^\female  (1 - p_Y^\male) w_a^\male w_{Aa}^\male + \\
+  (1-p_X^\female) w_a^\female  (1 - p_Y^\male) w_a^\male w_{aa}^\male \} / \{ \bar{w}_H^\male \bar{w}_H^\male\} 
   \end{array}
   $ \\ [0.5ex]  \noalign{\vskip 0.5ex}
   \hline \hline
@@ -927,7 +927,7 @@ R \left[
 %p^\female_X \frac{w^\female_A}{\bar{w}^\female_H} \frac{w^\male_a(1-\alpha^\male)}{\bar{w}^\male_H} \frac{1}{\lambda_{mA}-1} + 
 \frac{(1 - p^\female_X) w^\female_a w^\male_A \alpha^\male}{ \bar{w}^\female_H \bar{w}^\male_H (\lambda_{ma}-1)} 
 \right] 
-\frac{w^\male_{Aa}}{\bar{w}^\male} < 1,
+\frac{w^\male_{Aa}}{q\bar{w}^\male} < 1,
 \end{equation}
 
 \noindent
@@ -939,7 +939,7 @@ R \left[
 \frac{\bar{p}^\male w^\male_A w^\female_a (1-\alpha^\female)}{ \bar{w}^\male_H \bar{w}^\female_H (\lambda_{mA}-1)} + 
 \frac{(1 - \bar{p}^\male) w^\male_a w^\female_A \alpha^\female}{ \bar{w}^\male_H \bar{w}^\female_H (\lambda_{ma}-1)} 
 \right] 
-\frac{w^\female_{Aa}}{\bar{w}^\female} < 1,
+\frac{w^\female_{Aa}}{(1-q)\bar{w}^\female} < 1,
 \end{equation}
 
 \noindent
