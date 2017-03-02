@@ -1,0 +1,3832 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[    141695,       3822]
+NotebookOptionsPosition[    137428,       3686]
+NotebookOutlinePosition[    137786,       3702]
+CellTagsIndexPosition[    137743,       3699]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Life-cycle", "Section",
+ CellChangeTimes->{{3.681743786104041*^9, 3.6817437925740137`*^9}, {
+   3.681744758252803*^9, 3.6817447640802717`*^9}, {3.6817907535849123`*^9, 
+   3.681790755198732*^9}, 3.681790964811371*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Haploid competition", "Subsection",
+ CellChangeTimes->{{3.681790761563039*^9, 3.681790767400532*^9}, {
+  3.695053398651717*^9, 3.695053400125853*^9}, {3.696695122110588*^9, 
+  3.6966951231463127`*^9}}],
+
+Cell["\<\
+Frequency of haploids from each sex\
+\>", "Text",
+ CellChangeTimes->{{3.697151250749948*^9, 3.697151258628313*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["freqHap", "sex_"], ":=", 
+  RowBox[{"ParallelSum", "[", 
+   RowBox[{
+    SubscriptBox["fHap", 
+     RowBox[{"x", ",", "y", ",", "z", ",", "sex"}]], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"{", 
+       RowBox[{"X", ",", "Y"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"{", 
+       RowBox[{"A", ",", "a"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", 
+      RowBox[{"{", 
+       RowBox[{"M", ",", "m"}], "}"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.697151183458856*^9, 3.697151199477862*^9}, 
+   3.6971620991256037`*^9}],
+
+Cell["Mean haploid fitness of gametes from each sex", "Text",
+ CellChangeTimes->{{3.696695130048037*^9, 3.696695161928997*^9}, {
+  3.6966953911933403`*^9, 3.696695398865906*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["wbarHap", "sex_"], ":=", 
+  RowBox[{
+   SubscriptBox["wbarHap", "sex"], "=", 
+   FractionBox[
+    RowBox[{"ParallelSum", "[", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["wHap", 
+        RowBox[{"y", ",", "sex"}]], 
+       SubscriptBox["fHap", 
+        RowBox[{"x", ",", "y", ",", "z", ",", "sex"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{"{", 
+         RowBox[{"X", ",", "Y"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", 
+        RowBox[{"{", 
+         RowBox[{"A", ",", "a"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"{", 
+         RowBox[{"M", ",", "m"}], "}"}]}], "}"}]}], "]"}], 
+    SubscriptBox["freqHap", "sex"]]}]}]], "Input",
+ CellChangeTimes->{{3.68174069177772*^9, 3.681740709745438*^9}, {
+  3.6817407470528183`*^9, 3.681740792567976*^9}, {3.681743989430183*^9, 
+  3.681743993228486*^9}, {3.681744694112637*^9, 3.681744695061598*^9}, {
+  3.681744770055842*^9, 3.681744781694951*^9}, {3.696695164212509*^9, 
+  3.696695169314419*^9}, {3.69715114997863*^9, 3.697151179679657*^9}, {
+  3.6971512189873543`*^9, 3.6971512227342453`*^9}, {3.697162090151134*^9, 
+  3.697162092068632*^9}}],
+
+Cell["\<\
+Frequencies of haploid genotypes from each sex following haploid competition, \
+which occurs between gametes coming from the same sex\
+\>", "Text",
+ CellChangeTimes->{{3.696695176865569*^9, 3.696695199818366*^9}, {
+  3.6966952399477863`*^9, 3.696695241475881*^9}, {3.696695404993683*^9, 
+  3.6966954241384993`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["fHapSel", 
+   RowBox[{"x_", ",", "y_", ",", "z_", ",", "sex_"}]], ":=", 
+  FractionBox[
+   RowBox[{
+    SubscriptBox["wHap", 
+     RowBox[{"y", ",", "sex"}]], 
+    SubscriptBox["fHap", 
+     RowBox[{"x", ",", "y", ",", "z", ",", "sex"}]]}], 
+   RowBox[{
+    SubscriptBox["wbarHap", "sex"], 
+    SubscriptBox["freqHap", "sex"]}]]}]], "Input",
+ CellChangeTimes->{{3.68174069177772*^9, 3.681740709745438*^9}, {
+  3.6817407470528183`*^9, 3.681740792567976*^9}, {3.681743989430183*^9, 
+  3.681743993228486*^9}, {3.681744694112637*^9, 3.681744695061598*^9}, {
+  3.681744770055842*^9, 3.681744781694951*^9}, {3.696695164212509*^9, 
+  3.696695169314419*^9}, {3.69715122758352*^9, 3.6971512429961433`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Random mating", "Subsection",
+ CellChangeTimes->{{3.6817907708613567`*^9, 3.681790772239373*^9}, {
+  3.695053404145611*^9, 3.695053404843087*^9}}],
+
+Cell["Gametes from the two sexes pair at random", "Text",
+ CellChangeTimes->{{3.696695214602847*^9, 3.6966952286276083`*^9}, {
+  3.696695432002734*^9, 3.6966954345306883`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["fDip", 
+   RowBox[{
+   "xM_", ",", "yM_", ",", "zM_", ",", "xP_", ",", "yP_", ",", "zP_"}]], ":=", 
+  RowBox[{
+   SubscriptBox["fDip", 
+    RowBox[{"xM", ",", "yM", ",", "zM", ",", "xP", ",", "yP", ",", "zP"}]], 
+   "=", 
+   RowBox[{
+    SubscriptBox["fHapSel", 
+     RowBox[{"xM", ",", "yM", ",", "zM", ",", "female"}]], 
+    SubscriptBox["fHapSel", 
+     RowBox[{"xP", ",", "yP", ",", "zP", ",", "male"}]]}]}]}]], "Input",
+ CellChangeTimes->{{3.681740852705102*^9, 3.681740881236745*^9}, {
+   3.681741102397697*^9, 3.681741112150375*^9}, 3.6817438071282473`*^9, 
+   3.68174469800976*^9, {3.681744788822844*^9, 3.681744812868677*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sex determination", "Subsection",
+ CellChangeTimes->{{3.68179077585012*^9, 3.681790778311782*^9}, {
+  3.6950534072431593`*^9, 3.695053408004703*^9}}],
+
+Cell["Determine the sex of newly formed diploids", "Text",
+ CellChangeTimes->{{3.696695277141136*^9, 3.696695287573451*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["fDipSex", 
+   RowBox[{
+   "xM_", ",", "yM_", ",", "zM_", ",", "xP_", ",", "yP_", ",", "zP_", ",", 
+    "sex_"}]], ":=", 
+  RowBox[{
+   SubscriptBox["fDipSex", 
+    RowBox[{
+    "xM", ",", "yM", ",", "zM", ",", "xP", ",", "yP", ",", "zP", ",", 
+     "sex"}]], "=", 
+   RowBox[{
+    SubscriptBox["fDip", 
+     RowBox[{"xM", ",", "yM", ",", "zM", ",", "xP", ",", "yP", ",", "zP"}]], 
+    SubscriptBox["psex", 
+     RowBox[{"zM", ",", "xP", ",", "zP", ",", "sex"}]]}]}]}]], "Input",
+ CellChangeTimes->{{3.681740916059374*^9, 3.681740941165064*^9}, {
+   3.6817411271569843`*^9, 3.68174113488159*^9}, 3.681744699086836*^9, {
+   3.681744820695732*^9, 3.681744847841905*^9}}],
+
+Cell["where a diploid must become male or female", "Text",
+ CellChangeTimes->{{3.681790782072919*^9, 3.681790792647656*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sumsex", "=", 
+   RowBox[{
+    SubscriptBox["psex", 
+     RowBox[{"zM_", ",", "xP_", ",", "zP_", ",", "male"}]], "\[Rule]", 
+    RowBox[{"1", "-", 
+     SubscriptBox["psex", 
+      RowBox[{"zM", ",", "xP", ",", "zP", ",", "female"}]]}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.681740963151202*^9, 3.681741006588331*^9}, {
+  3.6817448642217417`*^9, 3.681744883117257*^9}}],
+
+Cell["\<\
+Rules for invasion of a dominant modifier into an XY system (relabeling males \
+and females and females as males, as well as Y as W and X as Z makes the \
+ancestral system ZW)\
+\>", "Text",
+ CellChangeTimes->{{3.681790803628374*^9, 3.681790842176858*^9}, {
+   3.695053524085052*^9, 3.6950535912772512`*^9}, 3.696695331640586*^9, {
+   3.6966954462351923`*^9, 3.696695448475649*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"invXY", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["psex", 
+       RowBox[{"M", ",", "Y", ",", "M", ",", "female"}]], "\[Rule]", "0"}], 
+     ",", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"always", " ", "male", " ", "if", " ", "neo"}], "-", 
+       RowBox[{
+       "SD", " ", "allele", " ", "wildtype", " ", "and", " ", "have", " ", 
+        "Y"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["psex", 
+       RowBox[{"M", ",", "X", ",", "M", ",", "female"}]], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"always", " ", "female", " ", "neo"}], "-", 
+       RowBox[{
+       "SD", " ", "allele", " ", "wildtype", " ", "and", " ", "have", " ", 
+        "X", " ", "from", " ", "father"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["psex", 
+       RowBox[{"m", ",", "xP_", ",", "zP_", ",", "female"}]], "\[Rule]", 
+      "k"}], ",", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{
+       "female", " ", "with", " ", "probability", " ", "k", " ", "if", " ", 
+        "mutation", " ", "at", " ", "the", " ", "maternal", " ", "neo"}], "-", 
+       RowBox[{"SD", " ", "locus"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["psex", 
+       RowBox[{"zM_", ",", "xP_", ",", "m", ",", "female"}]], "\[Rule]", 
+      "k"}]}], " ", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{
+      "female", " ", "with", " ", "probability", " ", "k", " ", "if", " ", 
+       "mutation", " ", "at", " ", "the", " ", "paternal", " ", "neo"}], "-", 
+      
+      RowBox[{"SD", " ", "locus"}]}], "*)"}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.678749250078711*^9, 3.678749257734652*^9}, {
+   3.678749341105864*^9, 3.678749495395021*^9}, {3.679945123194168*^9, 
+   3.679945148394607*^9}, {3.6799451869399347`*^9, 3.679945240579802*^9}, {
+   3.679945289781743*^9, 3.679945339491596*^9}, {3.6799453844002123`*^9, 
+   3.679945402746641*^9}, {3.6799454634914007`*^9, 3.6799455567240467`*^9}, {
+   3.6799484238045397`*^9, 3.679948455123131*^9}, {3.67994848956713*^9, 
+   3.679948517654551*^9}, {3.679948569319213*^9, 3.679948570835786*^9}, {
+   3.679951538898012*^9, 3.679951549755542*^9}, {3.68037305678191*^9, 
+   3.680373067198072*^9}, {3.6803822046986856`*^9, 3.680382207715699*^9}, {
+   3.680382278235017*^9, 3.68038254183022*^9}, {3.6803826726056223`*^9, 
+   3.6803827011867247`*^9}, {3.681481533121539*^9, 3.681481811404159*^9}, {
+   3.681482143533368*^9, 3.681482144703322*^9}, {3.681736556313373*^9, 
+   3.681736594419837*^9}, {3.681736645992744*^9, 3.6817366988928537`*^9}, {
+   3.681736750338529*^9, 3.681736811785675*^9}, {3.681736847176927*^9, 
+   3.681736957382381*^9}, {3.6817438697025414`*^9, 3.681743921107368*^9}, 
+   3.6817443638221292`*^9, {3.681744903243745*^9, 3.681744975780779*^9}, {
+   3.681745009880579*^9, 3.681745061658045*^9}, {3.681790822233528*^9, 
+   3.6817908224326878`*^9}, {3.695053621112494*^9, 3.6950536508891478`*^9}, {
+   3.695053712275227*^9, 3.6950537228262157`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Diploid selection", "Subsection",
+ CellChangeTimes->{{3.6817908523566217`*^9, 3.681790854930419*^9}, {
+  3.695053424001115*^9, 3.695053424708165*^9}}],
+
+Cell["\<\
+Frequencies of diploids from each sex\
+\>", "Text",
+ CellChangeTimes->{{3.6971512960507193`*^9, 3.6971513054322863`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["freqDip", "sex_"], ":=", 
+  RowBox[{"ParallelSum", "[", 
+   RowBox[{
+    SubscriptBox["fDipSex", 
+     RowBox[{
+     "xM", ",", "yM", ",", "zM", ",", "xP", ",", "yP", ",", "zP", ",", 
+      "sex"}]], ",", 
+    RowBox[{"{", 
+     RowBox[{"xM", ",", 
+      RowBox[{"{", 
+       RowBox[{"X", ",", "Y"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"yM", ",", 
+      RowBox[{"{", 
+       RowBox[{"A", ",", "a"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"zM", ",", 
+      RowBox[{"{", 
+       RowBox[{"M", ",", "m"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"xP", ",", 
+      RowBox[{"{", 
+       RowBox[{"X", ",", "Y"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"yP", ",", 
+      RowBox[{"{", 
+       RowBox[{"A", ",", "a"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"zP", ",", 
+      RowBox[{"{", 
+       RowBox[{"M", ",", "m"}], "}"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6971513262430763`*^9, 3.6971513267411213`*^9}, 
+   3.69716210906399*^9}],
+
+Cell["Mean diploid fitness in each sex", "Text",
+ CellChangeTimes->{{3.696695371490938*^9, 3.696695372672546*^9}, {
+  3.696695458244852*^9, 3.6966954647319517`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["wbarDip", "sex_"], ":=", 
+  RowBox[{
+   SubscriptBox["wbarDip", "sex"], "=", 
+   FractionBox[
+    RowBox[{"ParallelSum", "[", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["wDip", 
+        RowBox[{"yM", ",", "yP", ",", "sex"}]], 
+       SubscriptBox["fDipSex", 
+        RowBox[{
+        "xM", ",", "yM", ",", "zM", ",", "xP", ",", "yP", ",", "zP", ",", 
+         "sex"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"xM", ",", 
+        RowBox[{"{", 
+         RowBox[{"X", ",", "Y"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"yM", ",", 
+        RowBox[{"{", 
+         RowBox[{"A", ",", "a"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zM", ",", 
+        RowBox[{"{", 
+         RowBox[{"M", ",", "m"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"xP", ",", 
+        RowBox[{"{", 
+         RowBox[{"X", ",", "Y"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"yP", ",", 
+        RowBox[{"{", 
+         RowBox[{"A", ",", "a"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zP", ",", 
+        RowBox[{"{", 
+         RowBox[{"M", ",", "m"}], "}"}]}], "}"}]}], "]"}], 
+    SubscriptBox["freqDip", "sex"]]}]}]], "Input",
+ CellChangeTimes->{
+  3.6971497937936907`*^9, {3.697149946702374*^9, 3.697149972474596*^9}, 
+   3.697150235543221*^9, {3.697150277256873*^9, 3.697150280344022*^9}, {
+   3.697151330025823*^9, 3.6971513335051527`*^9}, 3.697162111414228*^9}],
+
+Cell["\<\
+Frequencies of diploid genotypes in each sex following diploid selection, \
+which occurs separately in each sex (even if diploid selection is not direct \
+competition between members of the same sex but instead viability selection, \
+selection still effectively occurs \[OpenCurlyQuote]separately in each sex\
+\[CloseCurlyQuote] because the next generation is sired by 50% males and 50% \
+females)\
+\>", "Text",
+ CellChangeTimes->{{3.696695476428199*^9, 3.696695510501577*^9}, {
+  3.696695589856222*^9, 3.6966955941123123`*^9}, {3.696696090011167*^9, 
+  3.6966962979217*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["fDipSel", 
+   RowBox[{
+   "xM_", ",", "yM_", ",", "zM_", ",", "xP_", ",", "yP_", ",", "zP_", ",", 
+    "sex_"}]], ":=", 
+  RowBox[{
+   SubscriptBox["fDipSel", 
+    RowBox[{
+    "xM", ",", "yM", ",", "zM", ",", "xP", ",", "yP", ",", "zP", ",", 
+     "sex"}]], "=", 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["wDip", 
+      RowBox[{"yM", ",", "yP", ",", "sex"}]], 
+     SubscriptBox["fDipSex", 
+      RowBox[{
+      "xM", ",", "yM", ",", "zM", ",", "xP", ",", "yP", ",", "zP", ",", 
+       "sex"}]]}], 
+    RowBox[{
+     SubscriptBox["wbarDip", "sex"], 
+     SubscriptBox["freqDip", "sex"]}]]}]}]], "Input",
+ CellChangeTimes->{{3.697150004307781*^9, 3.697150018911365*^9}, 
+   3.697150105743805*^9, {3.697150294137301*^9, 3.697150305677289*^9}, {
+   3.697151338394719*^9, 3.6971513388456793`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Meiosis", "Subsection",
+ CellChangeTimes->{{3.6817908603315487`*^9, 3.681790862035611*^9}, {
+  3.695053427266148*^9, 3.695053427971775*^9}}],
+
+Cell["Gamete genotypes produced by diploids", "Text",
+ CellChangeTimes->{{3.696695621410144*^9, 3.696695643290491*^9}, {
+  3.6966963219398127`*^9, 3.69669633174671*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["fHapNext", 
+   RowBox[{"x_", ",", "y_", ",", "z_", ",", "sex_"}]], ":=", 
+  RowBox[{
+   SubscriptBox["fHapNext", 
+    RowBox[{"x", ",", "y", ",", "z", ",", "sex"}]], "=", 
+   RowBox[{"ParallelSum", "[", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["fDipSel", 
+       RowBox[{
+       "xM", ",", "yM", ",", "zM", ",", "xP", ",", "yP", ",", "zP", ",", 
+        "sex"}]], 
+      SubscriptBox["pseg", 
+       RowBox[{
+       "xM", ",", "yM", ",", "zM", ",", "xP", ",", "yP", ",", "zP", ",", 
+        "sex", ",", "x", ",", "y", ",", "z"}]]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"xM", ",", 
+       RowBox[{"{", 
+        RowBox[{"X", ",", "Y"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"yM", ",", 
+       RowBox[{"{", 
+        RowBox[{"A", ",", "a"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"zM", ",", 
+       RowBox[{"{", 
+        RowBox[{"M", ",", "m"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"xP", ",", 
+       RowBox[{"{", 
+        RowBox[{"X", ",", "Y"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"yP", ",", 
+       RowBox[{"{", 
+        RowBox[{"A", ",", "a"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"zP", ",", 
+       RowBox[{"{", 
+        RowBox[{"M", ",", "m"}], "}"}]}], "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6817440705483007`*^9, 3.6817440908841143`*^9}, {
+  3.681744703057055*^9, 3.6817447059212723`*^9}, {3.681745089264248*^9, 
+  3.681745102327985*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Segregation", "Subsubsection",
+ CellChangeTimes->{{3.6951408332729673`*^9, 3.6951408457141037`*^9}, {
+   3.695140930171077*^9, 3.695140941721265*^9}, 3.695146498004241*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"pseg0", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"triple", " ", "homozygote"}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     SubscriptBox["pseg", 
+      RowBox[{
+      "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y1_", ",", "z1_", ",", 
+       "sex_", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", "1"}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pseg1", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"single", " ", "heterozygotes"}], "*)"}], "\[IndentingNewLine]", 
+    
+    RowBox[{
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y1_", ",", "z1_", ",",
+         "sex_", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{"1", "/", "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y1_", ",", "z1_", ",",
+         "sex_", ",", "x2_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{"1", "/", "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x1_", ",", "a", ",", "z1_", ",", 
+        "sex_", ",", "x1_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      SubscriptBox["\[Alpha]", "sex"]}], " ", ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x1_", ",", "a", ",", "z1_", ",", 
+        "sex_", ",", "x1_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        SubscriptBox["\[Alpha]", "sex"]}], ")"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x1_", ",", "A", ",", "z1_", ",", 
+        "sex_", ",", "x1_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      SubscriptBox["\[Alpha]", "sex"]}], " ", ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x1_", ",", "A", ",", "z1_", ",", 
+        "sex_", ",", "x1_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        SubscriptBox["\[Alpha]", "sex"]}], ")"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y1_", ",", "z2_", ",",
+         "sex_", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{"1", "/", "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x1_", ",", "y1_", ",", "z2_", ",",
+         "sex_", ",", "x1_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{"1", "/", "2"}]}]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pseg2", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"double", " ", "heterozygotes"}], "*)"}], "\[IndentingNewLine]", 
+    
+    RowBox[{
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z1_", ",", 
+        "sex_", ",", "x1_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "sex"], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{"recAXandAM", "+", "recAXnotAM"}], ")"}]}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z1_", ",", 
+        "sex_", ",", "x2_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "sex"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{"recAXandAM", "+", "recAXnotAM"}], ")"}]}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z1_", ",", 
+        "sex_", ",", "x2_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "sex"], " ", 
+       RowBox[{"(", 
+        RowBox[{"recAXandAM", "+", "recAXnotAM"}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z1_", ",", 
+        "sex_", ",", "x1_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "sex"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"recAXandAM", "+", "recAXnotAM"}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x1_", ",", "a", ",", "z2_", ",", 
+        "sex_", ",", "x1_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "sex"], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{"recAXandAM", "+", "recAMnotAX"}], ")"}]}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x1_", ",", "a", ",", "z2_", ",", 
+        "sex_", ",", "x1_", ",", "a", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "sex"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{"recAXandAM", "+", "recAMnotAX"}], ")"}]}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x1_", ",", "a", ",", "z2_", ",", 
+        "sex_", ",", "x1_", ",", "A", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "sex"], " ", 
+       RowBox[{"(", 
+        RowBox[{"recAXandAM", "+", "recAMnotAX"}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x1_", ",", "a", ",", "z2_", ",", 
+        "sex_", ",", "x1_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "sex"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"recAXandAM", "+", "recAMnotAX"}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z1_", ",", 
+        "sex_", ",", "x2_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "sex"], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{"recAXandAM", "+", "recAXnotAM"}], ")"}]}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z1_", ",", 
+        "sex_", ",", "x1_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "male"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{"recAXandAM", "+", "recAXnotAM"}], ")"}]}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z1_", ",", 
+        "sex_", ",", "x1_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "sex"], " ", 
+       RowBox[{"(", 
+        RowBox[{"recAXandAM", "+", "recAXnotAM"}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z1_", ",", 
+        "sex_", ",", "x2_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "sex"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"recAXandAM", "+", "recAXnotAM"}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x1_", ",", "A", ",", "z2_", ",", 
+        "sex_", ",", "x1_", ",", "A", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "sex"], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{"recAXandAM", "+", "recAMnotAX"}], ")"}]}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x1_", ",", "A", ",", "z2_", ",", 
+        "sex_", ",", "x1_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "sex"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{"recAXandAM", "+", "recAMnotAX"}], ")"}]}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x1_", ",", "A", ",", "z2_", ",", 
+        "sex_", ",", "x1_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "sex"], " ", 
+       RowBox[{"(", 
+        RowBox[{"recAXandAM", "+", "recAMnotAX"}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x1_", ",", "A", ",", "z2_", ",", 
+        "sex_", ",", "x1_", ",", "a", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "sex"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"recAXandAM", "+", "recAMnotAX"}], ")"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y1_", ",", "z2_", ",",
+         "sex_", ",", "x1_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{"recAXnotAM", "+", "recAMnotAX"}], ")"}]}], ")"}], "/", 
+       "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y1_", ",", "z2_", ",",
+         "sex_", ",", "x2_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{"recAXnotAM", "+", "recAMnotAX"}], ")"}]}], ")"}], "/", 
+       "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y1_", ",", "z2_", ",",
+         "sex_", ",", "x2_", ",", "y1_", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"recAXnotAM", "+", "recAMnotAX"}], ")"}], "/", "2"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y1_", ",", "z2_", ",",
+         "sex_", ",", "x1_", ",", "y1_", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"recAXnotAM", "+", "recAMnotAX"}], ")"}], "/", "2"}]}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pseg3", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"triple", " ", "heterozygote"}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "male", ",", "x1_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "male"], 
+       RowBox[{"(", 
+        RowBox[{
+        "1", "-", "recAMnotAX", "-", "recAXnotAM", "-", "recAXandAM"}], 
+        ")"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "male", ",", "x2_", ",", "a", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "male"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{
+        "1", "-", "recAMnotAX", "-", "recAXnotAM", "-", "recAXandAM"}], 
+        ")"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "male", ",", "x2_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "male"], " ", "recAXnotAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "male", ",", "x1_", ",", "a", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "male"]}], ")"}], "recAXnotAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "male", ",", "x1_", ",", "A", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "male"], "recAMnotAX"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "male", ",", "x2_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "male"]}], ")"}], "recAMnotAX"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "male", ",", "x2_", ",", "A", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "male"], " ", "recAXandAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "male", ",", "x1_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "male"]}], ")"}], "recAXandAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "male", ",", "x2_", ",", "A", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "male"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+        "1", "-", "recAMnotAX", "-", "recAXnotAM", "-", "recAXandAM"}], 
+        ")"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "male", ",", "x1_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "male"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{
+        "1", "-", "recAMnotAX", "-", "recAXnotAM", "-", "recAXandAM"}], 
+        ")"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "male", ",", "x1_", ",", "A", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "male"], " ", "recAXnotAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "male", ",", "x2_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "male"]}], ")"}], "recAXnotAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "male", ",", "x2_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "male"], " ", "recAMnotAX"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "male", ",", "x1_", ",", "a", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "male"]}], ")"}], "recAMnotAX"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "male", ",", "x1_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "male"], " ", "recAXandAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "male", ",", "x2_", ",", "a", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", "recAXandAM"}]}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "female", ",", "x1_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "female"], 
+       RowBox[{"(", 
+        RowBox[{
+        "1", "-", "recAMnotAX", "-", "recAXnotAM", "-", "recAXandAM"}], 
+        ")"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "female", ",", "x2_", ",", "a", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "female"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{
+        "1", "-", "recAMnotAX", "-", "recAXnotAM", "-", "recAXandAM"}], 
+        ")"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "female", ",", "x2_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "female"], " ", "recAXnotAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "female", ",", "x1_", ",", "a", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "female"]}], ")"}], "recAXnotAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "female", ",", "x1_", ",", "A", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "female"], "recAMnotAX"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "female", ",", "x2_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "female"]}], ")"}], "recAMnotAX"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "female", ",", "x2_", ",", "A", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "female"], " ", "recAXandAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "A", ",", "z1_", ",", "x2_", ",", "a", ",", "z2_", ",", 
+        "female", ",", "x1_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", "recAXandAM"}]}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "female", ",", "x2_", ",", "A", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "female"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+        "1", "-", "recAMnotAX", "-", "recAXnotAM", "-", "recAXandAM"}], 
+        ")"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "female", ",", "x1_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "female"]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{
+        "1", "-", "recAMnotAX", "-", "recAXnotAM", "-", "recAXandAM"}], 
+        ")"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "female", ",", "x1_", ",", "A", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "female"], " ", "recAXnotAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "female", ",", "x2_", ",", "a", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "female"]}], ")"}], "recAXnotAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "female", ",", "x2_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "female"], " ", "recAMnotAX"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "female", ",", "x1_", ",", "a", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "female"]}], ")"}], "recAMnotAX"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "female", ",", "x1_", ",", "A", ",", "z1_"}]], "\[Rule]", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "female"], " ", "recAXandAM"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["pseg", 
+       RowBox[{
+       "x1_", ",", "a", ",", "z1_", ",", "x2_", ",", "A", ",", "z2_", ",", 
+        "female", ",", "x2_", ",", "a", ",", "z2_"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", "recAXandAM"}]}]}],
+     "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pseg4", "=", 
+   RowBox[{
+    SubscriptBox["pseg", 
+     RowBox[{
+     "x1_", ",", "y1_", ",", "z1_", ",", "x2_", ",", "y2_", ",", "z2_", ",", 
+      "sex_", ",", "x_", ",", "y_", ",", "z_"}]], "\[Rule]", "0"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.678743407603024*^9, 3.678743407992798*^9}, {
+   3.678743451388444*^9, 3.67874370896734*^9}, {3.678743739187004*^9, 
+   3.6787437964386272`*^9}, {3.678743835224123*^9, 3.678744092201377*^9}, {
+   3.678744261724123*^9, 3.678744264472003*^9}, {3.678745612751544*^9, 
+   3.678745641984303*^9}, {3.67874649434549*^9, 3.678746541426771*^9}, {
+   3.678746588409*^9, 3.678746681937327*^9}, {3.678746723757894*^9, 
+   3.678746726465787*^9}, {3.678747087955186*^9, 3.678747088849813*^9}, 
+   3.6787471567075977`*^9, {3.678747281988718*^9, 3.678747345020574*^9}, {
+   3.678747431984068*^9, 3.67874755142631*^9}, {3.678747706661974*^9, 
+   3.678747816389114*^9}, {3.678747910520447*^9, 3.67874808520201*^9}, {
+   3.678748117158371*^9, 3.678748124005247*^9}, 3.6787481598608437`*^9, {
+   3.6787483065670223`*^9, 3.6787483117635727`*^9}, {3.67874836658313*^9, 
+   3.678748403085204*^9}, {3.6787513544793262`*^9, 3.678751396800355*^9}, {
+   3.67994277150476*^9, 3.679942799274077*^9}, {3.679942831090846*^9, 
+   3.679942912055253*^9}, {3.679949107745778*^9, 3.679949120757681*^9}, {
+   3.679949262229959*^9, 3.679949268375124*^9}, {3.679949476794919*^9, 
+   3.679949523563891*^9}, {3.680374604093164*^9, 3.680374627372505*^9}, {
+   3.681497799779855*^9, 3.6814978041546593`*^9}, {3.681497949200699*^9, 
+   3.681497969730068*^9}, {3.6814980083479347`*^9, 3.68149802692618*^9}, 
+   3.681498690728004*^9, {3.681503295313662*^9, 3.681503299933617*^9}, {
+   3.681503352635356*^9, 3.681503380988648*^9}, {3.681503421408928*^9, 
+   3.681503592682515*^9}, {3.681739639029612*^9, 3.681739667227919*^9}, {
+   3.681739710186636*^9, 3.6817397505186863`*^9}, {3.68173979007161*^9, 
+   3.6817400224068947`*^9}, {3.6817402086731462`*^9, 3.681740553815752*^9}, 
+   3.6817441247473288`*^9, {3.681745118289254*^9, 3.681745246566457*^9}, 
+   3.681790293719043*^9, {3.681790495616611*^9, 3.68179055084875*^9}, {
+   3.681790594196591*^9, 3.681790651669318*^9}, {3.685446566599594*^9, 
+   3.685446613301856*^9}, {3.6854466594783163`*^9, 3.685446674108594*^9}, {
+   3.685446725576165*^9, 3.685446846752988*^9}, {3.685448456509159*^9, 
+   3.6854484978796*^9}, {3.685854818012582*^9, 3.68585488767402*^9}, {
+   3.685857317433228*^9, 3.6858574839951363`*^9}, {3.685857630736331*^9, 
+   3.685857652981037*^9}, {3.685857739461396*^9, 3.6858577821286917`*^9}, {
+   3.685857869620257*^9, 3.685857871015697*^9}, {3.685867321622304*^9, 
+   3.685867404776165*^9}, {3.685867554585763*^9, 3.685867556709074*^9}, {
+   3.685867675545533*^9, 3.6858677608809643`*^9}, 3.685867840790553*^9, {
+   3.685868411911867*^9, 3.6858684353076897`*^9}, {3.685868522045967*^9, 
+   3.6858685841072397`*^9}, {3.6858686149097958`*^9, 3.685868696329458*^9}, {
+   3.685868734377339*^9, 3.68586879707349*^9}, {3.686831493887526*^9, 
+   3.686831517514574*^9}, {3.6868315591139107`*^9, 3.686831680594562*^9}, {
+   3.686831719657514*^9, 3.6868318159633617`*^9}, 3.6868319155060797`*^9, {
+   3.686831995721257*^9, 3.686831996372467*^9}, {3.691332475471079*^9, 
+   3.69133253011084*^9}, {3.691332681143373*^9, 3.6913326965546722`*^9}, {
+   3.691332726779971*^9, 3.69133272835781*^9}, {3.691332828003528*^9, 
+   3.691332845155514*^9}, {3.6913329825497303`*^9, 3.691333001347786*^9}, {
+   3.691333050923387*^9, 3.69133306680932*^9}, {3.691333135450306*^9, 
+   3.691333174120304*^9}, {3.691333226061233*^9, 3.691333312473215*^9}, {
+   3.695144821209661*^9, 3.695144832183332*^9}, {3.6951465122709303`*^9, 
+   3.695146539414205*^9}, {3.695146641378426*^9, 3.69514664220968*^9}, {
+   3.695146769575981*^9, 3.695146779440208*^9}, {3.695146864513186*^9, 
+   3.695146875460191*^9}, {3.6951469318251*^9, 3.6951470843329573`*^9}, {
+   3.695147162154175*^9, 3.695147319523302*^9}, {3.6951477560497704`*^9, 
+   3.695147759616248*^9}, {3.695147828169773*^9, 3.695147832089531*^9}, {
+   3.695147889338893*^9, 3.6951480286289062`*^9}, {3.695148916900036*^9, 
+   3.6951489272427692`*^9}, {3.695148968284731*^9, 3.6951490636376677`*^9}, {
+   3.695152560803286*^9, 3.695152660419541*^9}, {3.695296193742441*^9, 
+   3.695296241076809*^9}, {3.6953081683410807`*^9, 3.695308331991477*^9}, {
+   3.695308365636876*^9, 3.6953083926643667`*^9}, {3.695308422850751*^9, 
+   3.6953084620596123`*^9}, {3.6953192360198393`*^9, 3.695319261451314*^9}, {
+   3.6954856302757807`*^9, 3.695485795085445*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Recombination probabilities for different arrangements of loci\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6951462034340267`*^9, 3.695146215368688*^9}, {
+  3.695158518509029*^9, 3.69515852830969*^9}, {3.696696371132297*^9, 
+  3.6966963733241158`*^9}}],
+
+Cell["\<\
+Let the probability of recombination (an odd number of cross-overs) between \
+loci A and X be r, the probability of recombination between A and M be R, and \
+the probability of recombination between X and M be \[Chi]. \
+\>", "Text",
+ CellChangeTimes->{{3.6951498188995733`*^9, 3.6951498768084497`*^9}, {
+  3.695150045047242*^9, 3.695150115083332*^9}, {3.695408396146262*^9, 
+  3.6954084332185497`*^9}}],
+
+Cell["We can then write, in general,", "Text",
+ CellChangeTimes->{{3.695408439003786*^9, 3.6954084684446087`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"recGen", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"recAXnotAM", "\[Rule]", 
+      FractionBox[
+       RowBox[{"r", "+", "\[Chi]", "-", "R"}], "2"]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"recAMnotAX", "\[Rule]", 
+      FractionBox[
+       RowBox[{"R", "+", "\[Chi]", "-", "r"}], "2"]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"recAXandAM", "\[Rule]", 
+      FractionBox[
+       RowBox[{"r", "+", "R", "-", "\[Chi]"}], "2"]}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.695322414958308*^9, 3.6953225169844112`*^9}, {
+  3.695324078272975*^9, 3.6953240785539303`*^9}, {3.69540340480464*^9, 
+  3.695403444455276*^9}, {3.695403480136647*^9, 3.695403508563278*^9}, {
+  3.6954084578240433`*^9, 3.695408462413484*^9}}],
+
+Cell["\<\
+and for specific orders of loci we can substitute in the value of \[Chi] \
+(alternatively one could do the same for R or r)\
+\>", "Text",
+ CellChangeTimes->{{3.695408463908675*^9, 3.695408500798313*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Chi]AXM", "=", 
+   RowBox[{"\[Chi]", "\[Rule]", 
+    RowBox[{
+     RowBox[{"R", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "r"}], ")"}]}], "+", 
+     RowBox[{"r", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "R"}], ")"}]}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Chi]XAM", "=", 
+   RowBox[{"\[Chi]", "\[Rule]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"r", "-", "R"}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{"2", "R"}]}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Chi]XMA", "=", 
+   RowBox[{"\[Chi]", "\[Rule]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"R", "-", "r"}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{"2", "r"}]}], ")"}]}]}]}], ";"}]}], "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Resident equilibrium (tight linkage between A and M)\
+\>", "Section",
+ CellChangeTimes->{{3.675694139646326*^9, 3.6756941429682417`*^9}, 
+   3.6757029847263803`*^9, {3.675889497088314*^9, 3.675889497307007*^9}, {
+   3.675897573374775*^9, 3.675897575830624*^9}, {3.675897716718397*^9, 
+   3.6758977222283363`*^9}, 3.676682250170936*^9, 3.676682959070333*^9, {
+   3.6767193867939043`*^9, 3.676719388460558*^9}, {3.6785484984643793`*^9, 
+   3.678548500198676*^9}, {3.67875273051103*^9, 3.678752732829526*^9}, {
+   3.678768538688073*^9, 3.6787685439131317`*^9}, {3.697203203675227*^9, 
+   3.6972032052708797`*^9}, {3.6972062069280653`*^9, 3.697206208913843*^9}}],
+
+Cell["We begin with no mutations at the modifer locus", "Text",
+ CellChangeTimes->{{3.681790894519829*^9, 3.6817909035331917`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"subequil", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["fHap", 
+       RowBox[{"X", ",", "A", ",", "M", ",", "female"}]], "\[Rule]", "pXf"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["fHap", 
+       RowBox[{"X", ",", "a", ",", "M", ",", "female"}]], "\[Rule]", 
+      RowBox[{"1", "-", "pXf"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["fHap", 
+       RowBox[{"X", ",", "A", ",", "M", ",", "male"}]], "\[Rule]", 
+      RowBox[{"pXm", " ", "*", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", "freqYm"}], ")"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["fHap", 
+       RowBox[{"X", ",", "a", ",", "M", ",", "male"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "pXm"}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", "freqYm"}], ")"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["fHap", 
+       RowBox[{"Y", ",", "A", ",", "M", ",", "male"}]], "\[Rule]", 
+      RowBox[{"pYm", " ", "freqYm"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["fHap", 
+       RowBox[{"Y", ",", "a", ",", "M", ",", "male"}]], "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "pYm"}], ")"}], "freqYm"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["fHap", 
+       RowBox[{"x_", ",", "y_", ",", "m", ",", "sex_"}]], "\[Rule]", "0"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["fHap", 
+       RowBox[{"Y", ",", "y_", ",", "M", ",", "female"}]], "\[Rule]", "0"}]}],
+     "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.681744168796749*^9, 3.681744285955284*^9}, {
+  3.681744456703849*^9, 3.68174446046725*^9}, {3.681744512032195*^9, 
+  3.681744517689509*^9}, {3.681745250079322*^9, 3.681745268071438*^9}, {
+  3.681790148659374*^9, 3.681790165932436*^9}, {3.685447049829194*^9, 
+  3.685447083554977*^9}, {3.685447504158259*^9, 3.685447510415009*^9}, {
+  3.686380638637718*^9, 3.686380657187717*^9}}],
+
+Cell["\<\
+We now wish to solve for the equilibrium frequencies of the haploid genotypes \
+in gametes of each sex. Equilibrium is achieved when the following four \
+equations are zero\
+\>", "Text",
+ CellChangeTimes->{{3.675694155902801*^9, 3.675694193760104*^9}, {
+   3.6756944337868023`*^9, 3.6756944351881227`*^9}, {3.6757029847267847`*^9, 
+   3.67570303405547*^9}, {3.675710696458521*^9, 3.675710706286772*^9}, 
+   3.6758975924118633`*^9, {3.676719416278571*^9, 3.676719460360141*^9}, {
+   3.678763369210025*^9, 3.678763372346648*^9}, 3.686831925632285*^9, {
+   3.697206219505135*^9, 3.697206222765503*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"differenceEqs", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["fHapNext", 
+               RowBox[{"X", ",", "A", ",", "M", ",", "female"}]], "-", 
+              SubscriptBox["fHap", 
+               RowBox[{"X", ",", "A", ",", "M", ",", "female"}]]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              SubscriptBox["fHapNext", 
+               RowBox[{"X", ",", "A", ",", "M", ",", "male"}]], "-", 
+              SubscriptBox["fHap", 
+               RowBox[{"X", ",", "A", ",", "M", ",", "male"}]]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              SubscriptBox["fHapNext", 
+               RowBox[{"Y", ",", "A", ",", "M", ",", "male"}]], "-", 
+              SubscriptBox["fHap", 
+               RowBox[{"Y", ",", "A", ",", "M", ",", "male"}]]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["fHapNext", 
+                 RowBox[{"Y", ",", "A", ",", "M", ",", "male"}]], "+", 
+                SubscriptBox["fHapNext", 
+                 RowBox[{"Y", ",", "a", ",", "M", ",", "male"}]]}], ")"}], 
+              "-", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["fHap", 
+                 RowBox[{"Y", ",", "A", ",", "M", ",", "male"}]], "+", 
+                SubscriptBox["fHap", 
+                 RowBox[{"Y", ",", "a", ",", "M", ",", "male"}]]}], ")"}]}]}],
+             "\[IndentingNewLine]", "}"}], "/.", "subequil"}], "/.", 
+          "sumsex"}], "/.", "invXY"}], "/.", "pseg0"}], "/.", "pseg1"}], "/.",
+       "pseg2"}], "/.", "pseg3"}], "/.", "pseg4"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.678750179056045*^9, 3.678750265971582*^9}, 
+   3.6787516566515017`*^9, {3.681789829427744*^9, 3.68178992075916*^9}, 
+   3.681891166870421*^9, {3.686380671924355*^9, 3.686380710269143*^9}, {
+   3.686380907602208*^9, 3.6863809079182463`*^9}, {3.6972035796065598`*^9, 
+   3.697203581205518*^9}}],
+
+Cell["\<\
+To simplify the analysis we assume tight linkage between A and X\
+\>", "Text",
+ CellChangeTimes->{{3.675694205010009*^9, 3.675694211923259*^9}, 
+   3.67570298472752*^9, {3.6757030454432507`*^9, 3.6757030568360033`*^9}, {
+   3.678750297640636*^9, 3.678750297774932*^9}, {3.678750454508356*^9, 
+   3.6787504833762913`*^9}, {3.685447574297616*^9, 3.6854475782461767`*^9}, {
+   3.697203221514619*^9, 3.697203222918356*^9}, {3.6972035489606733`*^9, 
+   3.69720356383359*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"weakrecAX", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"recAXandAM", "\[Rule]", 
+      RowBox[{"recAXandAM", " ", "\[Epsilon]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"recAXnotAM", "\[Rule]", 
+      RowBox[{"recAXnotAM", " ", "\[Epsilon]"}]}]}], "\[IndentingNewLine]", 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.67564806523287*^9, 3.675648221558539*^9}, {
+   3.675694367971285*^9, 3.6756943845803022`*^9}, 3.6757029847280283`*^9, {
+   3.678750304645768*^9, 3.67875045056485*^9}, {3.678750489500865*^9, 
+   3.6787505048047533`*^9}, {3.6787505350519323`*^9, 3.678750613437016*^9}, {
+   3.678750650976028*^9, 3.678750663356496*^9}, {3.6787515109746723`*^9, 
+   3.678751549594288*^9}, {3.681789961959874*^9, 3.6817900838735647`*^9}, {
+   3.6838168666712627`*^9, 3.68381687442684*^9}, {3.6854475805614653`*^9, 
+   3.685447599782713*^9}, {3.6854485192754717`*^9, 3.685448531484398*^9}, {
+   3.686831932425375*^9, 3.686831943171628*^9}, {3.69515684949865*^9, 
+   3.695156856809911*^9}, {3.6972032287053022`*^9, 3.69720328625049*^9}, {
+   3.697203569298996*^9, 3.6972035694619417`*^9}, {3.697203803584208*^9, 
+   3.697203809705566*^9}, {3.6972056446931953`*^9, 3.697205645083337*^9}}],
+
+Cell["\<\
+Without recombination the recursions for the change in the frequencies are\
+\>", "Text",
+ CellChangeTimes->{{3.6757032054455214`*^9, 3.6757032697493563`*^9}, {
+  3.6757098202812138`*^9, 3.675709824765788*^9}, {3.6757117765596933`*^9, 
+  3.6757117850524673`*^9}, {3.675711818872109*^9, 3.6757118199810133`*^9}, {
+  3.676719491260041*^9, 3.676719499308044*^9}, {3.697203386715886*^9, 
+  3.697203388243577*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"differenceEqsr0", "=", 
+  RowBox[{
+   RowBox[{"Normal", "[", 
+    RowBox[{"Series", "[", 
+     RowBox[{
+      RowBox[{"differenceEqs", "/.", "weakrecAX"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Epsilon]", ",", "0", ",", "0"}], "}"}]}], "]"}], "]"}], "//",
+    "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.678751736367395*^9, 3.678751737467704*^9}, {
+   3.678752209413887*^9, 3.678752212219976*^9}, 3.678752262803892*^9, {
+   3.685447468281103*^9, 3.685447470446783*^9}, {3.6854475253827333`*^9, 
+   3.685447570892086*^9}, {3.697203300151258*^9, 3.697203301072459*^9}, 
+   3.6972033490414343`*^9, {3.697203401440333*^9, 3.6972034081165953`*^9}, {
+   3.697205650627689*^9, 3.697205650906502*^9}, {3.697206234506879*^9, 
+   3.697206249071929*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", "pXf"}], ")"}]}], " ", 
+       SubscriptBox["wHap", 
+        RowBox[{"a", ",", "female"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"pXf", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "pXm"}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "female"}]]}], "+", 
+         RowBox[{"pXm", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "pXf"}], "+", 
+            SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "A", ",", "female"}]]}]}], ")"}]}], "+", 
+      RowBox[{"pXf", " ", 
+       SubscriptBox["wHap", 
+        RowBox[{"A", ",", "female"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "pXm"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{"pXf", "-", 
+            SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "pXf"}], ")"}], " ", "pXm", " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"A", ",", "A", ",", "female"}]]}]}], ")"}]}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pXf"}], ")"}], " ", 
+       SubscriptBox["wHap", 
+        RowBox[{"a", ",", "female"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "pXm"}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "female"}]]}], "-", 
+         RowBox[{"pXm", " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "A", ",", "female"}]]}]}], ")"}]}], "+", 
+      RowBox[{"pXf", " ", 
+       SubscriptBox["wHap", 
+        RowBox[{"A", ",", "female"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", "pXm"}], ")"}]}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+         RowBox[{"pXm", " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"A", ",", "A", ",", "female"}]]}]}], ")"}]}]}], ")"}]}], 
+   ",", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "freqYm"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "pXf"}], ")"}], " ", "pXm", " ", 
+       SubscriptBox["wHap", 
+        RowBox[{"a", ",", "female"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "male"}]]}], "-", 
+         RowBox[{"pYm", " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "A", ",", "male"}]]}]}], ")"}]}], "+", 
+      RowBox[{"pXf", " ", 
+       SubscriptBox["wHap", 
+        RowBox[{"A", ",", "female"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "2"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", "freqYm"}], ")"}], " ", "pXm"}], "+", 
+            
+            SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            RowBox[{"2", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", "freqYm"}], ")"}], " ", "pXm"}]}], 
+           ")"}], " ", "pYm", " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "pXf"}], ")"}], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "a", ",", "male"}]]}], "-", 
+           RowBox[{"pYm", " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "A", ",", "male"}]]}]}], ")"}]}], "+", 
+        RowBox[{"pXf", " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "female"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", "pYm"}], ")"}]}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+           RowBox[{"pYm", " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+     ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"pYm", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "pXf"}], ")"}], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"freqYm", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "a", ",", "male"}]]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "freqYm"}], " ", "pYm"}], "+", 
+              SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "A", ",", "male"}]]}]}], ")"}]}], "+", 
+        RowBox[{"pXf", " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "female"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "freqYm", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"2", " ", "freqYm", " ", "pYm"}]}], ")"}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+     ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "pXf"}], ")"}], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "a", ",", "male"}]]}], "-", 
+           RowBox[{"pYm", " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "A", ",", "male"}]]}]}], ")"}]}], "+", 
+        RowBox[{"pXf", " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "female"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", "pYm"}], ")"}]}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+           RowBox[{"pYm", " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+     ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", "pXf"}], ")"}]}], " ", 
+       SubscriptBox["wHap", 
+        RowBox[{"a", ",", "female"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"2", " ", "freqYm"}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "male"}]]}], "+", 
+         RowBox[{"2", " ", "pYm", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "freqYm"}], "+", 
+            SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "A", ",", "male"}]]}]}], ")"}]}], "+", 
+      RowBox[{"pXf", " ", 
+       SubscriptBox["wHap", 
+        RowBox[{"A", ",", "female"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "freqYm", "+", 
+            SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"2", " ", "freqYm"}]}], ")"}], " ", "pYm", " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "pXf"}], ")"}], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "a", ",", "male"}]]}], "-", 
+           RowBox[{"pYm", " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "A", ",", "male"}]]}]}], ")"}]}], "+", 
+        RowBox[{"pXf", " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "female"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", "pYm"}], ")"}]}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+           RowBox[{"pYm", " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+     ")"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.67875164051635*^9, {3.678751716032783*^9, 3.6787517378070927`*^9}, 
+   3.6787520627432127`*^9, 3.678752212888122*^9, 3.6787523426840563`*^9, 
+   3.6787534142533073`*^9, 3.678763399028235*^9, 3.6787637498048763`*^9, 
+   3.6787649279812727`*^9, 3.678769190501109*^9, 3.67993779987945*^9, 
+   3.681790093930011*^9, 3.681790177016839*^9, 3.6817903134721537`*^9, 
+   3.681790666763077*^9, 3.6818910310375347`*^9, 3.681891176521256*^9, 
+   3.681897653546867*^9, 3.682049536847906*^9, 3.682133260044132*^9, 
+   3.682144710656866*^9, 3.682920602235833*^9, 3.683816896620468*^9, 
+   3.685447428394968*^9, 3.685447470963046*^9, {3.685447518239092*^9, 
+   3.685447551041255*^9}, 3.68544760753404*^9, {3.685448523510034*^9, 
+   3.685448534771299*^9}, 3.685714880361951*^9, 3.6858548020016737`*^9, {
+   3.685856125479251*^9, 3.685856140079173*^9}, 3.685856182461566*^9, 
+   3.685878963778384*^9, 3.6859368719441833`*^9, 3.6863807719980593`*^9, 
+   3.6863809124378767`*^9, 3.686831955041347*^9, 3.6868320265653067`*^9, {
+   3.686834394784305*^9, 3.686834403684424*^9}, 3.686890426277944*^9, 
+   3.686903523929381*^9, 3.6869073622023563`*^9, 3.686907829512693*^9, 
+   3.687623269532193*^9, 3.6911889675025797`*^9, 3.691198105514596*^9, 
+   3.6912451623854227`*^9, 3.6912476726452847`*^9, 3.6912482724499187`*^9, 
+   3.691327419174513*^9, 3.692542508934903*^9, 3.692605925609705*^9, 
+   3.6926088975757523`*^9, 3.692613124578062*^9, 3.6927928280311623`*^9, 
+   3.693566053383974*^9, 3.695053766993713*^9, 3.695054437717229*^9, 
+   3.6951409743607893`*^9, 3.695147553564856*^9, 3.6951481179736967`*^9, 
+   3.695149149645761*^9, 3.695152971019541*^9, 3.695156861482819*^9, 
+   3.695220448429015*^9, 3.695222127299662*^9, 3.695295631755416*^9, 
+   3.695301364294076*^9, 3.69530299086401*^9, 3.695308510870699*^9, 
+   3.695315497833684*^9, 3.6953163698151093`*^9, 3.695319282328319*^9, 
+   3.6953204581181717`*^9, 3.695322548948823*^9, 3.695392504621414*^9, 
+   3.6953980050977716`*^9, 3.695408683490018*^9, 3.697149196582917*^9, 
+   3.697149600197008*^9, 3.697149637115164*^9, 3.6971497383137083`*^9, 
+   3.6971497721866493`*^9, {3.6971498088643713`*^9, 3.697149824172112*^9}, 
+   3.6971503328339157`*^9, 3.697151353416005*^9, 3.6971618932075567`*^9, 
+   3.6971621614787416`*^9, {3.697203325852561*^9, 3.69720334990703*^9}, {
+   3.697203402125783*^9, 3.6972034089925222`*^9}, {3.697203574109221*^9, 
+   3.697203586458088*^9}, 3.697203812118287*^9, {3.697206240373961*^9, 
+   3.69720624946723*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ "To help ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", we solve for each in turn."
+}], "Text",
+ CellChangeTimes->{{3.697204538900486*^9, 3.697204550175335*^9}}],
+
+Cell["\<\
+The frequency of Ys from males at equilbirum is\
+\>", "Text",
+ CellChangeTimes->{{3.697204553278631*^9, 3.697204574893462*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"solfreqYmr0", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"0", "==", 
+       RowBox[{"differenceEqsr0", "[", 
+        RowBox[{"[", "4", "]"}], "]"}]}], ",", "freqYm"}], "]"}], "//", 
+    "Simplify"}], "//", "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.697203508141687*^9, 3.69720351993395*^9}, {
+   3.697203595151066*^9, 3.697203615733046*^9}, {3.697203713187179*^9, 
+   3.6972037204242973`*^9}, 3.697203979178911*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"freqYm", "\[Rule]", 
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "pXf"}], ")"}], " ", 
+      SubscriptBox["wHap", 
+       RowBox[{"a", ",", "female"}]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "male"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"a", ",", "a", ",", "male"}]]}], "-", 
+        RowBox[{"2", " ", "pYm", " ", 
+         SubscriptBox["\[Alpha]", "male"], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "male"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"a", ",", "A", ",", "male"}]]}]}], ")"}]}], "+", 
+     RowBox[{"pXf", " ", 
+      SubscriptBox["wHap", 
+       RowBox[{"A", ",", "female"}]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", 
+           SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "male"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+        RowBox[{"pYm", " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "male"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], 
+    RowBox[{"2", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", "pXf"}], ")"}], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", "pYm"}], ")"}], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "male"}]]}], "-", 
+          RowBox[{"pYm", " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "male"}]]}]}], ")"}]}], "+", 
+       RowBox[{"pXf", " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"A", ",", "female"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", "pYm"}], ")"}]}], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+          RowBox[{"pYm", " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}]]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.6972036066396627`*^9, 3.697203616148315*^9}, 
+   3.6972037211890583`*^9, 3.697203814057732*^9, 3.69720397996238*^9, 
+   3.697206251857292*^9}]
+}, Open  ]],
+
+Cell["\<\
+We can use this to solve for the frequency of A on Ys from males\
+\>", "Text",
+ CellChangeTimes->{{3.697204578697365*^9, 3.697204589578094*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"solpYmr0a", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"0", "==", 
+        RowBox[{"differenceEqsr0", "[", 
+         RowBox[{"[", "3", "]"}], "]"}]}], "/.", "solfreqYmr0"}], ",", 
+      "pYm"}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}], "//", 
+   "Simplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"solpYmr0A", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"0", "==", 
+        RowBox[{"differenceEqsr0", "[", 
+         RowBox[{"[", "3", "]"}], "]"}]}], "/.", "solfreqYmr0"}], ",", 
+      "pYm"}], "]"}], "[", 
+    RowBox[{"[", "2", "]"}], "]"}], "//", "Simplify"}]}]}], "Input",
+ CellChangeTimes->{{3.697203724911377*^9, 3.697203748555848*^9}, {
+   3.697203833238635*^9, 3.6972038364324636`*^9}, {3.697203908977845*^9, 
+   3.697203920684688*^9}, 3.697204615101248*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"pYm", "\[Rule]", "0"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.697203750626937*^9, {3.697203816115703*^9, 3.6972038377955303`*^9}, 
+   3.697203921117111*^9, 3.697203984525408*^9, 3.697204652862018*^9, 
+   3.69720625375133*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"pYm", "\[Rule]", "1"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.697203750626937*^9, {3.697203816115703*^9, 3.6972038377955303`*^9}, 
+   3.697203921117111*^9, 3.697203984525408*^9, 3.697204652862018*^9, 
+   3.697206253790456*^9}]
+}, Open  ]],
+
+Cell["\<\
+Thus the Y is fixed for either a or A. \
+\>", "Text",
+ CellChangeTimes->{{3.697204597084977*^9, 3.697204646820298*^9}, {
+   3.6972061309400806`*^9, 3.6972061600454073`*^9}, {3.6972066640302887`*^9, 
+   3.697206676481625*^9}, 3.6972069108464117`*^9}],
+
+Cell["\<\
+When a is fixed on the Y the frequencies on the Xs are\
+\>", "Text",
+ CellChangeTimes->{3.697206912459774*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"0", "==", 
+         RowBox[{"differenceEqsr0", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], "/.", "solfreqYmr0"}], "/.", 
+       "solpYmr0a"}], ",", "pXm"}], "]"}], "//", "Simplify"}], "//", 
+   "Flatten"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"solpXfr0a", "=", 
+  RowBox[{
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"0", "==", 
+         RowBox[{"differenceEqsr0", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], "/.", "solfreqYmr0"}], "/.", 
+       "solpYmr0a"}], "/.", "%"}], ",", "pXf"}], "]"}], "//", 
+   "Simplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"solpXmr0a", "=", 
+  RowBox[{
+   RowBox[{"%%", "/.", "%"}], "//", "Simplify"}]}]}], "Input",
+ CellChangeTimes->{{3.697206147442573*^9, 3.6972061476684437`*^9}, {
+  3.697206579266988*^9, 3.697206652697393*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"pXf", "\[Rule]", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"pXf", "\[Rule]", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"pXf", "\[Rule]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "female"}]], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "male"}]]}], "-", 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "female"], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "female"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["wHap", 
+               RowBox[{"a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+             RowBox[{"2", " ", 
+              SubscriptBox["\[Alpha]", "male"], " ", 
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+       ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubsuperscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}], "2"], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "male"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"a", ",", "a", ",", "male"}]]}], "-", 
+        RowBox[{
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}]], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "female"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+           RowBox[{"2", " ", 
+            SubscriptBox["\[Alpha]", "male"], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["\[Alpha]", "male"], " ", 
+         SubsuperscriptBox["wHap", 
+          RowBox[{"A", ",", "female"}], "2"], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "male"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"A", ",", "a", ",", "male"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"A", ",", "A", ",", "female"}]]}]}], ")"}]}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.6972061479941998`*^9, 3.697206255014659*^9, {3.6972065989071627`*^9, 
+   3.697206653205353*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"pXm", "\[Rule]", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"pXm", "\[Rule]", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"pXm", "\[Rule]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", " ", 
+        SubscriptBox["\[Alpha]", "male"], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "a", ",", "male"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "female"}]]}], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "male"}]]}], "+", 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "female"], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "female"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["wHap", 
+               RowBox[{"a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+             RowBox[{"2", " ", 
+              SubscriptBox["\[Alpha]", "male"], " ", 
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+       ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+            SubscriptBox["\[Alpha]", "male"], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+           RowBox[{
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  SubscriptBox["\[Alpha]", "female"]}], ")"}]}], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
+              RowBox[{"2", " ", 
+               SubscriptBox["\[Alpha]", "male"], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}]}], ")"}]}],
+         "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["\[Alpha]", "male"], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "female"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"A", ",", "a", ",", "male"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["\[Alpha]", "female"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               SubscriptBox["wHap", 
+                RowBox[{"a", ",", "male"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+              RowBox[{"2", " ", 
+               SubscriptBox["\[Alpha]", "male"], " ", 
+               SubscriptBox["wHap", 
+                RowBox[{"A", ",", "male"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}], "-", 
+           RowBox[{
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "A", ",", "female"}]]}]}], ")"}]}]}], 
+       ")"}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6972061479941998`*^9, 3.697206255014659*^9, {3.6972065989071627`*^9, 
+   3.697206653210094*^9}}]
+}, Open  ]],
+
+Cell["\<\
+So when a is fixed in the population we have\
+\>", "Text",
+ CellChangeTimes->{{3.6972066949435596`*^9, 3.697206712707244*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqr0YaXa", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"solpYmr0a", ",", 
+      RowBox[{"solpXfr0a", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", 
+      RowBox[{"solpXmr0a", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"solfreqYmr0", "/.", "solpYmr0a"}], "/.", 
+       RowBox[{"solpXfr0a", "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}], "//", "Simplify"}], "//", 
+   "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.6972067253364773`*^9, 3.6972067892388678`*^9}, {
+  3.697206872054071*^9, 3.697206879701415*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"pYm", "\[Rule]", "0"}], ",", 
+   RowBox[{"pXf", "\[Rule]", "0"}], ",", 
+   RowBox[{"pXm", "\[Rule]", "0"}], ",", 
+   RowBox[{"freqYm", "\[Rule]", 
+    FractionBox["1", "2"]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.69720678514769*^9, 3.6972067895485907`*^9}, 
+   3.697206882399756*^9}]
+}, Open  ]],
+
+Cell["\<\
+when a is fixed on the Y and A is fixed on the X we have\
+\>", "Text",
+ CellChangeTimes->{{3.6972068004963303`*^9, 3.6972068158090973`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqr0YaXA", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"solpYmr0a", ",", 
+      RowBox[{"solpXfr0a", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], ",", 
+      RowBox[{"solpXmr0a", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"solfreqYmr0", "/.", "solpYmr0a"}], "/.", 
+       RowBox[{"solpXfr0a", "[", 
+        RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], "//", "Simplify"}], "//", 
+   "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.6972068258658857`*^9, 3.697206832390688*^9}, {
+  3.697206886537346*^9, 3.697206889476534*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"pYm", "\[Rule]", "0"}], ",", 
+   RowBox[{"pXf", "\[Rule]", "1"}], ",", 
+   RowBox[{"pXm", "\[Rule]", "1"}], ",", 
+   RowBox[{"freqYm", "\[Rule]", 
+    RowBox[{"1", "-", 
+     SubscriptBox["\[Alpha]", "male"]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.697206833054563*^9, 3.6972068900021763`*^9}]
+}, Open  ]],
+
+Cell["\<\
+and when a is fixed on the Y and the X is polymorphic we have\
+\>", "Text",
+ CellChangeTimes->{{3.697206841512075*^9, 3.69720685339686*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqr0YaXAa", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"solpYmr0a", ",", 
+      RowBox[{"solpXfr0a", "[", 
+       RowBox[{"[", "3", "]"}], "]"}], ",", 
+      RowBox[{"solpXmr0a", "[", 
+       RowBox[{"[", "3", "]"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"solfreqYmr0", "/.", "solpYmr0a"}], "/.", 
+       RowBox[{"solpXfr0a", "[", 
+        RowBox[{"[", "3", "]"}], "]"}]}]}], "}"}], "//", "Simplify"}], "//", 
+   "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.697206859360458*^9, 3.6972068957763243`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"pYm", "\[Rule]", "0"}], ",", 
+   RowBox[{"pXf", "\[Rule]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["wHap", 
+        RowBox[{"a", ",", "female"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "female"}]], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "male"}]]}], "-", 
+         RowBox[{
+          SubscriptBox["\[Alpha]", "female"], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "female"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["wHap", 
+              RowBox[{"a", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\[Alpha]", "male"], " ", 
+             SubscriptBox["wHap", 
+              RowBox[{"A", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+      ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubsuperscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}], "2"], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "male"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"a", ",", "a", ",", "male"}]]}], "-", 
+       RowBox[{
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}]], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"A", ",", "female"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+          RowBox[{"2", " ", 
+           SubscriptBox["\[Alpha]", "male"], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SubscriptBox["\[Alpha]", "male"], " ", 
+        SubsuperscriptBox["wHap", 
+         RowBox[{"A", ",", "female"}], "2"], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"A", ",", "male"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "a", ",", "male"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "A", ",", "female"}]]}]}], ")"}]}]}], ",", 
+   RowBox[{"pXm", "\[Rule]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", " ", 
+       SubscriptBox["\[Alpha]", "male"], " ", 
+       SubscriptBox["wDip", 
+        RowBox[{"A", ",", "a", ",", "male"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "female"}]]}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "male"}]]}], "+", 
+         RowBox[{
+          SubscriptBox["\[Alpha]", "female"], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "female"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["wHap", 
+              RowBox[{"a", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\[Alpha]", "male"], " ", 
+             SubscriptBox["wHap", 
+              RowBox[{"A", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+      ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "2"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+           SubscriptBox["\[Alpha]", "male"], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+          RowBox[{
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 SubscriptBox["\[Alpha]", "female"]}], ")"}]}], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
+             RowBox[{"2", " ", 
+              SubscriptBox["\[Alpha]", "male"], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+       "+", 
+       RowBox[{"2", " ", 
+        SubscriptBox["\[Alpha]", "male"], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"A", ",", "female"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "a", ",", "male"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["\[Alpha]", "female"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["wHap", 
+               RowBox[{"a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+             RowBox[{"2", " ", 
+              SubscriptBox["\[Alpha]", "male"], " ", 
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}], "-", 
+          RowBox[{
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "A", ",", "female"}]]}]}], ")"}]}]}], ")"}]}]}],
+    ",", 
+   RowBox[{"freqYm", "\[Rule]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+           SubscriptBox["\[Alpha]", "male"], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+          RowBox[{
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+       "+", 
+       RowBox[{"2", " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"A", ",", "female"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "a", ",", "male"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["\[Alpha]", "female"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["wHap", 
+               RowBox[{"a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+             RowBox[{"2", " ", 
+              SubscriptBox["\[Alpha]", "male"], " ", 
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}], "+", 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "male"], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "A", ",", "female"}]]}]}], ")"}]}]}], ")"}], 
+     "/", 
+     RowBox[{"(", 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "female"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", 
+               SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+             SubscriptBox["\[Alpha]", "male"], " ", 
+             SubscriptBox["wHap", 
+              RowBox[{"A", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "a", ",", "male"}]]}], "+", 
+            RowBox[{
+             SubscriptBox["wHap", 
+              RowBox[{"a", ",", "male"}]], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+               RowBox[{
+                SubscriptBox["wDip", 
+                 RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}]}], 
+           ")"}]}], "-", 
+         RowBox[{
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "female"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"A", ",", "a", ",", "male"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["\[Alpha]", "female"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                SubscriptBox["wHap", 
+                 RowBox[{"a", ",", "male"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+               RowBox[{"2", " ", 
+                SubscriptBox["\[Alpha]", "male"], " ", 
+                SubscriptBox["wHap", 
+                 RowBox[{"A", ",", "male"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"A", ",", "a", ",", "male"}]]}]}], ")"}]}], "-", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\[Alpha]", "male"], " ", 
+             SubscriptBox["wHap", 
+              RowBox[{"A", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "a", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "A", ",", "female"}]]}]}], ")"}]}]}], ")"}]}],
+       ")"}]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.697206866145499*^9, 3.697206898343444*^9}]
+}, Open  ]],
+
+Cell["\<\
+When A is fixed on the Y the frequencies on the Xs are\
+\>", "Text",
+ CellChangeTimes->{{3.697206912459774*^9, 3.697206928821015*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"0", "==", 
+         RowBox[{"differenceEqsr0", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], "/.", "solfreqYmr0"}], "/.", 
+       "solpYmr0A"}], ",", "pXm"}], "]"}], "//", "Simplify"}], "//", 
+   "Flatten"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"solpXfr0A", "=", 
+  RowBox[{
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"0", "==", 
+         RowBox[{"differenceEqsr0", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], "/.", "solfreqYmr0"}], "/.", 
+       "solpYmr0A"}], "/.", "%"}], ",", "pXf"}], "]"}], "//", 
+   "Simplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{"solpXmr0A", "=", 
+  RowBox[{
+   RowBox[{"%%", "/.", "%"}], "//", "Simplify"}]}]}], "Input",
+ CellChangeTimes->{{3.697206147442573*^9, 3.6972061476684437`*^9}, {
+  3.697206579266988*^9, 3.697206652697393*^9}, {3.697206934789641*^9, 
+  3.697206940042308*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"pXf", "\[Rule]", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"pXf", "\[Rule]", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"pXf", "\[Rule]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "female"}]], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "male"}]]}], "+", 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "female"], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "female"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "2"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+              SubscriptBox["wHap", 
+               RowBox[{"a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+             RowBox[{
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+       ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", 
+           SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+         SubsuperscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}], "2"], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "male"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"a", ",", "A", ",", "male"}]]}], "-", 
+        RowBox[{
+         SubsuperscriptBox["wHap", 
+          RowBox[{"A", ",", "female"}], "2"], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "male"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"A", ",", "A", ",", "female"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"A", ",", "A", ",", "male"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}]], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "female"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+           RowBox[{
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}]}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6972061479941998`*^9, 3.697206255014659*^9, {3.6972065989071627`*^9, 
+   3.697206653205353*^9}, 3.6972069416145897`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"pXm", "\[Rule]", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"pXm", "\[Rule]", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"pXm", "\[Rule]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "A", ",", "male"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "female"}]], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "male"}]]}], "+", 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "female"], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "female"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "2"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+              SubscriptBox["wHap", 
+               RowBox[{"a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+             RowBox[{
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+       ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", 
+           SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+         SubscriptBox["wHap", 
+          RowBox[{"a", ",", "female"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", 
+               SubscriptBox["\[Alpha]", "female"]}], ")"}]}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "A", ",", "male"}]]}], "+", 
+           RowBox[{
+            SubscriptBox["wHap", 
+             RowBox[{"a", ",", "male"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
+              RowBox[{
+               SubscriptBox["wDip", 
+                RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}],
+         "+", 
+        RowBox[{
+         SubscriptBox["wHap", 
+          RowBox[{"A", ",", "female"}]], " ", 
+         SubscriptBox["wDip", 
+          RowBox[{"A", ",", "A", ",", "male"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+            SubscriptBox["wHap", 
+             RowBox[{"A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+            SubscriptBox["wDip", 
+             RowBox[{"A", ",", "A", ",", "female"}]]}], "+", 
+           RowBox[{
+            SubscriptBox["\[Alpha]", "female"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "2"}], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+               SubscriptBox["wHap", 
+                RowBox[{"a", ",", "male"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+              RowBox[{
+               SubscriptBox["wHap", 
+                RowBox[{"A", ",", "male"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+               SubscriptBox["wDip", 
+                RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], 
+          ")"}]}]}], ")"}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6972061479941998`*^9, 3.697206255014659*^9, {3.6972065989071627`*^9, 
+   3.697206653205353*^9}, 3.697206941762939*^9}]
+}, Open  ]],
+
+Cell["\<\
+So when A is fixed in the population we have\
+\>", "Text",
+ CellChangeTimes->{{3.6972066949435596`*^9, 3.697206712707244*^9}, 
+   3.697206950011156*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqr0YAXA", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"solpYmr0A", ",", 
+      RowBox[{"solpXfr0A", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], ",", 
+      RowBox[{"solpXmr0A", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"solfreqYmr0", "/.", "solpYmr0A"}], "/.", 
+       RowBox[{"solpXfr0A", "[", 
+        RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], "//", "Simplify"}], "//", 
+   "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.6972067253364773`*^9, 3.6972067892388678`*^9}, {
+  3.697206872054071*^9, 3.697206879701415*^9}, {3.697206954715187*^9, 
+  3.69720697088844*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"pYm", "\[Rule]", "1"}], ",", 
+   RowBox[{"pXf", "\[Rule]", "1"}], ",", 
+   RowBox[{"pXm", "\[Rule]", "1"}], ",", 
+   RowBox[{"freqYm", "\[Rule]", 
+    FractionBox["1", "2"]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.69720678514769*^9, 3.6972067895485907`*^9}, 
+   3.697206882399756*^9, 3.69720697222057*^9}]
+}, Open  ]],
+
+Cell["\<\
+when A is fixed on the Y and a is fixed on the X we have\
+\>", "Text",
+ CellChangeTimes->{{3.6972068004963303`*^9, 3.6972068158090973`*^9}, {
+  3.697206978821589*^9, 3.697206980750531*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqr0YAXa", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"solpYmr0A", ",", 
+      RowBox[{"solpXfr0A", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", 
+      RowBox[{"solpXmr0A", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"solfreqYmr0", "/.", "solpYmr0A"}], "/.", 
+       RowBox[{"solpXfr0A", "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}], "//", "Simplify"}], "//", 
+   "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.6972068258658857`*^9, 3.697206832390688*^9}, {
+  3.697206886537346*^9, 3.697206889476534*^9}, {3.697206983623171*^9, 
+  3.697207001134944*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"pYm", "\[Rule]", "1"}], ",", 
+   RowBox[{"pXf", "\[Rule]", "0"}], ",", 
+   RowBox[{"pXm", "\[Rule]", "0"}], ",", 
+   RowBox[{"freqYm", "\[Rule]", 
+    SubscriptBox["\[Alpha]", "male"]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.697206833054563*^9, 3.6972068900021763`*^9, 
+  3.697207002663004*^9}]
+}, Open  ]],
+
+Cell["\<\
+and when A is fixed on the Y and the X is polymorphic we have\
+\>", "Text",
+ CellChangeTimes->{{3.697206841512075*^9, 3.69720685339686*^9}, 
+   3.697207009048101*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqr0YAXAa", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"solpYmr0A", ",", 
+      RowBox[{"solpXfr0A", "[", 
+       RowBox[{"[", "3", "]"}], "]"}], ",", 
+      RowBox[{"solpXmr0A", "[", 
+       RowBox[{"[", "3", "]"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"solfreqYmr0", "/.", "solpYmr0A"}], "/.", 
+       RowBox[{"solpXfr0A", "[", 
+        RowBox[{"[", "3", "]"}], "]"}]}]}], "}"}], "//", "Simplify"}], "//", 
+   "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.697206859360458*^9, 3.6972068957763243`*^9}, {
+  3.697207015133823*^9, 3.6972070262810163`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"pYm", "\[Rule]", "1"}], ",", 
+   RowBox[{"pXf", "\[Rule]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["wHap", 
+        RowBox[{"a", ",", "female"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "female"}]], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "A", ",", "male"}]]}], "+", 
+         RowBox[{
+          SubscriptBox["\[Alpha]", "female"], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "female"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "2"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", 
+               SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+             SubscriptBox["wHap", 
+              RowBox[{"a", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+            RowBox[{
+             SubscriptBox["wHap", 
+              RowBox[{"A", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+      ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+        SubsuperscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}], "2"], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "male"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"a", ",", "A", ",", "male"}]]}], "-", 
+       RowBox[{
+        SubsuperscriptBox["wHap", 
+         RowBox[{"A", ",", "female"}], "2"], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"A", ",", "male"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "A", ",", "female"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "A", ",", "male"}]]}], "+", 
+       RowBox[{
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}]], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"A", ",", "female"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "2"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+          RowBox[{
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}]}], 
+   ",", 
+   RowBox[{"pXm", "\[Rule]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["wDip", 
+        RowBox[{"A", ",", "A", ",", "male"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "female"}]], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "male"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "A", ",", "male"}]]}], "+", 
+         RowBox[{
+          SubscriptBox["\[Alpha]", "female"], " ", 
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "female"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "2"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", 
+               SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+             SubscriptBox["wHap", 
+              RowBox[{"a", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+            RowBox[{
+             SubscriptBox["wHap", 
+              RowBox[{"A", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+      ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "2"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              SubscriptBox["\[Alpha]", "female"]}], ")"}]}], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "A", ",", "male"}]]}], "+", 
+          RowBox[{
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
+             RowBox[{
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+       "+", 
+       RowBox[{
+        SubscriptBox["wHap", 
+         RowBox[{"A", ",", "female"}]], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "A", ",", "male"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "A", ",", "female"}]]}], "+", 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "female"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "2"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+              SubscriptBox["wHap", 
+               RowBox[{"a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+             RowBox[{
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], 
+         ")"}]}]}], ")"}]}]}], ",", 
+   RowBox[{"freqYm", "\[Rule]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+        SubsuperscriptBox["\[Alpha]", "male", "2"], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "female"}]], " ", 
+        SubscriptBox["wHap", 
+         RowBox[{"a", ",", "male"}]], " ", 
+        SubsuperscriptBox["wDip", 
+         RowBox[{"a", ",", "A", ",", "male"}], "2"], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+       RowBox[{
+        SubscriptBox["wDip", 
+         RowBox[{"A", ",", "A", ",", "male"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "2"}], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "female"}]], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "male"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"a", ",", "A", ",", "male"}]]}], "+", 
+          RowBox[{
+           SubscriptBox["\[Alpha]", "female"], " ", 
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "female"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", 
+              SubscriptBox["wHap", 
+               RowBox[{"a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+             RowBox[{
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], ")"}]}], 
+       "-", 
+       RowBox[{"2", " ", 
+        SubscriptBox["\[Alpha]", "male"], " ", 
+        SubscriptBox["wDip", 
+         RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["wHap", 
+            RowBox[{"A", ",", "female"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["\[Alpha]", "female"], " ", 
+              SubscriptBox["wHap", 
+               RowBox[{"a", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+             RowBox[{
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "A", ",", "female"}]]}]}], ")"}], " ", 
+           SubscriptBox["wDip", 
+            RowBox[{"A", ",", "A", ",", "male"}]]}], "+", 
+          RowBox[{
+           SubscriptBox["wHap", 
+            RowBox[{"a", ",", "female"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+              SubscriptBox["wDip", 
+               RowBox[{"A", ",", "A", ",", "male"}]]}], "+", 
+             RowBox[{
+              SubscriptBox["wHap", 
+               RowBox[{"a", ",", "male"}]], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", 
+                   SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+                 SubscriptBox["wDip", 
+                  RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+                 SubscriptBox["wDip", 
+                  RowBox[{"A", ",", "a", ",", "female"}]]}], "-", 
+                RowBox[{
+                 SubscriptBox["wDip", 
+                  RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+                 SubscriptBox["wDip", 
+                  RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], 
+            ")"}]}]}], ")"}]}]}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["wHap", 
+           RowBox[{"a", ",", "female"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                SubscriptBox["\[Alpha]", "female"]}], ")"}]}], " ", 
+             SubscriptBox["wHap", 
+              RowBox[{"A", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "A", ",", "male"}]]}], "+", 
+            RowBox[{"2", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", 
+               SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+             SubscriptBox["wHap", 
+              RowBox[{"a", ",", "male"}]], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  SubscriptBox["\[Alpha]", "female"]}], ")"}], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+               RowBox[{
+                SubscriptBox["wDip", 
+                 RowBox[{"a", ",", "a", ",", "female"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], 
+           ")"}]}], "+", 
+         RowBox[{
+          SubscriptBox["wHap", 
+           RowBox[{"A", ",", "female"}]], " ", 
+          SubscriptBox["wDip", 
+           RowBox[{"A", ",", "A", ",", "male"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", 
+              SubscriptBox["wHap", 
+               RowBox[{"A", ",", "male"}]]}], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+             SubscriptBox["wDip", 
+              RowBox[{"A", ",", "A", ",", "female"}]]}], "+", 
+            RowBox[{
+             SubscriptBox["\[Alpha]", "female"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "2"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  SubscriptBox["\[Alpha]", "male"]}], ")"}], " ", 
+                SubscriptBox["wHap", 
+                 RowBox[{"a", ",", "male"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"a", ",", "A", ",", "male"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"A", ",", "a", ",", "female"}]]}], "+", 
+               RowBox[{
+                SubscriptBox["wHap", 
+                 RowBox[{"A", ",", "male"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"a", ",", "A", ",", "female"}]], " ", 
+                SubscriptBox["wDip", 
+                 RowBox[{"A", ",", "A", ",", "male"}]]}]}], ")"}]}]}], 
+           ")"}]}]}], ")"}]}], ")"}]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.697206866145499*^9, 3.697206898343444*^9, 
+  3.697207029164082*^9}]
+}, Open  ]],
+
+Cell["\<\
+Thus we have derived 6 resident equilibria with absolutely no recombination \
+between A and M and we next see which are stable.\
+\>", "Text",
+ CellChangeTimes->{{3.697207044006422*^9, 3.697207070738009*^9}, {
+  3.6972074494971046`*^9, 3.697207470754466*^9}}]
+}, Open  ]],
+
+Cell["\<\
+Resident stability (tight linkage between A and M)\
+\>", "Section",
+ CellChangeTimes->{{3.697207401674602*^9, 3.6972074174574757`*^9}}]
+},
+WindowSize->{1440, 855},
+WindowMargins->{{1366, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 223, 3, 80, "Section"],
+Cell[CellGroupData[{
+Cell[827, 29, 207, 3, 44, "Subsection"],
+Cell[1037, 34, 125, 3, 30, "Text"],
+Cell[1165, 39, 650, 20, 36, "Input"],
+Cell[1818, 61, 178, 2, 30, "Text"],
+Cell[1999, 65, 1237, 32, 57, "Input"],
+Cell[3239, 99, 325, 6, 30, "Text"],
+Cell[3567, 107, 737, 17, 55, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4341, 129, 152, 2, 44, "Subsection"],
+Cell[4496, 133, 176, 2, 30, "Text"],
+Cell[4675, 137, 675, 16, 34, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5387, 158, 155, 2, 44, "Subsection"],
+Cell[5545, 162, 124, 1, 30, "Text"],
+Cell[5672, 165, 707, 18, 34, "Input"],
+Cell[6382, 185, 124, 1, 30, "Text"],
+Cell[6509, 188, 412, 11, 34, "Input"],
+Cell[6924, 201, 391, 7, 30, "Text"],
+Cell[7318, 210, 3110, 65, 140, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10465, 280, 156, 2, 44, "Subsection"],
+Cell[10624, 284, 131, 3, 30, "Text"],
+Cell[10758, 289, 1057, 34, 36, "Input"],
+Cell[11818, 325, 165, 2, 30, "Text"],
+Cell[11986, 329, 1468, 43, 57, "Input"],
+Cell[13457, 374, 585, 10, 49, "Text"],
+Cell[14045, 386, 840, 24, 55, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14922, 415, 146, 2, 44, "Subsection"],
+Cell[15071, 419, 169, 2, 30, "Text"],
+Cell[15243, 423, 1497, 44, 56, "Input"],
+Cell[CellGroupData[{
+Cell[16765, 471, 178, 2, 35, "Subsubsection"],
+Cell[16946, 475, 28260, 697, 1609, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[45243, 1177, 262, 5, 29, "Subsubsection"],
+Cell[45508, 1184, 412, 7, 50, "Text"],
+Cell[45923, 1193, 114, 1, 30, "Text"],
+Cell[46040, 1196, 831, 20, 178, "Input"],
+Cell[46874, 1218, 213, 4, 31, "Text"],
+Cell[47090, 1224, 819, 28, 63, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[47970, 1259, 668, 10, 50, "Section"],
+Cell[48641, 1271, 131, 1, 30, "Text"],
+Cell[48775, 1274, 2110, 51, 220, "Input"],
+Cell[50888, 1327, 609, 10, 30, "Text"],
+Cell[51500, 1339, 2224, 52, 139, "Input"],
+Cell[53727, 1393, 480, 8, 30, "Text"],
+Cell[54210, 1403, 1257, 21, 80, "Input"],
+Cell[55470, 1426, 418, 7, 30, "Text"],
+Cell[CellGroupData[{
+Cell[55913, 1437, 777, 16, 28, "Input"],
+Cell[56693, 1455, 16529, 442, 277, "Output"]
+}, Open  ]],
+Cell[73237, 1900, 187, 6, 30, "Text"],
+Cell[73427, 1908, 137, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[73589, 1915, 484, 12, 28, "Input"],
+Cell[74076, 1929, 3287, 95, 89, "Output"]
+}, Open  ]],
+Cell[77378, 2027, 154, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[77557, 2034, 909, 26, 46, "Input"],
+Cell[78469, 2062, 269, 6, 28, "Output"],
+Cell[78741, 2070, 270, 6, 28, "Output"]
+}, Open  ]],
+Cell[79026, 2079, 259, 5, 30, "Text"],
+Cell[79288, 2086, 120, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[79433, 2093, 972, 29, 63, "Input"],
+Cell[80408, 2124, 3496, 93, 103, "Output"],
+Cell[83907, 2219, 5006, 130, 101, "Output"]
+}, Open  ]],
+Cell[88928, 2352, 136, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[89089, 2359, 601, 16, 28, "Input"],
+Cell[89693, 2377, 340, 9, 47, "Output"]
+}, Open  ]],
+Cell[90048, 2389, 150, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[90223, 2396, 599, 16, 28, "Input"],
+Cell[90825, 2414, 350, 9, 28, "Output"]
+}, Open  ]],
+Cell[91190, 2426, 150, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[91365, 2433, 551, 15, 28, "Input"],
+Cell[91919, 2450, 14165, 370, 235, "Output"]
+}, Open  ]],
+Cell[106099, 2823, 144, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[106268, 2830, 1021, 30, 63, "Input"],
+Cell[107292, 2862, 4031, 108, 102, "Output"],
+Cell[111326, 2972, 5666, 149, 101, "Output"]
+}, Open  ]],
+Cell[117007, 3124, 162, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[117194, 3132, 649, 17, 28, "Input"],
+Cell[117846, 3151, 361, 9, 47, "Output"]
+}, Open  ]],
+Cell[118222, 3163, 199, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[118446, 3171, 648, 17, 28, "Input"],
+Cell[119097, 3190, 349, 9, 28, "Output"]
+}, Open  ]],
+Cell[119461, 3202, 176, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[119662, 3210, 602, 16, 28, "Input"],
+Cell[120267, 3228, 16714, 442, 301, "Output"]
+}, Open  ]],
+Cell[136996, 3673, 268, 5, 30, "Text"]
+}, Open  ]],
+Cell[137279, 3681, 145, 3, 80, "Section"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
