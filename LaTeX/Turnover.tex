@@ -52,17 +52,21 @@ Contributions:
 
 \begin{abstract}
 Sex determination systems are remarkably dynamic; many studied taxa display transitions of sex-determining genes between chromosomes or the evolution of entirely new sex-determining systems. 
-Predominant theories in which new sex-determining systems are favoured by selection involve sex ratio selection or sex-specific selection (e.g., sexually antagonistic selection). 
-Here, we utilize population genetic models to study the spread of novel sex-determiners when there is a period of sex-specific haploid selection. 
-Many loci experience sex-specific selection on their haploid genotypes during gametic competition (e.g., pollen/sperm competition) or meiosis (i.e., non-Mendelian segregation); selective processes that typically occur in one sex or the other.
-%Haploid selected loci typically experience a form of sex-specific selection because meiotic drive and/or gametic competition occurs predominantly in one sex or the other. 
-In addition, haploid selection can cause the zygotic sex ratio to become biased because sex ratios are determined by the production and fertilization success of X- versus Y-bearing pollen/sperm. 
-Notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by haploid selection. 
-A surprising result given that other determinants of sex allocation typically experience strong Fisherian sex ratio selection to equalize sex ratios. 
-In addition, we find that, with haploid selection, transitions between male and female heterogamety (XY to ZW or ZW to XY) can occur despite breaking up favourable associations that build up between the ancestral sex-determining locus and selected loci.
-These transitions occur because an unlinked neo-Y (neo-W) can have higher fitness in males (females), even if the population mean fitness is reduced. 
-Such transitions are not possible with diploid selection alone, in which case tighter linkage increases the fitness of both males and females. 
-Thus, our models offer several new insights to be explored as information about sex determination in non-model taxa accumulates.
+Predominant theories in which new sex-determining systems are favoured by selection involve sex ratio selection or sex-specific selection (e.g., sexually antagonistic selection).
+These studies generally conclude that that novel sex determination systems are favoured if they equalise the sex ratio or increase linkage between the sex-determining region and a sexually-antagonistic locus. 
+We use population genetic models to extend these theories in two ways: 
+(1) We explicitly consider how selection on very tightly sex-linked loci influences the spread of novel sex-determiners. 
+We find that tightly sex-linked genetic variation can favour the spread of new sex-determination systems in which the heterogametic sex changes (XY to ZW or ZW to XY) and the new sex-determining region is less closely linked (or unlinked) to the sex linked locus under selection; a result that is not found with loose sex-linkage. 
+%With tight linkage, selection can maintain equilibria at which the allele fixed on the sex-limited chromosome (Y or W) is simultaneously favoured in the homogametic sex (XX females or ZZ males) such that heterogametic transitions (XY to ZW or ZW to XY) are favoured by selection. 
+%Alternatively, a neo-W (neo-Y) locus can invade when it allows greater specialism on alleles beneficial in females (male) compared to an ancestral XX female (ZZ male), 
+(2) We also consider selection upon haploid genotypes either during gametic competition (e.g., pollen/sperm competition) or meiosis (i.e., non-Mendelian segregation); selective processes that typically occur in one sex or the other. 
+As well as having sex-specific fitness consequences, haploid selection can cause the zygotic sex ratio to become biased because sex ratios are determined by the production and fertilization success of X- versus Y-bearing pollen/sperm (or Z- versus W-bearing ovules/eggs). 
+With relatively weak linkage, we find that transitions between male and female heterogamety (XY to ZW or ZW to XY) can again occur despite breaking up favourable associations that build up between the ancestral sex-determining locus and selected loci, which does not occur with diploid selection alone. 
+In addition, when linkage between the ancestral sex-determining locus and a locus under haploid selection is tight, sex ratio biases can be strong such that there is an asymmetry between invasion of ancestrally XY and ancestrally ZW systems because, e.g., haploid selection in males only causes biased zygotic sex ratios in an ancestrally XY system. 
+%Such transitions are not possible with diploid selection alone, in which case tighter linkage increases the fitness of both males and females. 
+%Notably, we find that the spread of new genetic sex determination systems is not affected by sex ratio biases that are caused by haploid selection. 
+%A surprising result given that other determinants of sex allocation typically experience strong Fisherian sex ratio selection to equalize sex ratios. 
+Overall, our models suggest the selective benefits of novel sex-determining systems may have been underestimated, especially when the heterogametic sex changes, and offer several new insights to be explored as information about sex determination in non-model taxa accumulates.
 \end{abstract}
 
 \newpage
@@ -91,10 +95,11 @@ In addition, multiple transitions have occurred between genetic and environmenta
 
 Predominant theories in accounting for the spread of new sex determination systems by selection involve fitness differences between sexes (e.g., sexually antagonistic selection) or sex ratio selection. 
 %\citet{Bull:1977wt} shows that direct selection on new sex determination loci can allow them to spread and switch between male and female heterogamety. 
-\citet{vanDoorn:2007eu,vanDoorn:2010hu} show that new sex determination loci can be favoured if they arise in close linkage with a locus that experiences sexual antagonism. 
+\citet{vanDoorn:2007eu,vanDoorn:2010hu} show that new sex-determining loci can be favoured if they arise in closer linkage with a locus that experiences sexual antagonism. 
 For example, linkage allows favourable associations to build up between a male-beneficial allele and a neo-Y chromosome. 
-Such associations can favour a new master sex-determining gene on a new chromosome \citep{vanDoorn:2007eu} and can also favour a transition between male and female heterogamety \citep[e.g., a ZW to XY transition,][]{vanDoorn:2010hu}.
-However, any sexually-antagonistic loci that are linked to the ancestral sex-determination locus will develop similar, favourable associations and select against the spread of a new sex-determination system. 
+Such associations can favour a new master sex-determining gene on a new chromosome \citep{vanDoorn:2007eu} and can also favour a transition between male and female heterogamety \citep[e.g., a ZW to XY transition,][]{vanDoorn:2010hu}. 
+However, any sexually-antagonistic loci that are more closely linked to the ancestral sex-determination locus will develop similar, favourable associations and select against the spread of a new sex-determination system. 
+Here, we extend these studies by explictly calculating the the equilibrium allele frequencies of loci that are very tightly linked to the ancestral sex-determining region. 
 
 It has been suggested that sex ratio selection is a dominant force in the evolution of sex determination (e.g., \citealt{Bull:1983vi}, p66-67; \citealt{Beukeboom:2014vb}, Chapter 7). 
 The default mode of sex ratio selection is `Fisherian' sex ratio selection, which favours equal investment in male and female offspring \citep[i.e., a 1:1 zygotic sex ratio when assuming that males and females are equally costly to produce,][]{Fisher:1930wy,Charnov:1982wg}. 
@@ -109,7 +114,7 @@ We use the term `meiotic drive' to refer to the biased (non-Mendelian) segregati
 Meiotic drive generally occurs either during the production of male or female gametes only \citep{Ubeda:2005gw,Lindholm:2016cw}.
 Because there are typically many more pollen/sperm than required for fertilization, gametic competition is also typically sex specific, occurring primarily among male gametes.
 Gametic competition may be particularly common in plants, in which 60-70\% of all genes are expressed in the male gametophyte and these genes exhibit stronger signatures of selection than random genes \citep{Borg:2009jpa,Arunkumar:2013iq,Gossmann:2014dua}.
-In addition, artificial selection pressures applied to male gametophytes are known to cause a response to selection \citep[e.g.,][]{Hormaza:1996cv,Ravikumar:2003uo,Hedhly:2004iv,Clarke:2004ir}. 
+In addition, artificial selection pressures applied to male gametophytes are known to cause a response to selection \citep[e.g.,][]{Hormaza:1996cv,Ravikumar:2003uo,Hedhly:2004iv,Clarke:2004ir} and gametic selection appears to occur during the creation of F2 crosses \textcolor{red}{(Kumar, 2007)}. 
 A much smaller proportion of genes are thought to be expressed and selected during competition in animal sperm, although precise estimates are uncertain \citep{Zheng:2001fi,JOSEPH:2004haa,Vibranovski:2010et,Immler:2014im}. 
 
 There are various ways in which a period of haploid selection could influence transitions between sex determination systems. 
