@@ -1,0 +1,1723 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     65782,       1713]
+NotebookOptionsPosition[     64443,       1664]
+NotebookOutlinePosition[     64820,       1681]
+CellTagsIndexPosition[     64777,       1678]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+invasion fitness (to first order in selection) of neo sex determiner\
+\>", "Text",
+ CellChangeTimes->{{3.6980087412328663`*^9, 3.698008755521872*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"tester", "/.", 
+    RowBox[{"female", "\[Rule]", "hom"}]}], "/.", 
+   RowBox[{"male", "\[Rule]", "het"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.6980084216893167`*^9, 3.698008460061911*^9}, 
+   3.6980085324926033`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tester", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"freqYm2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "2"}], "+", 
+        RowBox[{"4", " ", "k"}]}], ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["h", "het"], " ", 
+           SubscriptBox["sDip", "het"]}], "+", 
+          RowBox[{
+           SubscriptBox["h", "hom"], " ", 
+           SubscriptBox["sDip", "hom"]}], "+", 
+          SubscriptBox["sHap", "het"], "+", 
+          SubscriptBox["sHap", "hom"], "+", 
+          SubscriptBox["\[Alpha]1", "het"], "+", 
+          SubscriptBox["\[Alpha]1", "hom"]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["k", "2"], " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "het"]}], "-", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "het"]}], "+", 
+          RowBox[{"2", " ", "r", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "-", 
+          RowBox[{"8", " ", "k", " ", "r", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "+", 
+          RowBox[{"8", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "-", 
+          RowBox[{"2", " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "+", 
+          RowBox[{"4", " ", "k", " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "-", 
+          RowBox[{"3", " ", 
+           SuperscriptBox["k", "2"], " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "+", 
+          RowBox[{"8", " ", "k", " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "-", 
+          RowBox[{"10", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "-", 
+          RowBox[{"2", " ", "r", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "+", 
+          RowBox[{"8", " ", "k", " ", "r", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "-", 
+          RowBox[{"8", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "+", 
+          RowBox[{"2", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "-", 
+          RowBox[{"4", " ", "k", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "+", 
+          RowBox[{"3", " ", 
+           SuperscriptBox["k", "2"], " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "-", 
+          RowBox[{"8", " ", "k", " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "+", 
+          RowBox[{"10", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "-", 
+          RowBox[{
+           SuperscriptBox["k", "2"], " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "hom"]}], "+", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "hom"]}], "+", 
+          RowBox[{"2", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{"4", " ", "k", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "+", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["k", "2"], " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{"4", " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "+", 
+          RowBox[{"8", " ", "k", " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "+", 
+          RowBox[{"2", " ", "r", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{"8", " ", "k", " ", "r", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "+", 
+          RowBox[{"8", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["k", "2"], " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{"4", " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "+", 
+          RowBox[{"16", " ", "k", " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{"12", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{"2", " ", "r", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+          RowBox[{"8", " ", "k", " ", "r", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+          RowBox[{"8", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+          RowBox[{"2", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+          RowBox[{"4", " ", "k", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["k", "2"], " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+          RowBox[{"8", " ", "k", " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+          RowBox[{"12", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["k", "2"], " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+          RowBox[{"2", " ", 
+           SubscriptBox["h", "hom"], " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"r", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "-", 
+                   RowBox[{"4", " ", "k", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}], "+", 
+                   RowBox[{"4", " ", 
+                    SuperscriptBox["k", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}]}], ")"}]}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", 
+                   RowBox[{"2", " ", "k"}], "+", 
+                   RowBox[{"2", " ", 
+                    SuperscriptBox["k", "2"]}]}], ")"}], " ", "R"}]}], ")"}], 
+              " ", 
+              SubscriptBox["sDip", "het"]}], "-", 
+             RowBox[{"2", " ", "r", " ", 
+              SubscriptBox["sHap", "het"]}], "+", 
+             RowBox[{"8", " ", "k", " ", "r", " ", 
+              SubscriptBox["sHap", "het"]}], "-", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["k", "2"], " ", "r", " ", 
+              SubscriptBox["sHap", "het"]}], "+", 
+             RowBox[{"2", " ", "R", " ", 
+              SubscriptBox["sHap", "het"]}], "-", 
+             RowBox[{"4", " ", "k", " ", "R", " ", 
+              SubscriptBox["sHap", "het"]}], "+", 
+             RowBox[{"3", " ", 
+              SuperscriptBox["k", "2"], " ", "R", " ", 
+              SubscriptBox["sHap", "het"]}], "-", 
+             RowBox[{"8", " ", "k", " ", "r", " ", "R", " ", 
+              SubscriptBox["sHap", "het"]}], "+", 
+             RowBox[{"10", " ", 
+              SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+              SubscriptBox["sHap", "het"]}], "+", 
+             RowBox[{
+              SuperscriptBox["k", "2"], " ", 
+              RowBox[{"(", 
+               RowBox[{"1", "-", 
+                RowBox[{"2", " ", "r"}]}], ")"}], " ", "R", " ", 
+              SubscriptBox["sHap", "hom"]}], "-", 
+             RowBox[{"2", " ", "r", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "+", 
+             RowBox[{"8", " ", "k", " ", "r", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "-", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["k", "2"], " ", "r", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "+", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["k", "2"], " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "+", 
+             RowBox[{"4", " ", "r", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "-", 
+             RowBox[{"16", " ", "k", " ", "r", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "+", 
+             RowBox[{"12", " ", 
+              SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "+", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["k", "2"], " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "hom"]}]}], ")"}]}], "-", 
+          RowBox[{"2", " ", 
+           SubscriptBox["h", "het"], " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"r", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "-", 
+                   RowBox[{"4", " ", "k", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}], "+", 
+                   RowBox[{"4", " ", 
+                    SuperscriptBox["k", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}]}], ")"}]}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", 
+                   RowBox[{"2", " ", "k"}], "+", 
+                   RowBox[{"2", " ", 
+                    SuperscriptBox["k", "2"]}]}], ")"}], " ", "R"}]}], ")"}], 
+              " ", 
+              SubscriptBox["sDip", "hom"]}], "+", 
+             RowBox[{
+              SuperscriptBox["k", "2"], " ", "R", " ", 
+              SubscriptBox["sHap", "het"]}], "-", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+              SubscriptBox["sHap", "het"]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"2", "-", 
+                   RowBox[{"4", " ", "k"}], "+", 
+                   RowBox[{"3", " ", 
+                    SuperscriptBox["k", "2"]}]}], ")"}], " ", "R"}], "+", 
+                RowBox[{"2", " ", "r", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "-", 
+                   RowBox[{"4", " ", "k", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", "R"}], ")"}]}], "+", 
+                   RowBox[{
+                    SuperscriptBox["k", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "4"}], "+", 
+                    RowBox[{"5", " ", "R"}]}], ")"}]}]}], ")"}]}]}], ")"}], 
+              " ", 
+              SubscriptBox["sHap", "hom"]}], "+", 
+             RowBox[{"2", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "-", 
+             RowBox[{"4", " ", "k", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "+", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["k", "2"], " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "-", 
+             RowBox[{"4", " ", "r", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "+", 
+             RowBox[{"8", " ", "k", " ", "r", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "-", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "het"]}], "-", 
+             RowBox[{"2", " ", "r", " ", 
+              SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+             RowBox[{"8", " ", "k", " ", "r", " ", 
+              SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["k", "2"], " ", "r", " ", 
+              SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+             RowBox[{"2", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+             RowBox[{"4", " ", "k", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["k", "2"], " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+             RowBox[{"8", " ", "k", " ", "r", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+             RowBox[{"12", " ", 
+              SuperscriptBox["k", "2"], " ", "r", " ", "R", " ", 
+              SubscriptBox["\[Alpha]1", "hom"]}]}], ")"}]}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["sDip", "hom", "2"], " ", 
+           SubscriptBox["sHap", "het"]}], "+", 
+          RowBox[{
+           SubscriptBox["sDip", "hom"], " ", 
+           SubsuperscriptBox["sHap", "het", "2"]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["sDip", "het", "2"], " ", 
+           SubscriptBox["sHap", "hom"]}], "-", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "hom"]}], "-", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "+", 
+          RowBox[{
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "-", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubsuperscriptBox["sHap", "hom", "2"]}], "+", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["sDip", "hom", "2"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "+", 
+          RowBox[{"2", " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "+", 
+          RowBox[{
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "+", 
+          RowBox[{
+           SubscriptBox["sDip", "hom"], " ", 
+           SubsuperscriptBox["\[Alpha]1", "het", "2"]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["h", "hom", "2"], " ", 
+           SubsuperscriptBox["sDip", "hom", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["sDip", "het"], "+", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["sHap", "het"], "+", 
+                SubscriptBox["\[Alpha]1", "het"]}], ")"}]}]}], ")"}]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["sDip", "het", "2"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+          RowBox[{
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+          RowBox[{"2", " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+          RowBox[{
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "-", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubsuperscriptBox["\[Alpha]1", "hom", "2"]}], "-", 
+          RowBox[{
+           SubsuperscriptBox["h", "het", "2"], " ", 
+           SubsuperscriptBox["sDip", "het", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["sDip", "hom"], "+", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["sHap", "hom"], "+", 
+                SubscriptBox["\[Alpha]1", "hom"]}], ")"}]}]}], ")"}]}], "-", 
+          RowBox[{
+           SubscriptBox["h", "hom"], " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", 
+                SubscriptBox["h", "het"]}], ")"}], " ", 
+              SubsuperscriptBox["sDip", "het", "2"]}], "+", 
+             RowBox[{
+              SubscriptBox["sDip", "hom"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "+", 
+                   SubscriptBox["h", "het"]}], ")"}], " ", 
+                 SubscriptBox["sDip", "het"]}], "+", 
+                RowBox[{"3", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SubscriptBox["sHap", "het"], "+", 
+                   SubscriptBox["\[Alpha]1", "het"]}], ")"}]}]}], ")"}]}], 
+             "+", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["sHap", "het"], "+", 
+                SubscriptBox["\[Alpha]1", "het"]}], ")"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["sHap", "het"], "+", 
+                SubscriptBox["sHap", "hom"], "+", 
+                SubscriptBox["\[Alpha]1", "het"], "+", 
+                SubscriptBox["\[Alpha]1", "hom"]}], ")"}]}], "+", 
+             RowBox[{
+              SubscriptBox["sDip", "het"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"3", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SubscriptBox["sHap", "het"], "+", 
+                   SubscriptBox["\[Alpha]1", "het"]}], ")"}]}], "+", 
+                RowBox[{"2", " ", 
+                 SubscriptBox["h", "het"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", 
+                    SubscriptBox["sHap", "het"]}], "+", 
+                   SubscriptBox["sHap", "hom"], "-", 
+                   SubscriptBox["\[Alpha]1", "het"], "+", 
+                   SubscriptBox["\[Alpha]1", "hom"]}], ")"}]}]}], ")"}]}]}], 
+            ")"}]}], "+", 
+          RowBox[{
+           SubscriptBox["h", "het"], " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SubsuperscriptBox["sDip", "hom", "2"], "+", 
+             RowBox[{
+              SubscriptBox["sDip", "hom"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["sDip", "het"], "+", 
+                RowBox[{"3", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SubscriptBox["sHap", "hom"], "+", 
+                   SubscriptBox["\[Alpha]1", "hom"]}], ")"}]}]}], ")"}]}], 
+             "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["sHap", "hom"], "+", 
+                SubscriptBox["\[Alpha]1", "hom"]}], ")"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"3", " ", 
+                 SubscriptBox["sDip", "het"]}], "+", 
+                RowBox[{"2", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SubscriptBox["sHap", "het"], "+", 
+                   SubscriptBox["sHap", "hom"], "+", 
+                   SubscriptBox["\[Alpha]1", "het"], "+", 
+                   SubscriptBox["\[Alpha]1", "hom"]}], ")"}]}]}], ")"}]}]}], 
+            ")"}]}]}], ")"}]}], ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{"2", " ", "r", " ", "R", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"2", " ", 
+               SubscriptBox["h", "het"]}]}], ")"}], " ", 
+            SubscriptBox["sDip", "het"]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"2", " ", 
+               SubscriptBox["h", "hom"]}]}], ")"}], " ", 
+            SubscriptBox["sDip", "hom"]}]}], ")"}], "4"]}], ")"}]}]}], 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.698008515215316*^9, 3.698008520758863*^9}}],
+
+Cell["\<\
+where het = heterogametic sex, hom = homogametic sex, freqYm2 = second order \
+bias in frequency of hemizygous allele in gametes of heterogametic sex, and k \
+= fraction of offspring with neo SD that become homogametic.\
+\>", "Text",
+ CellChangeTimes->{{3.698008553761241*^9, 3.698008657345681*^9}, 
+   3.6980087343844*^9, {3.698008764802886*^9, 3.69800878890079*^9}, {
+   3.698008825209814*^9, 3.698008846481583*^9}, 3.6980091116734257`*^9}],
+
+Cell["\<\
+second order bias in frequency of hemizygous allele in gametes of \
+heterogametic sex\
+\>", "Text",
+ CellChangeTimes->{{3.698008852289797*^9, 3.698008863155106*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"freqYm2sol", "/.", "recGen"}], "/.", 
+     RowBox[{"female", "\[Rule]", "hom"}]}], "/.", 
+    RowBox[{"male", "\[Rule]", "het"}]}], "//", "Factor"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.698008700582778*^9, 3.698008730177725*^9}, {
+  3.698008881060549*^9, 3.6980088996043863`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"freqYm2sol", "=", 
+   RowBox[{"{", 
+    RowBox[{"freqYm2", "\[Rule]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"2", " ", "r"}]}], ")"}], " ", 
+        SubscriptBox["\[Alpha]1", "het"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", 
+           SubscriptBox["sDip", "het"]}], "+", 
+          RowBox[{
+           SubscriptBox["h", "het"], " ", 
+           SubscriptBox["sDip", "het"]}], "-", 
+          SubscriptBox["sDip", "hom"], "+", 
+          RowBox[{
+           SubscriptBox["h", "hom"], " ", 
+           SubscriptBox["sDip", "hom"]}], "-", 
+          SubscriptBox["sHap", "het"], "-", 
+          SubscriptBox["sHap", "hom"], "-", 
+          SubscriptBox["\[Alpha]1", "het"], "-", 
+          SubscriptBox["\[Alpha]1", "hom"]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["h", "het"], " ", 
+           SubscriptBox["sDip", "het"]}], "+", 
+          RowBox[{
+           SubscriptBox["h", "hom"], " ", 
+           SubscriptBox["sDip", "hom"]}], "+", 
+          SubscriptBox["sHap", "het"], "+", 
+          SubscriptBox["sHap", "hom"], "+", 
+          SubscriptBox["\[Alpha]1", "het"], "+", 
+          SubscriptBox["\[Alpha]1", "hom"]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["h", "het"], " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sDip", "hom"]}], "-", 
+          RowBox[{
+           SubscriptBox["h", "hom"], " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sDip", "hom"]}], "+", 
+          RowBox[{
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "-", 
+          RowBox[{"2", " ", 
+           SubscriptBox["h", "hom"], " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["sHap", "het"]}], "-", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "+", 
+          RowBox[{"2", " ", 
+           SubscriptBox["h", "het"], " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["sHap", "hom"]}], "+", 
+          RowBox[{
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{"2", " ", 
+           SubscriptBox["h", "hom"], " ", 
+           SubscriptBox["sDip", "hom"], " ", 
+           SubscriptBox["\[Alpha]1", "het"]}], "-", 
+          RowBox[{
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+          RowBox[{"2", " ", 
+           SubscriptBox["h", "het"], " ", 
+           SubscriptBox["sDip", "het"], " ", 
+           SubscriptBox["\[Alpha]1", "hom"]}]}], ")"}]}], ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{"2", " ", "r", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["sDip", "het"]}], "+", 
+           RowBox[{"2", " ", 
+            SubscriptBox["h", "het"], " ", 
+            SubscriptBox["sDip", "het"]}], "-", 
+           SubscriptBox["sDip", "hom"], "+", 
+           RowBox[{"2", " ", 
+            SubscriptBox["h", "hom"], " ", 
+            SubscriptBox["sDip", "hom"]}]}], ")"}], "3"]}], ")"}]}]}], 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.698008894440111*^9, 3.6980088966903067`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Factor", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"freqYm2", "/.", "freqYm2sol"}], "/.", 
+      RowBox[{"het", "\[Rule]", "male"}]}], "/.", 
+     RowBox[{"hom", "\[Rule]", "female"}]}], "]"}], "/", 
+   SubscriptBox["\[Alpha]1", "male"]}], "==", 
+  RowBox[{
+   RowBox[{"-", 
+    RowBox[{"Factor", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"freqYm2", "/.", "freqYm2sol"}], "/.", 
+       RowBox[{"het", "\[Rule]", "female"}]}], "/.", 
+      RowBox[{"hom", "\[Rule]", "male"}]}], "]"}]}], "/", 
+   SubscriptBox["\[Alpha]1", "female"]}]}]], "Input",
+ CellChangeTimes->{{3.698010152518611*^9, 3.698010177959672*^9}, {
+  3.69801027347038*^9, 3.6980103214061203`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.698010162358221*^9, 3.698010178301208*^9}, {
+   3.698010280454012*^9, 3.6980102900913277`*^9}, 3.698010321967317*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Factor", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"freqYm2", "/", 
+       SubscriptBox["\[Alpha]1", "het"]}], "/.", "freqYm2sol"}], "/.", 
+     RowBox[{"het", "\[Rule]", "male"}]}], "/.", 
+    RowBox[{"hom", "\[Rule]", "female"}]}], "]"}], "\[Equal]", 
+  RowBox[{"Factor", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"freqYm2", "/", 
+       SubscriptBox["\[Alpha]1", "het"]}], "/.", "freqYm2sol"}], "/.", 
+     RowBox[{"het", "\[Rule]", "female"}]}], "/.", 
+    RowBox[{"hom", "\[Rule]", "male"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.698010152518611*^9, 3.698010177959672*^9}, {
+  3.69801027347038*^9, 3.6980103214061203`*^9}, {3.698010788798356*^9, 
+  3.698010842809103*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"2", " ", "r"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["sDip", "female"]}], "+", 
+        RowBox[{
+         SubscriptBox["h", "female"], " ", 
+         SubscriptBox["sDip", "female"]}], "-", 
+        SubscriptBox["sDip", "male"], "+", 
+        RowBox[{
+         SubscriptBox["h", "male"], " ", 
+         SubscriptBox["sDip", "male"]}], "-", 
+        SubscriptBox["sHap", "female"], "-", 
+        SubscriptBox["sHap", "male"], "-", 
+        SubscriptBox["\[Alpha]1", "female"], "-", 
+        SubscriptBox["\[Alpha]1", "male"]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["h", "female"], " ", 
+         SubscriptBox["sDip", "female"]}], "+", 
+        RowBox[{
+         SubscriptBox["h", "male"], " ", 
+         SubscriptBox["sDip", "male"]}], "+", 
+        SubscriptBox["sHap", "female"], "+", 
+        SubscriptBox["sHap", "male"], "+", 
+        SubscriptBox["\[Alpha]1", "female"], "+", 
+        SubscriptBox["\[Alpha]1", "male"]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["h", "female"], " ", 
+         SubscriptBox["sDip", "female"], " ", 
+         SubscriptBox["sDip", "male"]}], "-", 
+        RowBox[{
+         SubscriptBox["h", "male"], " ", 
+         SubscriptBox["sDip", "female"], " ", 
+         SubscriptBox["sDip", "male"]}], "+", 
+        RowBox[{
+         SubscriptBox["sDip", "male"], " ", 
+         SubscriptBox["sHap", "female"]}], "-", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "male"], " ", 
+         SubscriptBox["sDip", "male"], " ", 
+         SubscriptBox["sHap", "female"]}], "-", 
+        RowBox[{
+         SubscriptBox["sDip", "female"], " ", 
+         SubscriptBox["sHap", "male"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "female"], " ", 
+         SubscriptBox["sDip", "female"], " ", 
+         SubscriptBox["sHap", "male"]}], "+", 
+        RowBox[{
+         SubscriptBox["sDip", "male"], " ", 
+         SubscriptBox["\[Alpha]1", "female"]}], "-", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "male"], " ", 
+         SubscriptBox["sDip", "male"], " ", 
+         SubscriptBox["\[Alpha]1", "female"]}], "-", 
+        RowBox[{
+         SubscriptBox["sDip", "female"], " ", 
+         SubscriptBox["\[Alpha]1", "male"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "female"], " ", 
+         SubscriptBox["sDip", "female"], " ", 
+         SubscriptBox["\[Alpha]1", "male"]}]}], ")"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"2", " ", "r", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", 
+          SubscriptBox["sDip", "female"]}], "+", 
+         RowBox[{"2", " ", 
+          SubscriptBox["h", "female"], " ", 
+          SubscriptBox["sDip", "female"]}], "-", 
+         SubscriptBox["sDip", "male"], "+", 
+         RowBox[{"2", " ", 
+          SubscriptBox["h", "male"], " ", 
+          SubscriptBox["sDip", "male"]}]}], ")"}], "3"]}], ")"}]}]}], 
+  "\[Equal]", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       RowBox[{"2", " ", "r"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["sDip", "female"]}], "+", 
+       RowBox[{
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"]}], "-", 
+       SubscriptBox["sDip", "male"], "+", 
+       RowBox[{
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"]}], "-", 
+       SubscriptBox["sHap", "female"], "-", 
+       SubscriptBox["sHap", "male"], "-", 
+       SubscriptBox["\[Alpha]1", "female"], "-", 
+       SubscriptBox["\[Alpha]1", "male"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"]}], "+", 
+       RowBox[{
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"]}], "+", 
+       SubscriptBox["sHap", "female"], "+", 
+       SubscriptBox["sHap", "male"], "+", 
+       SubscriptBox["\[Alpha]1", "female"], "+", 
+       SubscriptBox["\[Alpha]1", "male"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "-", 
+       RowBox[{
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "+", 
+       RowBox[{
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}]}], ")"}]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{"2", " ", "r", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["sDip", "female"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "female"], " ", 
+         SubscriptBox["sDip", "female"]}], "-", 
+        SubscriptBox["sDip", "male"], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "male"], " ", 
+         SubscriptBox["sDip", "male"]}]}], ")"}], "3"]}], ")"}]}]}]], "Output",\
+
+ CellChangeTimes->{{3.698010162358221*^9, 3.698010178301208*^9}, {
+   3.698010280454012*^9, 3.6980102900913277`*^9}, 3.698010321967317*^9, {
+   3.698010809494382*^9, 3.698010844439251*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"selWXY", "=", 
+  RowBox[{"Factor", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"tester", "/.", 
+       RowBox[{"k", "\[Rule]", "1"}]}], "/.", "freqYm2sol"}], "/.", 
+     RowBox[{"het", "\[Rule]", "male"}]}], "/.", 
+    RowBox[{"hom", "\[Rule]", "female"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.6980086763555937`*^9, {3.698008913784823*^9, 3.698008920306819*^9}, 
+   3.6980089805919123`*^9, {3.698009764537034*^9, 3.698009771125092*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["sDip", "female"]}], "+", 
+       RowBox[{
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"]}], "-", 
+       SubscriptBox["sDip", "male"], "+", 
+       RowBox[{
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"]}], "-", 
+       SubscriptBox["sHap", "female"], "-", 
+       SubscriptBox["sHap", "male"], "-", 
+       SubscriptBox["\[Alpha]1", "female"], "-", 
+       SubscriptBox["\[Alpha]1", "male"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"]}], "+", 
+       RowBox[{
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"]}], "+", 
+       SubscriptBox["sHap", "female"], "+", 
+       SubscriptBox["sHap", "male"], "+", 
+       SubscriptBox["\[Alpha]1", "female"], "+", 
+       SubscriptBox["\[Alpha]1", "male"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "-", 
+       RowBox[{
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "+", 
+       RowBox[{
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "-", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "-", 
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "+", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "+", 
+       RowBox[{"R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "female"]}], "+", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "female"]}], "+", 
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"4", " ", "r", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "+", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "+", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"4", " ", "r", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "-", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "-", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "-", 
+       RowBox[{"R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "male"]}], "-", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"4", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "+", 
+       RowBox[{"8", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "+", 
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"4", " ", "r", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "+", 
+       RowBox[{"8", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"4", " ", "r", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "-", 
+       RowBox[{"8", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "-", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"4", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "-", 
+       RowBox[{"8", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}]}], ")"}]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{"2", " ", "r", " ", "R", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["sDip", "female"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "female"], " ", 
+         SubscriptBox["sDip", "female"]}], "-", 
+        SubscriptBox["sDip", "male"], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "male"], " ", 
+         SubscriptBox["sDip", "male"]}]}], ")"}], "4"]}], ")"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.698008677537059*^9, {3.69800890772194*^9, 3.6980089213570547`*^9}, 
+   3.698008984227716*^9, 3.698009772102866*^9, 3.6980098254463654`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"selYZW", "=", 
+  RowBox[{"Factor", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"tester", "/.", 
+       RowBox[{"k", "\[Rule]", "1"}]}], "/.", "freqYm2sol"}], "/.", 
+     RowBox[{"het", "\[Rule]", "female"}]}], "/.", 
+    RowBox[{"hom", "\[Rule]", "male"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.698008989374338*^9, 3.698008996174548*^9}, {
+  3.6980092385017557`*^9, 3.698009239325045*^9}, {3.698009776467058*^9, 
+  3.6980097793125362`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["sDip", "female"]}], "+", 
+       RowBox[{
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"]}], "-", 
+       SubscriptBox["sDip", "male"], "+", 
+       RowBox[{
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"]}], "-", 
+       SubscriptBox["sHap", "female"], "-", 
+       SubscriptBox["sHap", "male"], "-", 
+       SubscriptBox["\[Alpha]1", "female"], "-", 
+       SubscriptBox["\[Alpha]1", "male"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"]}], "+", 
+       RowBox[{
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"]}], "+", 
+       SubscriptBox["sHap", "female"], "+", 
+       SubscriptBox["sHap", "male"], "+", 
+       SubscriptBox["\[Alpha]1", "female"], "+", 
+       SubscriptBox["\[Alpha]1", "male"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "-", 
+       RowBox[{
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "+", 
+       RowBox[{
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"2", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "-", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "-", 
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "+", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sDip", "male"]}], "+", 
+       RowBox[{"R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "female"]}], "+", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "female"]}], "+", 
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"4", " ", "r", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "+", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "+", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "female"]}], "-", 
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"4", " ", "r", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "-", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "-", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["sHap", "male"]}], "-", 
+       RowBox[{"R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "male"]}], "-", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["sHap", "male"]}], "+", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"4", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "+", 
+       RowBox[{"8", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "+", 
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"4", " ", "r", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "+", 
+       RowBox[{"8", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "female"]}], "-", 
+       RowBox[{"2", " ", "r", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"4", " ", "r", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "-", 
+       RowBox[{"8", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "female"], " ", 
+        SubscriptBox["sDip", "female"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "-", 
+       RowBox[{"2", " ", "R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"4", " ", "r", " ", "R", " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "+", 
+       RowBox[{"4", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}], "-", 
+       RowBox[{"8", " ", "r", " ", "R", " ", 
+        SubscriptBox["h", "male"], " ", 
+        SubscriptBox["sDip", "male"], " ", 
+        SubscriptBox["\[Alpha]1", "male"]}]}], ")"}]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{"2", " ", "r", " ", "R", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["sDip", "female"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "female"], " ", 
+         SubscriptBox["sDip", "female"]}], "-", 
+        SubscriptBox["sDip", "male"], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "male"], " ", 
+         SubscriptBox["sDip", "male"]}]}], ")"}], "4"]}], ")"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.698008998326788*^9, 3.698009239914976*^9, 
+  3.698009779936969*^9, 3.698009823520591*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Factor", "[", "selYZW", "]"}], "\[Equal]", 
+  RowBox[{"Factor", "[", "selWXY", "]"}]}]], "Input",
+ CellChangeTimes->{{3.698009785698691*^9, 3.698009817586059*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.698009789727242*^9, 3.6980098277098637`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"selWZW", "=", 
+  RowBox[{"Factor", "[", 
+   RowBox[{
+    RowBox[{"tester", "/.", 
+     RowBox[{"k", "\[Rule]", "0"}]}], "/.", "freqYm2sol"}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.698009282735173*^9, 3.6980092853674*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"r", "-", "R"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["sDip", "het"]}], "+", 
+       RowBox[{
+        SubscriptBox["h", "het"], " ", 
+        SubscriptBox["sDip", "het"]}], "-", 
+       SubscriptBox["sDip", "hom"], "+", 
+       RowBox[{
+        SubscriptBox["h", "hom"], " ", 
+        SubscriptBox["sDip", "hom"]}], "-", 
+       SubscriptBox["sHap", "het"], "-", 
+       SubscriptBox["sHap", "hom"], "-", 
+       SubscriptBox["\[Alpha]1", "het"], "-", 
+       SubscriptBox["\[Alpha]1", "hom"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["h", "het"], " ", 
+        SubscriptBox["sDip", "het"]}], "+", 
+       RowBox[{
+        SubscriptBox["h", "hom"], " ", 
+        SubscriptBox["sDip", "hom"]}], "+", 
+       SubscriptBox["sHap", "het"], "+", 
+       SubscriptBox["sHap", "hom"], "+", 
+       SubscriptBox["\[Alpha]1", "het"], "+", 
+       SubscriptBox["\[Alpha]1", "hom"]}], ")"}], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["h", "het"], " ", 
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["sDip", "hom"]}], "-", 
+        RowBox[{
+         SubscriptBox["h", "hom"], " ", 
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["sDip", "hom"]}], "+", 
+        RowBox[{
+         SubscriptBox["sDip", "hom"], " ", 
+         SubscriptBox["sHap", "het"]}], "-", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "hom"], " ", 
+         SubscriptBox["sDip", "hom"], " ", 
+         SubscriptBox["sHap", "het"]}], "-", 
+        RowBox[{
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["sHap", "hom"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "het"], " ", 
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["sHap", "hom"]}], "+", 
+        RowBox[{
+         SubscriptBox["sDip", "hom"], " ", 
+         SubscriptBox["\[Alpha]1", "het"]}], "-", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "hom"], " ", 
+         SubscriptBox["sDip", "hom"], " ", 
+         SubscriptBox["\[Alpha]1", "het"]}], "-", 
+        RowBox[{
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "het"], " ", 
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["\[Alpha]1", "hom"]}]}], ")"}], "2"]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{"r", " ", "R", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["sDip", "het"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "het"], " ", 
+         SubscriptBox["sDip", "het"]}], "-", 
+        SubscriptBox["sDip", "hom"], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "hom"], " ", 
+         SubscriptBox["sDip", "hom"]}]}], ")"}], "4"]}], ")"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.698009285948146*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"selYXY", "=", 
+  RowBox[{"Factor", "[", 
+   RowBox[{
+    RowBox[{"tester", "/.", 
+     RowBox[{"k", "\[Rule]", "0"}]}], "/.", "freqYm2sol"}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.698009290431919*^9, 3.698009292144134*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"r", "-", "R"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["sDip", "het"]}], "+", 
+       RowBox[{
+        SubscriptBox["h", "het"], " ", 
+        SubscriptBox["sDip", "het"]}], "-", 
+       SubscriptBox["sDip", "hom"], "+", 
+       RowBox[{
+        SubscriptBox["h", "hom"], " ", 
+        SubscriptBox["sDip", "hom"]}], "-", 
+       SubscriptBox["sHap", "het"], "-", 
+       SubscriptBox["sHap", "hom"], "-", 
+       SubscriptBox["\[Alpha]1", "het"], "-", 
+       SubscriptBox["\[Alpha]1", "hom"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["h", "het"], " ", 
+        SubscriptBox["sDip", "het"]}], "+", 
+       RowBox[{
+        SubscriptBox["h", "hom"], " ", 
+        SubscriptBox["sDip", "hom"]}], "+", 
+       SubscriptBox["sHap", "het"], "+", 
+       SubscriptBox["sHap", "hom"], "+", 
+       SubscriptBox["\[Alpha]1", "het"], "+", 
+       SubscriptBox["\[Alpha]1", "hom"]}], ")"}], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["h", "het"], " ", 
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["sDip", "hom"]}], "-", 
+        RowBox[{
+         SubscriptBox["h", "hom"], " ", 
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["sDip", "hom"]}], "+", 
+        RowBox[{
+         SubscriptBox["sDip", "hom"], " ", 
+         SubscriptBox["sHap", "het"]}], "-", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "hom"], " ", 
+         SubscriptBox["sDip", "hom"], " ", 
+         SubscriptBox["sHap", "het"]}], "-", 
+        RowBox[{
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["sHap", "hom"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "het"], " ", 
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["sHap", "hom"]}], "+", 
+        RowBox[{
+         SubscriptBox["sDip", "hom"], " ", 
+         SubscriptBox["\[Alpha]1", "het"]}], "-", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "hom"], " ", 
+         SubscriptBox["sDip", "hom"], " ", 
+         SubscriptBox["\[Alpha]1", "het"]}], "-", 
+        RowBox[{
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["\[Alpha]1", "hom"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "het"], " ", 
+         SubscriptBox["sDip", "het"], " ", 
+         SubscriptBox["\[Alpha]1", "hom"]}]}], ")"}], "2"]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{"r", " ", "R", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["sDip", "het"]}], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "het"], " ", 
+         SubscriptBox["sDip", "het"]}], "-", 
+        SubscriptBox["sDip", "hom"], "+", 
+        RowBox[{"2", " ", 
+         SubscriptBox["h", "hom"], " ", 
+         SubscriptBox["sDip", "hom"]}]}], ")"}], "4"]}], ")"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.698009295860606*^9}]
+}, Open  ]]
+},
+Evaluator->"Local2",
+WindowSize->{740, 652},
+WindowMargins->{{-11, Automatic}, {Automatic, 5}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 160, 3, 30, "Text"],
+Cell[720, 25, 274, 7, 28, "Input"],
+Cell[997, 34, 23772, 557, 869, InheritFromParent],
+Cell[24772, 593, 452, 7, 68, "Text"],
+Cell[25227, 602, 175, 4, 30, "Text"],
+Cell[25405, 608, 364, 9, 28, "Input"],
+Cell[25772, 619, 3479, 93, 185, InheritFromParent],
+Cell[CellGroupData[{
+Cell[29276, 716, 721, 20, 46, "Input"],
+Cell[30000, 738, 171, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30208, 745, 751, 20, 46, "Input"],
+Cell[30962, 767, 6482, 179, 280, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37481, 951, 483, 12, 28, "Input"],
+Cell[37967, 965, 9463, 231, 385, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47467, 1201, 484, 12, 28, "Input"],
+Cell[47954, 1215, 9410, 230, 385, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57401, 1450, 198, 4, 28, "Input"],
+Cell[57602, 1456, 99, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57738, 1462, 250, 7, 28, "Input"],
+Cell[57991, 1471, 3072, 88, 133, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61100, 1564, 252, 7, 28, "Input"],
+Cell[61355, 1573, 3072, 88, 133, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
