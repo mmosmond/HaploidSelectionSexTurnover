@@ -1,4 +1,4 @@
-\begin{thebibliography}{74}
+\begin{thebibliography}{76}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Arunkumar et~al.(2013)Arunkumar, Josephs, Williamson, and
@@ -199,6 +199,18 @@ Jordan, C.~Y., and D.~Charlesworth. 2011.
 Joseph, S., and M.~Kirkpatrick. 2004.
 \newblock {Haploid selection in animals}.
 \newblock Trends in Ecology {\&} Evolution 19:592--597.
+
+\bibitem[{Karlin and McGregor(1972{\natexlab{\emph{a}}})}]{Karlin:1972ab}
+Karlin, S., and J.~McGregor. 1972{\natexlab{\emph{a}}}.
+\newblock {Application of method of small parameters to multi-niche population
+  genetic models}.
+\newblock Theoretical Population Biology 3:186--209.
+
+\bibitem[{Karlin and McGregor(1972{\natexlab{\emph{b}}})}]{Karlin:1972dq}
+---{}---{}---. 1972{\natexlab{\emph{b}}}.
+\newblock {Polymorphisms for genetic and ecological systems with weak
+  coupling}.
+\newblock Theoretical Population Biology 3:210--238.
 
 \bibitem[{Kozielska et~al.(2010)Kozielska, Weissing, Beukeboom, and
   Pen}]{Kozielska:2010vm}
