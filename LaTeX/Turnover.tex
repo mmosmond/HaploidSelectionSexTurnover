@@ -285,7 +285,7 @@ We also track the fraction of male gametes that are Y-bearing, $q$, which may de
 We are particularly concerned with the conditions under which a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, is greater than one. 
 If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur (i.e., if $\left\{(\lambda_{mA}-1)+ (\lambda_{ma}-1) \right\}/2 > 0$ then $\lambda > 1$). 
 If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$), the $m$ allele will not invade. 
-Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other and invasion depends on the recombination rate between the \textbf{M} and \textbf{A} loci ($R$) see equations \eqref{eq:neoYR} and \eqref{eq:neoWR}.
+Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other and invasion will occur when the recombination rate between the \textbf{M} and \textbf{A} loci ($R$) is below a critical value (this critical value can be greater than $1/2$ such that unlinked $m$ alleles invade), see equations \eqref{eq:neoYR} and \eqref{eq:neoWR}.
 
 
 Table \ref{tab:haplotype_growth} illustrates a number of key points about the invasion of neo-Y and neo-W mutations. 
@@ -344,6 +344,12 @@ However, under some conditions, a neo-W can invade an ancestral XY system.
 When the neo-W is also tightly linked ($R=0$), it can spread in linkage with either the allele that is fixed on the Y or the allele that is more common on the X, i.e., under some conditions $\lambda_{ma}>1$ and/or $\lambda_{mA}>1$. 
 These conditions are given in more detail in the appendix. 
 
+When $\lambda_{ma}>1$, a neo-W linked to the $a$ allele spreads because it is favoured by selection in females despite the fact that the $a$ allele was stably fixed on the Y, which we might commonly assume to harbour male beneficial alleles. 
+This situation can occur when there is a male-biased zygotic sex ratio and/or when the $a$ allele has higher fitness in females (given the 
+
+Explain $ma$ and $mA$ hypotheses. 
+
+We can also simplify cases where $R>0$ by assuming that selection and drive are weak ($s^\Hermaphrodite$, $t^\Hermaphrodite$, $\alpha_{\Delta}^\Hermaphrodite$ of order $\epsilon$), which implicitly assumes that $R$ is relatively large. 
 
 %weak selection
 %We are particularly concerned with whether or not a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, is greater than one. 
