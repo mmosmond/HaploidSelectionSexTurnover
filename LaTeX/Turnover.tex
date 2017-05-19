@@ -172,7 +172,7 @@ We assume that all gametes compete for fertilization during gametic competition,
 Gametic competition in monogamous mating systems is equivalent to meiotic drive in our model, which only alters the frequency of gametes produced by heterozygotes. 
 After gametic competition, random mating occurs between male and female gametes.
 The resulting zygotes develop as males or females, depending on their genotypes at the \textbf{X} and \textbf{M} loci (and the \textbf{M} genotype of their mother in the case of maternal control) as described above.
-Diploid males and females then experience selection, relative fitnesses are given by $w_{g}^{\Hermaphrodite}$, where $g$ is the diploid genotype at the \textbf{A} locus ($g \in \{AA, Aa, aa\}$).  
+Diploid males and females then experience selection, with relative fitnesses $w_{AA}^{\Hermaphrodite}$, $w_{Aa}^{\Hermaphrodite}$, and $w_{aa}^{\Hermaphrodite}$. %where $g$ is the diploid genotype at the \textbf{A} locus ($g \in \{AA, Aa, aa\}$).  
 %Diploids compete with others of the same sex, where selection depends on the sex of the individual and its genotype at the \textbf{A} locus.
 The next generation of gametes is then produced by meiosis, during which recombination and sex-specific meiotic drive can occur. 
 Recombination (i.e., an odd number of cross-overs) occurs between loci \textbf{X} and \textbf{A} with probability $r$, between loci \textbf{A} and \textbf{M} with probability $R$, and between loci \textbf{X} and \textbf{M} with probability $\chi$.
@@ -242,7 +242,7 @@ We also track the fraction of male gametes that are Y-bearing, $q$, which may de
 
 \textcolor{red}{I now remove the zygotic sex ratio $\zeta$ from the mean fitnesses. The mean fitnesses will have to be adjusted in a corresponding way.}
 
-\textcolor{red}{CHECK: DO THE HAPLOID MEAN FITNESSES HAVE TO BE IN THE DENOMINATOR?}
+\textcolor{red}{CHECK: DO THE HAPLOID MEAN FITNESSES HAVE TO BE IN THE DENOMINATOR? i think so, based on definitions in table S.2 (mmo)}
 
 % as there are now two 2s in the lambdas of table 2. perhaps the 2 in the denominator is needed because the frequency of males sums to one as does the frequency of females?}
 
@@ -763,29 +763,34 @@ In this case, the neo-W does not invade if $s^\female>s^\male$ (panel C: $s^\fem
 \subsection*{Recursion Equations}
 \label{app:recurs}
 
-In each generation we census the genotype frequencies in male and female gametes/gametophytes (hereafter, gametes) after meiosis (and any meiotic drive) and immediately before gametic competition. 
-At this stage, the frequencies of X-bearing male and female gametes are given by $X_{i}^{\male}$ and $X_{i}^{\female}$ and the frequencies of Y-bearing gametes are given by $Y_{i}^{\male}$ and $Y_{i}^{\female}$ where the index $i$ specifies genotypes $MA=1$, $Ma=2$, $mA=3$, and $ma=4$ ($\sum_{i=1}^{4}Y_{i}^{\male}+X_{i}^{\male}=1$ and $\sum_{i=1}^{4}Y_{i}^{\female}+X_{i}^{\female}=1$). 
-Competition then occurs among gametes of the same sex (e.g., among eggs and among sperm separately) according to the \textbf{A} locus allele, $g$ ($g\in A$, $a$, see Table \ref{tab:fitnesstable}), carried by individuals with genotype $i$.
-The genotype frequencies after gametic competition are $X_{i}^{\Hermaphrodite,s}= w_{g}X_{i}^{\Hermaphrodite}/\bar{w}_{H}^{\Hermaphrodite}$ and $Y_{i}^{\Hermaphrodite,s}= w_{g}Y_{i}^{\Hermaphrodite}/\bar{w}_{H}^{\Hermaphrodite}$, where $\bar{w}_{H}^{\Hermaphrodite}=\sum_{i=1}^{4} w_{g}X_{i}^{\Hermaphrodite}+w_{g}Y_{i}^{\Hermaphrodite}$ is the mean fitness of male ($\Hermaphrodite=\male$) or female ($\Hermaphrodite=\female$) gametes. 
-Random mating then occurs between gametes to produce diploid zygotes with genotype $ij$ at the \textbf{A} and \textbf{M} loci, such that $XX$ zygotes are denoted $xx_{ij}$, $XY$ zygotes are $xy_{ij}$, and $YY$ zygotes are $yy_{ij}$. 
-In $XX$ and $YY$ zygotes, individuals with genotype $ij$ are equivalent to those with genotype $ji$; for simplicity, we denote the frequency of genotype $ij$ to the average of these frequencies, $xx_{ij}=(X_{i}^{\female,s}X_{j}^{\male,s}+X_{j}^{\female,s}X_{i}^{\male,s})/2$ and $yy_{ij}=(Y_{i}^{\female,s}Y_{j}^{\male,s}+Y_{j}^{\female,s}Y_{i}^{\male,s})/2$. 
+In each generation we census the genotype frequencies in male and female gametes/gametophytes (hereafter, gametes) between meiosis (and any meiotic drive) and gametic competition. 
+At this stage we denote the frequencies of X- and Y-bearing gametes from males and females $X_{ij}^{\Hermaphrodite}$ and $Y_{ij}^{\Hermaphrodite}$, where $\Hermaphrodite \in \{\male,\female\}$ specifies the sex of the diploid that the gamete came from, $i\in\{A,a\}$ specifies the allele at the selected locus $\mathbf{A}$, and $j\in\{M,m\}$ specifies the allele at the novel sex-determining locus $\mathbf{M}$. 
+The gamete frequencies from each sex sum to one, $\sum_{i,j}x_{ij}^{\Hermaphrodite}+y_{ij}^{\Hermaphrodite}=1$. 
 
-Denoting the \textbf{M} locus genotype by $b$ ($b\in MM$, $Mm$, $mm$) and the \textbf{X} locus genotype by $c$ ($c\in XX$, $XY$, $YY$), zygotes develop as females with probability $k_{bc}$. 
-Therefore, the frequencies of $XX$ females are given by $xx_{ij}^{\female}=k_{bc}xx_{ij}$, $XY$ females are given by $xy_{ij}^{\female}=k_{bc}xy_{ij}$, and $YY$ females are given by $yy_{ij}^{\female}=k_{bc}xy_{ij}$. 
-Similarly, $XX$ male frequencies are $xx_{ij}^{\male}=(1-k_{bc})xx_{ij}$, $XY$ male frequencies are $xy_{ij}^{\male}=(1-k_{bc})xy_{ij}$, and $YY$ males frequencies are $yy_{ij}^{\male}=(1-k_{bc})xy_{ij}$.
+Competition then occurs among gametes of the same sex (e.g., among eggs and among sperm separately) according to the \textbf{A} locus allele, $i$ (see Table \ref{tab:fitnesstable}).
+The genotype frequencies after gametic competition are $x_{ij}^{\Hermaphrodite,s}= w_{i}x_{ij}^{\Hermaphrodite}/\bar{w}_{H}^{\Hermaphrodite}$ and $y_{ij}^{\Hermaphrodite,s}= w_{i}y_{ij}^{\Hermaphrodite}/\bar{w}_{H}^{\Hermaphrodite}$, where $\bar{w}_{H}^{\Hermaphrodite}=\sum_{i,j} w_{i}x_{ij}^{\Hermaphrodite}+w_{i}y_{ij}^{\Hermaphrodite}$ is the mean fitness of male ($\Hermaphrodite=\male$) or female ($\Hermaphrodite=\female$) gametes. 
+
+Random mating then occurs between gametes to produce diploid zygotes.
+To shorten notation we now use index $i$ (and $j$) to denote the alleles at both the $\mathbf{A}$ and $\mathbf{M}$ loci and label $MA=1$, $Ma=2$, $mA=3$, and $ma=4$, such that $i,j\in\{1,2,3,4\}$.
+The frequencies of $XX$ zygotes are then denoted as $xx_{ij}$, $XY$ zygotes as $xy_{ij}$, and $YY$ zygotes as $yy_{ij}$. 
+In $XX$ and $YY$ zygotes, individuals with diploid genotype $ij$ are equivalent to those with diploid genotype $ji$; for simplicity, we use $xx_{ij}$ and $yy_{ij}$ to denote the average of these frequencies, $xx_{ij}=(X_{i}^{\female,s}X_{j}^{\male,s}+X_{j}^{\female,s}X_{i}^{\male,s})/2$ and $yy_{ij}=(Y_{i}^{\female,s}Y_{j}^{\male,s}+Y_{j}^{\female,s}Y_{i}^{\male,s})/2$. 
+
+Denoting the \textbf{M} locus genotype by $b$ ($b\in \{MM$, $Mm$, $mm$\}) and the \textbf{X} locus genotype by $c$ ($c\in \{XX$, $XY$, $YY$\}), zygotes develop as females with probability $k_{bc}$. 
+Therefore, the frequencies of $XX$ females are given by $xx_{ij}^{\female}=k_{bc}xx_{ij}$, $XY$ females are given by $xy_{ij}^{\female}=k_{bc}xy_{ij}$, and $YY$ females are given by $yy_{ij}^{\female}=k_{bc}yy_{ij}$. 
+Similarly, $XX$ male frequencies are $xx_{ij}^{\male}=(1-k_{bc})xx_{ij}$, $XY$ male frequencies are $xy_{ij}^{\male}=(1-k_{bc})xy_{ij}$, and $YY$ males frequencies are $yy_{ij}^{\male}=(1-k_{bc})yy_{ij}$.
 This notation allows both the ancestral and novel sex-determining regions to determine zygotic sex according to an $XY$ system, a $ZW$ system, or an environmental sex-determining system. 
 In addition, we can consider any epistatic dominance relationship between the two sex-determining loci. 
 Typically, we assume that the ancestral sex-determining system (\textbf{X} locus) is $XY$ ($k_{MMXX}=1$ and $k_{MMXY}=k_{MMYY}=0$) and epistatically recessive to a dominant novel sex-determining locus, \textbf{M} ($k_{Mmc}=k_{mmc}=k$). 
 
 
-Selection among diploids then occurs according to the diploid genotype at the \textbf{A} locus, $h$, for an individual of type $ij$ ($h \in AA$, $Aa$, $aa$, see Table \ref{tab:fitnesstable}). 
-The diploid frequencies after selection in sex $\Hermaphrodite$ are given by $xx_{ij}^{\Hermaphrodite,s}=w_{h}^{\Hermaphrodite} xx_{ij}/\bar{w}^{\Hermaphrodite}$, $xy_{ij}^{\Hermaphrodite,s}=w_{h}^{\Hermaphrodite} xy_{ij}/\bar{w}^{\Hermaphrodite}$, and $yy_{ij}^{\Hermaphrodite,s}=w_{h}^{\Hermaphrodite} yy_{ij}/\bar{w}^{\Hermaphrodite}$, where $\bar{w}^{\Hermaphrodite}= \sum_{i=1}^{4}\sum_{j=1}^{4}w_{h}^{\Hermaphrodite}xx_{ij}+w_{h}^{\Hermaphrodite}xy_{ij}+w_{h}^{\Hermaphrodite}yy_{ij}$ is the mean fitness of individuals of sex $\Hermaphrodite$. 
+Selection among diploids then occurs according to the diploid genotype at the \textbf{A} locus, $l$, for an individual of type $ij$ ($l \in \{AA$, $Aa$, $aa$\}, see Table \ref{tab:fitnesstable}). 
+The diploid frequencies after selection in sex $\Hermaphrodite$ are given by $xx_{ij}^{\Hermaphrodite,s}=w_{l}^{\Hermaphrodite} xx_{ij}/\bar{w}^{\Hermaphrodite}$, $xy_{ij}^{\Hermaphrodite,s}=w_{l}^{\Hermaphrodite} xy_{ij}/\bar{w}^{\Hermaphrodite}$, and $yy_{ij}^{\Hermaphrodite,s}=w_{l}^{\Hermaphrodite} yy_{ij}/\bar{w}^{\Hermaphrodite}$, where $\bar{w}^{\Hermaphrodite}= \sum_{i=1}^{4}\sum_{j=1}^{4}w_{l}^{\Hermaphrodite}xx_{ij}+w_{l}^{\Hermaphrodite}xy_{ij}+w_{l}^{\Hermaphrodite}yy_{ij}$ is the mean fitness of individuals of sex $\Hermaphrodite$. 
 
 Finally, these diploids undergo meiosis to produce the next generation of gametes. 
 Recombination and sex-specific meiotic drive occur during meiosis.
 %We can also assume that recombination is sex specific and/or affected by the M locus - but generally we don't so I just describe $R=R_{f}=R, r_{MM,d}=r_{Mm,d}=r_{mm,d}=r, \chi_{m}=\chi_{f}=\chi$.
 Here, we allow the relative locations of the SDR, \textbf{A}, and \textbf{M} loci to be generic by using three parameters to describe the recombination rates between them. $R$ is the recombination rate between the \textbf{A} locus and the \textbf{M} locus, $\chi$ is the recombination rate between the \textbf{M} locus and the \textbf{X} locus, and $r$ is the recombination rate between the \textbf{A} locus and the \textbf{X} locus. 
-Table \ref{tab:chisubstitutions} gives substitutions for $\chi$ for defined relative locations of these loci.
+Table \ref{tab:chisubstitutions} shows how $\chi$ can be substituted to give any linear order of loci.
 During meiosis in sex $\Hermaphrodite$, meiotic drive occurs such that, in $Aa$ heterozygotes, a fraction $\alpha^{\Hermaphrodite}$ of gametes produced carry the $A$ allele and $(1-\alpha^\Hermaphrodite)$ carry the $a$ allele. 
 
 \begin{table}[ht]
@@ -894,20 +899,22 @@ Y_{ma}^{{\Hermaphrodite}'}=&yy_{44}^{\Hermaphrodite,s}+yy_{34}^{\Hermaphrodite,s
 \endgroup
 
 \noindent
-The full system is therefore described by 16 recurrence equations (three loci, each with two alleles, and two gamete sexes yields 16 combinations). 
+The full system is therefore described by 16 recurrence equations (three diallelic loci in two sexes, $2^3 \times 2 = 16$). 
 However, some diploid types are not produced under a given sex determination system. 
-For example, with the $M$ allele fixed and ancestral $XY$ sex determination, there are no $XX$ males, $XY$ females, or $YY$ females ($xx_{11}^{\male}$, $xx_{12}^{\male}$, $xx_{22}^\male$, $xy_{11}^{\female}$, $xy_{12}^{\female}$, $xy_{22}^\female$, $yy_{11}^{\female}$, $yy_{12}^{\female}$, and $yy_{22}^\female$ are all 0). 
-In this case, the system only involves six recursion equations because there is only one \textbf{M} locus allele and no Y-bearing female gametes. 
-This six-equation system yields equilibrium \eqref{eq:pAve}. 
+For example, with the $M$ allele fixed and ancestral $XY$ sex determination, there are no $m$ alleles, $XX$ males, $XY$ females, or $YY$ females ($xx_{11}^{\male}=xx_{12}^{\male}=xx_{22}^\male=xy_{11}^{\female}=xy_{12}^{\female}=xy_{21}^{\female}=xy_{22}^\female=yy_{11}^{\female}=yy_{12}^{\female}=yy_{22}^\female=0$). 
+In this case, the system only involves six recursion equations, %because there is only one \textbf{M} locus allele and no Y-bearing female gametes. 
+which yields equilibrium \eqref{eq:pAve}. 
 
 %I think this should be moved below because we have some 'results' where we don't assume weak selection but we only have the equilibrium calculated analytically for weak selection. 
+
 \subsection*{Resident equilibrium and stability}
 
-In the resident population (allele $M$ fixed), we follow the frequency of $A$ in female gametes (eggs) from an XX female, $p^\female_X$, and in X-bearing, $p^\male_X$, and Y-bearing, $p^\male_Y$, male gametes (sperm).
+In the resident population (allele $M$ fixed), we choose to follow the frequency of $A$ in female gametes (eggs) from an XX female, $p^\female_X$, and in X-bearing, $p^\male_X$, and Y-bearing, $p^\male_Y$, male gametes (sperm).
 We also track the total frequency of Y among male gametes, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
-Within this resident population (when $m$ is absent) we can then describe frequencies among different gamete types, which are given by $X_{MA}^{\female}=p_{X}^{\female}$, $X_{Ma}^{\female}=(1-p_{X}^{\female})$, $X_{MA}^{\male}=(1-q)p_{X}^{\male}$, $X_{Ma}^{\male}=(1-q)(1-p_{X}^{\male})$, $Y_{MA}^{\male}=q p_{Y}^{\male}$, and $Y_{Ma}^{\male}=q(1-p_{Y}^{\male})$. Mean fitnesses in this resident population are given in table \ref{tab:meanfitnesses}.
+These four variables determine the frequencies of the six resident gamete types: $X_{MA}^{\female}=p_{X}^{\female}$, $X_{Ma}^{\female}=1-p_{X}^{\female}$, $X_{MA}^{\male}=(1-q)p_{X}^{\male}$, $X_{Ma}^{\male}=(1-q)(1-p_{X}^{\male})$, $Y_{MA}^{\male}=q p_{Y}^{\male}$, and $Y_{Ma}^{\male}=q(1-p_{Y}^{\male})$. 
+Mean fitnesses in the resident population are given in table \ref{tab:meanfitnesses}.
 
-Various forms of selection can maintain a polymorphism at the \textbf{A} locus, including sexually antagonistic selection, overdominance and conflicts between diploid selection and selection upon haploid genotypes \citep[ploidally antagonistic selection,][]{Immler:2012tl} or a combination of these selective regimes. 
+Various forms of selection can maintain a polymorphism at the \textbf{A} locus, including sexually antagonistic selection, overdominance, conflicts between diploid selection and selection upon haploid genotypes \citep[ploidally antagonistic selection,][]{Immler:2012tl}, and a combination of these selective regimes. 
 
 \begin{table}[ht]
 \centering
@@ -939,10 +946,14 @@ Various forms of selection can maintain a polymorphism at the \textbf{A} locus, 
  \end{tabular}
 \end{table}
 
-\subsubsection*{Recombination weak relative to selection}
+In particular special cases, e.g., no sex-differences in selection or meiotic drive ($s^\male=s^\female$, $h^\male=h^\female$, and $\alpha^\male=\alpha^\female=1/2$), the equilibrium allele frequency and stability can be calculated analytically without assuming anything about the relative strengths of selection and recombination. 
+However, here, we focus on two regimes (tight linkage and weak selection) in order to make fewer assumptions about fitnesses. 
+
+\subsubsection*{Recombination weak relative to selection (tight linkage)}
 
 We first calculate the equilibrium frequency of the Y and $A$ alleles in the ancestral population when the recombination rate between the \textbf{X} and \textbf{A} loci is small ($r$ of order $\epsilon$). 
-The \textbf{A} locus will not affect evolution of novel sex-determination systems (\textbf{M} locus) if one \textbf{A} locus allele is fixed on all backgrounds. We therefore focus on the five equilibria that maintain both $A$ and $a$ alleles, of which four are given to leading order by:
+The \textbf{A} locus will not affect evolution at the novel sex-determining locus, \textbf{M}, if one \textbf{A} allele is fixed on all backgrounds. 
+We therefore focus on the five equilibria that maintain both $A$ and $a$ alleles, of which four are given to leading order by:
 
 \begin{equation*}
 \begin{split}
@@ -950,11 +961,11 @@ The \textbf{A} locus will not affect evolution of novel sex-determination system
 \ \hat{q}=\frac{1}{2}-\frac{(\alpha^{\male}-1/2)w_{Aa}^{\male} \Phi}{w_{Aa}^{\male} \Phi+ w_{aa}^{\male} \Psi},\\
 &\hat{p}_{X}^{\female}=\frac{w_{a}^{\female} \Phi}{w_{a}^{\female} \Phi+ w_{A}^{\female} \Psi},
 \ \hat{p}_{X}^{\male}=\frac{2 \alpha^{\male}w_{Aa}^{\male} \Phi}{2\alpha^{\male}w_{Aa}^{\male} \Phi +w_{AA}^{\male} \Psi}\\
-(A')\ \ \ &\hat{p}_{Y}^{\male}=0,
+(A')\ \ \ &\hat{p}_{Y}^{\male}=1,
 \ \hat{q}=\frac{1}{2}+\frac{(\alpha^{\male}-1/2)w_{Aa}^{\male} \Phi'}{w_{Aa}^{\male} \Phi' + w_{AA}^{\male} \Psi'},\\
 &\hat{p}_{X}^{\female}=1-\frac{w_{A}^{\female} \Phi'}{w_{A}^{\female} \Phi'+ w_{a}^{\female} \Psi'},
 \ \hat{p}_{X}^{\male}=1-\frac{2(1-\alpha^{\male})w_{Aa}^{\male} \Phi'}{2(1-\alpha^{\male})w_{Aa}^{\male} \Phi'+w_{aa}^{\male} \Psi'}\\
-(B)\ \ \ &\hat{p}_{Y}^{\male}=0,\ \hat{p}_{X}^{\female}=1,\ \hat{p}_{X}^{\male}=1, \ \hat{q}=(1-\alpha^{\male})\\
+(B)\ \ \ &\hat{p}_{Y}^{\male}=0,\ \hat{p}_{X}^{\female}=1,\ \hat{p}_{X}^{\male}=1, \ \hat{q}=1-\alpha^{\male}\\
 (B')\ \ \ &\hat{p}_{Y}^{\male}=1,\ \hat{p}_{X}^{\female}=0,\ \hat{p}_{X}^{\male}=0, \ \hat{q}=\alpha^{\male}\\
 \end{split}
 \end{equation*}
@@ -972,15 +983,15 @@ A fifth equilibrium $(C)$ also exists where $A$ is present at an intermediate fr
 Thus, the Y can either be fixed for the $a$ allele (equilibria $A$ and $B$) or the $A$ allele (equilibria $A'$ and $B'$).
 The X chromosome can then either be polymorphic (equilibria $A$ and $A'$) or fixed for the alternative allele (equilibria $B$ and $B'$).
 Since equilibria $(A)$ and $(B)$ are equivalent to equilibria $(A')$ and $(B')$ with the labelling of $A$ and $a$ alleles interchanged, we discuss only equilibria $(A)$ and $(B)$, in which the Y is fixed for the $a$ allele. 
-If there is no haploid selection ($\alpha^{\Hermaphrodite}=1/2$, $w_{g}^{\Hermaphrodite}=1$), these equilibria are equivalent to those found by \textcolor{red}{Otto (2014) and Lloyd (197?, see Otto for reference)}.
+If there is no haploid selection ($\alpha^{\Hermaphrodite}=1/2$, $w_{A}^{\Hermaphrodite}=w_{a}^{\Hermaphrodite}$), these equilibria are equivalent to those found by \cite{Lloyd1977} and \cite{Otto2014}.
 
 We next calculate when $(A)$ and $(B)$ are locally stable for $r=0$. According to the `small parameter theory' \citep{Karlin:1972ab,Karlin:1972dq}, these stability properties are unaffected by small amounts of recombination between the SDR and \textbf{A} locus, although equilibrium frequencies may be slightly altered. 
 For the $a$ allele to be stably fixed on the Y requires that $\bar{w}_{Ya}^{\male}>\bar{w}_{YA}^{\male}$ where $\bar{w}_{Ya}^{\male}=w_{a}^{\male}(2 p_{X}^{\female}(1-\alpha^{\male}) w_{A}^{\female} w_{Aa}^{\male}+ (1-p_{X}^{\female})w_{a}^{\female} w_{aa}^{\male} )$ and $\bar{w}_{YA}^{\male}=w_{A}^{\male}(p_{X}^{\female} w_{A}^{\female} w_{AA}^{\male}+ 2 (1-p_{X}^{\female})\alpha^{\male}w_{a}^{\female} w_{aa}^{\male} )$. That is, $Ya$ haplotypes must have higher fitness than $YA$ haplotypes.  
-Substituting $\hat{p}_{Xf}$ from above, fixation of the $A$ allele on the Y requires that $\gamma_{i}>0$ where $\gamma_{(A)}=w_{a}^{\male}(2(1-\alpha^{\male})w_{Aa}^{\male} \Phi + w_{aa}^{\male} \Psi)-w_{A}^{\male}(2\alpha^{\male}w_{Aa}^{\male} \Phi + w_{aa}^{\male} \Psi)$ for equilibrium $(A)$ and $\gamma_{(B)}=2(1-\alpha^{\male})w_{a}^{\male}w_{Aa}^{\male}-w_{A}^{\male}w_{AA}^{\male}$ for equilibrium $(B)$.
+Substituting in $p_{X}^{\female} = \hat{p}_{X}^{\female}$ from above, fixation of the $A$ allele on the Y requires that $\gamma_{i}>0$ where $\gamma_{(A)}=w_{a}^{\male}(2(1-\alpha^{\male})w_{Aa}^{\male} \Phi + w_{aa}^{\male} \Psi)-w_{A}^{\male}(2\alpha^{\male}w_{Aa}^{\male} \Phi + w_{aa}^{\male} \Psi)$ for equilibrium $(A)$ and $\gamma_{(B)}=2(1-\alpha^{\male})w_{a}^{\male}w_{Aa}^{\male}-w_{A}^{\male}w_{AA}^{\male}$ for equilibrium $(B)$.
 Stability of a polymorphism on the X chromosome (equilibrium $A$) further requires that $\Phi >0$ and $\Psi >0$. 
-Fixation of the $a$ allele on the X (equilibrium $B$) is mutually exclusive with $(A)$ and requires that $\Psi<0$ and $w_{A}^{\female}w_{AA}^{\female}>(1-\alpha^{\female})w_{a}^{\female}w_{Aa}^{\female}$. 
+Fixation of the $a$ allele on the X (equilibrium ($B$)) is mutually exclusive with equilibrium $(A)$ and requires $\Psi<0$ and $w_{A}^{\female}w_{AA}^{\female}>(1-\alpha^{\female})w_{a}^{\female}w_{Aa}^{\female}$. 
 
-\subsubsection*{Selection weak relative to recombination}
+\subsubsection*{Selection weak relative to recombination (weak selection)}
 
 Here, we assume that selection and meiotic drive are weak relative to recombination ($s^\Hermaphrodite$, $t^\Hermaphrodite$, $\alpha_{\Delta}^\Hermaphrodite$ of order $\epsilon$). 
 The maintenance of a polymorphism at the \textbf{A} locus then requires that
@@ -994,11 +1005,9 @@ The maintenance of a polymorphism at the \textbf{A} locus then requires that
 \end{equation}
 
 \noindent
-which indicates that a polymorphism is maintained under various selective regimes. 
-In particular special cases, e.g., no sex-differences in selection or meiotic drive ($s^\male=s^\female$, $h^\male=h^\female$, and $\alpha^\male=\alpha^\female=1/2$), the equilibrium allele frequency and stability can be calculated analytically without assuming weak selection. 
-However, here, we focus on weak selection in order to make fewer assumptions about fitnesses. 
+which indicates that a polymorphism can be maintained by various selective regimes. 
 
-Given that a polymorphism is maintained at the \textbf{A} locus by selection, with weak selection and drive, to leading order, the frequencies of $A$ in each type of gamete are the same ($\hat{p}^\female_X=\hat{p}^\male_X=\hat{p}^\male_Y=\bar{p}$) and given by 
+Given that a polymorphism is maintained at the \textbf{A} locus by selection, with weak selection and drive the frequencies of $A$ in each type of gamete are the same ($\hat{p}^\female_X=\hat{p}^\male_X=\hat{p}^\male_Y=\bar{p}$) and given, to leading order, by 
 
 \begin{equation}
 \bar{p}=\frac{h^\female s^\female + h^\male s^\male +t^\female+t^\male+\alpha_{\Delta}^\female+\alpha_{\Delta}^\male}
@@ -1009,7 +1018,7 @@ Given that a polymorphism is maintained at the \textbf{A} locus by selection, wi
 \end{equation}
 
 \noindent
-Differences in frequency between gamete types are of order $\epsilon$ to leading order and given by
+Differences in frequency between gamete types are of order $\epsilon$ and given, to leading order, by
 
 \begin{equation}
 \begin{split}
@@ -1028,7 +1037,7 @@ Differences in frequency between gamete types are of order $\epsilon$ to leading
 \noindent
 where $V_{A}=\bar{p}(1-\bar{p})$ is the variance in the frequency of $A$ and $D^\Hermaphrodite=\big{(} \bar{p}s^\Hermaphrodite+(1-\bar{p})h^\Hermaphrodite s^\Hermaphrodite\big{)} -\big{(} \bar{p}h^\Hermaphrodite s^\Hermaphrodite+(1-\bar{p}) \big{)}$ corresponds to the difference in fitness between $A$ and $a$ alleles in diploids of sex $\Hermaphrodite \in \{\female,\male\}$ ($\bar{p}$ is the leading-order probability of mating with an $A$-bearing gamete from the opposite sex). 
 The frequency of Y among male gametes depends upon the difference in the frequency of the $A$ allele between X- and Y-bearing male gametes and the strength of meiotic drive in favour of the $A$ allele in males, $q=1/2+\alpha_{\Delta}^\male(\hat{p}^\male_Y-\hat{p}^\male_X)/2+O(\epsilon^3)$.
-Without gametic competition or drive ($\alpha_{\Delta}^\Hermaphrodite=t^\Hermaphrodite=0$), these results reduce to those of \citet{vanDoorn:2007eu}.
+Without gametic competition or drive ($\alpha_{\Delta}^\Hermaphrodite=t^\Hermaphrodite=0$) our results reduce to those of \citet{vanDoorn:2007eu}.
 
 % the differences in the frequencies of $A$ in each type of gamete are small, as is the bias in the sex-determining factor from the heterogametic sex, and we can solve for the mean frequency of $A$ across all types ($p_A$), the difference in the frequencies of $A$ between two of the three types, and the bias in the frequency of the sex-determining factor, to first order in selection.
 %Linear stability analysis can then be used to determine the stability of this equilibrium.
@@ -1037,7 +1046,9 @@ Without gametic competition or drive ($\alpha_{\Delta}^\Hermaphrodite=t^\Hermaph
 
 \subsection*{Invasion conditions}
 
-Here, we determine whether a rare neo-Y or neo-W allele spreads when rare, which occurs when $\lambda > 1$. 
+Here, we determine whether a rare neo-Y or neo-W allele spreads when rare, which occurs when $\lambda > 1$.
+We begin with the general result and then give explicit solutions under tight linkage and weak selection.
+ 
 If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur (i.e., if $\left\{(\lambda_{mA}-1)+ (\lambda_{ma}-1) \right\}/2 > 0$ then $\lambda > 1$, see table \ref{tab:haplotype_growth} for $\lambda_{mi}$). 
 If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$), the $m$ allele will not invade. 
 Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires
@@ -1064,11 +1075,20 @@ R \left[
 
 \noindent
 for the neo-$W$. 
+
 %Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele, $m$, is expected to invade for any probability of recombination between loci \textbf{A} and \textbf{M}, $R$, when the net flow of recombinants is from the less fit (smaller $\lambda_{mi}$) to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative). %\textcolor{red}{Q: is it definitely possible to have negative square brackets for a equilibria maintained by selection?}
 %Assuming $g_A^* > 0$ and $g_a^* < 0$ without loss of generality, this is $-(1 - p^\female_X) w_{m,A} g_a^* < p^\female_X w_{m,a} g_A^*$.
 %When the net flow of recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus is small enough. %\textcolor{red}{Q:Is it the case that sometimes the square brackets are positive and invasion occurs for $r_{AM}=1/2$? In which case it might be better to have slightly different phrasing here.}
+Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele, $m$, is expected to invade for any probability of recombination between loci \textbf{A} and \textbf{M}, $R$, when the net flow of recombinants is from the less fit (smaller $\lambda_{mi}$) to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative).
+When the net flow of recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus is small enough. 
+To better understand when these scenarios are possible we next use knowledge of the equilibria and their stability under tight linkage and weak selection.
+
+\subsubsection*{Recombination weak relative to selection (tight linkage)}
+
+At equilibrium ($A$) we have 
 
 
+\subsubsection*{Selection weak relative to recombination (weak selection)}
 
 
 
