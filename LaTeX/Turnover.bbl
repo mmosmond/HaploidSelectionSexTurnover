@@ -1,4 +1,4 @@
-\begin{thebibliography}{74}
+\begin{thebibliography}{78}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Arunkumar et~al.(2013)Arunkumar, Josephs, Williamson, and
@@ -200,6 +200,18 @@ Joseph, S., and M.~Kirkpatrick. 2004.
 \newblock {Haploid selection in animals}.
 \newblock Trends in Ecology {\&} Evolution 19:592--597.
 
+\bibitem[{Karlin and McGregor(1972{\natexlab{\emph{a}}})}]{Karlin:1972ab}
+Karlin, S., and J.~McGregor. 1972{\natexlab{\emph{a}}}.
+\newblock {Application of method of small parameters to multi-niche population
+  genetic models}.
+\newblock Theoretical Population Biology 3:186--209.
+
+\bibitem[{Karlin and McGregor(1972{\natexlab{\emph{b}}})}]{Karlin:1972dq}
+---{}---{}---. 1972{\natexlab{\emph{b}}}.
+\newblock {Polymorphisms for genetic and ecological systems with weak
+  coupling}.
+\newblock Theoretical Population Biology 3:210--238.
+
 \bibitem[{Kozielska et~al.(2010)Kozielska, Weissing, Beukeboom, and
   Pen}]{Kozielska:2010vm}
 Kozielska, M., F.~J. Weissing, L.~W. Beukeboom, and I.~Pen. 2010.
@@ -242,6 +254,11 @@ Lloyd, D.~G. 1974.
 \newblock {Female-predominant sex ratios in angiosperms}.
 \newblock Heredity 32:35--44.
 
+\bibitem[{Lloyd and Webb(1977)}]{Lloyd1977}
+Lloyd, D.~G., and C.~Webb. 1977.
+\newblock {Secondary sex characters in plants}.
+\newblock Botanical Review 43:177--216.
+
 \bibitem[{Mank et~al.(2006)Mank, Promislow, and Avise}]{Mank:2006bt}
 Mank, J.~E., D.~E.~L. Promislow, and J.~C. Avise. 2006.
 \newblock {Evolution of alternative sex‐determining mechanisms in teleost
@@ -281,6 +298,11 @@ Ogata, M., Y.~Hasegawa, H.~Ohtani, M.~Mineyama, and I.~Miura. 2007.
 \newblock {The ZZ/ZW sex-determining mechanism originated twice and
   independently during evolution of the frog, Rana rugosa}.
 \newblock Heredity 100:92--99.
+
+\bibitem[{Otto(2014)}]{Otto2014}
+Otto, S.~P. 2014.
+\newblock {Selective maintenance of recombination between the sex chromosomes}.
+\newblock Journal of Evolutionary Biology 27:1431--1442.
 
 \bibitem[{Otto et~al.(2015)Otto, Scott, and Immler}]{Otto:2015va}
 Otto, S.~P., M.~F. Scott, and S.~Immler. 2015.
