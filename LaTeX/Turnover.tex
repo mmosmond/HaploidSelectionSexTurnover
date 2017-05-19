@@ -240,9 +240,9 @@ The spread of the mutant $m$ allele depends on the frequency of alleles at the o
 In the ancestral population, it is convenient to follow the frequency of the $A$ allele in female gametes (eggs) from an XX female, $p^\female_X$, and in X-bearing, $p^\male_X$, and Y-bearing, $p^\male_Y$, male gametes (sperm).
 We also track the fraction of male gametes that are Y-bearing, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
 
-\textcolor{red}{I now remove the zygotic sex ratio $\zeta$ from the mean fitnesses. The mean fitnesses will have to be adjusted in a corresponding way.}
-
-\textcolor{red}{CHECK: DO THE HAPLOID MEAN FITNESSES HAVE TO BE IN THE DENOMINATOR? i think so, based on definitions in table S.2 (mmo)}
+%\textcolor{red}{I now remove the zygotic sex ratio $\zeta$ from the mean fitnesses. The mean fitnesses will have to be adjusted in a corresponding way.}
+%
+%\textcolor{red}{CHECK: DO THE HAPLOID MEAN FITNESSES HAVE TO BE IN THE DENOMINATOR? i think so, based on definitions in table S.2 (mmo)}
 
 % as there are now two 2s in the lambdas of table 2. perhaps the 2 in the denominator is needed because the frequency of males sums to one as does the frequency of females?}
 
@@ -255,23 +255,25 @@ We also track the fraction of male gametes that are Y-bearing, $q$, which may de
 \hline\hline
    \noalign{\vskip 0.5ex}
    neo-Y ($k=0$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
-  $\lambda_{mA}=[1/(2(1- \zeta))]\{p_{X}^{\female} w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male} + 2(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^\male (1 - R)\}/ \bar{w}^\male $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\lambda_{ma}=[1/(2(1- \zeta))]\{(1-p_{X}^{\female}) w_{a}^{\female} w_{a}^{\male} w_{aa}^{\male} + 2p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male}(1 - \alpha^\male) (1 - R)\}/ \bar{w}^\male $ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R (1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^{\male}/  (1-\zeta) \bar{w}^\male  $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} (1 - \alpha^{\male})/ (1-\zeta) \bar{w}^\male $\\ [1ex] \hline 
+  $\lambda_{mA}=[1/(2 (1- \zeta))]\{p_{X}^{\female} w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male} + 2(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^\male (1 - R)\}/ \{\bar{w}^\male \bar{w}_H^\female \bar{w}_H^\male \}  $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{ma}=[1/(2(1-\zeta))]\{(1-p_{X}^{\female}) w_{a}^{\female} w_{a}^{\male} w_{aa}^{\male} + 2p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male}(1 - \alpha^\male) (1 - R)\}/ \{\bar{w}^\male \bar{w}_H^\female \bar{w}_H^\male \}  $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{mA}=R (1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^{\male}/  \{(1-\zeta) \bar{w}^\male \bar{w}_H^\female \bar{w}_H^\male \}   $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} (1 - \alpha^{\male})/ \{(1-\zeta) \bar{w}^\male \bar{w}_H^\female \bar{w}_H^\male \}  $\\ [1ex] \hline 
   \noalign{\vskip 0.5ex}
   neo-W ($k=1$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
-  $\lambda_{mA}=[1/(2 \zeta)]\{\bar{p}^{\male} w_{A}^{\male} w_{A}^{\female} w_{AA}^{\female}+2(1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female}\alpha^\female(1-R)\}/ \bar{w}^\female $ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\lambda_{ma}=[1/(2 \zeta)]\{(1-\bar{p}^{\male}) w_{a}^{\male} w_{a}^{\female} w_{aa}^{\female}+2\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female}(1-\alpha^\female)(1-R)\}/ \bar{w}^\female $ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R (1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female} \alpha^{\female}/ \zeta \bar{w}^\female  $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female} (1-\alpha^{\female})/ \zeta \bar{w}^\female $\\ [1ex] 
+  $\lambda_{mA}=[1/(2 \zeta)]\{\bar{p}^{\male} w_{A}^{\male} w_{A}^{\female} w_{AA}^{\female}+2(1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female}\alpha^\female(1-R)\}/ \{\bar{w}^\female \bar{w}_H^\female \bar{w}_H^\male \} $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{ma}=[1/(2 \zeta)]\{(1-\bar{p}^{\male}) w_{a}^{\male} w_{a}^{\female} w_{aa}^{\female}+2\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female}(1-\alpha^\female)(1-R)\}/ \{\bar{w}^\female \bar{w}_H^\female \bar{w}\} $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{mA}=R (1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female} \alpha^{\female}/ \{ \zeta \bar{w}^\female \bar{w}_H^\female \bar{w}_H^\male \}  $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female} (1-\alpha^{\female})/ \{ \zeta \bar{w}^\female \bar{w}_H^\female \bar{w}_H^\male \} $\\ [1ex] 
   \hline \hline 
    \end{tabular}
       \begin{tablenotes}
       \scriptsize
       \item $\bar{p}^{\male}=p_{Y}^{\male}q+p_{X}^{\male}(1-q)$ is the average frequency of the $A$ allele among X- and Y-bearing male gametes.
       \item $R$ is the probability of recombination between loci \textbf{A} and \textbf{M}.
-      \item $\zeta$ is the zygotic sex ratio and $\bar{w}^\Hermaphrodite$ is the mean fitness of sex $\Hermaphrodite$, see Table \ref{tab:meanfitnesses}.
+      \item $\zeta$ is the zygotic sex ratio (fraction female)
+      \item $\bar{w}^\Hermaphrodite$ is the mean fitness of diploids of sex $\Hermaphrodite$, see Table \ref{tab:meanfitnesses}
+      \item $\bar{w}_H^\Hermaphrodite$ is the mean fitness of haploids from sex $\Hermaphrodite$, see Table \ref{tab:meanfitnesses}
 %      \item $\bar{w}_H^\female = p_X^\female w_A^\female + (1-p_X^\female) w_a^\female$ is the mean fitness of female gametes during gametic competition
 %      \item $\bar{w}_H^\male = \bar{p}^{\male} w_A^\male + (1-\bar{p}^{\male}) w_a^\male$ is the mean fitness of male gametes during gametic competition
 %       \item $\bar{w}^\female = \{ p_X^\female w_A^\female (1-q) p_X^\male w_A^\male w_{AA}^\female + (1 - p_X^\female) w_a^\female (1-q) p_X^\male w_A^\male w_{Aa}^\female + p_X^\female w_A^\female (1-q) (1 - p_X^\male) w_a^\male w_{Aa}^\female + (1-p_X^\female) w_a^\female (1-q) (1 - p_X^\male) w_a^\male w_{aa}^\female \} / \{ \bar{w}_H^\female \bar{w}_H^\male\}$ is the mean fitness of females during diploid competition
@@ -289,7 +291,7 @@ Otherwise, the new sex-determining allele increases in frequency on one \textbf{
 
 
 Table \ref{tab:haplotype_growth} illustrates a number of key points about the invasion of neo-Y and neo-W mutations. 
-Firstly, Fisherian sex ratio selection will favour the spread of a neo-Y if the ancestral zygotic sex ratio is biased towards males, $\zeta>1/2$, and vice versa for a neo-W, see terms in square brackets. 
+Firstly, Fisherian sex ratio selection will favour the spread of a neo-Y if the ancestral zygotic sex ratio is biased towards females, $\zeta>1/2$, and vice versa for a neo-W, see terms in square brackets. 
 However, the spread of a neo-Y (neo-W) also depends on the male (female) fitness of alleles that they are associated with, see terms in curly brackets. 
 Secondly, since a dominant neo-Y is always found in males, the allele frequencies at the neo-Y (\textbf{M}) locus only change in males. 
 Therefore, invasion by a neo-Y allele does not involve any female diploid selection terms ($w_{g}^{\female}$). 
