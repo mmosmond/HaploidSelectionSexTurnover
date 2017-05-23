@@ -346,7 +346,8 @@ We can analytically calculate the allele frequency of the $A$ allele using two a
 When there is tight linkage between the ancestral sex-determining region and the \textbf{A} locus ($r=0$), either the $A$ allele or the $a$ allele must be fixed on the Y. 
 % because selection on the Y is effectively haploid an incapably of maintaining a polymorphism in the absence of frequency dependent selection. 
 Because the labelling of alleles is arbitrary, we will assume that the $a$ locus is fixed on the Y without loss of generality ($p^\male_Y=0$). 
-If there are two alleles maintained at the \textbf{A} locus, the X can either be fixed for the $A$ allele ($p^\female_X=p^\male_X=1$) or polymorphic (0<$p^\female_X, p^\male_X$<1). These equilibrium allele frequencies and their stability conditions are given in the appendix.
+If there are two alleles maintained at the \textbf{A} locus, the X can either be fixed for the $A$ allele ($p^\female_X=p^\male_X=1$) or polymorphic (0<$p^\female_X, p^\male_X$<1). 
+These equilibrium allele frequencies and their stability conditions are given in the appendix.
 %However, because the X is present in both males and females, there are distinct selection pressures on X's in females and X's in males, which will always be paired with an $A$ allele from the Y. 
 
 A neo-Y will never invade an ancestral XY system that already has tight linkage with the locus under selection ($r=0$). 
@@ -363,8 +364,7 @@ However, neo-W alleles can also be favoured via their associations with \textbf{
 We will first explore these situations by assuming that there is no haploid selection, which means that there are no zygotic sex ratio biases.
 
 
-
-
+... this holds for moderate amounts of recombination between the neo-W and the selected locus, $0<R<<1$, indicating that, contrary to the conclusions of \cite{vanDoorn:2010hu}, neo sex chromosomes that reduce linkage with selected loci can invade.
 
 \subsubsection*{Loose linkage with the ancestral sex-determining region}
 
@@ -495,6 +495,7 @@ Fisherian sex ratio selection is sometimes considered in terms of balancing pare
 In addition, under environmental sex-determination, the proportion of males/females is sometimes controlled by the mother, e.g., the proportion of eggs laid in warm versus cold environments could determine the sex ratio of offspring. 
 We therefore also considered the invasion of a neo-sex-determining allele ($m$) in a model in which mothers that have at least one $m$ allele produce daughters with probability $k$. 
 As with offspring-controlled ESD, for all $k\in\{0,1/2,1\}$, we find that invasion into an ancestrally XY system is the same as invasion into an ancestrally ZW system (at least up to order $\epsilon^3$, assuming weak selection), implying transitions between genetic sex determination and maternally controlled environmental sex determination are not driven by Fisherian sex ratio selection on biased zygotic sex ratios.
+\textcolor{red}{(maternal analysis still lacks meiotic drive)}
 
 %One might think that when the sex of zygotes is under the control of mothers, there would be strong selection to balance the sex ratio among zygotes. 
 %However, we find that, with no meiotic drive and weak selection, the invasion fitness of a dominant, maternally controlled sex-determiner that produces proportion $k$ daughters can be written
@@ -1265,8 +1266,9 @@ Thus, a compromising equilibrium is reached on the X chromosome and females fitn
 This sets up a scenario in which a neo-W can invade on the $a$ background, despite the fact that $a$ is fixed on the Y and in that sense `male beneficial'.
 We call this the `perverse hypothesis'.
 
-Figure \ref{fig:Region_Plot_2a} shows that both the sex-specialist and perverse hypotheses are valid.
-In fact, both can be simultaneously valid, which is generally where there is selection for increased recombination between the sex chromosomes \citep[][figure 2a]{Otto2014}.
+Figure \ref{fig:Region_Plots} shows where the sex-specialist (red) and perverse (blue) hypotheses are valid.
+The left panel demonstrates that both hypotheses can be simultaneously valid with overdominance in both sexes and sex differences in selection, which is also where there is selection for increased recombination between the sex chromosomes \citep[compare with figure 2(a) in][]{Otto2014}.
+The right panel shows that the perverse hypothesis is no longer valid when selection is exactly the same in both sexes, despite the fact that there is selection for increased recombination between the sex chromosomes with sufficiently strong overdominance \citep[compare with figure 3 in][]{Otto2014}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1274,13 +1276,18 @@ In fact, both can be simultaneously valid, which is generally where there is sel
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.5\linewidth]{regionplot_2a}\\
+\includegraphics[width=0.45\linewidth]{regionplot_2a}
+\includegraphics[width=0.45\linewidth]{regionplot_3}\\
 \caption{
-Colours indicate where sex-specialist (red) and perverse (blue) hypotheses are valid, i.e., where a stable resident equilibrium is invaded by a neo-W that is perfectly linked with the allele not fixed on the Y (red) or the allele that is fixed on the Y (blue). 
-Note that the perverse equilibrium is only valid with overdominance and that both are simultaneously valid over much of the parameter space where increased recombination between the sex chromosomes is selected \citep[][figure 2a]{Otto2014}.
-\textcolor{red}{can't make sex symbols in mathematica!}
+Numerical exploration of where sex-specialist (red) and perverse (blue) hypotheses are valid, i.e., where an internally stable resident equilibrium can be invaded by a neo-W that is perfectly linked with the allele not fixed on the Y (red) or the allele that is fixed on the Y (blue). 
+\textbf{(Left)}
+The perverse equilibrium is only valid with overdominance while the sex-specialist hypothesis is valid over the entire range shown.
+Both hypotheses are simultaneously valid over much of the parameter space where increased recombination between the sex chromosomes is selected \citep[][figure 2a]{Otto2014}.
+\textbf{(Right)}
+Only the sex-specialist hypothesis is valid with no sex-differences in selection, despite selection for increased recombination between the sex-chromosomes with strong overdominance \citep[][figure 3]{Otto2014}.
+Parameters: $w_{Aa}^\Hermaphrodite = 1$, $w_a^\Hermaphrodite = w_A^\Hermaphrodite = 1$, $\alpha^\Hermaphrodite = 1/2$, $r=R=0$, and in left panel $w_{aa}^\female = w_{AA}^\female = 0.6$.
 }
-\label{fig:Region_Plot_2a}
+\label{fig:Region_Plots}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
