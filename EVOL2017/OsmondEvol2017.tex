@@ -1,0 +1,88 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+
+\beamertemplatenavigationsymbolsempty %removes navigation bar
+
+\usepackage{tikz}
+
+\title{Gametic selection, meiotic drive, sex ratio bias, and transitions between sex determination systems}
+\author{Michael Scott$^1$, \textbf{Matthew Osmond}$^2$, Sarah Otto$^2$}
+\institute{$^1$University College London \& $^2$University of British Columbia}
+\date{Evolution 2017}
+\titlegraphic{\vspace{1cm}} %lifts text up
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\frame{\titlepage}
+\begin{frame}
+   \begin{tikzpicture}[overlay, remember picture]
+      \node[anchor = south east] at (current page.south east) {
+         \includegraphics[width=0.35\textwidth]{IMAGES/Sally}
+      };
+      \node[anchor = south west] at (current page.south west) {
+         \includegraphics[width=0.35\textwidth]{IMAGES/Mike}
+      };
+   \end{tikzpicture}
+      \titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+   \begin{tikzpicture}[overlay, remember picture]
+      \visible<1->{
+         \node[anchor = center, text width = \linewidth] at (current page.center) {
+%	    \includegraphics[width=0.4\linewidth, angle=90]{IMAGES/BarfBag1}\\
+%	    \includegraphics[width=0.4\linewidth, angle=90]{IMAGES/BarfBag2}
+	    \includegraphics[width=0.4\linewidth, angle=0]{IMAGES/BarfBag1}
+	    \includegraphics[width=0.4\linewidth, angle=0]{IMAGES/BarfBag2}
+	 };
+      }  
+      \visible<2->{
+         \node[anchor = east] at (current page.east) {
+	    \includegraphics[width=0.3\linewidth]{IMAGES/LondonBar}
+	};
+      }
+   \end{tikzpicture}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+   \begin{tikzpicture}[overlay, remember picture]
+      \visible<1->{
+         \node[anchor = center, text width = \linewidth] at (current page.center) {
+	 \includegraphics[width=\linewidth, angle=0]{../Plots/Combination_Turnover}
+	 };
+      } 
+   \end{tikzpicture}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+   \begin{tikzpicture}[overlay, remember picture]
+      \visible<1->{
+         \node[anchor = center, text width = \linewidth] at (current page.center) {
+	 \includegraphics[width=\linewidth, angle=0]{../Plots/Combination_MeanFit}
+	 };
+      } 
+   \end{tikzpicture}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+   \begin{tikzpicture}[overlay, remember picture]
+      \visible<1->{
+         \node[anchor = center, text width = \linewidth] at (current page.center) {
+	 \includegraphics[width=\linewidth, angle=0]{../Plots/PositionPlot}
+	 };
+      } 
+   \end{tikzpicture}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

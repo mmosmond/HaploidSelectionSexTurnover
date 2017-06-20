@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    362440,       8543]
-NotebookOptionsPosition[    355584,       8333]
-NotebookOutlinePosition[    355964,       8350]
-CellTagsIndexPosition[    355921,       8347]
+NotebookDataLength[    362299,       8539]
+NotebookOptionsPosition[    355485,       8330]
+NotebookOutlinePosition[    355865,       8347]
+CellTagsIndexPosition[    355822,       8344]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -8325,13 +8325,10 @@ jZ7rPcsP1qCjK6e7CpfRBroN4XZraHEGS9H9E31nIpSesos++F/gP05HRhw=
    3.697253510191822*^9, 3.697253884616294*^9}]
 }, {2}]]
 }, Open  ]]
-}, Open  ]],
-
-Cell["Region plots", "Section",
- CellChangeTimes->{{3.69723454675905*^9, 3.697234552663364*^9}}]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1280, 980},
+WindowSize->{1280, 752},
 WindowMargins->{{1280, Automatic}, {Automatic, 37}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
@@ -8542,8 +8539,7 @@ Cell[312627, 7402, 2271, 51, 420, "Input"],
 Cell[314901, 7455, 40535, 869, 570, "Output"]
 }, {2}]]
 }, Open  ]]
-}, Open  ]],
-Cell[355472, 8329, 96, 1, 80, "Section"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
