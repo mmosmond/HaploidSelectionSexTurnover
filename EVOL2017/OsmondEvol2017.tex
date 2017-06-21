@@ -4,9 +4,32 @@
 
 \beamertemplatenavigationsymbolsempty %removes navigation bar
 
+\usepackage{tcolorbox}%for colored boxes
+
+%\defbeamertemplate{footline}{centered page number}
+%{%
+%  \hspace*{\fill}%
+%  \usebeamercolor[fg]{page number in head/foot}%
+%  \usebeamerfont{page number in head/foot}%
+%  Scott, \textbf{Osmond}, Otto%
+%  \hspace*{\fill}\vskip2pt%
+%}
+%\setbeamertemplate{footline}[centered page number]
+
+\defbeamertemplate{headline}{centered page number}
+{%
+  \hspace*{\fill}%
+  \usebeamercolor[fg]{page number in head/foot}%
+  \usebeamerfont{page number in head/foot}%
+  Scott, \textbf{Osmond}, Otto [\insertpagenumber\,/\,\insertpresentationendpage]%
+%  \hspace*{\fill}
+%  \vskip2pt%
+}
+\setbeamertemplate{headline}[centered page number]
+
 \usepackage{tikz}
 
-\title{Gametic selection, meiotic drive, sex ratio bias, and transitions between sex determination systems}
+\title{Gametic selection, meiotic drive, sex ratio bias, and transitions b/w sex determination systems}
 \author{Michael Scott$^1$, \textbf{Matthew Osmond}$^2$, Sarah Otto$^2$}
 \institute{$^1$University College London \& $^2$University of British Columbia}
 \date{Evolution 2017}
@@ -16,7 +39,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\frame{\titlepage}
-\begin{frame}
+\begin{frame}[plain]
    \begin{tikzpicture}[overlay, remember picture]
       \node[anchor = south east] at (current page.south east) {
          \includegraphics[width=0.35\textwidth]{IMAGES/Sally}
@@ -39,36 +62,52 @@
       \node[anchor = south east] at (current page.south east) {
          Bachtrog \textit{et al.} 2014
       };
+      \node[anchor = center, yshift=-4cm] at (current page.center) {
+         \includegraphics[width=\linewidth, angle=0]{IMAGES/BachtrogEtAl2014Title}
+      };
    \end{tikzpicture}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Turnover can be caused by sex-ratio selection}
+\frametitle{Theory 1: Turnover caused by sex-ratio selection}
    \begin{tikzpicture}[overlay, remember picture]
+\visible<1->{
       \node[anchor = west, text width = 0.5\linewidth] at (current page.west) {
          \includegraphics[width=\linewidth, angle=0]{IMAGES/Hamilton1967Fig1}
+      };
+      \node[anchor = west, text width = 0.5\linewidth, yshift = -3.8cm] at (current page.west) {
+         \includegraphics[width=\linewidth, angle=0]{IMAGES/Hamilton1967Title}
       };
       \node[anchor = south west] at (current page.south west) {
          Hamilton 1967
       };
-      \node[anchor = east, text width = 0.75\linewidth] at (current page.east) {
+}
+\visible<2->{
+      \node[anchor = east, text width = 0.75\linewidth, yshift=-1cm] at (current page.east) {
          \includegraphics[width=\linewidth, angle=0]{IMAGES/KozielskaEtAl2010Fig1a}
+      };
+      \node[anchor = east, text width = 0.7\linewidth, yshift = 2cm] at (current page.east) {
+         \includegraphics[width=\linewidth, angle=0]{IMAGES/KozielskaEtAl2010Title}
       };
       \node[anchor = south east] at (current page.south east) {
          Kozielska \textit{et al.} 2010
       };
+}
    \end{tikzpicture}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Turnover can be caused by sex-antagonistic selection}
+\frametitle{Theory 2: Turnover caused by sex-antagonistic selection}
    \begin{tikzpicture}[overlay, remember picture]
       \node[anchor = center] at (current page.center) {
          \includegraphics[width=0.9\linewidth, angle=0]{IMAGES/vanDoornKirkpatrick2010Fig2}
+      };
+      \node[anchor = center, yshift=-3.9cm, xshift=0cm] at (current page.center) {
+         \includegraphics[width=0.9\linewidth, angle=0]{IMAGES/vanDoornKirkpatrick2010Title}
       };
       \node[anchor = south east] at (current page.south east) {
          van Doorn \& Kirkpatrick 2010
@@ -79,72 +118,233 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Haploid selection}
+\frametitle{Adding haploid selection}
    \begin{tikzpicture}[overlay, remember picture]
-      \node[anchor = center] at (current page.center) {
-	drive or gametic competition
-	- common in plants
-	- typically sex-specific
-	- inparts both sex ratio and sex-anatagonistic selection
-	- outcome for turnover?
+      \node[anchor = center, text width = \linewidth] at (current page.center) {
+	\textbf{Gametic competition and meiotic drive}\\\vspace{0.5cm}
+	Biased transmission of gametes, typically sex-specific\\
+	$\implies$ can impart both sex-ratio \textbf{\textit{and}} sex-antagonistic selection\\\vspace{0.5cm}
       };
+\visible<2->{
+      \node[anchor = center, text width = 1.1\linewidth, yshift = -3cm] at (current page.center) {
+         \begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Question]
+	   How does haploid selection influence sex-determination turnover?
+	\end{tcolorbox}	
+      };
+}
    \end{tikzpicture}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{model}
+\frametitle{Model}
    \begin{tikzpicture}[overlay, remember picture]
       \visible<1->{
-         \node[anchor = center, text width = \linewidth] at (current page.center) {
-%	    \includegraphics[width=0.4\linewidth, angle=90]{IMAGES/BarfBag1}\\
-%	    \includegraphics[width=0.4\linewidth, angle=90]{IMAGES/BarfBag2}
-	    \includegraphics[width=0.4\linewidth, angle=0]{IMAGES/BarfBag1}
-	    \includegraphics[width=0.4\linewidth, angle=0]{IMAGES/BarfBag2}
+         \node[anchor = east, text width = \linewidth] at (current page.east) {
+	    \includegraphics[width=0.4\linewidth, angle=90]{IMAGES/BarfBag1}\\
+	    \includegraphics[width=0.4\linewidth, angle=90]{IMAGES/BarfBag2}
+%	    \includegraphics[width=0.4\linewidth, angle=0]{IMAGES/BarfBag1}
+%	    \includegraphics[width=0.4\linewidth, angle=0]{IMAGES/BarfBag2}
 	 };
       }  
 %      \visible<2->{
-%         \node[anchor = east] at (current page.east) {
+%         \node[anchor = south east] at (current page.south east) {
 %	    \includegraphics[width=0.3\linewidth]{IMAGES/LondonBar}
 %	};
 %      }
+%infinite popn, random mating, non-overlapping generations
+%recursion equations, stability analyses, numerical simulations
+   \end{tikzpicture}
+\end{frame}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+   \begin{tikzpicture}[overlay, remember picture]
+         \node[anchor = center] at (current page.center) {
+           \huge Results
+	};
    \end{tikzpicture}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
+\frametitle{Result 1: Turnover can \textcolor{red}{\textit{create}} sex-ratio bias} %ploidally antagonistic selection
    \begin{tikzpicture}[overlay, remember picture]
-      \visible<1->{
-         \node[anchor = center, text width = \linewidth] at (current page.center) {
-	 \includegraphics[width=\linewidth, angle=0]{../Plots/Combination_Turnover}
+         \node[anchor = south, text width = \linewidth, yshift=-0.9cm] at (current page.south) {
+%%	    \includegraphics[width=\linewidth, angle=0]{../Plots/Combination_Turnover}
+	    \includegraphics[width=\linewidth, angle=0]{../Plots/Combination_TurnoverMeanFit_Tighter}
 	 };
-      } 
+        \node[] at (3,3) {
+           XY $\rightarrow$ ZW
+        };
+        \node[] at (9,3) {
+           ZW $\rightarrow$ XY
+        };
+        \node[] at (6,3) {
+           \textcolor{gray}{$r=0.5 \rightarrow R=0.05$}
+        };        
+%        \node[text width=4cm] at (3.5,3) {
+%           $\begin{aligned}
+%           XY &\rightarrow ZW\\
+%           r=0.5 &\rightarrow R=0.05
+%           \end{aligned}$
+%        };
+%        \node[] at (8.5,3) {
+%           $\begin{aligned}
+%           ZW &\rightarrow XY\\
+%           r=0.5 &\rightarrow R=0.05
+%           \end{aligned}$
+%        };
+       \node[rotate = 90] at (-0.5,-0.75) {
+          Drive in males opposes selection in diploids
+        };
+%       \node[rotate = 90] at (-0.5,-2.5) {
+%           ZW $\rightarrow$ XY
+%        };
+   \end{tikzpicture}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}
+%   \begin{tikzpicture}[overlay, remember picture]
+%      \visible<1->{
+%         \node[anchor = center, text width = \linewidth] at (current page.center) {
+%	 \includegraphics[width=\linewidth, angle=0]{../Plots/Combination_MeanFit}
+%	 };
+%      } 
+%   \end{tikzpicture}
+%\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Result 2: Turnover despite \textcolor{red}{\textit{looser}} linkage}
+   \begin{tikzpicture}[overlay, remember picture]
+         \node[anchor = south, text width = \linewidth] at (current page.south) {
+	    \includegraphics[width=\linewidth, angle=0]{../Plots/PositionPlot}
+	 };
+       \node[anchor=east] at (6,0) {
+           sexually-antagonistic
+        };
+       \node[anchor=east] at (11,0) {
+           drive opposes diploid sel$^n$
+        };
+       \node[anchor=east] at (6,-3.5) {
+           ploidally-antagonsitic
+        };
+       \node[anchor=east] at (6,-1.25) {
+           \textcolor{gray}{(stronger sel$^n$ in females)}
+        };     
+       \node[anchor=east] at (11,-3.5) {
+           ploidally-antagonsitic
+        };   
+       \node[anchor=east] at (11,-1.25) {
+            \textcolor{gray}{(stronger sel$^n$ in males)}
+        };
+       \node[anchor=center] at (7.3,3.5)  {
+          ancestral SD
+        };
+       \path[->,thick] (7.3,3.25) edge (7.3,2.75);           
+       \node[anchor=center] at (9.4,3.5) {
+          novel SD
+        };                       
+       \path[->,thick] (9.4,3.25) edge (9.4,2.75);  
    \end{tikzpicture}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
+\frametitle{Result 2b: Looser linkage evolves despite fitness \textcolor{red}{\textit{decline}}}
    \begin{tikzpicture}[overlay, remember picture]
-      \visible<1->{
-         \node[anchor = center, text width = \linewidth] at (current page.center) {
-	 \includegraphics[width=\linewidth, angle=0]{../Plots/Combination_MeanFit}
+         \node[anchor = south, text width = \linewidth, yshift=0cm] at (current page.south) {
+	    \includegraphics[width=\linewidth, angle=0]{../Plots/Combination_TurnoverMeanFit_Looser}
 	 };
-      } 
+        \node[] at (3,3) {
+           XY $\rightarrow$ ZW
+        };
+        \node[] at (9,3) {
+           ZW $\rightarrow$ XY
+        };
+        \node[] at (6,3) {
+           \textcolor{gray}{$r=0.05 \rightarrow R=0.5$}
+        };      
+       \node[rotate = 90] at (-0.5,-0.75) {
+          Drive in males opposes selection in diploids
+        };          
    \end{tikzpicture}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
+\frametitle{Bonus result: Turnover with very tight linkage}
    \begin{tikzpicture}[overlay, remember picture]
-      \visible<1->{
-         \node[anchor = center, text width = \linewidth] at (current page.center) {
-	 \includegraphics[width=\linewidth, angle=0]{../Plots/PositionPlot}
+         \node[anchor = south, xshift=-1.5cm] at (current page.south) {
+	    \includegraphics[width=0.75\linewidth, angle=0]{../Plots/regionplot_2b}
 	 };
-      } 
+       \node[rotate = 90] at (-0.5,-0.75) {
+          Overdominance in diploids, no haploid selection
+        };
+       \node[text width = 3cm] at (9.5,1) {
+          \textcolor{red}{neo-W invades XY linked to X allele}
+       };
+       \node[text width = 3cm] at (9.5,-2) {
+          \textcolor{blue}{neo-W invades XY linked to Y allele!}
+       };                              
+   \end{tikzpicture}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary}
+   \begin{tikzpicture}[overlay, remember picture]
+         \node[anchor = west, text width = 1.2\linewidth] at (current page.west) {
+	    \begin{itemize}
+	    \item Haploid selection creates new avenues for sex determination turnover
+	    	\begin{enumerate}
+	     	   \item Turnover can occur \textbf{irregardless of sex-ratio bias}, and create it
+	    	   \item Turnover can \textbf{decrease sex-linkage}, and mean diploid fitness
+		   \end{enumerate}
+	    \vspace{1cm}
+	    \item Bonus result: Turnover possible with tight linkage, two mechanisms
+	    	\begin{enumerate}
+	     	   \item neo-W invades with X allele (female specialist)
+	    	   \item neo-W \textbf{invades with Y allele} (from perverse overdominance equil.) 
+		\end{enumerate}
+	    \end{itemize}
+	 };            
+   \end{tikzpicture}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Thank-you}
+   \begin{tikzpicture}[overlay, remember picture]
+         \node[anchor = west, text width = 0.5\linewidth] at (current page.west) {
+   	    \centering
+	    Michael Scott\\
+	    \includegraphics[width=\textwidth]{IMAGES/Mike}
+	 };            
+         \node[anchor = east, text width = 0.5\linewidth] at (current page.east) {
+   	    \centering
+            Sally Otto\\
+   	    \includegraphics[width=\textwidth]{IMAGES/Sally}
+	 };     
+         \node[anchor = south west, yshift=0.7cm] at (current page.south west) {
+   	    \includegraphics[width=0.5\textwidth]{IMAGES/BRC}
+	 };     
+         \node[anchor = south, xshift=1cm] at (current page.south) {
+	    \includegraphics[width=0.15\textwidth]{IMAGES/UBC}
+	 };     
+         \node[anchor = south east, yshift=0.5cm] at (current page.south east) {	    			   \includegraphics[width=0.3\textwidth]{IMAGES/NSERC}
+	 };     
    \end{tikzpicture}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
