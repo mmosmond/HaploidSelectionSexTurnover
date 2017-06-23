@@ -32,9 +32,10 @@
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usetikzlibrary{decorations.pathreplacing}
+\def\checkmark{\tikz\fill[scale=1](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 
 \title{Gametic selection, meiotic drive, sex ratio bias, and transitions b/w sex determination systems}
-\author{\textbf{Matthew Osmond}$^2$}
+\author{Matthew Osmond$^2$}
 \institute{$^1$University College London \& $^2$University of British Columbia}
 \date{Evolution 2017}
 \titlegraphic{\vspace{3cm}} %lifts text up
@@ -112,7 +113,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Theory 1: Turnover caused by sex-ratio selection}
+\frametitle{\underline{Theory 1}: Turnover caused by \textcolor{red}{sex-ratio selection}}
    \begin{tikzpicture}[overlay, remember picture]
 \visible<2>{
       \node[anchor = east, text width = 0.5\linewidth, xshift=-0.5cm] at (current page.east) {
@@ -158,7 +159,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Theory 2: Turnover caused by sex-antagonistic selection}
+\frametitle{\underline{Theory 2}: Turnover caused by \textcolor{red}{sex-antagonistic selection}}
    \begin{tikzpicture}[overlay, remember picture]
 \visible<1->{
       \node[anchor = south east] at (current page.south east) {
@@ -237,7 +238,7 @@ neo-$\textcolor{blue}{W}$ invades};
 }
 \visible<6->{
       \node[anchor = center, xshift= 0, yshift = -90] at (current page.center) {
-         \huge reduces sexual tension
+         \huge neo-$\textcolor{blue}{W}$ is a better sex-specialist
       };
 }
    \end{tikzpicture}
@@ -247,9 +248,9 @@ neo-$\textcolor{blue}{W}$ invades};
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
    \begin{tikzpicture}[overlay, remember picture]
-         \node[anchor = center, text width = \linewidth] at (current page.center) {
+         \node[anchor = center, text width = 1.1\linewidth] at (current page.center) {
            \begin{center}
-              \huge Turnover caused by\\\vspace{0.1cm} haploid \textbf{or} diploid selection
+              \huge Sex-ratio \textbf{vs.} sex-antagonistic selection
            \end{center}
 	};
    \end{tikzpicture}
@@ -270,7 +271,7 @@ neo-$\textcolor{blue}{W}$ invades};
 }
 \visible<2->{
       \node[anchor = center, text width = \linewidth, yshift = -10] at (current page.center) {
-	\textbf{Haploid selection: Gametic competition and meiotic drive}
+	\textbf{Haploid selection (gametic competition and meiotic drive)}
       };
 }
 \visible<3->{
@@ -492,7 +493,7 @@ neo-$\textcolor{blue}{W}$ invades};
             \Large \underline{Scenario}: Drive for $\textcolor{red}{a}$ in males opposes selection for $\textcolor{red}{A}$ in diploids
         };
       }   
-      \visible<2-6>{
+      \visible<2-7>{
          \node[anchor = south, text width = 0.9\linewidth, yshift=0] at (current page.south) {
 	    \includegraphics[width=\linewidth, angle=0]{../Plots/PositionPlotB_Evo_Empty}
 	 };
@@ -502,7 +503,7 @@ neo-$\textcolor{blue}{W}$ invades};
 %           \huge $XY \rightarrow \textcolor{blue}{ZW}$?
 %        };
 %      }    
-      \visible<7->{
+      \visible<8->{
          \node[anchor = south, text width = 0.9\linewidth, yshift=0] at (current page.south) {
 	    \includegraphics[width=\linewidth, angle=0]{../Plots/PositionPlotB_Evo}
 	 };
@@ -520,7 +521,7 @@ neo-$\textcolor{blue}{W}$ invades};
              $\textcolor{black}{Y}$
           };         
       }    
-      \visible<3->{
+      \visible<5->{
          \draw [decorate,decoration={brace,mirror,amplitude=10pt,raise=0pt},yshift=0pt,thick]
             (2.5,-2.75) -- (6,-2.75) node [black,midway,yshift=-20] {
                looser linkage
@@ -530,7 +531,7 @@ neo-$\textcolor{blue}{W}$ invades};
                tighter linkage
             };   
       }    
-      \visible<4->{
+      \visible<3->{
          %chromosomal order (move coordinate C and position of locus A only)  
          \coordinate (C) at (2.75,-2.5);
          \coordinate (A) at ($(C)+(1,0)$); 
@@ -546,7 +547,7 @@ neo-$\textcolor{blue}{W}$ invades};
          \draw[thick] ($(C)+(0.5,-0.05)$) -- ($(C)+(0.5,0.05)$) node[above] {$\textcolor{black}{Y}$};
          \draw[thick] ($(C)+(2,-0.05)$) -- ($(C)+(2,0.05)$) node[above] {$\textcolor{blue}{W}$};  
       }    
-      \visible<5->{
+      \visible<4->{
          \draw [decorate,decoration={brace,amplitude=10pt,raise=4pt},yshift=0pt,thick]
             (1,-1.25) -- (1,1.25) node [black,midway,xshift=-20,rotate=90] {
                neo-$\textcolor{blue}{W}$ invades
@@ -557,15 +558,15 @@ neo-$\textcolor{blue}{W}$ invades};
 %%           \huge $XY \rightarrow \textcolor{blue}{ZW}$!
 %%        };
 %%      }   
-      \visible<6>{
+      \visible<6-7>{
          \node[] at (4,0) {
 	   \huge ?
         };
          \node[] at (8,0) {
-	   \huge +
+	   \huge \checkmark
         };
       }   
-      \visible<8->{
+      \visible<9->{
          \draw[red,very thick] (4.25,0) circle [radius=1.5];
          \node[anchor = center, yshift=110, xshift=0] at (current page.center) {
             \begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
@@ -573,7 +574,7 @@ neo-$\textcolor{blue}{W}$ invades};
 	   \end{tcolorbox}	
         };
       }   
-      \visible<9->{
+      \visible<7->{
          \node[anchor = center, yshift = 30, xshift=130] at (current page.center) {
             \includegraphics[width=0.3\linewidth, angle=0]{IMAGES/vanDoornKirkpatrick2010Fig2}
         };
