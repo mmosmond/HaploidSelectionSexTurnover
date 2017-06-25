@@ -185,6 +185,11 @@
    \draw[thick] ($(C)+(1,-0.1)$) -- ($(C)+(1,0.1)$) node[above] {$Y$};
    \draw[thick] ($(C)+(2,-0.1)$) -- ($(C)+(2,0.1)$) node[above] {$\textcolor{blue}{W}$};   
 }
+\visible<2-3>{
+   \node[anchor = center, xshift= 0, yshift = 0] at (current page.center) {
+      \huge e.g., $\textcolor{red}{a}$ favoured in $\male$, $\textcolor{red}{A}$ favoured in $\female$
+   };   
+}
 \visible<3-4>{
    %chromosomal order (move coordinate C and position of locus A only)  
    \coordinate (C) at (2.35,-2);
@@ -270,18 +275,23 @@ neo-$\textcolor{blue}{W}$ invades};
       };
 }
 \visible<2->{
-      \node[anchor = center, text width = \linewidth, yshift = -10] at (current page.center) {
-	\textbf{Haploid selection (gametic competition and meiotic drive)}
+      \node[anchor = center, text width = 1.15\linewidth, yshift = -10] at (current page.center) {
+	\textbf{Haploid selection (gametic competition \& meiotic drive)}
       };
 }
 \visible<3->{
       \node[anchor = center, text width = \linewidth, yshift=-40] at (current page.center) {
-	Sex-specific biased transmission of gametes\\
+	Biased transmission of gametes, typically sex-specific\\
 	$\implies$ can impart both \underline{sex-ratio \textbf{and} sex-antagonistic selection}
       };
 }
 \visible<4->{
-      \node[anchor = center, text width = 1.1\linewidth, yshift = -3cm] at (current page.center) {
+      \node[anchor = center, text width = 1.15\linewidth, yshift=-70] at (current page.center) {
+	Diploid selection too $\implies$ ploidally-antagonistic selection possible
+      };
+}
+\visible<5->{
+      \node[anchor = center, text width = 1.1\linewidth, yshift = -3.6cm] at (current page.center) {
          \begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Question]
 	   How does haploid selection influence sex-determination turnover?
 	\end{tcolorbox}	
@@ -310,8 +320,13 @@ neo-$\textcolor{blue}{W}$ invades};
 %      }
 %infinite popn, random mating, non-overlapping generations
 %3 loci (selected, ancestral, dominant novel), 2 alleles at each
-      \visible<2->{
+      \visible<2>{
+         \draw[thick, red] (8.5,-1) circle [radius=1.25, thick];
+      } 
+      \visible<3->{
          \draw[thick] (8.5,-1) circle [radius=1.25, thick];
+      } 
+      \visible<2->{
          %chromosomal order (move coordinate C and position of locus A only)  
          \coordinate (C) at (7.5,-0.9);
          \coordinate (A) at ($(C)+(0.5,0)$); 
@@ -330,13 +345,23 @@ neo-$\textcolor{blue}{W}$ invades};
 	    3 bi-allelic loci
 	};
       } 
-      \visible<3->{
-         \node[] at (8.5, -4) {
+      \visible<3>{
+         \node[red] at (8.5, -4) {
 	    infinite population 
 	};
       } 
       \visible<4->{
+         \node[] at (8.5, -4) {
+	    infinite population 
+	};
+      } 
+      \visible<4>{
+         \draw[thick, red] (2.2,3) circle [radius=1, thick];
+      } 
+      \visible<5->{
          \draw[thick] (2.2,3) circle [radius=1, thick];
+      } 
+      \visible<4->{
          \node[] at (0, 3) {
 	    diploid sel$^n$
 	};
@@ -355,29 +380,52 @@ neo-$\textcolor{blue}{W}$ invades};
        \path[->,thick] (0.15,-0.3) edge (0.15,-0.7);  
    } 
       %recursion equations, stability analyses, numerical simulations
-      \visible<5->{
+      \visible<5>{
+         \draw[thick, red] (2,-1.25) circle [radius=1, thick];
+      } 
+      \visible<6->{
          \draw[thick] (2,-1.25) circle [radius=1, thick];
+      } 
+      \visible<5->{
          \node[anchor = west, text width = 2.5cm, yshift = -2cm, xshift=-0.25cm] at (current page.west) {
 	    \begin{enumerate} \item recursion equations \end{enumerate}
 	};
 %         \path[->,thick] (eqns) edge (7.3,2.75);	
       }
-      \visible<6->{
+      \visible<6>{
+         \draw[thick, red] (2.75,-3) circle [radius=0.75, thick];
+      } 
+      \visible<7->{
          \draw[thick] (2.75,-3) circle [radius=0.75, thick];
+      } 
+      \visible<6->{
+%         \draw[thick] (2.75,-3) circle [radius=0.75, thick];
          \node[anchor = west, text width = 3cm, yshift = -3.5cm, xshift=0cm] at (current page.west) {
 	    \begin{enumerate} \setcounter{enumi}{1} \item resident equilibrium \end{enumerate}
 	};
 %         \path[->,thick] (eqns) edge (7.3,2.75);	
       }
-      \visible<7->{
+      \visible<7>{
+         \draw[thick, red] (3.5,-1) circle [radius=0.75, thick];
+      } 
+      \visible<8->{
          \draw[thick] (3.5,-1) circle [radius=0.75, thick];
+      } 
+      \visible<7->{
+%         \draw[thick] (3.5,-1) circle [radius=0.75, thick];
          \node[anchor = west, text width = 2.5cm, yshift = 0cm, xshift=4.5cm] at (current page.west) {
 	    \begin{enumerate} \setcounter{enumi}{2} \item invasion analysis \end{enumerate}
 	};
 %         \path[->,thick] (8.5,-3) edge (3.5,-1);	
       }   
+      \visible<8>{
+         \draw[thick, red] (7.75,2.75) circle [radius=0.75, thick];
+      } 
+%      \visible<9->{
+%         \draw[thick] (7.75,2.75) circle [radius=0.75, thick];
+%      } 
       \visible<8->{
-         \draw[thick] (7.75,2.75) circle [radius=0.75, thick];
+%         \draw[thick] (7.75,2.75) circle [radius=0.75, thick];
          \node[anchor = east, text width = 3cm, yshift = 2.5cm, xshift=10] at (current page.east) {
 	    \begin{enumerate} \setcounter{enumi}{3} \item approximate leading eigenvalue \end{enumerate}
 	};
