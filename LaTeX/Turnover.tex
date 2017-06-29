@@ -218,7 +218,9 @@ Therefore, the model outlined above describes both ancestrally-$XY$ and ancestra
 Without loss of generality, we primarily refer to the ancestrally heterogametic sex as male and the ancestrally homogametic sex as female.
 That is, we describe an ancestral XY sex determination system but our model can easily be applied to an ancestral ZW sex determination system. 
 
-\subsection*{Turnover between sex-determination systems} 
+%\subsection*{Turnover between sex-determination systems} 
+
+\subsubsection*{Generic invasion by a neo-Y or neo-W}
 
 The evolution of a new sex determination system requires that a rare mutant allele, $m$, at the novel sex-determining locus  increases in frequency when rare. 
 The spread of a rare mutant $m$ at the \textbf{M} locus is determined by the leading eigenvalue, $\lambda$, of the system of eight equations describing the next generation frequency of eggs and sperm carrying the mutation, (\ref{eq:recursions}c, \ref{eq:recursions}d, \ref{eq:recursions}g, \ref{eq:recursions}h). %, evaluated at the above equilibrium.
@@ -235,7 +237,8 @@ $\lambda^2+ b \lambda + c =0$.
 %
 %\noindent
 %where $b$ is the average of the growth rates of the two haplotypes that carry the $m$ allele ($mA$ and $ma$), $b=(\lambda_{mA}+\lambda_{ma})/2$, and $c$ also involves the fitness of $m$ alleles when they recombine onto the other \textbf{A} background in a heterozygote, $c=\lambda_{mA}\lambda_{ma}+\rho_{mA}\rho_{ma}$ (see table \ref{tab:haplotype_growth}).
-In this case $b= - (\lambda_{mA} + \lambda_{ma})$ and $c = \lambda_{mA} \lambda_{ma} -\rho_{mA} \rho_{ma}$, where $\lambda_{mi}$ is the (multiplicative) growth rate of mutant haplotypes on background $i\in\{A,a\}$, accounting for loss due to recombination, and $\rho_{mi}$ is the rate of addition of mutant haplotypes onto background $i\in\{A,a\}$ due to recombination (see table \ref{tab:haplotype_growth}).
+%Here, $b= - (\lambda_{mA} + \lambda_{ma})$ and $c = \lambda_{mA} \lambda_{ma} -\rho_{mA} \rho_{ma}$, where $\lambda_{mi}$ is the (multiplicative) growth rate of mutant haplotypes on background $i\in\{A,a\}$, accounting for loss due to recombination, and $\rho_{mi}$ is the rate of addition of mutant haplotypes onto background $i\in\{A,a\}$ due to recombination (see table \ref{tab:haplotype_growth}).
+Here, $b= - (\lambda_{mA} + \lambda_{ma})+(\rho_{mA} + \rho_{ma})$ and $c = (\lambda_{mA}-\rho_{mA}) (\lambda_{ma}-\rho_{ma}) -\rho_{mA} \rho_{ma}$, where $\lambda_{mi}$ is the (multiplicative) growth rate of mutant haplotypes on background $i\in\{A,a\}$, without accounting for loss due to recombination, and $\rho_{mi}$ is the rate at which mutant haplotypes on background $i\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes (see table \ref{tab:haplotype_growth}).
 The spread of the mutant $m$ allele depends on the frequency of alleles at the other two loci in the ancestral population. 
 In the ancestral population, it is convenient to follow the frequency of the $A$ allele in female gametes (eggs) from an XX female, $p^\female_X$, and in X-bearing, $p^\male_X$, and Y-bearing, $p^\male_Y$, male gametes (sperm).
 We also track the fraction of male gametes that are Y-bearing, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
@@ -255,16 +258,16 @@ We also track the fraction of male gametes that are Y-bearing, $q$, which may de
 \hline\hline
    \noalign{\vskip 0.5ex}
    neo-Y ($k=0$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
-  $\lambda_{mA}=[1/(2 (1- \zeta))]\{p_{X}^{\female} w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male} + 2(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^\male (1 - R)\}/ \{\bar{w}^\male \bar{w}_H^\female \bar{w}_H^\male \}  $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\lambda_{ma}=[1/(2(1-\zeta))]\{(1-p_{X}^{\female}) w_{a}^{\female} w_{a}^{\male} w_{aa}^{\male} + 2p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male}(1 - \alpha^\male) (1 - R)\}/ \{\bar{w}^\male \bar{w}_H^\female \bar{w}_H^\male \}  $ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R (1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^{\male}/  \{(1-\zeta) \bar{w}^\male \bar{w}_H^\female \bar{w}_H^\male \}   $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} (1 - \alpha^{\male})/ \{(1-\zeta) \bar{w}^\male \bar{w}_H^\female \bar{w}_H^\male \}  $\\ [1ex] \hline 
+  $\lambda_{mA}=[1/(2 (1- \zeta))]\{p_{X}^{\female} w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male} + 2(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^\male \}/ \{ \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \} $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{ma}=[1/(2(1-\zeta))]\{(1-p_{X}^{\female}) w_{a}^{\female} w_{a}^{\male} w_{aa}^{\male} + 2p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male}(1 - \alpha^\male) \}/ \{\bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \} $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{mA}=R[1/(2(1-\zeta))] \{ 2(1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} \alpha^{\male} \}/  \{ \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \}   $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}= R [1/(2(1-\zeta))] \{  2 p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} (1 - \alpha^{\male}) \}/ \{ \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \}  $\\ [1ex] \hline 
   \noalign{\vskip 0.5ex}
   neo-W ($k=1$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
-  $\lambda_{mA}=[1/(2 \zeta)]\{\bar{p}^{\male} w_{A}^{\male} w_{A}^{\female} w_{AA}^{\female}+2(1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female}\alpha^\female(1-R)\}/ \{\bar{w}^\female \bar{w}_H^\female \bar{w}_H^\male \} $ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\lambda_{ma}=[1/(2 \zeta)]\{(1-\bar{p}^{\male}) w_{a}^{\male} w_{a}^{\female} w_{aa}^{\female}+2\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female}(1-\alpha^\female)(1-R)\}/ \{\bar{w}^\female \bar{w}_H^\female \bar{w}\} $ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA}=R (1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female} \alpha^{\female}/ \{ \zeta \bar{w}^\female \bar{w}_H^\female \bar{w}_H^\male \}  $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma}=R\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female} (1-\alpha^{\female})/ \{ \zeta \bar{w}^\female \bar{w}_H^\female \bar{w}_H^\male \} $\\ [1ex] 
+  $\lambda_{mA}=[1/(2 \zeta)]\{\bar{p}^{\male} w_{A}^{\male} w_{A}^{\female} w_{AA}^{\female}+2(1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female}\alpha^\female\}/ \{\bar{w}_H^\female \bar{w}_H^\male \bar{w}^\female \} $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{ma}=[1/(2 \zeta)]\{(1-\bar{p}^{\male}) w_{a}^{\male} w_{a}^{\female} w_{aa}^{\female}+2\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female}(1-\alpha^\female)\}/ \{\bar{w}_H^\female \bar{w}_H^\male \bar{w}^\female \} $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{mA}=R [1/(2 \zeta)] \{2(1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female} \alpha^{\female} \}/ \{ \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\female \}  $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\rho_{ma}=R [1/(2 \zeta)] \{ 2\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female} (1-\alpha^{\female}) \}/ \{ \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\female \} $\\ [1ex] 
   \hline \hline 
    \end{tabular}
       \begin{tablenotes}
@@ -283,15 +286,24 @@ We also track the fraction of male gametes that are Y-bearing, $q$, which may de
 \end{threeparttable}
 \\
 
-% SOME OF THIS IS REPEATED IN THE APPENDIX CURRENLTY
-We are particularly concerned with the conditions under which a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, is greater than one. 
-If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur (i.e., if $\left\{(\lambda_{mA}-1)+ (\lambda_{ma}-1) \right\}/2 > 0$ then $\lambda > 1$). 
-If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$), the $m$ allele will not invade. 
-Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other and invasion will occur when the recombination rate between the \textbf{M} and \textbf{A} loci ($R$) is below a critical value (this critical value can be greater than $1/2$ such that unlinked $m$ alleles invade), see equations \eqref{eq:neoYR} and \eqref{eq:neoWR}.
+%We are particularly concerned with the conditions under which a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, is greater than one. 
+%If one or both of $\lambda_{mA}$ and $\lambda_{ma}$ are greater than one, indicating that at least one haplotype increases in frequency faster than recombination breaks it apart, invasion will always occur ($\lambda>1$). 
+%Otherwise, invasion requires
+%\begin{equation}
+%(\lambda_{mA}-1)(\lambda_{ma}-1) - \rho_{mA} \rho_{ma}<0.
+%\end{equation}
 
+We are particularly concerned with the conditions under which a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, is greater than one. 
+If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur (i.e., if $\left\{(\lambda_{mA}-1)+ (\lambda_{ma}-1) \right\}/2 > 0$ then $\lambda > 1$. 
+If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$), the $m$ allele will not invade. 
+Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires
+\begin{equation}\label{eq:lambdasGen}
+\frac{\rho_{mA}}{\lambda_{mA}-1}+\frac{\rho_{ma}}{\lambda_{ma}-1}>0.
+\end{equation}
+\noindent For example, if we assume that only the $mA$ haplotype has a positive growth rate ($\lambda_{mA}>1$ and $\lambda_{ma}<1$), the second term in \eqref{eq:lambdasGen} is negative and invasion requires that number of recombinants from the fitter $mA$ haplotypes is larger than that of the less fit $ma$ haplotypes, relative to their growth rates. 
 
 Table \ref{tab:haplotype_growth} illustrates a number of key points about the invasion of neo-Y and neo-W mutations. 
-Firstly, Fisherian sex ratio selection will favour the spread of a neo-Y if the ancestral zygotic sex ratio is biased towards females, $\zeta>1/2$, and vice versa for a neo-W, see terms in square brackets. 
+Firstly, Fisherian sex ratio selection will favour the spread of a neo-Y if the ancestral zygotic sex ratio is biased towards females, $\zeta>1/2$, and vice versa for a neo-W (terms in square brackets increase $\lambda_{mi}$).
 However, the spread of a neo-Y (neo-W) also depends on the male (female) fitness of alleles that they are associated with, see terms in curly brackets. 
 Secondly, since a dominant neo-Y is always found in males, the allele frequencies at the neo-Y (\textbf{M}) locus only change in males. 
 Therefore, invasion by a neo-Y allele does not involve any female diploid selection terms ($w_{g}^{\female}$). 
@@ -320,8 +332,6 @@ Invasions by a neo-Y and a neo-W differ in this respect because sperm with or wi
 %If the \textbf{A} locus is initially linked to the ancestral sex-determining locus, \textbf{X}, the frequency of the $A$ allele among X- and Y-bearing sperm can differ (equation \ref{eq:freq_diffs}). 
 %Thus, eggs with and without a neo-W differ in the frequency of $A$ alleles they obtain from mating with male gametes. 
 
-%%% ADD r=0 HERE
-
 In order to explicitly determine the conditions under which a rare neo-sex-determining allele spreads, we must calculate the frequency of the $A$ allele in the ancestral population (i.e., $p^\female_X$, $p^\male_X$, and $p^\male_Y$). 
 We assume that the $A$ allele reaches a stable equilibrium frequency under the ancestral sex-determination system before the neo-sex-determining allele ($m$) arises. 
 We can analytically calculate the allele frequency of the $A$ allele using two alternative simplifying assumptions: 
@@ -331,33 +341,39 @@ We can analytically calculate the allele frequency of the $A$ allele using two a
 %We first consider the spread of neo-sex determining loci when the ancestral sex-determining locus is tightly linked to the selected \textbf{A} locus (assumption 1) with or without haploid selection. 
 %We then use the weak selection approximation that was also used in \citet{vanDoorn:2007eu,vanDoorn:2010hu} except that we allow haploid selection on the \textbf{A} locus. 
 
+\subsubsection*{Tight linkage with the ancestral sex-determining region}
+
 When there is tight linkage between the ancestral sex-determining region and the \textbf{A} locus ($r=0$), either the $A$ allele or the $a$ allele must be fixed on the Y. 
 % because selection on the Y is effectively haploid an incapably of maintaining a polymorphism in the absence of frequency dependent selection. 
 Because the labelling of alleles is arbitrary, we will assume that the $a$ locus is fixed on the Y without loss of generality ($p^\male_Y=0$). 
-If there are two alleles maintained at the \textbf{A} locus, the X can either be fixed for the $A$ allele ($p^\female_X=p^\male_X=1$) or polymorphic (0<$p^\female_X, p^\male_X$<1). These equilibrium allele frequencies and their stability conditions are given in the appendix.
+If there are two alleles maintained at the \textbf{A} locus, the X can either be fixed for the $A$ allele ($p^\female_X=p^\male_X=1$) or polymorphic (0<$p^\female_X, p^\male_X$<1). 
+These equilibrium allele frequencies and their stability conditions are given in the appendix.
 %However, because the X is present in both males and females, there are distinct selection pressures on X's in females and X's in males, which will always be paired with an $A$ allele from the Y. 
 
 A neo-Y will never invade an ancestral XY system that already has tight linkage with the locus under selection ($r=0$). 
-When then neo-Y is also tightly linked ($R=0$) a neo-Y will either remain linked to the $A$ allele or to the $a$ allele and so invasion is given directly by the larger of $\lambda_{mA}$ or $\lambda_{ma}$ (evaluated with $R=0$).
-A neo-Y can either be linked to the same allele as the ancestral Y, in which case it is a neutral mutation with no effect ($\lambda_{ma}=1$), or be linked to the alternative \textbf{A} allele, in which case it will not spread given that the initial equilibrium is stable ($\lambda_{mA}<1$). 
-Given that $\lambda_{mA}$ and $\lambda_{ma}$ both decrease with increasing $R$, more loosely linked neo-Y alleles also do not spread ($\lambda <1$ when $R>0$).
+%When then neo-Y is also tightly linked ($R=0$) a neo-Y will either remain linked to the $A$ allele or to the $a$ allele and so invasion is given directly by the larger of $\lambda_{mA}$ or $\lambda_{ma}$.
+A neo-Y haplotype with the same allele as the ancestral Y is neutral and does not change in frequency ($\lambda_{ma}=1$).
+The other neo-Y haplotype will not spread given that the initial equilibrium is stable ($\lambda_{mA}<1$). 
+Therefore, a neo-Y mutation cannot spread ($\lambda \leq 1$).
 
-However, under some conditions, a neo-W can invade an ancestral XY system. 
-When the neo-W is also tightly linked ($R=0$), it can spread in linkage with either the allele that is fixed on the Y or the allele that is more common on the X, i.e., under some conditions $\lambda_{ma}>1$ and/or $\lambda_{mA}>1$. 
-These conditions are given in more detail in the appendix. 
+Neo-W alleles, on the other hand, can invade an ancestral XY system under some conditions (given in detail in the appendix). 
+Given the ancestral allele frequencies in the population, neo-W-$A$ and/or neo-W-$a$ haplotypes can increase in frequency ($\lambda_{ma}>1$ and/or $\lambda_{mA}>1$). 
+Firstly, haploid selection causes the zygotic sex ratio to be male biased ($\zeta<1/2$) when the $a$ allele (which is fixed on the Y) is favoured during haploid competition or by meiotic drive. 
+This facilitates the spread of a neo-W because neo-W alleles cause zygotes to develop as the rarer female sex. 
+However, neo-W alleles can also be favoured via their associations with \textbf{A} locus alleles that confer a fitness advantage in females.
+We will first explore these situations by assuming that there is no haploid selection, which means that there are no zygotic sex ratio biases.
 
-When $\lambda_{ma}>1$, a neo-W linked to the $a$ allele spreads because it is favoured by selection in females despite the fact that the $a$ allele was stably fixed on the Y, which we might commonly assume to harbour male beneficial alleles. 
-This situation can occur when there is a male-biased zygotic sex ratio and/or when the $a$ allele has higher fitness in females (given the 
 
-Explain $ma$ and $mA$ hypotheses. 
+... this holds for moderate amounts of recombination between the neo-W and the selected locus, $0<R<<1$, indicating that, contrary to the conclusions of \cite{vanDoorn:2010hu}, neo sex chromosomes that reduce linkage with selected loci can invade.
 
-We can also simplify cases where $R>0$ by assuming that selection and drive are weak ($s^\Hermaphrodite$, $t^\Hermaphrodite$, $\alpha_{\Delta}^\Hermaphrodite$ of order $\epsilon$), which implicitly assumes that $R$ is relatively large. 
+\subsubsection*{Loose linkage with the ancestral sex-determining region}
+
 
 %weak selection
 %We are particularly concerned with whether or not a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, is greater than one. 
 %Here, we explicitly determine the conditions under which invasion occurs by assuming that the $A$ allele reaches an equilibrium frequency under the ancestral sex-determination system before the neo-sex-determination system ($m$) arises. 
 %The equilibrium frequency of $A$ on different ancestral backgrounds ($\hat{p}^\male_Y$, $\hat{p}^\male_X$, and $\hat{p}^\female_X$) is given by equations \eqref{eq:pAve} and \eqref{eq:freq_diffs} where we assume selection and meiotic drive are weak relative to recombination ($s^\Hermaphrodite$, $t^\Hermaphrodite$, $\alpha_{\Delta}^\Hermaphrodite$ of order $\epsilon$). 
-Under weak selection, we denote the leading eigenvalues describing the invasion of a neo-Y ($k=0$) and a neo-W ($k=1$) into an ancestrally XY system by $\lambda_{Y',XY}$ and $\lambda_{W',XY}$, respectively, which are given by
+Assuming that selection is weak relative to all recombination rates ($r$, $R$ and $\chi$), we denote the leading eigenvalues describing the invasion of a neo-Y ($k=0$) and a neo-W ($k=1$) into an ancestrally XY system by $\lambda_{Y',XY}$ and $\lambda_{W',XY}$, respectively, which are given by
 
 \begin{equation}
 \lambda_{Y',XY} =1+ V_{A}S_{A}^2\frac{ \left( r-R \right) }{r R}+O\left(\epsilon^3 \right) 
@@ -435,9 +451,11 @@ Thus, if the zygotic sex ratio is crucial to the evolution of new genetic sex-de
 However, we find that invasion by a homogametic neo-sex-determining allele (XY to XY, or ZW to ZW) or by a heterogametic neo-sex-determining allele (XY to ZW or ZW to XY) occur under the same conditions. 
 That is, we can show that $\lambda_{Y',XY}=\lambda_{W',ZW}$ and $\lambda_{Y',ZW}=\lambda_{W',XY}$ (at least up to order $\epsilon^3$; for a numerical example, compare Figure \ref{fig:Combination_Turnover}A,B to Figure \ref{fig:Combination_Turnover}C,D).
 
+\subsubsection*{Environmental sex determination}
+
 We next consider the case where the new sex-determining mutation, $m$, causes sex to be determined stochastically or by environmental conditions (environmental sex determiner, ESD). 
 We assume that individuals carrying the $m$ allele develop as females in a fraction, $k$, of the environments they (randomly) experience. 
-The spread of these mutations is given by 
+Assuming weak selection, the spread of these mutations is given by 
 
 \begin{equation}
 \begin{split}
@@ -453,7 +471,7 @@ which reduces to $\lambda_{Y',XY}$ when $k=0$ and $\lambda_{W',XY}$ when $k=1$.
 Under Fisherian sex ratio selection, autosomal modifiers favour equal investment in male and female offspring, i.e., a 1:1 sex ratio \citep{Fisher:1930wy,Charnov:1982wg,West:2009we}. 
 A novel environmental sex-determiner that causes half of its carriers to become female and half to become male ($k=1/2$) will be in males half of the time and in females half of the time (like an autosome).
 In addition, these novel sex-determination alleles equalize the sex ratio and so one might expect them to be favoured by Fisherian sex ratio selection when the resident sex ratio is biased.
-However, we find that the growth rate of a rare, dominant offspring-controlled neo-ESD allele that produces males or females with equal probability ($k=1/2$) is
+However, assuming weak selection, we find that the growth rate of a rare, dominant offspring-controlled neo-ESD allele that produces males or females with equal probability ($k=1/2$) is
 \begin{equation}
 \lambda_{ESD',XY} =1+ \frac{1}{2}\frac{(\lambda_{Y',XY}-1) + (\lambda_{W',XY}-1)}{2} \Big|_{R=1/2} + O\left(\epsilon^3\right),
 %V_A \frac{r}{1-2r}  \frac{s_{f} \left( s^\male - 3 s^\female\right) }{8 \left( s_{f} + s_{m} \right)^2} t_{m}^2.
@@ -477,7 +495,8 @@ For example, if there is haploid selection in males (either drive or pollen/sper
 Fisherian sex ratio selection is sometimes considered in terms of balancing parental investment in male versus female offspring \citep{Charnov:1982wg}.
 In addition, under environmental sex-determination, the proportion of males/females is sometimes controlled by the mother, e.g., the proportion of eggs laid in warm versus cold environments could determine the sex ratio of offspring. 
 We therefore also considered the invasion of a neo-sex-determining allele ($m$) in a model in which mothers that have at least one $m$ allele produce daughters with probability $k$. 
-As with offspring-controlled ESD, for all $k\in\{0,1/2,1\}$, we find that invasion into an ancestrally XY system is the same as invasion into an ancestrally ZW system (at least up to order $\epsilon^3$), implying transitions between genetic sex determination and maternally controlled environmental sex determination are not driven by Fisherian sex ratio selection on biased zygotic sex ratios.
+As with offspring-controlled ESD, for all $k\in\{0,1/2,1\}$, we find that invasion into an ancestrally XY system is the same as invasion into an ancestrally ZW system (at least up to order $\epsilon^3$, assuming weak selection), implying transitions between genetic sex determination and maternally controlled environmental sex determination are not driven by Fisherian sex ratio selection on biased zygotic sex ratios.
+\textcolor{red}{(maternal analysis still lacks meiotic drive)}
 
 %One might think that when the sex of zygotes is under the control of mothers, there would be strong selection to balance the sex ratio among zygotes. 
 %However, we find that, with no meiotic drive and weak selection, the invasion fitness of a dominant, maternally controlled sex-determiner that produces proportion $k$ daughters can be written
@@ -927,7 +946,7 @@ Various forms of selection can maintain a polymorphism at the \textbf{A} locus, 
 \begin{table}[ht]
 \centering
 \smallskip
-\caption{mean fitnesses in resident ($M$ fixed, XY sex determination) }
+\caption{mean fitnesses in resident population ($M$ fixed, XY sex determination) }
 \begin{tabular}{l l }
 \hline\hline
   Sex \& Life Cycle Stage & Mean Fitness \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
@@ -939,16 +958,18 @@ Various forms of selection can maintain a polymorphism at the \textbf{A} locus, 
   $\begin{array}{l}  \{ p_X^\female w_A^\female p_X^\male w_A^\male w_{AA}^\female + \\
   (1 - p_X^\female) w_a^\female p_X^\male w_A^\male w_{Aa}^\female + \\
   p_X^\female w_A^\female (1 - p_X^\male) w_a^\male w_{Aa}^\female + \\
-  (1-p_X^\female) w_a^\female (1 - p_X^\male) w_a^\male w_{aa}^\female \} / \{ \bar{w}_H^\female \bar{w}_H^\male\}
+  (1-p_X^\female) w_a^\female (1 - p_X^\male) w_a^\male w_{aa}^\female \} / \{ \bar{w}_H^\female \bar{w}_H^\male \zeta \}
   \end{array} 
   $ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
   males ($\bar{w}^\male$) & 
   $\begin{array}{l} \{ p_X^\female w_A^\female  p_Y^\male w_A^\male w_{AA}^\male + \\
   (1 - p_X^\female) w_a^\female  p_Y^\male w_A^\male w_{Aa}^\male + \\
   p_X^\female w_A^\female  (1 - p_Y^\male) w_a^\male w_{Aa}^\male + \\
-  (1-p_X^\female) w_a^\female  (1 - p_Y^\male) w_a^\male w_{aa}^\male \} / \{ \bar{w}_H^\male \bar{w}_H^\male\} 
+  (1-p_X^\female) w_a^\female  (1 - p_Y^\male) w_a^\male w_{aa}^\male \} / \{ \bar{w}_H^\female \bar{w}_H^\male (1-\zeta)\} 
   \end{array}
-  $ \\ [0.5ex]  \noalign{\vskip 0.5ex}
+  $ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  zygotic sex ratio $\zeta$ & $\{ (1-q)(p_X^\male w_A^\male+(1-p_X^\male)w_a^\male)\} / \bar{w}_H^\male $
+   \\ [0.5ex]  \noalign{\vskip 0.5ex}
   \hline \hline
   \label{tab:meanfitnesses}
  \end{tabular}
@@ -966,23 +987,23 @@ We therefore focus on the five equilibria that maintain both $A$ and $a$ alleles
 \begin{equation*}
 \begin{split}
 (A)\ \ \ &\hat{p}_{Y}^{\male}=0,
-\ \hat{q}=\frac{1}{2}-\frac{(\alpha^{\male}-1/2)w_{Aa}^{\male} \Phi}{w_{Aa}^{\male} \Phi+ w_{aa}^{\male} \Psi},\\
-&\hat{p}_{X}^{\female}=\frac{w_{a}^{\female} \Phi}{w_{a}^{\female} \Phi+ w_{A}^{\female} \Psi},
-\ \hat{p}_{X}^{\male}=\frac{2 \alpha^{\male}w_{Aa}^{\male} \Phi}{2\alpha^{\male}w_{Aa}^{\male} \Phi +w_{AA}^{\male} \Psi}\\
+\ \hat{q}=\frac{1}{2}-\frac{(\alpha^{\male}-1/2)w_{Aa}^{\male} \phi}{w_{Aa}^{\male} \phi+ w_{aa}^{\male} \psi},\\
+&\hat{p}_{X}^{\female}=\frac{w_{a}^{\female} \phi}{w_{a}^{\female} \phi+ w_{A}^{\female} \psi},
+\ \hat{p}_{X}^{\male}=\frac{2 \alpha^{\male}w_{Aa}^{\male} \phi}{2\alpha^{\male}w_{Aa}^{\male} \phi +w_{AA}^{\male} \psi}\\
 (A')\ \ \ &\hat{p}_{Y}^{\male}=1,
-\ \hat{q}=\frac{1}{2}+\frac{(\alpha^{\male}-1/2)w_{Aa}^{\male} \Phi'}{w_{Aa}^{\male} \Phi' + w_{AA}^{\male} \Psi'},\\
-&\hat{p}_{X}^{\female}=1-\frac{w_{A}^{\female} \Phi'}{w_{A}^{\female} \Phi'+ w_{a}^{\female} \Psi'},
-\ \hat{p}_{X}^{\male}=1-\frac{2(1-\alpha^{\male})w_{Aa}^{\male} \Phi'}{2(1-\alpha^{\male})w_{Aa}^{\male} \Phi'+w_{aa}^{\male} \Psi'}\\
+\ \hat{q}=\frac{1}{2}+\frac{(\alpha^{\male}-1/2)w_{Aa}^{\male} \phi'}{w_{Aa}^{\male} \phi' + w_{AA}^{\male} \psi'},\\
+&\hat{p}_{X}^{\female}=1-\frac{w_{A}^{\female} \phi'}{w_{A}^{\female} \phi'+ w_{a}^{\female} \psi'},
+\ \hat{p}_{X}^{\male}=1-\frac{2(1-\alpha^{\male})w_{Aa}^{\male} \phi'}{2(1-\alpha^{\male})w_{Aa}^{\male} \phi'+w_{aa}^{\male} \psi'}\\
 (B)\ \ \ &\hat{p}_{Y}^{\male}=0,\ \hat{p}_{X}^{\female}=1,\ \hat{p}_{X}^{\male}=1, \ \hat{q}=1-\alpha^{\male}\\
 (B')\ \ \ &\hat{p}_{Y}^{\male}=1,\ \hat{p}_{X}^{\female}=0,\ \hat{p}_{X}^{\male}=0, \ \hat{q}=\alpha^{\male}\\
 \end{split}
 \end{equation*}
 \begin{equation*}
 \begin{split}
-\Phi=&\alpha^{\female} w_{A}^{\female} w_{Aa}^{\female}(w_{a}^{\male} w_{aa}^{\male} + 2 \alpha^{\male} w_{A}^{\male} w_{Aa}^{\male}) - w_{a}^{\male} w_{a}^{\female} w_{aa}^{\male} w_{aa}^{\female} \\
-\Psi=&(1-\alpha^{\female}) w_{a}^{\female} w_{Aa}^{\female}(w_{a}^{\male} w_{aa}^{\male} + 2 \alpha^{\male} w_{A}^{\male} w_{Aa}^{\male}) - 2\alpha^{\male} w_{A}^{\male} w_{A}^{\female} w_{Aa}^{\male} w_{AA}^{\female}\\
-\Phi'=&(1-\alpha^{\female}) w_{a}^{\female} w_{Aa}^{\female}(w_{A}^{\male} w_{AA}^{\male} + 2 (1-\alpha^{\male}) w_{a}^{\male} w_{Aa}^{\male}) - w_{A}^{\male} w_{A}^{\female} w_{AA}^{\male} w_{AA}^{\female}\\
-\Psi'=&\alpha^{\female} w_{A}^{\female} w_{Aa}^{\female}(w_{A}^{\male} w_{AA}^{\male} + 2 (1-\alpha^{\male}) w_{a}^{\male} w_{Aa}^{\male}) - 2(1-\alpha^{\male}) w_{a}^{\male} w_{a}^{\female} w_{Aa}^{\male} w_{aa}^{\female}\\
+\phi=&\alpha^{\female} w_{A}^{\female} w_{Aa}^{\female}(w_{a}^{\male} w_{aa}^{\male} + 2 \alpha^{\male} w_{A}^{\male} w_{Aa}^{\male}) - w_{a}^{\male} w_{a}^{\female} w_{aa}^{\male} w_{aa}^{\female} \\
+\psi=&(1-\alpha^{\female}) w_{a}^{\female} w_{Aa}^{\female}(w_{a}^{\male} w_{aa}^{\male} + 2 \alpha^{\male} w_{A}^{\male} w_{Aa}^{\male}) - 2\alpha^{\male} w_{A}^{\male} w_{A}^{\female} w_{Aa}^{\male} w_{AA}^{\female}\\
+\phi'=&(1-\alpha^{\female}) w_{a}^{\female} w_{Aa}^{\female}(w_{A}^{\male} w_{AA}^{\male} + 2 (1-\alpha^{\male}) w_{a}^{\male} w_{Aa}^{\male}) - w_{A}^{\male} w_{A}^{\female} w_{AA}^{\male} w_{AA}^{\female}\\
+\psi'=&\alpha^{\female} w_{A}^{\female} w_{Aa}^{\female}(w_{A}^{\male} w_{AA}^{\male} + 2 (1-\alpha^{\male}) w_{a}^{\male} w_{Aa}^{\male}) - 2(1-\alpha^{\male}) w_{a}^{\male} w_{a}^{\female} w_{Aa}^{\male} w_{aa}^{\female}\\
 \end{split}
 \end{equation*}
 
@@ -991,13 +1012,13 @@ A fifth equilibrium $(C)$ also exists where $A$ is present at an intermediate fr
 Thus, the Y can either be fixed for the $a$ allele (equilibria $A$ and $B$) or the $A$ allele (equilibria $A'$ and $B'$).
 The X chromosome can then either be polymorphic (equilibria $A$ and $A'$) or fixed for the alternative allele (equilibria $B$ and $B'$).
 Since equilibria $(A)$ and $(B)$ are equivalent to equilibria $(A')$ and $(B')$ with the labelling of $A$ and $a$ alleles interchanged, we discuss only equilibria $(A)$ and $(B)$, in which the Y is fixed for the $a$ allele. 
-If there is no haploid selection ($\alpha^{\Hermaphrodite}=1/2$, $w_{A}^{\Hermaphrodite}=w_{a}^{\Hermaphrodite}$), these equilibria are equivalent to those found by \cite{Lloyd1977} and \cite{Otto2014}.
+If there is no haploid selection ($\alpha^{\Hermaphrodite}=1/2$, $w_{A}^{\Hermaphrodite}=w_{a}^{\Hermaphrodite}=1$), these equilibria are equivalent to those found by \cite{Lloyd1977} and \cite{Otto2014}.
 
 We next calculate when $(A)$ and $(B)$ are locally stable for $r=0$. According to the `small parameter theory' \citep{Karlin:1972ab,Karlin:1972dq}, these stability properties are unaffected by small amounts of recombination between the SDR and \textbf{A} locus, although equilibrium frequencies may be slightly altered. 
 For the $a$ allele to be stably fixed on the Y requires that $\bar{w}_{Ya}^{\male}>\bar{w}_{YA}^{\male}$ where $\bar{w}_{Ya}^{\male}=w_{a}^{\male}(2 p_{X}^{\female}(1-\alpha^{\male}) w_{A}^{\female} w_{Aa}^{\male}+ (1-p_{X}^{\female})w_{a}^{\female} w_{aa}^{\male} )$ and $\bar{w}_{YA}^{\male}=w_{A}^{\male}(p_{X}^{\female} w_{A}^{\female} w_{AA}^{\male}+ 2 (1-p_{X}^{\female})\alpha^{\male}w_{a}^{\female} w_{aa}^{\male} )$. That is, $Ya$ haplotypes must have higher fitness than $YA$ haplotypes.  
-Substituting in $p_{X}^{\female} = \hat{p}_{X}^{\female}$ from above, fixation of the $A$ allele on the Y requires that $\gamma_{i}>0$ where $\gamma_{(A)}=w_{a}^{\male}(2(1-\alpha^{\male})w_{Aa}^{\male} \Phi + w_{aa}^{\male} \Psi)-w_{A}^{\male}(2\alpha^{\male}w_{Aa}^{\male} \Phi + w_{aa}^{\male} \Psi)$ for equilibrium $(A)$ and $\gamma_{(B)}=2(1-\alpha^{\male})w_{a}^{\male}w_{Aa}^{\male}-w_{A}^{\male}w_{AA}^{\male}$ for equilibrium $(B)$.
-Stability of a polymorphism on the X chromosome (equilibrium $A$) further requires that $\Phi >0$ and $\Psi >0$. 
-Fixation of the $a$ allele on the X (equilibrium ($B$)) is mutually exclusive with equilibrium $(A)$ and requires $\Psi<0$ and $w_{A}^{\female}w_{AA}^{\female}>(1-\alpha^{\female})w_{a}^{\female}w_{Aa}^{\female}$. 
+Substituting in $p_{X}^{\female} = \hat{p}_{X}^{\female}$ from above, fixation of the $A$ allele on the Y requires that $\gamma_{i}>0$ where $\gamma_{(A)}=w_{a}^{\male}(2(1-\alpha^{\male})w_{Aa}^{\male} \phi + w_{aa}^{\male} \psi)-w_{A}^{\male}(2\alpha^{\male}w_{Aa}^{\male} \phi + w_{aa}^{\male} \psi)$ for equilibrium $(A)$ and $\gamma_{(B)}=2(1-\alpha^{\male})w_{a}^{\male}w_{Aa}^{\male}-w_{A}^{\male}w_{AA}^{\male}$ for equilibrium $(B)$.
+Stability of a polymorphism on the X chromosome (equilibrium $A$) further requires that $\phi >0$ and $\psi >0$. 
+Fixation of the $a$ allele on the X (equilibrium ($B$)) is mutually exclusive with equilibrium $(A)$ and requires $\psi<0$ and $w_{A}^{\female}w_{AA}^{\female}>(1-\alpha^{\female})w_{a}^{\female}w_{Aa}^{\female}$. 
 
 \subsubsection*{Selection weak relative to recombination (weak selection)}
 
@@ -1054,50 +1075,226 @@ Without gametic competition or drive ($\alpha_{\Delta}^\Hermaphrodite=t^\Hermaph
 
 \subsection*{Invasion conditions}
 
-Here, we determine whether a rare neo-Y or neo-W allele spreads when rare, which occurs when $\lambda > 1$.
-We begin with the general result and then give explicit solutions under tight linkage and weak selection.
+%Here, we determine whether a rare neo-Y or neo-W allele spreads when rare, which occurs when $\lambda > 1$.
+%We begin with the general result and then give explicit solutions under tight linkage and weak selection.
  
-If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur (i.e., if $\left\{(\lambda_{mA}-1)+ (\lambda_{ma}-1) \right\}/2 > 0$ then $\lambda > 1$, see table \ref{tab:haplotype_growth} for $\lambda_{mi}$). 
-If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$), the $m$ allele will not invade. 
-Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires
-\begin{equation}\label{eq:neoYR}
-R \left[ 
-\frac{p^\female_X w^\female_A w^\male_a (1-\alpha^\male)}{ \bar{w}^\female_H \bar{w}^\male_H (\lambda_{mA}-1)} + 
+%If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur (i.e., if $\left\{(\lambda_{mA}-1)+ (\lambda_{ma}-1) \right\}/2 > 0$ then $\lambda > 1$, see table \ref{tab:haplotype_growth} for $\lambda_{mi}$). 
+%If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$), the $m$ allele will not invade. 
+%Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires
+%\begin{equation}\label{eq:neoYR}
+%R \left[ 
+%\frac{p^\female_X w^\female_A w^\male_a (1-\alpha^\male)}{ \bar{w}^\female_H \bar{w}^\male_H (\lambda_{mA}-1)} + 
 %p^\female_X \frac{w^\female_A}{\bar{w}^\female_H} \frac{w^\male_a(1-\alpha^\male)}{\bar{w}^\male_H} \frac{1}{\lambda_{mA}-1} + 
-\frac{(1 - p^\female_X) w^\female_a w^\male_A \alpha^\male}{ \bar{w}^\female_H \bar{w}^\male_H (\lambda_{ma}-1)} 
-\right] 
-\frac{w^\male_{Aa}}{q\bar{w}^\male} < 1,
-\end{equation}
+%\frac{(1 - p^\female_X) w^\female_a w^\male_A \alpha^\male}{ \bar{w}^\female_H \bar{w}^\male_H (\lambda_{ma}-1)} 
+%\right] 
+%\frac{w^\male_{Aa}}{q\bar{w}^\male} < 1,
+%\end{equation}
 
-\noindent
-for the neo-$Y$, and 
+%\noindent
+%for the neo-$Y$, and 
 
-\noindent
-\begin{equation}\label{eq:neoWR}
-R \left[ 
-\frac{\bar{p}^\male w^\male_A w^\female_a (1-\alpha^\female)}{ \bar{w}^\male_H \bar{w}^\female_H (\lambda_{mA}-1)} + 
-\frac{(1 - \bar{p}^\male) w^\male_a w^\female_A \alpha^\female}{ \bar{w}^\male_H \bar{w}^\female_H (\lambda_{ma}-1)} 
-\right] 
-\frac{w^\female_{Aa}}{(1-q)\bar{w}^\female} < 1,
-\end{equation}
+%\noindent
+%\begin{equation}\label{eq:neoWR}
+%R \left[ 
+%\frac{\bar{p}^\male w^\male_A w^\female_a (1-\alpha^\female)}{ \bar{w}^\male_H \bar{w}^\female_H (\lambda_{mA}-1)} + 
+%\frac{(1 - \bar{p}^\male) w^\male_a w^\female_A \alpha^\female}{ \bar{w}^\male_H \bar{w}^\female_H (\lambda_{ma}-1)} 
+%\right] 
+%\frac{w^\female_{Aa}}{(1-q)\bar{w}^\female} < 1,
+%\end{equation}
 
-\noindent
-for the neo-$W$. 
+%\noindent
+%for the neo-$W$. 
 
 %Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele, $m$, is expected to invade for any probability of recombination between loci \textbf{A} and \textbf{M}, $R$, when the net flow of recombinants is from the less fit (smaller $\lambda_{mi}$) to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative). %\textcolor{red}{Q: is it definitely possible to have negative square brackets for a equilibria maintained by selection?}
 %Assuming $g_A^* > 0$ and $g_a^* < 0$ without loss of generality, this is $-(1 - p^\female_X) w_{m,A} g_a^* < p^\female_X w_{m,a} g_A^*$.
 %When the net flow of recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus is small enough. %\textcolor{red}{Q:Is it the case that sometimes the square brackets are positive and invasion occurs for $r_{AM}=1/2$? In which case it might be better to have slightly different phrasing here.}
-Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele, $m$, is expected to invade for any probability of recombination between loci \textbf{A} and \textbf{M}, $R$, when the net flow of recombinants is from the less fit (smaller $\lambda_{mi}$) to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative).
-When the net flow of recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus is small enough. 
-To better understand when these scenarios are possible we next use knowledge of the equilibria and their stability under tight linkage and weak selection.
+%Equations \eqref{eq:neoYR} and \eqref{eq:neoWR} show that the new sex-determining allele, $m$, is expected to invade for any probability of recombination between loci \textbf{A} and \textbf{M}, $R$, when the net flow of recombinants is from the less fit (smaller $\lambda_{mi}$) to the more fit \textbf{A} background (making the terms inside the square brackets in Equations \ref{eq:neoYR} and \ref{eq:neoWR} negative).
+%When the net flow of recombinants is from the more fit to the less fit haplotype, the new sex-determining allele can still invade when the rate of recombination between it and the selected locus is small enough. 
+%To better understand when these scenarios are possible we next use knowledge of the equilibria and their stability under tight linkage and weak selection.
 
-\subsubsection*{Recombination weak relative to selection (tight linkage)}
+\subsubsection*{Recombination weak relative to selection (tight linkage between \textbf{A} and \textbf{X})}
 
-At equilibrium ($A$) we have 
+Here, we explore the conditions under which a neo-W invades an XY system assuming that the \textbf{A} locus is initially in close linkage with the ancestral sex-determining region ($r \approx 0$). 
+We disregard neo-Y mutations, which never spread given that the ancestral population is at a stable equilibrium. 
+At equilibrium $(B)$ we have 
 
+
+\begin{subequations}\label{Binvasion}
+\begin{align}
+\lambda_{mA}&=\frac{w_{A}^\male w_{AA}^\female \alpha^\male + 2 w_{a}^\male w_{Aa}^\female \alpha^\female(1-\alpha^\male)}{2w_{A}^\male  w_{AA}^\female \alpha^\male} \\
+\lambda_{ma}&=\frac{w_{a}^\female(w_{a}^\male w_{aa}^\female (1-\alpha^\male) + 2 w_{A}^\male w_{Aa}^\female(1-\alpha^\female)\alpha^\male)}{2w_{A}^\male w_{A}^\female w_{AA}^\female \alpha^\male} \\
+\rho_{mA}&= \frac{R w_{a}^\male w_{Aa}^\female \alpha^\female(1-\alpha^\male)}{w_{A}^\male w_{AA}^
+\female \alpha^\male} \\
+\rho_{ma}&= \frac{R w_{a}^\female w_{Aa}^\female (1-\alpha^\female)}{w_{A}^\female w_{AA}^
+\female} 
+\end{align}
+\end{subequations}
+
+\noindent
+In this case, the zygotic sex ratio ($\zeta$) is given by the difference in haploid selection in males on $a$ (fixed on the Y) and $A$ (fixed on the X) alleles, i.e., there are more males than females ($\zeta<1/2$) if $\alpha^\male<1/2$ and/or $w_{a}^\male>w_{A}^\male$. 
+Populations with a male biased zygotic sex ratio are more permissive to invasion by a neo-W ($\lambda_{mA}$ and $\lambda_{ma}$ larger).
+%In addition, the spread of neo-W alleles depends on the fitness of female diploids after mating with an X-$A$ or Y-$a$ male gamete, relative to the fitness of females in the population (all have genotype $AA$ and fitness $w_{AA}^\female$ at this equilibrium). 
+In addition, the spread rate of neo-W haplotypes is determined by their fitness in females. 
+Zygotes carrying dominant neo-W alleles will develop as females regardless of their genotype at the XY locus. Therefore, females result from matings with either X-$A$ or Y-$a$ male gametes. 
+The relative proportion of these male gametes is also determined by haploid selection in males; mating with a Y-$a$ male gamete is more likely if the $a$ allele is favoured during male gamete production or competition ($\alpha^\male<1/2$ and/or $w_{a}^\male>w_{A}^\male$). 
+
+Furthermore, haploid selection in females can directly select upon neo-W-$A$ or neo-W-$a$ haplotypes. 
+An $A$-bearing female gamete has the same fitness during haploid competition as the resident $A$-bearing female gametes. 
+On the other hand, $a$-bearing female gametes can be favoured or disfavoured during female haploid competition (favoured if $w_{a}^\female>w_{A}^\female$). 
+Meiotic drive in females ($\alpha^\female$) similarly affects the fitness of these haplotypes, except that meiotic drive only occurs in heterozygotes. 
+
+The other terms in equations \eqref{Binvasion} are more easily interpreted if we assume that there is no haploid selection in either sex, in which case $\lambda_{mA}>1$ when $w_{Aa}^\female>w_{AA}^\female$ and $\lambda_{ma}>1$ when $(w_{Aa}^\female+w_{aa}^\female)/2>w_{AA}^\female$.
+These conditions cannot be met under purely sexually antagonistic selection, where $a$ is directionally favoured in males ($w_{AA}^\male>w_{Aa}^\male>w_{aa}^\male$) and $A$ is directionally favoured in females ($w_{AA}^\female>w_{Aa}^\female>w_{aa}^\female$).  
+Essentially, the X is already as specialized as possible for the female beneficial allele (X-A is fixed), and the neo-W often makes daughters with the Y-a haplotype, increasing the flow of $a$ alleles into females, which reduces the fitness of those females.  
+
+If selection doesn't uniformly favour $A$ in females, however, neo-W-$A$ haplotypes and/or neo-W-$a$ haplotypes can spread at this equilibium.
+If $\lambda_{mA}>1$ (requiring $w_{Aa}^\female>w_{AA}^\female$), the implication is that $a$ is favoured by selection in females despite $A$ being fixed on the X, which must require that X-$A$ is sufficiently favoured in males to drive the frequency of X-$A$ to one (specifically, from the stability conditions, we must have $w_{Aa}^\male/((w_{aa}^\male+w_{Aa}^\male)/2)>w_{Aa}^\female/w_{AA}^\female$).
+
+Even if $w_{Aa}^\female>w_{AA}^\female$, the neo-W can spread alongside the $a$ allele ($\lambda_{ma}>1$) if there is sufficiently strong underdominance in females ($w_{aa}^\female>w_{Aa}^\female$), such that $(w_{Aa}^\female+w_{aa}^\female)/2>w_{AA}^\female$.  
+In this case, $a$ is not favored in females near the equilibrium where females are $AA$ (comparing $Aa$ to $AA$ genotypes) and yet the neo-W with $a$ can spread because it produces female $aa$ individuals by capturing Y-$a$ haplotypes.
+
+
+
+%\textcolor{red}{the versions for equil $(A)$ are not terrible but could be improved by cleverly re-writing with the $\phi$ and $\psi$ terms from above, I think...}
+
+
+Similar equations can be derived for equilibrium (A) by subbing the equilibrium allele frequencies into Table \ref{tab:haplotype_growth}.
+This gives
+
+\begin{subequations}\label{Ainvasion}
+\begin{align}
+\lambda_{mA}&= \frac{a}{b} \left[w_{AA}^\female w_{Aa}^\male w_A^\male \alpha^\male \phi + 2 w_{Aa}^\female \alpha^\female w_a^\male \frac{c}{d}\right] / w_a^\female \\
+\lambda_{ma}&= \frac{a}{b} \left[2 w_{Aa}^\female (1-\alpha^\female) w_{Aa}^\male w_A^\male \alpha^\male \phi+  w_{aa}^\female w_a^\male \frac{c}{d}\right] / w_A^\female \\
+\rho_{mA}&= \frac{a}{b} R \left[ 2 w_{Aa}^\female \alpha^\female w_a^\male \frac{c}{d} \right] / w_a^\female\\ 
+\rho_{ma}&= \frac{a}{b} R \left[ 2 w_{Aa}^\female (1-\alpha^\female) w_{Aa}^\male w_A^\male \alpha^\male \phi \right] / w_A^\female
+\end{align}
+\end{subequations}
+
+\noindent
+where 
+
+\begin{subequations}
+\begin{align}
+a &= w_a^\female \phi + w_A^\female \psi \\
+b &= w_{AA}^\female \phi (2 w_{Aa}^\male w_A^\male \alpha_\male \phi) + w_{Aa}^\female \psi (2 w_{Aa}^\male w_A^\male \alpha_\male \phi + w_{AA}^\male w_a^\male \psi) + w_{aa}^\female \psi(w_{AA}^\male w_a^\male \psi) \\
+c &= 2(w_{Aa}^\male\phi)^2(1-\alpha^\male)\alpha_\male + w_{Aa}^\male\phi(w_{AA}^\male \psi + w_{aa}^\male \psi \alpha^\male) + w_{aa}^\male \psi w_{AA}^\male \psi \\
+d &= 2 w_{Aa}^\male \alpha^\male \phi + w_{aa}^\male \psi
+\end{align}
+\end{subequations}
+
+\noindent
+Without haploid selection $\lambda_{mA}>1$ if and only if
+
+\begin{equation}
+2(w_{Aa}^\female-w_{aa}^\female)w_{AA}^\male \psi^2 > (w_{AA}^\female-w_{Aa}^\female)w_{Aa}^\male \phi (\phi-\psi)
+\end{equation}
+
+\noindent
+NOTES:  
+$\phi-\psi=w_{AA}^\female w_{Aa}^\male-w_{aa}^\female w_{aa}^\male$ and both $\phi$ and $\psi$ are positive by the equilibrium conditions. 
+Most important advance on the descriptions given for the (B) equilibrium is that this can be met with `purely' sexually antagonistic selection (directional but opposite in both sexes). 
+Basically, because W-A haplotypes never produce $aa$ females, that can be an advantage, even though they also produce a lot of $Aa$ females through obtaining the $a$ from Y-gametes. 
+Can be seen from the fact that the condition will be more easily met if there is a large benefit from never producing $aa$ females (LHS larger, although note that $w_{Aa}^\female$ and $w_{aa}^\female$ enter into $\phi$ and $\psi$ terms too). 
+Even if $R\neq 0$, there can be invasion with purely sexually antagonistic selection. 
+
+Without haploid selection $\lambda_{ma}>1$ if and only if
+
+\begin{equation}
+w_{Aa}^\male \phi^2(w_{aa}^\female + w_{Aa}^\female-2w_{AA}^\female) + (w_{aa}^\female-w_{Aa}^\female)(w_{Aa}^\male+2w_{AA}^\male) \phi \psi >0
+\end{equation}
+
+\noindent
+NOTES: Not met with purely sexually antagonistic selection but met in some other circumstances. 
+
+
+%Without haploid selection this reduces to
+%\begin{subequations}
+%\begin{align}
+%\lambda_{mA}&= \frac{a}{b} \left[w_{AA}^\female w_{Aa}^\male \phi / 2 + w_{Aa}^\female \frac{c}{d}\right]  \\
+%\lambda_{ma}&= \frac{a}{b} \left[w_{Aa}^\female w_{Aa}^\male \phi / 2 +  w_{aa}^\female \frac{c}{d}\right] \\
+%\rho_{mA}&= \frac{a}{b} R \left[ w_{Aa}^\female \frac{c}{d} \right] \\ 
+%\rho_{ma}&= \frac{a}{b} R \left[ w_{Aa}^\female w_{Aa}^\male \phi / 2 \right] 
+%\end{align}
+%\end{subequations}
+
+%These simplify considerably when there is no haploid selection:
+%
+%\begin{subequations}
+%\begin{align}
+%\lambda_{mA}&= \frac{(\phi + \psi)[(w_{AA}^\female + w_{Aa}^\female ) w_{Aa}^\male \phi + 2 w_{Aa}^\female w_{AA}^\male \psi ]}{2 (w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi)}\\
+%\lambda_{ma}&=  \frac{(\phi + \psi)[(w_{aa}^\female + w_{Aa}^\female ) w_{Aa}^\male \phi + 2 w_{aa}^\female w_{AA}^\male \psi ]}{2 (w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi)}\\
+%\rho_{mA}&= R \frac{(\phi + \psi) w_{Aa}^\female w_{AA}^\male}{2 (w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi)} \\ 
+%\rho_{ma}&= R \frac{(\phi + \psi) w_{Aa}^\female w_{Aa}^\male}{2 (w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi)}\\
+%\end{align}
+%\end{subequations}
+%
+%\begin{subequations}
+%\begin{align}
+%\lambda_{mA}&= [( w_{AA}^\female + w_{Aa}^\female ) w_{Aa}^\male \phi + 2 w_{Aa}^\female w_{AA}^\male \psi] a \\
+%\lambda_{ma}&=  [(w_{aa}^\female + w_{Aa}^\female ) w_{Aa}^\male \phi + 2 w_{aa}^\female w_{AA}^\male \psi ] a\\
+%\rho_{mA}&= R w_{Aa}^\female (w_{Aa}^\male \phi + 2 w_{AA}^\male \psi) c \\ 
+%\rho_{ma}&= R w_{Aa}^\female w_{Aa}^\male \phi c \\
+%\end{align}
+%\end{subequations}
+%\noindent
+%where 
+%$c = \frac{\phi + \psi}{2 [w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi]}$ and $\phi$ and $\psi$ are evaluated with $\alpha^{\Hermaphrodite}=1/2$ and $w_a^\Hermaphrodite=w_A^\Hermaphrodite=1$.
+
+
+
+With $R=0$ the two eigenvalues are $\lambda_{mA}$ and $\lambda_{ma}$.
+The neo-W can then invade on the $A$ background when $\lambda_{mA}>1$ and the neo-W can invade on the $a$ background when $\lambda_{ma}>1$.
+Even in this case it is difficult to see from equation \ref{Ainvasion} when the neo-W will invade.
+Below we discuss why $\lambda_{mA}$ and $\lambda_{ma}$ might be larger than one and confirm the logic numerically.
+
+
+For simplicity, consider the case of no haploid selection.
+A polymorphism at the $\mathbf{A}$ locus then requires sexually-antagonistic selection \citep{vanDoorn:2007eu}.
+Given that $a$ is fixed on the Y, one can consider the $a$ allele `male beneficial' and the $A$ allele to be `female beneficial'. 
+Because X chromosomes spend some time in males the frequency of $A$ on the X can reach an intermediate equilibrium (equilibrium A).
+
+We can therefore reason that when a neo-W invades equilibrium (A), it is likely to spread on the $A$ background as W chromosomes are always in females.
+The neo-W can outcompete the ancestral, `comprimising' X because it can specialize on females by fixing the `female beneficial' allele.  
+We call this the `sex-specialist hypothesis'.
+This hypothesis should only work when the benefit of specializing outweighs the cost of bringing Y chromosomes into females (the neo-W is epistatically dominant over the X/Y locus).
+
+One could also reason that, when the neo-W spreads, it does so precisely because it brings Y chromosomes, and their associated alleles, into females, something the X cannot do.
+However, this requires a somewhat particular (perhaps `perverse') equilibrium, where XX females do worse than XY females despite associations on the X and Y being built up by selection.
+One example of such a perverse equilibrium is produced by overdominance in both sexes.
+Overdominance in females selects for an allele frequency of 0.5 on the X ($A$ and $a$ equally frequent, maximizing the number of heterozygotes). 
+However, given that $a$ is fixed on the Y, overdominance in males selects for the X to become more associated with the $A$. 
+Thus, a compromising equilibrium is reached on the X chromosome and females fitness suffers due to the overproduction of $AA$ homozygotes.
+This sets up a scenario in which a neo-W can invade on the $a$ background, despite the fact that $a$ is fixed on the Y and in that sense `male beneficial'.
+We call this the `perverse hypothesis'.
+
+Figure \ref{fig:Region_Plots} shows where the sex-specialist (red) and perverse (blue) hypotheses are valid.
+The left panel demonstrates that both hypotheses can be simultaneously valid with overdominance in both sexes and sex differences in selection, which overlaps the parameter region where there is selection for increased recombination between the sex chromosomes \citep[compare with figure 2a in][]{Otto2014}.
+The right panel shows that the perverse hypothesis is no longer valid when selection is exactly the same in both sexes, despite the fact that there is selection for increased recombination between the sex chromosomes with sufficiently strong overdominance \citep[compare with figure 3 in][]{Otto2014}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Sex-specialist vs perverse hypotheses
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.45\linewidth]{regionplot_2a}
+\includegraphics[width=0.45\linewidth]{regionplot_3}\\
+\caption{
+Numerical exploration of where sex-specialist (red) and perverse (blue) hypotheses are valid, i.e., where an internally stable resident equilibrium can be invaded by a neo-W that is perfectly linked with the allele not fixed on the Y (red) or the allele that is fixed on the Y (blue). 
+\textbf{(Left)}
+The perverse equilibrium is only valid with overdominance while the sex-specialist hypothesis is valid over the entire range shown.
+Both hypotheses are simultaneously valid over much of the parameter space where increased recombination between the sex chromosomes is selected \citep[][figure 2a]{Otto2014}.
+\textbf{(Right)}
+Only the sex-specialist hypothesis is valid with no sex-differences in selection, despite selection for increased recombination between the sex-chromosomes with strong overdominance \citep[][figure 3]{Otto2014}.
+Parameters: $w_{Aa}^\Hermaphrodite = 1$, $w_a^\Hermaphrodite = w_A^\Hermaphrodite = 1$, $\alpha^\Hermaphrodite = 1/2$, $r=R=0$, and in left panel $w_{aa}^\female = w_{AA}^\female = 0.6$.
+}
+\label{fig:Region_Plots}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection*{Selection weak relative to recombination (weak selection)}
 
+With weak selection the leading eigenvalue for any $k$ is given, up to order $\epsilon^2$, by equation \ref{eq:lambda_ESD_k}.
 
 
 \newpage
