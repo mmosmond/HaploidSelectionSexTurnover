@@ -642,7 +642,12 @@ Therefore, an ancestral XY sex determination can have a biased zygotic sex ratio
 However, in panel D, a unlinked neo-Y invades an ancestral ZW sex determination system in a similar manner but no biases to the zygotic sex ratio occur. 
 With diploid selection alone, neo-sex-determining loci do not spread if they are less closely linked to the \textbf{A} locus than the ancestral sex-determining locus (see equation \eqref{eq:lambda_neoW} and Figure \ref{fig:Combination_Centimorgans}A). 
 In this plot there are no sex differences in selection and an equilibrium is maintained because selection in diploids opposes meiotic drive, $s^\female =s^\male = 1/5$, $h^\female = h^\male = 7/10$.
-\textcolor{red}{Aesthetic adjustments: Could add titles to the columns/rows: neo-W for row 1, neo-Y for row 3, $r=0.5$, $R=0.05$ for column 1 and $r=0.05$, $R=0.5$ for column 2. Could adjust padding (too much whitespace where there is no axis label). It also seems could increase ratio of font size relative to plot size to make figure more compact. Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).}
+\textcolor{red}{Aesthetic adjustments: 
+Could add titles to the columns/rows: neo-W for row 1, neo-Y for row 3, $r=0.5$, $R=0.05$ for column 1 and $r=0.05$, $R=0.5$ for column 2. 
+%Could adjust padding (too much whitespace where there is no axis label). 
+%It also seems could increase ratio of font size relative to plot size to make figure more compact. 
+%Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).
+}
 }
 \label{fig:Combination_Turnover}
 \end{figure}
@@ -661,7 +666,10 @@ Here we multiply male mean fitness and female mean fitness by two so that we can
 The mean fitness of females increases during the spread of neo-W alleles (A and B) and the mean fitness of males increases during the spread of neo-Y alleles (C and D). 
 However, when a neo-sex determining system evolves that is less closely linked to a locus under selection (B and D), population mean fitness decreases. 
 \textcolor{red}{
-Could add titles to the columns/rows: neo-W for row 1, neo-Y for row 3, $r=0.5$, $R=0.05$ for column 1 and $r=0.05$, $R=0.5$ for column 2. \& possibly adjust padding (too much whitespace?). Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).}
+Could add titles to the columns/rows: neo-W for row 1, neo-Y for row 3, $r=0.5$, $R=0.05$ for column 1 and $r=0.05$, $R=0.5$ for column 2. 
+%\& possibly adjust padding (too much whitespace?). 
+%Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).
+}
 }
 \label{fig:Combination_MeanFit}
 \end{figure}
@@ -682,10 +690,13 @@ We used Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert 
 In A, there is no haploid selection ($t^\Hermaphrodite=\alpha^\Hermaphrodite_{\Delta}=0$) and selection in diploids is sexually antagonistic \citep[following][]{vanDoorn:2010hu}, in which case a neo-W can only invade if it is more closely linked to the selected locus ($s^\female=1/10$, $h^\female=7/10$ $s^\male=-1/10$, $h^\male=3/10$).
 In B-D we include haploid selection and assume that selection in diploids is not sexually-antagonistic ($s^\female s^\male>0$). 
 A polymorphism can then be maintained by opposing selection between the haploid and diploid phases. 
-In B, there is drive in favour of the $a$ allele in males ($\alpha^\male_{\Delta}=-1/10$), no female meiotic drive or gametic competition, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), and equal selection in diploid sexes ($s^\female=s^\male=1/10$, $h^\female=h^\male=7/10$). In this case, a neo-W can invade even when the selected locus is more closely linked to the ancestral sex determining locus (see Table \ref{tab:specialcases} and Figure \ref{fig:Combination_Turnover}). 
+In B, there is drive in favour of the $a$ allele in males ($\alpha^\male_{\Delta}=-1/5$), no female meiotic drive or gametic competition, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), and equal selection in diploid sexes ($s^\female=s^\male=1/5$, $h^\female=h^\male=7/10$). In this case, a neo-W can invade even when the selected locus is more closely linked to the ancestral sex determining locus (see Table \ref{tab:specialcases} and Figure \ref{fig:Combination_Turnover}). 
 In C and D, there is gametic competition among male gametes only (favouring $a$, $t^\male=-1/10$) and no meiotic drive or gametic competition in females ($t^\female=\alpha^\Hermaphrodite_{\Delta}=0$). 
 In this case, the neo-W does not invade if $s^\female>s^\male$ (panel C: $s^\female=3/20$, $s^\male=1/20$) but does if $s^\female<s^\male$ (panel D: $s^\female=1/20$, $s^\male=3/20$), see Table \ref{tab:specialcases}.
-\textcolor{red}{I suspect that panel C has a region where no equilibrium is maintained (CHECK! Maybe include different parameters here or remove the part when no equilibrium). Currently use different parameters for B than using in figure \ref{fig:Combination_Turnover} (selection/drive twice as strong in turnover figure). This plot would also benefit from titles giving, e.g., ``sexually-antagonistic selection, $s^\female s^\male<0$'' for A, ``male meiotic drive, $s^\female s^\male>0$'' for B}
+\textcolor{red}{
+I suspect that panel C has a region where no equilibrium is maintained (CHECK! Maybe include different parameters here or remove the part when no equilibrium). 
+%Currently use different parameters for B than using in figure \ref{fig:Combination_Turnover} (selection/drive twice as strong in turnover figure). 
+This plot would also benefit from titles giving, e.g., ``sexually-antagonistic selection, $s^\female s^\male<0$'' for A, ``male meiotic drive, $s^\female s^\male>0$'' for B}
 }
 \label{fig:Combination_Centimorgans}
 \end{figure}
