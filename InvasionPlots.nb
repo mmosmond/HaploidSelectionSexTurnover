@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[   1450838,      33550]
-NotebookOptionsPosition[   1443160,      33316]
-NotebookOutlinePosition[   1443536,      33333]
-CellTagsIndexPosition[   1443493,      33330]
+NotebookDataLength[   1471405,      34084]
+NotebookOptionsPosition[   1462711,      33823]
+NotebookOutlinePosition[   1463087,      33840]
+CellTagsIndexPosition[   1463044,      33837]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25949,7 +25949,7 @@ Cell[BoxData[{
    3.6973073162079563`*^9, {3.697307425539186*^9, 3.697307508750765*^9}, {
    3.697307556660627*^9, 3.697307762039536*^9}, {3.697307798126011*^9, 
    3.6973078332993517`*^9}}]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -29961,6 +29961,58 @@ Cell[BoxData[{
    3.706984944626074*^9, 3.706984953618503*^9}}],
 
 Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.708112738350052*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.708112739917472*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.708112741485552*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Solve :: \
+ratnz\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.70811274151941*^9}],
+
+Cell[BoxData[
  GraphicsBox[{{{}, 
     {GrayLevel[0], Thickness[0.006], LineBox[CompressedData["
 1:eJxTTMoPSmViYGAQBWIQDQGeBxgeNHeyV0TsB3Mb3A4wiEyYITstAcJncDnA
@@ -30059,10 +30111,11 @@ I4NC5jx6lEojybXoP77k+GwdupFVbTZuQHvwt5p919FDMcJzTSb0zv8C/wV/
    3.6972995603252487`*^9, {3.697299601657997*^9, 3.6972996169861403`*^9}, 
    3.697303863697106*^9, 3.69730801093462*^9, 3.6973083784529037`*^9, 
    3.697308708058134*^9, 3.697309018166469*^9, 3.69731135186022*^9, 
-   3.706973929653226*^9, 3.706984955371716*^9, 3.706984989779311*^9}]
+   3.706973929653226*^9, 3.706984955371716*^9, 3.706984989779311*^9, 
+   3.708113053613165*^9}]
 }, Open  ]]
 }, Closed]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -30085,13 +30138,13 @@ Cell["Parameters", "Subsubsection",
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"trysAf", "=", "0.2"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"trysAf", "=", "0.1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"tryhAf", "=", "0.7"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"tryhAm", "=", "0.7"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"trysAm", "=", "0.2"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"trysAm", "=", "0.1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"tryt", "=", "0"}], ";"}], "\n", 
  RowBox[{
@@ -30122,7 +30175,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"tryFa", "=", "1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"tryMdA", "=", "0.4"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"tryMdA", "=", "0.45"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"tryFdA", "=", "0.5"}], ";"}]}], "Input",
  CellChangeTimes->{{3.686912928747662*^9, 3.686912929012165*^9}, {
@@ -30137,7 +30190,8 @@ Cell[BoxData[{
    3.691265619870309*^9, {3.6912657518602047`*^9, 3.691265752120894*^9}, {
    3.691330032798533*^9, 3.691330033924959*^9}, 3.6913426754400377`*^9, 
    3.697225754839023*^9, 3.706897649508643*^9, 3.706986621164817*^9, {
-   3.706986652681264*^9, 3.706986656614283*^9}}]
+   3.706986652681264*^9, 3.706986656614283*^9}, {3.708112178471826*^9, 
+   3.708112182616222*^9}}]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -30404,7 +30458,7 @@ and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
 \\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.706986716484174*^9}],
+ CellChangeTimes->{3.706986716484174*^9, 3.7081122725217037`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -30417,7 +30471,7 @@ and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
 \\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.706986718634157*^9}],
+ CellChangeTimes->{3.706986716484174*^9, 3.708112274476245*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -30430,7 +30484,7 @@ and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
 \\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.706986720844095*^9}],
+ CellChangeTimes->{3.706986716484174*^9, 3.708112276480721*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -30443,26 +30497,26 @@ calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
 \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.7069867208838797`*^9}],
+ CellChangeTimes->{3.706986716484174*^9, 3.7081122765054903`*^9}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, 
     {GrayLevel[0], Thickness[0.006], LineBox[CompressedData["
-1:eJxTTMoPSmViYGAQBWIQDQGeBxiqpZvqJzbZg7kNbgcYbkl9KL/VDuEzuBxo
-0PFkXKU1ASrveODA8oajbvwzoPJ2Bxb4VmxesGwplG954ELsm+9PFx2G8k0O
-MGhUfV5qtAzK1ztwwHFu8y2fWVC+ygEHkzsPynZMhvJFDjgsOPr9u+REe7gT
-b+tf7J87ASbv0CBgqL7vLUxexaHBe9rV61Onwsx3OPDn+H3uzLkw+x0eXEv/
-OfsYzH5Lhw3ZTcF/b22Cud/hgY2f3lm/ZTD/ORy4slGDr3I2zP8ODvXPb5c1
-ToKFj0OD1XpH79ddUHlPh4bLGgdmLW+xBwBGOWdm
+1:eJxTTMoPSmViYGAQBWIQDQGeBxjspG7HfU+yB3Mb3A4wKKlGTS/LgPAZXA4w
+XDryuG1HAVTe8QDD3zcf3QoqofJ2Bxg+H41zuNsB5VsecCiYmt3gsxHKNznA
+YLtrCXdiJ5Svd4DB8VlIb1c1lK9ygKEl+Uo2dwmUL3KAYY70gns8hfZwJ+p/
+WjfbrQAm78Cw0PG2qTNMXsWBwXdmy582mH49B4bQuNxZMTUw+x0YuH7cS2SC
+2W/p4PBCPKfHZz7M/Q4MIaLVs2s7YP5zYHDYvHCFXxXM/w4Mp/PNQvwLYeHj
+wPCGjXOjTSZU3tOB4YXT+cf1yfYAlwdWBQ==
       "]]}, {}}, {{}, 
     {RGBColor[1, 0, 0], Thickness[0.006], Dashing[Medium], 
      LineBox[CompressedData["
-1:eJxTTMoPSmViYGAQBWIQDQGeBxg6WCL/rGq2B3Mb3A4w1P6MlV3QCeEzuBw4
-0F8x6+7miVB5xwMHHCLcjNhnQ+XtDjxILon3v7oCyrc8UKBgYCAZtQ/KNzmQ
-8KEm+G3JSihf70CDw7vTezPmQvkqBw4cObbmi+tUKF/kQINPjrjkYah9QHAg
-ZvJ88aYJMHkHhg28ziJXYHwVB4djv7QPHpwEM9+hgeOiVtnfaTD7HRr43x5W
-T5oPc58DQ7rDjYwvy2Hud3BoDFxt8mIuzH8ODsz9Vz4GTIH536EhxIzv0Zpe
-WPg4NES8zik63waV93RoOLo9dJdWkz0A5Nlgrg==
+1:eJxTTMoPSmViYGAQBWIQDQGeBxiO7f+wxC7ZHsxtcDvA8G9nj++7DAifweUA
+wxx961r1Qqi84wGGwwVV01OqoPJ2BxgWFy58G90F5VseOHD6xvq62nVQvsmB
+hqzq7/zPYfJ6BxjWinmHddVA+SoHGAql8oVrSqB8kQMMygrfj1pC7QOBRx53
+c+0KYPIODIlvfh78BuOrODA0/7fYuqMYZr4DA4/e++NWMPeZODDcXbt6eU0r
+zH0ODbpGTNe3zIC534FB8hvzsyctMP85MJzPVKlhqID534EhSeWKTUABLHwc
+GAI6N601hoWPpwNDU9HMyqdJ9gCJI1oX
       "]]}, {}}, {{}, {}, 
     {GrayLevel[0], Dashing[{0, Small}], LineBox[CompressedData["
 1:eJxF1GtIEwAQAOBpljOtxIa5pcSsTExFs+nma25ON2tJWgmJmu+macMHZvhK
@@ -30540,10 +30594,10 @@ I4NC5jx6lEojybXoP77k+GwdupFVbTZuQHvwt5p919FDMcJzTSb0zv8C/wV/
   3.697299651184936*^9, 3.69729969345706*^9, 3.697299793985476*^9, 
   3.6973091197630177`*^9, 3.697309397239718*^9, 3.697311352741596*^9, 
   3.706974250249805*^9, 3.70698500779178*^9, 3.706986648723764*^9, 
-  3.7069870480291*^9}]
+  3.7069870480291*^9, 3.7081125798521433`*^9}]
 }, Open  ]]
 }, Closed]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -30873,6 +30927,58 @@ Cell[BoxData[{
    3.706985031101255*^9, 3.7069850356813307`*^9}}],
 
 Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.708113115732791*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7081131173164377`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.708113118860189*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Solve :: \
+ratnz\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.708113118882666*^9}],
+
+Cell[BoxData[
  GraphicsBox[{{{}, 
     {GrayLevel[0], Thickness[0.006], LineBox[CompressedData["
 1:eJxTTMoPSmViYGAQBWIQDQGeBxge2O8u4rXaD+Y2uB1gSBCN+/nQBcJncDnA
@@ -30976,52 +31082,399 @@ I4NC5jx6lEojybXoP77k+GwdupFVbTZuQHvwt5p919FDMcJzTSb0zv8C/wV/
   3.69723401238441*^9, 3.6972340479080343`*^9, 3.6972349750707197`*^9, 
   3.697250510441517*^9, 3.697253045719158*^9, 3.697299966673517*^9, 
   3.697309666017503*^9, 3.697311353863263*^9, 3.7069745713524847`*^9, 
-  3.70698504170492*^9}]
+  3.70698504170492*^9, 3.708113430315531*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Examining stable equilibria", "Subsubsection",
+ CellChangeTimes->{{3.7081140812928963`*^9, 3.7081140915401077`*^9}, {
+  3.7081146931603394`*^9, 3.708114696430606*^9}}],
+
+Cell["\<\
+notice that the wildly divergent invasion fitnesses around -25 (a=x) are the \
+result of different stable polymorphic equilibria\
+\>", "Text",
+ CellChangeTimes->{{3.708113948374827*^9, 3.7081139886215076`*^9}, {
+  3.708114310604453*^9, 3.70811431239858*^9}, {3.708114702845553*^9, 
+  3.708114704085761*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", ",", 
+         RowBox[{
+          RowBox[{"sieveXY", "[", 
+           RowBox[{
+           "tryFAA", ",", "tryFAa", ",", "tryFaa", ",", "tryMAA", ",", 
+            "tryMAa", ",", "tryMaa", ",", "tryMA", ",", "tryMa", ",", "tryFA",
+             ",", "tryFa", ",", "tryMdA", ",", "tryFdA", ",", 
+            RowBox[{"setr", "[", 
+             RowBox[{"x", ",", "a", ",", "m"}], "]"}]}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "1"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "xplotmin", ",", "xplotmax", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"xplotmax", "-", "xplotmin"}], ")"}], "/", "npoints"}]}], 
+        "}"}]}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Black"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+   
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", ",", 
+         RowBox[{
+          RowBox[{"sieveZW", "[", 
+           RowBox[{
+           "tryFAA", ",", "tryFAa", ",", "tryFaa", ",", "tryMAA", ",", 
+            "tryMAa", ",", "tryMaa", ",", "tryMA", ",", "tryMa", ",", "tryFA",
+             ",", "tryFa", ",", "tryMdA", ",", "tryFdA", ",", 
+            RowBox[{"setr", "[", 
+             RowBox[{"x", ",", "a", ",", "m"}], "]"}]}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "1"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "xplotmin", ",", "xplotmax", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"xplotmax", "-", "xplotmin"}], ")"}], "/", "npoints"}]}], 
+        "}"}]}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", "Dashed"}], "}"}]}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "1"}], "}"}]}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.708114424305543*^9, 3.7081146373868713`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, 
+    {GrayLevel[0], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAQBWIQDQGeB36s/2MkPfGWPZjb4HbgzOMGPQH12xA+g8sB
+PYOyozMl7kDlHQ+sU/eJqL19Fypvd+DLx4rIPbIPoXzLAxD6A5Rvgiavh6Zf
+BdV8BhE0+xkYUNzHIOLQuStvsr82jK/iEDrTtef7w5sw8x0KHa18rq6C8U0c
+LL05dvA1wPiWDlvEsrR542B8O4ddh/btqHW6CfOfwypzxk9ntWHyLg699k+P
+PpaAybs5WM3OmPCZAybv6bCq1Gty2u8b9gBtomN5
+      "]]}, {}}, {{}, 
+    {RGBColor[1, 0, 0], Dashing[{Small, Small}], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAQBWIQDQGeByLf+Ks+2HzdHsxtcDtge10lMaYDymdwOXA4
+y+R9mRpM3vGAc76c4z35a1B5uwPBuXNupyZcgvItDzCgABM0eT00/Sqo5jOI
+oNnPwIDiPgYRh53nr24IPAnjqzj8Dwhn6LwC4+s5WCvb8ky8BeObOPS6/7t1
+5i6Mb+mQ8PCEQOl9GN/OYeu/ghjjB3D/OYR+mS+R8QDuf4fN76a98obLuzlk
+btzCwAiX93RQnP8ydg7QPAADPmWL
+      "]]}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  Method->{},
+  PlotRange->{0, 1},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{2., 2.}, {0., 0.}}]], "Output",
+ CellChangeTimes->{
+  3.7081144394311743`*^9, 3.708114519010706*^9, {3.7081145710959682`*^9, 
+   3.708114638214138*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[{
- RowBox[{
-  RowBox[{"a", "=", "x"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"sieveXY", "[", 
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
   RowBox[{
-  "tryFAA", ",", "tryFAa", ",", "tryFaa", ",", "tryMAA", ",", "tryMAa", ",", 
-   "tryMaa", ",", "tryMA", ",", "tryMa", ",", "tryFA", ",", "tryFa", ",", 
-   "tryMdA", ",", "tryFdA", ",", 
-   RowBox[{"setr", "[", 
-    RowBox[{"x", ",", "a", ",", "m"}], "]"}]}], 
-  "]"}], "\[IndentingNewLine]", 
- RowBox[{"sieveZW", "[", 
-  RowBox[{
-  "tryFAA", ",", "tryFAa", ",", "tryFaa", ",", "tryMAA", ",", "tryMAa", ",", 
-   "tryMaa", ",", "tryMA", ",", "tryMa", ",", "tryFA", ",", "tryFa", ",", 
-   "tryMdA", ",", "tryFdA", ",", 
-   RowBox[{"setr", "[", 
-    RowBox[{"x", ",", "a", ",", "m"}], "]"}]}], "]"}]}], "Input",
- CellChangeTimes->{{3.697310196627926*^9, 3.697310241347856*^9}, {
-  3.697310281824173*^9, 3.697310291808702*^9}}],
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", ",", 
+         RowBox[{
+          RowBox[{"sieveXY", "[", 
+           RowBox[{
+           "tryFAA", ",", "tryFAa", ",", "tryFaa", ",", "tryMAA", ",", 
+            "tryMAa", ",", "tryMaa", ",", "tryMA", ",", "tryMa", ",", "tryFA",
+             ",", "tryFa", ",", "tryMdA", ",", "tryFdA", ",", 
+            RowBox[{"setr", "[", 
+             RowBox[{"x", ",", "a", ",", "m"}], "]"}]}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "xplotmin", ",", "xplotmax", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"xplotmax", "-", "xplotmin"}], ")"}], "/", "npoints"}]}], 
+        "}"}]}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Black"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+   
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", ",", 
+         RowBox[{
+          RowBox[{"sieveZW", "[", 
+           RowBox[{
+           "tryFAA", ",", "tryFAa", ",", "tryFaa", ",", "tryMAA", ",", 
+            "tryMAa", ",", "tryMaa", ",", "tryMA", ",", "tryMa", ",", "tryFA",
+             ",", "tryFa", ",", "tryMdA", ",", "tryFdA", ",", 
+            RowBox[{"setr", "[", 
+             RowBox[{"x", ",", "a", ",", "m"}], "]"}]}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "xplotmin", ",", "xplotmax", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"xplotmax", "-", "xplotmin"}], ")"}], "/", "npoints"}]}], 
+        "}"}]}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", "Dashed"}], "}"}]}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "1"}], "}"}]}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.708114656181086*^9, 3.708114657288732*^9}}],
 
 Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"{", 
-   RowBox[{"1.`", ",", "1.`", ",", "0.`", ",", "0.5`"}], "}"}], 
-  "}"}]], "Output",
- CellChangeTimes->{{3.697310208797256*^9, 3.697310241847623*^9}, {
-   3.6973102825565853`*^9, 3.697310292180417*^9}, 3.697311354134944*^9, 
-   3.706974571609029*^9, 3.706985041912328*^9}],
+ GraphicsBox[{{{}, 
+    {GrayLevel[0], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAQBWIQDQGeB4z09Su/3L5pD+Y2uB2I2fsiY0npLQifweVA
+Gm/jse7c21B5xwOfHhQxx9nehcrbHTC4+N3y0YMHUL7lAQj9Aco3QZPXQ9Ov
+gmo+gwia/QwMKO5jEHE4tbZReHcxjK/i8OmXwIMNGjC+noPjEw7RgA83YPY7
+nBS7ITr9CIxv6aBTf/Tc9YUwvp1Dl3dS/4bWGzD/OTDLJGu25sHkXRyck4xv
+mkTD5N0cEs6yWL/3gsl7OvzznColZXvDHgBDz2UJ
+      "]]}, {}}, {{}, 
+    {RGBColor[1, 0, 0], Dashing[{Small, Small}], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAQBWIQDQGeB4pF22Jdim/Yg7kNbgdiPBLr1rlB+QwuB5L2
+rJ8X8eg6VN7xwPzZe5cyXr0Glbc7wHR7YurGX5egfMsDDCjABE1eD02/Cqr5
+DCJo9jMwoLiPQcRhFuNOQ5tOGF/FQbs6qGPnFBhfz2HtMkvd57NgfBOHpAfn
+5c3nwfiWDo9tW5a9nA/j2zkY9k+ftGYBzP+ODrnLf057tADuf4eNohN2HoXL
+uzn4XM//WwGX93SQeeT6QhDIBwC7Rmac
+      "]]}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  Method->{},
+  PlotRange->{0, 1},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{2., 2.}, {0., 0.}}]], "Output",
+ CellChangeTimes->{3.7081146577638063`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", ",", 
+         RowBox[{
+          RowBox[{"sieveXY", "[", 
+           RowBox[{
+           "tryFAA", ",", "tryFAa", ",", "tryFaa", ",", "tryMAA", ",", 
+            "tryMAa", ",", "tryMaa", ",", "tryMA", ",", "tryMa", ",", "tryFA",
+             ",", "tryFa", ",", "tryMdA", ",", "tryFdA", ",", 
+            RowBox[{"setr", "[", 
+             RowBox[{"x", ",", "a", ",", "m"}], "]"}]}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "3"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "xplotmin", ",", "xplotmax", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"xplotmax", "-", "xplotmin"}], ")"}], "/", "npoints"}]}], 
+        "}"}]}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Black"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+   
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", ",", 
+         RowBox[{
+          RowBox[{"sieveZW", "[", 
+           RowBox[{
+           "tryFAA", ",", "tryFAa", ",", "tryFaa", ",", "tryMAA", ",", 
+            "tryMAa", ",", "tryMaa", ",", "tryMA", ",", "tryMa", ",", "tryFA",
+             ",", "tryFa", ",", "tryMdA", ",", "tryFdA", ",", 
+            RowBox[{"setr", "[", 
+             RowBox[{"x", ",", "a", ",", "m"}], "]"}]}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "3"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "xplotmin", ",", "xplotmax", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"xplotmax", "-", "xplotmin"}], ")"}], "/", "npoints"}]}], 
+        "}"}]}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", "Dashed"}], "}"}]}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "1"}], "}"}]}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7081146665852013`*^9, 3.708114667758525*^9}}],
 
 Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"{", 
-   RowBox[{"0.`", ",", "0.`", ",", "1.`", ",", "0.5`"}], "}"}], 
-  "}"}]], "Output",
- CellChangeTimes->{{3.697310208797256*^9, 3.697310241847623*^9}, {
-   3.6973102825565853`*^9, 3.697310292180417*^9}, 3.697311354134944*^9, 
-   3.706974571609029*^9, 3.706985041913755*^9}]
+ GraphicsBox[{{{}, 
+    {GrayLevel[0], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAQBWIQDQGeBwwY3qWwRFyzB3Mb3A78XpWpf/zOVQifweXA
+S47dmi8EoPwGxwOdxcbylZ2XofJ2B9gKg0JWZJ2H8i0PMKAAEzR5PTT9Kqjm
+M4ig2c/AgOI+BhGHbbMs+M6thPFVHLRDuwwXP4bx9RweNM/NK+C7DuWbOEz5
+U3bUXB/Gt3RwryjQ+OcB49s5PFeNq9gQex3mP4eNb7YWTM+Dybs47G2Z2DOt
+Bibv5qBv80choAMm7+lgOi1ZxHrSdXsAO+1e0Q==
+      "]]}, {}}, {{}, 
+    {RGBColor[1, 0, 0], Dashing[{Small, Small}], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAQBWIQDQGeB9ptlQSmu9yxB3Mb3A6cvOH7tzbyLoTP4HJA
+7/eGp+uF70PlHQ+EW8+RUZV/CJW3O2C1wt/k0+UnUL7lAQj9Aco3QZPXQ9Ov
+gmo+gwia/QwMKO5jEHFYG77owu722zD9DovvuUzy+H8LZr6DEtsL1s4ZML6J
+Q9Sunm+7PGB8SweDzbJHbDlhfDuHH1uWiR++ehPmP4fzzV9a41ffhPnf4Xp2
+mxtbB0zezYHvhsVf6yyYvKfD7UaVyc8DbtoDAP1xZKA=
+      "]]}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  Method->{},
+  PlotRange->{0, 1},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{2., 2.}, {0., 0.}}]], "Output",
+ CellChangeTimes->{3.70811466803137*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", ",", 
+         RowBox[{
+          RowBox[{"sieveXY", "[", 
+           RowBox[{
+           "tryFAA", ",", "tryFAa", ",", "tryFaa", ",", "tryMAA", ",", 
+            "tryMAa", ",", "tryMaa", ",", "tryMA", ",", "tryMa", ",", "tryFA",
+             ",", "tryFa", ",", "tryMdA", ",", "tryFdA", ",", 
+            RowBox[{"setr", "[", 
+             RowBox[{"x", ",", "a", ",", "m"}], "]"}]}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "4"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "xplotmin", ",", "xplotmax", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"xplotmax", "-", "xplotmin"}], ")"}], "/", "npoints"}]}], 
+        "}"}]}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Black"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+   
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", ",", 
+         RowBox[{
+          RowBox[{"sieveZW", "[", 
+           RowBox[{
+           "tryFAA", ",", "tryFAa", ",", "tryFaa", ",", "tryMAA", ",", 
+            "tryMAa", ",", "tryMaa", ",", "tryMA", ",", "tryMa", ",", "tryFA",
+             ",", "tryFa", ",", "tryMdA", ",", "tryFdA", ",", 
+            RowBox[{"setr", "[", 
+             RowBox[{"x", ",", "a", ",", "m"}], "]"}]}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "4"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "xplotmin", ",", "xplotmax", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"xplotmax", "-", "xplotmin"}], ")"}], "/", "npoints"}]}], 
+        "}"}]}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", "Dashed"}], "}"}]}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "1"}], "}"}]}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.708114674379579*^9, 3.708114675311139*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, 
+    {GrayLevel[0], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAQBWIQDQGeByD0A3sw1eCGymdwQZN3RJO3Q+NbovFN0Ph6
+aHwVNL4IGh8G4PIOaPrR+HpofBM0viUa3w6V3+CIJu+CJu+GJu8J5wMAzNop
+mA==
+      "]]}, {}}, {{}, 
+    {RGBColor[1, 0, 0], Dashing[{Small, Small}], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAQBWIQDQGeByD0A3sw1eCGymdwQZN3RJO3Q+NbovFN0Ph6
+aHwVNL4IGh8G4PIOaPrR+HpofBM0viUa3w6V3+CIJu+CJu+GJu8J5wMAzNop
+mA==
+      "]]}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  Method->{},
+  PlotRange->{0, 1},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{2., 2.}, {0., 0.}}]], "Output",
+ CellChangeTimes->{3.708114675764482*^9}]
 }, Open  ]]
 }, Closed]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -31317,6 +31770,58 @@ Cell[BoxData[{
   3.697309256115703*^9}, {3.706985082487447*^9, 3.7069850856346073`*^9}}],
 
 Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.708113502115913*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7081135036918907`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.708113505445079*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Solve :: \
+ratnz\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.708113505468381*^9}],
+
+Cell[BoxData[
  GraphicsBox[{{{}, 
     {GrayLevel[0], Thickness[0.006], LineBox[CompressedData["
 1:eJxTTMoPSmViYGAQBWIQDQGeBxgaEszPS7jYg7kNbgcYEjqnzOH1gvAZXIDy
@@ -31412,10 +31917,11 @@ I4NC5jx6lEojybXoP77k+GwdupFVbTZuQHvwt5p919FDMcJzTSb0zv8C/wV/
    3.697228562096417*^9, 3.697234109075411*^9, 3.697234162043969*^9, 
    3.697235334298449*^9, 3.697250953655706*^9, 3.697253509744989*^9, 
    3.697300173120455*^9, 3.69730993263701*^9, 3.697311354921599*^9, 
-   3.706974879654004*^9, {3.7069850862740793`*^9, 3.706985089703582*^9}}]
+   3.706974879654004*^9, {3.7069850862740793`*^9, 3.706985089703582*^9}, 
+   3.708113795666264*^9}]
 }, Open  ]]
 }, Closed]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -31590,21 +32096,21 @@ I4NC5jx6lEojybXoP77k+GwdupFVbTZuQHvwt5p919FDMcJzTSb0zv8C/wV/
        InsetBox[
         GraphicsBox[{{{}, 
            {GrayLevel[0], Thickness[0.006], LineBox[CompressedData["
-1:eJxTTMoPSmViYGAQBWIQDQGeBxiqpZvqJzbZg7kNbgcYbkl9KL/VDuEzuBxo
-0PFkXKU1ASrveODA8oajbvwzoPJ2Bxb4VmxesGwplG954ELsm+9PFx2G8k0O
-MGhUfV5qtAzK1ztwwHFu8y2fWVC+ygEHkzsPynZMhvJFDjgsOPr9u+REe7gT
-b+tf7J87ASbv0CBgqL7vLUxexaHBe9rV61Onwsx3OPDn+H3uzLkw+x0eXEv/
-OfsYzH5Lhw3ZTcF/b22Cud/hgY2f3lm/ZTD/ORy4slGDr3I2zP8ODvXPb5c1
-ToKFj0OD1XpH79ddUHlPh4bLGgdmLW+xBwBGOWdm
+1:eJxTTMoPSmViYGAQBWIQDQGeBxjspG7HfU+yB3Mb3A4wKKlGTS/LgPAZXA4w
+XDryuG1HAVTe8QDD3zcf3QoqofJ2Bxg+H41zuNsB5VsecCiYmt3gsxHKNznA
+YLtrCXdiJ5Svd4DB8VlIb1c1lK9ygKEl+Uo2dwmUL3KAYY70gns8hfZwJ+p/
+WjfbrQAm78Cw0PG2qTNMXsWBwXdmy582mH49B4bQuNxZMTUw+x0YuH7cS2SC
+2W/p4PBCPKfHZz7M/Q4MIaLVs2s7YP5zYHDYvHCFXxXM/w4Mp/PNQvwLYeHj
+wPCGjXOjTSZU3tOB4YXT+cf1yfYAlwdWBQ==
              "]]}, {}}, {{}, 
            {RGBColor[1, 0, 0], Thickness[0.006], Dashing[Medium], 
             LineBox[CompressedData["
-1:eJxTTMoPSmViYGAQBWIQDQGeBxg6WCL/rGq2B3Mb3A4w1P6MlV3QCeEzuBw4
-0F8x6+7miVB5xwMHHCLcjNhnQ+XtDjxILon3v7oCyrc8UKBgYCAZtQ/KNzmQ
-8KEm+G3JSihf70CDw7vTezPmQvkqBw4cObbmi+tUKF/kQINPjrjkYah9QHAg
-ZvJ88aYJMHkHhg28ziJXYHwVB4djv7QPHpwEM9+hgeOiVtnfaTD7HRr43x5W
-T5oPc58DQ7rDjYwvy2Hud3BoDFxt8mIuzH8ODsz9Vz4GTIH536EhxIzv0Zpe
-WPg4NES8zik63waV93RoOLo9dJdWkz0A5Nlgrg==
+1:eJxTTMoPSmViYGAQBWIQDQGeBxiO7f+wxC7ZHsxtcDvA8G9nj++7DAifweUA
+wxx961r1Qqi84wGGwwVV01OqoPJ2BxgWFy58G90F5VseOHD6xvq62nVQvsmB
+hqzq7/zPYfJ6BxjWinmHddVA+SoHGAql8oVrSqB8kQMMygrfj1pC7QOBRx53
+c+0KYPIODIlvfh78BuOrODA0/7fYuqMYZr4DA4/e++NWMPeZODDcXbt6eU0r
+zH0ODbpGTNe3zIC534FB8hvzsyctMP85MJzPVKlhqID534EhSeWKTUABLHwc
+GAI6N601hoWPpwNDU9HMyqdJ9gCJI1oX
              "]]}, {}}, {{}, {}, 
            {GrayLevel[0], Dashing[{0, Small}], LineBox[CompressedData["
 1:eJxF1GtIEwAQAOBpljOtxIa5pcSsTExFs+nma25ON2tJWgmJmu+macMHZvhK
@@ -32081,12 +32587,12 @@ I4NC5jx6lEojybXoP77k+GwdupFVbTZuQHvwt5p919FDMcJzTSb0zv8C/wV/
               GrayLevel[0], 
               Thickness[0.006]], 
              Line[CompressedData["
-1:eJxTTMoPSmViYGAQBWIQDQGeBxiqpZvqJzbZg7kNbgcYbkl9KL/VDuEzuBxo
-0PFkXKU1ASrveODA8oajbvwzoPJ2Bxb4VmxesGwplG954ELsm+9PFx2G8k0O
-MGhUfV5qtAzK1ztwwHFu8y2fWVC+ygEHkzsPynZMhvJFDjgsOPr9u+REe7gT
-b+tf7J87ASbv0CBgqL7vLUxexaHBe9rV61Onwsx3OPDn+H3uzLkw+x0eXEv/
-OfsYzH5Lhw3ZTcF/b22Cud/hgY2f3lm/ZTD/ORy4slGDr3I2zP8ODvXPb5c1
-ToKFj0OD1XpH79ddUHlPh4bLGgdmLW+xBwBGOWdm
+1:eJxTTMoPSmViYGAQBWIQDQGeBxjspG7HfU+yB3Mb3A4wKKlGTS/LgPAZXA4w
+XDryuG1HAVTe8QDD3zcf3QoqofJ2Bxg+H41zuNsB5VsecCiYmt3gsxHKNznA
+YLtrCXdiJ5Svd4DB8VlIb1c1lK9ygKEl+Uo2dwmUL3KAYY70gns8hfZwJ+p/
+WjfbrQAm78Cw0PG2qTNMXsWBwXdmy582mH49B4bQuNxZMTUw+x0YuH7cS2SC
+2W/p4PBCPKfHZz7M/Q4MIaLVs2s7YP5zYHDYvHCFXxXM/w4Mp/PNQvwLYeHj
+wPCGjXOjTSZU3tOB4YXT+cf1yfYAlwdWBQ==
               "]]}, {}}, {{}, {
              Hue[0.67, 0.6, 0.6], 
              Directive[
@@ -32094,12 +32600,12 @@ ToKFj0OD1XpH79ddUHlPh4bLGgdmLW+xBwBGOWdm
               Thickness[0.006], 
               Dashing[Medium]], 
              Line[CompressedData["
-1:eJxTTMoPSmViYGAQBWIQDQGeBxg6WCL/rGq2B3Mb3A4w1P6MlV3QCeEzuBw4
-0F8x6+7miVB5xwMHHCLcjNhnQ+XtDjxILon3v7oCyrc8UKBgYCAZtQ/KNzmQ
-8KEm+G3JSihf70CDw7vTezPmQvkqBw4cObbmi+tUKF/kQINPjrjkYah9QHAg
-ZvJ88aYJMHkHhg28ziJXYHwVB4djv7QPHpwEM9+hgeOiVtnfaTD7HRr43x5W
-T5oPc58DQ7rDjYwvy2Hud3BoDFxt8mIuzH8ODsz9Vz4GTIH536EhxIzv0Zpe
-WPg4NES8zik63waV93RoOLo9dJdWkz0A5Nlgrg==
+1:eJxTTMoPSmViYGAQBWIQDQGeBxiO7f+wxC7ZHsxtcDvA8G9nj++7DAifweUA
+wxx961r1Qqi84wGGwwVV01OqoPJ2BxgWFy58G90F5VseOHD6xvq62nVQvsmB
+hqzq7/zPYfJ6BxjWinmHddVA+SoHGAql8oVrSqB8kQMMygrfj1pC7QOBRx53
+c+0KYPIODIlvfh78BuOrODA0/7fYuqMYZr4DA4/e++NWMPeZODDcXbt6eU0r
+zH0ODbpGTNe3zIC534FB8hvzsyctMP85MJzPVKlhqID534EhSeWKTUABLHwc
+GAI6N601hoWPpwNDU9HMyqdJ9gCJI1oX
               "]]}, {}}, {{{}, {}, {
               Hue[0.67, 0.6, 0.6], 
               GrayLevel[0], 
@@ -32153,9 +32659,9 @@ I4NC5jx6lEojybXoP77k+GwdupFVbTZuQHvwt5p919FDMcJzTSb0zv8C/wV/
            FrameLabel -> {None, None}, AspectRatio -> GoldenRatio^(-1), Axes -> 
            True, AxesOrigin -> {-50, -0.04}, 
            Frame -> {True, True, False, False}, Method -> {}, 
-           PlotRange -> {{-50, 50.}, {-0.04, 0.15340876203184317`}}, 
+           PlotRange -> {{-50, 50.}, {-0.04, 0.06757357241207362}}, 
            PlotRangeClipping -> True, 
-           PlotRangePadding -> {{2., 2.}, {0., 0.0038681752406368635`}}}], {
+           PlotRangePadding -> {{2., 2.}, {0., 0.002151471448241473}}}], {
          495, Rational[1, 2] (30 - 180 2^Rational[1, 2])}, 
          ImageScaled[{0.5, 0.5}], {360, 180 2^Rational[1, 2]}]}, {
         Inset[
@@ -32364,7 +32870,8 @@ I4NC5jx6lEojybXoP77k+GwdupFVbTZuQHvwt5p919FDMcJzTSb0zv8C/wV/
    3.697253510191822*^9, 3.697253884616294*^9, 3.697300177711982*^9, {
    3.697310127490258*^9, 3.697310141387891*^9}, {3.69731135518591*^9, 
    3.6973113717899723`*^9}, 3.706974879987311*^9, 3.7069850942689953`*^9, {
-   3.706985126235811*^9, 3.7069851788802843`*^9}, 3.706987225401582*^9}]
+   3.706985126235811*^9, 3.7069851788802843`*^9}, 3.706987225401582*^9, 
+   3.7081137959888353`*^9}]
 }, {2}]]
 }, Open  ]],
 
@@ -32948,7 +33455,7 @@ I4NC5jx6lEojybXoP77k+GwdupFVbTZuQHvwt5p919FDMcJzTSb0zv8C/wV/
  CellChangeTimes->{{3.7071571614935617`*^9, 3.707157186833783*^9}, 
    3.7071572169118347`*^9, 3.707157262146618*^9, 3.707160111221158*^9}]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -33309,8 +33816,8 @@ I4NC5jx6lEojybXoP77k+GwdupFVbTZuQHvwt5p919FDMcJzTSb0zv8C/wV/
    3.70715693888078*^9, 3.707156999919345*^9}, 3.707157037308414*^9, {
    3.707157085935111*^9, 3.7071571139035463`*^9}, 3.7071601337909327`*^9}]
 }, Open  ]]
-}, Open  ]]
-}, Open  ]]
+}, Closed]]
+}, Closed]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -33420,17 +33927,17 @@ Cell[999452, 22836, 349, 8, 28, "Input"],
 Cell[999804, 22846, 11422, 286, 268, "Input"],
 Cell[1011229, 23134, 125, 1, 30, "Text"],
 Cell[1011357, 23137, 222, 6, 28, "Input"],
-Cell[1011582, 23145, 56084, 1435, 1297, "Input"],
+Cell[1011582, 23145, 56084, 1435, 1212, "Input"],
 Cell[1067669, 24582, 141, 1, 30, "Text"],
 Cell[1067813, 24585, 209, 6, 28, "Input"],
 Cell[1068025, 24593, 275, 6, 30, "Text"],
 Cell[1068303, 24601, 6033, 129, 182, "Input"],
 Cell[1074339, 24732, 180, 4, 30, "Text"],
 Cell[1074522, 24738, 734, 13, 28, "Input"],
-Cell[1075259, 24753, 53725, 1197, 1185, "Input"]
-}, Closed]],
+Cell[1075259, 24753, 53725, 1197, 1065, "Input"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[1129021, 25955, 232, 5, 50, "Section"],
+Cell[1129021, 25955, 232, 5, 80, "Section"],
 Cell[1129256, 25962, 129, 2, 30, "Text"],
 Cell[1129388, 25966, 929, 24, 28, "Input"],
 Cell[1130320, 25992, 11458, 289, 268, "Input"],
@@ -33463,93 +33970,120 @@ Cell[CellGroupData[{
 Cell[1286217, 29708, 145, 2, 29, "Subsubsection"],
 Cell[CellGroupData[{
 Cell[1286387, 29714, 11369, 246, 811, "Input"],
-Cell[1297759, 29962, 4406, 99, 270, "Output"]
+Cell[1297759, 29962, 523, 11, 70, "Message"],
+Cell[1298285, 29975, 523, 11, 70, "Message"],
+Cell[1298811, 29988, 523, 11, 70, "Message"],
+Cell[1299337, 30001, 528, 11, 70, "Message"],
+Cell[1299868, 30014, 4432, 100, 70, "Output"]
 }, Open  ]]
 }, Closed]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1302226, 30068, 355, 7, 36, "Subsection"],
-Cell[CellGroupData[{
-Cell[1302606, 30079, 305, 4, 35, "Subsubsection"],
-Cell[1302914, 30085, 2359, 54, 301, "Input"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1305310, 30144, 145, 2, 29, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[1305480, 30150, 11160, 243, 794, "Input"],
-Cell[1316643, 30395, 523, 11, 24, "Message"],
-Cell[1317169, 30408, 523, 11, 24, "Message"],
-Cell[1317695, 30421, 523, 11, 24, "Message"],
-Cell[1318221, 30434, 531, 11, 24, "Message"],
-Cell[1318755, 30447, 4439, 95, 270, "Output"]
-}, Open  ]]
-}, Closed]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1323255, 30549, 439, 7, 36, "Subsection"],
-Cell[CellGroupData[{
-Cell[1323719, 30560, 305, 4, 35, "Subsubsection"],
-Cell[1324027, 30566, 2288, 54, 301, "Input"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1326352, 30625, 145, 2, 29, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[1326522, 30631, 11015, 241, 811, "Input"],
-Cell[1337540, 30874, 4603, 104, 270, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1342180, 30983, 843, 19, 63, "Input"],
-Cell[1343026, 31004, 317, 7, 28, "Output"],
-Cell[1343346, 31013, 317, 7, 28, "Output"]
+Cell[1304361, 30121, 355, 7, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[1304741, 30132, 305, 4, 35, "Subsubsection"],
+Cell[1305049, 30138, 2410, 55, 301, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1307496, 30198, 145, 2, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1307666, 30204, 11160, 243, 794, "Input"],
+Cell[1318829, 30449, 547, 11, 24, "Message"],
+Cell[1319379, 30462, 545, 11, 24, "Message"],
+Cell[1319927, 30475, 545, 11, 24, "Message"],
+Cell[1320475, 30488, 553, 11, 24, "Message"],
+Cell[1321031, 30501, 4451, 95, 270, "Output"]
 }, Open  ]]
 }, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1325543, 30603, 439, 7, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[1326007, 30614, 305, 4, 35, "Subsubsection"],
+Cell[1326315, 30620, 2288, 54, 301, "Input"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1343724, 31027, 306, 6, 36, "Subsection"],
+Cell[1328640, 30679, 145, 2, 29, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[1344055, 31037, 305, 4, 35, "Subsubsection"],
-Cell[1344363, 31043, 2262, 53, 301, "Input"]
+Cell[1328810, 30685, 11015, 241, 811, "Input"],
+Cell[1339828, 30928, 523, 11, 24, "Message"],
+Cell[1340354, 30941, 525, 11, 24, "Message"],
+Cell[1340882, 30954, 523, 11, 24, "Message"],
+Cell[1341408, 30967, 529, 11, 24, "Message"],
+Cell[1341940, 30980, 4625, 104, 270, "Output"]
+}, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1346662, 31101, 145, 2, 29, "Subsubsection"],
+Cell[1346614, 31090, 173, 2, 29, "Subsubsection"],
+Cell[1346790, 31094, 317, 6, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1346832, 31107, 8923, 209, 828, "Input"],
-Cell[1355758, 31318, 4357, 96, 270, "Output"]
+Cell[1347132, 31104, 2470, 63, 148, "Input"],
+Cell[1349605, 31169, 1116, 26, 256, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1350758, 31200, 2468, 63, 148, "Input"],
+Cell[1353229, 31265, 1043, 24, 256, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1354309, 31294, 2470, 63, 148, "Input"],
+Cell[1356782, 31359, 1052, 24, 256, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1357871, 31388, 2468, 63, 148, "Input"],
+Cell[1360342, 31453, 733, 20, 256, "Output"]
 }, Open  ]]
 }, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1361136, 31480, 306, 6, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[1361467, 31490, 305, 4, 35, "Subsubsection"],
+Cell[1361775, 31496, 2262, 53, 301, "Input"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1360176, 31421, 103, 1, 36, "Subsection"],
+Cell[1364074, 31554, 145, 2, 29, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[1360304, 31426, 2495, 56, 437, "Input"],
-Cell[1362802, 31484, 41065, 882, 476, "Output"]
+Cell[1364244, 31560, 8923, 209, 794, "Input"],
+Cell[1373170, 31771, 523, 11, 24, "Message"],
+Cell[1373696, 31784, 525, 11, 24, "Message"],
+Cell[1374224, 31797, 523, 11, 24, "Message"],
+Cell[1374750, 31810, 529, 11, 24, "Message"],
+Cell[1375282, 31823, 4383, 97, 270, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1379726, 31927, 103, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[1379854, 31932, 2495, 56, 437, "Input"],
+Cell[1382352, 31990, 41066, 883, 476, "Output"]
 }, {2}]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1403913, 32372, 434, 7, 44, "Subsection"],
+Cell[1423464, 32879, 434, 7, 44, "Subsection"],
 Cell[CellGroupData[{
-Cell[1404372, 32383, 361, 5, 35, "Subsubsection"],
-Cell[1404736, 32390, 3092, 70, 369, "Input"],
-Cell[1407831, 32462, 2141, 59, 369, "Input"],
-Cell[1409975, 32523, 2057, 43, 369, "Input"]
+Cell[1423923, 32890, 361, 5, 35, "Subsubsection"],
+Cell[1424287, 32897, 3092, 70, 369, "Input"],
+Cell[1427382, 32969, 2141, 59, 369, "Input"],
+Cell[1429526, 33030, 2057, 43, 369, "Input"]
 }, Closed]],
-Cell[1412047, 32569, 305, 4, 29, "Subsubsection"],
+Cell[1431598, 33076, 305, 4, 29, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[1412377, 32577, 200, 3, 29, "Subsubsection"],
-Cell[1412580, 32582, 2359, 54, 301, "Input"],
+Cell[1431928, 33084, 200, 3, 29, "Subsubsection"],
+Cell[1432131, 33089, 2359, 54, 301, "Input"],
 Cell[CellGroupData[{
-Cell[1414964, 32640, 9084, 225, 845, "Input"],
-Cell[1424051, 32867, 3361, 81, 270, "Output"]
+Cell[1434515, 33147, 9084, 225, 845, "Input"],
+Cell[1443602, 33374, 3361, 81, 270, "Output"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[1427461, 32954, 145, 2, 35, "Subsubsection"],
+Cell[1447012, 33461, 145, 2, 29, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[1427631, 32960, 11932, 263, 845, "Input"],
-Cell[1439566, 33225, 3530, 84, 304, "Output"]
+Cell[1447182, 33467, 11932, 263, 845, "Input"],
+Cell[1459117, 33732, 3530, 84, 270, "Output"]
 }, Open  ]]
-}, Open  ]]
-}, Open  ]]
+}, Closed]]
+}, Closed]]
 }, Open  ]]
 }, Open  ]]
 }
