@@ -1,4 +1,4 @@
-\begin{thebibliography}{78}
+\begin{thebibliography}{72}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Arunkumar et~al.(2013)Arunkumar, Josephs, Williamson, and
@@ -27,6 +27,12 @@ Bachtrog, D., J.~E. Mank, C.~L. Peichel, M.~Kirkpatrick, S.~P. Otto, T.-L.
 Beukeboom, L.~W., and N.~Perrin. 2014.
 \newblock {The evolution of sex determination}.
 \newblock Oxford University Press, Oxford, UK.
+
+\bibitem[{Blaser et~al.(2012)Blaser, Grossen, Neuenschwander, and
+  Perrin}]{Blaser2012}
+Blaser, O., C.~Grossen, S.~Neuenschwander, and N.~Perrin. 2012.
+\newblock {Sex-chromosome turnovers induced by deleterious mutation load}.
+\newblock Evolution 67:635--645.
 
 \bibitem[{Borg et~al.(2009)Borg, Brownfield, and Twell}]{Borg:2009jpa}
 Borg, M., L.~Brownfield, and D.~Twell. 2009.
@@ -59,17 +65,6 @@ Charlesworth, D., and J.~E. Mank. 2010.
 Charnov, E.~L. 1982.
 \newblock {The theory of sex allocation.}
 \newblock Monographs in population biology.
-
-\bibitem[{Charnov and Bull(1977)}]{Charnov:1977tx}
-Charnov, E.~L., and J.~Bull. 1977.
-\newblock {When is sex environmentally determined?}
-\newblock Nature 266:828--830.
-
-\bibitem[{Chase(2007)}]{Chase:2007bf}
-Chase, C.~D. 2007.
-\newblock {Cytoplasmic male sterility: a window to the world of plant
-  mitochondrial-nuclear interactions.}
-\newblock Trends in Genetics 23:81--90.
 
 \bibitem[{Clarke et~al.(2004)Clarke, Khan, and Siddique}]{Clarke:2004ir}
 Clarke, H.~J., T.~N. Khan, and K.~H.~M. Siddique. 2004.
@@ -394,12 +389,6 @@ Tripathi, N., M.~Hoffmann, E.-M. Willing, C.~Lanz, D.~Weigel, and C.~Dreyer.
   quantitative trait loci analysis of male size and colour variation.}
 \newblock Proceedings. Biological sciences / The Royal Society 276:2195--2208.
 
-\bibitem[{Trivers and Willard(1973)}]{Trivers:1973wb}
-Trivers, R.~L., and D.~E. Willard. 1973.
-\newblock {Natural selection of parental ability to vary the sex ratio of
-  offspring.}
-\newblock Science 179:90--92.
-
 \bibitem[{{\'U}beda and Haig(2005)}]{Ubeda:2005gw}
 {\'U}beda, F., and D.~Haig. 2005.
 \newblock {On the evolutionary stability of Mendelian segregation.}
@@ -433,31 +422,10 @@ Vicoso, B., and D.~Bachtrog. 2015.
 \newblock {Numerous transitions of sex chromosomes in Diptera.}
 \newblock PLoS Biol 13:e1002078.
 
-\bibitem[{Vuillleumier et~al.(2007)Vuillleumier, Lande, van Alphen, and
-  Seehausen}]{Vuillleumier:2007bh}
-Vuillleumier, S., R.~Lande, J.~J.~M. van Alphen, and O.~Seehausen. 2007.
-\newblock {Invasion and fixation of sex-reversal genes}.
-\newblock Journal of Evolutionary Biology 20:913--920.
-
-\bibitem[{Werren and Beukeboom(1998)}]{Werren:1998co}
-Werren, J.~H., and L.~W. Beukeboom. 1998.
-\newblock {SEX DETERMINATION, SEX RATIOS, AND GENETIC CONFLICT}.
-\newblock Annual Review of Ecology and Systematics 29:233--261.
-
-\bibitem[{Werren and Taylor(1984)}]{Werren:1984tl}
-Werren, J.~H., and P.~D. Taylor. 1984.
-\newblock {The effects of population recruitment on sex ratio selection}.
-\newblock The American Naturalist 124:143--148.
-
 \bibitem[{West(2009)}]{West:2009we}
 West, S. 2009.
 \newblock {Sex allocation}.
 \newblock Princeton University Pres.
-
-\bibitem[{Wilson and Colwell(1981)}]{Wilson:1981vm}
-Wilson, D.~S., and R.~K. Colwell. 1981.
-\newblock {Evolution of sex ratio in structured demes}.
-\newblock Evolution 35:882--897.
 
 \bibitem[{Yano et~al.(2012)Yano, Nicol, Jouanno, Quillet, Fostier, Guyomard,
   and Guiguen}]{Yano:2012di}
