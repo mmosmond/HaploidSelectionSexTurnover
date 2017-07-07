@@ -663,7 +663,8 @@ The likelihood of these transitions are driven by sex-ratio selection, direct se
 This possibility was overlooked in \cite{vanDoorn:2010hu}, possibly because they did not explicitly calculate the resident equilibria \citep[equation \ref{eq:tightequil};][]{Lloyd1977,Otto2014}.
 Interestingly, there is substantial overlap between the parameter space that allows both neo-W-$A$ and neo-W-$a$ haplotypes to spread in an XY system and that which selects for increased recombination between X and Y chromosomes \citep[e.g., compare gray region in Figure \ref{fig:regionplot_2a}A with coloured regions of Figure 2(a) in][]{Otto2014}.
 This makes sense as when both neo-W haplotypes can spread the neo-W can invade despite reducing sex-linkage, i.e., the rate of recombination between the sex-determining allele and the selected locus increases.
-\textcolor{red}{explain difference too? also explain why a neo-Y doesn't invade to reduce linkage despite selection for more recombination? mention something about haploid selection (Fig7B)?}
+\textcolor{red}{explain difference too? also explain why a neo-Y doesn't invade to reduce linkage despite selection for more recombination? mention something about haploid selection (Fig7B)?} \textcolor{blue}{maybe leave for now}
+
 
 %HAPLOID SELECTION CAN ACT LIKE SEXUALLY-ANTAGONISTIC SELECTION
 %It has previously been demonstrated that new sex-determining systems can evolve if there is genetic variation maintained by sexually-antagonistic selection \citep{vanDoorn:2007eu,vanDoorn:2010hu}. 
@@ -679,6 +680,8 @@ Thus, the mean fitness of both males and females increases with closer linkage t
 Therefore, new sex-determining alleles only invade if they are more closely linked than the ancestral sex-determining region. 
 However, if there is haploid selection on loci linked to an XY (ZW) sex-determining region, selection can maintain polymorphisms at which the mean fitness of females (males) is lower than it would be without sex-linkage. 
 In these cases, unlinked neo-W (neo-Y) alleles can increase female (male) fitness, at a cost to the other sex, and invade despite lowering mean fitness (Figure \ref{fig:Combination_MeanFit}). 
+
+\textcolor{blue}{thought: maybe we could say somewhere that our results suggest more instability in sex-determination system than previously thought. Particularly, we show that variation around the ancestral sex-determining locus could favour new sex-determination systems under both haploid and diploid sex-specific selection, in contrast to previous results that rely on new sex-determining alleles arising in linkage with loci under sex-specific selection. This makes potential for cycling (which you mention in the next paragraph wrt sex ratio bias. Could be suitable here or in the conclusion?}
 
 %%SEX-RATIO SELECTION
 %\textcolor{blue}{maybe drop paragraph?}
@@ -705,13 +708,15 @@ For instance, when an allele that drives in males is linked to an XY locus it wi
 This male bias increases the potential for a neo-W to invade (as we then have $(2\zeta)^{-1}>1$, Table \ref{tab:haplotype_growth}), which can equalize the sex-ratio \citep[for a related example see][]{Ubeda:2015fx}.
 %However, the neo-W may not equalize the sex-ratio (e.g., if the driving allele also drives in females or affects competition among eggs)
 However, this sex-ratio selection can be overwhelmed when the driving allele has additional selective effects (e.g., when it is detrimental to male diploids but beneficial for female diploids; Table \ref{tab:specialcases}), preventing the neo-W from invading. %and equalizing the sex ratio.
-Conversely, these additional selective effects can even favour transitions between sex-determining systems that create new sex-ratio biases.
+Indeed, these additional selective effects can even favour transitions between sex-determining systems that create new sex-ratio biases.
 For example, in an ancestral ZW system, an allele that drives only in males can allow a linked neo-Y to invade, despite the fact it creates a male bias.
-This of course generates new sex-ratio selection that may drive further turnover \citep{Ubeda:2015fx}.
+This of course generates new sex-ratio selection that may drive further turnover \citep{Ubeda:2015fx} \textcolor{blue}{and figure 1, where the end of one panel is the same as the beginning of another, however, this figure may change).}
 %What we would like to stress is that sex-ratio selection alone cannot predict when new sex-determining systems can evolve.
 Furthermore, with weak selection/loose sex-linkage, there is no asymmetry between XY to ZW and ZW to XY transitions, indicating that sex-ratio selection does not dominate (i.e., the sex-ratio bias created by haploid selection impacts the spread of a neo-W into an XY system the same way it impacts the spread of a neo-Y into an unbiased ZW system). 
 An asymmetry can develop when sex-linkage is tight (e.g., Figure \ref{fig:Combination_Centimorgans} near -25cM and 25cM) but under most circumstances we do not predict asymmetry between XY to ZW and ZW to XY transitions despite the presence/absence of sex ratio selection. 
-Thus, haploid selection can favour heterogametic transitions both via sex-ratio selection and via the fitness of alleles that are associated with the neo-sex-determining allele; and these selection pressures are often of equal magnitude.
+Thus, haploid selection can favour heterogametic transitions both via sex-ratio selection and via the fitness of alleles that are associated with the neo-sex-determining allele; and these selection pressures are often of equal magnitude. 
+\textcolor{blue}{nice, pretty subtle argument but I think that's a good job.}
+
 
 %SEX-RATIO BIAS IN UBEDA ET AL
 %DRAFT (improve): In \citet{Ubeda:2015fx}, the new sex determining locus spreads because it arises in linkage with a locus that experiences drive. They assume that drive occurs predominantly in one sex, e.g., during spermatogenesis or a 'killer' sperm. A driving allele is maintained at an intermediate frequency by selection, e.g., because it causes male sterility when homozygous (because all male sperm are killed). Y chromosomes that arise in linkage with the driving allele spread because they allow drive to occur more often, thus genetic sex determination with a sex ratio bias evolves. 
@@ -758,6 +763,8 @@ Therefore, the presence of haploid selected loci around ancestral- or novel-sex-
 %HOW TO TEST EMPIRICALLY
 \textcolor{blue}{I think Sally was sceptical of this idea. i.e., if the second term in \ref{eq:lambda_neoW} is negative, then get less transitions with haploid selection included, right? }
 \textcolor{red}{Yeah, and given that only 1/2 the discovered plant sex chromosomes are hetermorphic and there are so few plant sex chromosomes to begin with (Charlesworth 2016 Annual Review Plant Biology), might it be the case that haploid selection is constraining things? perhaps we could think of some particular forms of haploid selection that might be common and give their predicted effects, or just say some things that are possible with haploid selection that are not without it -- if there are any. just looking at eq 3 though, its gonna be hard to get a low freq of A on the Y if haploid selection in males favours A, i.e., it should often be positive when there is no female haploid selection, right?}
+\textcolor{blue}{That sounds right to me and is backed up by equation \eqref{eq:freq_diffs}. It may be technically possible for that term to be negative though. Re: hetermorphism, I see that as a slightly different issue. It's thought that haploid selection may prevent deletions from becoming fixed on the Y, like in the Crowson (2017) paper. 
+I think the issue of `why so few plant sex chromosomes' is partly an issue of detection and also `why so much hermaphroditism'. Is it possible that the ESD results could show selective forces that also favour transitions from dioecy to hermaphroditism? I think so. Our ESD mutant produces 1/2 females and 1/2 males whereas a hermaphrodite invests roughly equally in each type of gamete produced. We don't consider the forces that are usually thought to be involved in these transitions though (inbreeding depression, reproductive assurance and possibly others?). }
 Taken at face value, our results indicate that transitions in heterogametey (XY to ZW or vice versa) are more likely to be favoured by selection if there is selection upon both haploid and diploid genotypes rather than diploid selection alone. 
 This prediction could be examined using a suitable proxy for haploid selection, for example, \cite{Lenormand:2005vb} use the outcrossing rate in plants as a proxy for the strength of pollen competition. 
 In animals, one might expect gametic competition to be stronger in species where sperm is required to live for a long time after spermatogenesis because transcripts shared during spermatogenesis may become depleted, revealing the haploid phenotype of the sperm \citep{Immler:2014im}. 
