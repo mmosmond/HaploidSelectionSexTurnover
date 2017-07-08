@@ -890,7 +890,7 @@ Add chromosome cartoons to depict recombination rates?
 \end{tikzpicture}
 \caption{
 Changes in mean diploid fitness of males (blue lines), females (red lines), and the entire population (black lines) during the transitions between sex-determination systems shown in Figure \ref{fig:Combination_Turnover}. 
-Here mean diploid fitness of a sex is its mean diploid viability fitness times twice its frequency in the population, to capture the fact that epistatically dominant sex-determining alleles can also invade because they selfishly make more of the sex they are in. 
+Here mean diploid fitness of a particular sex is its mean diploid viability fitness times twice its frequency in the population, to capture the fact that epistatically dominant sex-determining alleles can also invade because they selfishly make more of the sex they are in. 
 The mean fitness of females increases during the spread of neo-W alleles (A and B) and the mean fitness of males increases during the spread of neo-Y alleles (C and D). 
 However, when a neo-sex determining system evolves that is less closely linked to a locus under selection (B and D), population mean fitness decreases. 
 %\textcolor{red}{
@@ -898,7 +898,7 @@ However, when a neo-sex determining system evolves that is less closely linked t
 %%\& possibly adjust padding (too much whitespace?). 
 %%Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).
 %}
-\textcolor{red}{I'm still confused why male and female mean fitnesses aren't normalized by their frequency. I'm not sure we should be calling them means without this normalization step. Or we should justify this by saying that mean fitness also has something to do with the number of a sex, i.e., multiply *real* mean fitness in females by freqfemale/(1/2)? See the next figure for what happens when we do normalize.}
+%\textcolor{red}{I'm still confused why male and female mean fitnesses aren't normalized by their frequency. I'm not sure we should be calling them means without this normalization step. Or we should justify this by saying that mean fitness also has something to do with the number of a sex, i.e., multiply *real* mean fitness in females by freqfemale/(1/2)? See the next figure for what happens when we do normalize.}
 }
 \label{fig:Combination_MeanFit}
 \end{figure}
@@ -914,7 +914,7 @@ However, when a neo-sex determining system evolves that is less closely linked t
 	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_MeanFit_Corrected}};
 \end{tikzpicture}
 \caption{
-\textcolor{red}{Last plot with mean fitness of sexes corrected for sex ratio.}
+\textcolor{red}{Last plot with mean fitness of sexes corrected for sex ratio. Could add to previous plot with dashed lines?}
 }
 \label{fig:Combination_MeanFit_Corrected}
 \end{figure}
@@ -946,12 +946,12 @@ In B, there is drive in favour of the $a$ allele in males ($\alpha^\male_{\Delta
 In this case, a neo-W can invade even when the selected locus is more closely linked to the ancestral sex determining locus (see Table \ref{tab:specialcases} and Figure \ref{fig:Combination_Turnover}). 
 In C and D, there is gametic competition among male gametes only (favouring $a$, $t^\male=-1/10$) and no meiotic drive or gametic competition in females ($t^\female=\alpha^\Hermaphrodite_{\Delta}=0$). 
 In this case, the neo-W does not invade if $s^\female>s^\male$ (panel C: $s^\female=3/20$, $s^\male=1/20$) but does if $s^\female<s^\male$ (panel D: $s^\female=1/20$, $s^\male=3/20$), see Table \ref{tab:specialcases}.\\
-\textcolor{red}{
-1. I suspect that panel C has a region where no equilibrium is maintained (CHECK! Maybe include different parameters here or remove the part when no equilibrium). MMO: If you trust the sieve function there are stable equilibria across the entire range, although they differ greatly between XY and ZW systems near -25cM.
-\\
-2. Currently use different parameters for B than using in figure \ref{fig:Combination_Turnover} (selection/drive twice as strong in turnover figure). MMO: this is to keep it within the bounds of the plot -- using the same parameters as figure 1 makes the peak at -25 reach roughly 0.1, and then it is difficult to see the details of A,C, and D.
-%This plot would also benefit from titles giving, e.g., ``sexually-antagonistic selection, $s^\female s^\male<0$'' for A, ``male meiotic drive, $s^\female s^\male>0$'' for B
-}
+%\textcolor{red}{
+%1. I suspect that panel C has a region where no equilibrium is maintained (CHECK! Maybe include different parameters here or remove the part when no equilibrium). MMO: If you trust the sieve function there are stable equilibria across the entire range, although they differ greatly between XY and ZW systems near -25cM.
+%\\
+%2. Currently use different parameters for B than using in figure \ref{fig:Combination_Turnover} (selection/drive twice as strong in turnover figure). MMO: this is to keep it within the bounds of the plot -- using the same parameters as figure 1 makes the peak at -25 reach roughly 0.1, and then it is difficult to see the details of A,C, and D.
+%%This plot would also benefit from titles giving, e.g., ``sexually-antagonistic selection, $s^\female s^\male<0$'' for A, ``male meiotic drive, $s^\female s^\male>0$'' for B
+%}
 }
 \label{fig:Combination_Centimorgans}
 \end{figure}
