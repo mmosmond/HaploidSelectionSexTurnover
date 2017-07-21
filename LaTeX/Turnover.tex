@@ -410,12 +410,12 @@ This is true for the neo-W-$A$ haplotype because it can pair with a $Y-a$ haplot
 %}
 
 %\textcolor{blue}{
-In Figure \ref{fig:regionplot_ 2a}A we show the region of parameter space within which both neo-W haplotypes invade ($\lambda_{mA}>1$ and $\lambda_{ma}>1$) when there is overdominance in females and no haploid selection \citep[corresponding to Figure 2a in][]{Otto2014}. 
-Wherever both haplotypes have positive growth rates (gray region of Figure \ref{fig:regionplot_ 2a}), invasion by a neo-W is expected regardless of its linkage with the selected locus (i.e., even unlinked neo-W alleles can invade). 
-In regions where only one haplotype can spread (white region of Figure \ref{fig:regionplot_ 2a}), a neo-W can invade as long as equation \eqref{eq:lambdasGen} is satisfied, which can require that the recombination rate, $R$, is small enough and yet still indicates that more loosely linked sex-determining regions can spread.
+In Figure \ref{fig:regionplot_2a}A we show the region of parameter space within which both neo-W haplotypes invade ($\lambda_{mA}>1$ and $\lambda_{ma}>1$) when there is overdominance in females and no haploid selection \citep[corresponding to Figure 2a in][]{Otto2014}. 
+Wherever both haplotypes have positive growth rates (gray region of Figure \ref{fig:regionplot_2a}), invasion by a neo-W is expected regardless of its linkage with the selected locus (i.e., even unlinked neo-W alleles can invade). 
+In regions where only one haplotype can spread (white region of Figure \ref{fig:regionplot_2a}), a neo-W can invade as long as equation \eqref{eq:lambdasGen} is satisfied, which can require that the recombination rate, $R$, is small enough and yet still indicates that more loosely linked sex-determining regions can spread.
 It is also possible for haploid selection to drive the invasion of a loosely linked neo-W. 
 Take, for instance, selection directionally favouring $A$ in both diploid sexes and meiotic drive in males.
-Figure \ref{fig:regionplot_ 2a}B then shows that ploidally-antagonisitic selection can allow both neo-W haplotypes to invade. 
+Figure \ref{fig:regionplot_2a}B then shows that ploidally-antagonisitic selection can allow both neo-W haplotypes to invade. 
 %}
 
 %Neo-W alleles, on the other hand, can invade an ancestral XY system under some conditions (given in detail in the appendix). 
@@ -937,23 +937,30 @@ The plot below, `adjusted for sex ratio', could then go in the appendix. The poi
 %\includegraphics[width=\linewidth]{Combination_Centimorgan}\\
 %\includegraphics[width=\linewidth]{PositionPlot}\\
 \begin{tikzpicture}[remember picture]
-	\node[] () {\includegraphics[width=\linewidth]{PositionPlot}};
-	\node[anchor=east] at (0.5, 1.5) {\footnotesize sexual-antagonism, $s^\male s^\female < 0$};
-	\node[anchor=east] at (6.5, 1.5) {\footnotesize male drive, $s^\male s^\female > 0$};
-	\node[anchor=east] at (0.5, -3) {\footnotesize pollen competition, $s^\male < s^\female$};
-	\node[anchor=east] at (6.5, -3) {\footnotesize pollen comptition, $s^\female < s^\female$};
+%	\node[] () {\includegraphics[width=\linewidth]{PositionPlot}};
+	\node[] () {\includegraphics[width=\linewidth]{PositionPlot_2}};
+	\node[anchor=east] at (0, 1.5) {\footnotesize diploid sex-antagonism}; %, $s^\male s^\female < 0$};
+	\node[anchor=east] at (6.5, 1.5) {\footnotesize haploid sex-antagonism}; %, $s^\male s^\female > 0$};
+	\node[anchor=east] at (0, -3) {\footnotesize male drive (ploidy-antagonism)}; %, $s^\male < s^\female$};
+%	\node[anchor=east] at (6.5, -3) {\footnotesize pollen competition (ploidy-antagonism)};%, $s^\female < s^\female$};
+	\node[anchor=center] at (-1.3, 4.25) {\scriptsize tighter sex-linkage};
+	\node[anchor=center] at (2.45, 3.5) {\scriptsize ancestral SDR};
+	\draw[->,thick] (2.45, 3.25) -- (2.45, 2.5);
+	\node[anchor=center] at (-1.4, -0.25) {\scriptsize novel SDR};
+	\draw[->,thick] (-1.4, -0.5) -- (-1.4, -1);
 \end{tikzpicture}
 \caption{
-Invasion fitness of a neo-W allele plotted against the relative genomic location of a locus under direct selection, \textbf{A}, for various selective regimes. 
+Invasion fitness of a neo-sex-determining allele plotted against the relative genomic location of a locus under direct selection, \textbf{A}, for various selective regimes. 
 The ancestral sex-determining locus is located at -25 and the novel sex-determining locus is located at 25. %and that there is a polymorphism at the \textbf{A} locus maintained by selection.
 We use Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert from map distance (centiMorgans) to the probability of a cross-over event. 
 In A, there is no haploid selection ($t^\Hermaphrodite=\alpha^\Hermaphrodite_{\Delta}=0$) and selection in diploids is sexually antagonistic \citep[following][]{vanDoorn:2010hu}, in which case a neo-W can only invade if it is more closely linked to the selected locus ($s^\female=1/10$, $h^\female=7/10$ $s^\male=-1/10$, $h^\male=3/10$).
-In B-D we include haploid selection and assume that selection in diploids is not sexually-antagonistic ($s^\female s^\male>0$). 
-A polymorphism can then be maintained by opposing selection between the haploid and diploid phases. 
-In B, there is drive in favour of the $a$ allele in males ($\alpha^\male_{\Delta}=-1/20$), no female meiotic drive or gametic competition, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), and equal selection in diploid sexes ($s^\female=s^\male=1/10$, $h^\female=h^\male=7/10$). 
-In this case, a neo-W can invade even when the selected locus is more closely linked to the ancestral sex determining locus (see Table \ref{tab:specialcases} and Figure \ref{fig:Combination_Turnover}). 
-In C and D, there is gametic competition among male gametes only (favouring $a$, $t^\male=-1/10$) and no meiotic drive or gametic competition in females ($t^\female=\alpha^\Hermaphrodite_{\Delta}=0$). 
-In this case, the neo-W does not invade if $s^\female>s^\male$ (panel C: $s^\female=3/20$, $s^\male=1/20$) but does if $s^\female<s^\male$ (panel D: $s^\female=1/20$, $s^\male=3/20$), see Table \ref{tab:specialcases}.\\
+In B-D we include haploid selection. %and assume that selection in diploids is not sexually-antagonistic ($s^\female s^\male>0$). 
+%A polymorphism can then be maintained by opposing selection between the haploid and diploid phases. 
+%In B, there is drive in favour of the $a$ allele in males ($\alpha^\male_{\Delta}=-1/20$), no female meiotic drive or gametic competition, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), and equal selection in diploid sexes ($s^\female=s^\male=1/10$, $h^\female=h^\male=7/10$). 
+%In this case, a neo-W can invade even when the selected locus is more closely linked to the ancestral sex determining locus (see Table \ref{tab:specialcases} and Figure \ref{fig:Combination_Turnover}). 
+%In C and D, there is gametic competition among male gametes only (favouring $a$, $t^\male=-1/10$) and no meiotic drive or gametic competition in females ($t^\female=\alpha^\Hermaphrodite_{\Delta}=0$). 
+%In this case, the neo-W does not invade if $s^\female>s^\male$ (panel C: $s^\female=3/20$, $s^\male=1/20$) but does if $s^\female<s^\male$ (panel D: $s^\female=1/20$, $s^\male=3/20$), see Table \ref{tab:specialcases}.\\
+In B
 %\textcolor{red}{
 %1. I suspect that panel C has a region where no equilibrium is maintained (CHECK! Maybe include different parameters here or remove the part when no equilibrium). MMO: If you trust the sieve function there are stable equilibria across the entire range, although they differ greatly between XY and ZW systems near -25cM.
 %\\
@@ -981,7 +988,7 @@ In this case, the neo-W does not invade if $s^\female>s^\male$ (panel C: $s^\fem
 Parameter space (gray) where both neo-W haplotypes can invade from the same stable resident $r=0$ equilibria (equations \ref{eq:tightequil}), and therefore where an unlinked neo-W can invade an XY system with perfect sex-linkage.
 \textbf{A}, In the absence of haploid selection, both neo-W haplotypes can invade for much of the parameter space where the relative fitnesses of male homozygotes, $w_{AA}^\male$ and $w_{aa}^\male$, are both less than that of the heterozygote, $w_{Aa}^\male = 1$.
 In the white region neo-W haplotypes paired with the allele fixed on the Y cannot invade.
-Parameters as in \cite{Otto2014} Figure 2a: $w_A^\Hermaphrodite=w_a^\Hermaphrodite$, $\alpha^\Hermaphrodite=1/2$, $w_Aa^\Hermaphrodite=1$, and $w_AA^\female=w_aa^\female=0.75$.
+Parameters as in \cite{Otto2014} Figure 2a: $w_A^\Hermaphrodite=w_a^\Hermaphrodite$, $\alpha^\Hermaphrodite=1/2$, $w_{Aa}^\Hermaphrodite=1$, and $w_{AA}^\female=w_{aa}^\female=0.75$.
 \textbf{B}, When selection is the same in both diploid sexes ($w_{aa}^\Hermaphrodite = 1$, $w_{Aa}^\Hermaphrodite = 1 + h s$, $w_{AA}^\Hermaphrodite = 1+s$), both neo-W haplotypes can invade over a portion of the parameter space where selection in diploids ($s$) opposes the force of drive during meiosis in males ($\alpha_{\Delta}^\male$).
 Parameters: $w_A^\Hermaphrodite=w_a^\Hermaphrodite$, $\alpha^\female=1/2$, $h=1/2$.
 }
