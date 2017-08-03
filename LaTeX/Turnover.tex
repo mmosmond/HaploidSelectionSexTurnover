@@ -818,8 +818,8 @@ Overall, our results suggest several new scenarios under which new sex-determina
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Heterogametic transitions with/without sex ratio change
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
-\centering
+%\begin{figure}[!h]
+%\centering
 \begin{tikzpicture}[remember picture]
 	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_Turnover}};
 	\node[above = 0cm of plot, xshift = -70] () {$r=0.5$, $R=0.05$};
@@ -827,29 +827,29 @@ Overall, our results suggest several new scenarios under which new sex-determina
 	\node[left = 0cm of plot, yshift = 105, rotate = 90] () {XY $\rightarrow$ ZW};
 	\node[left = 0cm of plot, yshift = -20, rotate = 90] () {ZW $\rightarrow$ XY};
 \end{tikzpicture}
-\caption{
-Heterogametic transitions from XY to ZW sex determination (neo-W frequency shown by black lines, panels A and B) or from ZW to XY (neo-Y frequency shown by black lines, panels C and D) occur similarly regardless of sex ratio biases present before (B versus D) or after (C versus A, dashed lines show male frequency). 
-During invasion by a neo-ZW sex-determination system (A and B), the ancestral Y fixes in both males and females (blue and red lines). 
-Similarly, the ancestral W allele fixes in males and females (blue and red lines) during a ZW to XY transition. 
-In this plot, there is no gametic competition ($t^\female=t^\male=0$) and meiotic drive occurs during male meiosis only ($\alpha^\female_{\Delta}=0$, $\alpha^\male_{\Delta}=-1/5$). Therefore, sex ratio biases can only arise when the \textbf{A} locus is linked to an XY sex-determining locus.
-In panels A and C, the neo-sex-determining locus is more closely linked to the \textbf{A} locus than the ancestral sex-detemining region ($r=1/2$, $R=1/20$) such that a neo-Y can caused biased sex ratios (panel C).
-In panels B and D, the ancestral sex-determining locus is more closely linked to the \textbf{A} locus than the neo-sex-detemining locus ($r=1/20$, $R=1/2$). 
-Therefore, an ancestral XY sex determination can have a biased zygotic sex ratio that becomes unbiased after an unlinked neo-W invades (B). 
-However, in panel D, a unlinked neo-Y invades an ancestral ZW sex-determination system in a similar manner but no biases to the zygotic sex ratio occur. 
-With diploid selection alone, neo-sex-determining loci do not spread if they are less closely linked to the \textbf{A} locus than the ancestral sex-determining locus (see equation \eqref{eq:lambda_neoW} and Figure \ref{fig:Combination_Centimorgans}A). 
-In this plot there are no sex differences in selection and an equilibrium is maintained because selection in diploids opposes meiotic drive, $s^\female =s^\male = 1/5$, $h^\female = h^\male = 7/10$.
-\textcolor{red}{Aesthetic adjustments: 
-%Could add titles to the columns/rows: neo-W for row 1, neo-Y for row 3, $r=0.5$, $R=0.05$ for column 1 and $r=0.05$, $R=0.5$ for column 2. 
-%Could adjust padding (too much whitespace where there is no axis label). 
-%It also seems could increase ratio of font size relative to plot size to make figure more compact. 
-%Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).
-Add chromosome cartoons to depict recombination rates?
-}
-}
-\label{fig:Combination_Turnover}
-\end{figure}
+%\caption{
+%Heterogametic transitions from XY to ZW sex determination (neo-W frequency shown by black lines, panels A and B) or from ZW to XY (neo-Y frequency shown by black lines, panels C and D) occur similarly regardless of sex ratio biases present before (B versus D) or after (C versus A, dashed lines show male frequency). 
+%During invasion by a neo-ZW sex-determination system (A and B), the ancestral Y fixes in both males and females (blue and red lines). 
+%Similarly, the ancestral W allele fixes in males and females (blue and red lines) during a ZW to XY transition. 
+%In this plot, there is no gametic competition ($t^\female=t^\male=0$) and meiotic drive occurs during male meiosis only ($\alpha^\female_{\Delta}=0$, $\alpha^\male_{\Delta}=-1/5$). Therefore, sex ratio biases can only arise when the \textbf{A} locus is linked to an XY sex-determining locus.
+%In panels A and C, the neo-sex-determining locus is more closely linked to the \textbf{A} locus than the ancestral sex-detemining region ($r=1/2$, $R=1/20$) such that a neo-Y can caused biased sex ratios (panel C).
+%In panels B and D, the ancestral sex-determining locus is more closely linked to the \textbf{A} locus than the neo-sex-detemining locus ($r=1/20$, $R=1/2$). 
+%Therefore, an ancestral XY sex determination can have a biased zygotic sex ratio that becomes unbiased after an unlinked neo-W invades (B). 
+%However, in panel D, a unlinked neo-Y invades an ancestral ZW sex-determination system in a similar manner but no biases to the zygotic sex ratio occur. 
+%With diploid selection alone, neo-sex-determining loci do not spread if they are less closely linked to the \textbf{A} locus than the ancestral sex-determining locus (see equation \eqref{eq:lambda_neoW} and Figure \ref{fig:Combination_Centimorgans}A). 
+%In this plot there are no sex differences in selection and an equilibrium is maintained because selection in diploids opposes meiotic drive, $s^\female =s^\male = 1/5$, $h^\female = h^\male = 7/10$.
+%\textcolor{red}{Aesthetic adjustments: 
+%%Could add titles to the columns/rows: neo-W for row 1, neo-Y for row 3, $r=0.5$, $R=0.05$ for column 1 and $r=0.05$, $R=0.5$ for column 2. 
+%%Could adjust padding (too much whitespace where there is no axis label). 
+%%It also seems could increase ratio of font size relative to plot size to make figure more compact. 
+%%Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).
+%Add chromosome cartoons to depict recombination rates?
+%}
+%}
+%\label{fig:Combination_Turnover}
+%\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+%\newpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -863,78 +863,85 @@ Add chromosome cartoons to depict recombination rates?
 	\node[above = -1cm of plot, xshift = 90] () {ZW $\rightarrow$ XY};
 \end{tikzpicture}
 \caption{
-\textcolor{red}{Is this what Sally was thinking?}
-\textcolor{blue}{I think this works but I'm confused as to why the speed of spread should be so much different for XY and ZW here. Figure \ref{fig:Combination_Turnover} and \ref{fig:Combination_Centimorgans} suggests that there's not much difference between XY->ZW and ZW->XY. Maybe we should just stick with the 4 cases in figure \ref{fig:Combination_Turnover}. }
-\textcolor{red}{i messed up and had $r=0.5$ instead of $r=0.05$ for B and D. haven't fixed fitness plot below.}
+%\textcolor{red}{Is this what Sally was thinking?}
+%\textcolor{blue}{I think this works but I'm confused as to why the speed of spread should be so much different for XY and ZW here. Figure \ref{fig:Combination_Turnover} and \ref{fig:Combination_Centimorgans} suggests that there's not much difference between XY->ZW and ZW->XY. Maybe we should just stick with the 4 cases in figure \ref{fig:Combination_Turnover}. }
+%\textcolor{red}{i messed up and had $r=0.5$ instead of $r=0.05$ for B and D. haven't fixed fitness plot below.}
+Heterogametic transitions occur (panels A and B) regardless of sex ratio biases (panels C and D).
+A neo-W invades (panel A) and equalizes the male-biased sex ratio (panel C) that was caused by meiotic drive in males.
+A neo-Y invades (panel B) a population with an equal sex ratio. 
+With any amount of linkage ($R<1/2$), the neo-Y becomes associated with the driving allele in males, and in the end causes a male bias.
+Parameters: $s^\female = s^\male = 1/5$, $h^\female = h^\male = 7/10$, $t^\female = t^\male=0$, $\alpha^\female_\Delta = 0$, $\alpha^\male_\Delta = -1/5$, $r = 1/20$.
 }
 \label{fig:Combination_Turnover_Ratio}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Changes in mean fitness
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
-\centering
-\begin{tikzpicture}[remember picture]
-	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_Fitness_Rec}};
-	\node[above = -1cm of plot, xshift = -100] () {XY $\rightarrow$ ZW};
-	\node[above = -1cm of plot, xshift = 90] () {ZW $\rightarrow$ XY};
-\end{tikzpicture}
-\caption{
-\textcolor{red}{This complicated thing matches the plot above. I don't think we want to include it...?}
-}
-\label{fig:Combination_Fitness_Rec}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Changes in mean fitness
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[!h]
+%\centering
+%\begin{tikzpicture}[remember picture]
+%	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_Fitness_Rec}};
+%	\node[above = -1cm of plot, xshift = -100] () {XY $\rightarrow$ ZW};
+%	\node[above = -1cm of plot, xshift = 90] () {ZW $\rightarrow$ XY};
+%\end{tikzpicture}
+%\caption{
+%\textcolor{red}{This complicated thing matches the plot above. I don't think we want to include it...?}
+%}
+%\label{fig:Combination_Fitness_Rec}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Changes in mean fitness
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
-\centering
-\begin{tikzpicture}[remember picture]
-	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_MeanFit}};
-	\node[above = 0cm of plot, xshift = -70] () {$r=0.5$, $R=0.05$};
-	\node[above = 0cm of plot, xshift = 120] () {$r=0.05$, $R=0.5$};
-	\node[left = 0cm of plot, yshift = 105, rotate = 90] () {XY $\rightarrow$ ZW};
-	\node[left = 0cm of plot, yshift = -20, rotate = 90] () {ZW $\rightarrow$ XY};
-\end{tikzpicture}
-\caption{
-Changes in mean diploid fitness of males (blue lines), females (red lines), and the entire population (black lines) during the transitions between sex-determination systems shown in Figure \ref{fig:Combination_Turnover}. 
-Here mean diploid fitness of a particular sex is its mean diploid viability fitness times twice its frequency in the population, to capture the fact that epistatically dominant sex-determining alleles can also invade because they selfishly make more of the sex they are in. 
-The mean fitness of females increases during the spread of neo-W alleles (A and B) and the mean fitness of males increases during the spread of neo-Y alleles (C and D). 
-However, when a neo-sex determining system evolves that is less closely linked to a locus under selection (B and D), population mean fitness decreases. 
-%\textcolor{red}{
-%Could add titles to the columns/rows: neo-W for row 1, neo-Y for row 3, $r=0.5$, $R=0.05$ for column 1 and $r=0.05$, $R=0.5$ for column 2. 
-%%\& possibly adjust padding (too much whitespace?). 
-%%Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).
+%\begin{figure}[!h]
+%\centering
+%\begin{tikzpicture}[remember picture]
+%	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_MeanFit}};
+%	\node[above = 0cm of plot, xshift = -70] () {$r=0.5$, $R=0.05$};
+%	\node[above = 0cm of plot, xshift = 120] () {$r=0.05$, $R=0.5$};
+%	\node[left = 0cm of plot, yshift = 105, rotate = 90] () {XY $\rightarrow$ ZW};
+%	\node[left = 0cm of plot, yshift = -20, rotate = 90] () {ZW $\rightarrow$ XY};
+%\end{tikzpicture}
+%\caption{
+%Changes in mean diploid fitness of males (blue lines), females (red lines), and the entire population (black lines) during the transitions between sex-determination systems shown in Figure \ref{fig:Combination_Turnover}. 
+%Here mean diploid fitness of a particular sex is its mean diploid viability fitness times twice its frequency in the population, to capture the fact that epistatically dominant sex-determining alleles can also invade because they selfishly make more of the sex they are in. 
+%The mean fitness of females increases during the spread of neo-W alleles (A and B) and the mean fitness of males increases during the spread of neo-Y alleles (C and D). 
+%However, when a neo-sex determining system evolves that is less closely linked to a locus under selection (B and D), population mean fitness decreases. 
+%%\textcolor{red}{
+%%Could add titles to the columns/rows: neo-W for row 1, neo-Y for row 3, $r=0.5$, $R=0.05$ for column 1 and $r=0.05$, $R=0.5$ for column 2. 
+%%%\& possibly adjust padding (too much whitespace?). 
+%%%Matt - could you uncomment the line legends in the Mathematica file (function not included in my Mathematica version).
+%%}
+%%\textcolor{red}{I'm still confused why male and female mean fitnesses aren't normalized by their frequency. I'm not sure we should be calling them means without this normalization step. Or we should justify this by saying that mean fitness also has something to do with the number of a sex, i.e., multiply *real* mean fitness in females by freqfemale/(1/2)? See the next figure for what happens when we do normalize.}
+%\textcolor{blue}{I think we should give this plot showing (male mean fitness * freq males) and (female mean fitness * freq females), without multiplying by 2 (leave off black lines, population mean fitness). 
+%We could also re-plot the sex ratios on this same scale. 
+%The plot below, `adjusted for sex ratio', could then go in the appendix. The point is that neo-W (neo-Y) can invade when the frequency of females (males) multiplied by their mean fitness increases.  }
 %}
-%\textcolor{red}{I'm still confused why male and female mean fitnesses aren't normalized by their frequency. I'm not sure we should be calling them means without this normalization step. Or we should justify this by saying that mean fitness also has something to do with the number of a sex, i.e., multiply *real* mean fitness in females by freqfemale/(1/2)? See the next figure for what happens when we do normalize.}
-\textcolor{blue}{I think we should give this plot showing (male mean fitness * freq males) and (female mean fitness * freq females), without multiplying by 2 (leave off black lines, population mean fitness). 
-We could also re-plot the sex ratios on this same scale. 
-The plot below, `adjusted for sex ratio', could then go in the appendix. The point is that neo-W (neo-Y) can invade when the frequency of females (males) multiplied by their mean fitness increases.  }
-}
-\label{fig:Combination_MeanFit}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+%\label{fig:Combination_MeanFit}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Changes in mean fitness corrected for sex ratio
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
-\centering
-\begin{tikzpicture}[remember picture]
-	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_MeanFit_Corrected}};
-\end{tikzpicture}
-\caption{
-\textcolor{red}{Last plot with mean fitness of sexes corrected for sex ratio. Could add to previous plot with dashed lines?}
-}
-\label{fig:Combination_MeanFit_Corrected}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+%\begin{figure}[!h]
+%\centering
+%\begin{tikzpicture}[remember picture]
+%	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_MeanFit_Corrected}};
+%\end{tikzpicture}
+%\caption{
+%\textcolor{red}{Last plot with mean fitness of sexes corrected for sex ratio. Could add to previous plot with dashed lines?}
+%}
+%\label{fig:Combination_MeanFit_Corrected}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Chromosomal Positions
@@ -957,14 +964,14 @@ The plot below, `adjusted for sex ratio', could then go in the appendix. The poi
 %	\draw[->,thick] (-1.4, -0.5) -- (-1.4, -1);
 \end{tikzpicture}
 \caption{
-Invasion fitness of a neo-sex-determining allele plotted against the relative genomic location of a locus under direct selection for various selective regimes. 
+Invasion fitness of a neo-sex-determining allele against the relative genomic location of a locus under direct selection. 
 % (neo-Y invading ZW in black, neo-W invading XY in red)
 %The ancestral sex-determining locus is located at -25 and the novel sex-determining locus is located at 25. %and that there is a polymorphism at the \textbf{A} locus maintained by selection.
 %Thus, if the neo-sex-determining allele invades in the gray region the system evolves tighter sex-linkage.  
-We use Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert from map distance (centiMorgans, cM) to the probability of a cross-over event. 
 In panel A, there is no haploid selection ($t^\Hermaphrodite=\alpha^\Hermaphrodite_{\Delta}=0$) and selection in diploids is sexually antagonistic ($s^\male=-s^\female=1/10$, $h^\male=1-h^\female=3/10$), in which case the neo-sex-determining allele can only invade if it is more closely linked to the selected locus ($R<r$; gray region).
 In panel B, there is no diploid selection ($s^\Hermaphrodite=0$) and selection in haploids is sexually antagonistic ($t^\male=-t^\female=0.08$, $\alpha^\Hermaphrodite_{\Delta}=0$), in which case the neo-sex-determining allele can invade regardless of linkage.   
-In panel C, selection in diploids ($s^\male=s^\female=1/10$, $h^\male=h^\female=7/10$) opposes drive in males ($\alpha^\male_{\Delta}=-0.05$, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), in which case the neo-sex-determining allele can once again invade regardless of linkage.   
+In panel C, selection in diploids ($s^\male=s^\female=1/10$, $h^\male=h^\female=7/10$) opposes drive in males ($\alpha^\male_{\Delta}=-0.05$, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), in which case the neo-sex-determining allele can once again invade regardless of linkage.
+We use Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert from map distance (centiMorgans, cM) to the probability of a cross-over event.    
 %we include haploid selection. %and assume that selection in diploids is not sexually-antagonistic ($s^\female s^\male>0$). 
 %A polymorphism can then be maintained by opposing selection between the haploid and diploid phases. 
 %In B, there is drive in favour of the $a$ allele in males ($\alpha^\male_{\Delta}=-1/20$), no female meiotic drive or gametic competition, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), and equal selection in diploid sexes ($s^\female=s^\male=1/10$, $h^\female=h^\male=7/10$). 
@@ -1005,6 +1012,7 @@ Parameters: $w_A^\Hermaphrodite=w_a^\Hermaphrodite$, $\alpha^\female=1/2$, $h=1/
 \label{fig:regionplot_2a}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %W invades XY and fixes
