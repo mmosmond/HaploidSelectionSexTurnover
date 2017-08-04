@@ -816,6 +816,122 @@ Overall, our results suggest several new scenarios under which new sex-determina
 %\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Tighter linkage allows looser sex-linkage to evolve, even in absence of haploid selection
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\linewidth]{PositionPlot_SexAntagTighter}
+\caption{
+In the absence of haploid selection, tight linkage allows looser sex-linkage to evolve in transitions between XY and ZW systems.
+In panel A, linkage is loose enough relative to selection that the weak selection analytical results hold, and a neo-W can only invade when it is more tightly linked with the selected locus ($R<r$; shaded region).
+In panel B, linkage is tight enough relative to selection that the weak selection analytical results do no hold, and a neo-W can only invade even when it is less tightly linked with the selected locus ($r<R$; unshaded region).
+Parameters: $w_{AA}^\female = w_{aa}^\male = 1.05$, $w_{aa}^\female = w_{AA}^\male = 0.85$, $w_{Aa}^\female = 1$, $w_{Aa}^\male = 0.925$, $t^\Hermaphrodite = \alpha^\Hermaphrodite_\Delta = 0$.
+}
+\label{fig:SexAntagTighter}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Both neo-W haplotypes can spread, in the absence of haploid selection, when there is overdominance
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.45\linewidth]{regionplot_2a}
+\includegraphics[width=0.45\linewidth]{BothWsInvade_Overdominance}
+\caption{
+In the absence of haploid selection, both neo-W haplotypes can spread in an XY system when there is overdominance.
+Panel A shows the range of male homozygote fitnesses that allow both neo-W haplotypes to invade.
+Panel B shows the temporal dynamics of the invading neo-W haplotypes; in this case the neo-W does not fix, leading to a polymorphic sex-determining system.
+Asterisk in panel A marks parameter values ($w_{aa}^\male=0.15$, $w_{AA}^\male=0.1$) used in panel B.
+Parameters: $w_{AA}^\female = w_{aa}^\female = 0.6$, $w_{Aa}^\Hermaphrodite = 1$, $t^\Hermaphrodite = \alpha^\Hermaphrodite_\Delta = 0$, $r=R=0$.
+}
+\label{fig:BothOverdominance}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%With weak selection, a less tightly linked neo-W can invade an XY system when there is some haploid selection, and this invasion decreases mean diploid fitness
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\linewidth]{Loose_Fitness_Decline}
+\caption{
+With weak selection, a less tightly linked neo-W can invade (and fix in) an XY system (causing the Y to fix in females) when there is some haploid selection (blue and green curves in panel A), and this invasion decreases mean diploid fitness (green and blue curves in panel B).
+Parameters: $s^\Hermaphrodite = 0.2$, $h^\Hermaphrodite = 0.7$, $t^\Hermaphrodite = \alpha^\male_\Delta = 0$, $\alpha^\female_\Delta = -0.1$, $r=1/10$.
+}
+\label{fig:LooseDecline}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%A neo-W can invade an XY system under a large number of selective regimes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\linewidth]{PositionPlot_4}
+\caption{
+ A neo-W can invade an XY system under a large number of selective regimes.
+In panel A, there is no haploid selection ($t^\Hermaphrodite = \alpha^\Hermaphrodite_{\Delta} = 0$) and selection in diploids is sexually antagonistic ($s^\male = -s^\female = 1/10$, $h^\male = 1-h^\female = 3/10$), in which case the neo-sex-determining allele can only invade if it is more closely linked to the selected locus ($R<r$, gray region; but see Figure \ref{fig:SexAntagTighter}B for the case of very tight linkage).
+In panel B, male drive ($\alpha^\male_{\Delta} = -1/20$, $t^\Hermaphrodite = \alpha^\female_{\Delta} = 0$) opposes selection in diploids (no sex-differences: $s^\Hermaphrodite = 1/10$, $h^\Hermaphrodite = 7/10$), in which case the neo-sex-determining allele can invade regardless of linkage.   
+In panel C, haploid competition in males ($t^\male = -1/10$, $t^\female = \alpha^\Hermaphrodite_{\Delta} = 0$) opposes selection in diploids (sex-differences: $s^\male = 3 s^\female = 3/20$, $h^\Hermaphrodite = 7/10$), in which case the neo-sex-determining allele can once again invade regardless of linkage.
+We use Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert from map distance (centiMorgans, cM) to the probability of recombination (an odd number of cross-over events).   
+}
+\label{fig:Combination_Centimorgans}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Sex-ratio selection is not a good predictor of neo-W invasion into an XY system
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\linewidth]{Combination_Turnover_Ratio}
+\caption{
+Sex-ratio selection alone is not a good predictor of turnover between sex-determining systems.
+In panels A and C, male drive in an ancestral XY system causes a male bias, allowing a neo-W to invade and fix (causing the Y to fix in females), which balances the sex ratio (it also avoids selection in males, and thus makes better females in this case of sex-specific ploidally-antagonistic selection).
+In panels B and D, male drive in an ancestral ZW system has no affect on the sex ratio, yet a neo-Y can invade and fix (causing the W to fix in males) because it becomes linked with the driving allele, and this imparts a sex ratio bias.
+Parameters:  $s^\female =s^\male = 0.2$, $h^\female = h^\male = 0.7$, $t^\female = t^\male = \alpha^\male_\Delta = 0$, $\alpha^\female_\Delta = -1/10$, $r=1/20$.
+}
+\label{fig:SexRatioBad}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Haploid selection can lead to polymorphic SD systems 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\linewidth]{Polymorphic}
+\caption{
+Tight linkage (relative to selection) and/or haploid selection can cause stable polymorphic sex-determining systems.
+In panel A, there is strong overdominance in both sexes and no haploid selection  (parameters as in Figure \ref{fig:BothOverdominance}B with $r = 1/10$), in which case a neo-W can invade regardless of sex-linkage, but cannot not fix (i.e., the Y does not fix in females, and X, Y, W, and Z all segregate at equilibrium).
+In panel B, there is sex-antagonistic selection at the diploid stage and drive in females (parameters as in Figure \ref{fig:SexAntagTighter} with $\alpha^\female_\Delta = -1/20$ and $r = 1/10$), in which case a sufficiently tightly linked neo-W can invade ($R<\sim r$), but only fixes if $R=0$.   
+}
+\label{fig:Polymorphism}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%CYCLES!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\linewidth]{BothWsInvade_Overdominance_Cycles}
+\caption{
+Thought I'd show this just for fun (not for publication).
+}
+\label{fig:Cycles}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Heterogametic transitions with/without sex ratio change
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{figure}[!h]
@@ -855,27 +971,27 @@ Overall, our results suggest several new scenarios under which new sex-determina
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Heterogametic transitions with/without sex ratio change
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
-\centering
-\begin{tikzpicture}[remember picture]
-	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_Turnover_Ratio}};
-	\node[above = -1cm of plot, xshift = -100] () {XY $\rightarrow$ ZW};
-	\node[above = -1cm of plot, xshift = 90] () {ZW $\rightarrow$ XY};
-\end{tikzpicture}
-\caption{
-%\textcolor{red}{Is this what Sally was thinking?}
-%\textcolor{blue}{I think this works but I'm confused as to why the speed of spread should be so much different for XY and ZW here. Figure \ref{fig:Combination_Turnover} and \ref{fig:Combination_Centimorgans} suggests that there's not much difference between XY->ZW and ZW->XY. Maybe we should just stick with the 4 cases in figure \ref{fig:Combination_Turnover}. }
-%\textcolor{red}{i messed up and had $r=0.5$ instead of $r=0.05$ for B and D. haven't fixed fitness plot below.}
-Heterogametic transitions occur (panels A and B) regardless of sex ratio biases (panels C and D).
-A neo-W invades (panel A) and equalizes the male-biased sex ratio (panel C) that was caused by meiotic drive in males.
-A neo-Y invades (panel B) a population with an equal sex ratio. 
-With any amount of linkage ($R<1/2$), the neo-Y becomes associated with the driving allele in males, and in the end causes a male bias.
-Parameters: $s^\female = s^\male = 1/5$, $h^\female = h^\male = 7/10$, $t^\female = t^\male=0$, $\alpha^\female_\Delta = 0$, $\alpha^\male_\Delta = -1/5$, $r = 1/20$.
-}
-\label{fig:Combination_Turnover_Ratio}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+%\begin{figure}[!h]
+%\centering
+%\begin{tikzpicture}[remember picture]
+%	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_Turnover_Ratio}};
+%	\node[above = -1cm of plot, xshift = -100] () {XY $\rightarrow$ ZW};
+%	\node[above = -1cm of plot, xshift = 90] () {ZW $\rightarrow$ XY};
+%\end{tikzpicture}
+%\caption{
+%%\textcolor{red}{Is this what Sally was thinking?}
+%%\textcolor{blue}{I think this works but I'm confused as to why the speed of spread should be so much different for XY and ZW here. Figure \ref{fig:Combination_Turnover} and \ref{fig:Combination_Centimorgans} suggests that there's not much difference between XY->ZW and ZW->XY. Maybe we should just stick with the 4 cases in figure \ref{fig:Combination_Turnover}. }
+%%\textcolor{red}{i messed up and had $r=0.5$ instead of $r=0.05$ for B and D. haven't fixed fitness plot below.}
+%Heterogametic transitions occur (panels A and B) regardless of sex ratio biases (panels C and D).
+%A neo-W invades (panel A) and equalizes the male-biased sex ratio (panel C) that was caused by meiotic drive in males.
+%A neo-Y invades (panel B) a population with an equal sex ratio. 
+%With any amount of linkage ($R<1/2$), the neo-Y becomes associated with the driving allele in males, and in the end causes a male bias.
+%Parameters: $s^\female = s^\male = 1/5$, $h^\female = h^\male = 7/10$, $t^\female = t^\male=0$, $\alpha^\female_\Delta = 0$, $\alpha^\male_\Delta = -1/5$, $r = 1/20$.
+%}
+%\label{fig:Combination_Turnover_Ratio}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%Changes in mean fitness
@@ -944,75 +1060,76 @@ Parameters: $s^\female = s^\male = 1/5$, $h^\female = h^\male = 7/10$, $t^\femal
 %\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Chromosomal Positions
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
-\centering
-%\includegraphics[width=\linewidth]{Combination_Centimorgan}\\
-%\includegraphics[width=\linewidth]{PositionPlot}\\
-\begin{tikzpicture}[remember picture]
-%	\node[] () {\includegraphics[width=\linewidth]{PositionPlot}};
-	\node[] () {\includegraphics[width=0.5\linewidth]{PositionPlot_2}};
-%	\node[anchor=east] at (0, 1.5) {\footnotesize diploid sex-antagonism}; %, $s^\male s^\female < 0$};
-%	\node[anchor=east] at (6.5, 1.5) {\footnotesize haploid sex-antagonism}; %, $s^\male s^\female > 0$};
-%	\node[anchor=east] at (0, -3) {\footnotesize male drive (ploidy-antagonism)}; %, $s^\male < s^\female$};
-%	\node[anchor=east] at (6.5, -3) {\footnotesize find something interesting to plot};%, $s^\female < s^\female$};
-%	\node[anchor=center] at (-1.3, 4.25) {\scriptsize tighter sex-linkage};
-%	\node[anchor=center] at (2.45, 3.5) {\scriptsize ancestral SDR};
-%	\draw[->,thick] (2.45, 3.25) -- (2.45, 2.5);
-%	\node[anchor=center] at (-1.4, -0.25) {\scriptsize novel SDR};
-%	\draw[->,thick] (-1.4, -0.5) -- (-1.4, -1);
-\end{tikzpicture}
-\caption{
-Invasion fitness of a neo-sex-determining allele against the relative genomic location of a locus under direct selection. 
-% (neo-Y invading ZW in black, neo-W invading XY in red)
-%The ancestral sex-determining locus is located at -25 and the novel sex-determining locus is located at 25. %and that there is a polymorphism at the \textbf{A} locus maintained by selection.
-%Thus, if the neo-sex-determining allele invades in the gray region the system evolves tighter sex-linkage.  
-In panel A, there is no haploid selection ($t^\Hermaphrodite=\alpha^\Hermaphrodite_{\Delta}=0$) and selection in diploids is sexually antagonistic ($s^\male=-s^\female=1/10$, $h^\male=1-h^\female=3/10$), in which case the neo-sex-determining allele can only invade if it is more closely linked to the selected locus ($R<r$; gray region).
-In panel B, there is no diploid selection ($s^\Hermaphrodite=0$) and selection in haploids is sexually antagonistic ($t^\male=-t^\female=0.08$, $\alpha^\Hermaphrodite_{\Delta}=0$), in which case the neo-sex-determining allele can invade regardless of linkage.   
-In panel C, selection in diploids ($s^\male=s^\female=1/10$, $h^\male=h^\female=7/10$) opposes drive in males ($\alpha^\male_{\Delta}=-0.05$, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), in which case the neo-sex-determining allele can once again invade regardless of linkage.
-We use Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert from map distance (centiMorgans, cM) to the probability of a cross-over event.    
-%we include haploid selection. %and assume that selection in diploids is not sexually-antagonistic ($s^\female s^\male>0$). 
-%A polymorphism can then be maintained by opposing selection between the haploid and diploid phases. 
-%In B, there is drive in favour of the $a$ allele in males ($\alpha^\male_{\Delta}=-1/20$), no female meiotic drive or gametic competition, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), and equal selection in diploid sexes ($s^\female=s^\male=1/10$, $h^\female=h^\male=7/10$). 
-%In this case, a neo-W can invade even when the selected locus is more closely linked to the ancestral sex determining locus (see Table \ref{tab:specialcases} and Figure \ref{fig:Combination_Turnover}). 
-%In C and D, there is gametic competition among male gametes only (favouring $a$, $t^\male=-1/10$) and no meiotic drive or gametic competition in females ($t^\female=\alpha^\Hermaphrodite_{\Delta}=0$). 
-%In this case, the neo-W does not invade if $s^\female>s^\male$ (panel C: $s^\female=3/20$, $s^\male=1/20$) but does if $s^\female<s^\male$ (panel D: $s^\female=1/20$, $s^\male=3/20$), see Table \ref{tab:specialcases}.\\ 
-%\textcolor{red}{
-%1. I suspect that panel C has a region where no equilibrium is maintained (CHECK! Maybe include different parameters here or remove the part when no equilibrium). MMO: If you trust the sieve function there are stable equilibria across the entire range, although they differ greatly between XY and ZW systems near -25cM.
-%\\
-%2. Currently use different parameters for B than using in figure \ref{fig:Combination_Turnover} (selection/drive twice as strong in turnover figure). MMO: this is to keep it within the bounds of the plot -- using the same parameters as figure 1 makes the peak at -25 reach roughly 0.1, and then it is difficult to see the details of A,C, and D.
-%%This plot would also benefit from titles giving, e.g., ``sexually-antagonistic selection, $s^\female s^\male<0$'' for A, ``male meiotic drive, $s^\female s^\male>0$'' for B
+%%Chromosomal Positions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[!h]
+%\centering
+%%\includegraphics[width=\linewidth]{Combination_Centimorgan}\\
+%%\includegraphics[width=\linewidth]{PositionPlot}\\
+%\begin{tikzpicture}[remember picture]
+%%	\node[] () {\includegraphics[width=\linewidth]{PositionPlot}};
+%	\node[] () {\includegraphics[width=0.5\linewidth]{PositionPlot_2}};
+%%	\node[anchor=east] at (0, 1.5) {\footnotesize diploid sex-antagonism}; %, $s^\male s^\female < 0$};
+%%	\node[anchor=east] at (6.5, 1.5) {\footnotesize haploid sex-antagonism}; %, $s^\male s^\female > 0$};
+%%	\node[anchor=east] at (0, -3) {\footnotesize male drive (ploidy-antagonism)}; %, $s^\male < s^\female$};
+%%	\node[anchor=east] at (6.5, -3) {\footnotesize find something interesting to plot};%, $s^\female < s^\female$};
+%%	\node[anchor=center] at (-1.3, 4.25) {\scriptsize tighter sex-linkage};
+%%	\node[anchor=center] at (2.45, 3.5) {\scriptsize ancestral SDR};
+%%	\draw[->,thick] (2.45, 3.25) -- (2.45, 2.5);
+%%	\node[anchor=center] at (-1.4, -0.25) {\scriptsize novel SDR};
+%%	\draw[->,thick] (-1.4, -0.5) -- (-1.4, -1);
+%\end{tikzpicture}
+%\caption{
+% A neo-W can invade an XY system under a large number of selective regimes.
+%%Invasion fitness of a neo-sex-determining allele against the relative genomic location of a locus under direct selection. 
+%% (neo-Y invading ZW in black, neo-W invading XY in red)
+%%The ancestral sex-determining locus is located at -25 and the novel sex-determining locus is located at 25. %and that there is a polymorphism at the \textbf{A} locus maintained by selection.
+%%Thus, if the neo-sex-determining allele invades in the gray region the system evolves tighter sex-linkage.  
+%In panel A, there is no haploid selection ($t^\Hermaphrodite=\alpha^\Hermaphrodite_{\Delta}=0$) and selection in diploids is sexually antagonistic ($s^\male=-s^\female=1/10$, $h^\male=1-h^\female=3/10$), in which case the neo-sex-determining allele can only invade if it is more closely linked to the selected locus ($R<r$, gray region; but see Figure \ref{fig:SexAntagTighter}B).
+%In panel B, there is no diploid selection ($s^\Hermaphrodite=0$) and selection in haploids is sexually antagonistic ($t^\male=-t^\female=0.08$, $\alpha^\Hermaphrodite_{\Delta}=0$), in which case the neo-sex-determining allele can invade regardless of linkage.   
+%In panel C, selection in diploids ($s^\male=s^\female=1/10$, $h^\male=h^\female=7/10$) opposes drive in males ($\alpha^\male_{\Delta}=-0.05$, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), in which case the neo-sex-determining allele can once again invade regardless of linkage.
+%We use Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert from map distance (centiMorgans, cM) to the probability of a cross-over event.    
+%%we include haploid selection. %and assume that selection in diploids is not sexually-antagonistic ($s^\female s^\male>0$). 
+%%A polymorphism can then be maintained by opposing selection between the haploid and diploid phases. 
+%%In B, there is drive in favour of the $a$ allele in males ($\alpha^\male_{\Delta}=-1/20$), no female meiotic drive or gametic competition, $t^\Hermaphrodite=\alpha^\female_{\Delta}=0$), and equal selection in diploid sexes ($s^\female=s^\male=1/10$, $h^\female=h^\male=7/10$). 
+%%In this case, a neo-W can invade even when the selected locus is more closely linked to the ancestral sex determining locus (see Table \ref{tab:specialcases} and Figure \ref{fig:Combination_Turnover}). 
+%%In C and D, there is gametic competition among male gametes only (favouring $a$, $t^\male=-1/10$) and no meiotic drive or gametic competition in females ($t^\female=\alpha^\Hermaphrodite_{\Delta}=0$). 
+%%In this case, the neo-W does not invade if $s^\female>s^\male$ (panel C: $s^\female=3/20$, $s^\male=1/20$) but does if $s^\female<s^\male$ (panel D: $s^\female=1/20$, $s^\male=3/20$), see Table \ref{tab:specialcases}.\\ 
+%%\textcolor{red}{
+%%1. I suspect that panel C has a region where no equilibrium is maintained (CHECK! Maybe include different parameters here or remove the part when no equilibrium). MMO: If you trust the sieve function there are stable equilibria across the entire range, although they differ greatly between XY and ZW systems near -25cM.
+%%\\
+%%2. Currently use different parameters for B than using in figure \ref{fig:Combination_Turnover} (selection/drive twice as strong in turnover figure). MMO: this is to keep it within the bounds of the plot -- using the same parameters as figure 1 makes the peak at -25 reach roughly 0.1, and then it is difficult to see the details of A,C, and D.
+%%%This plot would also benefit from titles giving, e.g., ``sexually-antagonistic selection, $s^\female s^\male<0$'' for A, ``male meiotic drive, $s^\female s^\male>0$'' for B
+%%}
 %}
-}
-\label{fig:Combination_Centimorgans}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+%\label{fig:Combination_Centimorgans}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Haplotype invasion region plot
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
-\centering
-\begin{tikzpicture}[remember picture]
-	\node[] () {
-	\includegraphics[width=0.5\linewidth]{regionplot_2a}
-	\includegraphics[width=0.5\linewidth]{regionplot_hap}
-	};
-\end{tikzpicture}
-\caption{
-Parameter space (gray) where both neo-W haplotypes can invade from the same stable resident $r=0$ equilibria (equations \ref{eq:tightequil}), and therefore where an unlinked neo-W can invade an XY system with perfect sex-linkage.
-\textbf{A}, In the absence of haploid selection, both neo-W haplotypes can invade for much of the parameter space where the relative fitnesses of male homozygotes, $w_{AA}^\male$ and $w_{aa}^\male$, are both less than that of the heterozygote, $w_{Aa}^\male = 1$.
-In the white region neo-W haplotypes paired with the allele fixed on the Y cannot invade.
-Parameters as in \cite{Otto2014} Figure 2a: $w_A^\Hermaphrodite=w_a^\Hermaphrodite$, $\alpha^\Hermaphrodite=1/2$, $w_{Aa}^\Hermaphrodite=1$, and $w_{AA}^\female=w_{aa}^\female=0.75$.
-\textbf{B}, When selection is the same in both diploid sexes ($w_{aa}^\Hermaphrodite = 1$, $w_{Aa}^\Hermaphrodite = 1 + h s$, $w_{AA}^\Hermaphrodite = 1+s$), both neo-W haplotypes can invade over a portion of the parameter space where selection in diploids ($s$) opposes the force of drive during meiosis in males ($\alpha_{\Delta}^\male$).
-Parameters: $w_A^\Hermaphrodite=w_a^\Hermaphrodite$, $\alpha^\female=1/2$, $h=1/2$.
-}
-\label{fig:regionplot_2a}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Haplotype invasion region plot
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[!h]
+%\centering
+%\begin{tikzpicture}[remember picture]
+%	\node[] () {
+%	\includegraphics[width=0.5\linewidth]{regionplot_2a}
+%	\includegraphics[width=0.5\linewidth]{regionplot_hap}
+%	};
+%\end{tikzpicture}
+%\caption{
+%Parameter space (gray) where both neo-W haplotypes can invade from the same stable resident $r=0$ equilibria (equations \ref{eq:tightequil}), and therefore where an unlinked neo-W can invade an XY system with perfect sex-linkage.
+%\textbf{A}, In the absence of haploid selection, both neo-W haplotypes can invade for much of the parameter space where the relative fitnesses of male homozygotes, $w_{AA}^\male$ and $w_{aa}^\male$, are both less than that of the heterozygote, $w_{Aa}^\male = 1$.
+%In the white region neo-W haplotypes paired with the allele fixed on the Y cannot invade.
+%Parameters as in \cite{Otto2014} Figure 2a: $w_A^\Hermaphrodite=w_a^\Hermaphrodite$, $\alpha^\Hermaphrodite=1/2$, $w_{Aa}^\Hermaphrodite=1$, and $w_{AA}^\female=w_{aa}^\female=0.75$.
+%\textbf{B}, When selection is the same in both diploid sexes ($w_{aa}^\Hermaphrodite = 1$, $w_{Aa}^\Hermaphrodite = 1 + h s$, $w_{AA}^\Hermaphrodite = 1+s$), both neo-W haplotypes can invade over a portion of the parameter space where selection in diploids ($s$) opposes the force of drive during meiosis in males ($\alpha_{\Delta}^\male$).
+%Parameters: $w_A^\Hermaphrodite=w_a^\Hermaphrodite$, $\alpha^\female=1/2$, $h=1/2$.
+%}
+%\label{fig:regionplot_2a}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %W invades XY and fixes
