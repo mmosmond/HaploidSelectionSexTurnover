@@ -422,7 +422,7 @@ Wherever both haplotypes have positive growth rates (gray region of Figure \ref{
 In regions where only one haplotype can spread (white region of Figure \ref{fig:regionplot_2a}), a neo-W can invade as long as equation \eqref{eq:lambdasGen} is satisfied, which can require that the recombination rate, $R$, is small enough and yet still indicates that more loosely linked sex-determining regions can spread.
 It is also possible for haploid selection to drive the invasion of a loosely linked neo-W. 
 Take, for instance, selection directionally favouring $A$ in both diploid sexes and meiotic drive in males.
-Figure \ref{fig:regionplot_2a}B then shows that ploidally-antagonisitic selection can allow both neo-W haplotypes to invade. 
+Figure \ref{fig:regionplot_2a}B then shows that ploidally-antagonistic selection can allow both neo-W haplotypes to invade. 
 %}
 
 %Neo-W alleles, on the other hand, can invade an ancestral XY system under some conditions (given in detail in the appendix). 
@@ -494,8 +494,8 @@ The diploid selection term, $D^\Hermaphrodite=\big{(} \bar{p}s^\Hermaphrodite+(1
 
 
 The neo-sex-determining allele, $m$, will spread if $\lambda_{m,XY}>1$. 
-Equation \eqref{eq:lambda_neoY} demonstrates that under weak selection a neo-Y will invade if and only if it is more closely linked to the selected locus than the ancestral sex-determining region (i.e., if $R<r$; note that $V_{A}$ and $S_{A}^2$ are strictly positive as long as \textbf{A} is polymorphic). 
-This echoes our tight linkage results above and the results of \citet{vanDoorn:2007eu}, who considered diploid selection only and also found that homogametic transitions (XY to XY or ZW to ZW) can occur when the neo-sex-determining locus is more closely linked to a locus under sexually-antagonistic selection. 
+Equation \eqref{eq:lambda_neoY} demonstrates that under weak selection a neo-Y will invade an XY system if and only if it is more closely linked to the selected locus than the ancestral sex-determining region (i.e., if $R<r$; note that $V_{A}$ and $S_{A}^2$ are strictly positive as long as \textbf{A} is polymorphic). 
+This echoes our tight linkage results above and the results of \citet{vanDoorn:2007eu}, who considered diploid selection only and also found that homogametic transitions (XY to XY or ZW to ZW) can only occur when the neo-sex-determining locus is more closely linked to a locus under sexually-antagonistic selection. 
 %Because tighter linkage between the sex-determining region and a selected locus evolves during these transitions, stronger associations between selected alleles and diploid sexes can build up by selection (e.g., between male-beneficial alleles and the male-determining allele, Y).%, increasing diploid mean fitness (Figure \ref{fig:Combination_MeanFit}). 
 
 Equation \eqref{eq:lambda_neoW} shows that, in contrast to the tight linkage results of the previous section, with weak selection and no haploid selection ($t^\Hermaphrodite=\alpha^\Hermaphrodite_{\Delta}=0$), as considered by \citet{vanDoorn:2010hu}, the spread of a neo-W is equivalent to the spread of a neo-Y ($\lambda_{W',XY}=\lambda_{Y',XY}$), such that heterogametic transitions (XY to ZW or ZW to XY) can also occur only if the neo-sex-determining region is more closely linked to a locus under selection ($R<r$). 
@@ -503,7 +503,7 @@ However, if there is any haploid selection, the additional term in equation \eqr
 These transitions are unusual because, when $R>r$, associations that selection has built up between alleles more favourable in one sex and alleles that determine sex will be weakened. 
 Mean diploid fitness therefore decreases during heterogametic transitions that create looser sex-linkage (Figure \ref{fig:Combination_MeanFit}B,D). 
 
-Equation \eqref{eq:lambda_neoW} shows that neo-W alleles can invade an XY system for a large number of selective regimes. 
+Equation \eqref{eq:lambda_neoW} shows that, with weak selection, neo-W alleles can invade an XY system for a large number of selective regimes. 
 To clarify the parameter space under which $\lambda_{W',XY}>1$, we consider several special cases. 
 Firstly, if the \textbf{A} locus is unlinked to the ancestral sex-determining region ($r=1/2$), a more closely linked neo-W ($R<1/2$) can always invade because there is then no association between $A$ alleles and sex chromosomes, $\left( \hat{p}^\male_Y-\hat{p}^\male_X \right)=0$. 
 The second term in equation \eqref{eq:lambda_neoW} then disappears and invasion depends only on the sign of $(r-R)$. 
@@ -820,13 +820,13 @@ Overall, our results suggest several new scenarios under which new sex-determina
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{figure}[!h]
 %\centering
-\begin{tikzpicture}[remember picture]
-	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_Turnover}};
-	\node[above = 0cm of plot, xshift = -70] () {$r=0.5$, $R=0.05$};
-	\node[above = 0cm of plot, xshift = 120] () {$r=0.05$, $R=0.5$};
-	\node[left = 0cm of plot, yshift = 105, rotate = 90] () {XY $\rightarrow$ ZW};
-	\node[left = 0cm of plot, yshift = -20, rotate = 90] () {ZW $\rightarrow$ XY};
-\end{tikzpicture}
+%\begin{tikzpicture}[remember picture]
+%	\node[] (plot) {\includegraphics[width=\linewidth]{Combination_Turnover}};
+%	\node[above = 0cm of plot, xshift = -70] () {$r=0.5$, $R=0.05$};
+%	\node[above = 0cm of plot, xshift = 120] () {$r=0.05$, $R=0.5$};
+%	\node[left = 0cm of plot, yshift = 105, rotate = 90] () {XY $\rightarrow$ ZW};
+%	\node[left = 0cm of plot, yshift = -20, rotate = 90] () {ZW $\rightarrow$ XY};
+%\end{tikzpicture}
 %\caption{
 %Heterogametic transitions from XY to ZW sex determination (neo-W frequency shown by black lines, panels A and B) or from ZW to XY (neo-Y frequency shown by black lines, panels C and D) occur similarly regardless of sex ratio biases present before (B versus D) or after (C versus A, dashed lines show male frequency). 
 %During invasion by a neo-ZW sex-determination system (A and B), the ancestral Y fixes in both males and females (blue and red lines). 
