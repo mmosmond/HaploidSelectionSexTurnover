@@ -166,9 +166,11 @@ Even in the absence of haploid selection, we show that transitions between male 
 
 \textcolor{red}{Change all  $\alpha^\Hermaphrodite$ to $(1+\alpha_{\Delta}^\Hermaphrodite)$.}
 \textcolor{blue}{I've attempted this everywhere except in the recursions (S.1), which seem more natural with $\alpha$'s. I've run into trouble in equation S.8c,d -- I think we should check the Mathematica results to be sure we haven't made a typo. This also introduced an extra 1/2 in S.6c,d that might need to be explained.}
+\textcolor{red}{hmm, not sure. This was an idea from Sally, I think in response to terms like $2 \alpha^\Hermaphrodite$ and $2(1-\alpha^\Hermaphrodite)$. It's possible that it makes other equations less easy to understand. My previous (not explained) logic was to use $w$ and $\alpha$ for strong selection and $s$, $t$, and $\alpha_\Delta$ for weak selection. Just to check, I should have written $\alpha^\Hermaphrodite=(1+\alpha_{\Delta}^\Hermaphrodite)/2$, maybe that's where the factors of $1/2$ come from?}
 
 \textcolor{red}{Switch between $\chi$ and $\rho$ in all places because $\chi$ is used for double recombination events.}
 \textcolor{blue}{I think we need a different variable given the $\rho$ terms in the characteristic polynomial. Also, where is $\chi$ used for double recombination? In other papers? Here $\chi$ is the probability of an odd number of cross-overs between the SDR and M loci.}
+\textcolor{red}{Good point, not sure what's best for \textbf{the-term-formerly-known-as-$\rho$}. Yeah, Sally's written comment was something like ``$\chi$ is semi-standard notation for double recombination so it's use as a recombination rate might be confusing''.}
 
 %\textcolor{red}{Change $\zeta$ to represent zygotic sex ratio of males, consistent with $q$ and figures.}
 
@@ -374,7 +376,9 @@ We can analytically calculate the allele frequency of the $A$ allele using two a
 %We then use the weak selection approximation that was also used in \citet{vanDoorn:2007eu,vanDoorn:2010hu} except that we allow haploid selection on the \textbf{A} locus. 
 
 \textcolor{red}{Change to $\hat{p}$ throughout as we assume that allele frequencies change slowly such that lambda is unaffected}
-\textcolor{how will we differentiate between equilibrium $p$ and non-equilibrium $p$? or is the point that we can only say anything when at equilibrium?}
+\textcolor{blue}{how will we differentiate between equilibrium $p$ and non-equilibrium $p$? or is the point that we can only say anything when at equilibrium?}
+\textcolor{red}{I think Sally's point is that the eigenvalue analysis only makes sense if the $p$'s are changing slowly relative to the frequency of the modifier. Therefore, even when we don't substitute in any equilibrium frequencies, it might be safest to think of them as equilibrium allele frequencies. }
+
 
 \subsubsection*{Tight linkage with the ancestral sex-determining region}
 
@@ -847,7 +851,7 @@ For example, where a neo-Y invades and is linked with a locus that experiences h
 Furthermore, with weak selection, we find that there is no difference in conditions allowing XY to ZW and ZW to XY transitions, indicating that sex chromosome transitions are not predominantly predicted by their effect on the sex-ratio (i.e., the sex-ratio bias created by male haploid selection facilitates the spread of a neo-W into an XY system the same way that male haploid selection drives the spread of a neo-Y into a ZW system with a 1:1 sex ratio). 
 %An asymmetry can develop when sex-linkage is tight (e.g., Figure \ref{fig:Combination_Centimorgans} near -25cM and 25cM) but under most circumstances we do not predict asymmetry between XY to ZW and ZW to XY transitions despite the presence/absence of sex ratio selection. 
 Thus, haploid selection can favour heterogametic transitions both via sex-ratio selection %\citep[as predicted by][]{Kozielska:2010vm} 
-and via fitness effects of alleles that are associated with the neo-sex-determining allele, and these selection pressures are predicted to often be of roughly equal magnitude (unless linkage is tight). 
+and via fitness effects of alleles that are associated with the neo-sex-determining allele, and these selection pressures are predicted to often be of equal magnitude when selection is weak. 
 %\textcolor{red}{Maybe try to emphasise surprisingness in the paragraph more? e.g., how wrong you'd be if you assumed selection to equalise sex ratios, or it this implied?}
 %\textcolor{blue}{nice, pretty subtle argument but I think that's a good job.}
 
@@ -933,7 +937,7 @@ We have shown that tight sex-linkage and haploid selection can drive previously 
 In particular, both can select for neo-sex-determining loci that are more loosely linked. 
 In addition, haploid selection alone can cause transitions analogous to those caused by purely sexually-antagonistic selection, eliminating the need for differences in selection between male and female diploids.
 Perhaps counterintuitively, transitions involving haploid selection can be driven by sex-ratio selection or cause sex-ratio biases to evolve. 
-We therefore argue that haploid selection should be considered as a pivotal factor in the evolution of sex-determination systems. 
+We conclude that haploid selection should be considered as a pivotal factor driving transitions between sex-determination systems. 
 Overall, our results suggest several new scenarios under which new sex-determination systems are favoured, which could help to explain why the evolution of sex-determination systems is so dynamic. 
 %Further, we have shown the way in which transitions are affected by haploid selection is not intuitively obvious. 
 %Firstly, sex-specific haploid selection affects turnovers between sex-determination systems in a manner that is qualitatively different from diploid sex-specific selection. 
@@ -1770,12 +1774,12 @@ Male biased sex ratios facilitate the spread of a neo-W because neo-W alleles ca
 
 Secondly, haploid selection in females selects on neo-W haplotypes directly.
 At equilibrium $(B)$, the fitness of female gametes under the ancestral sex-determining system is $w_{A}^\female$ such that the relative fitnesses of neo-W-$A$ and neo-W-$a$ haplotypes during female gametic competition are $w_{A}^\female/w_{A}^\female$ and $w_{a}^\female/w_{A}^\female$ (see terms in equation \ref{Binvasion}). 
-Meiotic drive in females will also change the proportion of gametes that carry the $A$ versus $a$ alleles, which will be produced by heterozygous females in proportions $(1+\alpha_{\Delta}^\female)$ and $(1-\alpha_{\Delta}^\female)$, respectively. 
+Meiotic drive in females will also change the proportion of gametes that carry the $A$ versus $a$ alleles, which will be produced by heterozygous females in proportions $(1+\alpha_{\Delta}^\female)/2$ and $(1-\alpha_{\Delta}^\female)/2$, respectively. 
 These terms are only associated with heterozygous females, i.e., they are found alongside $w_{Aa}^\female$.
 
 Thirdly, haploid selection in males affects the diploid genotypes of females by altering the allele frequencies in the male gametes that female gametes pair with.
 At equlibrium $(B)$, neo-W female gametes will mate with X-$A$ male gametes with probability $ w_A^\male (1+\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ and Y-$a$ male gametes with probability $w_a^\male (1-\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$, where the $2\bar{w}_{H}^\male$ terms have been canceled in equation \eqref{Binvasion} (as mentioned above). 
-Thus, for example, neo-W-$A$ haplotypes are found in $AA$ female diploids with probability $ w_A^\male (1+\alpha^\male_\Delta)/ (2\bar{w}_{H}^\male)$ (first term in square brackets in the numerate of equation \ref{Binvasion}a) and in $Aa$ female diploids with probability $w_a^\male (1-\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ (see equation \ref{Binvasion}c and second term in square brackets in the numerator of equation \ref{Binvasion}a).
+Thus, for example, neo-W-$A$ haplotypes are found in $AA$ female diploids with probability $ w_A^\male (1+\alpha^\male_\Delta)/ (2\bar{w}_{H}^\male)$ (first term in square brackets in the numerator of equation \ref{Binvasion}a) and in $Aa$ female diploids with probability $w_a^\male (1-\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ (see equation \ref{Binvasion}c and second term in square brackets in the numerator of equation \ref{Binvasion}a).
 
 %For instance, because an epistatically dominant neo-W always causes its carrier to become female, it creates females who carry either Y-$a$ or X-$A$ genotypes from their father.
 %Thus, because when there is a polymorphism the X carries some non-zero frequency of $A$, haploid selection in males impacts the diploid genotypes of females (e.g., creating more $Aa$ females when drive in males favours Y-$a$).
