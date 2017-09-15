@@ -30,7 +30,7 @@
 
 \begin{document}
 
-\title{Haploid Selection, Sex Ratio Bias, and Transitions Between sex-determination systems}
+\title{Haploid Selection, Sex Ratio Bias, and Transitions Between Sex-Determination Systems}
 \author{Michael F Scott$*^1$, Matthew M Osmond$*^2$, and Sarah P Otto$^2$}
 \date{}
 \maketitle
@@ -167,10 +167,11 @@ Even in the absence of haploid selection, we show that transitions between male 
 \textcolor{red}{Change all  $\alpha^\Hermaphrodite$ to $(1+\alpha_{\Delta}^\Hermaphrodite)$.}
 \textcolor{blue}{I've attempted this everywhere except in the recursions (S.1), which seem more natural with $\alpha$'s. I've run into trouble in equation S.8c,d -- I think we should check the Mathematica results to be sure we haven't made a typo. This also introduced an extra 1/2 in S.6c,d that might need to be explained.}
 \textcolor{red}{hmm, not sure. This was an idea from Sally, I think in response to terms like $2 \alpha^\Hermaphrodite$ and $2(1-\alpha^\Hermaphrodite)$. It's possible that it makes other equations less easy to understand. My previous (not explained) logic was to use $w$ and $\alpha$ for strong selection and $s$, $t$, and $\alpha_\Delta$ for weak selection. Just to check, I should have written $\alpha^\Hermaphrodite=(1+\alpha_{\Delta}^\Hermaphrodite)/2$, maybe that's where the factors of $1/2$ come from?}
+\textcolor{blue}{shoot, i may have changed too much (i.e. strong selection too), but i did use the correct transformation. still, the form of S.8c,d seems wrong. I'll double check it.}
 
-\textcolor{red}{Switch between $\chi$ and $\rho$ in all places because $\chi$ is used for double recombination events.}
-\textcolor{blue}{I think we need a different variable given the $\rho$ terms in the characteristic polynomial. Also, where is $\chi$ used for double recombination? In other papers? Here $\chi$ is the probability of an odd number of cross-overs between the SDR and M loci.}
-\textcolor{red}{Good point, not sure what's best for \textbf{the-term-formerly-known-as-$\rho$}. Yeah, Sally's written comment was something like ``$\chi$ is semi-standard notation for double recombination so it's use as a recombination rate might be confusing''.}
+%\textcolor{red}{Switch between $\rho$ and $\rho$ in all places because $\rho$ is used for double recombination events.}
+%\textcolor{blue}{I think we need a different variable given the $\rho$ terms in the characteristic polynomial. Also, where is $\rho$ used for double recombination? In other papers? Here $\rho$ is the probability of an odd number of cross-overs between the SDR and M loci.}
+%\textcolor{red}{Good point, not sure what's best for \textbf{the-term-formerly-known-as-$\rho$}. Yeah, Sally's written comment was something like ``$\rho$ is semi-standard notation for double recombination so it's use as a recombination rate might be confusing''.}
 
 %\textcolor{red}{Change $\zeta$ to represent zygotic sex ratio of males, consistent with $q$ and figures.}
 
@@ -198,8 +199,8 @@ The resulting zygotes develop as males or females, depending on their genotypes 
 Diploid males and females then experience selection, with relative fitnesses $w_{AA}^{\Hermaphrodite}$, $w_{Aa}^{\Hermaphrodite}$, and $w_{aa}^{\Hermaphrodite}$. %where $g$ is the diploid genotype at the \textbf{A} locus ($g \in \{AA, Aa, aa\}$).  
 %Diploids compete with others of the same sex, where selection depends on the sex of the individual and its genotype at the \textbf{A} locus.
 The next generation of gametes is produced by meiosis, during which recombination and sex-specific meiotic drive can occur. 
-Recombination (i.e., an odd number of cross-overs) occurs between loci \textbf{X} and \textbf{A} with probability $r$, between loci \textbf{A} and \textbf{M} with probability $R$, and between loci \textbf{X} and \textbf{M} with probability $\chi$.
-Any linear order of the loci can be modelled with appropriate choices of $r$, $R$, and $\chi$ (see Table \ref{tab:chisubstitutions}). 
+Recombination (i.e., an odd number of cross-overs) occurs between loci \textbf{X} and \textbf{A} with probability $r$, between loci \textbf{A} and \textbf{M} with probability $R$, and between loci \textbf{X} and \textbf{M} with probability $\rho$.
+Any linear order of the loci can be modelled with appropriate choices of $r$, $R$, and $\rho$ (see Table \ref{tab:chisubstitutions}). 
 Individuals that are heterozygous at the \textbf{A} locus may experience meiotic drive; a gamete produced by $Aa$ heterozgotes of sex $\Hermaphrodite$ bear allele $A$ with probability $\alpha^\Hermaphrodite$. 
 Thus, the \textbf{A} locus can experience sex-specific gametic competition, diploid selection, and/or meiotic drive. 
 
@@ -259,12 +260,13 @@ $\lambda^2+ b \lambda + c =0$.
 %\end{equation}
 %
 %\noindent
-%where $b$ is the average of the growth rates of the two haplotypes that carry the $m$ allele ($mA$ and $ma$), $b=(\lambda_{mA}+\lambda_{ma})/2$, and $c$ also involves the fitness of $m$ alleles when they recombine onto the other \textbf{A} background in a heterozygote, $c=\lambda_{mA}\lambda_{ma}+\rho_{mA}\rho_{ma}$ (see table \ref{tab:haplotype_growth}).
-%Here, $b= - (\lambda_{mA} + \lambda_{ma})$ and $c = \lambda_{mA} \lambda_{ma} -\rho_{mA} \rho_{ma}$, where $\lambda_{mi}$ is the (multiplicative) growth rate of mutant haplotypes on background $i\in\{A,a\}$, accounting for loss due to recombination, and $\rho_{mi}$ is the rate of addition of mutant haplotypes onto background $i\in\{A,a\}$ due to recombination (see table \ref{tab:haplotype_growth}).
-Here, $b= - (\lambda_{mA} + \lambda_{ma})+(\rho_{mA} + \rho_{ma})$ and $c = (\lambda_{mA}-\rho_{mA}) (\lambda_{ma}-\rho_{ma}) -\rho_{mA} \rho_{ma}$, where $\lambda_{mi}$ is the multiplicative growth rate of mutant haplotypes on background $i\in\{A,a\}$, without accounting for loss due to recombination, and $\rho_{mi}$ is the rate at which mutant haplotypes on background $i\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes (see Table \ref{tab:haplotype_growth}).
-The $\lambda_{mi}$ and $\rho_{mi}$, and thus the spread of the mutant $m$ allele, depend on the frequency of alleles at the \textbf{A} and \textbf{X} loci in the ancestral population. 
+%where $b$ is the average of the growth rates of the two haplotypes that carry the $m$ allele ($mA$ and $ma$), $b=(\lambda_{mA}+\lambda_{ma})/2$, and $c$ also involves the fitness of $m$ alleles when they recombine onto the other \textbf{A} background in a heterozygote, $c=\lambda_{mA}\lambda_{ma}+\chi_{mA}\chi_{ma}$ (see table \ref{tab:haplotype_growth}).
+%Here, $b= - (\lambda_{mA} + \lambda_{ma})$ and $c = \lambda_{mA} \lambda_{ma} -\chi_{mA} \chi_{ma}$, where $\lambda_{mi}$ is the (multiplicative) growth rate of mutant haplotypes on background $i\in\{A,a\}$, accounting for loss due to recombination, and $\chi_{mi}$ is the rate of addition of mutant haplotypes onto background $i\in\{A,a\}$ due to recombination (see table \ref{tab:haplotype_growth}).
+Here, $b= - (\lambda_{mA} + \lambda_{ma})+(\chi_{mA} + \chi_{ma})$ and $c = (\lambda_{mA}-\chi_{mA}) (\lambda_{ma}-\chi_{ma}) -\chi_{mA} \chi_{ma}$, where $\lambda_{mi}$ is the multiplicative growth rate of mutant haplotypes on background $i\in\{A,a\}$, without accounting for loss due to recombination, and $\chi_{mi}$ is the rate at which mutant haplotypes on background $i\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes (see Table \ref{tab:haplotype_growth}).
+The $\lambda_{mi}$ and $\chi_{mi}$, and thus the spread of the mutant $m$ allele, depend on the frequency of alleles at the \textbf{A} and \textbf{X} loci in the ancestral population. 
 In the ancestral population, it is convenient to follow the frequency of the $A$ allele among female gametes (eggs), $p^\female_X$, and among X-bearing, $p^\male_X$, and among Y-bearing, $p^\male_Y$, male gametes (sperm/pollen). 
 We also track the fraction of male gametes that are Y-bearing, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
+We will consider only equilibrium frequencies of alleles, $\hat{p}^\Hermaphrodite_i$, and Y-bearing male gametes, $\hat{q}$, to ensure the eigenvalues of the invasion analysis are valid.  
 
 %\textcolor{red}{I now remove the zygotic sex ratio $\zeta$ from the mean fitnesses. The mean fitnesses will have to be adjusted in a corresponding way.}
 %
@@ -281,21 +283,21 @@ We also track the fraction of male gametes that are Y-bearing, $q$, which may de
 \hline\hline
    \noalign{\vskip 0.5ex}
    neo-Y ($k=0$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
-  $\lambda_{mA} = \left( 2 \zeta \right)^{-1} \left[p_{X}^{\female} w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male} + (1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} (1+\alpha_{\Delta}^{\male}) \right]/ \left( \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \right) $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\lambda_{ma} = \left( 2 \zeta \right)^{-1} \left[(1-p_{X}^{\female}) w_{a}^{\female} w_{a}^{\male} w_{aa}^{\male} + p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male}(1 - \alpha_{\Delta}^{\male}) \right]/ \left( \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \right) $ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA} = R \left( 2 \zeta \right)^{-1} \left[ (1-p_{X}^{\female}) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} (1+\alpha_{\Delta}^{\male}) \right]/  \left( \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \right)   $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma} = R \left( 2 \zeta \right)^{-1} \left[   p_{X}^{\female} w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} (1 - \alpha_\Delta^{\male}) \right]/ \left( \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \right)  $\\ [1ex] \hline 
+  $\lambda_{mA} = \left( 2 \zeta \right)^{-1} \left[\hat{p}_X^\female w_{A}^{\female} w_{A}^{\male} w_{AA}^{\male} + (1-\hat{p}_X^\female) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} (1+\alpha_{\Delta}^{\male}) \right]/ \left( \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \right) $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\lambda_{ma} = \left( 2 \zeta \right)^{-1} \left[(1-\hat{p}_X^\female) w_{a}^{\female} w_{a}^{\male} w_{aa}^{\male} + \hat{p}_X^\female w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male}(1 - \alpha_{\Delta}^{\male}) \right]/ \left( \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \right) $ \\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\chi_{mA} = R \left( 2 \zeta \right)^{-1} \left[ (1-\hat{p}_X^\female) w_{a}^{\female} w_{A}^{\male} w_{Aa}^{\male} (1+\alpha_{\Delta}^{\male}) \right]/  \left( \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \right)   $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\chi_{ma} = R \left( 2 \zeta \right)^{-1} \left[   \hat{p}_X^\female w_{A}^{\female} w_{a}^{\male} w_{Aa}^{\male} (1 - \alpha_\Delta^{\male}) \right]/ \left( \bar{w}_H^\female \bar{w}_H^\male \bar{w}^\male \right)  $\\ [1ex] \hline 
   \noalign{\vskip 0.5ex}
   neo-W ($k=1$) \\ [0.5ex] \hline \noalign{\vskip 1ex}
   $\lambda_{mA} = \left[ 2 (1 - \zeta) \right]^{-1} \left[ \bar{p}^{\male} w_{A}^{\male} w_{A}^{\female} w_{AA}^{\female}+(1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female}(1+\alpha_{\Delta}^{\female})\right]/ \left(\bar{w}_H^\female \bar{w}_H^\male \bar{w}^\female \right) $ \\ [0.5ex] \noalign{\vskip 0.5ex}
   $\lambda_{ma} = \left[ 2 (1 - \zeta) \right]^{-1} \left[ (1-\bar{p}^{\male}) w_{a}^{\male} w_{a}^{\female} w_{aa}^{\female}+\bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female}(1-\alpha_{\Delta}^{\female})\right] / \left(\bar{w}_H^\female \bar{w}_H^\male \bar{w}^\female \right) $ \\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{mA} = R \left[ 2 (1 - \zeta) \right]^{-1} \left[ (1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female} (1+\alpha_{\Delta}^{\female}) \right] / \left(\bar{w}_H^\female \bar{w}_H^\male \bar{w}^\female \right)  $\\ [0.5ex] \noalign{\vskip 0.5ex}
-  $\rho_{ma} = R \left[ 2 (1 - \zeta) \right]^{-1} \left[ \bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female} (1-\alpha_{\Delta}^{\female}) \right] / \left(\bar{w}_H^\female \bar{w}_H^\male \bar{w}^\female \right) $\\ [1ex] 
+  $\chi_{mA} = R \left[ 2 (1 - \zeta) \right]^{-1} \left[ (1-\bar{p}^{\male}) w_{a}^{\male} w_{A}^{\female} w_{Aa}^{\female} (1+\alpha_{\Delta}^{\female}) \right] / \left(\bar{w}_H^\female \bar{w}_H^\male \bar{w}^\female \right)  $\\ [0.5ex] \noalign{\vskip 0.5ex}
+  $\chi_{ma} = R \left[ 2 (1 - \zeta) \right]^{-1} \left[ \bar{p}^{\male} w_{A}^{\male} w_{a}^{\female} w_{Aa}^{\female} (1-\alpha_{\Delta}^{\female}) \right] / \left(\bar{w}_H^\female \bar{w}_H^\male \bar{w}^\female \right) $\\ [1ex] 
   \hline \hline 
    \end{tabular}
       \begin{tablenotes}
       \scriptsize
-      \item $\bar{p}^{\male}=(1-q)p_{X}^{\male} + qp_{Y}^{\male}$ is the average frequency of the $A$ allele among X- and Y-bearing male gametes.
+      \item $\bar{p}^{\male}=(1-\hat{q})\hat{p}_X^\male + q\hat{p}_Y^\male$ is the average frequency of the $A$ allele among X- and Y-bearing male gametes.
 %      \item $R$ is the probability of recombination between loci \textbf{A} and \textbf{M}.
       \item $\zeta$ is the zygotic sex ratio (fraction male)
       \item $\bar{w}^\Hermaphrodite$ is the mean fitness of diploids of sex $\Hermaphrodite$, see Table \ref{tab:meanfitnesses}
@@ -313,7 +315,7 @@ We also track the fraction of male gametes that are Y-bearing, $q$, which may de
 %If one or both of $\lambda_{mA}$ and $\lambda_{ma}$ are greater than one, indicating that at least one haplotype increases in frequency faster than recombination breaks it apart, invasion will always occur ($\lambda>1$). 
 %Otherwise, invasion requires
 %\begin{equation}
-%(\lambda_{mA}-1)(\lambda_{ma}-1) - \rho_{mA} \rho_{ma}<0.
+%(\lambda_{mA}-1)(\lambda_{ma}-1) - \chi_{mA} \chi_{ma}<0.
 %\end{equation}
 
 We are particularly concerned with the conditions under which a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, is greater than one. 
@@ -321,8 +323,8 @@ If the average change in frequency of the two haplotypes that carry the $m$ alle
 If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$), the $m$ allele will not invade. 
 Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires 
 \begin{equation}\label{eq:lambdasGen}
-%\frac{\rho_{mA}}{\lambda_{mA}-1}+\frac{\rho_{ma}}{\lambda_{ma}-1}>0.
-\rho_{ma}\left(\lambda_{mA}-1\right)+\rho_{mA}\left(\lambda_{ma}-1\right)>0.
+%\frac{\chi_{mA}}{\lambda_{mA}-1}+\frac{\chi_{ma}}{\lambda_{ma}-1}>0.
+\chi_{ma}\left(\lambda_{mA}-1\right)+\chi_{mA}\left(\lambda_{ma}-1\right)>0.
 \end{equation}
 \noindent For example, if we assume that only the $mA$ haplotype has a positive growth rate ($\lambda_{ma}<1<\lambda_{mA}$), the second term on the left-hand side of \eqref{eq:lambdasGen} is negative and invasion requires that the growth rate of $mA$ haplotypes and the rate at which they are produced by recombination is sufficiently large relative to that of $ma$ haplotypes.
 In other words, invasion requires that the average growth rate of the two haplotypes, weighted by the rates they are created by recombination, is positive.
@@ -342,29 +344,29 @@ By contrast, a gamete with a neo-W can pair with an X or Y male gamete, developi
 Consequently, the types of females produced differ in the frequency of $A$ alleles they obtain from mating.
 %\textcolor{blue}{nice}
 %the diploid fitness terms in Table \ref{tab:haplotype_growth} are weighted by the probability of producing those genotypes through matings with gametes of the opposite sex. 
-%For example, matings between a neo-Y-bearing male gamete and an $A$-bearing female gamete occur with probability $p_{X}^{\female} w_{A}^{\female}/\bar{w}_{H}^{\female}$. 
+%For example, matings between a neo-Y-bearing male gamete and an $A$-bearing female gamete occur with probability $\hat{p}_X^\female w_{A}^{\female}/\bar{w}_{H}^{\female}$. 
 %This is the same probability that an ancestral-Y-bearing male gamete will inherit an $A$ allele via mating with a female gamete. 
 %On the other hand, 
-%The probability that a neo-W bearing female gamete mates with an $A$-bearing male gamete is $\bar{p}^{\male} w_{A}^{\male}/\bar{w}_{H}^{\male}$, where $\bar{p}^{\male}=p_{Y}^{\male}q+p_{X}^{\male}(1-q)$ is the frequency of the A allele among both X- and Y-bearing male gametes. 
+%The probability that a neo-W bearing female gamete mates with an $A$-bearing male gamete is $\bar{p}^{\male} w_{A}^{\male}/\bar{w}_{H}^{\male}$, where $\bar{p}^{\male}=\hat{p}_Y^\maleq+\hat{p}_X^\male(1-q)$ is the frequency of the A allele among both X- and Y-bearing male gametes. 
 %That is, in the case of a neo-W, female diploids can result from matings with either an X-bearing or a Y-bearing sperm, resulting in zygotes that will develop as females. 
 %However, females that do not carry the neo-W only result from matings with X-bearing sperm. 
 %Therefore, eggs with and without a neo-W can differ in the frequency of $A$ alleles they obtain from matings with male gametes. 
 %Invasions by a neo-Y and a neo-W differ in this respect because sperm with or without a neo-Y allele both mate with X-bearing female gametes only.
 
 % invasion is driven by the fitness of male gametes and diploids, where the latter is weighted by the chance that a female egg will give rise to that diploid. 
-%For example, matings with $A$-bearing female gametes occur with probability $p_{X}^{\female} w_{A}^{\female}/\bar{w}_{H}^{\female}$. 
+%For example, matings with $A$-bearing female gametes occur with probability $\hat{p}_X^\female w_{A}^{\female}/\bar{w}_{H}^{\female}$. 
 %Since a neo-Y is always found in males, the allele frequencies at the neo-Y (\textbf{M}) locus only change in males. 
 %Therefore, invasion by a neo-Y allele does not involve any female diploid selection terms ($w_{g}^{\female}$). 
 %Similarly, invasion by a neo-W is driven by the fitness of female gametes and diploids and does not involve any direct selection in male diploids.
 %However, in the case of a neo-W, female diploids can result from matings with either an X-bearing or a Y-bearing sperm. 
 %In either case, the zygote will develop as a female due to the presence of a neo-W. 
-%For example, neo-W females will inherit an $A$ allele from a male gamete with probability $\bar{p}^{\male} w_{A}^{\male}/\bar{w}_{H}^{\male}$, where $\bar{p}^{\male}=p_{Y}^{\male}q+p_{X}^{\male}(1-q)$ is the frequency of the A allele among both X- and Y-bearing male gametes. 
+%For example, neo-W females will inherit an $A$ allele from a male gamete with probability $\bar{p}^{\male} w_{A}^{\male}/\bar{w}_{H}^{\male}$, where $\bar{p}^{\male}=\hat{p}_Y^\maleq+\hat{p}_X^\male(1-q)$ is the frequency of the A allele among both X- and Y-bearing male gametes. 
 %By contrast, females that do not carry the neo-W only result from matings with X-bearing sperm. 
 %They will therefore inherit an $A$ from a male gamete with probability $(1-q)\bar{p}_{X}^{\male} w_{A}^{\male}/\bar{w}_{H}^{\male}$. 
 %If the \textbf{A} locus is initially linked to the ancestral sex-determining locus, \textbf{X}, the frequency of the $A$ allele among X- and Y-bearing sperm can differ (equation \ref{eq:freq_diffs}). 
 %Thus, eggs with and without a neo-W differ in the frequency of $A$ alleles they obtain from mating with male gametes. 
 
-In order to explicitly determine the conditions under which a rare neo-sex-determining allele spreads, we must calculate the equilibrium frequency of the $A$ allele in the ancestral population (i.e., $\hat{p}^\female_X$, $\hat{p}^\male_X$, and $\hat{p}^\male_Y$). 
+In order to explicitly determine the conditions under which a rare neo-sex-determining allele spreads, we must calculate the equilibrium frequency of the $A$ allele (i.e., $\hat{p}^\female_X$, $\hat{p}^\male_X$, and $\hat{p}^\male_Y$) and Y-bearing male gametes ($\hat{q}$) in the ancestral population . 
 Since only the \textbf{A} locus experiences selection directly, any deterministic evolution requires that there is a polymorphism at the \textbf{A} locus. 
 Polymorphisms can be maintained by mutation-selection balance or transiently present during the spread of beneficial alleles. However, polymorphisms maintained by selection can maintain alleles at higher allele frequencies for longer periods. 
 Here, we focus of polymorphisms maintained by selection, where the $A$ allele reaches a stable intermediate equilibrium frequency under the ancestral sex-determination system before the neo-sex-determining allele ($m$) arises. 
@@ -375,9 +377,9 @@ We can analytically calculate the allele frequency of the $A$ allele using two a
 %We first consider the spread of neo-sex determining loci when the ancestral sex-determining locus is tightly linked to the selected \textbf{A} locus (assumption 1) with or without haploid selection. 
 %We then use the weak selection approximation that was also used in \citet{vanDoorn:2007eu,vanDoorn:2010hu} except that we allow haploid selection on the \textbf{A} locus. 
 
-\textcolor{red}{Change to $\hat{p}$ throughout as we assume that allele frequencies change slowly such that lambda is unaffected}
-\textcolor{blue}{how will we differentiate between equilibrium $p$ and non-equilibrium $p$? or is the point that we can only say anything when at equilibrium?}
-\textcolor{red}{I think Sally's point is that the eigenvalue analysis only makes sense if the $p$'s are changing slowly relative to the frequency of the modifier. Therefore, even when we don't substitute in any equilibrium frequencies, it might be safest to think of them as equilibrium allele frequencies. }
+%\textcolor{red}{Change to $\hat{p}$ throughout as we assume that allele frequencies change slowly such that lambda is unaffected}
+%\textcolor{blue}{how will we differentiate between equilibrium $p$ and non-equilibrium $p$? or is the point that we can only say anything when at equilibrium?}
+%\textcolor{red}{I think Sally's point is that the eigenvalue analysis only makes sense if the $p$'s are changing slowly relative to the frequency of the modifier. Therefore, even when we don't substitute in any equilibrium frequencies, it might be safest to think of them as equilibrium allele frequencies. }
 
 
 \subsubsection*{Tight linkage with the ancestral sex-determining region}
@@ -453,7 +455,7 @@ As discussed in the appendix, this scenario where neo-W's associated with $a$ ar
 
 In some cases, both W-$A$ and W-$a$ haplotypes can spread, e.g., when $AA$ individuals have low fitness in females yet the $A$ is polymorphic or fixed on the X due to overdominance in males (Figure \ref{fig:regionplots}B and \ref{fig:regionplots}C).
 Both neo-W-$A$ and neo-W-$a$ haplotypes then produce fewer unfit $AA$ females.
-This is true for the neo-W-$A$ haplotype because it can pair with a $Y-a$ haplotype and still be female. 
+This is true for the neo-W-$A$ haplotype because it can pair with a Y-$a$ haplotype and still be female. 
 Wherever both haplotypes have positive growth rates, invasion by a neo-W is expected regardless of its linkage with the selected locus (i.e., even unlinked neo-W alleles can invade, see Figures \ref{fig:positionOverdominance} and \ref{fig:temporalOverdominance} for examples). 
 
 \textcolor{red}{
@@ -529,7 +531,7 @@ Here, there is no haploid selection $t^\Hermaphrodite = \alpha^\Hermaphrodite_\D
 %We are particularly concerned with whether or not a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, is greater than one. 
 %Here, we explicitly determine the conditions under which invasion occurs by assuming that the $A$ allele reaches an equilibrium frequency under the ancestral sex-determination system before the neo-sex-determination system ($m$) arises. 
 %The equilibrium frequency of $A$ on different ancestral backgrounds ($\hat{p}^\male_Y$, $\hat{p}^\male_X$, and $\hat{p}^\female_X$) is given by equations \eqref{eq:pAve} and \eqref{eq:freq_diffs} where we assume selection and meiotic drive are weak relative to recombination ($s^\Hermaphrodite$, $t^\Hermaphrodite$, $\alpha_{\Delta}^\Hermaphrodite$ of order $\epsilon$). 
-Assuming that selection is weak relative to all recombination rates ($r$, $R$ and $\chi$), we denote the leading eigenvalues describing the invasion of a neo-Y ($k=0$) and a neo-W ($k=1$) into an ancestrally XY system by $\lambda_{Y',XY}$ and $\lambda_{W',XY}$, respectively. To leading order in selection, these are:
+Assuming that selection is weak relative to all recombination rates ($r$, $R$ and $\rho$), we denote the leading eigenvalues describing the invasion of a neo-Y ($k=0$) and a neo-W ($k=1$) into an ancestrally XY system by $\lambda_{Y',XY}$ and $\lambda_{W',XY}$, respectively. To leading order in selection, these are:
 
 \begin{equation}
 \lambda_{Y',XY} =1+ V_{A}S_{A}^2\frac{ \left( r-R \right) }{r R}+O\left(\epsilon^3 \right) 
@@ -546,8 +548,9 @@ and
 \end{equation}
 
 \noindent
-where $V_{A}=\bar{p}(1-\bar{p})$ is the variance in the frequency of $A$ and $S_{A}=(D^\male +\alpha_{\Delta}^\male+t^\male) - (D^\female+\alpha_{\Delta}^\female+t^\female)$ describes sex differences in selection for the $A$ versus $a$ across diploid selection, meiosis, and gametic competition.
-The diploid selection term, $D^\Hermaphrodite=\big{(} \bar{p}s^\Hermaphrodite+(1-\bar{p})h^\Hermaphrodite s^\Hermaphrodite\big{)} -\big{(} \bar{p}h^\Hermaphrodite s^\Hermaphrodite+(1-\bar{p}) \big{)}$, is the difference in fitness between $A$ and $a$ alleles in diploids of sex $\Hermaphrodite \in \{\female,\male\}$, where $\bar{p}$ is the leading-order probability of mating with an $A$-bearing gamete from the opposite sex (see Appendix). The difference in $A$-allele-frequency among Y-bearing sperm versus X-bearing sperm is given by $\hat{p}^\male_Y-\hat{p}^\male_X=V_{A}\big{(}D^\male - D^\female+\alpha_{\Delta}^\male-\alpha_{\Delta}^\female+t^\male-t^\female\big{)}(1-2r)/2r$. 
+where $V_{A}=\bar{p}(1-\bar{p})$ is the variance in the equilibrium frequency of $A$ and $S_{A}=(D^\male +\alpha_{\Delta}^\male+t^\male) - (D^\female+\alpha_{\Delta}^\female+t^\female)$ describes sex differences in selection for the $A$ versus $a$ across diploid selection, meiosis, and gametic competition.
+The diploid selection term, $D^\Hermaphrodite=\big{[} \bar{p}s^\Hermaphrodite+(1-\bar{p})h^\Hermaphrodite s^\Hermaphrodite\big{]} -\big{[} \bar{p}h^\Hermaphrodite s^\Hermaphrodite+(1-\bar{p}) \big{]}$, is the difference in fitness between $A$ and $a$ alleles in diploids of sex $\Hermaphrodite \in \{\female,\male\}$, where $\bar{p}$ is the leading-order probability of mating with an $A$-bearing gamete from the opposite sex (see Appendix). 
+The difference in $A$-allele-frequency among Y-bearing sperm versus X-bearing sperm is given by $\hat{p}^\male_Y-\hat{p}^\male_X=V_{A}\big{(}D^\male - D^\female+\alpha_{\Delta}^\male-\alpha_{\Delta}^\female+t^\male-t^\female\big{)}(1-2r)/2r$. 
 
 
 The neo-sex-determining allele, $m$, will spread if $\lambda_{m,XY}>1$. 
@@ -690,7 +693,7 @@ Assuming weak selection, the spread of the new sex-determining region is given b
 \begin{equation}
 \begin{split}
 \lambda_{ESD',XY} =& 1 + (1-2k)^2V_{A}{S_{A}}^2\frac{r-R}{r R} \\
-&+\frac{k(\hat{p}^\male_Y-\hat{p}^\male_X)}{2}\left(k\left(2\alpha_{\Delta}^\male-2\alpha_{\Delta}^\female+t^\male-t^\female \right) -4(1-k)S_{A}\right)+O\left(\epsilon^3\right),
+&+\frac{k(\hat{p}^\male_Y-\hat{p}^\male_X)}{2}\left[ k \left(2\alpha_{\Delta}^\male-2\alpha_{\Delta}^\female+t^\male-t^\female \right) -4(1-k)S_{A}\right]+O\left(\epsilon^3\right),
 \end{split}
 \label{eq:lambda_ESD_k}
 \end{equation}
@@ -1413,20 +1416,20 @@ Finally, these diploids undergo meiosis to produce the next generation of gamete
 Recombination and sex-specific meiotic drive occur during meiosis.
 %We can also assume that recombination is sex specific and/or affected by the M locus - but generally we don't so I just describe $R=R_{f}=R, r_{MM,d}=r_{Mm,d}=r_{mm,d}=r, \chi_{m}=\chi_{f}=\chi$.
 Here, we allow any relative locations for the SDR, \textbf{A}, and \textbf{M} loci by using three parameters to describe the recombination rates between them. 
-$R$ is the recombination rate between the \textbf{A} locus and the \textbf{M} locus, $\chi$ is the recombination rate between the \textbf{M} locus and the \textbf{X} locus, and $r$ is the recombination rate between the \textbf{A} locus and the \textbf{X} locus. 
-Table \ref{tab:chisubstitutions} shows the value of $\chi$ in the absence of cross-over interference for each possible ordering of the loci.
+$R$ is the recombination rate between the \textbf{A} locus and the \textbf{M} locus, $\rho$ is the recombination rate between the \textbf{M} locus and the \textbf{X} locus, and $r$ is the recombination rate between the \textbf{A} locus and the \textbf{X} locus. 
+Table \ref{tab:chisubstitutions} shows the value of $\rho$ in the absence of cross-over interference for each possible ordering of the loci.
 During meiosis in sex $\Hermaphrodite$, meiotic drive occurs such that, in $Aa$ heterozygotes, a fraction $\alpha^{\Hermaphrodite}$ of gametes produced carry the $A$ allele and $(1-\alpha^\Hermaphrodite)$ carry the $a$ allele. 
 
 \begin{table}[ht]
 \centering
 \smallskip
-\caption{$\chi$ substitutions for different loci orders (assuming no interference)}
+\caption{$\rho$ substitutions for different loci orders (assuming no interference)}
 \begin{tabular}{l l}
 \hline\hline
   Order of loci &   \\ [0.5ex] \hline
-  SDR-A-M & $\chi=R(1-r)+r(1-R)$  \\
-  SDR-M-A & $\chi=(r-R)/(1-2R)$ \\
-  A-SDR-M & $\chi=(R-r)/(1-2r)$ \\
+  SDR-A-M & $\rho=R(1-r)+r(1-R)$  \\
+  SDR-M-A & $\rho=(r-R)/(1-2R)$ \\
+  A-SDR-M & $\rho=(R-r)/(1-2r)$ \\
   \hline \hline
   \label{tab:chisubstitutions}
  \end{tabular}
@@ -1443,9 +1446,9 @@ Among gametes from sex $\Hermaphrodite$, the frequencies of haplotypes (before g
 x_{1}^{{\Hermaphrodite}'}=&xx_{11}^{\Hermaphrodite,s}+xx_{13}^{\Hermaphrodite,s}/2+(xx_{12}^{\Hermaphrodite,s}+xx_{14}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
 &-R(xx_{14}^{\Hermaphrodite,s}-xx_{23}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
 &+(xy_{11}^{\Hermaphrodite,s}+xy_{13}^{\Hermaphrodite,s})/2+(xy_{12}^{\Hermaphrodite,s}+xy_{14}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
-&- r(xy_{12}^{\Hermaphrodite,s}-xy_{21}^{\Hermaphrodite,s})\alpha^\Hermaphrodite - \chi(xy_{13}^{\Hermaphrodite,s}-xy_{31}^{\Hermaphrodite,s})/2\\
-&+\big{\{}-(R+r+\chi)xy_{14}^{\Hermaphrodite,s} +(r+\chi-R)xy_{41}^{\Hermaphrodite,s}\\
-&+(R+r-\chi) xy_{23}^{\Hermaphrodite,s}+(R+\chi-r)xy_{32}^{\Hermaphrodite,s}\big{\}}\alpha^\Hermaphrodite/2
+&- r(xy_{12}^{\Hermaphrodite,s}-xy_{21}^{\Hermaphrodite,s})\alpha^\Hermaphrodite - \rho(xy_{13}^{\Hermaphrodite,s}-xy_{31}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{14}^{\Hermaphrodite,s} +(R+\rho-r)xy_{41}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{23}^{\Hermaphrodite,s}+(R+\rho-r)xy_{32}^{\Hermaphrodite,s}\big{]}\alpha^\Hermaphrodite/2
 \end{split}
 \\
 %
@@ -1453,9 +1456,9 @@ x_{1}^{{\Hermaphrodite}'}=&xx_{11}^{\Hermaphrodite,s}+xx_{13}^{\Hermaphrodite,s}
 x_{2}^{{\Hermaphrodite}'}=&xx_{22}^{\Hermaphrodite,s}+xx_{24}^{\Hermaphrodite,s}/2+(xx_{12}^{\Hermaphrodite,s}+xx_{23}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
 &-R(xx_{23}^{\Hermaphrodite,s}-xx_{14}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
 &(xy_{22}^{\Hermaphrodite,s}+xy_{24}^{\Hermaphrodite,s})/2+(xy_{21}^{\Hermaphrodite,s}+xy_{23}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite)\\
-&- r(xy_{21}^{\Hermaphrodite,s}-xy_{12}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \chi(xy_{24}^{\Hermaphrodite,s}-xy_{42}^{\Hermaphrodite,s})/2\\
-&+\big{\{}-(R+r+\chi)xy_{23}^{\Hermaphrodite,s}+(r+\chi-R)xy_{32}^{\Hermaphrodite,s}\\
-&+(R+r-\chi) xy_{14}^{\Hermaphrodite,s}+(R+\chi-r)xy_{41}^{\Hermaphrodite,s}\big{\}}(1-\alpha^\Hermaphrodite)/2
+&- r(xy_{21}^{\Hermaphrodite,s}-xy_{12}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \rho(xy_{24}^{\Hermaphrodite,s}-xy_{42}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{23}^{\Hermaphrodite,s}+(R+\rho-r)xy_{32}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{14}^{\Hermaphrodite,s}+(R+\rho-r)xy_{41}^{\Hermaphrodite,s}\big{]}(1-\alpha^\Hermaphrodite)/2
 \end{split}
 \\
 %
@@ -1463,9 +1466,9 @@ x_{2}^{{\Hermaphrodite}'}=&xx_{22}^{\Hermaphrodite,s}+xx_{24}^{\Hermaphrodite,s}
 x_{3}^{{\Hermaphrodite}'}=&xx_{33}^{\Hermaphrodite,s}+xx_{13}^{\Hermaphrodite,s}/2+(xx_{23}^{\Hermaphrodite,s}+xx_{34}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
 &-R(xx_{23}^{\Hermaphrodite,s}-xx_{14}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
 &(xy_{33}^{\Hermaphrodite,s}+xy_{31}^{\Hermaphrodite,s})/2+(xy_{32}^{\Hermaphrodite,s}+xy_{34}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
-&- r(xy_{34}^{\Hermaphrodite,s}-xy_{43}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite - \chi(xy_{31}^{\Hermaphrodite,s}-xy_{13}^{\Hermaphrodite,s})/2\\
-&+\big{\{}-(R+r+\chi)xy_{32}^{\Hermaphrodite,s} +(r+\chi-R)xy_{23}^{\Hermaphrodite,s}\\
-&+(R+r-\chi) xy_{41}^{\Hermaphrodite,s}+(R+\chi-r)xy_{14}^{\Hermaphrodite,s}\big{\}} \alpha^\Hermaphrodite/2
+&- r(xy_{34}^{\Hermaphrodite,s}-xy_{43}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite - \rho(xy_{31}^{\Hermaphrodite,s}-xy_{13}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{32}^{\Hermaphrodite,s} +(R+\rho-r)xy_{23}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{41}^{\Hermaphrodite,s}+(R+\rho-r)xy_{14}^{\Hermaphrodite,s}\big{]} \alpha^\Hermaphrodite/2
 \end{split}
 \\
 %
@@ -1473,18 +1476,18 @@ x_{3}^{{\Hermaphrodite}'}=&xx_{33}^{\Hermaphrodite,s}+xx_{13}^{\Hermaphrodite,s}
 x_{4}^{{\Hermaphrodite}'}=&xx_{44}^{\Hermaphrodite,s}+xx_{34}^{\Hermaphrodite,s}/2+(xx_{14}^{\Hermaphrodite,s}+xx_{24}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
 &-R(xx_{14}^{\Hermaphrodite,s}-xx_{23}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
 &(xy_{44}^{\Hermaphrodite,s}+xy_{42}^{\Hermaphrodite,s})/2+(xy_{41}^{\Hermaphrodite,s}+xy_{43}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite)\\
-&- r(xy_{43}^{\Hermaphrodite,s}-xy_{34}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \chi(xy_{42}^{\Hermaphrodite,s}-xy_{24}^{\Hermaphrodite,s})/2\\
-&+\big{\{}-(R+r+\chi)xy_{41}^{\Hermaphrodite,s}+(r+\chi-R)xy_{14}^{\Hermaphrodite,s}\\
-&+(R+r-\chi) xy_{32}^{\Hermaphrodite,s}+(R+\chi-r)xy_{23}^{\Hermaphrodite,s}\big{\}}(1-\alpha^\Hermaphrodite)/2
+&- r(xy_{43}^{\Hermaphrodite,s}-xy_{34}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \rho(xy_{42}^{\Hermaphrodite,s}-xy_{24}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{41}^{\Hermaphrodite,s}+(R+\rho-r)xy_{14}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{32}^{\Hermaphrodite,s}+(R+\rho-r)xy_{23}^{\Hermaphrodite,s}\big{]}(1-\alpha^\Hermaphrodite)/2
 \end{split}
 \\
 \begin{split}
 y_{1}^{{\Hermaphrodite}'}=&yy_{11}^{\Hermaphrodite,s}+yy_{13}^{\Hermaphrodite,s}/2+(yy_{12}^{\Hermaphrodite,s}+yy_{14}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
 &-R(yy_{14}^{\Hermaphrodite,s}-yy_{23}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
 &(xy_{11}^{\Hermaphrodite,s}+xy_{31}^{\Hermaphrodite,s})/2+(xy_{21}^{\Hermaphrodite,s}+xy_{41}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
-&- r(xy_{21}^{\Hermaphrodite,s}-xy_{12}^{\Hermaphrodite,s})\alpha^\Hermaphrodite - \chi(xy_{31}^{\Hermaphrodite,s}-xy_{13}^{\Hermaphrodite,s})/2\\
-&+\big{\{} - (R+r+\chi)xy_{41}^{\Hermaphrodite,s} + (r+\chi-R)xy_{14}^{\Hermaphrodite,s}\\
-& + (R+r-\chi)xy_{32}^{\Hermaphrodite,s} + (R+\chi-r) xy_{23}^{\Hermaphrodite,s}\big{\}}\alpha^\Hermaphrodite/2
+&- r(xy_{21}^{\Hermaphrodite,s}-xy_{12}^{\Hermaphrodite,s})\alpha^\Hermaphrodite - \rho(xy_{31}^{\Hermaphrodite,s}-xy_{13}^{\Hermaphrodite,s})/2\\
+&+\big{[} - (R+r+\rho)xy_{41}^{\Hermaphrodite,s} + (R+\rho-r)xy_{14}^{\Hermaphrodite,s}\\
+& + (R+r-\rho)xy_{32}^{\Hermaphrodite,s} + (R+\rho-r) xy_{23}^{\Hermaphrodite,s}\big{]}\alpha^\Hermaphrodite/2
 \end{split}
 \\
 %
@@ -1492,9 +1495,9 @@ y_{1}^{{\Hermaphrodite}'}=&yy_{11}^{\Hermaphrodite,s}+yy_{13}^{\Hermaphrodite,s}
 y_{2}^{{\Hermaphrodite}'}=&yy_{22}^{\Hermaphrodite,s}+yy_{24}^{\Hermaphrodite,s}/2+(yy_{12}^{\Hermaphrodite,s}+yy_{23}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
 &-R(yy_{23}^{\Hermaphrodite,s}-yy_{14}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
 &(xy_{22}^{\Hermaphrodite,s}+xy_{42}^{\Hermaphrodite,s})/2+(xy_{12}^{\Hermaphrodite,s}+xy_{32}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite)\\
-&- r(xy_{12}^{\Hermaphrodite,s}-xy_{21}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \chi(xy_{42}^{\Hermaphrodite,s}-xy_{24}^{\Hermaphrodite,s})/2\\
-&+\big{\{}-(R+r+\chi)xy_{32}^{\Hermaphrodite,s} +(r+\chi-R) xy_{23}^{\Hermaphrodite,s}\\
-&+(R+r-\chi)xy_{41}^{\Hermaphrodite,s}+(R+\chi-r)xy_{14}^{\Hermaphrodite,s}\big{\}}(1-\alpha^\Hermaphrodite)/2
+&- r(xy_{12}^{\Hermaphrodite,s}-xy_{21}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \rho(xy_{42}^{\Hermaphrodite,s}-xy_{24}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{32}^{\Hermaphrodite,s} +(R+\rho-r) xy_{23}^{\Hermaphrodite,s}\\
+&+(R+r-\rho)xy_{41}^{\Hermaphrodite,s}+(R+\rho-r)xy_{14}^{\Hermaphrodite,s}\big{]}(1-\alpha^\Hermaphrodite)/2
 \end{split}
 \\
 %
@@ -1502,9 +1505,9 @@ y_{2}^{{\Hermaphrodite}'}=&yy_{22}^{\Hermaphrodite,s}+yy_{24}^{\Hermaphrodite,s}
 y_{3}^{{\Hermaphrodite}'}=&yy_{33}^{\Hermaphrodite,s}+yy_{13}^{\Hermaphrodite,s}/2+(yy_{23}^{\Hermaphrodite,s}+yy_{34}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
 &-R(yy_{23}^{\Hermaphrodite,s}-yy_{14}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
 &(xy_{33}^{\Hermaphrodite,s}+xy_{13}^{\Hermaphrodite,s})/2+(xy_{23}^{\Hermaphrodite,s}+xy_{43}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
-&- r(xy_{43}^{\Hermaphrodite,s}-xy_{34}^{\Hermaphrodite,s})\alpha^\Hermaphrodite - \chi(xy_{13}^{\Hermaphrodite,s}-xy_{31}^{\Hermaphrodite,s})/2\\
-&+\big{\{}-(R+r+\chi)xy_{23}^{\Hermaphrodite,s} +(r+\chi-R)xy_{32}^{\Hermaphrodite,s}\\
-&+(R+r-\chi) xy_{14}^{\Hermaphrodite,s} + (R+\chi-r) xy_{41}^{\Hermaphrodite,s}\big{\}}\alpha^\Hermaphrodite/2
+&- r(xy_{43}^{\Hermaphrodite,s}-xy_{34}^{\Hermaphrodite,s})\alpha^\Hermaphrodite - \rho(xy_{13}^{\Hermaphrodite,s}-xy_{31}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{23}^{\Hermaphrodite,s} +(R+\rho-r)xy_{32}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{14}^{\Hermaphrodite,s} + (R+\rho-r) xy_{41}^{\Hermaphrodite,s}\big{]}\alpha^\Hermaphrodite/2
 \end{split}
 \\
 %
@@ -1512,9 +1515,9 @@ y_{3}^{{\Hermaphrodite}'}=&yy_{33}^{\Hermaphrodite,s}+yy_{13}^{\Hermaphrodite,s}
 y_{4}^{{\Hermaphrodite}'}=&yy_{44}^{\Hermaphrodite,s}+yy_{34}^{\Hermaphrodite,s}/2+(yy_{14}^{\Hermaphrodite,s}+yy_{24}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
 &-R(yy_{14}^{\Hermaphrodite,s}-yy_{23}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
 &(xy_{44}^{\Hermaphrodite,s}+xy_{24}^{\Hermaphrodite,s})/2+(xy_{14}^{\Hermaphrodite,s}+xy_{34}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite)\\
-&- r(xy_{34}^{\Hermaphrodite,s}-xy_{43}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \chi(xy_{24}^{\Hermaphrodite,s}-xy_{42}^{\Hermaphrodite,s})/2\\
-&+\big{\{}-(R+r+\chi) xy_{14}^{\Hermaphrodite,s} + (r+\chi-R)xy_{41}^{\Hermaphrodite,s}\\
-&+(R+r-\chi) xy_{23}^{\Hermaphrodite,s} + (R+\chi-r) xy_{32}^{\Hermaphrodite,s}\big{\}}(1-\alpha^\Hermaphrodite)/2
+&- r(xy_{34}^{\Hermaphrodite,s}-xy_{43}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \rho(xy_{24}^{\Hermaphrodite,s}-xy_{42}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho) xy_{14}^{\Hermaphrodite,s} + (R+\rho-r)xy_{41}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{23}^{\Hermaphrodite,s} + (R+\rho-r) xy_{32}^{\Hermaphrodite,s}\big{]}(1-\alpha^\Hermaphrodite)/2
 \end{split}
 \end{align}
 \label{eq:recursions}
@@ -1536,7 +1539,7 @@ which we assume below to calculate the equilibria.
 
 In the resident population (allele $M$ fixed), we follow the frequency of $A$ in X-bearing female gametes, $p^\female_X$, and X-bearing male gametes, $p^\male_X$, and Y-bearing male gametes, $p^\male_Y$.
 We also track the total frequency of Y among male gametes, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
-These four variables determine the frequencies of the six resident gamete types: $x_{1}^{\female}=p_{X}^{\female}$, $x_{2}^{\female}=1-p_{X}^{\female}$, $x_{1}^{\male}=(1-q)p_{X}^{\male}$, $x_{2}^{\male}=(1-q)(1-p_{X}^{\male})$, $y_{1}^{\male}=q p_{Y}^{\male}$, and $y_{2}^{\male}=q(1-p_{Y}^{\male})$. 
+These four variables determine the frequencies of the six resident gamete types: $x_{1}^{\female}=\hat{p}_X^\female$, $x_{2}^{\female}=1-\hat{p}_X^\female$, $x_{1}^{\male}=(1-q)\hat{p}_X^\male$, $x_{2}^{\male}=(1-q)(1-\hat{p}_X^\male)$, $y_{1}^{\male}=q \hat{p}_Y^\male$, and $y_{2}^{\male}=q(1-\hat{p}_Y^\male)$. 
 Mean fitnesses in the resident population are given in table \ref{tab:meanfitnesses}.
 
 Various forms of selection can maintain a polymorphism at the \textbf{A} locus, including sexually antagonistic selection, overdominance, conflicts between diploid selection and selection upon haploid genotypes \citep[ploidally antagonistic selection,][]{Immler:2012tl}, or a combination of these selective regimes. 
@@ -1614,9 +1617,9 @@ If there is no haploid selection ($\alpha^{\Hermaphrodite}_\Delta=0$, $w_{A}^{\H
 
 We next calculate when $(A)$ and $(B)$ are locally stable for $r=0$. 
 According to the `small parameter theory' \citep{Karlin:1972ab,Karlin:1972dq}, these stability properties are unaffected by small amounts of recombination between the SDR and \textbf{A} locus, although equilibrium frequencies may be slightly altered. 
-For the $a$ allele to be stably fixed on the Y we need $\bar{w}_{Ya}^{\male} > \bar{w}_{YA}^{\male}$ where $\bar{w}_{Ya}^{\male} = w_{a}^{\male} \big[p_{X}^{\female}(1-\alpha^\male_\Delta) w_{A}^{\female} w_{Aa}^{\male} + (1-p_{X}^{\female})w_{a}^{\female} w_{aa}^{\male} \big]$ and $\bar{w}_{YA}^{\male} = w_{A}^{\male} \big[ p_{X}^{\female} w_{A}^{\female} w_{AA}^{\male} + (1-p_{X}^{\female})(1+\alpha^\male_\Delta) w_{a}^{\female} w_{Aa}^{\male} \big]$. 
+For the $a$ allele to be stably fixed on the Y we need $\bar{w}_{Ya}^{\male} > \bar{w}_{YA}^{\male}$ where $\bar{w}_{Ya}^{\male} = w_{a}^{\male} \big[\hat{p}_X^\female(1-\alpha^\male_\Delta) w_{A}^{\female} w_{Aa}^{\male} + (1-\hat{p}_X^\female)w_{a}^{\female} w_{aa}^{\male} \big]$ and $\bar{w}_{YA}^{\male} = w_{A}^{\male} \big[ \hat{p}_X^\female w_{A}^{\female} w_{AA}^{\male} + (1-\hat{p}_X^\female)(1+\alpha^\male_\Delta) w_{a}^{\female} w_{Aa}^{\male} \big]$. 
 That is, Y-$a$ haplotypes must have higher fitness than Y-$A$ haplotypes.  
-Substituting in $p_{X}^{\female} = \hat{p}_{X}^{\female}$ from above, fixation of the $a$ allele on the Y requires that $\gamma_{i}>0$ where $\gamma_{(A)}=w_{a}^{\male} \big[ (1-\alpha^\male_\Delta) w_{Aa}^{\male} \phi + w_{aa}^{\male} \psi \big]-w_{A}^{\male} \big[ w_{AA}^{\male} \phi + (1 + \alpha^{\male}_\Delta)w_{Aa}^{\male} \psi \big]$ for equilibrium $(A)$ and $\gamma_{(B)}=(1-\alpha^{\male}_\Delta)w_{a}^{\male}w_{Aa}^{\male}-w_{A}^{\male}w_{AA}^{\male}$ for equilibrium $(B)$.
+Substituting in $\hat{p}_X^\female = \hat{p}_{X}^{\female}$ from above, fixation of the $a$ allele on the Y requires that $\gamma_{i}>0$ where $\gamma_{(A)}=w_{a}^{\male} \big[ (1-\alpha^\male_\Delta) w_{Aa}^{\male} \phi + w_{aa}^{\male} \psi \big]-w_{A}^{\male} \big[ w_{AA}^{\male} \phi + (1 + \alpha^{\male}_\Delta)w_{Aa}^{\male} \psi \big]$ for equilibrium $(A)$ and $\gamma_{(B)}=(1-\alpha^{\male}_\Delta)w_{a}^{\male}w_{Aa}^{\male}-w_{A}^{\male}w_{AA}^{\male}$ for equilibrium $(B)$.
 Stability of a polymorphism on the X chromosome (equilibrium $A$) further requires that $\phi >0$ and $\psi >0$. 
 Fixation of the $a$ allele on the X (equilibrium $B$) can be stable only if equilibrium $(A)$ is not and requires $\psi<0$ and $w_{A}^{\female}w_{AA}^{\female}>(1-\alpha^{\female})w_{a}^{\female}w_{Aa}^{\female}$. 
 
@@ -1718,8 +1721,8 @@ Without gametic competition or drive ($\alpha_{\Delta}^\Hermaphrodite=t^\Hermaph
 
 A rare neo-Y or neo-W will spread from a given ancestral equilibrium when the leading eigenvalue, $\lambda$, of the Jacobian matrix derived from the eight mutant recursion equations (given by \ref{eq:recursions}c,d,g,h), evaluated at the ancestral equilibrium, is greater than one.
 However, because a neo-Y (neo-W) is always in males (females) and is epistatically dominant to the ancestral sex-determining locus, we need only two recursion equations (e.g., tracking the change in the frequency of neo-Y-$A$ and neo-Y-$a$ gametes from males) and thus the leading eigenvalue is the largest solution to a quadratic characteristic polynomial $\lambda^2 + b\lambda + c = 0$ as described in the text (Table \ref{tab:haplotype_growth}).
-%It can be shown (see supplementary Mathematica file) that the coefficients are $b= - (\lambda_{mA} + \lambda_{ma})+(\rho_{mA} + \rho_{ma})$ and $c = (\lambda_{mA}-\rho_{mA}) (\lambda_{ma}-\rho_{ma}) -\rho_{mA} \rho_{ma}$, where $\lambda_{mi}$ is the multiplicative growth rate of the frequency of mutants on background $i\in\{A,a\}$, without accounting for loss due to recombination, and $\rho_{mi}$ is the rate at which mutants on background $i\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes.
-%The leading eigenvalue is then greater than one whenever $\lambda_{mA}>1$ and $\lambda_{ma}>1$, less than one whenever $\lambda_{mA}<1$ and $\lambda_{ma}<1$, and greater than one whenever  $\lambda_{mA}>1$ or $\lambda_{ma}>1$ and $\rho_{ma} (\lambda_{mA}-1) + \rho_{mA} (\lambda_{ma}-1) > 0$.
+%It can be shown (see supplementary Mathematica file) that the coefficients are $b= - (\lambda_{mA} + \lambda_{ma})+(\chi_{mA} + \chi_{ma})$ and $c = (\lambda_{mA}-\chi_{mA}) (\lambda_{ma}-\chi_{ma}) -\chi_{mA} \chi_{ma}$, where $\lambda_{mi}$ is the multiplicative growth rate of the frequency of mutants on background $i\in\{A,a\}$, without accounting for loss due to recombination, and $\chi_{mi}$ is the rate at which mutants on background $i\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes.
+%The leading eigenvalue is then greater than one whenever $\lambda_{mA}>1$ and $\lambda_{ma}>1$, less than one whenever $\lambda_{mA}<1$ and $\lambda_{ma}<1$, and greater than one whenever  $\lambda_{mA}>1$ or $\lambda_{ma}>1$ and $\chi_{ma} (\lambda_{mA}-1) + \chi_{mA} (\lambda_{ma}-1) > 0$.
 
 For tight linkage between the ancestral sex-determining locus and the selected locus we can calculate each of these terms exactly, while for weak selection we take a Taylor series of the leading eigenvalue. With weak selection, the leading eigenvalue, $\lambda$, for any $k$, is given up to order $\epsilon^2$ by equation \eqref{eq:lambda_ESD_k}.
 
@@ -1742,11 +1745,11 @@ w_{a}^\male (1-\alpha^\male_\Delta) w_{Aa}^\female (1+\alpha^\female_\Delta) \ri
 \frac{\left[  w_{A}^\male (1+\alpha^\male_\Delta) w_{Aa}^\female (1-\alpha^\female_\Delta)+
 w_{a}^\male (1-\alpha^\male_\Delta) w_{aa}^\female \right]}
 { 2w_{AA}^\female } \\
-\rho_{mA}&= \frac{1}{2} \left[w_{a}^\male (1-\alpha^\male_\Delta) \right]^{-1}
+\chi_{mA}&= \frac{1}{2} \left[w_{a}^\male (1-\alpha^\male_\Delta) \right]^{-1}
 \frac{w_{A}^\female }{w_{A}^\female}
  \frac{\left[  w_{a}^\male (1-\alpha^\male_\Delta) w_{Aa}^\female (1 + \alpha^\female_\Delta) \right]}
 { w_{AA}^\female } \frac{R}{2}\\
-\rho_{ma}&= \frac{1}{2} \left[w_{a}^\male (1-\alpha^\male_\Delta) \right]^{-1}
+\chi_{ma}&= \frac{1}{2} \left[w_{a}^\male (1-\alpha^\male_\Delta) \right]^{-1}
 \frac{w_{a}^\female}{w_{A}^\female}
  \frac{\left[  w_{A}^\male (1+\alpha^\male_\Delta) w_{Aa}^\female (1-\alpha^\female_\Delta) \right]}
 {  w_{AA}^\female} \frac{R}{2}
@@ -1817,8 +1820,8 @@ Similar equations can be derived for equilibrium (A) by substituting the equilib
 \begin{align}
 \lambda_{mA}&= \frac{a}{b} \left[w_{AA}^\female w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi +  w_{Aa}^\female (1+\alpha^\female_\Delta) w_a^\male \frac{c}{d}\right] / (2 w_a^\female) \\
 \lambda_{ma}&= \frac{a}{b} \left[ w_{Aa}^\female (1-\alpha^\female_\Delta) w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi +  w_{aa}^\female w_a^\male \frac{c}{d}\right] / (2 w_A^\female) \\
-\rho_{mA}&= \frac{a}{b} \frac{R}{2} \left[   w_{Aa}^\female (1+\alpha^\female_\Delta) w_a^\male \frac{c}{d} \right] / w_a^\female\\ 
-\rho_{ma}&= \frac{a}{b} \frac{R}{2} \left[ w_{Aa}^\female (1-\alpha^\female_\Delta) w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi \right] / w_A^\female
+\chi_{mA}&= \frac{a}{b} \frac{R}{2} \left[   w_{Aa}^\female (1+\alpha^\female_\Delta) w_a^\male \frac{c}{d} \right] / w_a^\female\\ 
+\chi_{ma}&= \frac{a}{b} \frac{R}{2} \left[ w_{Aa}^\female (1-\alpha^\female_\Delta) w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi \right] / w_A^\female
 \end{align}
 \end{subequations}
 
@@ -1873,8 +1876,8 @@ This scenario selects for a modifier that increases recombination between the se
 %\begin{align}
 %\lambda_{mA}&= \frac{a}{b} \left[w_{AA}^\female w_{Aa}^\male \phi / 2 + w_{Aa}^\female \frac{c}{d}\right]  \\
 %\lambda_{ma}&= \frac{a}{b} \left[w_{Aa}^\female w_{Aa}^\male \phi / 2 +  w_{aa}^\female \frac{c}{d}\right] \\
-%\rho_{mA}&= \frac{a}{b} R \left[ w_{Aa}^\female \frac{c}{d} \right] \\ 
-%\rho_{ma}&= \frac{a}{b} R \left[ w_{Aa}^\female w_{Aa}^\male \phi / 2 \right] 
+%\chi_{mA}&= \frac{a}{b} R \left[ w_{Aa}^\female \frac{c}{d} \right] \\ 
+%\chi_{ma}&= \frac{a}{b} R \left[ w_{Aa}^\female w_{Aa}^\male \phi / 2 \right] 
 %\end{align}
 %\end{subequations}
 
@@ -1884,8 +1887,8 @@ This scenario selects for a modifier that increases recombination between the se
 %\begin{align}
 %\lambda_{mA}&= \frac{(\phi + \psi)[(w_{AA}^\female + w_{Aa}^\female ) w_{Aa}^\male \phi + 2 w_{Aa}^\female w_{AA}^\male \psi ]}{2 (w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi)}\\
 %\lambda_{ma}&=  \frac{(\phi + \psi)[(w_{aa}^\female + w_{Aa}^\female ) w_{Aa}^\male \phi + 2 w_{aa}^\female w_{AA}^\male \psi ]}{2 (w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi)}\\
-%\rho_{mA}&= R \frac{(\phi + \psi) w_{Aa}^\female w_{AA}^\male}{2 (w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi)} \\ 
-%\rho_{ma}&= R \frac{(\phi + \psi) w_{Aa}^\female w_{Aa}^\male}{2 (w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi)}\\
+%\chi_{mA}&= R \frac{(\phi + \psi) w_{Aa}^\female w_{AA}^\male}{2 (w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi)} \\ 
+%\chi_{ma}&= R \frac{(\phi + \psi) w_{Aa}^\female w_{Aa}^\male}{2 (w_{AA}^\female w_{Aa}^\male \phi^2 + \psi(w_{Aa}^\female(w_{AA}^\male + w_{Aa}^\male)\phi + w_{aa}^\female w_{AA}^\male \psi)}\\
 %\end{align}
 %\end{subequations}
 %
@@ -1893,8 +1896,8 @@ This scenario selects for a modifier that increases recombination between the se
 %\begin{align}
 %\lambda_{mA}&= [( w_{AA}^\female + w_{Aa}^\female ) w_{Aa}^\male \phi + 2 w_{Aa}^\female w_{AA}^\male \psi] a \\
 %\lambda_{ma}&=  [(w_{aa}^\female + w_{Aa}^\female ) w_{Aa}^\male \phi + 2 w_{aa}^\female w_{AA}^\male \psi ] a\\
-%\rho_{mA}&= R w_{Aa}^\female (w_{Aa}^\male \phi + 2 w_{AA}^\male \psi) c \\ 
-%\rho_{ma}&= R w_{Aa}^\female w_{Aa}^\male \phi c \\
+%\chi_{mA}&= R w_{Aa}^\female (w_{Aa}^\male \phi + 2 w_{AA}^\male \psi) c \\ 
+%\chi_{ma}&= R w_{Aa}^\female w_{Aa}^\male \phi c \\
 %\end{align}
 %\end{subequations}
 %\noindent
@@ -1987,10 +1990,10 @@ Here, there is no haploid selection $t^\Hermaphrodite = \alpha^\Hermaphrodite_\D
 Following invasion by a neo-W allele, there can be a complete transition to a new sex-determination system, maintenance of polymorphism at both ancestral-XY and neo-ZW sex determining regions, or loss of the new sex-determining allele. 
 Here we plot the frequency of the neo-W allele among female gametes; as the neo-W reaches frequency $0.5$, polymorphism at the ancestral XY locus is lost with Y becoming fixed such that sex is determined only be the ZW allele carried by a female gamete. 
 Panels A, C and D show cases where a steady state is reached with the neo-W at a frequency below $0.5$, in which case ancestral-X and Y alleles also both segregate. 
-In all cases, we assume that the $a$ allele is initially more common that the $A$ allele on the Y (Y$a$ is fixed when $r=0$). 
-When $r>0$ (panels B and D), Y$A$ haplotypes created by recombination can become more common than Y$a$ haplotypes as the neo-W spreads.
-In B, this leads to loss of the neo-W and the system goes to an equilibrium with X$a$ and Y$A$ haplotypes fixed (A'), such that all females have the high fitness genotype $aa$ and all males $Aa$. 
-For the parameters in B, neo-W alleles have negative invasion fitness when the Y$A$ haplotype is ancestrally more common than Y$a$ (see blue line in Figure \ref{fig:temporalOverdominance}A and  \ref{fig:temporalOverdominance}B). 
+In all cases, we assume that the $a$ allele is initially more common that the $A$ allele on the Y (Y-$a$ is fixed when $r=0$). 
+When $r>0$ (panels B and D), Y-$A$ haplotypes created by recombination can become more common than Y-$a$ haplotypes as the neo-W spreads.
+In B, this leads to loss of the neo-W and the system goes to an equilibrium with X-$a$ and Y-$A$ haplotypes fixed (A'), such that all females have the high fitness genotype $aa$ and all males $Aa$. 
+For the parameters in B, neo-W alleles have negative invasion fitness when the Y-$A$ haplotype is ancestrally more common than Y-$a$ (see blue line in Figure \ref{fig:temporalOverdominance}A and  \ref{fig:temporalOverdominance}B). 
 In contrast, the neo-W is not lost in panel D (see blue line in Figure \ref{fig:temporalOverdominance}C and  \ref{fig:temporalOverdominance}D). 
 Fitness parameters are the same as in Figure \ref{fig:temporalOverdominance}, the $a$ allele is favoured in females ($w_{aa}^\female=1.05$, $w_{Aa}^\Hermaphrodite=1$, $w_{AA}^\female=0.85$) and there is overdominant selection in males ($w_{aa}^\male=w_{AA}^\male=0.75$) in panels A and B.
 In panels C and D, selection in males and females is overdominant ($w_{aa}^\female=w_{AA}^\female=0.6$, $w_{aa}^\male=0.5$, $w_{AA}^\male=0.7$, $w_{Aa}^\Hermaphrodite=1$). 
