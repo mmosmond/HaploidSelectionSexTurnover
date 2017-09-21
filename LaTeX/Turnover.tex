@@ -167,7 +167,7 @@ Even in the absence of haploid selection, we show that transitions between male 
 \textcolor{red}{Change all  $\alpha^\Hermaphrodite$ to $(1+\alpha_{\Delta}^\Hermaphrodite)$.}
 \textcolor{blue}{I've attempted this everywhere except in the recursions (S.1), which seem more natural with $\alpha$'s. I've run into trouble in equation S.8c,d -- I think we should check the Mathematica results to be sure we haven't made a typo. This also introduced an extra 1/2 in S.6c,d that might need to be explained.}
 \textcolor{red}{hmm, not sure. This was an idea from Sally, I think in response to terms like $2 \alpha^\Hermaphrodite$ and $2(1-\alpha^\Hermaphrodite)$. It's possible that it makes other equations less easy to understand. My previous (not explained) logic was to use $w$ and $\alpha$ for strong selection and $s$, $t$, and $\alpha_\Delta$ for weak selection. Just to check, I should have written $\alpha^\Hermaphrodite=(1+\alpha_{\Delta}^\Hermaphrodite)/2$, maybe that's where the factors of $1/2$ come from?}
-\textcolor{blue}{shoot, i may have changed too much (i.e. strong selection too), but i did use the correct transformation. still, the form of S.8c,d seems wrong. I'll double check it.}
+\textcolor{blue}{shoot, i may have changed too much (i.e. strong selection too), but i did use the correct transformation. still, the form of S.8c,d seems wrong. I'll double check it. CANT FIND ANY ERRORS YET STILL HAVE A "2" IN S.8c. These 2s reappear in S.9 and S.10, always with $W_{AA}$.}
 
 %\textcolor{red}{Switch between $\rho$ and $\rho$ in all places because $\rho$ is used for double recombination events.}
 %\textcolor{blue}{I think we need a different variable given the $\rho$ terms in the characteristic polynomial. Also, where is $\rho$ used for double recombination? In other papers? Here $\rho$ is the probability of an odd number of cross-overs between the SDR and M loci.}
@@ -253,6 +253,7 @@ Dominant neo-Y (when $k=0$) or neo-W alleles (when $k=1$) are only found in male
 Furthermore, if the $m$ allele is fully epistatically dominant over the ancestral sex-determining system, phenotypes are not affected by the genotype at the ancestral sex-determining region (\textbf{X} locus). 
 Thus, the invasion of rare dominant neo-Y or neo-W alleles is determined by the largest eigenvalue that solves a quadratic characteristic polynomial,
 \textcolor{red}{Mention the possibility that the other roots yield the leading eigenvalue somewhere.}
+\textcolor{blue}{following the logic above, it seems like we say we go from 8 eqns to 4 eqns by considering only one sex, and then from 4 eqns to 2 eqns by ignoring the ancestral SD allele. why then do we have the two quadratic problem?}
 $\lambda^2+ b \lambda + c =0$.
 %\begin{equation}
 %\lambda^2+ b \lambda + c =0
@@ -789,9 +790,10 @@ Two predominant theories explaining the remarkably high frequency of transitions
 The former predicts that neo-sex-determining alleles can invade when they arise in closer linkage with a sexually-antagonistic locus \citep{vanDoorn:2007eu,vanDoorn:2010hu}.
 The latter predicts that new sex-determining systems are generally favoured if they result in more equal sex-ratios than the ancestral system. 
 %The latter predicts that neo-W alleles will invade an XY system when there is a male bias caused by haploid selection in males, and vice-versa, a neo-Y will invade a ZW system when there is a female bias caused by haploid selection in females \citep{Kozielska:2010vm,Ubeda:2015fx}.
-Firstly, we show that selection (including sexually-antagonistic selection) on loci within or near the non-recombining region of the ancestral sex-determining region can favour heterogametic transitions (XY to ZW or ZW to XY) to new sex-determining systems that have looser linkage (e.g., see Figure \ref{fig:SexAntagTighter}). 
-Secondly, assuming that selection is weak relative to recombination, we show that new sex-determining alleles are typically favoured if they are more closely linked to a locus under haploid selection, which is the only condition favouring homogametic transitions (XY to XY or ZW to ZW). 
+Firstly, we show that selection (including sexually-antagonistic selection) on loci within or near the non-recombining region of the ancestral sex-determining region can favour heterogametic transitions (XY to ZW or ZW to XY) to new sex-determining systems that are less closely linked to the selected loci (e.g., see Figure \ref{fig:SexAntagTighter}). 
+Secondly, assuming that selection is weak relative to recombination (`weak selection'), we show that new sex-determining alleles are typically favoured if they are more closely linked to a locus under haploid selection, which is the only condition favouring homogametic transitions (XY to XY or ZW to ZW). 
 In addition, with haploid selection and weak selection, heterogametic transitions (XY to ZW or ZW to XY) can occur even when the new sex-determining region is less closely linked to the locus under selection (e.g., see Figure \ref{fig:SexRatioBad}). 
+\textcolor{red}{need to mention sex ratio here}
 %Neo-W (neo-Y) alleles invade when their fitness in females (males) is greater than the mean fitness of females (males) under the ancestral sex-determination system and/or females (males) are the rarer sex.
 
 
@@ -1423,7 +1425,7 @@ During meiosis in sex $\Hermaphrodite$, meiotic drive occurs such that, in $Aa$ 
 \begin{table}[ht]
 \centering
 \smallskip
-\caption{$\rho$ substitutions for different loci orders (assuming no interference)}
+\caption{Values of $\rho$ for different loci orders assuming no interference and $r,R\in(0,1/2)$.}
 \begin{tabular}{l l}
 \hline\hline
   Order of loci &   \\ [0.5ex] \hline
@@ -1832,8 +1834,12 @@ where
 \begin{align}
 a &= w_a^\female \phi + w_A^\female \psi \\
 b &= w_{AA}^\female \phi \left[ w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi \right]+ w_{Aa}^\female \psi \left[ w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi + w_{AA}^\male w_a^\male \psi \right] + w_{aa}^\female \psi \left( w_{AA}^\male w_a^\male \psi \right)\\
-c &= w_{Aa}^\male (1-\alpha^\male_\Delta) \phi \left[ w_{Aa}^\male (1+\alpha^\male_\Delta) \phi \right] + 2w_{Aa}^\male\phi(w_{AA}^\male \psi + w_{aa}^\male \alpha^\male \psi ) + 2w_{aa}^\male \psi w_{AA}^\male \psi \\
-d &= w_{Aa}^\male (1+\alpha^\male) \phi + w_{aa}^\male \psi
+%c &= w_{Aa}^\male (1-\alpha^\male_\Delta) \phi \left[ w_{Aa}^\male (1+\alpha^\male_\Delta) \phi \right] + w_{Aa}^\male\phi \left[ 2w_{AA}^\male + w_{aa}^\male (1+\alpha^\male_\Delta) \right] \psi + w_{aa}^\male \psi \left(2w_{AA}^\male \psi \right) \\
+c &= 
+w_{Aa}^\male (1+\alpha^\male_\Delta) \phi \left[ w_{Aa}^\male (1-\alpha^\male_\Delta) \phi + w_{aa}^\male \psi \right] +
+2 w_{AA}^\male\psi \left[ w_{Aa}^\male \phi + w_{aa}^\male \psi \right]
+ \\
+d &= w_{Aa}^\male (1+\alpha^\male_\Delta) \phi + w_{aa}^\male \psi
 \end{align}
 \end{subequations}
 
