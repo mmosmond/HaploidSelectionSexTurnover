@@ -164,10 +164,10 @@ Even in the absence of haploid selection, we show that transitions between male 
 \section*{Model}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textcolor{red}{Change all  $\alpha^\Hermaphrodite$ to $(1+\alpha_{\Delta}^\Hermaphrodite)$.}
-\textcolor{blue}{I've attempted this everywhere except in the recursions (S.1), which seem more natural with $\alpha$'s. I've run into trouble in equation S.8c,d -- I think we should check the Mathematica results to be sure we haven't made a typo. This also introduced an extra 1/2 in S.6c,d that might need to be explained.}
-\textcolor{red}{hmm, not sure. This was an idea from Sally, I think in response to terms like $2 \alpha^\Hermaphrodite$ and $2(1-\alpha^\Hermaphrodite)$. It's possible that it makes other equations less easy to understand. My previous (not explained) logic was to use $w$ and $\alpha$ for strong selection and $s$, $t$, and $\alpha_\Delta$ for weak selection. Just to check, I should have written $\alpha^\Hermaphrodite=(1+\alpha_{\Delta}^\Hermaphrodite)/2$, maybe that's where the factors of $1/2$ come from?}
-\textcolor{blue}{shoot, i may have changed too much (i.e. strong selection too), but i did use the correct transformation. still, the form of S.8c,d seems wrong. I'll double check it. CANT FIND ANY ERRORS YET STILL HAVE A "2" IN S.8c. These 2s reappear in S.9 and S.10, always with $W_{AA}$.}
+%\textcolor{red}{Change all  $\alpha^\Hermaphrodite$ to $(1+\alpha_{\Delta}^\Hermaphrodite)$.}
+%\textcolor{blue}{I've attempted this everywhere except in the recursions (S.1), which seem more natural with $\alpha$'s. I've run into trouble in equation S.8c,d -- I think we should check the Mathematica results to be sure we haven't made a typo. This also introduced an extra 1/2 in S.6c,d that might need to be explained.}
+%\textcolor{red}{hmm, not sure. This was an idea from Sally, I think in response to terms like $2 \alpha^\Hermaphrodite$ and $2(1-\alpha^\Hermaphrodite)$. It's possible that it makes other equations less easy to understand. My previous (not explained) logic was to use $w$ and $\alpha$ for strong selection and $s$, $t$, and $\alpha_\Delta$ for weak selection. Just to check, I should have written $\alpha^\Hermaphrodite=(1+\alpha_{\Delta}^\Hermaphrodite)/2$, maybe that's where the factors of $1/2$ come from?}
+%\textcolor{blue}{shoot, i may have changed too much (i.e. strong selection too), but i did use the correct transformation. still, the form of S.8c,d seems wrong. I'll double check it. CANT FIND ANY ERRORS YET STILL HAVE A "2" IN S.8c. These 2s reappear in S.9 and S.10, always with $W_{AA}$.}
 
 %\textcolor{red}{Switch between $\rho$ and $\rho$ in all places because $\rho$ is used for double recombination events.}
 %\textcolor{blue}{I think we need a different variable given the $\rho$ terms in the characteristic polynomial. Also, where is $\rho$ used for double recombination? In other papers? Here $\rho$ is the probability of an odd number of cross-overs between the SDR and M loci.}
@@ -253,7 +253,7 @@ Dominant neo-Y (when $k=0$) or neo-W alleles (when $k=1$) are only found in male
 Furthermore, if the $m$ allele is fully epistatically dominant over the ancestral sex-determining system, phenotypes are not affected by the genotype at the ancestral sex-determining region (\textbf{X} locus). 
 Thus, the invasion of rare dominant neo-Y or neo-W alleles is determined by the largest eigenvalue that solves a quadratic characteristic polynomial,
 \textcolor{red}{Mention the possibility that the other roots yield the leading eigenvalue somewhere.}
-\textcolor{blue}{following the logic above, it seems like we say we go from 8 eqns to 4 eqns by considering only one sex, and then from 4 eqns to 2 eqns by ignoring the ancestral SD allele. why then do we have the two quadratic problem?}
+\textcolor{blue}{following the logic above, it seems like we say we go from 8 eqns to 4 eqns by considering only one sex, and then from 4 eqns to 2 eqns by ignoring the ancestral SD allele. why then do we have the two quadratic problem? (b/c the $m$ alleles can arise in either sex?)}
 $\lambda^2+ b \lambda + c =0$.
 %\begin{equation}
 %\lambda^2+ b \lambda + c =0
@@ -1624,9 +1624,14 @@ For the $a$ allele to be stably fixed on the Y we need $\bar{w}_{Ya}^{\male} > \
 That is, Y-$a$ haplotypes must have higher fitness than Y-$A$ haplotypes.  
 Substituting in $\hat{p}_X^\female = \hat{p}_{X}^{\female}$ from above, fixation of the $a$ allele on the Y requires that $\gamma_{i}>0$ where $\gamma_{(A)}=w_{a}^{\male} \big[ (1-\alpha^\male_\Delta) w_{Aa}^{\male} \phi + w_{aa}^{\male} \psi \big]-w_{A}^{\male} \big[ w_{AA}^{\male} \phi + (1 + \alpha^{\male}_\Delta)w_{Aa}^{\male} \psi \big]$ for equilibrium $(A)$ and $\gamma_{(B)}=(1-\alpha^{\male}_\Delta)w_{a}^{\male}w_{Aa}^{\male}-w_{A}^{\male}w_{AA}^{\male}$ for equilibrium $(B)$.
 Stability of a polymorphism on the X chromosome (equilibrium $A$) further requires that $\phi >0$ and $\psi >0$. 
-Fixation of the $a$ allele on the X (equilibrium $B$) can be stable only if equilibrium $(A)$ is not and requires $\psi<0$ and $w_{A}^{\female}w_{AA}^{\female}>(1-\alpha^{\female})w_{a}^{\female}w_{Aa}^{\female}$. 
+Fixation of the $a$ allele on the X (equilibrium $B$) can be stable only if equilibrium $(A)$ is not, as it requires $\psi<0$ and $2w_{A}^{\female}w_{AA}^{\female}>(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$ or just $4w_{A}^{\female}w_{AA}^{\female}<(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$ (which prevents $\psi>0$). 
 
 \textcolor{red}{check last condition and the stability condition below are correct}
+\textcolor{blue}{The last condition looks good to me, although in your Turnover-norec-MFS.nb you look at YA fixed, so you have to flip everything (so I made Turnover-norec-MFS-MMO.nb to do this).
+The one issue I can find here is that you can also prevent $\lambda>1$ when the slope and intercept of the quadratic, $f(\lambda)$, at $\lambda=1$ are negative (you only looked at both being positive). In this case we need $4w_{A}^{\female}w_{AA}^{\female}<(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$, which also prevents $\psi>0$.
+I've added this in.
+It could also be the case that the slope and intercept are the same sign but the roots are imaginary - but this is never the case here.
+Stability condition below looks good to me (from matt version of turnoverSOM-MIKE.nb).}
 
 \subsubsection*{Selection weak relative to recombination (weak selection)}
 
@@ -1785,7 +1790,7 @@ These terms are only associated with heterozygous females, i.e., they are found 
 
 Thirdly, haploid selection in males affects the diploid genotypes of females by altering the allele frequencies in the male gametes that female gametes pair with.
 At equlibrium $(B)$, neo-W female gametes will mate with X-$A$ male gametes with probability $ w_A^\male (1+\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ and Y-$a$ male gametes with probability $w_a^\male (1-\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$, where the $2\bar{w}_{H}^\male$ terms have been canceled in equation \eqref{Binvasion} (as mentioned above). 
-Thus, for example, neo-W-$A$ haplotypes are found in $AA$ female diploids with probability $ w_A^\male (1+\alpha^\male_\Delta)/ (2\bar{w}_{H}^\male)$ (first term in square brackets in the numerator of equation \ref{Binvasion}a) and in $Aa$ female diploids with probability $w_a^\male (1-\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ (see equation \ref{Binvasion}c and second term in square brackets in the numerator of equation \ref{Binvasion}a).
+Thus, for example, neo-W-$A$ haplotypes are found in $AA$ female diploids with probability $ w_A^\male (1+\alpha^\male_\Delta)/ (2\bar{w}_{H}^\male)$ (first term in square brackets in the numerator of equation \ref{Binvasion}a) and in $Aa$ female diploids with probability $w_a^\male (1-\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ (see equation \ref{Binvasion}c and the second term in square brackets in the numerator of equation \ref{Binvasion}a).
 
 %For instance, because an epistatically dominant neo-W always causes its carrier to become female, it creates females who carry either Y-$a$ or X-$A$ genotypes from their father.
 %Thus, because when there is a polymorphism the X carries some non-zero frequency of $A$, haploid selection in males impacts the diploid genotypes of females (e.g., creating more $Aa$ females when drive in males favours Y-$a$).
@@ -1797,13 +1802,16 @@ Essentially, the X is then already as specialized as possible for the female ben
 
 If selection doesn't uniformly favour $A$ in females, however, neo-W-$A$ haplotypes and/or neo-W-$a$ haplotypes can spread ($\lambda_{mA}>1$ and/or $\lambda_{ma}>1$) at this equilibrium.
 %If $\lambda_{mA}>1$ (requiring $w_{Aa}^\female>w_{AA}^\female$), the implication is that the neo-W can spread alongside the $A$ allele, despite the fact that the neo-W sometimes brings $Y-a$ haplotypes into females, because $a$ is favoured by selection in females despite $A$ being fixed on the X.
-A neo-W can spread alongside the $A$ allele ($\lambda_{mA}>1$), despite the fact that a neo-W brings Y-$a$ haplotypes into females, when $w_{Aa}^\female>w_{AA}^\female$.
+A neo-W can spread alongside the $A$ allele ($\lambda_{mA}>1$), despite the fact that a neo-W brings Y-$a$ haplotypes into females, when $w_{Aa}^\female>w_{AA}^\female$, as stated above.
 In this case the $a$ allele is favoured by selection in females despite $A$ being fixed on the X.
-For this equilibrium to be stable, X-$A$ must be sufficiently favoured in males (for example, by overdominance in males, remembering that $a$ is fixed on the Y) to keep $A$ fixed on the X. 
-Specifically, from the stability conditions for equilibrium (B), we must have $w_{Aa}^\male/\big[(w_{aa}^\male+w_{Aa}^\male)/2\big]>w_{Aa}^\female/w_{AA}^\female$.
+For this equilibrium to be stable (i.e.,  to keep $A$ fixed on the X), X-$a$ cannot be overly favoured in females and X-$A$ must be sufficiently favoured in males (for example, by overdominance in males, remembering that $a$ is fixed on the Y). 
+Specifically, from the stability conditions for equilibrium (B), we must have $w_{Aa}^\female < 2 w_{AA}^\female$ and $w_{Aa}^\male/\big[(w_{aa}^\male+w_{Aa}^\male)/2\big]>w_{Aa}^\female/w_{AA}^\female$.
 
-Still considering $w_{Aa}^\female>w_{AA}^\female$, the neo-W can also spread alongside the $a$ allele ($\lambda_{ma}>1$) if there is sufficiently strong underdominance in females ($w_{aa}^\female>w_{Aa}^\female$) \textcolor{red}{[this is describing directional selection, not overdominance - check the conditions for the case we want to talk about]}, such that $(w_{Aa}^\female+w_{aa}^\female)/2>w_{AA}^\female$.  
-In this case, $a$ is not favored in females near the equilibrium where females are $AA$ (comparing $Aa$ to $AA$ genotypes) and yet the neo-W can spread with $a$ because it produces female $aa$ individuals by capturing Y-$a$ haplotypes.
+Still considering $w_{Aa}^\female>w_{AA}^\female$, the neo-W can also spread alongside the $a$ allele ($\lambda_{ma}>1$) if $w_{aa}^\female$ is large enough such that $(w_{Aa}^\female+w_{aa}^\female)/2>w_{AA}^\female$.
+%there is sufficiently strong underdominance in females ($w_{aa}^\female>w_{Aa}^\female$) \textcolor{blue}{[this is describing directional selection, not overdominance - check the conditions for the case we want to talk about]}, such that $(w_{Aa}^\female+w_{aa}^\female)/2>w_{AA}^\female$.  
+This can occur with overdominance or directional selection for $a$ in females (Figure \ref{fig:regionplots}B,C).
+\textcolor{blue}{mike, you might want to check these last two statements, and the following.}
+In this case, $a$ is not favoured enough in females near the equilibrium (comparing $Aa$ to $AA$ genotypes) to prevent $A$ from stably fixing on the X, and yet the neo-W can spread with $a$ because it produces female $aa$ individuals by capturing Y-$a$ haplotypes.
 
 %When both haplotypes can spread on their own ($\lambda_{mA}>1$ and $\lambda_{ma}>1$), the neo-W invades regardless the recombination rate between it and the selected locus, $R$.
 %When neither haplotype can spread ($\lambda_{mA}<1$ and $\lambda_{ma}<1$) the neo-W can never invade.
