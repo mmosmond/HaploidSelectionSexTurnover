@@ -1628,7 +1628,7 @@ Fixation of the $a$ allele on the X (equilibrium $B$) can be stable only if equi
 
 \textcolor{red}{check last condition and the stability condition below are correct}
 \textcolor{blue}{The last condition looks good to me, although in your Turnover-norec-MFS.nb you look at YA fixed, so you have to flip everything (so I made Turnover-norec-MFS-MMO.nb to do this).
-The one issue I can find here is that you can also prevent $\lambda>1$ when the slope and intercept of the quadratic, $f(\lambda)$, at $\lambda=1$ are negative (you only looked at both being positive). In this case we need $4w_{A}^{\female}w_{AA}^{\female}<(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$, which also prevents $\psi>0$.
+The one issue I can find here is that you can also prevent $\lambda>1$ when the slope and intercept of the quadratic at $\lambda=1$ are negative (you only looked at both being positive). In this case we need $4w_{A}^{\female}w_{AA}^{\female}<(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$, which also prevents $\psi>0$.
 I've added this in.
 It could also be the case that the slope and intercept are the same sign but the roots are imaginary - but this is never the case here.
 Stability condition below looks good to me (from matt version of turnoverSOM-MIKE.nb).}
@@ -1810,7 +1810,7 @@ Specifically, from the stability conditions for equilibrium (B), we must have $w
 Still considering $w_{Aa}^\female>w_{AA}^\female$, the neo-W can also spread alongside the $a$ allele ($\lambda_{ma}>1$) if $w_{aa}^\female$ is large enough such that $(w_{Aa}^\female+w_{aa}^\female)/2>w_{AA}^\female$.
 %there is sufficiently strong underdominance in females ($w_{aa}^\female>w_{Aa}^\female$) \textcolor{blue}{[this is describing directional selection, not overdominance - check the conditions for the case we want to talk about]}, such that $(w_{Aa}^\female+w_{aa}^\female)/2>w_{AA}^\female$.  
 This can occur with overdominance or directional selection for $a$ in females (Figure \ref{fig:regionplots}B,C).
-\textcolor{blue}{mike, you might want to check these last two statements, and the following.}
+\textcolor{blue}{mike, you might want to check these last two statements i've edited, and the following.}
 In this case, $a$ is not favoured enough in females near the equilibrium (comparing $Aa$ to $AA$ genotypes) to prevent $A$ from stably fixing on the X, and yet the neo-W can spread with $a$ because it produces female $aa$ individuals by capturing Y-$a$ haplotypes.
 
 %When both haplotypes can spread on their own ($\lambda_{mA}>1$ and $\lambda_{ma}>1$), the neo-W invades regardless the recombination rate between it and the selected locus, $R$.
@@ -2065,6 +2065,15 @@ DEF, $\alpha_{\Delta}^\female=0.08$. $\lambda$s are increased for the haplotype 
 \label{fig:regionFemaleDrive}
 \end{figure}
 
+\begin{figure}[!h]
+\centering
+\centerline{\includegraphics[width=\linewidth]{Region_Plot_combined_FemaleDrive_Mike}}
+\caption{
+ABC, $\alpha_{\Delta}^\female=-0.08$
+DEF, $\alpha_{\Delta}^\female=0.08$. \textcolor{red}{Panel F mislabelled, should have $\lambda_{Wa}>1$ \& $\lambda_{WA}<1$ as the upper label that has the line.}
+}
+\label{fig:regionFemaleDrive}
+\end{figure}
 
 
 \newpage
