@@ -252,9 +252,9 @@ This system simplifies substantially in a number of cases of interest.
 Dominant neo-Y (when $k=0$) or neo-W alleles (when $k=1$) are only found in male diploids (neo-Y) or female diploids (neo-W) such that their growth rate ultimately depends only on the change in frequency of $m$-bearing gametes produced by males or by females, respectively. 
 Furthermore, if the $m$ allele is fully epistatically dominant over the ancestral sex-determining system, phenotypes are not affected by the genotype at the ancestral sex-determining region (\textbf{X} locus). 
 Thus, the invasion of rare dominant neo-Y or neo-W alleles is determined by the largest eigenvalue that solves a quadratic characteristic polynomial,
-\textcolor{red}{Mention the possibility that the other roots yield the leading eigenvalue somewhere.}
-\textcolor{blue}{following the logic above, it seems like we say we go from 8 eqns to 4 eqns by considering only one sex, and then from 4 eqns to 2 eqns by ignoring the ancestral SD allele. why then do we have the two quadratic problem? (b/c the $m$ alleles can arise in either sex?)}
-$\lambda^2+ b \lambda + c =0$.
+%\textcolor{red}{Mention the possibility that the other roots yield the leading eigenvalue somewhere.}
+%\textcolor{blue}{following the logic above, it seems like we say we go from 8 eqns to 4 eqns by considering only one sex, and then from 4 eqns to 2 eqns by ignoring the ancestral SD allele. why then do we have the two quadratic problem? (b/c the $m$ alleles can arise in either sex?)}
+$\lambda^2+ b \lambda + c =0$ (see Appendix for a discussion of other roots).
 %\begin{equation}
 %\lambda^2+ b \lambda + c =0
 %\label{eq:charpoly_neoY}
@@ -1732,6 +1732,7 @@ However, because a neo-Y (neo-W) is always in males (females) and is epistatical
 %It can be shown (see supplementary Mathematica file) that the coefficients are $b= - (\lambda_{mA} + \lambda_{ma})+(\chi_{mA} + \chi_{ma})$ and $c = (\lambda_{mA}-\chi_{mA}) (\lambda_{ma}-\chi_{ma}) -\chi_{mA} \chi_{ma}$, where $\lambda_{mi}$ is the multiplicative growth rate of the frequency of mutants on background $i\in\{A,a\}$, without accounting for loss due to recombination, and $\chi_{mi}$ is the rate at which mutants on background $i\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes.
 %The leading eigenvalue is then greater than one whenever $\lambda_{mA}>1$ and $\lambda_{ma}>1$, less than one whenever $\lambda_{mA}<1$ and $\lambda_{ma}<1$, and greater than one whenever  $\lambda_{mA}>1$ or $\lambda_{ma}>1$ and $\chi_{ma} (\lambda_{mA}-1) + \chi_{mA} (\lambda_{ma}-1) > 0$.
 
+
 For tight linkage between the ancestral sex-determining locus and the selected locus we can calculate each of these terms exactly, while for weak selection we take a Taylor series of the leading eigenvalue. With weak selection, the leading eigenvalue, $\lambda$, for any $k$, is given up to order $\epsilon^2$ by equation \eqref{eq:lambda_ESD_k}.
 
 \subsubsection*{Tight linkage between \textbf{A} and \textbf{X} (recombination weak relative to selection)}
@@ -2041,6 +2042,7 @@ $w_{aa}^\female=1.05$, $w_{Aa}^\Hermaphrodite=1$, $w_{AA}^\female=0.85$, $w_{aa}
 ABC, $w_{a}^\male=1.16$, $w_{A}^\male=1$.
 DEF, $w_{a}^\male=1$, $w_{A}^\male=1.16$. 
 \textcolor{red}{I thought that re-running this with $w_{a}^\male=1.16$, $w_{A}^\male=0.84$ and $w_{a}^\male=0.84$, $w_{A}^\male=1.16$ will mean that it matches exactly with the meiotic drive example. Checking for panel A, the result was qualitatively similar (e.g., region where both $\lambda$'s are greater than one in panel A, as you might expect from equation \eqref{Binvasion}, however the region where a polymorphism is stable is also altered so they don't exactly match. }
+\textcolor{blue}{trouble is selection only in heterozygotes with drive?}
 }
 \label{fig:regionMaleGS}
 \end{figure}
@@ -2050,9 +2052,21 @@ DEF, $w_{a}^\male=1$, $w_{A}^\male=1.16$.
 \centerline{\includegraphics[width=\linewidth]{Region_Plot_combined_MaleDrive_Mike}}
 \caption{
 ABC, $\alpha_{\Delta}^\male=-0.08$
-DEF, $\alpha_{\Delta}^\male=0.08$. \textcolor{red}{Panel F mislabelled, should have $\lambda_{Wa}>1$ \& $\lambda_{WA}<1$ as the upper label that has the line.}
+DEF, $\alpha_{\Delta}^\male=0.08$. 
+%\textcolor{red}{Panel F mislabelled, should have $\lambda_{Wa}>1$ \& $\lambda_{WA}<1$ as the upper label that has the line.}
 }
 \label{fig:regionMaleDrive}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\centerline{\includegraphics[width=\linewidth]{Region_Plot_combined_FemaleGS_Mike}}
+\caption{
+ABC, $w_{a}^\female=1.16$, $w_{A}^\female=1$.
+DEF, $w_{a}^\female=1$, $w_{A}^\female=1.16$. 
+%\textcolor{red}{Panel F mislabelled, should have $\lambda_{Wa}>1$ \& $\lambda_{WA}<1$ as the upper label that has the line.}
+}
+\label{fig:regionFemaleGS}
 \end{figure}
 
 \begin{figure}[!h]
@@ -2061,16 +2075,6 @@ DEF, $\alpha_{\Delta}^\male=0.08$. \textcolor{red}{Panel F mislabelled, should h
 \caption{
 ABC, $\alpha_{\Delta}^\female=-0.08$
 DEF, $\alpha_{\Delta}^\female=0.08$. $\lambda$s are increased for the haplotype that is favoured by female haploid selection, the stability conditions are also affected. 
-}
-\label{fig:regionFemaleDrive}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\centerline{\includegraphics[width=\linewidth]{Region_Plot_combined_FemaleDrive_Mike}}
-\caption{
-ABC, $\alpha_{\Delta}^\female=-0.08$
-DEF, $\alpha_{\Delta}^\female=0.08$. \textcolor{red}{Panel F mislabelled, should have $\lambda_{Wa}>1$ \& $\lambda_{WA}<1$ as the upper label that has the line.}
 }
 \label{fig:regionFemaleDrive}
 \end{figure}
