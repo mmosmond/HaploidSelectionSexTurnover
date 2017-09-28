@@ -28,6 +28,10 @@
 \usepackage{tikz}%for putting words on figures
 \usetikzlibrary{positioning}%for relative positioning
 
+%to rotate figures
+\usepackage{rotating}
+\usepackage{pdflscape}
+
 \begin{document}
 
 \title{Haploid Selection, Sex Ratio Bias, and Transitions Between Sex-Determination Systems}
@@ -2033,6 +2037,16 @@ $w_{aa}^\female=1.05$, $w_{Aa}^\Hermaphrodite=1$, $w_{AA}^\female=0.85$, $w_{aa}
 \label{fig:SexAntagTighterMaleDrive}
 \end{figure}
 
+\begin{figure}[!h]
+\centering
+\centerline{\includegraphics[width=\linewidth]{Region_Plot_combined_MaleDrive_Mike}}
+\caption{
+ABC, $\alpha_{\Delta}^\male=-0.08$
+DEF, $\alpha_{\Delta}^\male=0.08$. 
+%\textcolor{red}{Panel F mislabelled, should have $\lambda_{Wa}>1$ \& $\lambda_{WA}<1$ as the upper label that has the line.}
+}
+\label{fig:regionMaleDrive}
+\end{figure}
 
 \newpage
 \begin{figure}[!h]
@@ -2049,13 +2063,12 @@ DEF, $w_{a}^\male=1$, $w_{A}^\male=1.16$.
 
 \begin{figure}[!h]
 \centering
-\centerline{\includegraphics[width=\linewidth]{Region_Plot_combined_MaleDrive_Mike}}
+\centerline{\includegraphics[width=\linewidth]{Region_Plot_combined_FemaleDrive_Mike}}
 \caption{
-ABC, $\alpha_{\Delta}^\male=-0.08$
-DEF, $\alpha_{\Delta}^\male=0.08$. 
-%\textcolor{red}{Panel F mislabelled, should have $\lambda_{Wa}>1$ \& $\lambda_{WA}<1$ as the upper label that has the line.}
+ABC, $\alpha_{\Delta}^\female=-0.08$
+DEF, $\alpha_{\Delta}^\female=0.08$. $\lambda$s are increased for the haplotype that is favoured by female haploid selection, the stability conditions are also affected. 
 }
-\label{fig:regionMaleDrive}
+\label{fig:regionFemaleDrive}
 \end{figure}
 
 \begin{figure}[!h]
@@ -2069,24 +2082,25 @@ DEF, $w_{a}^\female=1$, $w_{A}^\female=1.16$.
 \label{fig:regionFemaleGS}
 \end{figure}
 
+\begin{landscape}
 \begin{figure}[!h]
 \centering
-\centerline{\includegraphics[width=\linewidth]{Region_Plot_combined_FemaleDrive_Mike}}
-\caption{
-ABC, $\alpha_{\Delta}^\female=-0.08$
-DEF, $\alpha_{\Delta}^\female=0.08$. $\lambda$s are increased for the haplotype that is favoured by female haploid selection, the stability conditions are also affected. 
+\centerline{
+\includegraphics[width=\linewidth]{All_plot_combined_PloidAntag_Matt}
 }
-\label{fig:regionFemaleDrive}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\centerline{\includegraphics[width=0.35\linewidth]{Region_plot_combined_PloidAntag_Matt}}
 \caption{
-$h=0.75$
+A-D show when each of the neo-W haplotypes invade an internally stable equilibrium with $a$ fixed on the Y (found by setting $r=0$).
+The y-axis shows directional selection in diploids of both sexes, $s^\female=s^\male$, and the x-axes show sex-specific drive, $\alpha_\Delta^\Hermaphrodite$, or haploid competition, $t^\Hermaphrodite$.
+The top left and bottom right quadrants therefore imply ploidally-antagonistic selection (and these are the only places where.
+Dominance is equal in both sexes, $h^\female=s^\male=3/4$. 
+E-F show the temporal dynamics of neo-W frequency with parameters given by the asterisks in the corresponding A-D plot, with $r=1/200$, for four different $R$.
+Black $R=1/1000$, Red $R=2/100$, Blue $R=1/10$, Green $R=1/2$.  
+Dashed line in E-H gives ``fixation" of neo-W.
+\textcolor{blue}{here and elsewhere, we may want to switch to plotting freq of neo-W in females, so that we can see if the difference from 0.5 is due to biased sex ratios or polymorphic SD}
 }
 \label{fig:regionPloidAntag}
 \end{figure}
+\end{landscape}
 
 \newpage
 \textcolor{red}{
@@ -2098,7 +2112,7 @@ Matt made a figure like this before but both Y$a$ and Y$A$ equilibria were plott
 Add an asterisk to each region plot and show invasion in another panel, using those parameters and various $R$ (e.g., in the stye of \ref{fig:temporalOverdominance}). 
 In an email, Sally has an example of ploidally-antagonistic selection where the neo-W fixes and $R=1/2$. This would cover that case and more. }
 \textcolor{blue}{
-did the region plots (Figure \ref{fig:regionPloidAntag}), yet to add the temporal dynamics
+made an attempt (Figure \ref{fig:regionPloidAntag})
 }
 
 \textcolor{red}{
@@ -2106,7 +2120,7 @@ We could also give versions of Figure \ref{fig:regionplots} where there is also 
 Haploid selection can favour $A$ or $a$, so this would involve 4x 6-panel figures. Started looking at this in Figure \ref{fig:regionMaleGS} and Figure \ref{fig:regionMaleDrive}, add female haploid selection. 
 Try to integrate into the discussion of haploid selection? e.g., male haploid selection ones generally show effect of sex ratio, increasing both lambdas when female biased (top rows).}
 \textcolor{blue}{
-these figures are now done (ensuring frequencies between 0 and 1), but yet to discuss in text.}
+these figures are now done (\ref{fig:regionMaleDrive}-\ref{fig:regionFemaleGS}) (ensuring frequencies between 0 and 1), but yet to discuss in text.}
 
 \textcolor{red}{
 Perhaps, for one set of parameters, we should plot the dynamics of all the different alleles. E.g., we could use the same parameters used in \ref{fig:SexRatioBad}. The main purpose would be to show what happens to the ancestral SDR during turnover. 
