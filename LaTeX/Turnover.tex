@@ -661,11 +661,11 @@ In fact, where $R<1/2$ the neo-Y becomes associated with the male meiotic drive 
 \includegraphics[width=\linewidth]{Temporal_SR_Mike}
 \caption{
 Fisherian sex-ratio selection alone is not a good predictor of turnover between sex-determining systems.
-In this figure, selection is ploidally antagonistic with haploid selection favouring the $a$ allele during male meiosis ($s^\female =s^\male = 0.2$, $h^\female = h^\male = 0.7$, $t^\female = t^\male = \alpha^\male_\Delta = 0$).
+In this figure, selection is ploidally antagonistic with haploid selection favouring the $a$ allele during male meiosis.
 In panel A, male drive in an ancestral ZW system has no affect on the zygotic sex ratio, yet a neo-Y can invade and replace the ancestral sex-determination system (inset shows neo-Y frequency among male gametes, the ancestral W also goes to fixation during this transition). 
 When $R<1/2$, the neo-Y becomes associated with the allele favoured by drive, causing the zygotic sex ratio to become biased, hence the frequency of neo-Y among male gametes can be higher than $0.5$ (inset).
 In panel B, male drive in an ancestral XY system causes a male bias, allowing a neo-W to invade and replace the ancestral sex-determination system (inset shows neo-W frequency among female gametes, the ancestral Y also goes to fixation), which balances the zygotic sex ratio.
-Parameters:  $s^\female =s^\male = 0.2$, $h^\female = h^\male = 0.7$, $t^\female = t^\male = \alpha^\male_\Delta = 0$, $\alpha^\male_\Delta = -0.2$, $r=0.02$.
+Parameters:  $s^\female =s^\male = 0.2$, $h^\female = h^\male = 0.7$, $t^\female = t^\male = \alpha^\female_\Delta = 0$, $\alpha^\male_\Delta = -0.1$, $r=0.02$.
 }
 \label{fig:SexRatioBad}
 \end{figure}
@@ -1430,7 +1430,7 @@ During meiosis in sex $\Hermaphrodite$, meiotic drive occurs such that, in $Aa$ 
 \begin{table}[ht]
 \centering
 \smallskip
-\caption{Values of $\rho$ for different loci orders assuming no interference and $r,R\in(0,1/2)$.}
+\caption{Values of $\rho$ for different loci orders assuming no interference and $r,R\in(0,1/2)$.\textcolor{blue}{write all in form of first line? so that 1/2 cases are okay (can't determine chi if R is 1/2 in second line, or if r is 1/2 in third line}}
 \begin{tabular}{l l}
 \hline\hline
   Order of loci &   \\ [0.5ex] \hline
@@ -2030,9 +2030,9 @@ Here, there is no haploid selection $t^\Hermaphrodite = \alpha^\Hermaphrodite_\D
 When there is haploid selection and sexually-antagonistic selection, a neo-W may invade for any $R$.
 \textcolor{red}{
 Check that we mention Sally's result that invasion cannot occur with sexually-antagonistic selection and $R=1/2$ (currently only in legend for figure \ref{fig:SexAntagTighter}) 
-Add asterisk to Figure \ref{fig:regionMaleDrive}B to show parameters used in this plot. 
+Add asterisk to Figure \ref{fig:regionMaleDrive}A to show parameters used in this plot. 
 }
-$w_{aa}^\female=1.05$, $w_{Aa}^\Hermaphrodite=1$, $w_{AA}^\female=0.85$, $w_{aa}^\male=0.85$, $w_{AA}^\female=1.05$, $\alpha_{\Delta}^\male=-0.08$.
+$w_{AA}^\female=1.05$, $w_{Aa}^\Hermaphrodite=1$, $w_{aa}^\female=0.85$, $w_{AA}^\male=0.85$, $w_{aa}^\male=1.05$, $\alpha_{\Delta}^\male=-0.08$.
 }
 \label{fig:SexAntagTighterMaleDrive}
 \end{figure}
@@ -2092,19 +2092,51 @@ DEF, $w_{a}^\female=1$, $w_{A}^\female=1.16$.
 A-D show when each of the neo-W haplotypes invade an internally stable equilibrium with $a$ fixed on the Y (found by setting $r=0$).
 The y-axis shows directional selection in diploids of both sexes, $s^\female=s^\male$, and the x-axes show sex-specific drive, $\alpha_\Delta^\Hermaphrodite$, or haploid competition, $t^\Hermaphrodite$.
 The top left and bottom right quadrants therefore imply ploidally-antagonistic selection (and these are the only places where.
-Dominance is equal in both sexes, $h^\female=s^\male=3/4$. 
-E-F show the temporal dynamics of neo-W frequency with parameters given by the asterisks in the corresponding A-D plot, with $r=1/200$, for four different $R$.
+Dominance is equal in both sexes, $h^\female=h^\male=3/4$. 
+E-F show the temporal dynamics of neo-W frequency in females with parameters given by the asterisks in the corresponding A-D plot, with $r=1/200$, for four different $R$.
 Black $R=1/1000$, Red $R=2/100$, Blue $R=1/10$, Green $R=1/2$.  
-Dashed line in E-H gives ``fixation" of neo-W.
-\textcolor{blue}{here and elsewhere, we may want to switch to plotting freq of neo-W in females, so that we can see if the difference from 0.5 is due to biased sex ratios or polymorphic SD}
+Dashed line in E-H gives ``fixation" of neo-W (all females heterozygous ZW).
 }
 \label{fig:regionPloidAntag}
 \end{figure}
 \end{landscape}
 
+\begin{landscape}
+\begin{figure}[!h]
+\centering
+\centerline{
+\includegraphics[width=\linewidth]{Freq_plot_combined_PloidAntag_Matt}
+}
+\caption{
+Dynamics of all sex-determining alleles in each sex (males dashed).
+Red is neo-W, Blue is Y, Black is $A$.
+Panel A has the same parameters as the green curve in Figure \ref{fig:SexRatioBad}B (ploidy-antagonism with male drive).
+Panel B has the same parameters as the green curve in Figure \ref{fig:temporalOverdominance}C (overdominance in both sexes).
+Panel C has the same parameters as the green curve in Figure \ref{fig:regionMaleDrive}C (sexual-antagonism with male drive).
+Panel D has the same parameters as the red curve in Figure \ref{fig:regionPloidAntag}F, except $r=0$ (ploidy-antagonism with pollen competition)
+Panel A shows complete sex-determination turnover (XY $\rightarrow$ ZW) whereas panels B-D show the evolution of polymorphic sex-determining systems (X and Y still segregating and the neo-W has a frequency in females that is less than 1/2).
+All begin from equilibrium that would have $a$ fixed on the Y if $r=0$.
+All maintain a polymorphism at $\mathbf{A}$ locus.
+}
+\label{fig:freqAll}
+\end{figure}
+\end{landscape}
+
+\begin{figure}[!h]
+\centering
+\centerline{
+\includegraphics[width=\linewidth]{Sallys_R_plot.pdf}
+}
+\caption{
+\textcolor{blue}{is this the one?}
+}
+\label{fig:lambda_R}
+\end{figure}
+
 \newpage
 \textcolor{red}{
 Add Sally's figure showing lambda for small r near equil A versus near equil B. Add references to this figure to appendix where we discuss whether lambdas can be greater than 1 with sexually antagonistic selection.}
+\textcolor{blue}{not sure which one you are talking about, but see Figure \ref{fig:lambda_R} }
 
 \textcolor{red}{
 Perhaps it would also be useful to add an 8 panel figure that features ploidally antagonistic selection. For each type of haploid selection (gametic competition/ meiotic drive in males/females), give a regionplot where $h^\male=h^\female$, e.g., $h^\male=h^\female=0.75$ (or perhaps the value of $h$ we use in the regionplots we have, in which $w_{aa}=0.85$, $w_{Aa}=1$, $w_{AA}=1.05$). 
@@ -2127,6 +2159,7 @@ Perhaps, for one set of parameters, we should plot the dynamics of all the diffe
 We could also show an example where XY and ZW sex determining systems are both polymorphic and stable (e.g., using one of the curves in Figure \ref{fig:temporalOverdominance} and the green curve in Figure \ref{fig:SexAntagTighterMaleDrive}). 
 I think there are also examples with looser sex linkage and pollen competition that lead to a mixed sex-determination system. We should probably have a short section in the appendix discussing this. 
 }
+\textcolor{blue}{made an attempt with Figure \ref{fig:freqAll}, but yet to discuss in text}
 
 
 \end{document}
