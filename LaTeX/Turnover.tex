@@ -324,8 +324,11 @@ We will consider only equilibrium frequencies of alleles, $\hat{p}^\Hermaphrodit
 %\end{equation}
 
 We are particularly concerned with the conditions under which a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, is greater than one. 
-If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur, i.e., if $(\lambda_{mA} + \lambda_{ma})/2 > 1$ then $\lambda > 1$. 
-If neither haplotype increases in frequency ($\lambda_{mA}, \lambda_{ma} < 1$), the $m$ allele will not invade. 
+%If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur, i.e., if $(\lambda_{mA} + \lambda_{ma})/2 > 1$ then $\lambda > 1$. 
+Given the characteristic polynomial and the Perron-Forbenius theorem, at least one $\lambda$ is greater than one when $b<2$ (see supplementary material for details), or  $(\lambda_{mA} - \chi_{mA})/2 + (\lambda_{ma} -  \chi_{ma})/2 > 1$.
+In words, the neo-sex-determining allele will certainly spread when the average change in its frequency, considering that recombination breaks up mutant haplotypes but ignoring the fact that recombination also creates mutant haplotypes, is positive.
+We are also guaranteed to have at least one $\lambda$ greater than one when 1 + b + c < 0.
+This is never true if $\lambda_{mA} < 1$ and $\lambda_{ma} < 1$, i.e., if neither haplotype increases in frequency the neo-sex-determining allele will not invade. 
 Otherwise, the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires 
 \begin{equation}\label{eq:lambdasGen}
 %\frac{\chi_{mA}}{\lambda_{mA}-1}+\frac{\chi_{ma}}{\lambda_{ma}-1}>0.
