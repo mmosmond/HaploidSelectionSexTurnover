@@ -325,18 +325,19 @@ We will consider only equilibrium frequencies of alleles, $\hat{p}^\Hermaphrodit
 
 We are particularly concerned with the conditions under which a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue, $\lambda$, is greater than one. 
 %If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur, i.e., if $(\lambda_{mA} + \lambda_{ma})/2 > 1$ then $\lambda > 1$. 
-Given the characteristic polynomial and the Perron-Forbenius theorem (see supplementary material for details), at least one $\lambda$ is greater than one when $2 + b < 0$, or  $(\lambda_{mA} - \chi_{mA}) + (\lambda_{ma} -  \chi_{ma}) > 2$.
-In words, the neo-sex-determining allele will certainly spread when the average change in its frequency, taking into account that recombination breaks up mutant $mi$ haplotypes (at rate $\chi_{mi}$) but ignoring the fact that recombination also creates mutant haplotypes, is positive.
-We are also guaranteed to have at least one $\lambda$ greater than one when 1 + b + c < 0.
-This is never true if neither haplotype can spread ($\lambda_{mA}, \lambda_{ma} < 1$). 
+Given the characteristic polynomial and the Perron-Forbenius theorem (see supplementary material for details), at least one $\lambda$ is greater than one when $2 + b < 0$ or $1 + b + c < 0$.
+% $(\lambda_{mA} - \chi_{mA}) + (\lambda_{ma} -  \chi_{ma}) > 2$.
+%In words, the neo-sex-determining allele will certainly spread when the average change in its frequency, taking into account that recombination breaks up mutant $mi$ haplotypes (at rate $\chi_{mi}$) but ignoring the fact that recombination also creates mutant haplotypes, is positive.
+%When this does not hold ($2+b>0$), we can still have one $\lambda$ greater than one when 1 + b + c < 0.
+At least one of these conditions is true if both haplotypes can spread ($\lambda_{mA}, \lambda_{ma} > 1$) and neither can be true if neither haplotype can spread ($\lambda_{mA}, \lambda_{ma} < 1$). 
 %If both haplotypes can spread ($\lambda_{mA}, \lambda_{ma} > 1$), this condition becomes $\chi_{mA}/(\lambda_{mA} - 1) + \chi_{ma}/(\lambda_{ma} -  1) > 1$.
 If only one haplotype can spread then the new sex-determining allele increases in frequency on one \textbf{A} background and declines on the other, and invasion requires 
 \begin{equation}\label{eq:lambdasGen}
 %\frac{\chi_{mA}}{\lambda_{mA}-1}+\frac{\chi_{ma}}{\lambda_{ma}-1}>0.
-\chi_{ma}/\left(\lambda_{ma}-1\right)+\chi_{mA}/\left(\lambda_{mA}-1\right)<1.
+\chi_{ma}/\left(\lambda_{ma}-1\right) + \chi_{mA}/\left(\lambda_{mA}-1\right) < 1.
 \end{equation}
 \noindent For example, if we assume that only the $mA$ haplotype has a positive growth rate ($\lambda_{ma}<1<\lambda_{mA}$), the first term on the left-hand side of \eqref{eq:lambdasGen} is negative and invasion requires that the growth rate of $mA$ haplotypes ($\lambda_{mA}-1$) and the rate at which they are produced by recombination in $ma$ haplotypes ($\chi_{ma}$) are sufficiently large relative to the growth rate and recombination gain of $ma$ haplotypes.
-\textcolor{blue}{i've updated this section with the correct $\lambda$ and $\chi$ terms. still a bit funny that not guaranteed invasion when both lambdas greater than one, and when both are greater than one then the condition above, (1), has the inequality flipped, which makes no sense (no invasion if no recombination despite both haplotypes growing). perhaps i made a mistake somewhere? see turnoverhomhet.nb}
+%\textcolor{blue}{i've updated this section with the correct $\lambda$ and $\chi$ terms. still a bit funny that not guaranteed invasion when both lambdas greater than one, and when both are greater than one then the condition above, (1), has the inequality flipped, which makes no sense (no invasion if no recombination despite both haplotypes growing). perhaps i made a mistake somewhere? see turnoverhomhet.nb}
 %In other words, invasion requires that the average growth rate of the two haplotypes, weighted by the rates they are created by recombination, is positive.
 %the number of recombinants from the fitter $mA$ haplotypes is larger than that of the less fit $ma$ haplotypes, relative to their growth rates. 
 
