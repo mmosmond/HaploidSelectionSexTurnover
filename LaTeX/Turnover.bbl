@@ -1,5 +1,13 @@
-\begin{thebibliography}{72}
+\begin{thebibliography}{82}
 \providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Alavioon et~al.(2017)Alavioon, Hotzy, Nakhro, Rudolf, Scofield,
+  Zajitschek, Maklakov, and Immler}]{Alavioon2017}
+Alavioon, G., C.~Hotzy, K.~Nakhro, S.~Rudolf, D.~G. Scofield, S.~Zajitschek,
+  A.~A. Maklakov, and S.~Immler. 2017.
+\newblock {Haploid selection within a single ejaculate increases offspring
+  fitness}.
+\newblock PNAS 114:8053--8058.
 
 \bibitem[{Arunkumar et~al.(2013)Arunkumar, Josephs, Williamson, and
   Wright}]{Arunkumar:2013iq}
@@ -107,10 +115,20 @@ Fisher, R. 1930.
 \newblock {The genetical theory of natural selection}.
 \newblock Clarendon Press, London.
 
-\bibitem[{Frank(1989)}]{Frank:1989vl}
-Frank, S.~A. 1989.
-\newblock {The Evolutionary Dynamics of Cytoplasmic Male Sterility}.
-\newblock American Naturalist 133:345--376.
+\bibitem[{Gamble et~al.(2017)Gamble, Castoe, Nielse, Banks, Card, Schield,
+  Schuett, and Booth}]{Gamble2017}
+Gamble, T., T.~A. Castoe, S.~V. Nielse, J.~L. Banks, D.~C. Card, D.~R. Schield,
+  G.~W. Schuett, and W.~Booth. 2017.
+\newblock {The discovery of XY sex chromosomes in a \textit{Boa} and
+  \textit{Python}}.
+\newblock Current Biology 27:2148--2152.
+
+\bibitem[{Goldberg et~al.(2017)Goldberg, Otto, Vamosi, Mayrose, Sabath, and
+  Ming}]{Goldberg2017}
+Goldberg, E.~E., S.~P. Otto, J.~C. Vamosi, I.~Mayrose, N.~Sabath, and R.~Ming.
+  2017.
+\newblock {Macroevolutionary synthesis of flowering plant sexual systems}.
+\newblock Evolution 71:898--912.
 
 \bibitem[{Gossmann et~al.(2014)Gossmann, Schmid, Grossniklaus, and
   Schmid}]{Gossmann:2014dua}
@@ -160,11 +178,6 @@ Hormaza, J.~I., and M.~Herrero. 1996.
 \newblock {Male gametophytic selection as a plant breeding tool}.
 \newblock Scientia horticulturae 65:321--333.
 
-\bibitem[{Hough et~al.(2013)Hough, Immler, Barrett, and Otto}]{Hough:2013uo}
-Hough, J., S.~Immler, S.~Barrett, and S.~P. Otto. 2013.
-\newblock {Evolutionarily stable sex ratios and mutation load}.
-\newblock Evolution 7:1915--1925.
-
 \bibitem[{Hurst and Pomiankowski(1991)}]{Hurst:1991uh}
 Hurst, L.~D., and A.~Pomiankowski. 1991.
 \newblock {Causes of sex ratio bias may account for unisexual sterility in
@@ -184,16 +197,27 @@ Immler, S., C.~Hotzy, G.~Alavioon, E.~Petersson, and G.~Arnqvist. 2014.
   development in Atlantic salmon}.
 \newblock Biology letters 10:20131040.
 
-\bibitem[{Jordan and Charlesworth(2011)}]{Jordan:2011fj}
-Jordan, C.~Y., and D.~Charlesworth. 2011.
-\newblock {The potential for sexually antagonistic polymorphism in different
-  genome regions}.
-\newblock Evolution 66:505--516.
-
 \bibitem[{Joseph and Kirkpatrick(2004)}]{JOSEPH:2004haa}
 Joseph, S., and M.~Kirkpatrick. 2004.
 \newblock {Haploid selection in animals}.
 \newblock Trends in Ecology {\&} Evolution 19:592--597.
+
+\bibitem[{K{\"a}fer et~al.(2017)K{\"a}fer, Marais, and Pannell}]{Kafer2017}
+K{\"a}fer, J., G.~A.~B. Marais, and J.~Pannell. 2017.
+\newblock {On the rarity of dioecy in flowering plants}.
+\newblock Molecular Ecology 26:1225--1241.
+
+\bibitem[{Kallman(1965)}]{Kallman1965}
+Kallman, K. 1965.
+\newblock {Genetics and Geography of Sex Determination in the Poeciliid Fish,
+  \textit{Xiphphorus maculatus}}.
+\newblock Zoologica 50:151--190.
+
+\bibitem[{Kallman(1968)}]{Kallman1968}
+---{}---{}---. 1968.
+\newblock {Evidence for the existence of transformer genes for sex in the
+  telost \textit{Xiphphorus maculatus}}.
+\newblock Genetics 60:811--828.
 
 \bibitem[{Karlin and McGregor(1972{\natexlab{\emph{a}}})}]{Karlin:1972ab}
 Karlin, S., and J.~McGregor. 1972{\natexlab{\emph{a}}}.
@@ -214,11 +238,11 @@ Kozielska, M., F.~J. Weissing, L.~W. Beukeboom, and I.~Pen. 2010.
   mechanisms}.
 \newblock Heredity 104:100--112.
 
-\bibitem[{Lenormand and Dutheil(2005)}]{Lenormand:2005vb}
-Lenormand, T., and J.~Dutheil. 2005.
-\newblock {Recombination difference between sexes: a role for haploid
-  selection}.
-\newblock PLoS Biol 3:e63.
+\bibitem[{Lee et~al.(2004)Lee, Hulata, and Kocher}]{Lee2004}
+Lee, B.~Y., G.~Hulata, and T.~D. Kocher. 2004.
+\newblock {Two unlinked loci controlling the sex of blue tilapia
+  (\textit{Oreochromis aureus})}.
+\newblock Heredity 92:543--549.
 
 \bibitem[{Li et~al.(2011)Li, Phillips, Harwood, Koop, and Davidson}]{Li:2011fm}
 Li, J., R.~B. Phillips, A.~S. Harwood, B.~F. Koop, and W.~S. Davidson. 2011.
@@ -226,6 +250,13 @@ Li, J., R.~B. Phillips, A.~S. Harwood, B.~F. Koop, and W.~S. Davidson. 2011.
   trutta)} and Their Comparison with the Corresponding Chromosomes in Atlantic
   Salmon \emph{(Salmo salar)} and Rainbow Trout \emph{(Oncorhynchus mykiss)}}.
 \newblock Cytogenetic and Genome Research 133:25--33.
+
+\bibitem[{Liew et~al.(2012)Liew, Bartfai, Lim, Sreeninvasan, Siegfried, and
+  Orban}]{Liew2012}
+Liew, W.~C., R.~Bartfai, Z.~Lim, R.~Sreeninvasan, K.~R. Siegfried, and
+  L.~Orban. 2012.
+\newblock {Polygenic sex determination system in Zebrafish}.
+\newblock Plos One 4:e34397.
 
 \bibitem[{Lindholm and Breden(2002)}]{Lindholm:2002dw}
 Lindholm, A., and F.~Breden. 2002.
@@ -268,10 +299,23 @@ Marais, G. A.~B., M.~Nicolas, R.~Bergero, P.~Chambrier, E.~Kejnovsky,
   \emph{Silene latifolia}}.
 \newblock Current Biology 18:545--549.
 
+\bibitem[{McDonald et~al.(1978)McDonald, Evenson, Nickel, and
+  Johnson}]{Macdonald1978}
+McDonald, I.~C., P.~Evenson, C.~A. Nickel, and O.~A. Johnson. 1978.
+\newblock {House fly genetics: isolation of a female determining factor on
+  chromosome 4}.
+\newblock Annals of the Entomological Society of America 71:692--694.
+
 \bibitem[{Ming et~al.(2011)Ming, Bendahmane, and Renner}]{Ming:2011iy}
 Ming, R., A.~Bendahmane, and S.~S. Renner. 2011.
 \newblock {Sex chromosomes in land plants}.
 \newblock Annu. Rev. Plant Biol. 62:485--514.
+
+\bibitem[{Miura(2007)}]{Miura2007}
+Miura, I. 2007.
+\newblock {An evolutionary witness: the frog \textit{Rana rugosa} underwent
+  change fo heterogametic sex from XY male to ZW female}.
+\newblock Sexual Development 1:323--331.
 
 \bibitem[{Mulcahy et~al.(1996)Mulcahy, Sari-Gorla, and
   Mulcahy}]{Mulcahy:1996ha}
@@ -299,11 +343,6 @@ Otto, S.~P. 2014.
 \newblock {Selective maintenance of recombination between the sex chromosomes}.
 \newblock Journal of Evolutionary Biology 27:1431--1442.
 
-\bibitem[{Otto et~al.(2015)Otto, Scott, and Immler}]{Otto:2015va}
-Otto, S.~P., M.~F. Scott, and S.~Immler. 2015.
-\newblock {Evolution of haploid selection in predominantly diploid organisms}.
-\newblock Proc Natl Acad Sci 112:15952--15957.
-
 \bibitem[{Pen et~al.(2010)Pen, Uller, Feldmeyer, Harts, While, and
   Wapstra}]{Pen:2010kk}
 Pen, I., T.~Uller, B.~Feldmeyer, A.~Harts, G.~M. While, and E.~Wapstra. 2010.
@@ -316,6 +355,20 @@ Pokorn{\'a}, M., and L.~Kratochv{\'\i}l. 2009.
   sex chromosomes an evolutionary trap?}
 \newblock Zoological Journal of the {\ldots} 156:168--183.
 
+\bibitem[{Pucholt et~al.(2015)Pucholt, R{\"o}nnberg-W{\"a}stljung, and
+  Berlin}]{Pucholt2015}
+Pucholt, P., A.~C. R{\"o}nnberg-W{\"a}stljung, and S.~Berlin. 2015.
+\newblock {Single locus sex determination and female heterogamety in the baskey
+  willow (\textit{Salix viminalis} L.)}.
+\newblock Heredity 114:575--583.
+
+\bibitem[{Pucholt et~al.(2017)Pucholt, Wright, Conze, Mank, and
+  Berlin}]{Pucholt2017}
+Pucholt, P., A.~Wright, L.~L. Conze, J.~E. Mank, and S.~Berlin. 2017.
+\newblock {Recent sex chromosome divergence despite ancient dioecy in the
+  willow \textit{Salix viminalis}}.
+\newblock Molecular Biology and Evolution 34:1991--2001.
+
 \bibitem[{Ravikumar et~al.(2003)Ravikumar, Patil, and
   Salimath}]{Ravikumar:2003uo}
 Ravikumar, R.~L., B.~S. Patil, and P.~M. Salimath. 2003.
@@ -323,17 +376,22 @@ Ravikumar, R.~L., B.~S. Patil, and P.~M. Salimath. 2003.
   stress}.
 \newblock Euphytica 133:371--376.
 
-\bibitem[{Rice(1987)}]{Rice:1987hs}
-Rice, W.~R. 1987.
-\newblock {The accumulation of sexually antagonistic genes as a selective agent
-  promoting the evolution of reduced recombination between primitive sex
-  chromosomes}.
-\newblock Evolution 41:911.
-
 \bibitem[{Rice(1996)}]{Rice:1996ke}
----{}---{}---. 1996.
+Rice, W.~R. 1996.
 \newblock {Evolution of the Y Sex Chromosome in Animals}.
 \newblock BioScience 46:331--343.
+
+\bibitem[{Schulteis et~al.(2006)Schulteis, Zhou, Froschauer, Nanda, Selz,
+  Schmidt, Matschl, Wenning, Veith, Naciri, Hanel, Braasch, Dettai, B{\"o}hne,
+  Ozouf-Costaz, Chilmonczyk, S{\'e}gurens, Couloux, Bernard-Samain, Schmid, M,
+  and Volff}]{Schultheis2006}
+Schulteis, C., Q.~Zhou, A.~Froschauer, I.~Nanda, Y.~Selz, C.~Schmidt,
+  S.~Matschl, M.~Wenning, A.~M. Veith, M.~Naciri, R.~Hanel, I.~Braasch,
+  A.~Dettai, A.~B{\"o}hne, C.~Ozouf-Costaz, S.~Chilmonczyk, B.~S{\'e}gurens,
+  A.~Couloux, S.~Bernard-Samain, M.~Schmid, S.~M, and J.~N. Volff. 2006.
+\newblock {Molecular analysis of the sex-determining region of the platyfish
+  \textit{Xiphophorus maculatus}}.
+\newblock Zebrafish 3:299--309.
 
 \bibitem[{Ser et~al.(2010)Ser, Roberts, and Kocher}]{Ser:2010iq}
 Ser, J.~R., R.~B. Roberts, and T.~D. Kocher. 2010.
@@ -350,18 +408,6 @@ Slancarova, V., J.~Zdanska, B.~Janousek, M.~Talianova, C.~Zschach, J.~Zluvova,
 \newblock {Evolution of sex determination systems with heterogametic males and
   females in \emph{Silene}}.
 \newblock Evolution 67:3669--3677.
-
-\bibitem[{Smith(1975)}]{Smith:1975ft}
-Smith, D. A.~S. 1975.
-\newblock {All-female broods in the polymorphic butterfly Danaus chrysippus L.
-  and their ecological significance}.
-\newblock Heredity 34:363--371.
-
-\bibitem[{Stalker(1961)}]{Stalker:1961th}
-Stalker, H.~D. 1961.
-\newblock {The Genetic Systems Modifying Meiotic Drive in Drosophila
-  Paramelanica}.
-\newblock Genetics 46:177--202.
 
 \bibitem[{Stehlik and Barrett(2005)}]{Stehlik:2005ul}
 Stehlik, I., and S.~Barrett. 2005.
@@ -381,6 +427,12 @@ Taylor, J.~E., and J.~Jaenike. 2002.
   and extinction.}
 \newblock Genetics 160:1721--1731.
 
+\bibitem[{Thompson(1971)}]{Thompson1971}
+Thompson, P.~E. 1971.
+\newblock {Male and female heterogamety in population of \textit{Chironomus
+  tentans} (Diptera: Chironomidae)}.
+\newblock The Canadian Entomologist 103:369--372.
+
 \bibitem[{Tripathi et~al.(2009)Tripathi, Hoffmann, Willing, Lanz, Weigel, and
   Dreyer}]{Tripathi:2009cw}
 Tripathi, N., M.~Hoffmann, E.-M. Willing, C.~Lanz, D.~Weigel, and C.~Dreyer.
@@ -399,6 +451,12 @@ Tripathi, N., M.~Hoffmann, E.-M. Willing, C.~Lanz, D.~Weigel, and C.~Dreyer.
 \newblock {On the origin of sex chromosomes from meiotic drive.}
 \newblock Proceedings of the Royal Society B: Biological Sciences 282:20141932.
 
+\bibitem[{van Doorn(2014)}]{vanDoorn2014re}
+van Doorn, G.~S. 2014.
+\newblock {Patterns and mechanisms of evolutionary tranistions between genetic
+  sex-determining systems}.
+\newblock Cold Spring Harbour Perspectives in Biology 6:a017681.
+
 \bibitem[{van Doorn and Kirkpatrick(2007)}]{vanDoorn:2007eu}
 van Doorn, G.~S., and M.~Kirkpatrick. 2007.
 \newblock {Turnover of sex chromosomes induced by sexual conflict.}
@@ -409,6 +467,13 @@ van Doorn, G.~S., and M.~Kirkpatrick. 2007.
 \newblock {Transitions Between Male and Female Heterogamety Caused by
   Sex-Antagonistic Selection}.
 \newblock Genetics 186:629--645.
+
+\bibitem[{Vandeputte et~al.(2007)Vandeputte, Dupont-Nivet, Chavanne, and
+  Chatain}]{Vandeputte2007}
+Vandeputte, M., M.~Dupont-Nivet, H.~Chavanne, and B.~Chatain. 2007.
+\newblock {A polygenic hypothesis for sex determination in the European sea
+  bass \textit{Dicentrarchus labrax}}.
+\newblock Genetics 176:1049--1057.
 
 \bibitem[{Vibranovski et~al.(2010)Vibranovski, Chalopin, Lopes, Long, and
   Karr}]{Vibranovski:2010et}
@@ -422,10 +487,24 @@ Vicoso, B., and D.~Bachtrog. 2015.
 \newblock {Numerous transitions of sex chromosomes in Diptera.}
 \newblock PLoS Biol 13:e1002078.
 
+\bibitem[{Volff and Schartl(2001)}]{Volff2001}
+Volff, J.~N., and M.~Schartl. 2001.
+\newblock {Variability of genetic sex determination in poeciliid fishes}.
+\newblock Genetica 111:101--110.
+
 \bibitem[{West(2009)}]{West:2009we}
 West, S. 2009.
 \newblock {Sex allocation}.
 \newblock Princeton University Pres.
+
+\bibitem[{Wilson et~al.(2014)Wilson, High, McCluskey, Amores, Yan, Titus,
+  Anderson, Batzel, Carva, Schartl, and Postlethwait}]{Wilson2014}
+Wilson, C.~A., S.~K. High, B.~M. McCluskey, A.~Amores, Y.~Yan, T.~A. Titus,
+  J.~L. Anderson, P.~Batzel, M.~J. Carva, M.~Schartl, and J.~H. Postlethwait.
+  2014.
+\newblock {Wild sex in Zebrafish: loss of the natural sex determinant in
+  domesticated strains}.
+\newblock Genetics 198:1291--1308.
 
 \bibitem[{Yano et~al.(2012)Yano, Nicol, Jouanno, Quillet, Fostier, Guyomard,
   and Guiguen}]{Yano:2012di}
