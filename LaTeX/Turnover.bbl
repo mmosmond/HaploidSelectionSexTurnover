@@ -1,4 +1,4 @@
-\begin{thebibliography}{82}
+\begin{thebibliography}{88}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alavioon et~al.(2017)Alavioon, Hotzy, Nakhro, Rudolf, Scofield,
@@ -92,6 +92,45 @@ Conover, D.~O., and S.~W. Heins. 1987.
   a fish}.
 \newblock Nature 326:496--498.
 
+\bibitem[{Didion et~al.(2015)Didion, Morgan, Clayschulte, Mcmullon, Yadgary,
+  Petkov, Bell, Gatti, Crowley, Hua, Aylor, Bai, Calaway, Chelser, French,
+  Geiger, Gooch, Garland~Jr, Harrill, Hunter, McMillan, Holt, Miller, O'Brien,
+  Paigen, Pan, Rowe, Shaw, Simecek, Sullivan, Svenson, Weinstock, Threadgil,
+  Pomp, Churchill, and Pardo-Manuel~de Villena}]{Didion2015}
+Didion, J.~P., A.~P. Morgan, A.~M.~F. Clayschulte, R.~C. Mcmullon, L.~Yadgary,
+  P.~M. Petkov, T.~A. Bell, D.~M. Gatti, J.~J. Crowley, K.~Hua, D.~L. Aylor,
+  L.~Bai, M.~Calaway, E.~L. Chelser, J.~E. French, T.~R. Geiger, T.~J. Gooch,
+  T.~Garland~Jr, A.~H. Harrill, K.~Hunter, L.~McMillan, M.~Holt, D.~R. Miller,
+  D.~A. O'Brien, K.~Paigen, W.~Pan, L.~B. Rowe, G.~D. Shaw, P.~Simecek, P.~F.
+  Sullivan, K.~L. Svenson, G.~M. Weinstock, D.~W. Threadgil, D.~Pomp, G.~A.
+  Churchill, and F.~Pardo-Manuel~de Villena. 2015.
+\newblock {A multi-megabase copy number gain causes maternal transmission ratio
+  distortion on mouse chromosome 2}.
+\newblock PLoS Genetics 11:e1004850.
+
+\bibitem[{Didion et~al.(2016)Didion, Morgan, Yadgary, Bell, McMullan, Ortiz~de
+  Solorzano, Britton-Davidian, Bult, Campbell, Castiglia, Ching, Chunco,
+  Crowley, Chesler, F{\"o}rster, French, Gabriel, Gatti, Garland~Jr,
+  Giagra-Athanasopoulou, Gim{\'e}nez, Grize, G{\"u}ndez, Holmes, Hauffe,
+  Herman, Holt, Hua, Jolley, Lindholm, L{\'o}pez-Fuster, Mitsainas,
+  da~Luz~Mathias, McMillan, da~Gra{\c c}a Morgado~Ramalhinho, Reherman,
+  Rosshart, Searle, Shiao, Solano, Svensen, Thomas-Laemont, Threadgill,
+  Ventura, Weinstock, Pomp, Churchill, and Pardo-Manuel~de
+  Villena}]{Didion2016}
+Didion, J.~P., A.~P. Morgan, L.~Yadgary, T.~A. Bell, R.~C. McMullan,
+  L.~Ortiz~de Solorzano, J.~Britton-Davidian, C.~J. Bult, K.~J. Campbell,
+  R.~Castiglia, Y.~H. Ching, A.~J. Chunco, J.~J. Crowley, E.~J. Chesler, D.~W.
+  F{\"o}rster, J.~E. French, S.~I. Gabriel, D.~M. Gatti, T.~Garland~Jr, E.~B.
+  Giagra-Athanasopoulou, M.~D. Gim{\'e}nez, S.~A. Grize, I.~G{\"u}ndez,
+  A.~Holmes, H.~C. Hauffe, J.~S. Herman, J.~M. Holt, K.~Hua, W.~J. Jolley,
+  A.~K. Lindholm, M.~J. L{\'o}pez-Fuster, G.~Mitsainas, M.~da~Luz~Mathias,
+  L.~McMillan, M.~da~Gra{\c c}a Morgado~Ramalhinho, B.~Reherman, S.~P.
+  Rosshart, J.~B. Searle, M.~S. Shiao, E.~Solano, K.~L. Svensen,
+  P.~Thomas-Laemont, D.~W. Threadgill, J.~Ventura, G.~M. Weinstock, D.~Pomp,
+  G.~A. Churchill, and F.~Pardo-Manuel~de Villena. 2016.
+\newblock {R2d2 drives selfish genetic sweeps in the house mouse}.
+\newblock Molecular Biology and Evolution 33:1381--1395.
+
 \bibitem[{Ezaz et~al.(2009)Ezaz, Sarre, and O'Meally}]{Ezaz:2009tk}
 Ezaz, T., S.~D. Sarre, and D.~O'Meally. 2009.
 \newblock {Sex chromosome evolution in lizards: independent origins and rapid
@@ -114,6 +153,12 @@ Field, D.~L., M.~Pickup, and S.~C.~H. Barrett. 2012.
 Fisher, R. 1930.
 \newblock {The genetical theory of natural selection}.
 \newblock Clarendon Press, London.
+
+\bibitem[{Fishman and Willis(2005)}]{Fishman2005}
+Fishman, L., and J.~H. Willis. 2005.
+\newblock {A novel meiotic drive locus almost completely distorts segregation
+  in \textit{Mimulus} (monkeyflower) hybrids}.
+\newblock Genetics 169:347--353.
 
 \bibitem[{Gamble et~al.(2017)Gamble, Castoe, Nielse, Banks, Card, Schield,
   Schuett, and Booth}]{Gamble2017}
@@ -238,11 +283,33 @@ Kozielska, M., F.~J. Weissing, L.~W. Beukeboom, and I.~Pen. 2010.
   mechanisms}.
 \newblock Heredity 104:100--112.
 
+\bibitem[{Lalanne et~al.(2004)Lalanne, Michaelidis, Moore, Gagliano, Johnson,
+  Patel, Howden, Vielle-Calzada, Grossniklaus, and Twell}]{Lalanne2004}
+Lalanne, E., C.~Michaelidis, J.~M. Moore, W.~Gagliano, A.~Johnson, R.~Patel,
+  R.~Howden, J.~P. Vielle-Calzada, U.~Grossniklaus, and D.~Twell. 2004.
+\newblock {Analysis of transposon insertion mutants highlights the diversity of
+  mechanisms underlying male progamic development in \textit{Arabidopsis}}.
+\newblock Genetics 167:1975--1986.
+
 \bibitem[{Lee et~al.(2004)Lee, Hulata, and Kocher}]{Lee2004}
 Lee, B.~Y., G.~Hulata, and T.~D. Kocher. 2004.
 \newblock {Two unlinked loci controlling the sex of blue tilapia
   (\textit{Oreochromis aureus})}.
 \newblock Heredity 92:543--549.
+
+\bibitem[{Lepp{\"a}l{\"a} et~al.(2008)Lepp{\"a}l{\"a}, Bechsgaard, Schierup,
+  and Savolainen}]{Leppala2008}
+Lepp{\"a}l{\"a}, J., J.~S. Bechsgaard, M.~H. Schierup, and O.~Savolainen. 2008.
+\newblock {Transmission ratio distortion in \textit{Arabidopsis lyrata}:
+  effects of population divergence and the S-locus}.
+\newblock Heredity 100:71--78.
+
+\bibitem[{Lepp{\"a}l{\"a} et~al.(2013)Lepp{\"a}l{\"a}, Bokma, and
+  Savolainen}]{Leppala2013}
+Lepp{\"a}l{\"a}, J., F.~Bokma, and O.~Savolainen. 2013.
+\newblock {Investigating incipient speciation in \textit{Arabidopsis lyrata}
+  from patterns of transmission ratio distortion}.
+\newblock Genetics 194:697--708.
 
 \bibitem[{Li et~al.(2011)Li, Phillips, Harwood, Koop, and Davidson}]{Li:2011fm}
 Li, J., R.~B. Phillips, A.~S. Harwood, B.~F. Koop, and W.~S. Davidson. 2011.
