@@ -1399,14 +1399,15 @@ Overall, our results suggest several new scenarios under which new sex-determina
 
 \section*{Appendix}
 
-\subsection*{Recursion Equations}
+\subsection*{Recursion equations}
 \label{app:recurs}
 
 %\textcolor{red}{Should we adjust the subscripts throughout this subsection? Right now we end up re-defining $i$ and $j$ (when switching from haploid to diploid; this might have been my doing!) and then introduce three new subscripts $b$, $c$, and $l$, all of which can be derived from $i$ and $j$. Might be more straightforward to just use $p^\Hermaphrodite_{x_1,x_2,a_1,a_2,m_1,m_2}$ where 1 is maternal and 2 is paternal? We then no longer have to switch indices from haploid to diploid and the connection to other variables is clear: $b=m_1m_2$, $c=x_1x_2$, and $l=a_1a_2$. I guess the downside will be re-writing the recursion equations... which is why I haven't gone ahead and tried this.}
 
 In each generation we census the genotype frequencies in male and female gametes/gametophytes (hereafter, gametes) between meiosis (and any meiotic drive) and gametic competition. 
-At this stage we denote the frequencies of X- and Y-bearing gametes from males and females $x_{i}^{\Hermaphrodite}$ and $y_{i}^{\Hermaphrodite}$, where $\Hermaphrodite \in \{\male,\female\}$ specifies the sex of the diploid that the gamete came from. 
-$i\in\{1,2,3,4\}$ specifies the genotype at the selected locus $\mathbf{A}$ and at the novel sex-determining locus $\mathbf{M}$ where $1=MA$, $2=Ma$, $3=mA$, and $4=ma$. 
+At this stage we denote the frequencies of X- and Y-bearing gametes from males and females $x_{i}^{\Hermaphrodite}$ and $y_{i}^{\Hermaphrodite}$.
+The superscript $\Hermaphrodite \in \{\male,\female\}$ specifies the sex of the diploid that the gamete came from. 
+The subscript $i\in\{1,2,3,4\}$ specifies the genotype at the selected locus $\mathbf{A}$ and at the novel sex-determining locus $\mathbf{M}$, where $1=AM$, $2=aM$, $3=Am$, and $4=am$. 
 The gamete frequencies from each sex sum to one, $\sum_{i}x_{i}^{\Hermaphrodite}+y_{i}^{\Hermaphrodite}=1$. 
 
 Competition then occurs among gametes of the same sex (e.g., among eggs and among sperm separately) according to the genotype at the \textbf{A} locus ($w_{1}^\Hermaphrodite=w_{3}^\Hermaphrodite=w_{A}^\Hermaphrodite$, $w_{2}^\Hermaphrodite=w_{4}^\Hermaphrodite=w_{a}^\Hermaphrodite$, see Table \ref{tab:fitnesstable}).
@@ -1548,14 +1549,14 @@ y_{4}^{{\Hermaphrodite}'}=&yy_{44}^{\Hermaphrodite,s}+yy_{34}^{\Hermaphrodite,s}
 \noindent
 The full system is therefore described by 16 recurrence equations (three diallelic loci in two sexes, $2^3 \times 2 = 16$). 
 However, not all diploid types are produced under certain sex-determination systems. 
-For example, with the $M$ allele fixed and an ancestral $XY$ sex determination, there are $XX$ males, $XY$ females, or $YY$ females ($x_{3}^\Hermaphrodite=x_{4}^\Hermaphrodite=y_{4}^\Hermaphrodite=y_{3}^\Hermaphrodite=y_{i}^\female=0$). 
+For example, with the $M$ allele fixed and an ancestral $XY$ sex-determining system, there are $XX$ males, $XY$ females, or $YY$ females ($x_{3}^\Hermaphrodite=x_{4}^\Hermaphrodite=y_{4}^\Hermaphrodite=y_{3}^\Hermaphrodite=y_{i}^\female=0$). 
 %($xx_{11}^{\male}=xx_{12}^{\male}=xx_{22}^\male=xy_{11}^{\female}=xy_{12}^{\female}=xy_{21}^{\female}=xy_{22}^\female=yy_{11}^{\female}=yy_{12}^{\female}=yy_{22}^\female=0$). 
 In this case, the system only involves six recursion equations, %because there is only one \textbf{M} locus allele and no Y-bearing female gametes. 
 which we assume below to calculate the equilibria. 
 
 %I think this should be moved below because we have some 'results' where we don't assume weak selection but we only have the equilibrium calculated analytically for weak selection. 
 
-\subsection*{Resident equilibrium and stability}
+\subsection*{Resident equilibria and stability}
 
 In the resident population (allele $M$ fixed), we follow the frequency of $A$ in X-bearing female gametes, $p^\female_X$, and X-bearing male gametes, $p^\male_X$, and Y-bearing male gametes, $p^\male_Y$.
 We also track the total frequency of Y among male gametes, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
