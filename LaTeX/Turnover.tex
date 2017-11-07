@@ -1564,6 +1564,7 @@ These four variables determine the frequencies of the six resident gamete types:
 Mean fitnesses in the resident population are given in table \ref{tab:meanfitnesses}.
 
 Various forms of selection can maintain a polymorphism at the \textbf{A} locus, including sexually antagonistic selection, overdominance, conflicts between diploid selection and selection upon haploid genotypes \citep[ploidally antagonistic selection,][]{Immler:2012tl}, or a combination of these selective regimes. 
+\textcolor{blue}{add reference or say "see below"}
 
 \begin{table}[ht]
 \centering
@@ -1609,13 +1610,13 @@ We therefore focus on the five equilibria that maintain both $A$ and $a$ alleles
 \begin{subequations}\label{eq:tightequil}
 \begin{align}
 (A)\ \ \ &\hat{p}_{Y}^{\male}=0,
-\ \hat{q}=\frac{1}{2} - \alpha_\Delta^\male \frac{ w_{Aa}^{\male} \phi}{w_{Aa}^{\male} \phi+ w_{aa}^{\male} \psi},\\
+\ \hat{q}=\frac{1}{2}\left(1 - \alpha_\Delta^\male \frac{ w_{Aa}^{\male} \phi}{w_{Aa}^{\male} \phi+ w_{aa}^{\male} \psi}\right),\\
 &\hat{p}_{X}^{\female}=\frac{w_{a}^{\female} \phi}{w_{a}^{\female} \phi+ w_{A}^{\female} \psi},
-\ \hat{p}_{X}^{\male}=\frac{(1+\alpha_\Delta^\male)w_{Aa}^{\male} \phi}{(1+\alpha_\Delta^\male)w_{Aa}^{\male} \phi +w_{AA}^{\male} \psi} \nonumber \\
+\ \hat{p}_{X}^{\male}=\frac{(1+\alpha_\Delta^\male)w_{Aa}^{\male} \phi}{(1+\alpha_\Delta^\male)w_{Aa}^{\male} \phi +w_{aa}^{\male} \psi} \nonumber \\
 (A')\ \ \ &\hat{p}_{Y}^{\male}=1,
-\ \hat{q}=\frac{1}{2} + \alpha_\Delta^\male \frac{w_{Aa}^{\male} \phi'}{w_{Aa}^{\male} \phi' + w_{AA}^{\male} \psi'},\\
+\ \hat{q}=\frac{1}{2}\left(1 + \alpha_\Delta^\male \frac{w_{Aa}^{\male} \phi'}{w_{Aa}^{\male} \phi' + w_{AA}^{\male} \psi'}\right),\\
 &\hat{p}_{X}^{\female}=1-\frac{w_{A}^{\female} \phi'}{w_{A}^{\female} \phi'+ w_{a}^{\female} \psi'},
-\ \hat{p}_{X}^{\male}=1-\frac{(1-\alpha_\Delta^\male)w_{Aa}^{\male} \phi'}{(1-\alpha_\Delta^\male)w_{Aa}^{\male} \phi'+w_{aa}^{\male} \psi'} \nonumber \\
+\ \hat{p}_{X}^{\male}=1-\frac{(1-\alpha_\Delta^\male)w_{Aa}^{\male} \phi'}{(1-\alpha_\Delta^\male)w_{Aa}^{\male} \phi'+w_{AA}^{\male} \psi'} \nonumber \\
 (B)\ \ \ &\hat{p}_{Y}^{\male}=0,\ \hat{p}_{X}^{\female}=1,\ \hat{p}_{X}^{\male}=1, \ \hat{q}=(1 -\alpha^\male_\Delta)/2\\
 (B')\ \ \ &\hat{p}_{Y}^{\male}=1,\ \hat{p}_{X}^{\female}=0,\ \hat{p}_{X}^{\male}=0, \ \hat{q}=(1+\alpha^\male_\Delta)/2
 \end{align}
@@ -1630,7 +1631,8 @@ We therefore focus on the five equilibria that maintain both $A$ and $a$ alleles
 \end{equation*}
 
 \noindent
-A fifth equilibrium $(C)$ also exists where $A$ is present at an intermediate frequency on the Y chromosome ($0<\hat{p}_{Y}^{\male}<1$). However, equilibrium $(C)$ is never locally stable when $r \approx 0$ and is therefore not considered further. 
+A fifth equilibrium $(C)$ also exists where $A$ is present at an intermediate frequency on the Y chromosome ($0<\hat{p}_{Y}^{\male}<1$). 
+However, equilibrium $(C)$ is never locally stable when $r \approx 0$ and is therefore not considered further.
 Thus, the Y can either be fixed for the $a$ allele (equilibria $A$ and $B$) or the $A$ allele (equilibria $A'$ and $B'$).
 The X chromosome can then either be polymorphic (equilibria $A$ and $A'$) or fixed for the alternative allele (equilibria $B$ and $B'$).
 Since equilibria $(A)$ and $(B)$ are equivalent to equilibria $(A')$ and $(B')$ with the labelling of $A$ and $a$ alleles interchanged, we discuss only equilibria $(A)$ and $(B)$, in which the Y is fixed for the $a$ allele. 
@@ -1642,7 +1644,7 @@ For the $a$ allele to be stably fixed on the Y we need $\bar{w}_{Ya}^{\male} > \
 That is, Y-$a$ haplotypes must have higher fitness than Y-$A$ haplotypes.  
 Substituting in $\hat{p}_X^\female$ from equation \eqref{eq:tightequil}, fixation of the $a$ allele on the Y requires that $\gamma_{i}>0$ where $\gamma_{(A)}=w_{a}^{\male} \big[ (1-\alpha^\male_\Delta) w_{Aa}^{\male} \phi + w_{aa}^{\male} \psi \big]-w_{A}^{\male} \big[ w_{AA}^{\male} \phi + (1 + \alpha^{\male}_\Delta)w_{Aa}^{\male} \psi \big]$ for equilibrium $(A)$ and $\gamma_{(B)}=(1-\alpha^{\male}_\Delta)w_{a}^{\male}w_{Aa}^{\male}-w_{A}^{\male}w_{AA}^{\male}$ for equilibrium $(B)$.
 Stability of a polymorphism on the X chromosome (equilibrium $A$) further requires that $\phi >0$ and $\psi >0$. 
-Fixation of the $a$ allele on the X (equilibrium $B$) can be stable only if equilibrium $(A)$ is not, as it requires $\psi<0$ and $2w_{A}^{\female}w_{AA}^{\female}>(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$ or just $4w_{A}^{\female}w_{AA}^{\female}<(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$ (which also prevents $\psi>0$). 
+Fixation of the $a$ allele on the X (equilibrium $B$) can be stable only if equilibrium $(A)$ is not, as it requires $\psi<0$. %and $2w_{A}^{\female}w_{AA}^{\female}>(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$ or just $4w_{A}^{\female}w_{AA}^{\female}<(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$ (which also prevents $\psi>0$). 
 
 %\textcolor{red}{check last condition and the stability condition below are correct}
 %\textcolor{blue}{The last condition looks good to me, although in your Turnover-norec-MFS.nb you look at YA fixed, so you have to flip everything (so I made Turnover-norec-MFS-MMO.nb to do this).
