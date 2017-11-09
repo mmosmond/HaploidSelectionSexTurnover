@@ -1753,7 +1753,10 @@ However, because a neo-Y (neo-W) is always in males (females) and is epistatical
 %It can be shown (see supplementary Mathematica file) that the coefficients are $b= - (\lambda_{mA} + \lambda_{ma})+(\chi_{mA} + \chi_{ma})$ and $c = (\lambda_{mA}-\chi_{mA}) (\lambda_{ma}-\chi_{ma}) -\chi_{mA} \chi_{ma}$, where $\lambda_{mi}$ is the multiplicative growth rate of the frequency of mutants on background $i\in\{A,a\}$, without accounting for loss due to recombination, and $\chi_{mi}$ is the rate at which mutants on background $i\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes.
 %The leading eigenvalue is then greater than one whenever $\lambda_{mA}>1$ and $\lambda_{ma}>1$, less than one whenever $\lambda_{mA}<1$ and $\lambda_{ma}<1$, and greater than one whenever  $\lambda_{mA}>1$ or $\lambda_{ma}>1$ and $\chi_{ma} (\lambda_{mA}-1) + \chi_{mA} (\lambda_{ma}-1) > 0$.
 
-For tight linkage between the ancestral sex-determining locus and the selected locus we can calculate each of these terms exactly, while for weak selection we take a Taylor series of the leading eigenvalue. With weak selection, the leading eigenvalue, $\lambda$, for any $k$, is given up to order $\epsilon^2$ by equation \eqref{eq:lambda_ESD_k}.
+The general conditions for the invasion of a neo-sex-determining allele are given in the main text, in terms of the growth rates of the mutant haplotypes in the absence of recombination ($\lambda_{mi}$) and the rate that recombination destroys them ($\chi_{mi}$).
+For tight linkage between the ancestral sex-determining locus and the selected locus we can calculate these terms explicitly (see below).
+For weak selection we can take a Taylor series of the leading eigenvalue. 
+The leading eigenvalue, $\lambda$, for any $k$, is given up to order $\epsilon^2$ by equation \eqref{eq:lambda_ESD_k}.
 
 \subsubsection*{Tight linkage between \textbf{A} and \textbf{X} (recombination weak relative to selection)}
 
@@ -1764,21 +1767,21 @@ Starting with the simpler equilibrium $(B)$, the terms of the characteristic pol
 
 \begin{subequations}\label{Binvasion}
 \begin{align}
-\lambda_{mA}&= \left[w_{a}^\male (1-\alpha^\male_\Delta) \right]^{-1}
+\lambda_{mA}&= \left[w_{A}^\male (1+\alpha^\male_\Delta) \right]^{-1}
 \frac{w_{A}^\female }{w_{A}^\female}
 \frac{\left[ w_{A}^\male (1+\alpha^\male_\Delta) w_{AA}^\female + 
 w_{a}^\male (1-\alpha^\male_\Delta) w_{Aa}^\female (1+\alpha^\female_\Delta) \right]}
 { 2w_{AA}^\female } \\
-\lambda_{ma}&= \left[w_{a}^\male (1-\alpha^\male_\Delta) \right]^{-1}
+\lambda_{ma}&= \left[w_{A}^\male (1+\alpha^\male_\Delta) \right]^{-1}
 \frac{w_{a}^\female}{w_{A}^\female}
 \frac{\left[  w_{A}^\male (1+\alpha^\male_\Delta) w_{Aa}^\female (1-\alpha^\female_\Delta)+
 w_{a}^\male (1-\alpha^\male_\Delta) w_{aa}^\female \right]}
 { 2w_{AA}^\female } \\
-\chi_{mA}&= \frac{1}{2} \left[w_{a}^\male (1-\alpha^\male_\Delta) \right]^{-1}
+\chi_{mA}&= \frac{1}{2} \left[w_{A}^\male (1+\alpha^\male_\Delta) \right]^{-1}
 \frac{w_{A}^\female }{w_{A}^\female}
  \frac{\left[  w_{a}^\male (1-\alpha^\male_\Delta) w_{Aa}^\female (1 + \alpha^\female_\Delta) \right]}
 { w_{AA}^\female } \frac{R}{2}\\
-\chi_{ma}&= \frac{1}{2} \left[w_{a}^\male (1-\alpha^\male_\Delta) \right]^{-1}
+\chi_{ma}&= \frac{1}{2} \left[w_{A}^\male (1+\alpha^\male_\Delta) \right]^{-1}
 \frac{w_{a}^\female}{w_{A}^\female}
  \frac{\left[  w_{A}^\male (1+\alpha^\male_\Delta) w_{Aa}^\female (1-\alpha^\female_\Delta) \right]}
 {  w_{AA}^\female} \frac{R}{2}
@@ -1801,7 +1804,7 @@ w_{a}^\male (1-\alpha^\male_\Delta) w_{aa}^\female \right]}
 
 Haploid selection impacts the spread of neo-W haplotypes in three ways.
 Firstly, the zygotic sex ratio becomes male biased, $\zeta>1/2$, when the $a$ allele (which is fixed on the Y) is favoured during competition among male gametes or by meiotic drive in males.
-Specifically, at equilibrium $(B)$, the sex ratio is $\zeta = w_a^\male (1-\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ where $2\bar{w}_{H}^\male= \big[w_a^\male (1-\alpha^\male_\Delta) +  w_A^\male (1+\alpha^\male_\Delta) \big]$ has been canceled out in equations \eqref{Binvasion} to leave the term $\left[w_{a}^\male (1-\alpha^\male_\Delta) \right]^{-1}$. 
+Specifically, at equilibrium $(B)$, the fraction female is $1 - \zeta = w_A^\male (1+\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ where $2\bar{w}_{H}^\male= \big[w_a^\male (1-\alpha^\male_\Delta) +  w_A^\male (1+\alpha^\male_\Delta) \big]$ has been canceled out in equations \eqref{Binvasion} to leave the term $\left[w_{A}^\male (1+\alpha^\male_\Delta) \right]^{-1}$. 
 Male biased sex ratios facilitate the spread of a neo-W because neo-W alleles cause the zygotes that carry them to develop as the rarer, female, sex. 
 
 Secondly, haploid selection in females selects on neo-W haplotypes directly.
@@ -1850,9 +1853,9 @@ Similar equations can be derived for equilibrium (A) by substituting the equilib
 
 \begin{subequations}\label{Ainvasion}
 \begin{align}
-\lambda_{mA}&= \frac{a}{b} \left[w_{AA}^\female w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi +  w_{Aa}^\female (1+\alpha^\female_\Delta) w_a^\male \frac{c}{d}\right] / (2 w_a^\female) \\
-\lambda_{ma}&= \frac{a}{b} \left[ w_{Aa}^\female (1-\alpha^\female_\Delta) w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi +  w_{aa}^\female w_a^\male \frac{c}{d}\right] / (2 w_A^\female) \\
-\chi_{mA}&= \frac{a}{b} \frac{R}{2} \left[   w_{Aa}^\female (1+\alpha^\female_\Delta) w_a^\male \frac{c}{d} \right] / w_a^\female\\ 
+\lambda_{mA}&= \frac{a}{b} \left[w_{AA}^\female w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi +  w_{Aa}^\female (1+\alpha^\female_\Delta) w_a^\male c \right] / (2 w_a^\female) \\
+\lambda_{ma}&= \frac{a}{b} \left[ w_{Aa}^\female (1-\alpha^\female_\Delta) w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi +  w_{aa}^\female w_a^\male c \right] / (2 w_A^\female) \\
+\chi_{mA}&= \frac{a}{b} \frac{R}{2} \left[   w_{Aa}^\female (1+\alpha^\female_\Delta) w_a^\male c \right] / w_a^\female\\ 
 \chi_{ma}&= \frac{a}{b} \frac{R}{2} \left[ w_{Aa}^\female (1-\alpha^\female_\Delta) w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi \right] / w_A^\female
 \end{align}
 \end{subequations}
@@ -1863,13 +1866,9 @@ where
 \begin{subequations}
 \begin{align}
 a &= w_a^\female \phi + w_A^\female \psi \\
-b &= w_{AA}^\female \phi \left[ w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi \right]+ w_{Aa}^\female \psi \left[ w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi + w_{AA}^\male w_a^\male \psi \right] + w_{aa}^\female \psi \left( w_{AA}^\male w_a^\male \psi \right)\\
+b &= w_{AA}^\female \phi \left[ w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi \right] + w_{Aa}^\female \psi \left[ w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) + w_{aa}^\male w_a^\male \right] \phi + w_{aa}^\female \psi \left( w_{aa}^\male w_a^\male \psi \right)\\
 %c &= w_{Aa}^\male (1-\alpha^\male_\Delta) \phi \left[ w_{Aa}^\male (1+\alpha^\male_\Delta) \phi \right] + w_{Aa}^\male\phi \left[ 2w_{AA}^\male + w_{aa}^\male (1+\alpha^\male_\Delta) \right] \psi + w_{aa}^\male \psi \left(2w_{AA}^\male \psi \right) \\
-c &= 
-w_{Aa}^\male (1+\alpha^\male_\Delta) \phi \left[ w_{Aa}^\male (1-\alpha^\male_\Delta) \phi + w_{aa}^\male \psi \right] +
-2 w_{AA}^\male\psi \left[ w_{Aa}^\male \phi + w_{aa}^\male \psi \right]
- \\
-d &= w_{Aa}^\male (1+\alpha^\male_\Delta) \phi + w_{aa}^\male \psi
+c &= w_{Aa}^\male (1-\alpha^\male_\Delta) \phi + 2w_{aa}^\male \psi
 \end{align}
 \end{subequations}
 
