@@ -558,7 +558,7 @@ Here, there is no haploid selection $t^\Hermaphrodite = \alpha^\Hermaphrodite_\D
 Assuming that selection is weak relative to all recombination rates ($r$, $R$ and $\rho$), we denote the leading eigenvalues describing the invasion of a neo-Y ($k=0$) and a neo-W ($k=1$) into an ancestrally XY system by $\lambda_{Y',XY}$ and $\lambda_{W',XY}$, respectively. To leading order in selection, these are:
 
 \begin{equation}
-\lambda_{Y',XY} =1+ V_{A}S_{A}^2\frac{ \left( r-R \right) }{r R}+O\left(\epsilon^3 \right) 
+\lambda_{Y',XY} =1+ \frac{1}{4}V_{A}S_{A}^2\frac{ \left( r-R \right) }{r R}+O\left(\epsilon^3 \right) 
 \label{eq:lambda_neoY}
 \end{equation}
 
@@ -574,7 +574,7 @@ and
 \noindent
 where $V_{A}=\bar{p}(1-\bar{p})$ is the variance in the equilibrium frequency of $A$ and $S_{A}=(D^\male +\alpha_{\Delta}^\male+t^\male) - (D^\female+\alpha_{\Delta}^\female+t^\female)$ describes sex differences in selection for the $A$ versus $a$ across diploid selection, meiosis, and gametic competition.
 The diploid selection term, $D^\Hermaphrodite=\big{[} \bar{p}s^\Hermaphrodite+(1-\bar{p})h^\Hermaphrodite s^\Hermaphrodite\big{]} -\big{[} \bar{p}h^\Hermaphrodite s^\Hermaphrodite+(1-\bar{p}) \big{]}$, is the difference in fitness between $A$ and $a$ alleles in diploids of sex $\Hermaphrodite \in \{\female,\male\}$, where $\bar{p}$ is the leading-order probability of mating with an $A$-bearing gamete from the opposite sex (equation \ref{eq:pAve}). 
-The difference in $A$-allele-frequency among Y-bearing sperm versus X-bearing sperm is given by $\hat{p}^\male_Y-\hat{p}^\male_X=V_{A}\big{(}D^\male - D^\female+\alpha_{\Delta}^\male-\alpha_{\Delta}^\female+t^\male-t^\female\big{)}(1-2r)/2r$. 
+The difference in $A$-allele-frequency among Y-bearing sperm versus X-bearing sperm is given by $\hat{p}^\male_Y-\hat{p}^\male_X=V_{A}\big{(}D^\male - D^\female+\alpha_{\Delta}^\male-\alpha_{\Delta}^\female+t^\male-t^\female\big{)}(1-2r)/(2r)$. 
 
 
 The neo-sex-determining allele, $m$, will spread if $\lambda_{m,XY}>1$. 
@@ -611,7 +611,7 @@ We use Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert f
 Equation \eqref{eq:lambda_neoW} shows that, with weak selection, neo-W alleles can invade an XY system for a large number of selective regimes. 
 To clarify the parameter space under which $\lambda_{W',XY}>1$, we consider several special cases. 
 Firstly, if the \textbf{A} locus is unlinked to the ancestral sex-determining region ($r=1/2$), a more closely linked neo-W ($R<1/2$) can always invade because there is no ancestral association between $A$ alleles and sex chromosomes in males, $\left( \hat{p}^\male_Y-\hat{p}^\male_X \right)=0$, see equation \eqref{eq:freq_diffs}. 
-The second term in equation \eqref{eq:lambda_neoW} therefore disappears and invasion depends only on the sign of $(r-R)$. 
+The second term in equation \eqref{eq:lambda_neoW} therefore disappears and invasion depends only on the sign of $(r-R)$, as in the case of the neo-Y. 
 Indeed, invasion typically occurs when the neo-W is more closely linked to the selected locus than the ancestral sex-determining region (Figure \ref{fig:Combination_Centimorgans}).
 
 Secondly, we can simplify the discussion of cases where invasion occurs despite looser sex-linkage, $R>r$, by focusing on the special case where $R=1/2$ and $r<1/2$ (e.g., the selected locus is on the ancestral sex chromosome and the novel sex-determining locus arises on an autosome). 
@@ -719,8 +719,8 @@ Assuming weak selection, the spread of the new sex-determining region is given b
 
 \begin{equation}
 \begin{split}
-\lambda_{ESD',XY} =& 1 + (1-2k)^2V_{A}{S_{A}}^2\frac{r-R}{r R} \\
-&+\frac{k(\hat{p}^\male_Y-\hat{p}^\male_X)}{2}\left[ k \left(2\alpha_{\Delta}^\male-2\alpha_{\Delta}^\female+t^\male-t^\female \right) -4(1-k)S_{A}\right]+O\left(\epsilon^3\right),
+\lambda_{ESD',XY} =& 1 + \frac{(1-2k)^2}{4}V_{A}{S_{A}}^2\frac{r-R}{r R} \\
+&+\frac{k(\hat{p}^\male_Y-\hat{p}^\male_X)}{2}\left[ k \left(2\alpha_{\Delta}^\male-2\alpha_{\Delta}^\female+t^\male-t^\female \right) -2(1-k)S_{A}\right]+O\left(\epsilon^3\right),
 \end{split}
 \label{eq:lambda_ESD_k}
 \end{equation}
