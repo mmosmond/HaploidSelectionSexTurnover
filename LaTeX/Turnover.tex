@@ -599,7 +599,7 @@ With haploid selection, however, the additional term in equation \eqref{eq:lambd
 %In panel A, there is no haploid selection ($t^\Hermaphrodite = \alpha^\Hermaphrodite_{\Delta} = 0$) and selection in diploids is sexually antagonistic ($s^\male = -s^\female = 1/10$, $h^\male = 1-h^\female = 3/10$), in which case the neo-sex-determining allele can only invade if it is more closely linked to the selected locus ($R<r$, gray region; but see Figure \ref{fig:SexAntagTighter}B for the case of very tight linkage).
 Ploidally-antagonistic selection allows a less tightly linked neo-W to invade.
 In panel A, male drive ($\alpha^\male_{\Delta} = -1/20$, $t^\Hermaphrodite = \alpha^\female_{\Delta} = 0$) opposes selection in diploids (no sex-differences: $s^\Hermaphrodite = 1/10$, $h^\Hermaphrodite = 7/10$), in which case the neo-sex-determining allele can invade regardless of linkage.   
-In panel B, gametic competition in males ($t^\male = -1/10$, $t^\female = \alpha^\Hermaphrodite_{\Delta} = 0$) opposes selection in diploids (sex-differences: $s^\male = 3/20$, $s^\female = 7/50$, $h^\Hermaphrodite = 7/10$), in which case the neo-sex-determining allele can once again invade regardless of linkage.
+In panel B, gametic competition in males ($t^\male = -1/10$, $t^\female = \alpha^\Hermaphrodite_{\Delta} = 0$) opposes selection in diploids (sex-differences: $s^\male = 3/20$, $s^\female = 1/20$, $h^\Hermaphrodite = 7/10$), in which case the neo-sex-determining allele can once again invade regardless of linkage.
 We use Haldane's map function \citep[Equation 3 in ][]{Haldane1919} to convert from map distance (centiMorgans, cM) to the probability of recombination (an odd number of cross-over events).   
 %\textcolor{red}{Check the mismatch between red and black lines here: probably because of adding or subtracting from 1. }
 %\textcolor{blue}{Can remove the mismatch by flipping the fitnesses between males and females (again). That is, if $M_{AA}$ is the fitness of $AA$ male diploids in an ancestral XY system, then $M_{AA}$ is the fitness of $AA$ female diploids in an ancestral ZW system. I think this makes sense in A, where we don't really want a difference between the red and black curves, but this makes less sense in B and C where we want to restrict haploid selection to males regardless of the ancestral system. We could just not flip the haploid fitnesses, but then does it make sense to flip the diploid fitnesses?}
@@ -2059,10 +2059,11 @@ Here, there is no haploid selection $t^\Hermaphrodite = \alpha^\Hermaphrodite_\D
 \centerline{\includegraphics[width=1.5\linewidth]{PositionPlot_SexAntagTighter_MaleDrive}}
 \caption{
 When there is sexually-antagonistic selection and haploid selection, a neo-W may invade for any $R$.
-Panel A shows that the invasion fitness of a neo-W is positive where linkage is tight, even when $r<R$ (unshaded region). \textcolor{red}{(remove A?)}
+Panel A shows that the invasion fitness of a neo-W is positive where linkage is tight, even when $r<R$ (unshaded region).
 In panel B, we vary the recombination rate between the neo-W and the selected locus ($R$) for a fixed recombination rate between the ancestral-SDR and the selected locus ($r=0.005$).
 Coloured markers show recombination rates for which the temporal dynamics of neo-W invasion are plotted in panel C (black $R=0.001$, red $R=0.02$, blue $R=0.1$, green $R=0.5$). 
-The diploid selection parameters used in this plot are the same as in Figure \ref{fig:SexAntagTighter}, marked by an asterisk in Figure \ref{fig:regionMaleDrive}A: $w_{AA}^\female=1.05$, $w_{Aa}^\Hermaphrodite=1$, $w_{aa}^\female=0.85$, $w_{AA}^\male=0.85$, $w_{aa}^\male=1.05$, $\alpha_{\Delta}^\male=-0.08$, except that there is also male meiotic drive in favour of the $a$ allele, $\alpha_{\Delta}^\male=-0.08$.
+The diploid selection parameters used in this plot are the same as in Figure \ref{fig:SexAntagTighter}. 
+There is also meiotic drive in males favouring $a$ ($\alpha_{\Delta}^\male=-0.08$), this full set of parameters is marked by an asterisk in Figure \ref{fig:regionMaleDrive}A.
 When $R=0.5$ (green curve), the neo-W does not reach fixation and X,Y,Z, and W alleles are all maintained in the population, see Figure \ref{fig:freqAll}C.
 }
 \label{fig:SexAntagTighterMaleDrive}
@@ -2125,7 +2126,7 @@ The $A$ allele is favoured during gametic competition in panels D-F ($w_{a}^\fem
 \begin{figure}[!h]
 \centering
 \centerline{
-\includegraphics[width=\linewidth]{All_plot_combined_PloidAntag_Matt}
+\includegraphics[width=\linewidth]{All_plot_combined_PloidAntag}
 }
 \caption{
 A-D show when each of the neo-W haplotypes invade an internally stable equilibrium with $a$ fixed on the Y (found by setting $r=0$).
