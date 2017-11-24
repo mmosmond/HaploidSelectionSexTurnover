@@ -1905,11 +1905,12 @@ This scenario selects for a modifier that increases recombination between the se
 
 \subsubsection*{Tight Linkage and Haploid Selection}
 
-\textcolor{blue}{is this specific in any way to tight linkage, $r\approx0$?}
+\textcolor{blue}{is this specific in any way to tight linkage, $r\approx0$? i see most of the plots referred to are tight linkage plots...}
 
 Generally, haploid selection expands the scenarios under which neo-W alleles can spread. 
 For example, when selection is sexually-antagonistic in diploids ($s^\female s^\male <0$ and $0<h^\Hermaphrodite<1$) an unlinked neo-W ($R=1/2$) cannot invade unless there is also haploid selection (Figures \ref{fig:SexAntagTighter} and \ref{fig:SexAntagTighterMaleDrive}). 
 Secondly, with haploid selection, overdominance ($w_{aa}^\Hermaphrodite<w_{Aa}^\Hermaphrodite$ \& $w_{AA}^\Hermaphrodite<w_{Aa}^\Hermaphrodite$) is not required for neo-W-$a$ haplotypes to spread ($\lambda_{ma}>1$) (Figures \ref{fig:regionMaleDrive}-\ref{fig:regionFemaleGS}). 
+Haploid selection and overdominance allow unlinked neo-W alleles to invade even when there is tight linkage between the ancestral SDR and the selected locus (Figure \ref{fig:loose_invades_tight}).
 Finally, haploid selection can maintain a polymorphism in the face of directional selection in male and female diploids (ploidally-antagonistic selection). 
 When selection is ploidally-antagonistic, neo-W alleles often spread, for at least some values of $R$ (Figure \ref{fig:regionPloidAntag}). 
 
@@ -2141,27 +2142,40 @@ Dashed line in E-H gives ``fixation" of neo-W (all females heterozygous ZW).
 \end{figure}
 \end{landscape}
 
-\begin{landscape}
+%\begin{landscape}
 \begin{figure}[!h]
 \centering
 \centerline{
-\includegraphics[width=\linewidth]{Freq_plot_combined_PloidAntag_Matt}
+\includegraphics[width=\linewidth]{Freq_plot_combined_PloidAntag}
 }
 \caption{
 Dynamics of sex-determining alleles during invasion by a neo-W allele. 
 The curves show the frequencies of the neo-W (red), ancestral-Y (Blue), and $A$ allele among female gametes (solid curves) and among male gametes (dashed curves). 
 In panel A, there is a complete transition from XY sex determination (XX-ZZ females and XY-ZZ males) to ZW sex determination (YY-ZW females and YY-ZZ males).  
-In panels B-D polymorphism is maintained at both the ancestral XY locus and the neo-ZW locus, such that there are males with genotypes XY-ZZ or YY-ZZ and females with genotypes XX-ZZ, XX-ZW, XY-ZW, or YY-ZW. 
+In panels B and C a polymorphism is maintained at both the ancestral XY locus and the neo-ZW locus, such that there are males with genotypes XY-ZZ or YY-ZZ and females with genotypes XX-ZZ, XX-ZW, XY-ZW, or YY-ZW. 
 In panel A, selection is ploidally antagonistic with drive in males (parameters as in the green curve in Figure \ref{fig:SexRatioBad}B).
-In panel B, there is overdominance in both sexes (parameters as the green curve in Figure \ref{fig:temporalOverdominance}C).
-In panel C, there is male meiotic drive and sexually-antagonistic selection in diploids (parameters as the green curve in Figure \ref{fig:regionMaleDrive}C).
-\textcolor{red}{(remove D?)}
-Panel D has the same parameters as the red curve in Figure \ref{fig:regionPloidAntag}F, except $r=0$ (ploidy-antagonism with pollen competition).
-In all cases, the initial equilibrium frequency has $a$ near fixed on the Y.
+In panel B, there is overdominance in both sexes and no haploid selection (parameters as in the green curve in Figure \ref{fig:temporalOverdominance}C).
+In panel C, there is sexually-antagonistic selection in diploids with drive in males (parameters as in the green curve in Figure \ref{fig:regionMaleDrive}C).
+%In Panel D there is ploidally-antagonistic selection with haploid competition in males (parameters as in the green curve of Figure \ref{fig:regionPloidAntag}F).
+In all cases, the initial equilibrium frequency has $a$ near fixation on the Y.
 }
 \label{fig:freqAll}
 \end{figure}
-\end{landscape}
+%\end{landscape}
+
+\begin{figure}[!h]
+\centering
+\centerline{
+\includegraphics[width=\linewidth]{neoW_invades_tight_loose}
+}
+\caption{
+An unlinked neo-W can invade a perfectly linked system with overdominance or haploid selection.
+Here overdominance leads to a polymorphic sex-determining system.
+Before invasion the population is at equilibrium B.
+Parameters:
+}
+\label{fig:loose_invades_tight}
+\end{figure}
 
 %\begin{figure}[!h]
 %\centering
