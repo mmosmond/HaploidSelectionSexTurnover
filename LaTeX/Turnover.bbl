@@ -1,4 +1,4 @@
-\begin{thebibliography}{88}
+\begin{thebibliography}{93}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alavioon et~al.(2017)Alavioon, Hotzy, Nakhro, Rudolf, Scofield,
@@ -35,6 +35,11 @@ Bachtrog, D., J.~E. Mank, C.~L. Peichel, M.~Kirkpatrick, S.~P. Otto, T.-L.
 Beukeboom, L.~W., and N.~Perrin. 2014.
 \newblock {The evolution of sex determination}.
 \newblock Oxford University Press, Oxford, UK.
+
+\bibitem[{Bianchi(2002)}]{Bianchi2002}
+Bianchi, N.~O. 2002.
+\newblock {\textit{Akodon} sex reversed females: the never ending story}.
+\newblock Cytogenetic and Genome Research 96:60--65.
 
 \bibitem[{Blaser et~al.(2012)Blaser, Grossen, Neuenschwander, and
   Perrin}]{Blaser2012}
@@ -160,6 +165,13 @@ Fishman, L., and J.~H. Willis. 2005.
   in \textit{Mimulus} (monkeyflower) hybrids}.
 \newblock Genetics 169:347--353.
 
+\bibitem[{Fredga(1994)}]{Fredga1994}
+Fredga, K. 1994.
+\newblock Bizarre mammalian sex-determining mechanisms.
+\newblock Chap.~19, pages 419--432 \emph{in} R.~V. Short and E.~Balaban, eds.
+  The differences between the sexes. Cambridge University Press, Cambridge,
+  USA.
+
 \bibitem[{Gamble et~al.(2017)Gamble, Castoe, Nielse, Banks, Card, Schield,
   Schuett, and Booth}]{Gamble2017}
 Gamble, T., T.~A. Castoe, S.~V. Nielse, J.~L. Banks, D.~C. Card, D.~R. Schield,
@@ -204,6 +216,13 @@ Hillis, D.~M., and D.~M. Green. 1990.
 \newblock {Evolutionary changes of heterogametic sex in the phylogenetic
   history of amphibians}.
 \newblock Journal of Evolutionary Biology 3:49--64.
+
+\bibitem[{Hoekstra and Hoekstra(2001)}]{Hoekstra2001}
+Hoekstra, H.~E., and J.~M. Hoekstra. 2001.
+\newblock {An unusual sex-determination system in South American field mice
+  (genus \textit{Akodon}): the role of mutation, selection, and meiotic drive
+  in maintaining XY females}.
+\newblock Evolution 55:190--197.
 
 \bibitem[{Holleley et~al.(2015)Holleley, O'Meally, Sarre, Marshall~Graves,
   Ezaz, Matsubara, Azad, Zhang, and Georges}]{Holleley:2015hc}
@@ -378,12 +397,6 @@ Ming, R., A.~Bendahmane, and S.~S. Renner. 2011.
 \newblock {Sex chromosomes in land plants}.
 \newblock Annu. Rev. Plant Biol. 62:485--514.
 
-\bibitem[{Miura(2007)}]{Miura2007}
-Miura, I. 2007.
-\newblock {An evolutionary witness: the frog \textit{Rana rugosa} underwent
-  change fo heterogametic sex from XY male to ZW female}.
-\newblock Sexual Development 1:323--331.
-
 \bibitem[{Mulcahy et~al.(1996)Mulcahy, Sari-Gorla, and
   Mulcahy}]{Mulcahy:1996ha}
 Mulcahy, D.~L., M.~Sari-Gorla, and G.~B. Mulcahy. 1996.
@@ -447,6 +460,22 @@ Ravikumar, R.~L., B.~S. Patil, and P.~M. Salimath. 2003.
 Rice, W.~R. 1996.
 \newblock {Evolution of the Y Sex Chromosome in Animals}.
 \newblock BioScience 46:331--343.
+
+\bibitem[{S{\'a}nchez et~al.(2010)S{\'a}nchez, Marchal, Romero-Fern{\'a}ndez,
+  Pinna-Senn, Ortiz, Bella, and Lisanti}]{Sanchez2010}
+S{\'a}nchez, A., J.~A. Marchal, I.~Romero-Fern{\'a}ndez, E.~Pinna-Senn, M.~I.
+  Ortiz, J.~L. Bella, and J.~A. Lisanti. 2010.
+\newblock {No differences in the \textit{Sry} gene between males and XY females
+  in \textit{Akodon} (Rodentia, Cricetidae)}.
+\newblock Sexual Development 4:155--161.
+
+\bibitem[{Saunders et~al.(2014)Saunders, Perez, Rahmoun, Ronce, Crochet, and
+  Veyrunes}]{Saunders2014}
+Saunders, P.~A., J.~Perez, M.~Rahmoun, O.~Ronce, P.~A. Crochet, and
+  F.~Veyrunes. 2014.
+\newblock {XY females do better than the XX in the African pygmy mouse,
+  \textit{Mus minutoides}}.
+\newblock Evolution 68:2119--2127.
 
 \bibitem[{Schulteis et~al.(2006)Schulteis, Zhou, Froschauer, Nanda, Selz,
   Schmidt, Matschl, Wenning, Veith, Naciri, Hanel, Braasch, Dettai, B{\"o}hne,
@@ -541,6 +570,15 @@ Vandeputte, M., M.~Dupont-Nivet, H.~Chavanne, and B.~Chatain. 2007.
 \newblock {A polygenic hypothesis for sex determination in the European sea
   bass \textit{Dicentrarchus labrax}}.
 \newblock Genetics 176:1049--1057.
+
+\bibitem[{Veyrunes et~al.(2010)Veyrunes, Chevret, Catalan, Castiglia, Watson,
+  Dobigny, Robinson, and Britton-Davidian}]{Veyrunes2010}
+Veyrunes, F., P.~Chevret, J.~Catalan, R.~Castiglia, J.~Watson, G.~Dobigny,
+  J.~Robinson, T, and J.~Britton-Davidian. 2010.
+\newblock {A novel sex determination system in a close relative of the house
+  mouse}.
+\newblock Proceedings of the Royal Society B: Biological Sciences
+  277:1049--1056.
 
 \bibitem[{Vibranovski et~al.(2010)Vibranovski, Chalopin, Lopes, Long, and
   Karr}]{Vibranovski:2010et}
