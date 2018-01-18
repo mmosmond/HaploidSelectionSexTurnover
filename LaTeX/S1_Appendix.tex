@@ -1,0 +1,192 @@
+\documentclass[12pt]{article}
+%\documentclass{nature}
+
+% Including pdf figures
+\usepackage{graphicx}
+\graphicspath{ {../Plots/} }
+\usepackage{pdfpages}
+%really place a figure in a location
+\usepackage{float}
+%Overrun caption
+\usepackage[CaptionAfterwards]{fltpage}
+% Math stuff
+\usepackage{amsmath}
+\usepackage{stix}
+% Bibliographies
+\usepackage[numbers]{natbib}
+\bibpunct{(}{)}{,}{a}{}{;} 
+
+\usepackage[flushleft]{threeparttable}
+
+\usepackage[font={scriptsize}]{caption}
+
+\usepackage{lineno} %gives line numbers with \lineno command
+
+\usepackage{setspace}
+\onehalfspace
+
+\usepackage{tikz}%for putting words on figures
+\usetikzlibrary{positioning}%for relative positioning
+
+%to rotate figures
+\usepackage{rotating}
+\usepackage{pdflscape}
+
+\begin{document}
+
+\setcounter{equation}{0}
+\renewcommand{\theequation}{S1.\arabic{equation}}
+
+\section*{S1 Appendix}
+
+\subsection*{Recursion equations}
+\label{app:recurs}
+
+%\textcolor{red}{Should we adjust the subscripts throughout this subsection? Right now we end up re-defining $i$ and $j$ (when switching from haploid to diploid; this might have been my doing!) and then introduce three new subscripts $b$, $c$, and $l$, all of which can be derived from $i$ and $j$. Might be more straightforward to just use $p^\Hermaphrodite_{x_1,x_2,a_1,a_2,m_1,m_2}$ where 1 is maternal and 2 is paternal? We then no longer have to switch indices from haploid to diploid and the connection to other variables is clear: $b=m_1m_2$, $c=x_1x_2$, and $l=a_1a_2$. I guess the downside will be re-writing the recursion equations... which is why I haven't gone ahead and tried this.}
+
+In each generation we census the genotype frequencies in male and female gametes/gametophytes (hereafter, gametes) between meiosis (and any meiotic drive) and gametic competition. 
+At this stage we denote the frequencies of X- and Y-bearing gametes from males and females $x_{i}^{\Hermaphrodite}$ and $y_{i}^{\Hermaphrodite}$.
+The superscript $\Hermaphrodite \in \{\male,\female\}$ specifies the sex of the diploid that the gamete came from. 
+The subscript $i\in\{1,2,3,4\}$ specifies the genotype at the selected locus $\mathbf{A}$ and at the novel sex-determining locus $\mathbf{M}$, where $1=AM$, $2=aM$, $3=Am$, and $4=am$. 
+The gamete frequencies from each sex sum to one, $\sum_{i}x_{i}^{\Hermaphrodite}+y_{i}^{\Hermaphrodite}=1$. 
+
+Competition then occurs among gametes of the same sex (e.g., among eggs and among sperm separately) according to the genotype at the \textbf{A} locus ($w_{1}^\Hermaphrodite=w_{3}^\Hermaphrodite=w_{A}^\Hermaphrodite$, $w_{2}^\Hermaphrodite=w_{4}^\Hermaphrodite=w_{a}^\Hermaphrodite$, see Table \ref{tab:fitnesstable}).
+The genotype frequencies after gametic competition are $x_{i}^{\Hermaphrodite,s}= w_{i}x_{i}^{\Hermaphrodite}/\bar{w}_{H}^{\Hermaphrodite}$ and $y_{i}^{\Hermaphrodite,s}= w_{i}y_{i}^{\Hermaphrodite}/\bar{w}_{H}^{\Hermaphrodite}$, where $\bar{w}_{H}^{\Hermaphrodite}=\sum_{i} w_{i}x_{i}^{\Hermaphrodite}+w_{i}y_{i}^{\Hermaphrodite}$ is the mean fitness of male ($\Hermaphrodite=\male$) or female ($\Hermaphrodite=\female$) gametes. 
+
+Random mating then occurs between gametes to produce diploid zygotes.
+%To shorten notation we now use index $i$ (and $j$) to denote the alleles at both the $\mathbf{A}$ and $\mathbf{M}$ loci and label $MA=1$, $Ma=2$, $mA=3$, and $ma=4$, such that $i,j\in\{1,2,3,4\}$.
+The frequencies of XX zygotes are then denoted as $xx_{ij}$, XY zygotes as $xy_{ij}$, and YY zygotes as $yy_{ij}$, where \textbf{A} and \textbf{M} locus genotypes are given by $i,j\in\{1,2,3,4\}$, as above. 
+In $XY$ zygotes, the haplotype inherited from an X-bearing gamete is given by $i$ and the haplotype from a Y-bearing gamete is given by $j$. 
+In XX and YY zygotes, individuals with diploid genotype $ij$ are equivalent to those with diploid genotype $ji$; for simplicity, we use $xx_{ij}$ and $yy_{ij}$ with $i\neq j$ to denote the average of these frequencies, $xx_{ij}=(x_{i}^{\female,s}x_{j}^{\male,s}+x_{j}^{\female,s}x_{i}^{\male,s})/2$ and $yy_{ij}=(y_{i}^{\female,s}y_{j}^{\male,s}+y_{j}^{\female,s}y_{i}^{\male,s})/2$. 
+
+
+Denoting the \textbf{M} locus genotype by $b \in \{MM, Mm, mm\}$ and the \textbf{X} locus genotype by $c \in \{XX, XY, YY\}$, zygotes develop as females with probability $k_{bc}$. 
+Therefore, the frequencies of XX females are given by $xx_{ij}^{\female}=k_{bc}xx_{ij}$, XY females are given by $xy_{ij}^{\female}=k_{bc}xy_{ij}$, and YY females are given by $yy_{ij}^{\female}=k_{bc}yy_{ij}$. 
+Similarly, XX male frequencies are $xx_{ij}^{\male}=(1-k_{bc})xx_{ij}$, XY male frequencies are $xy_{ij}^{\male}=(1-k_{bc})xy_{ij}$, and YY males frequencies are $yy_{ij}^{\male}=(1-k_{bc})yy_{ij}$.
+This notation allows both the ancestral and novel sex-determining regions to determine zygotic sex according to an XY system, a ZW system, or an environmental sex-determining system. 
+In addition, we can consider any epistatic dominance relationship between the two sex-determining loci. 
+Here, we assume that the ancestral sex-determining system (\textbf{X} locus) is XY ($k_{MMXX}=1$ and $k_{MMXY}=k_{MMYY}=0$) or ZW ($k_{MMZZ}=0$ and $k_{MMZW}=k_{MMWW}=1$) and epistatically recessive to a dominant novel sex-determining locus, \textbf{M} ($k_{Mmc}=k_{mmc}=k$). 
+
+
+Selection among diploids then occurs according to the diploid genotype at the \textbf{A} locus, $l \in \{AA, Aa, aa\}$, for an individual of type $ij$ (see Table \ref{tab:fitnesstable}). 
+The diploid frequencies after selection in sex $\Hermaphrodite$ are given by $xx_{ij}^{\Hermaphrodite,s}=w_{l}^{\Hermaphrodite} xx_{ij}/\bar{w}^{\Hermaphrodite}$, $xy_{ij}^{\Hermaphrodite,s}=w_{l}^{\Hermaphrodite} xy_{ij}/\bar{w}^{\Hermaphrodite}$, and $yy_{ij}^{\Hermaphrodite,s}=w_{l}^{\Hermaphrodite} yy_{ij}/\bar{w}^{\Hermaphrodite}$, where $\bar{w}^{\Hermaphrodite}= \sum_{i=1}^{4}\sum_{j=1}^{4}w_{l}^{\Hermaphrodite}xx_{ij}+w_{l}^{\Hermaphrodite}xy_{ij}+w_{l}^{\Hermaphrodite}yy_{ij}$ is the mean fitness of individuals of sex $\Hermaphrodite$. 
+
+Finally, these diploids undergo meiosis to produce the next generation of gametes. 
+Recombination and sex-specific meiotic drive occur during meiosis.
+%We can also assume that recombination is sex specific and/or affected by the M locus - but generally we don't so I just describe $R=R_{f}=R, r_{MM,d}=r_{Mm,d}=r_{mm,d}=r, \chi_{m}=\chi_{f}=\chi$.
+Here, we allow any relative locations for the SDR, \textbf{A}, and \textbf{M} loci by using three parameters to describe the recombination rates between them. 
+$R$ is the recombination rate between the \textbf{A} locus and the \textbf{M} locus, $\rho$ is the recombination rate between the \textbf{M} locus and the \textbf{X} locus, and $r$ is the recombination rate between the \textbf{A} locus and the \textbf{X} locus. 
+Table \nameref{tab:chisubstitutions} shows replacements that can be made for each possible ordering of the loci assuming that there is no cross-over interference.
+During meiosis in sex $\Hermaphrodite$, meiotic drive occurs such that, in $Aa$ heterozygotes, a fraction $\alpha^{\Hermaphrodite}$ of gametes produced carry the $A$ allele and $(1-\alpha^\Hermaphrodite)$ carry the $a$ allele. 
+
+Among gametes from sex $\Hermaphrodite$, the frequencies of haplotypes (before gametic competition) in the next generation are given by
+
+\begingroup
+\allowdisplaybreaks
+\begin{subequations}
+\begin{align}
+%
+\begin{split}
+x_{1}^{{\Hermaphrodite}'}=&xx_{11}^{\Hermaphrodite,s}+xx_{13}^{\Hermaphrodite,s}/2+(xx_{12}^{\Hermaphrodite,s}+xx_{14}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&-R(xx_{14}^{\Hermaphrodite,s}-xx_{23}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
+&+(xy_{11}^{\Hermaphrodite,s}+xy_{13}^{\Hermaphrodite,s})/2+(xy_{12}^{\Hermaphrodite,s}+xy_{14}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&- r(xy_{12}^{\Hermaphrodite,s}-xy_{21}^{\Hermaphrodite,s})\alpha^\Hermaphrodite - \rho(xy_{13}^{\Hermaphrodite,s}-xy_{31}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{14}^{\Hermaphrodite,s} +(R+\rho-r)xy_{41}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{23}^{\Hermaphrodite,s}+(R+\rho-r)xy_{32}^{\Hermaphrodite,s}\big{]}\alpha^\Hermaphrodite/2
+\end{split}
+\\
+%
+\begin{split}
+x_{2}^{{\Hermaphrodite}'}=&xx_{22}^{\Hermaphrodite,s}+xx_{24}^{\Hermaphrodite,s}/2+(xx_{12}^{\Hermaphrodite,s}+xx_{23}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&-R(xx_{23}^{\Hermaphrodite,s}-xx_{14}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
+&(xy_{22}^{\Hermaphrodite,s}+xy_{24}^{\Hermaphrodite,s})/2+(xy_{21}^{\Hermaphrodite,s}+xy_{23}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite)\\
+&- r(xy_{21}^{\Hermaphrodite,s}-xy_{12}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \rho(xy_{24}^{\Hermaphrodite,s}-xy_{42}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{23}^{\Hermaphrodite,s}+(R+\rho-r)xy_{32}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{14}^{\Hermaphrodite,s}+(R+\rho-r)xy_{41}^{\Hermaphrodite,s}\big{]}(1-\alpha^\Hermaphrodite)/2
+\end{split}
+\\
+%
+\begin{split}
+x_{3}^{{\Hermaphrodite}'}=&xx_{33}^{\Hermaphrodite,s}+xx_{13}^{\Hermaphrodite,s}/2+(xx_{23}^{\Hermaphrodite,s}+xx_{34}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&-R(xx_{23}^{\Hermaphrodite,s}-xx_{14}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
+&(xy_{33}^{\Hermaphrodite,s}+xy_{31}^{\Hermaphrodite,s})/2+(xy_{32}^{\Hermaphrodite,s}+xy_{34}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&- r(xy_{34}^{\Hermaphrodite,s}-xy_{43}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite - \rho(xy_{31}^{\Hermaphrodite,s}-xy_{13}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{32}^{\Hermaphrodite,s} +(R+\rho-r)xy_{23}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{41}^{\Hermaphrodite,s}+(R+\rho-r)xy_{14}^{\Hermaphrodite,s}\big{]} \alpha^\Hermaphrodite/2
+\end{split}
+\\
+%
+\begin{split}
+x_{4}^{{\Hermaphrodite}'}=&xx_{44}^{\Hermaphrodite,s}+xx_{34}^{\Hermaphrodite,s}/2+(xx_{14}^{\Hermaphrodite,s}+xx_{24}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&-R(xx_{14}^{\Hermaphrodite,s}-xx_{23}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
+&(xy_{44}^{\Hermaphrodite,s}+xy_{42}^{\Hermaphrodite,s})/2+(xy_{41}^{\Hermaphrodite,s}+xy_{43}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite)\\
+&- r(xy_{43}^{\Hermaphrodite,s}-xy_{34}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \rho(xy_{42}^{\Hermaphrodite,s}-xy_{24}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{41}^{\Hermaphrodite,s}+(R+\rho-r)xy_{14}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{32}^{\Hermaphrodite,s}+(R+\rho-r)xy_{23}^{\Hermaphrodite,s}\big{]}(1-\alpha^\Hermaphrodite)/2
+\end{split}
+\\
+\begin{split}
+y_{1}^{{\Hermaphrodite}'}=&yy_{11}^{\Hermaphrodite,s}+yy_{13}^{\Hermaphrodite,s}/2+(yy_{12}^{\Hermaphrodite,s}+yy_{14}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&-R(yy_{14}^{\Hermaphrodite,s}-yy_{23}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
+&(xy_{11}^{\Hermaphrodite,s}+xy_{31}^{\Hermaphrodite,s})/2+(xy_{21}^{\Hermaphrodite,s}+xy_{41}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&- r(xy_{21}^{\Hermaphrodite,s}-xy_{12}^{\Hermaphrodite,s})\alpha^\Hermaphrodite - \rho(xy_{31}^{\Hermaphrodite,s}-xy_{13}^{\Hermaphrodite,s})/2\\
+&+\big{[} - (R+r+\rho)xy_{41}^{\Hermaphrodite,s} + (R+\rho-r)xy_{14}^{\Hermaphrodite,s}\\
+& + (R+r-\rho)xy_{32}^{\Hermaphrodite,s} + (R+\rho-r) xy_{23}^{\Hermaphrodite,s}\big{]}\alpha^\Hermaphrodite/2
+\end{split}
+\\
+%
+\begin{split}
+y_{2}^{{\Hermaphrodite}'}=&yy_{22}^{\Hermaphrodite,s}+yy_{24}^{\Hermaphrodite,s}/2+(yy_{12}^{\Hermaphrodite,s}+yy_{23}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&-R(yy_{23}^{\Hermaphrodite,s}-yy_{14}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
+&(xy_{22}^{\Hermaphrodite,s}+xy_{42}^{\Hermaphrodite,s})/2+(xy_{12}^{\Hermaphrodite,s}+xy_{32}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite)\\
+&- r(xy_{12}^{\Hermaphrodite,s}-xy_{21}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \rho(xy_{42}^{\Hermaphrodite,s}-xy_{24}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{32}^{\Hermaphrodite,s} +(R+\rho-r) xy_{23}^{\Hermaphrodite,s}\\
+&+(R+r-\rho)xy_{41}^{\Hermaphrodite,s}+(R+\rho-r)xy_{14}^{\Hermaphrodite,s}\big{]}(1-\alpha^\Hermaphrodite)/2
+\end{split}
+\\
+%
+\begin{split}
+y_{3}^{{\Hermaphrodite}'}=&yy_{33}^{\Hermaphrodite,s}+yy_{13}^{\Hermaphrodite,s}/2+(yy_{23}^{\Hermaphrodite,s}+yy_{34}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&-R(yy_{23}^{\Hermaphrodite,s}-yy_{14}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
+&(xy_{33}^{\Hermaphrodite,s}+xy_{13}^{\Hermaphrodite,s})/2+(xy_{23}^{\Hermaphrodite,s}+xy_{43}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&- r(xy_{43}^{\Hermaphrodite,s}-xy_{34}^{\Hermaphrodite,s})\alpha^\Hermaphrodite - \rho(xy_{13}^{\Hermaphrodite,s}-xy_{31}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho)xy_{23}^{\Hermaphrodite,s} +(R+\rho-r)xy_{32}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{14}^{\Hermaphrodite,s} + (R+\rho-r) xy_{41}^{\Hermaphrodite,s}\big{]}\alpha^\Hermaphrodite/2
+\end{split}
+\\
+%
+\begin{split}
+y_{4}^{{\Hermaphrodite}'}=&yy_{44}^{\Hermaphrodite,s}+yy_{34}^{\Hermaphrodite,s}/2+(yy_{14}^{\Hermaphrodite,s}+yy_{24}^{\Hermaphrodite,s})\alpha^\Hermaphrodite\\
+&-R(yy_{14}^{\Hermaphrodite,s}-yy_{23}^{\Hermaphrodite,s}) \alpha^\Hermaphrodite\\
+&(xy_{44}^{\Hermaphrodite,s}+xy_{24}^{\Hermaphrodite,s})/2+(xy_{14}^{\Hermaphrodite,s}+xy_{34}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite)\\
+&- r(xy_{34}^{\Hermaphrodite,s}-xy_{43}^{\Hermaphrodite,s})(1-\alpha^\Hermaphrodite) - \rho(xy_{24}^{\Hermaphrodite,s}-xy_{42}^{\Hermaphrodite,s})/2\\
+&+\big{[}-(R+r+\rho) xy_{14}^{\Hermaphrodite,s} + (R+\rho-r)xy_{41}^{\Hermaphrodite,s}\\
+&+(R+r-\rho) xy_{23}^{\Hermaphrodite,s} + (R+\rho-r) xy_{32}^{\Hermaphrodite,s}\big{]}(1-\alpha^\Hermaphrodite)/2
+\end{split}
+\end{align}
+\label{eq:recursions}
+\end{subequations}
+
+\endgroup
+
+\noindent
+The full system is therefore described by 16 recurrence equations (three diallelic loci in two sexes, $2^3 \times 2 = 16$). 
+However, not all diploid types are produced under certain sex-determination systems. 
+For example, with the $M$ allele fixed and an ancestral $XY$ sex-determining system, there are $XX$ males, $XY$ females, or $YY$ females ($x_{3}^\Hermaphrodite=x_{4}^\Hermaphrodite=y_{4}^\Hermaphrodite=y_{3}^\Hermaphrodite=y_{i}^\female=0$). 
+%($xx_{11}^{\male}=xx_{12}^{\male}=xx_{22}^\male=xy_{11}^{\female}=xy_{12}^{\female}=xy_{21}^{\female}=xy_{22}^\female=yy_{11}^{\female}=yy_{12}^{\female}=yy_{22}^\female=0$). 
+In this case, the system only involves six recursion equations, %because there is only one \textbf{M} locus allele and no Y-bearing female gametes. 
+which we assume below to calculate the equilibria. 
+
+%I think this should be moved below because we have some 'results' where we don't assume weak selection but we only have the equilibrium calculated analytically for weak selection. 
+
+
+% the differences in the frequencies of $A$ in each type of gamete are small, as is the bias in the sex-determining factor from the heterogametic sex, and we can solve for the mean frequency of $A$ across all types ($p_A$), the difference in the frequencies of $A$ between two of the three types, and the bias in the frequency of the sex-determining factor, to first order in selection.
+%Linear stability analysis can then be used to determine the stability of this equilibrium.
+%Without haploid selection or meiotic drive our results reduce to those of \cite{vanDoorn:2007eu}. %when $k=0$ (neo-$Y$ invading a $ZW$ system) or when $k=1$ (neo-$W$ invading an $XY$ system) (\textcolor{red}{CHECK}).
+%However, with haploid selection or meiotic drive a stable polymorphism at locus \textbf{A} no longer requires sexually antagonistic selection. %, as it can also be achieved by ploidally-antagonistic selection.
+
+
+\end{document}
+
+
+

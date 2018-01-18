@@ -1,0 +1,228 @@
+\documentclass[12pt]{article}
+%\documentclass{nature}
+
+% Including pdf figures
+\usepackage{graphicx}
+\graphicspath{ {../Plots/} }
+\usepackage{pdfpages}
+%really place a figure in a location
+\usepackage{float}
+%Overrun caption
+\usepackage[CaptionAfterwards]{fltpage}
+% Math stuff
+\usepackage{amsmath}
+\usepackage{stix}
+% Bibliographies
+\usepackage[numbers]{natbib}
+\bibpunct{(}{)}{,}{a}{}{;} 
+
+\usepackage[flushleft]{threeparttable}
+
+\usepackage{hyperref}
+
+\usepackage[font={scriptsize}]{caption}
+
+\usepackage{lineno} %gives line numbers with \lineno command
+
+\usepackage{setspace}
+\onehalfspace
+
+\usepackage{tikz}%for putting words on figures
+\usetikzlibrary{positioning}%for relative positioning
+
+%to rotate figures
+\usepackage{rotating}
+\usepackage{pdflscape}
+
+\begin{document}
+
+\setcounter{equation}{0}
+\renewcommand{\theequation}{S1.\arabic{equation}}
+
+\section*{S3 Appendix}
+
+\subsection*{Invasion conditions}
+
+\textcolor{red}{Cover the other parts of the characteristic polynomial here.}
+\textcolor{blue}{Waiting for Sally's proof!}
+
+A rare neo-Y or neo-W will spread from a given ancestral equilibrium when the leading eigenvalue, $\lambda$, of the Jacobian matrix derived from the eight mutant recursion equations (given by \ref{eq:recursions}c,d,g,h), evaluated at the ancestral equilibrium, is greater than one.
+However, because a neo-Y (neo-W) is always in males (females) and is epistatically dominant to the ancestral sex-determining locus, we need only two recursion equations (e.g., tracking the change in the frequency of neo-Y-$A$ and neo-Y-$a$ gametes from males) and thus the leading eigenvalue is the largest solution the polynomial $\lambda^2 + b\lambda + c = 0$ as described in the text (Table \ref{tab:haplotype_growth}).
+%It can be shown (see supplementary Mathematica file) that the coefficients are $b= - (\lambda_{mA} + \lambda_{ma})+(\chi_{mA} + \chi_{ma})$ and $c = (\lambda_{mA}-\chi_{mA}) (\lambda_{ma}-\chi_{ma}) -\chi_{mA} \chi_{ma}$, where $\lambda_{mi}$ is the multiplicative growth rate of the frequency of mutants on background $i\in\{A,a\}$, without accounting for loss due to recombination, and $\chi_{mi}$ is the rate at which mutants on background $i\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes.
+%The leading eigenvalue is then greater than one whenever $\lambda_{mA}>1$ and $\lambda_{ma}>1$, less than one whenever $\lambda_{mA}<1$ and $\lambda_{ma}<1$, and greater than one whenever  $\lambda_{mA}>1$ or $\lambda_{ma}>1$ and $\chi_{ma} (\lambda_{mA}-1) + \chi_{mA} (\lambda_{ma}-1) > 0$.
+
+The general conditions for the invasion of a neo-sex-determining allele are given in the main text, in terms of the growth rates of the mutant haplotypes in the absence of recombination ($\lambda_{mi}$) and the rate that recombination destroys them ($\chi_{mi}$).
+For tight linkage between the ancestral sex-determining locus and the selected locus we can calculate these terms explicitly (see below).
+For weak selection we can take a Taylor series of the leading eigenvalue. 
+The leading eigenvalue, $\lambda$, for any $k$, is given up to order $\epsilon^2$ by equation \eqref{eq:lambda_ESD_k}.
+
+\subsubsection*{Tight linkage between \textbf{A} and \textbf{X} ($r \approx 0$)}
+
+Here, we explore the conditions under which a neo-W invades an XY system assuming that the \textbf{A} locus is initially in tight linkage with the ancestral sex-determining region ($r \approx 0$). 
+We disregard neo-Y mutations, which never spread given that the ancestral population is at a stable equilibrium (see supplementary \textit{Mathematica} notebook for proof). 
+
+Starting with the simpler equilibrium $(B)$, the terms of that determine the leading eigenvalue are
+
+\begin{subequations}\label{Binvasion}
+\begin{align}
+\lambda_{mA}&= \left[w_{A}^\male (1+\alpha^\male_\Delta) \right]^{-1}
+\frac{w_{A}^\female }{w_{A}^\female}
+\frac{\left[ w_{A}^\male (1+\alpha^\male_\Delta) w_{AA}^\female + 
+w_{a}^\male (1-\alpha^\male_\Delta) w_{Aa}^\female (1+\alpha^\female_\Delta) \right]}
+{ 2w_{AA}^\female } \\
+\lambda_{ma}&= \left[w_{A}^\male (1+\alpha^\male_\Delta) \right]^{-1}
+\frac{w_{a}^\female}{w_{A}^\female}
+\frac{\left[  w_{A}^\male (1+\alpha^\male_\Delta) w_{Aa}^\female (1-\alpha^\female_\Delta)+
+w_{a}^\male (1-\alpha^\male_\Delta) w_{aa}^\female \right]}
+{ 2w_{AA}^\female } \\
+\chi_{mA}&= \frac{1}{2} \left[w_{A}^\male (1+\alpha^\male_\Delta) \right]^{-1}
+\frac{w_{A}^\female }{w_{A}^\female}
+ \frac{\left[  w_{a}^\male (1-\alpha^\male_\Delta) w_{Aa}^\female (1 + \alpha^\female_\Delta) \right]}
+{ w_{AA}^\female } \frac{R}{2}\\
+\chi_{ma}&= \frac{1}{2} \left[w_{A}^\male (1+\alpha^\male_\Delta) \right]^{-1}
+\frac{w_{a}^\female}{w_{A}^\female}
+ \frac{\left[  w_{A}^\male (1+\alpha^\male_\Delta) w_{Aa}^\female (1-\alpha^\female_\Delta) \right]}
+{  w_{AA}^\female} \frac{R}{2}
+\end{align}
+\end{subequations}
+
+%\noindent
+%In this case, the zygotic sex ratio ($\zeta$) is given by the difference in haploid selection in males on $a$ (fixed on the Y) and $A$ (fixed on the X) alleles, i.e., there are more males than females if $\zeta = \alpha^\male w_A^\male / [(1-\alpha^\male)w_a^\male + \alpha^\male w_A^\male]<1/2$. %$\alpha^\male<1/2$ and/or $w_{a}^\male>w_{A}^\male$. 
+%Populations with haploid selection for $a$ in males have a male biased zygotic sex ratio are thus more permissive to invasion by a neo-W ($\lambda_{mA}$ and $\lambda_{ma}$ larger).
+%%In addition, the spread of neo-W alleles depends on the fitness of female diploids after mating with an X-$A$ or Y-$a$ male gamete, relative to the fitness of females in the population (all have genotype $AA$ and fitness $w_{AA}^\female$ at this equilibrium). 
+%Haploid selection in males has a second effect; the spread rate of neo-W haplotypes is determined by their fitness in diploid females, which depends on their diploid genotype and thus on the male gamete they pair with. 
+%Zygotes carrying dominant neo-W alleles will develop as females regardless of their genotype at the XY locus. 
+%Therefore, neo-W females result from matings with either X-$A$ or Y-$a$ male gametes. 
+%The relative proportion of these male gametes is determined by haploid selection in males; mating with a Y-$a$ male gamete is more likely if the $a$ allele is favoured during male gamete production or competition ($\zeta<1/2$). 
+%Thus, neo-W females experience different diploid selection than XX females, and the extent of this difference depends on haploid selection in males.
+%Furthermore, haploid selection in females can directly select upon neo-W-$A$ or neo-W-$a$ haplotypes. 
+%A neo-W-$A$ female gamete has the same fitness during haploid competition as resident $A$-bearing female gametes. 
+%On the other hand, neo-W-$a$ female gametes can be favoured or disfavoured during female haploid competition (favoured if $w_{a}^\female>w_{A}^\female$). 
+%Meiotic drive in females ($\alpha^\female$) similarly affects the fitness of these neo-W haplotypes, except that it impacts both haplotypes as meiotic drive only occurs in heterozygotes and therefore does not occur in resident XX females (who are always homozygote $AA$). 
+
+Haploid selection impacts the spread of neo-W haplotypes in three ways.
+Firstly, the zygotic sex ratio becomes male biased, $\zeta>1/2$, when the $a$ allele (which is fixed on the Y) is favoured during competition among male gametes or by meiotic drive in males.
+Specifically, at equilibrium $(B)$, female zygote frequency is $1 - \zeta = w_A^\male (1+\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ where $2\bar{w}_{H}^\male= \big[w_a^\male (1-\alpha^\male_\Delta) +  w_A^\male (1+\alpha^\male_\Delta) \big]$ has been canceled out in equations \eqref{Binvasion} to leave the term $\left[w_{A}^\male (1+\alpha^\male_\Delta) \right]^{-1}$. 
+Male biased sex ratios facilitate the spread of a neo-W because neo-W alleles cause the zygotes that carry them to develop as the rarer, female, sex. 
+
+Secondly, haploid selection in females selects on neo-W haplotypes directly.
+At equilibrium $(B)$, the fitness of female gametes under the ancestral sex-determining system is $w_{A}^\female$ such that the relative fitnesses of neo-W-$A$ and neo-W-$a$ haplotypes during female gametic competition are $w_{A}^\female/w_{A}^\female$ and $w_{a}^\female/w_{A}^\female$ (see terms in equation \ref{Binvasion}). 
+Meiotic drive in females will also change the proportion of gametes that carry the $A$ versus $a$ alleles, which will be produced by heterozygous females in proportions $(1+\alpha_{\Delta}^\female)/2$ and $(1-\alpha_{\Delta}^\female)/2$, respectively. 
+These terms are only associated with heterozygous females, i.e., they are found alongside $w_{Aa}^\female$.
+
+Thirdly, haploid selection in males affects the diploid genotypes of females by altering the allele frequencies in the male gametes that female gametes pair with.
+At equlibrium $(B)$, neo-W female gametes will mate with X-$A$ male gametes with probability $ w_A^\male (1+\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ and Y-$a$ male gametes with probability $w_a^\male (1-\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$, where the $2\bar{w}_{H}^\male$ terms have been canceled in equation \eqref{Binvasion} (as mentioned above). 
+Thus, for example, neo-W-$A$ haplotypes are found in $AA$ female diploids with probability $ w_A^\male (1+\alpha^\male_\Delta)/ (2\bar{w}_{H}^\male)$ (first term in square brackets in the numerator of equation \ref{Binvasion}a) and in $Aa$ female diploids with probability $w_a^\male (1-\alpha^\male_\Delta) / (2\bar{w}_{H}^\male)$ (see equation \ref{Binvasion}c and the second term in square brackets in the numerator of equation \ref{Binvasion}a).
+
+%For instance, because an epistatically dominant neo-W always causes its carrier to become female, it creates females who carry either Y-$a$ or X-$A$ genotypes from their father.
+%Thus, because when there is a polymorphism the X carries some non-zero frequency of $A$, haploid selection in males impacts the diploid genotypes of females (e.g., creating more $Aa$ females when drive in males favours Y-$a$).
+%How this affects the spread of the neo-W then depends on diploid and haploid selection in females.
+
+The other terms in equations \eqref{Binvasion} are more easily interpreted if we assume that there is no haploid selection in either sex, in which case $\lambda_{mA}=(w_{AA}^\female+w_{Aa}^\female)/2 w_{AA}^\female$ and $\lambda_{ma}=(w_{aa}^\female+w_{Aa}^\female)/ 2 w_{AA}^\female$.
+Neither haplotype can spread under purely sexually-antagonistic selection, where $A$ is directionally favoured in females ($w_{AA}^\female>w_{Aa}^\female>w_{aa}^\female$) and $a$ is directionally favoured in males ($w_{AA}^\male>w_{Aa}^\male>w_{aa}^\male$).  
+Essentially, the X is then already as specialized as possible for the female beneficial allele ($A$ is fixed on the X), and the neo-W often makes daughters with the Y-$a$ haplotype, increasing the flow of $a$ alleles into females, which reduces the fitness of those females.  
+
+If selection doesn't uniformly favour $A$ in females, however, neo-W-$A$ haplotypes and/or neo-W-$a$ haplotypes can spread ($\lambda_{mA}>1$ and/or $\lambda_{ma}>1$).
+%If $\lambda_{mA}>1$ (requiring $w_{Aa}^\female>w_{AA}^\female$), the implication is that the neo-W can spread alongside the $A$ allele, despite the fact that the neo-W sometimes brings $Y-a$ haplotypes into females, because $a$ is favoured by selection in females despite $A$ being fixed on the X.
+A neo-W-$A$ haplotype can spread ($\lambda_{mA}>1$) when $w_{Aa}^\female>w_{AA}^\female$, despite the fact that a neo-W brings Y-$a$ haplotypes into females.
+In this case the $a$ allele is favoured by selection in females despite $A$ being fixed on the X.
+For this equilibrium to be stable (i.e.,  to keep $A$ fixed on the X), X-$a$ cannot be overly favoured in females and X-$A$ must be sufficiently favoured in males (for example, by overdominance in males). 
+Specifically, from the stability conditions for equilibrium (B), we must have $w_{Aa}^\female < 2 w_{AA}^\female$ and $w_{Aa}^\male/\big[(w_{aa}^\male+w_{Aa}^\male)/2\big]>w_{Aa}^\female/w_{AA}^\female$. 
+
+Still considering $w_{Aa}^\female>w_{AA}^\female$, the neo-W can also spread alongside the $a$ allele ($\lambda_{ma}>1$) if $w_{aa}^\female$ is large enough such that $(w_{Aa}^\female+w_{aa}^\female)/2>w_{AA}^\female$.
+%there is sufficiently strong underdominance in females ($w_{aa}^\female>w_{Aa}^\female$) \textcolor{blue}{[this is describing directional selection, not overdominance - check the conditions for the case we want to talk about]}, such that $(w_{Aa}^\female+w_{aa}^\female)/2>w_{AA}^\female$.  
+This can occur with overdominance or directional selection for $a$ in females (Figure \ref{fig:regionplots}B,C).
+In this case, $a$ is favoured in females (comparing $Aa$ to $AA$ genotypes in females) but $A$ is fixed on the X due to selection in males. 
+The neo-W-$a$ haplotype can spread because it produces females with higher fitness $Aa$ and $aa$ genotypes. 
+
+%When both haplotypes can spread on their own ($\lambda_{mA}>1$ and $\lambda_{ma}>1$), the neo-W invades regardless the recombination rate between it and the selected locus, $R$.
+%When neither haplotype can spread ($\lambda_{mA}<1$ and $\lambda_{ma}<1$) the neo-W can never invade.
+%And when only one haplotype can spread on its own the neo-W invades only when the rate of recombination onto the favourable background is sufficiently larger than the rate of recombination off this background (i.e., equation\ref{eq:lambdasGen} is satisfied).
+
+%Haploid selection affects the conclusions outlined above by altering the zygotic sex ratio and exerting direct selection on neo-W haplotypes.
+%The effect of sex ratio selection is straightforward and can be seen in equation \eqref{Binvasion}, where male drive and gamete competition for $a$ (which is fixed on the Y and therefore causes a male bias) increases all four terms.
+%Direct selection on neo-W haplotypes can also be seen in equation \eqref{Binvasion} by noticing that increasing female drive in favour of $A$ increases the neo-W-$A$ haplotype growth rate ($\lambda_{mA}$) while female drive and gamete competition in favour of $a$ increases the neo-W-$a$ haplotype growth rate ($\lambda_{ma}$).
+%Gamete competition in females does not impact the spread of neo-W-$A$ haplotypes because they are on the same background as the resident X.
+%Recombination between the selected locus and the neo-W complicates things slightly, as selective advantages for one neo-W haplotype during the haploid stage in females comes at a cost to the other, and thus recombination off the favoured background becomes more detrimental.
+
+%\textcolor{red}{the versions for equil $(A)$ are not terrible but could be improved by cleverly re-writing with the $\phi$ and $\psi$ terms from above, I think...}
+
+Similar equations can be derived for equilibrium (A) by substituting the equilibrium allele frequencies into Table \ref{tab:haplotype_growth}
+
+\begin{subequations}\label{Ainvasion}
+\begin{align}
+\lambda_{mA}&= \frac{a}{b} \left[w_{AA}^\female w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi +  w_{Aa}^\female (1+\alpha^\female_\Delta) w_a^\male c \right] / (2 w_a^\female) \\
+\lambda_{ma}&= \frac{a}{b} \left[ w_{Aa}^\female (1-\alpha^\female_\Delta) w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi +  w_{aa}^\female w_a^\male c \right] / (2 w_A^\female) \\
+\chi_{mA}&= \frac{a}{b} \frac{R}{2} \left[   w_{Aa}^\female (1+\alpha^\female_\Delta) w_a^\male c \right] / w_a^\female\\ 
+\chi_{ma}&= \frac{a}{b} \frac{R}{2} \left[ w_{Aa}^\female (1-\alpha^\female_\Delta) w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \phi \right] / w_A^\female
+\end{align}
+\end{subequations}
+
+\noindent
+where 
+
+\begin{subequations}
+\begin{align}
+a &= w_a^\female \phi + w_A^\female \psi \\
+b &= w_{AA}^\female \left[ w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) \right] \phi^2 + w_{Aa}^\female \left[ w_{Aa}^\male w_A^\male (1+\alpha^\male_\Delta) + w_{aa}^\male w_a^\male \right] \psi \phi + w_{aa}^\female \left( w_{aa}^\male w_a^\male \right) \psi^2\\
+%c &= w_{Aa}^\male (1-\alpha^\male_\Delta) \phi \left[ w_{Aa}^\male (1+\alpha^\male_\Delta) \phi \right] + w_{Aa}^\male\phi \left[ 2w_{AA}^\male + w_{aa}^\male (1+\alpha^\male_\Delta) \right] \psi + w_{aa}^\male \psi \left(2w_{AA}^\male \psi \right) \\
+c &= w_{Aa}^\male (1-\alpha^\male_\Delta) \phi + 2w_{aa}^\male \psi
+\end{align}
+\end{subequations}
+
+As with equilibrium (B), haploid selection again modifies invasion fitnesses by altering the sex ratio and the diploid genotypes of females and directly selecting upon female gametes.
+The only difference is that resident XX females are no longer always homozygote $AA$ and males are no longer always heterozygote $Aa$.
+Thus the effect of haploid selection in males is reduced, as is the difference in fitness between neo-W haplotypes and resident X haplotypes, as both can be on any diploid or haploid background.  
+
+The other terms are easier to interpret in the absence of haploid selection.
+For instance, without haploid selection, the neo-W-$A$ haplotype spreads ($\lambda_{mA}>1$) if and only if
+
+\begin{equation}\label{eq:BeqWAspread}
+2(w_{Aa}^\female-w_{aa}^\female)w_{aa}^\male \psi^2 > (w_{AA}^\female-w_{Aa}^\female)w_{Aa}^\male \phi (\phi-\psi)
+\end{equation}
+
+\noindent  
+where $\phi-\psi=w_{AA}^\female w_{Aa}^\male-w_{aa}^\female w_{aa}^\male$ and both $\phi$ and $\psi$ are positive when equilibrium (A) is stable. 
+In contrast to equilibrium (B), a neo-W haplotype can spread under purely sexually-antagonistic selection  ($w_{aa}^\female<w_{Aa}^\female<w_{AA}^\female$ and $w_{AA}^\male<w_{Aa}^\male<w_{aa}^\male$).
+The neo-W-$A$ can spread as long as it becomes associated with females that bear more $A$ alleles than observed at equilibrium (A). 
+%In this case, the neo-W-$A$ haplotype can spread, despite producing a lot of $Aa$ daughters by obtaining the $a$ from Y-gametes, when $aa$ females, which the neo-W-$A$ never makes, are strongly selected against.
+%This can be intuited from the fact that \eqref{eq:BeqWAspread} will be more easily met when $w_{Aa}^\female-w_{aa}^\female\approx w_{Aa}^\female$ and $w_{AA}^\female-w_{Aa}^\female\approx 0$, implying $w_{aa}^\female \approx 0$ and $w_{Aa}^\female\approx w_{AA}^\female$ (although this is complicated by the fact that $w_{aa}^\female$ and $w_{Aa}^\female$ affect $\phi$ and $\psi$ too, the intuition holds). 
+
+Without haploid selection, the neo-W-$a$ haplotype spreads ($\lambda_{ma}>1$) if and only if
+
+\begin{equation}\label{eq:BeqWaspread}
+(w_{aa}^\female + w_{Aa}^\female-2w_{AA}^\female)w_{Aa}^\male \phi^2 + (w_{aa}^\female-w_{Aa}^\female)(w_{Aa}^\male+2w_{aa}^\male) \phi \psi >0
+\end{equation}
+
+\noindent
+This condition cannot be met with purely sexually antagonistic selection (as both terms on the left-hand side would then be negative), but it can be met under other circumstances. 
+For example, with overdominance in males there is selection for increased $A$ frequencies on X chromosomes in males, which are always paired with Y-$a$ haplotypes.
+Directional selection for $a$ in females can then maintain a polymorphism at the $\textbf{A}$ locus on the X.
+This scenario selects for a modifier that increases recombination between the sex chromosomes \citep[e.g., blue region of Figure 2d in][]{Otto2014} and facilitates the spread of neo-W-$a$ haplotypes, which create more females bearing more $a$ alleles than the ancestral X chromosome does. 
+
+\subsubsection*{Role of Haploid Selection with Tight Linkage}
+
+Haploid selection generally expands the conditions under which neo-W alleles can spread within ancestral systems that have evolved tight linkage between the sex-determining locus and a selected locus ($r \approx 0$).
+First, haploid selection can allow a polymorphism to be maintained when it would not under diploid selection alone (e.g., with directional selection in diploids). 
+In cases of ploidally-antagonistic selection, where there is a balance between alleles favored in the haploid stage and the diploid stage, neo-W alleles - even unlinked alleles - can spread (Figure \nameref{fig:regionPloidAntag}).
+Second, even when diploid selection could itself maintain a polymorphism, haploid selection can increase the conditions under which transitions among sex chromosomes are possible.
+Of particularly importance, when selection is sexually-antagonistic in diploids ($s^\female s^\male <0$ and $0<h^\Hermaphrodite<1$), an unlinked neo-W ($R=1/2$) cannot invade unless there is also haploid selection (see proof in supplementary \textit{Mathematica} file; Figures \ref{fig:SexAntagTighter} and \nameref{fig:SexAntagTighterMaleDrive}). 
+More generally, haploid selection alters the conditions under which neo-W chromosomes can spread (compare Figures \nameref{fig:regionMaleDrive}-\nameref{fig:regionFemaleGS} to Figure \ref{fig:regionplots}). 
+
+%[SALLY:  I think that is enough, but we could add somewhere??: "Without haploid selection, unlinked neo-W alleles ($R=1/2$) can invade only under certain conditions, requiring either overdominance in males or underdominance in females (see proof in supplementary \textit{Mathematica} file).?  Note that underdominance in females with directional selection in males can lead to the spread of unlinked neo-W?s, but only from equilB (only $\lambda_{ma}$ is greater than one in this case).]
+
+Male haploid selection in favour of the $a$ allele ($\alpha_{\Delta}^\male<0$, $w_{A}^\male<w_{a}^\male$) generates male-biased sex ratios at equilibria (A) and (B), where Y-$a$ is fixed ($\hat{p}_{Y}^\male=0$). 
+Male-biased sex-ratios facilitate the spread of neo-W-$A$ and neo-W-$a$ haplotypes (increasing $\lambda_{mA}$ and $\lambda_{ma}$). 
+Panels A-C in Figures \nameref{fig:regionMaleDrive} and \ref{fig:regionMaleGS} show that neo-W haplotypes tend to spread for a wider range of parameters when sex ratios are male biased, compared to Figure \ref{fig:regionplots} without haploid selection. 
+By contrast, male haploid selection in favour of the $A$ allele generates female-biased sex ratios and reduces $\lambda_{mA}$ and $\lambda_{ma}$, as demonstrated by panels D-F in Figures \nameref{fig:regionMaleDrive} and \ref{fig:regionMaleGS}. 
+
+Female haploid selection generates direct selection on the neo-W-$A$ and neo-W-$a$ haplotypes as they spread in females. 
+Thus, female haploid selection in favour of the $a$ allele tends to increase $\lambda_{ma}$ and decrease $\lambda_{mA}$, as shown by panels A-C in Figures \nameref{fig:regionFemaleDrive} and \nameref{fig:regionFemaleGS}. 
+Conversely, female haploid selection in favour of the $A$ allele increases $\lambda_{mA}$ and decreases $\lambda_{ma}$, see panels D-F in Figures \nameref{fig:regionFemaleDrive} and \nameref{fig:regionFemaleGS}. 
+
+Thus, the impact of haploid selection on sex chromosome transitions must be considered as two sides of a coin: it can generate sex ratio biases that drive sex chromosome transitions to equalize the sex ratio, but it can also drive in new sex chromosomes and thereby cause sex ratios to become biased.
+
+\end{document}
+
+
+
