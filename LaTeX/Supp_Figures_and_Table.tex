@@ -34,6 +34,7 @@
 
 \begin{document}
 
+\section*{Supplementary Tables}
 
 \begin{table}[ht]
 \centering
@@ -52,7 +53,7 @@ Substitutions for different loci orders assuming no interference. %and $r,R\in(0
  \end{tabular}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!h]
 \centering
 \smallskip
 \caption{Mean fitnesses and zygotic sex ratio in the resident population ($M$ fixed, XY sex determination). }
@@ -61,20 +62,34 @@ Substitutions for different loci orders assuming no interference. %and $r,R\in(0
   Sex \& Life Cycle Stage & Mean Fitness \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
   female gametes ($\bar{w}_H^\female$) & 
   $p_X^\female w_A^\female + (1-p_X^\female) w_a^\female$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  X-bearing male gametes ($\bar{w}_{HX}^\male$) & 
+  $p_X^{\male} w_A^\male + (1-p_X^{\male}) w_a^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  Y-bearing male gametes ($\bar{w}_{HY}^\male$) & 
+  $p_Y^{\male} w_A^\male + (1-p_Y^{\male}) w_a^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
   male gametes ($\bar{w}_H^\male$) & 
-  $\bar{p}^{\male} w_A^\male + (1-\bar{p}^{\male}) w_a^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  $(1-q) \bar{w}_{HX}^\male + q \bar{w}_{HY}^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
   females ($\bar{w}^\female$) & 
-  $\begin{array}{l}  (1-\zeta)^{-1} \big[ p_X^\female w_A^\female p_X^\male w_A^\male w_{AA}^\female + \\
+%  $\begin{array}{l}  (1-\zeta)^{-1} (1-q) \big[ p_X^\female w_A^\female p_X^\male w_A^\male w_{AA}^\female + \\
+%  (1 - p_X^\female) w_a^\female p_X^\male w_A^\male w_{Aa}^\female + \\
+%  p_X^\female w_A^\female (1 - p_X^\male) w_a^\male w_{Aa}^\female + \\
+%  (1-p_X^\female) w_a^\female (1 - p_X^\male) w_a^\male w_{aa}^\female \big] / \left( \bar{w}_H^\female \bar{w}_H^\male \right)
+%  \end{array} 
+ $\begin{array}{l} \big[ p_X^\female w_A^\female p_X^\male w_A^\male w_{AA}^\female + \\
   (1 - p_X^\female) w_a^\female p_X^\male w_A^\male w_{Aa}^\female + \\
   p_X^\female w_A^\female (1 - p_X^\male) w_a^\male w_{Aa}^\female + \\
-  (1-p_X^\female) w_a^\female (1 - p_X^\male) w_a^\male w_{aa}^\female \big] / \left( \bar{w}_H^\female \bar{w}_H^\male \right)
-  \end{array} 
+  (1-p_X^\female) w_a^\female (1 - p_X^\male) w_a^\male w_{aa}^\female \big] / \left( \bar{w}_H^\female \bar{w}_{HX}^\male \right)
+  \end{array}
   $ \\ [0.5ex] \noalign{\vskip 0.5ex} \hline  \noalign{\vskip 0.5ex}
   males ($\bar{w}^\male$) & 
-  $\begin{array}{l} \zeta^{-1} \big[ p_X^\female w_A^\female  p_Y^\male w_A^\male w_{AA}^\male + \\
+%  $\begin{array}{l} \zeta^{-1} q \big[ p_X^\female w_A^\female  p_Y^\male w_A^\male w_{AA}^\male + \\
+%  (1 - p_X^\female) w_a^\female  p_Y^\male w_A^\male w_{Aa}^\male + \\
+%  p_X^\female w_A^\female  (1 - p_Y^\male) w_a^\male w_{Aa}^\male + \\
+%  (1-p_X^\female) w_a^\female  (1 - p_Y^\male) w_a^\male w_{aa}^\male \big] / \left( \bar{w}_H^\female \bar{w}_H^\male \right) 
+%  \end{array}
+ $\begin{array}{l} \big[ p_X^\female w_A^\female  p_Y^\male w_A^\male w_{AA}^\male + \\
   (1 - p_X^\female) w_a^\female  p_Y^\male w_A^\male w_{Aa}^\male + \\
   p_X^\female w_A^\female  (1 - p_Y^\male) w_a^\male w_{Aa}^\male + \\
-  (1-p_X^\female) w_a^\female  (1 - p_Y^\male) w_a^\male w_{aa}^\male \big] / \left( \bar{w}_H^\female \bar{w}_H^\male \right) 
+  (1-p_X^\female) w_a^\female  (1 - p_Y^\male) w_a^\male w_{aa}^\male \big] / \left( \bar{w}_H^\female \bar{w}_{HY}^\male \right) 
   \end{array}
   $ \\ [0.5ex] \noalign{\vskip 0.5ex} \hline  \noalign{\vskip 0.5ex}
   fraction zygotes male ($\zeta$) & $q \left[ p_Y^\male w_A^\male+(1-p_Y^\male)w_a^\male\right] / \bar{w}_H^\male $
@@ -84,6 +99,7 @@ Substitutions for different loci orders assuming no interference. %and $r,R\in(0
  \end{tabular}
 \end{table}
 
+\newpage
 \section*{Supplementary Figures}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,7 +113,7 @@ Neo-W alleles can spread when loci under diploid selection are tightly linked to
 In panels A and B, the $a$ allele is favoured in females ($w_{aa}^\female=1.05$, $w_{Aa}^\Hermaphrodite=1$, $w_{AA}^\female=0.85$) and selection in males is overdominant ($w_{aa}^\male=w_{AA}^\male=0.75$).
 In panels C and D, selection in males and females is overdominant ($w_{aa}^\female=w_{AA}^\female=0.6$, $w_{aa}^\male=0.5$, $w_{AA}^\male=0.7$, $w_{Aa}^\Hermaphrodite=1$).
 There is no haploid selection $t^\Hermaphrodite = \alpha^\Hermaphrodite_\Delta = 0$.
-These parameters are marked by daggers in Figure \ref{fig:regionplots}B and C, which show that neo-W invasion is expected for any $R$ ($\lambda_{WA},\lambda_{Wa}>1$) when the $a$ allele is nearly fixed on the Y (black lines in this figure; not stable for $r>>0$). 
+These parameters are marked by daggers in Figure \ref{fig:regionplots}B and C, which show that neo-W invasion is expected for any $R$ ($\lambda_{W'A}^{(XY)},\lambda_{W'a}^{(XY)}>1$) when the $a$ allele is nearly fixed on the Y (black lines in this figure; not stable for $r>>0$). 
 Equilibria where the $A$ allele is more common among Y-bearing male gametes can also be stable and allow neo-W invasion for these parameters (blue lines). 
 The weak selection approximation holds when all recombination rates are large relative to selection (around 0 in panels A and C), in which case, in the absence of haploid selection, neo-W alleles should spread if and only if they are more tightly linked to the selected locus (positive invasion fitness if and only if the selected locus is in the grey region). 
 However, when linkage is tight (panels B and D and when the selected locus is near the SDRs in all panels), this weak selection prediction can break down. 
@@ -151,7 +167,7 @@ When $R=0.5$ (green curve), the neo-W does not reach fixation and X,Y,Z, and W a
 Meiotic drive in males affects whether neo-W-$A$ and neo-W-$a$ haplotypes spread when the ancestral-XY locus is tightly linked to a locus under selection ($r=0$). 
 We vary the fitness of male homozygotes relative to heterozygotes ($w_{Aa}^\Hermaphrodite=1$) and only consider stable equilibria at which both \textbf{A} locus allele are maintained and the $a$ allele is initially fixed on the Y, region outlined. 
 In panels A-C, meiotic drive in males favours the $a$ allele ($\alpha_{\Delta}^\male=-0.16$), creating male-biased sex ratios and generally increasing $\lambda_{WA}$ and $\lambda_{Wa}$. 
-By contrast, $\lambda_{WA}$ and $\lambda_{Wa}$ tend to be reduced when meiotic drive in males favours the $A$ allele ($\alpha_{\Delta}^\male=0.16$), panels D-F. 
+By contrast, $\lambda_{W'A}^{(XY)}$ and $\lambda_{W'a}^{(XY)}$ tend to be reduced when meiotic drive in males favours the $A$ allele ($\alpha_{\Delta}^\male=0.16$), panels D-F. 
 We consider three forms of selection in females: directional selection in favour of the $A$ allele (panels A and D, $w_{aa}^\female=0.85$, $w_{AA}^\female=1.05$), direction selection in favour of the $a$ allele (panels B and E, $w_{aa}^\female=1.05$, $w_{AA}^\female=0.85$), and overdominance (panels C and F, $w_{aa}^\female=w_{AA}^\female=0.6$).
 %\textcolor{red}{Panel F mislabelled, should have $\lambda_{Wa}>1$ \& $\lambda_{WA}<1$ as the upper label that has the line.}
 }
@@ -165,8 +181,8 @@ We consider three forms of selection in females: directional selection in favour
 \caption{
 Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is male gametic competition at a locus that is tightly linked to the ancestral-XY locus.
 Diploid selection parameters ($w_{ij}^\Hermaphrodite$) are the same as those in Figure \ref{fig:regionMaleDrive}. 
-The $a$ allele is favoured during male gametic competition in Panels A-C ($w_{a}^\male=1.16$, $w_{A}^\male=1$), which creates male biased sex ratios and increases $\lambda_{WA}$ and $\lambda_{Wa}$. 
-On the other hand, the $A$ allele is favoured during male gametic competition in Panels D-F ($w_{a}^\male=1$, $w_{A}^\male=1.16$) and $\lambda_{WA}$ and $\lambda_{Wa}$ tend to be reduced. 
+The $a$ allele is favoured during male gametic competition in Panels A-C ($w_{a}^\male=1.16$, $w_{A}^\male=1$), which creates male biased sex ratios and increases $\lambda_{W'A}^{(XY)}$ and $\lambda_{W'a}^{(XY)}$. 
+On the other hand, the $A$ allele is favoured during male gametic competition in Panels D-F ($w_{a}^\male=1$, $w_{A}^\male=1.16$) and $\lambda_{W'A}^{(XY)}$ and $\lambda_{W'a}^{(XY)}$ tend to be reduced. 
 Compared to the meiotic drive parameters in Figure \ref{fig:regionMaleDrive}, the effect of these male gametic competition parameters on the sex ratio is smaller. 
 For example, in Figure \ref{fig:regionMaleDrive}A-C, the ancestral sex ratio is $\alpha^\male=0.58$ at equilibrium (B) and in panels A-C of this plot, the ancestral sex ratio is $w_{a}^\male/(w_{A}^\male+w_{a}^\male)=0.537$ at equilibrium (B). 
 }
@@ -179,7 +195,7 @@ For example, in Figure \ref{fig:regionMaleDrive}A-C, the ancestral sex ratio is 
 \caption{
 Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is female meiotic drive at a locus that is tightly linked to the ancestral-XY locus.
 Diploid selection parameters ($w_{ij}^\Hermaphrodite$) are the same as those in Figure \ref{fig:regionMaleDrive} and \ref{fig:regionMaleGS}. 
-The $a$ allele is favoured by meiotic drive in females in Panels A-C ($\alpha_{\Delta}^\female=-0.16$), which increases $\lambda_{Wa}$ and decreases $\lambda_{WA}$. 
+The $a$ allele is favoured by meiotic drive in females in Panels A-C ($\alpha_{\Delta}^\female=-0.16$), which increases $\lambda_{W'a}^{(XY)}$ and decreases $\lambda_{W'A}^{(XY)}$. 
 Female meiotic drive in favour of the $A$ allele (panels D-F, $\alpha_{\Delta}^\female=-0.16$) has the opposite effect. 
 }
 \label{fig:regionFemaleDrive}
@@ -191,8 +207,8 @@ Female meiotic drive in favour of the $A$ allele (panels D-F, $\alpha_{\Delta}^\
 \caption{
 Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is female gametic competition at a locus that is tightly linked to the ancestral-XY locus.
 Diploid selection parameters ($w_{ij}^\Hermaphrodite$) are the same as those in Figure \ref{fig:regionMaleDrive}, \ref{fig:regionMaleGS}, and \ref{fig:regionFemaleDrive}. 
-The $a$ allele is favoured during female gametic competition in females in Panels A-C ($w_{a}^\female=1.16$, $w_{A}^\female=1$), which increases $\lambda_{Wa}$ and decreases $\lambda_{WA}$. 
-The $A$ allele is favoured during gametic competition in panels D-F ($w_{a}^\female=1$, $w_{A}^\female=1.16$), giving the opposite effect on $\lambda_{Wa}$ and $\lambda_{WA}$. 
+The $a$ allele is favoured during female gametic competition in females in Panels A-C ($w_{a}^\female=1.16$, $w_{A}^\female=1$), which increases $\lambda_{W'a}^{(XY)}$ and decreases $\lambda_{W'A}^{(XY)}$. 
+The $A$ allele is favoured during gametic competition in panels D-F ($w_{a}^\female=1$, $w_{A}^\female=1.16$), giving the opposite effect on $\lambda_{W'a}^{(XY)}$ and $\lambda_{W'A}^{(XY)}$. 
 }
 \label{fig:regionFemaleGS}
 \end{figure}
