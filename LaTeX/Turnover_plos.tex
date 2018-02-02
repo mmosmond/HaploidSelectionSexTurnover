@@ -413,15 +413,11 @@ That is, we describe an ancestral XY sex-determination system but our model is e
 \subsection*{Generic invasion by a neo-Y or neo-W}
 
 The evolution of a new sex-determination system requires that a rare mutant allele at the novel sex-determining locus, $m$, increases in frequency when rare. 
-The spread of a rare mutant $m$ at the \textbf{M} locus is determined by the leading eigenvalue of the system of eight equations describing the frequency of eggs and sperm carrying the $m$ allele in the next generation (equations \ref{eq:recursions}). %, evaluated at the above equilibrium.
+The spread of a rare mutant $m$ at the \textbf{M} locus into a system with ancestral sex-determination system $i\in\{XY,ZW\}$ is determined by the leading eigenvalue ($\lambda_m^{(i)}$) of the system of eight equations describing the frequency of eggs and sperm carrying the $m$ allele in the next generation (equations \ref{eq:recursions}). %, evaluated at the above equilibrium.
 %Thus, the system describing the change in frequency of the $m$ allele consists of eight recursion equations. 
-This system simplifies substantially in a number of cases of interest. 
-Dominant neo-Y (when $k=0$) or neo-W alleles (when $k=1$) are only found in male diploids (neo-Y) or female diploids (neo-W) such that their growth rate ultimately depends only on the change in frequency of $m$-bearing gametes produced by males or by females, respectively. 
-Furthermore, if the $m$ allele is fully epistatically dominant over the ancestral sex-determining system, phenotypes are not affected by the genotype at the ancestral sex-determining region (\textbf{X} locus). 
-Thus, the invasion of a rare dominant neo-Y or neo-W allele, $m$, into a system with ancestral sex-determination system $i\in\{XY,ZW\}$ is determined by the largest solution of the quadratic, $(\lambda_m^{(i)})^2+ b \lambda_m^{(i)} + c =0$ (see \nameref{app:inv_cond}). 
-Here, $b= - (\Lambda_{mA}^{(i)} + \Lambda_{ma}^{(i)})+(\chi_{mA}^{(i)} + \chi_{ma}^{(i)})$ and $c = (\Lambda_{mA}^{(i)} - \chi_{mA}^{(i)}) (\Lambda_{ma}^{(i)} - \chi_{ma}^{(i)}) - \chi_{mA}^{(i)} \chi_{ma}^{(i)}$, where $\Lambda_{mj}^{(i)}$ is the multiplicative growth rate (which we will call the ``haplotypic growth rate'') of the neo-sex determination allele $m$ on background $j\in\{A,a\}$ without accounting for loss due to recombination ($R=0$), and $\chi_{mj}^{(i)}$ is the rate at which mutant haplotypes on background $j\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes (see Table \ref{tab:haplotype_growth}).
-To differentiate between the invasion of neo-Y and neo-W alleles we write $m=Y'$ or $m=W'$, respectively (e.g., $\Lambda_{W'A}^{(XY)}$ is the haplotypic growth rate of neo-W alleles on the $A$ background in an ancestral XY system when $R=0$).
-The $\Lambda_{mj}^{(i)}$ and $\chi_{mj}^{(i)}$, and thus the spread of the mutant $m$ allele, depend on the frequency of alleles at the \textbf{A} and \textbf{X} loci in the ancestral population. 
+This system simplifies substantially for a dominant neo-Y ($k=0$) or neo-W ($k=1$), see \nameref{app:inv_cond}. 
+Invasion of a rare neo-Y or neo-W allele, $m\in\{Y',W'\}$, is given by the largest solution to the quadratic $(\lambda_m^{(i)})^2+ b \lambda_m^{(i)} + c =0$. 
+Here, $b= - (\Lambda_{mA}^{(i)} + \Lambda_{ma}^{(i)})+(\chi_{mA}^{(i)} + \chi_{ma}^{(i)})$ and $c = (\Lambda_{mA}^{(i)} - \chi_{mA}^{(i)}) (\Lambda_{ma}^{(i)} - \chi_{ma}^{(i)}) - \chi_{mA}^{(i)} \chi_{ma}^{(i)}$, where $\Lambda_{mj}^{(i)}$ is the multiplicative growth rate (which we will call the ``haplotypic growth rate'') of the neo-sex determination allele $m$ on background $j\in\{A,a\}$ without accounting for loss due to recombination ($R=0$), and $\chi_{mj}^{(i)}$ is the rate at which mutant haplotypes on background $j\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes (proportional to $R$), see Table \ref{tab:haplotype_growth}.
 In the ancestral population, it is convenient to follow the frequency of the $A$ allele among female gametes (eggs), $p^\female_X$, and among X-bearing, $p^\male_X$, and among Y-bearing, $p^\male_Y$, male gametes (sperm/pollen). 
 We also track the fraction of male gametes that are Y-bearing, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
 We will consider only equilibrium frequencies of alleles, $\hat{p}^\Hermaphrodite_i$, and Y-bearing male gametes, $\hat{q}$, when calculating the eigenvalues.  
@@ -457,12 +453,11 @@ $\bar{w}_H^\Hermaphrodite$ is the mean fitness of haploids from sex $\Hermaphrod
   \label{tab:haplotype_growth}
 \end{table}
 
-We are particularly concerned with the conditions under which a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue is greater than one. 
+We are particularly concerned with the conditions under which a rare neo-sex-determining allele increases in frequency, which occurs when the largest eigenvalue is greater than one ($\lambda_m^{(i)}>1$). 
 %If the average change in frequency of the two haplotypes that carry the $m$ allele ($Am$ and $am$) is positive, invasion will always occur, i.e., if $(\Lambda_{mA} + \Lambda_{ma})/2 > 1$ then $\Lambda > 1$. 
-The leading eigenvalue is the largest solution of $f(\lambda_m^{(i)})=(\lambda_m^{(i)})^2+b\lambda_m^{(i)}+c=0$ and the Perron-Frobenius theorem guarantees that it is positive, unique, and real.  
-Since $f(\Lambda_{mA}^{(i)})$ and $f(\Lambda_{ma}^{(i)})$ are of opposite signs, the leading eigenvalue must fall between these two quantities and is the larger of them when $R = 0$ (see \nameref{file:Mathematica}).  
-Consequently, if both $\Lambda_{mA}^{(i)}$ and $\Lambda_{ma}^{(i)}$ are greater than one, then the leading eigenvalue will always be greater than one, regardless of the linkage between the neo-sex determination factor and the selected locus ($R$). 
-In particular, having $\Lambda_{mA}^{(i)} >1$ and $\Lambda_{ma}^{(i)}>1$ thus guarantees that an unlinked sex determining factor can invade ($R=1/2$).  
+%The leading eigenvalue is the largest solution of $f(\lambda_m^{(i)})=(\lambda_m^{(i)})^2+b\lambda_m^{(i)}+c=0$ and the Perron-Frobenius theorem guarantees that it is positive, unique, and real.  
+%Since $f(\Lambda_{mA}^{(i)})$ and $f(\Lambda_{ma}^{(i)})$ are of opposite signs, the leading eigenvalue must fall between these two quantities and is the larger of them when $R = 0$ (see \nameref{file:Mathematica}).  
+If both $\Lambda_{mA}^{(i)}$ and $\Lambda_{ma}^{(i)}$ are greater than one, then the leading eigenvalue will always be greater than one, regardless of the linkage between the neo-sex determination factor and the selected locus ($R$), see \nameref{app:inv_cond} for details.
 Conversely, if both $\Lambda_{mA}^{(i)}$ and $\Lambda_{ma}^{(i)}$ are smaller than one, then invasion can never occur.  
 Finally, if only one of  $\Lambda_{mA}^{(i)}$ and $\Lambda_{ma}^{(i)}$ is greater than one, the new sex determining factor can always invade when tightly linked to the selected locus ($R$ near 0).  
 Furthermore, it can be shown that the leading eigenvalue declines with $R$, and invasion requires that $R$ is sufficiently small that the following condition holds: 
@@ -472,7 +467,8 @@ Furthermore, it can be shown that the leading eigenvalue declines with $R$, and 
 \end{equation}
 \noindent 
 This condition may or may not be satisfied for the full range of locations of the new sex determining factor, including $R=1/2$, depending on the nature of selection.  
-Interpreting this condition, if we assume that only the $mA$ haplotype has a positive growth rate when $R=0$, $\Lambda_{ma}^{(i)}<1<\Lambda_{mA}^{(i)}$, the first term on the left-hand side of \eqref{eq:lambdasGen} is negative and invasion requires that the $mA$ haplotype growth rate ($\Lambda_{mA}^{(i)} - 1$) and the rate at which they are produced by recombination in $ma$ haplotypes ($\chi_{ma}^{(i)}$) are sufficiently large relative to the $ma$ haplotype rate of decline ($1-\Lambda_{ma}^{(i)}$) and the rate of loss of $mA$ haplotypes due to recombination ($\chi_{mA}^{(i)}$).
+Interpreting this condition, if we assume that only the $mA$ haplotype has a positive growth rate when $R=0$, $\Lambda_{ma}^{(i)}<1<\Lambda_{mA}^{(i)}$, the first term on the left-hand side of \eqref{eq:lambdasGen} is negative and invasion requires that the $mA$ haplotypic growth rate ($\Lambda_{mA}^{(i)} - 1$) and the rate at which $mA$ haplotypes are produced by recombination in $ma$ haplotypes ($\chi_{ma}^{(i)}$) are sufficiently large relative to the $ma$ haplotype rate of decline ($1-\Lambda_{ma}^{(i)}$) and the rate of loss of $mA$ haplotypes due to recombination ($\chi_{mA}^{(i)}$).
+
 
 We can draw a number of key points about the invasion of neo-Y and neo-W mutations from Table \ref{tab:haplotype_growth}. 
 First, Fisherian sex ratio selection will favour the spread of a neo-Y if the ancestral zygotic sex ratio is biased towards females, $\zeta<1/2$ (i.e., the first factor of the $\Lambda_{mi}^{(i)}$ is greater than one for a neo-Y and less than one for a neo-W).
@@ -574,12 +570,12 @@ If there is overdominance in males, X-$A$ Y-$a$ males have high fitness and the 
 Therefore, the X can be polymorphic or even fixed for the $A$ allele despite favouring the $a$ allele during selection in females (e.g., see outlined region in Fig \ref{fig:regionplots}B and~\cite{Lloyd1977,Otto2014}). 
 In such cases, neo-W-$a$ haplotypes can spread because they create more $Aa$ and $aa$ females when pairing with an X from males and because they bring Y-$a$ haplotypes into females, where it has higher fitness (Fig \ref{fig:model_outline}D). 
 
-In some cases, both W-$A$ and W-$a$ haplotypes can spread, e.g., when $AA$ individuals have low fitness in females yet the $A$ is polymorphic or fixed on the X due to overdominance in males (Fig \ref{fig:regionplots}B and \ref{fig:regionplots}C).
-Both neo-W-$A$ and neo-W-$a$ haplotypes then produce fewer unfit $AA$ females.
+In some cases, both W-$A$ and W-$a$ haplotypes can spread.
+For example, when $AA$ individuals have low fitness in females yet the $A$ is polymorphic or fixed on the X due to overdominance in males (Fig \ref{fig:regionplots}B and \ref{fig:regionplots}C), both neo-W-$A$ and neo-W-$a$ haplotypes produce fewer unfit $AA$ females.
 This is true for the neo-W-$A$ haplotype because it can pair with a Y-$a$ haplotype and still be female. 
 Wherever both haplotypes have positive growth rates, invasion by a neo-W is expected regardless of its linkage with the selected locus (i.e., for any $R$, see \nameref{fig:positionOverdominance} and \nameref{fig:temporalOverdominance} for examples). 
 
-Assuming weak selection, van Doorn and Kirkpatrick~\cite{vanDoorn:2010hu} showed that invasion by a neo-W occurs under the same conditions as `pseudo-fixation' (at pseudo-fixation the neo-W reaches its maximum frequency among eggs, which is 1/2). 
+Assuming selection is weak relative to recombination, van Doorn and Kirkpatrick~\cite{vanDoorn:2010hu} showed that invasion by a neo-W occurs under the same conditions as `pseudo-fixation' (at pseudo-fixation the neo-W reaches its maximum frequency among eggs, which is usually 1/2). 
 An equivalent analysis is not possible where recombination rates are low. 
 However, numerical simulations demonstrate that the neo-SDR does not necessarily reach pseudo-fixation, which can lead to the stable maintenance of a mixed sex-determining system, in which X, Y, Z, and W alleles all segregate (e.g., \nameref{fig:freqAll}B,C). 
 
@@ -801,8 +797,9 @@ We have shown that the spread of new sex determination systems can be driven by 
 %Our results suggest that haploid selected loci that have been involved in driving turnovers between sex-determination systems could occur around the ancestral- or novel-sex-determining regions. 
 %Our results suggest that polymorphic loci that are ancestrally sex-linked and under sex-specific selection could also drive heterogametic transitions between sex-determination systems. 
 %As with sexually-antagonistic selection, the presence of haploid selected loci around ancestral- or novel-sex-determining regions could support their role in sex chromosome turnover.
-\textcolor{red}{In agreement with this hypothesis, a recent transcriptome analysis in \textit{Rumex} shows that Y-linked genes have higher expression in haploid pollen than autosomal genes.
-Interestingly, haploid-expression is also more common on the autosome that is orthologous to the sex chromosomes in closely related species suggesting that new sex chromosomes may have been favoured through their association with haploid selected alleles on these chromosomes (Sandler et al., 2018, Personal Communication)}.
+In agreement with this hypothesis, a recent transcriptome analysis in Rumex shows that pollen-biased expression (relative to expression in flower buds or leaves) is enhanced among XY-linked genes compared to autosomal genes or compared to hemizygous genes that are only linked to the X (Sandler et al., 2018, personal communication). 
+In addition, Y-linked genes are over-expressed relative to X-linked genes in pollen (but not in flower buds or leaves). 
+This suggests that the spread of neo-Y chromosomes in this clade could have been favoured through linkage with haploid selected genes. 
 %maybe add a flag here for switching to clade-level expectations:
 In general, we predict that haploid selection increases lability of sex-determination systems, particularly because haploid selection can cause transitions that increase or decrease sex-linkage (e.g., the final state of the red line in Fig \ref{fig:SexRatioBad}B is the starting state in Fig \ref{fig:SexRatioBad}A). 
 Turnovers driven by haploid selection may help to explain the relative rarity of heteromorphic sex chromosomes in plants, which are thought to experience more selection during their multicellular haploid stage.
@@ -1009,6 +1006,8 @@ This project was supported by the Natural Sciences and Engineering Research Coun
 % 
 \bibliography{sex_chromosomes.bib}
 
+\newpage
+
 \setcounter{equation}{0}
 \renewcommand{\theequation}{S1.\arabic{equation}}
 
@@ -1016,7 +1015,6 @@ This project was supported by the Natural Sciences and Engineering Research Coun
 
 \subsection*{Recursion equations}
 
-%\textcolor{red}{Should we adjust the subscripts throughout this subsection? Right now we end up re-defining $i$ and $j$ (when switching from haploid to diploid; this might have been my doing!) and then introduce three new subscripts $b$, $c$, and $l$, all of which can be derived from $i$ and $j$. Might be more straightforward to just use $p^\Hermaphrodite_{x_1,x_2,a_1,a_2,m_1,m_2}$ where 1 is maternal and 2 is paternal? We then no longer have to switch indices from haploid to diploid and the connection to other variables is clear: $b=m_1m_2$, $c=x_1x_2$, and $l=a_1a_2$. I guess the downside will be re-writing the recursion equations... which is why I haven't gone ahead and tried this.}
 
 In each generation we census the genotype frequencies in male and female gametes/gametophytes (hereafter, gametes) between meiosis (and any meiotic drive) and gametic competition. 
 At this stage we denote the frequencies of X- and Y-bearing gametes from males and females $x_{i}^{\Hermaphrodite}$ and $y_{i}^{\Hermaphrodite}$.
@@ -1279,14 +1277,17 @@ Without gametic competition or drive ($\alpha_{\Delta}^\Hermaphrodite=t^\Hermaph
 
 \subsection*{Invasion conditions}
 
-%\textcolor{red}{Cover the other parts of the characteristic polynomial here.}
-%\textcolor{blue}{Waiting for Sally's proof!}
 A rare neo-Y or neo-W allele, $m$, will spread from a given ancestral equilibrium with sex-determination system $i\in\{XY,ZW\}$ when the leading eigenvalue, $\lambda_m^{(i)}$, of the Jacobian matrix derived from the eight mutant recursion equations (given by \ref{eq:recursions}c,d,g,h), evaluated at the ancestral equilibrium, is greater than one.
-However, because a neo-Y (neo-W) is always in males (females) and is epistatically dominant to the ancestral sex-determining locus, we need only two recursion equations (e.g., tracking the change in the frequency of neo-Y-$A$ and neo-Y-$a$ gametes from males) and thus the leading eigenvalue is the largest solution the polynomial $(\lambda_m^{(i)})^2 + b\lambda_m^{(i)} + c = 0$ as described in the text (Table \ref{tab:haplotype_growth}).
-%It can be shown (see supplementary Mathematica file) that the coefficients are $b= - (\Lambda_{mA} + \Lambda_{ma})+(\chi_{mA} + \chi_{ma})$ and $c = (\Lambda_{mA}-\chi_{mA}) (\Lambda_{ma}-\chi_{ma}) -\chi_{mA} \chi_{ma}$, where $\Lambda_{mi}$ is the multiplicative growth rate of the frequency of mutants on background $i\in\{A,a\}$, without accounting for loss due to recombination, and $\chi_{mi}$ is the rate at which mutants on background $i\in\{A,a\}$ recombine onto the other \textbf{A} locus background in heterozygotes.
-%The leading eigenvalue is then greater than one whenever $\Lambda_{mA}>1$ and $\Lambda_{ma}>1$, less than one whenever $\Lambda_{mA}<1$ and $\Lambda_{ma}<1$, and greater than one whenever  $\Lambda_{mA}>1$ or $\Lambda_{ma}>1$ and $\chi_{ma} (\Lambda_{mA}-1) + \chi_{mA} (\Lambda_{ma}-1) > 0$.
-
-The general conditions for the invasion of a neo-sex-determining allele are given in the main text, in terms of the haplotypic growth rates without accounting for loss due to recombination ($\Lambda_{mj}^{(i)}$ terms) and the rates at which recombination between the \textbf{M} and \textbf{A} loci breaks apart these haplotypes ($\chi_{mj}^{(i)}$).
+However, because a neo-Y (neo-W) is always in males (females) and is epistatically dominant to the ancestral sex-determining locus, the characteristic polynomial factors into two quadratics times $(\lambda_m^{(i)})^4$.  
+One quadratic governs the change in the frequency of the new sex determination factor associated with the A and a allele frequencies, summing across backgrounds at the old sex determination factor (i.e., summing haplotypes carrying the original X and Y). 
+It is the largest root of this quadratic that determines the spread of the new m allele (see details in \nameref{file:Mathematica}).  
+The second quadratic describes the dynamics of the difference in the m-A and m-a haplotypes between X and Y backgrounds.  
+Asymptotically, this difference is constrained to grow at a rate equal to or less than the sum while the m allele is rare, because the frequencies can never become negative. 
+We therefore focus on the leading eigenvalue based on the root to the first quadratic $f(\lambda_m^{(i)})=(\lambda_m^{(i)})^2+ b \lambda_m^{(i)} + c =0$, as described in the text.  
+Since $f(\Lambda_{mA}^{(i)})$ and $f(\Lambda_{ma}^{(i)})$ are of opposite signs, the leading eigenvalue must fall between these two quantities and is the larger of them when $R = 0$ (the Perron-Frobenius theorem guarantees that the largest eigenvalue is positive, unique, and real).  
+Thus, $\lambda_m^{(i)}>1$ if both $\Lambda_{mA}^{(i)}>1$ and $\Lambda_{ma}^{(i)}>1$; similarly, $\lambda_m^{(i)}<1$ if both $\Lambda_{mA}^{(i)}<1$ and $\Lambda_{ma}^{(i)}<1$.
+If only one haplotypic growth rate is greater than one ($\Lambda_{ma}^{(i)}<1<\Lambda_{mA}^{(i)}$ or $\Lambda_{mA}^{(i)}<1<\Lambda_{ma}^{(i)}$), then $\lambda_m^{(i)}$ is greater than one when condition \eqref{eq:lambdasGen} is met. 
+Thus, the invasion of a neo-sex-determining allele is determined by the haplotypic growth rates without accounting for loss due to recombination ($\Lambda_{mj}^{(i)}$ terms) and the rates at which recombination between the \textbf{M} and \textbf{A} loci breaks apart these haplotypes ($\chi_{mj}^{(i)}$).
 For tight linkage between the ancestral sex-determining locus (\textbf{X}) and the selected locus (\textbf{A}) we can calculate these terms explicitly (see below).
 For weak selection we can take a Taylor series of the leading eigenvalue. 
 The leading eigenvalue for any $k$ is given up to order $\epsilon^2$ by equation \eqref{eq:lambda_ESD_k}.
