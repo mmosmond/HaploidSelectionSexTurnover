@@ -309,7 +309,7 @@ If we assume that haploid selection at any particular locus predominantly occurs
 In this respect, we might expect that haploid selection would affect transitions between sex-determining systems in a similar manner to sex-specific diploid selection (as explored in~\cite{vanDoorn:2007eu,vanDoorn:2010hu}). 
 That is, new masculinizing mutations (neo-Y alleles) could be favoured via associations with alleles that are beneficial in the male haploid stage. 
 On the other hand, sex ratios can also become biased by linkage between the sex-determining locus and a locus that harbours genetic variation in haploid fitness. 
-For example, there are several known cases of sex ratio bias caused by sex-linked meiotic drive alleles (Burt, 2006, Chapter 6~\cite{Burt:2006}) or selection among X- and Y-bearing pollen~\cite{Lloyd:1974tz,Conn:1981uw,Stehlik:2005ul,Stehlik:2006to,Field:2012fd,Field:2013cc}. 
+For example, there are several known cases of sex ratio bias caused by sex-linked meiotic drive alleles (Burt and Trivers, 2006, Chapter 6~\cite{Burt:2006}) or selection among X- and Y-bearing pollen~\cite{Lloyd:1974tz,Conn:1981uw,Stehlik:2005ul,Stehlik:2006to,Field:2012fd,Field:2013cc}. 
 It is not immediately clear how the spread of new sex-determining systems would be influenced by the combination of sex ratio biases and associations with haploid selected alleles. 
 
 We find that the spread of novel sex-determining systems is influenced by both Fisherian sex ratio selection and by selection on linked alleles. 
@@ -319,14 +319,6 @@ Surprisingly, Fisherian sex ratio selection does not dominate; it is possible fo
 In addition to considering haploid selection, another novel development in our model is that we consider loci that are in very tight linkage with the ancestral sex-determining locus. 
 %Because sex-determining loci are often found within a region of suppressed recombination, there can be a significant number of tightly linked loci. 
 We find that loci tightly linked with the sex-determining locus can drive transitions in which the heterogametic sex changes, even when the new sex-determining locus is less closely linked to loci under selection (either including haploid selection or not). 
-
-
-%Lorem ipsum dolor sit~\cite{bib1} amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam Eq~(\ref{eq:schemeP}) sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id.~\cite{bib2} Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
-
-%\begin{eqnarray}
-%\label{eq:schemeP}
-%	\mathrm{P_Y} = \underbrace{H(Y_n) - H(Y_n|\mathbf{V}^{Y}_{n})}_{S_Y} + \underbrace{H(Y_n|\mathbf{V}^{Y}_{n})- H(Y_n|\mathbf{V}^{X,Y}_{n})}_{T_{X\rightarrow Y}},
-%\end{eqnarray}
 
 \section*{Model}
 
@@ -408,8 +400,9 @@ Thus, the $\mathbf{A}$ locus can experience sex-specific gametic competition, di
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 The model outlined above describes both ancestral XY and ZW sex-determining systems. %if we relabel the two sexes as being ancestrally `heterogametic' or ancestrally `homogametic'. 
-Without loss of generality, we primarily refer to the ancestrally heterogametic sex as male and the ancestrally homogametic sex as female.
-That is, we describe an ancestral XY sex-determining system but our model is equally applicable to an ancestral ZW sex-determining system (relabelling the ancestrally heterogametic sex as female and the ancestrally homogametic sex as male and switching the labels of males and females throughout). 
+Without loss of generality, we refer to the ancestrally heterogametic sex as male and the ancestrally homogametic sex as female.
+That is, we primarily describe an ancestral XY sex-determining system but our model is equally applicable to an ancestral ZW sex-determining system (relabelling the ancestrally heterogametic sex as female and the ancestrally homogametic sex as male and switching the labels of males and females throughout). 
+We use a superscript to specify the ancestral sex-determining system described, e.g., $^{(XY)}$ for ancestral XY sex-determination.
 
 \subsection*{Generic invasion by a neo-Y or neo-W}
 
@@ -694,7 +687,7 @@ In this case, the zygotic sex ratio can be initially biased only if the ancestra
 If Fisherian sex ratio selection were dominant, we would thus expect a difference in the potential for XY to ZW and ZW to XY transitions. 
 %However, to leading order with selection weak relative to recombination, we find that sex ratio selection favours the spread of a neo-W by an amount equl to the spread of a neo-Y into a ZW system (relabeling XY as the heterogametic sex and reversing the labels of males and females in Table \ref{tab:specialcases})
 %However, to leading order with selection weak relative to recombination, we find that sex ratio selection favours the spread of a neo-W (through the first terms in table \ref{tab:haplotype_growth}) by an amount that is equal in magnitude to the fitness effects of alleles associated with new sex-determining alleles (second terms in table \ref{tab:haplotype_growth}).
-However, invasion by a neo-W allele into an XY system and invasion by a neo-Y allele into a ZW system occur under the same conditions ($\lambda_{Y'}^{(XY)} = \lambda_{W'}^{(XY)}$ and $\lambda_{Y'}^{(XY)}=\lambda_{W'}^{(XY)}$, at least to order $\epsilon^2$).
+However, invasion by a neo-W allele into an XY system and invasion by a neo-Y allele into a ZW system occur under the same conditions ($\lambda_{Y'}^{(XY)} = \lambda_{W'}^{(ZW)}$ and $\lambda_{W'}^{(XY)}=\lambda_{Y'}^{(ZW)}$, at least to order $\epsilon^2$).
 For example, in Fig \ref{fig:SexRatioBad}A neo-W alleles invade an ancestral-XY system where females are initially rare, equalizing the sex ratio.
 However, Fig \ref{fig:SexRatioBad}B shows that a neo-Y can invade the resulting ZW system under the same conditions. 
 When $R<1/2$, the invading neo-Y becomes associated with the male meiotic drive allele and the zygotic sex ratio actually evolves to become male-biased.
@@ -715,7 +708,7 @@ Nevertheless, the unlinked neo-Y can spread because diploids bearing it more oft
 
 We next consider the case where the new sex-determining mutation, $m$, causes sex to be determined probabilistically or by heterogeneous environmental conditions (environmental sex determination, ESD), with individuals carrying allele $m$ developing as females with probability $k$.
 Here, we do not assume that the environmental conditions that determine sex also differentially affect the fitness of males versus females. 
-Such correlations (`Charnov-Bull effects') can favour environmental sex-determining systems by allowing each sex to be produced in the environment in which it has highest fitness; in the absence of these correlations, previous theory would predict that ESD is favoured when it produces more equal sex ratios than the ancestral system (see reviews by~\cite{Charnov:1982wg,Bull:1983vi,West:2009we}). %(e.g., maternal condition, mate quality, age, or host size)  
+Such correlations can favour environmental sex-determining systems by allowing each sex to be produced in the environment in which it has highest fitness; in the absence of these correlations, previous theory would predict that ESD is favoured when it produces more equal sex ratios than the ancestral system (see reviews by~\cite{Charnov:1982wg,Bull:1983vi,West:2009we}). %(e.g., maternal condition, mate quality, age, or host size)  
 
 The characteristic polynomial determining the leading eigenvalue (equations \ref{eq:recursions}) does not factor for ESD ($0<k<1$) as it does for a neo-Y ($k=0$) or neo-W ($k=1$) allele. 
 We therefore focus on weak selection here, where the leading eigenvalue is
