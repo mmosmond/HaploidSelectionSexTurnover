@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+%\documentclass{nature}
+
+% Including pdf figures
+\usepackage{graphicx}
+\graphicspath{ {../Plots/} }
+\usepackage{pdfpages}
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=./}
+%really place a figure in a location
+\usepackage{float}
+%Overrun caption
+\usepackage[CaptionAfterwards]{fltpage}
+% Math stuff
+\usepackage{amsmath}
+\usepackage{stix}
+% Bibliographies
+\usepackage[numbers]{natbib}
+\bibpunct{(}{)}{,}{a}{}{;} 
+
+\usepackage[flushleft]{threeparttable}
+
+%\usepackage[font={scriptsize}]{caption}
+
+\usepackage{lineno} %gives line numbers with \lineno command
+
+\usepackage{setspace}
+\onehalfspace
+
+\usepackage{tikz}%for putting words on figures
+\usetikzlibrary{positioning}%for relative positioning
+
+%to rotate figures
+\usepackage{rotating}
+\usepackage{pdflscape}
+
+\usepackage[labelfont=bf, labelsep=period]{caption}
+
+\begin{document}
+
+\setcounter{table}{1}
+\renewcommand{\thetable}{S\arabic{table}}
+
+\begin{table}[!h]
+\centering
+\smallskip
+\caption{Mean fitnesses and zygotic sex ratio in the resident population ($M$ fixed, XY sex determination)}
+\begin{tabular}{l l }
+\hline\hline
+  Sex \& life cycle stage & Mean fitness \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  female gametes ($\bar{w}_H^\female$) & 
+  $p_X^\female w_A^\female + (1-p_X^\female) w_a^\female$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  X-bearing male gametes ($\bar{w}_{HX}^\male$) & 
+  $p_X^{\male} w_A^\male + (1-p_X^{\male}) w_a^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  Y-bearing male gametes ($\bar{w}_{HY}^\male$) & 
+  $p_Y^{\male} w_A^\male + (1-p_Y^{\male}) w_a^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  male gametes ($\bar{w}_H^\male$) & 
+  $(1-q) \bar{w}_{HX}^\male + q \bar{w}_{HY}^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  females ($\bar{w}^\female$) & 
+%  $\begin{array}{l}  (1-\zeta)^{-1} (1-q) \big[ p_X^\female w_A^\female p_X^\male w_A^\male w_{AA}^\female + \\
+%  (1 - p_X^\female) w_a^\female p_X^\male w_A^\male w_{Aa}^\female + \\
+%  p_X^\female w_A^\female (1 - p_X^\male) w_a^\male w_{Aa}^\female + \\
+%  (1-p_X^\female) w_a^\female (1 - p_X^\male) w_a^\male w_{aa}^\female \big] / \left( \bar{w}_H^\female \bar{w}_H^\male \right)
+%  \end{array} 
+ $\begin{array}{l} \big[ p_X^\female w_A^\female p_X^\male w_A^\male w_{AA}^\female + \\
+  (1 - p_X^\female) w_a^\female p_X^\male w_A^\male w_{Aa}^\female + \\
+  p_X^\female w_A^\female (1 - p_X^\male) w_a^\male w_{Aa}^\female + \\
+  (1-p_X^\female) w_a^\female (1 - p_X^\male) w_a^\male w_{aa}^\female \big] / \left( \bar{w}_H^\female \bar{w}_{HX}^\male \right)
+  \end{array}
+  $ \\ [0.5ex] \noalign{\vskip 0.5ex} \hline  \noalign{\vskip 0.5ex}
+  males ($\bar{w}^\male$) & 
+%  $\begin{array}{l} \zeta^{-1} q \big[ p_X^\female w_A^\female  p_Y^\male w_A^\male w_{AA}^\male + \\
+%  (1 - p_X^\female) w_a^\female  p_Y^\male w_A^\male w_{Aa}^\male + \\
+%  p_X^\female w_A^\female  (1 - p_Y^\male) w_a^\male w_{Aa}^\male + \\
+%  (1-p_X^\female) w_a^\female  (1 - p_Y^\male) w_a^\male w_{aa}^\male \big] / \left( \bar{w}_H^\female \bar{w}_H^\male \right) 
+%  \end{array}
+ $\begin{array}{l} \big[ p_X^\female w_A^\female  p_Y^\male w_A^\male w_{AA}^\male + \\
+  (1 - p_X^\female) w_a^\female  p_Y^\male w_A^\male w_{Aa}^\male + \\
+  p_X^\female w_A^\female  (1 - p_Y^\male) w_a^\male w_{Aa}^\male + \\
+  (1-p_X^\female) w_a^\female  (1 - p_Y^\male) w_a^\male w_{aa}^\male \big] / \left( \bar{w}_H^\female \bar{w}_{HY}^\male \right) 
+  \end{array}
+  $ \\ [0.5ex] \noalign{\vskip 0.5ex} \hline  \noalign{\vskip 0.5ex}
+  fraction zygotes male ($\zeta$) & $q \left[ p_Y^\male w_A^\male+(1-p_Y^\male)w_a^\male\right] / \bar{w}_H^\male $
+   \\ [0.5ex]  \noalign{\vskip 0.5ex}
+  \hline \hline
+  \label{tab:meanfitnesses}
+ \end{tabular}
+\end{table}
+
+\end{document}
+
+
+

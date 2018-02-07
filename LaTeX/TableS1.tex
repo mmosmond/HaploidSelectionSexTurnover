@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+%\documentclass{nature}
+
+% Including pdf figures
+\usepackage{graphicx}
+\graphicspath{ {../Plots/} }
+\usepackage{pdfpages}
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=./}
+%really place a figure in a location
+\usepackage{float}
+%Overrun caption
+\usepackage[CaptionAfterwards]{fltpage}
+% Math stuff
+\usepackage{amsmath}
+\usepackage{stix}
+% Bibliographies
+\usepackage[numbers]{natbib}
+\bibpunct{(}{)}{,}{a}{}{;} 
+
+\usepackage[flushleft]{threeparttable}
+
+%\usepackage[font={scriptsize}]{caption}
+\usepackage[labelfont=bf,labelsep=period]{caption}
+
+\usepackage{lineno} %gives line numbers with \lineno command
+
+\usepackage{setspace}
+\onehalfspace
+
+\usepackage{tikz}%for putting words on figures
+\usetikzlibrary{positioning}%for relative positioning
+
+%to rotate figures
+\usepackage{rotating}
+\usepackage{pdflscape}
+
+\begin{document}
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+
+\begin{table}[ht]
+\centering
+\smallskip
+\caption{
+Substitutions for different loci orders assuming no interference. %and $r,R\in(0,1/2)$.\textcolor{blue}{write all in form of first line? so that 1/2 cases are okay (can't determine chi if R is 1/2 in second line, or if r is 1/2 in third line}
+}
+\begin{tabular}{l l}
+\hline\hline
+  Order of loci & Substitution  \\ [0.5ex] \hline
+  SDR-A-M & $\rho=r(1-R)+R(1-r)$  \\
+  SDR-M-A & $r=\rho(1-R)+R(1-\rho)$ \\ %$\rho=(r-R)/(1-2R)$ \\
+  A-SDR-M & $R=r(1-\rho)+\rho(1-r)$ \\ %$\rho=(R-r)/(1-2r)$ \\
+  \hline \hline
+  \label{tab:chisubstitutions}
+ \end{tabular}
+\end{table}
+
+\end{document}
+
+
+
