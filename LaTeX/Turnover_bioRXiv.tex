@@ -369,7 +369,7 @@ Diploid males and females then experience selection, with relative fitnesses $w_
 %Diploids compete with others of the same sex, where selection depends on the sex of the individual and its genotype at the $\mathbf{A}$ locus.
 The next generation of gametes is produced by meiosis, during which recombination and sex-specific meiotic drive can occur. 
 Recombination (i.e., an odd number of cross-overs) occurs between loci $\mathbf{X}$ and $\mathbf{A}$ with probability $r$, between loci $\mathbf{A}$ and $\mathbf{M}$ with probability $R$, and between loci $\mathbf{X}$ and $\mathbf{M}$ with probability $\rho$.
-Any linear order of the loci can be modelled with appropriate choices of $r$, $R$, and $\rho$ (see Fig \ref{fig:model_outline}A and \nameref{tab:chisubstitutions}). 
+Any linear order of the loci can be modelled with appropriate choices of $r$, $R$, and $\rho$ (see Fig \ref{fig:model_outline}A and Table \ref{tab:chisubstitutions}). 
 Individuals that are heterozygous at the $\mathbf{A}$ locus may experience meiotic drive; a gamete produced by $Aa$ heterozgotes of sex $\Hermaphrodite$ bears allele $A$ with probability $\alpha^\Hermaphrodite$. 
 Thus, the $\mathbf{A}$ locus can experience sex-specific gametic competition, diploid selection, and/or meiotic drive. 
 
@@ -441,7 +441,7 @@ $\bar{p}^{\male}=(1-\hat{q})\hat{p}_X^\male + \hat{q}\hat{p}_Y^\male$ is the ave
 %      \item $R$ is the probability of recombination between loci $\mathbf{A}$ and $\mathbf{M}$.
 $\zeta$ is the zygotic sex ratio (fraction male).
 $\bar{w}^{\Hermaphrodite}_{D}$ is the mean fitness of diploids of sex $\Hermaphrodite$.
-$\bar{w}_H^\Hermaphrodite$ is the mean fitness of haploids from sex $\Hermaphrodite$, see \nameref{tab:meanfitnesses}.
+$\bar{w}_H^\Hermaphrodite$ is the mean fitness of haploids from sex $\Hermaphrodite$, see Table \ref{tab:meanfitnesses}.
 \end{flushleft}
   \label{tab:haplotype_growth}
 \end{table}
@@ -499,7 +499,7 @@ In essence, through tight linkage with the $\mathbf{A}$ locus, the ancestral Y b
 Given that the ancestral Y is at this equilibrium, it is not possible for a neo-Y to create males that have higher fitness than the ancestral Y. 
 
 Neo-W alleles, on the other hand, can invade an ancestral XY system under some conditions (the full invasion conditions are given in \nameref{app:inv_cond}; equations \ref{Binvasion} and \ref{Ainvasion}). 
-Counterintuitively, selection on loci within the non-recombining region around the sex-determining locus can favour the invasion of a less closely linked neo-W, whatever the form of selection maintaining a polymorphism (sexually-antagonistic selection, overdominance, ploidally-antagonistic selection, or some combination, Fig \ref{fig:SexAntagTighter}, \nameref{fig:temporalOverdominance}, \nameref{fig:regionPloidAntag}, and \nameref{fig:SexAntagTighterMaleDrive}).  
+Counterintuitively, selection on loci within the non-recombining region around the sex-determining locus can favour the invasion of a less closely linked neo-W, whatever the form of selection maintaining a polymorphism (sexually-antagonistic selection, overdominance, ploidally-antagonistic selection, or some combination, Fig \ref{fig:SexAntagTighter}, Figure \ref{fig:temporalOverdominance}, Figure \ref{fig:regionPloidAntag}, and Figure \ref{fig:SexAntagTighterMaleDrive}).  
 The conditions become more restrictive, however, with increasing recombination ($R$) between the new sex-determining locus and the selected locus.  
 The invasion of completely unlinked neo-W alleles ($R = 1/2$) can occur with overdominance in males or with haploid selection but is not possible with only sexually-antagonistic selection if selection is directional in each diploid sex (see \nameref{file:Mathematica}).
 To develop an intuition for how less closely linked neo-W alleles invade ($R>r$), we here focus on cases where there is no haploid selection and discuss the additional effect of haploid selection in \nameref{app:inv_cond}. 
@@ -544,7 +544,7 @@ Here, selection in females can favour the $A$ allele (panel A, $w_{aa}^\female=0
 If either haplotypic growth rate ($\Lambda_{W'A}^{(XY)}$ or $\Lambda_{W'a}^{(XY)}$) is greater than one, then a rare neo-W allele can spread for, at least, some values of $R>r$. 
 The parameter values marked with an asterisk correspond to the fitnesses used in Fig \ref{fig:SexAntagTighter}C. 
 Where both haplotypic growth rates are greater than one, a neo-W will spread when rare, regardless of linkage with the selected locus (for any $R$). 
-\nameref{fig:positionOverdominance} shows the dynamics arising with the parameters marked with a dagger. 
+Figure \ref{fig:positionOverdominance} shows the dynamics arising with the parameters marked with a dagger. 
 Here, there is no haploid selection $t^\Hermaphrodite = \alpha^\Hermaphrodite_\Delta = 0$.
 }
 \label{fig:regionplots}
@@ -567,11 +567,11 @@ In such cases, neo-W-$a$ haplotypes can spread because they create more $Aa$ and
 In some cases, both W-$A$ and W-$a$ haplotypes can spread.
 For example, when $AA$ individuals have low fitness in females yet the $A$ is polymorphic or fixed on the X background due to overdominance in males (Fig \ref{fig:regionplots}B and \ref{fig:regionplots}C), both neo-W-$A$ and neo-W-$a$ haplotypes produce fewer unfit $AA$ females.
 This is true for the neo-W-$A$ haplotype because it can pair with a Y-$a$ haplotype and still be female. 
-Wherever both haplotypic growth rates are greater than one, invasion by a neo-W is expected regardless of its linkage with the selected locus (i.e., for any $R$, see \nameref{fig:positionOverdominance} and \nameref{fig:temporalOverdominance} for examples). 
+Wherever both haplotypic growth rates are greater than one, invasion by a neo-W is expected regardless of its linkage with the selected locus (i.e., for any $R$, see Figure \ref{fig:positionOverdominance} and Figure \ref{fig:temporalOverdominance} for examples). 
 
 Assuming selection is weak relative to recombination, van Doorn and Kirkpatrick~\cite{vanDoorn:2010hu} showed that invasion by a neo-W allele occurs under the same conditions as `pseudo-fixation' (at pseudo-fixation the neo-W reaches its maximum frequency among eggs, which is usually 1/2, but can deviate from 1/2 when there is haploid selection before censusing). 
 An equivalent analysis is not possible where recombination rates are low. 
-However, numerical simulations demonstrate that new sex-determining alleles do not necessarily reach pseudo-fixation, which can lead to the stable maintenance of a mixed sex-determining system, in which X, Y, Z, and W alleles all segregate (e.g., \nameref{fig:freqAll}B,C). 
+However, numerical simulations demonstrate that new sex-determining alleles do not necessarily reach pseudo-fixation, which can lead to the stable maintenance of a mixed sex-determining system, in which X, Y, Z, and W alleles all segregate (e.g., Figure \ref{fig:freqAll}B,C). 
 
 
 \subsection*{Loose linkage with the ancestral sex-determining region}
@@ -807,7 +807,7 @@ Assuming that transitions from dioecy to hermaphroditism (equal parental investm
 
 In support of their role in sex chromosome turnover, genes expected to be under sexually-antagonistic selection (e.g., those causing bright male colouration) have been found on recently derived sex chromosomes~\cite{Lindholm:2002dw,Tripathi:2009cw,Ser:2010iq}. 
 Our results show, however, that tight ancestral-linkage of polymorphic loci, maintained by sexually-antagonistic selection or otherwise, can also drive trans-GSD transitions. 
-In addition, we find that polymorphic sex determining systems (X, Y, W, and Z alleles all present) can be maintained when a selected locus is tightly linked to the ancestral sex-determining system (e.g., \nameref{fig:freqAll}B and \nameref{fig:freqAll}C), which is not possible with loose linkage~\cite{vanDoorn:2010hu}. 
+In addition, we find that polymorphic sex determining systems (X, Y, W, and Z alleles all present) can be maintained when a selected locus is tightly linked to the ancestral sex-determining system (e.g., Figure \ref{fig:freqAll}B and Figure \ref{fig:freqAll}C), which is not possible with loose linkage~\cite{vanDoorn:2010hu}. 
 %As noted by \citet{vanDoorn:2010hu}, it would be prudent to compare closely related clades in order to determine whether observed polymorphisms predate a transition in sex-determination or arose afterwards. %, particularly because sex-linkage allows sexually-antagonistic selection to maintain polymorphisms under a different and larger parameter space~\cite{Rice:1987hs,Jordan:2011fj}. 
 For example, our results suggest a potential mechanism maintaining multiple sex determining alleles in the platyfish (\textit{Xiphophorus maculatus}), in which X,Y, and W alleles segregate at one locus (or two closely-linked loci) near to potentially sexually-antagonistic genes for pigmentation and sexual maturity~\cite{Kallman1965,Kallman1968, Volff2001, Schultheis2006}.
 Several rodent species also maintain feminizing alleles along with the ancestral X and Y sex-determination alleles (reviewed in~\cite{Fredga1994}). 
@@ -853,6 +853,9 @@ We conclude that haploid selection should be considered as a pivotal factor driv
 Perhaps counterintuitively, transitions involving haploid selection can be driven by sex ratio selection or cause sex ratio biases to evolve; we do not find Fisherian sex ratio selection to be an overwhelming force. 
 Overall, our results suggest several new scenarios under which new sex-determining systems are favoured, which could help to explain why the evolution of sex-determining systems is so dynamic. 
 
+\section*{Acknowledgments}
+This project was supported by the Natural Sciences and Engineering Research Council of Canada (CGS-D 6564 to MMO; RGPIN-2016-03711 to SPO). 
+
 % For figure citations, please use "Fig" instead of "Figure".
 
 % Place figure captions after the first paragraph in which they are cited.
@@ -862,128 +865,6 @@ Overall, our results suggest several new scenarios under which new sex-determini
 % Place tables after the first paragraph in which they are cited.
 
 %PLOS does not support heading levels beyond the 3rd (no 4th level headings).
-
-\section*{Supporting information}
-
-\paragraph*{S1 File.}
-\label{file:Mathematica}
-{\bf Supplementary \textit{Mathematica} file.}  This file can be used to re-derive our results and generate figures. 
-
-\paragraph*{S1 Table}
-\label{tab:chisubstitutions}
-{\bf Substitutions for different loci orders assuming no interference.}
-
-\paragraph*{S2 Table}
-\label{tab:meanfitnesses}
-{\bf Mean fitnesses and zygotic sex ratio in the resident population ($M$ fixed, XY sex determination).}
-
-\paragraph*{S1 Appendix.}
-\label{app:recurs}
-{\bf Recursion equations and complete model description.} 
-
-\paragraph*{S2 Appendix.}
-\label{app:eq_stab}
-{\bf Equilibria and stability conditions when $M$ allele is fixed. } 
-
-\paragraph*{S3 Appendix.}
-\label{app:inv_cond}
-{\bf Invasion conditions for the $m$ allele.} 
-
-% Include only the SI item label in the paragraph heading. Use the \nameref{label} command to cite SI items in the text.
-\paragraph*{S1 Fig.}
-\label{fig:positionOverdominance}
-{\bf With overdominance, loci near to the ancestral sex-determining locus ($r\approx0$) can favour neo-W alleles that are less tightly linked ($R>r$).} 
-In panels A and B, the $a$ allele is favoured in females ($w_{aa}^\female=1.05$, $w_{Aa}^\Hermaphrodite=1$, $w_{AA}^\female=0.85$) and selection in males is overdominant ($w_{aa}^\male=w_{AA}^\male=0.75$).
-In panels C and D, selection in males and females is overdominant ($w_{aa}^\female=w_{AA}^\female=0.6$, $w_{aa}^\male=0.5$, $w_{AA}^\male=0.7$, $w_{Aa}^\Hermaphrodite=1$).
-There is no haploid selection $t^\Hermaphrodite = \alpha^\Hermaphrodite_\Delta = 0$.
-These parameters are marked by daggers in Fig \ref{fig:regionplots}B and C, which show that neo-W invasion is expected for any $R$ ($\Lambda_{W'A}^{(XY)},\Lambda_{W'a}^{(XY)}>1$) if the $a$ allele is nearly fixed on the Y (black lines in this figure; not stable for $r>>0$). 
-Equilibria where the $A$ allele is more common among Y-bearing male gametes can also be stable and allow neo-W invasion for these parameters (blue lines). 
-%The weak selection approximation holds when all recombination rates are large relative to selection (around 0 in panels A and C), in which case, in the absence of haploid selection, neo-W alleles should spread if and only if they are more tightly linked to the selected locus (positive invasion fitness if and only if the selected locus is in the grey region). 
-%However, when recombination rates are small (panels B and D and when the selected locus is near the SDRs in all panels), this weak selection prediction can break down. 
-
-\paragraph*{S2 Fig.}
-\label{fig:temporalOverdominance}
-{\bf Following invasion by a neo-W allele, there can be a complete transition to a new sex-determining system, maintenance of both ancestral-XY and neo-ZW sex determining systems, or loss of the new sex-determining allele.}  
-Here, we plot the frequency of the neo-W allele among female gametes.
-%; as the neo-W reaches frequency $0.5$, polymorphism at the ancestral XY locus is lost with Y becoming fixed such that sex is determined only be the ZW allele carried by a female gamete. 
-Panels A, C and D show cases where a steady state is reached with the neo-W at a frequency below $0.5$, in which case ancestral-X and Y alleles also both segregate. 
-In all cases, we assume that the $a$ allele is initially more common than the $A$ allele on the Y background (Y-$a$ is fixed when $r=0$). 
-When $r>0$ (panels B and D), Y-$A$ haplotypes created by recombination can become more common than Y-$a$ haplotypes as the neo-W spreads.
-In B, this leads to loss of the neo-W and the system goes to an equilibrium with X-$a$ and Y-$A$ haplotypes fixed (equilibrium $A'$), such that all females have the high fitness genotype $aa$ and all males are $Aa$. 
-For the parameters in B, neo-W alleles have negative invasion fitness when the Y-$A$ haplotype is ancestrally more common than Y-$a$ (compare blue to black curves in \nameref{fig:positionOverdominance}A and  \nameref{fig:positionOverdominance}B near the ancestral sex-determining locus). 
-In contrast, the neo-W is not lost in panel D as it is favoured regardless of whether Y-$A$ or Y-$a$ haplotypes predominate (again, compare blue to black curves in \nameref{fig:positionOverdominance}C and  \nameref{fig:positionOverdominance}D). 
-%Fitness parameters are the same as in \nameref{fig:positionOverdominance}; in panels A and B the $a$ allele is favoured in females ($w_{aa}^\female=1.05$, $w_{Aa}^\Hermaphrodite=1$, $w_{AA}^\female=0.85$) while there is overdominance in males ($w_{aa}^\male=w_{AA}^\male=0.75$) and in panels C and D, there is overdominance in both sexes ($w_{aa}^\female=w_{AA}^\female=0.6$, $w_{aa}^\male=0.5$, $w_{AA}^\male=0.7$, $w_{Aa}^\Hermaphrodite=1$). 
-%These parameters are marked by a dagger in Fig \ref{fig:regionplots}. 
-%Here, there is no haploid selection $t^\Hermaphrodite = \alpha^\Hermaphrodite_\Delta = 0$.
-
-\paragraph*{S3 Fig.}
-\label{fig:SexAntagTighterMaleDrive}
-{\bf  When there is sexually-antagonistic selection and haploid selection, a neo-W allele may invade for any $R$.}
-Panel A shows that the invasion fitness of a neo-W is positive, even when $r<R$ (unshaded region).
-In panel B, we vary the recombination rate between the neo-W and the selected locus ($R$) for a fixed recombination rate between the ancestral sex-determining locus and the selected locus ($r=0.005$).
-Coloured markers show recombination rates for which the temporal dynamics of neo-W invasion are plotted in panel C (black $R=0.001$, red $R=0.02$, blue $R=0.1$, green $R=0.5$). 
-The diploid selection parameters used in this plot are the same as in Fig \ref{fig:SexAntagTighter}. 
-There is also meiotic drive in males favouring $a$ ($\alpha_{\Delta}^\male=-0.08$), this full set of parameters is marked by an asterisk in \nameref{fig:regionMaleDrive}A.
-When $R=0.5$ (green curve), the neo-W does not reach fixation and X, Y, Z, and W alleles are all maintained in the population, see \nameref{fig:freqAll}C.
-
-\paragraph*{S4 Fig.}
-\label{fig:regionMaleDrive}
-{\bf Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is male meiotic drive at a locus that is tightly linked to the ancestral XY locus ($r=0$).}
-This figure is equivalent to Fig \ref{fig:regionplots} but with meiotic drive in males.
-%We vary the fitness of male homozygotes relative to heterozygotes ($w_{Aa}^\Hermaphrodite=1$) and only consider stable equilibria at which both $\mathbf{A}$ locus allele are maintained and the $a$ allele is initially fixed on the Y, region outlined. 
-In panels A-C, meiotic drive in males favours the $a$ allele ($\alpha_{\Delta}^\male=-0.16$), creating male-biased sex ratios and generally increasing $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$. 
-By contrast, $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$ tend to be reduced when meiotic drive in males favours the $A$ allele ($\alpha_{\Delta}^\male=0.16$), panels D-F. 
-%We consider three forms of selection in females: directional selection in favour of the $A$ allele (panels A and D, $w_{aa}^\female=0.85$, $w_{AA}^\female=1.05$), direction selection in favour of the $a$ allele (panels B and E, $w_{aa}^\female=1.05$, $w_{AA}^\female=0.85$), and overdominance (panels C and F, $w_{aa}^\female=w_{AA}^\female=0.6$).
-
-\paragraph*{S5 Fig.}
-\label{fig:regionMaleGS}
-{\bf Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is male gametic competition at a locus that is tightly linked to the ancestral XY locus ($r=0$).}
-This figure is equivalent to Fig \ref{fig:regionplots} but with gametic competition in males.
-%Diploid selection parameters ($w_{ij}^\Hermaphrodite$) are the same as those in \nameref{fig:regionMaleDrive}. 
-The $a$ allele is favoured during male gametic competition in Panels A-C ($w_{a}^\male=1.16$, $w_{A}^\male=1$), which creates male biased sex ratios and increases $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$. 
-By contrast, $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$ tend to be reduced when the $A$ allele is favoured during male gametic competition, panels D-F.
-Compared to the meiotic drive parameters in \nameref{fig:regionMaleDrive}, the effect of these male gametic competition parameters on the sex ratio is smaller. 
-For example, in \nameref{fig:regionMaleDrive}A-C, the ancestral sex ratio is $\alpha^\male=0.58$ at equilibrium (B) and in panels A-C of this plot, the ancestral sex ratio is $w_{a}^\male/(w_{A}^\male+w_{a}^\male)=0.537$ at equilibrium (B). 
-
-\paragraph*{S6 Fig.}
-\label{fig:regionFemaleDrive}
-{\bf Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is female meiotic drive at a locus that is tightly linked to the ancestral XY locus ($r=0$).}
-This figure is equivalent to Fig \ref{fig:regionplots} but with meiotic drive in females.
-%Diploid selection parameters ($w_{ij}^\Hermaphrodite$) are the same as those in \nameref{fig:regionMaleDrive} and \nameref{fig:regionMaleGS}. 
-The $a$ allele is favoured by meiotic drive in females in Panels A-C ($\alpha_{\Delta}^\female=-0.16$), which increases $\Lambda_{W'a}^{(XY)}$ and decreases $\Lambda_{W'A}^{(XY)}$. 
-Female meiotic drive in favour of the $A$ allele (panels D-F, $\alpha_{\Delta}^\female=-0.16$) has the opposite effect. 
-
-\paragraph*{S7 Fig.}
-\label{fig:regionFemaleGS}
-{\bf Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is female gametic competition at a locus that is tightly linked to the ancestral XY locus ($r=0$).}
-This figure is equivalent to Fig \ref{fig:regionplots} but with gametic competition in females.
-%Diploid selection parameters ($w_{ij}^\Hermaphrodite$) are the same as those in \nameref{fig:regionMaleDrive}, \nameref{fig:regionMaleGS}, and \nameref{fig:regionFemaleDrive}. 
-The $a$ allele is favoured during female gametic competition in females in Panels A-C ($w_{a}^\female=1.16$, $w_{A}^\female=1$), which increases $\Lambda_{W'a}^{(XY)}$ and decreases $\Lambda_{W'A}^{(XY)}$. 
-The $A$ allele is favoured during gametic competition in panels D-F ($w_{a}^\female=1$, $w_{A}^\female=1.16$), giving the opposite effect on $\Lambda_{W'a}^{(XY)}$ and $\Lambda_{W'A}^{(XY)}$. 
-
-\paragraph*{S8 Fig.}
-\label{fig:regionPloidAntag}
-{\bf Ploidally-antagonistic selection can drive the spread of neo-W alleles. }
-A-D show when each of the neo-W haplotypes invades an internally stable equilibrium with $a$ fixed on the Y (found by setting $r=0$).
-The y-axis shows directional selection in diploids of both sexes, $s^\female=s^\male$, and the x-axes show sex-specific drive, $\alpha_\Delta^\Hermaphrodite$, or haploid competition, $t^\Hermaphrodite$.
-The top left and bottom right quadrants therefore imply ploidally-antagonistic selection (and these are the only places where neo-W haplotypes can invade).
-Dominance is equal in both sexes, $h^\female=h^\male=3/4$. 
-E-F show the temporal dynamics of neo-W frequency in females with parameters given by the asterisks in the corresponding A-D plot, with $r=1/200$, for four different $R$.
-Black $R=1/1000$, Red $R=2/100$, Blue $R=1/10$, Green $R=1/2$.  
-
-\paragraph*{S9 Fig.}
-\label{fig:freqAll}
-{\bf Pseudo-fixation of neo-W or maintenance of multiple sex-determining alleles. }
-The curves show the frequencies of the neo-W (red), ancestral Y (blue), and $A$ allele (black) among female gametes (solid curves) and among male gametes (dashed curves). 
-In panel A, there is a complete transition from XY sex determination (XX-ZZ females and XY-ZZ males) to ZW sex determination (YY-ZW females and YY-ZZ males).  
-In panels B and C a polymorphism is maintained at both the ancestral XY locus and the new ZW locus, such that there are males with genotypes XY-ZZ and YY-ZZ and females with genotypes XX-ZZ, XX-ZW, XY-ZW, and YY-ZW. 
-In panel A, selection is ploidally-antagonistic with drive in males (parameters as in the green curve in Fig \ref{fig:SexRatioBad}B).
-In panel B, there is overdominance in both sexes and no haploid selection (parameters as in the green curve in \nameref{fig:temporalOverdominance}C).
-In panel C, there is sexually-antagonistic selection in diploids with drive in males (parameters as in the green curve in \nameref{fig:regionMaleDrive}C).
-In all cases, the initial equilibrium frequency has $a$ near fixation on the Y.
-
-%\section*{Acknowledgments}
-%This project was supported by the Natural Sciences and Engineering Research Council of Canada (CGS-D 6564 to MMO; RGPIN-2016-03711 to SPO). 
 
 \nolinenumbers
 
@@ -1004,13 +885,15 @@ In all cases, the initial equilibrium frequency has $a$ near fixation on the Y.
 
 \newpage
 
+\section*{Supporting information}
+
 \setcounter{equation}{0}
 \renewcommand{\theequation}{S1.\arabic{equation}}
 
 \section*{S1 Appendix}
+\label{app:recurs}
 
 \subsection*{Recursion equations}
-
 
 In each generation we census the genotype frequencies in male and female gametes/gametophytes (hereafter, gametes) between meiosis (and any meiotic drive) and gametic competition. 
 At this stage we denote the frequencies of X- and Y-bearing gametes from males and females $x_{i}^{\Hermaphrodite}$ and $y_{i}^{\Hermaphrodite}$.
@@ -1044,7 +927,7 @@ Recombination and sex-specific meiotic drive occur during meiosis.
 %We can also assume that recombination is sex specific and/or affected by the M locus - but generally we don't so I just describe $R=R_{f}=R, r_{MM,d}=r_{Mm,d}=r_{mm,d}=r, \chi_{m}=\chi_{f}=\chi$.
 Here, we allow any relative locations for the $\mathbf{X}$, $\mathbf{A}$, and $\mathbf{M}$ loci by using three parameters to describe the recombination rates between them. 
 $R$ is the recombination rate between the $\mathbf{A}$ and $\mathbf{M}$ loci, $\rho$ is the recombination rate between the $\mathbf{M}$ and $\mathbf{X}$ loci, and $r$ is the recombination rate between the $\mathbf{A}$ and $\mathbf{X}$ loci (Fig \ref{fig:model_outline}). 
-\nameref{tab:chisubstitutions} shows replacements that can be made for each possible ordering of the loci assuming that there is no cross-over interference.
+Table \ref{tab:chisubstitutions} shows replacements that can be made for each possible ordering of the loci assuming that there is no cross-over interference.
 During meiosis in sex $\Hermaphrodite$, meiotic drive occurs such that, in $Aa$ heterozygotes, a fraction $\alpha^{\Hermaphrodite}$ of gametes produced carry the $A$ allele and $(1-\alpha^\Hermaphrodite)$ carry the $a$ allele. 
 
 Among gametes from sex $\Hermaphrodite$, the frequencies of haplotypes (before gametic competition) in the next generation are given by
@@ -1151,13 +1034,14 @@ which we assume below to calculate the equilibria.
 \renewcommand{\theequation}{S2.\arabic{equation}}
 
 \section*{S2 Appendix}
+\label{app:eq_stab}
 
 \subsection*{Resident equilibria and stability}
 
 In the resident population (allele $M$ fixed), we follow the frequency of $A$ in X-bearing female gametes, $p^\female_X$, and X-bearing male gametes, $p^\male_X$, and Y-bearing male gametes, $p^\male_Y$.
 We also track the total frequency of Y among male gametes, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
 These four variables determine the frequencies of the six resident gamete types, which sum to one in each sex: $x_{1}^{\female}=\hat{p}_X^\female$, $x_{2}^{\female}=1-\hat{p}_X^\female$, $x_{1}^{\male}=(1-q)\hat{p}_X^\male$, $x_{2}^{\male}=(1-q)(1-\hat{p}_X^\male)$, $y_{1}^{\male}=q \hat{p}_Y^\male$, and $y_{2}^{\male}=q(1-\hat{p}_Y^\male)$. 
-Mean fitnesses in the resident population are given in \nameref{tab:meanfitnesses}.
+Mean fitnesses in the resident population are given in Table \ref{tab:meanfitnesses}.
 
 Various forms of selection can maintain a polymorphism at the $\mathbf{A}$ locus, including sexually antagonistic selection, overdominance, conflicts between diploid selection and selection upon haploid genotypes (ploidally-antagonsitic selection,~\cite{Immler:2012tl}), or a combination of these selective regimes (see below). 
 
@@ -1270,6 +1154,7 @@ Without gametic competition or drive ($\alpha_{\Delta}^\Hermaphrodite=t^\Hermaph
 \renewcommand{\theequation}{S3.\arabic{equation}}
 
 \section*{S3 Appendix}
+\label{app:inv_cond}
 
 \subsection*{Invasion conditions}
 
@@ -1445,23 +1330,277 @@ This scenario selects for a modifier that increases recombination between the se
 
 Haploid selection generally expands the conditions under which neo-W alleles can spread within ancestral systems that have evolved tight linkage between the sex-determining locus and a selected locus ($r \approx 0$).
 First, haploid selection can allow a polymorphism to be maintained when it would not under diploid selection alone (e.g., with directional selection in diploids). 
-In cases of ploidally-antagonistic selection, where there is a balance between alleles favored in the haploid stage and the diploid stage, neo-W alleles - even if unlinked to the selected locus - can spread (\nameref{fig:regionPloidAntag}).
+In cases of ploidally-antagonistic selection, where there is a balance between alleles favored in the haploid stage and the diploid stage, neo-W alleles - even if unlinked to the selected locus - can spread (Figure \ref{fig:regionPloidAntag}).
 Second, even when diploid selection could itself maintain a polymorphism, haploid selection can increase the conditions under which transitions among sex-determining systems are possible.
-Of particularly importance, when selection is sexually-antagonistic in diploids ($s^\female s^\male <0$ and $0<h^\Hermaphrodite<1$), an unlinked neo-W ($R=1/2$) cannot invade unless there is also haploid selection (see proof in \nameref{file:Mathematica}; Fig \ref{fig:SexAntagTighter} and \nameref{fig:SexAntagTighterMaleDrive}). 
-More generally, haploid selection alters the conditions under which neo-W alleles can spread (compare \nameref{fig:regionMaleDrive}-\nameref{fig:regionFemaleGS} to Fig \ref{fig:regionplots}). 
+Of particularly importance, when selection is sexually-antagonistic in diploids ($s^\female s^\male <0$ and $0<h^\Hermaphrodite<1$), an unlinked neo-W ($R=1/2$) cannot invade unless there is also haploid selection (see proof in \nameref{file:Mathematica}; Fig \ref{fig:SexAntagTighter} and Figure \ref{fig:SexAntagTighterMaleDrive}). 
+More generally, haploid selection alters the conditions under which neo-W alleles can spread (compare Figure \ref{fig:regionMaleDrive}-Figure \ref{fig:regionFemaleGS} to Fig \ref{fig:regionplots}). 
 
 %[SALLY:  I think that is enough, but we could add somewhere??: "Without haploid selection, unlinked neo-W alleles ($R=1/2$) can invade only under certain conditions, requiring either overdominance in males or underdominance in females (see proof in supplementary \textit{Mathematica} file).?  Note that underdominance in females with directional selection in males can lead to the spread of unlinked neo-W?s, but only from equilB (only $\Lambda_{ma}$ is greater than one in this case).]
 
 Male haploid selection in favour of the $a$ allele ($\alpha_{\Delta}^\male<0$, $w_{A}^\male<w_{a}^\male$) generates male-biased sex ratios at equilibria (A) and (B), where Y-$a$ is fixed ($\hat{p}_{Y}^\male=0$). 
 Male-biased sex ratios facilitate the spread of neo-W-$A$ and neo-W-$a$ haplotypes (increasing $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$). 
-Panels A-C in \nameref{fig:regionMaleDrive} and \ref{fig:regionMaleGS} show that neo-W haplotypes tend to spread for a wider range of parameters when sex ratios are male biased, compared to Fig \ref{fig:regionplots} without haploid selection. 
-By contrast, male haploid selection in favour of the $A$ allele generates female-biased sex ratios and reduces $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$, as demonstrated by panels D-F in \nameref{fig:regionMaleDrive} and \nameref{fig:regionMaleGS}. 
+Panels A-C in Figure \ref{fig:regionMaleDrive} and \ref{fig:regionMaleGS} show that neo-W haplotypes tend to spread for a wider range of parameters when sex ratios are male biased, compared to Fig \ref{fig:regionplots} without haploid selection. 
+By contrast, male haploid selection in favour of the $A$ allele generates female-biased sex ratios and reduces $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$, as demonstrated by panels D-F in Figure \ref{fig:regionMaleDrive} and Figure \ref{fig:regionMaleGS}. 
 
 Female haploid selection generates direct selection on the neo-W-$A$ and neo-W-$a$ haplotypes as they spread in females. 
-Thus, female haploid selection in favour of the $a$ allele tends to increase $\Lambda_{W'a}^{(XY)}$ and decrease $\Lambda_{W'A}^{(XY)}$, as shown by panels A-C in \nameref{fig:regionFemaleDrive} and \nameref{fig:regionFemaleGS}. 
-Conversely, female haploid selection in favour of the $A$ allele increases $\Lambda_{W'A}^{(XY)}$ and decreases $\Lambda_{W'a}^{(XY)}$, see panels D-F in \nameref{fig:regionFemaleDrive} and \nameref{fig:regionFemaleGS}. 
+Thus, female haploid selection in favour of the $a$ allele tends to increase $\Lambda_{W'a}^{(XY)}$ and decrease $\Lambda_{W'A}^{(XY)}$, as shown by panels A-C in Figure \ref{fig:regionFemaleDrive} and Figure \ref{fig:regionFemaleGS}. 
+Conversely, female haploid selection in favour of the $A$ allele increases $\Lambda_{W'A}^{(XY)}$ and decreases $\Lambda_{W'a}^{(XY)}$, see panels D-F in Figure \ref{fig:regionFemaleDrive} and Figure \ref{fig:regionFemaleGS}. 
 
 Thus, the impact of haploid selection on transitions between sex-determining systems must be considered as two sides of a coin: it can generate sex ratio biases that promote transitions that equalize the sex ratio, but it can also direct select for transitions that cause sex ratios to become biased.
+
+%\paragraph*{S1 File.}
+%\label{file:Mathematica}
+%{\bf Supplementary \textit{Mathematica} file.}  This file can be used to re-derive our results and generate figures. 
+%
+%\paragraph*{S1 Table}
+%\label{tab:chisubstitutions}
+%{\bf Substitutions for different loci orders assuming no interference.}
+%
+%\paragraph*{S2 Table}
+%\label{tab:meanfitnesses}
+%{\bf Mean fitnesses and zygotic sex ratio in the resident population ($M$ fixed, XY sex determination).}
+%
+%\paragraph*{S1 Appendix.}
+%\label{app:recurs}
+%{\bf Recursion equations and complete model description.} 
+%
+%\paragraph*{S2 Appendix.}
+%\label{app:eq_stab}
+%{\bf Equilibria and stability conditions when $M$ allele is fixed. } 
+%
+%\paragraph*{S3 Appendix.}
+%\label{app:inv_cond}
+%{\bf Invasion conditions for the $m$ allele.} 
+
+
+\section*{Supplementary Files}
+\paragraph*{S1 File.}
+\label{file:Mathematica}
+{\bf Supplementary \textit{Mathematica} file.}  This file can be used to re-derive our results and generate figures. Please contact authors for access.
+
+
+\newpage
+\section*{Supplementary Tables}
+\setcounter{table}{0} 
+\renewcommand{\thetable}{S\arabic{table}}
+
+\begin{table}[ht]
+\centering
+\smallskip
+\caption{
+Substitutions for different loci orders assuming no interference. %and $r,R\in(0,1/2)$.\textcolor{blue}{write all in form of first line? so that 1/2 cases are okay (can't determine chi if R is 1/2 in second line, or if r is 1/2 in third line}
+}
+\begin{tabular}{l l}
+\hline\hline
+  Order of loci &   \\ [0.5ex] \hline
+  SDR-A-M & $\rho=r(1-R)+R(1-r)$  \\
+  SDR-M-A & $r=\rho(1-R)+R(1-\rho)$ \\ %$\rho=(r-R)/(1-2R)$ \\
+  A-SDR-M & $R=r(1-\rho)+\rho(1-r)$ \\ %$\rho=(R-r)/(1-2r)$ \\
+  \hline \hline
+  \label{tab:chisubstitutions}
+ \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\smallskip
+\caption{Mean fitnesses and zygotic sex ratio in the resident population ($M$ fixed, XY sex determination). }
+\begin{tabular}{l l }
+\hline\hline
+  Sex \& Life Cycle Stage & Mean Fitness \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  female gametes ($\bar{w}_H^\female$) & 
+  $p_X^\female w_A^\female + (1-p_X^\female) w_a^\female$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  X-bearing male gametes ($\bar{w}_{HX}^\male$) & 
+  $p_X^{\male} w_A^\male + (1-p_X^{\male}) w_a^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  Y-bearing male gametes ($\bar{w}_{HY}^\male$) & 
+  $p_Y^{\male} w_A^\male + (1-p_Y^{\male}) w_a^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  male gametes ($\bar{w}_H^\male$) & 
+  $(1-q) \bar{w}_{HX}^\male + q \bar{w}_{HY}^\male$ \\ [0.5ex] \hline  \noalign{\vskip 0.5ex}
+  females ($\bar{w}^\female$) & 
+%  $\begin{array}{l}  (1-\zeta)^{-1} (1-q) \big[ p_X^\female w_A^\female p_X^\male w_A^\male w_{AA}^\female + \\
+%  (1 - p_X^\female) w_a^\female p_X^\male w_A^\male w_{Aa}^\female + \\
+%  p_X^\female w_A^\female (1 - p_X^\male) w_a^\male w_{Aa}^\female + \\
+%  (1-p_X^\female) w_a^\female (1 - p_X^\male) w_a^\male w_{aa}^\female \big] / \left( \bar{w}_H^\female \bar{w}_H^\male \right)
+%  \end{array} 
+ $\begin{array}{l} \big[ p_X^\female w_A^\female p_X^\male w_A^\male w_{AA}^\female + \\
+  (1 - p_X^\female) w_a^\female p_X^\male w_A^\male w_{Aa}^\female + \\
+  p_X^\female w_A^\female (1 - p_X^\male) w_a^\male w_{Aa}^\female + \\
+  (1-p_X^\female) w_a^\female (1 - p_X^\male) w_a^\male w_{aa}^\female \big] / \left( \bar{w}_H^\female \bar{w}_{HX}^\male \right)
+  \end{array}
+  $ \\ [0.5ex] \noalign{\vskip 0.5ex} \hline  \noalign{\vskip 0.5ex}
+  males ($\bar{w}^\male$) & 
+%  $\begin{array}{l} \zeta^{-1} q \big[ p_X^\female w_A^\female  p_Y^\male w_A^\male w_{AA}^\male + \\
+%  (1 - p_X^\female) w_a^\female  p_Y^\male w_A^\male w_{Aa}^\male + \\
+%  p_X^\female w_A^\female  (1 - p_Y^\male) w_a^\male w_{Aa}^\male + \\
+%  (1-p_X^\female) w_a^\female  (1 - p_Y^\male) w_a^\male w_{aa}^\male \big] / \left( \bar{w}_H^\female \bar{w}_H^\male \right) 
+%  \end{array}
+ $\begin{array}{l} \big[ p_X^\female w_A^\female  p_Y^\male w_A^\male w_{AA}^\male + \\
+  (1 - p_X^\female) w_a^\female  p_Y^\male w_A^\male w_{Aa}^\male + \\
+  p_X^\female w_A^\female  (1 - p_Y^\male) w_a^\male w_{Aa}^\male + \\
+  (1-p_X^\female) w_a^\female  (1 - p_Y^\male) w_a^\male w_{aa}^\male \big] / \left( \bar{w}_H^\female \bar{w}_{HY}^\male \right) 
+  \end{array}
+  $ \\ [0.5ex] \noalign{\vskip 0.5ex} \hline  \noalign{\vskip 0.5ex}
+  fraction zygotes male ($\zeta$) & $q \left[ p_Y^\male w_A^\male+(1-p_Y^\male)w_a^\male\right] / \bar{w}_H^\male $
+   \\ [0.5ex]  \noalign{\vskip 0.5ex}
+  \hline \hline
+  \label{tab:meanfitnesses}
+ \end{tabular}
+\end{table}
+
+
+\newpage
+\section*{Supplementary Figures}
+\setcounter{figure}{0} 
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Both neo-W haplotypes can spread, in the absence of haploid selection, when there is overdominance
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+\centering
+\centerline{\includegraphics[width=\linewidth]{PositionPlot_Overdominance.eps}}
+\caption{
+{\bf With overdominance, loci near to the ancestral sex-determining locus ($r\approx0$) can favour neo-W alleles that are less tightly linked ($R>r$).} 
+In panels A and B, the $a$ allele is favoured in females ($w_{aa}^\female=1.05$, $w_{Aa}^\Hermaphrodite=1$, $w_{AA}^\female=0.85$) and selection in males is overdominant ($w_{aa}^\male=w_{AA}^\male=0.75$).
+In panels C and D, selection in males and females is overdominant ($w_{aa}^\female=w_{AA}^\female=0.6$, $w_{aa}^\male=0.5$, $w_{AA}^\male=0.7$, $w_{Aa}^\Hermaphrodite=1$).
+There is no haploid selection $t^\Hermaphrodite = \alpha^\Hermaphrodite_\Delta = 0$.
+These parameters are marked by daggers in Fig \ref{fig:regionplots}B and C, which show that neo-W invasion is expected for any $R$ ($\Lambda_{W'A}^{(XY)},\Lambda_{W'a}^{(XY)}>1$) if the $a$ allele is nearly fixed on the Y (black lines in this figure; not stable for $r>>0$). 
+Equilibria where the $A$ allele is more common among Y-bearing male gametes can also be stable and allow neo-W invasion for these parameters (blue lines). 
+}
+\label{fig:positionOverdominance}
+\end{figure}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Both neo-W haplotypes can spread, in the absence of haploid selection, when there is overdominance
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+\centering
+\centerline{\includegraphics[width=\linewidth]{Temporal_Overdominance.eps}}
+\caption{
+{\bf Following invasion by a neo-W allele, there can be a complete transition to a new sex-determining system, maintenance of both ancestral-XY and neo-ZW sex determining systems, or loss of the new sex-determining allele.}  
+Here, we plot the frequency of the neo-W allele among female gametes.
+%; as the neo-W reaches frequency $0.5$, polymorphism at the ancestral XY locus is lost with Y becoming fixed such that sex is determined only be the ZW allele carried by a female gamete. 
+Panels A, C and D show cases where a steady state is reached with the neo-W at a frequency below $0.5$, in which case ancestral-X and Y alleles also both segregate. 
+In all cases, we assume that the $a$ allele is initially more common than the $A$ allele on the Y background (Y-$a$ is fixed when $r=0$). 
+When $r>0$ (panels B and D), Y-$A$ haplotypes created by recombination can become more common than Y-$a$ haplotypes as the neo-W spreads.
+In B, this leads to loss of the neo-W and the system goes to an equilibrium with X-$a$ and Y-$A$ haplotypes fixed (equilibrium $A'$), such that all females have the high fitness genotype $aa$ and all males are $Aa$. 
+For the parameters in B, neo-W alleles have negative invasion fitness when the Y-$A$ haplotype is ancestrally more common than Y-$a$ (compare blue to black curves in Figure \ref{fig:positionOverdominance}A and  Figure \ref{fig:positionOverdominance}B near the ancestral sex-determining locus). 
+In contrast, the neo-W is not lost in panel D as it is favoured regardless of whether Y-$A$ or Y-$a$ haplotypes predominate (again, compare blue to black curves in Figure \ref{fig:positionOverdominance}C and  Figure \ref{fig:positionOverdominance}D). 
+}
+\label{fig:temporalOverdominance}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\centerline{\includegraphics[width=1.25\linewidth]{PositionPlot_SexAntagTighter_MaleDrive.eps}}
+\caption{
+{\bf  When there is sexually-antagonistic selection and haploid selection, a neo-W allele may invade for any $R$.}
+Panel A shows that the invasion fitness of a neo-W is positive, even when $r<R$ (unshaded region).
+In panel B, we vary the recombination rate between the neo-W and the selected locus ($R$) for a fixed recombination rate between the ancestral sex-determining locus and the selected locus ($r=0.005$).
+Coloured markers show recombination rates for which the temporal dynamics of neo-W invasion are plotted in panel C (black $R=0.001$, red $R=0.02$, blue $R=0.1$, green $R=0.5$). 
+The diploid selection parameters used in this plot are the same as in Fig \ref{fig:SexAntagTighter}. 
+There is also meiotic drive in males favouring $a$ ($\alpha_{\Delta}^\male=-0.08$), this full set of parameters is marked by an asterisk in Figure \ref{fig:regionMaleDrive}A.
+When $R=0.5$ (green curve), the neo-W does not reach fixation and X, Y, Z, and W alleles are all maintained in the population, see Figure \ref{fig:freqAll}C.
+}
+\label{fig:SexAntagTighterMaleDrive}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\centerline{\includegraphics[width=1.25\linewidth]{Region_Plot_combined_MaleDrive.eps}}
+\caption{
+{\bf Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is male meiotic drive at a locus that is tightly linked to the ancestral XY locus ($r=0$).}
+This figure is equivalent to Fig \ref{fig:regionplots} but with meiotic drive in males.
+%We vary the fitness of male homozygotes relative to heterozygotes ($w_{Aa}^\Hermaphrodite=1$) and only consider stable equilibria at which both $\mathbf{A}$ locus allele are maintained and the $a$ allele is initially fixed on the Y, region outlined. 
+In panels A-C, meiotic drive in males favours the $a$ allele ($\alpha_{\Delta}^\male=-0.16$), creating male-biased sex ratios and generally increasing $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$. 
+By contrast, $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$ tend to be reduced when meiotic drive in males favours the $A$ allele ($\alpha_{\Delta}^\male=0.16$), panels D-F. 
+}
+\label{fig:regionMaleDrive}
+\end{figure}
+
+%\newpage
+\begin{figure}[!h]
+\centering
+\centerline{\includegraphics[width=1.25\linewidth]{Region_Plot_combined_MaleGS.eps}}
+\caption{
+{\bf Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is male gametic competition at a locus that is tightly linked to the ancestral XY locus ($r=0$).}
+This figure is equivalent to Fig \ref{fig:regionplots} but with gametic competition in males.
+%Diploid selection parameters ($w_{ij}^\Hermaphrodite$) are the same as those in Figure \ref{fig:regionMaleDrive}. 
+The $a$ allele is favoured during male gametic competition in Panels A-C ($w_{a}^\male=1.16$, $w_{A}^\male=1$), which creates male biased sex ratios and increases $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$. 
+By contrast, $\Lambda_{W'A}^{(XY)}$ and $\Lambda_{W'a}^{(XY)}$ tend to be reduced when the $A$ allele is favoured during male gametic competition, panels D-F.
+Compared to the meiotic drive parameters in Figure \ref{fig:regionMaleDrive}, the effect of these male gametic competition parameters on the sex ratio is smaller. 
+For example, in Figure \ref{fig:regionMaleDrive}A-C, the ancestral sex ratio is $\alpha^\male=0.58$ at equilibrium (B) and in panels A-C of this plot, the ancestral sex ratio is $w_{a}^\male/(w_{A}^\male+w_{a}^\male)=0.537$ at equilibrium (B). 
+}
+\label{fig:regionMaleGS}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\centerline{\includegraphics[width=\linewidth]{Region_Plot_combined_FemaleDrive.eps}}
+\caption{
+{\bf Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is female meiotic drive at a locus that is tightly linked to the ancestral XY locus ($r=0$).}
+This figure is equivalent to Fig \ref{fig:regionplots} but with meiotic drive in females.
+%Diploid selection parameters ($w_{ij}^\Hermaphrodite$) are the same as those in Figure \ref{fig:regionMaleDrive} and Figure \ref{fig:regionMaleGS}. 
+The $a$ allele is favoured by meiotic drive in females in Panels A-C ($\alpha_{\Delta}^\female=-0.16$), which increases $\Lambda_{W'a}^{(XY)}$ and decreases $\Lambda_{W'A}^{(XY)}$. 
+Female meiotic drive in favour of the $A$ allele (panels D-F, $\alpha_{\Delta}^\female=-0.16$) has the opposite effect. 
+}
+\label{fig:regionFemaleDrive}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\centerline{\includegraphics[width=1.25\linewidth]{Region_Plot_combined_FemaleGS.eps}}
+\caption{
+{\bf Parameters for which neo-W-$A$ and neo-W-$a$ haplotypes spread when there is female gametic competition at a locus that is tightly linked to the ancestral XY locus ($r=0$).}
+This figure is equivalent to Fig \ref{fig:regionplots} but with gametic competition in females.
+%Diploid selection parameters ($w_{ij}^\Hermaphrodite$) are the same as those in Figure \ref{fig:regionMaleDrive}, Figure \ref{fig:regionMaleGS}, and Figure \ref{fig:regionFemaleDrive}. 
+The $a$ allele is favoured during female gametic competition in females in Panels A-C ($w_{a}^\female=1.16$, $w_{A}^\female=1$), which increases $\Lambda_{W'a}^{(XY)}$ and decreases $\Lambda_{W'A}^{(XY)}$. 
+The $A$ allele is favoured during gametic competition in panels D-F ($w_{a}^\female=1$, $w_{A}^\female=1.16$), giving the opposite effect on $\Lambda_{W'a}^{(XY)}$ and $\Lambda_{W'A}^{(XY)}$. 
+}
+\label{fig:regionFemaleGS}
+\end{figure}
+
+%\begin{landscape}
+\begin{figure}[!h]
+\centering
+\centerline{
+\includegraphics[width=1.25\linewidth]{All_plot_combined_PloidAntag.eps}
+}
+\caption{
+{\bf Ploidally-antagonistic selection can drive the spread of neo-W alleles. }
+A-D show when each of the neo-W haplotypes invades an internally stable equilibrium with $a$ fixed on the Y (found by setting $r=0$).
+The y-axis shows directional selection in diploids of both sexes, $s^\female=s^\male$, and the x-axes show sex-specific drive, $\alpha_\Delta^\Hermaphrodite$, or haploid competition, $t^\Hermaphrodite$.
+The top left and bottom right quadrants therefore imply ploidally-antagonistic selection (and these are the only places where neo-W haplotypes can invade).
+Dominance is equal in both sexes, $h^\female=h^\male=3/4$. 
+E-F show the temporal dynamics of neo-W frequency in females with parameters given by the asterisks in the corresponding A-D plot, with $r=1/200$, for four different $R$.
+Black $R=1/1000$, Red $R=2/100$, Blue $R=1/10$, Green $R=1/2$.  
+}
+\label{fig:regionPloidAntag}
+\end{figure}
+%\end{landscape}
+
+%\begin{landscape}
+\begin{figure}[!h]
+\centering
+\centerline{
+\includegraphics[width=1.25\linewidth]{Freq_plot_combined_PloidAntag.eps}
+}
+\caption{
+{\bf Pseudo-fixation of neo-W or maintenance of multiple sex-determining alleles. }
+The curves show the frequencies of the neo-W (red), ancestral Y (blue), and $A$ allele (black) among female gametes (solid curves) and among male gametes (dashed curves). 
+In panel A, there is a complete transition from XY sex determination (XX-ZZ females and XY-ZZ males) to ZW sex determination (YY-ZW females and YY-ZZ males).  
+In panels B and C a polymorphism is maintained at both the ancestral XY locus and the new ZW locus, such that there are males with genotypes XY-ZZ and YY-ZZ and females with genotypes XX-ZZ, XX-ZW, XY-ZW, and YY-ZW. 
+In panel A, selection is ploidally-antagonistic with drive in males (parameters as in the green curve in Fig \ref{fig:SexRatioBad}B).
+In panel B, there is overdominance in both sexes and no haploid selection (parameters as in the green curve in Figure \ref{fig:temporalOverdominance}C).
+In panel C, there is sexually-antagonistic selection in diploids with drive in males (parameters as in the green curve in Figure \ref{fig:regionMaleDrive}C).
+In all cases, the initial equilibrium frequency has $a$ near fixation on the Y.
+}
+\label{fig:freqAll}
+\end{figure}
+%\end{landscape}
+
 
 \end{document}
 
