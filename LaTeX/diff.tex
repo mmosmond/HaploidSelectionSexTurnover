@@ -1,7 +1,7 @@
 % Template for PLoS
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL main.tex            Sun Mar 25 06:45:15 2018
-%DIF ADD main_revision.tex   Sun Mar 25 09:28:35 2018
+%DIF ADD main_revision.tex   Sun Mar 25 13:34:14 2018
 % Version 3.4 January 2017
 %
 % % % % % % % % % % % % % % % % % % % % % %
@@ -266,7 +266,7 @@ Predominant theories for why we observe such transitions generally conclude that
 We use population genetic models to extend these theories in two ways: 
 (1) We explicitly consider selection on loci very tightly linked to the ancestral sex-determining loci, e.g., within the non-recombining region of the ancestral sex chromosomes. 
 Variation at such loci can favour the spread of new sex-determining systems in which the heterogametic sex changes (XY to ZW or ZW to XY) and the new sex-determining region is less closely linked (or unlinked) to the locus under selection, which is not predicted by previous theory. 
-(2) We also consider selection upon haploid genotypes either during gametic competition (e.g., pollen/sperm competition) or meiosis (i.e., non-Mendelian segregation), which can cause the zygotic sex ratio to become biased. 
+(2) We also consider selection upon haploid genotypes either during gametic competition (e.g., pollen/sperm competition \DIFaddbegin \DIFadd{involving multiple males}\DIFaddend ) or meiosis (i.e., non-Mendelian segregation), which can cause the zygotic sex ratio to become biased. 
 We find that associations with haploid selected loci can drive transitions between sex-determining systems, without requiring sexually-antagonistic selection in diploids. 
 Unexpectedly, with haploid selection, transitions between male and female heterogamety can also evolve where linkage with the sex-determining locus is weakened. 
 Furthermore, sex ratio biases may increase or decrease with the spread of new sex chromosomes. 
@@ -335,7 +335,7 @@ Gametic competition is also typically sex specific, occurring primarily among ma
 Gametic competition may be particularly common in plants, in which 60-70\% of all genes are expressed in the male gametophyte, and these genes exhibit stronger signatures of selection than randomly-chosen genes~\cite{Borg:2009jpa,Arunkumar:2013iq,Gossmann:2014dua}.
 In addition, artificial selection pressures applied to male gametophytes are known to cause a response to selection (e.g.,~\cite{Hormaza:1996cv,Ravikumar:2003uo,Hedhly:2004iv,Clarke:2004ir}). 
 A smaller proportion of genes are thought to be expressed and selected during competition in animal sperm, although precise estimates are uncertain~\cite{Zheng:2001fi,JOSEPH:2004haa,Vibranovski:2010et}. 
-Nevertheless, recent studies have demonstrated that sperm competition in animals can alter haploid allele frequencies and increase offspring fitness~\cite{Immler:2014im,Alavioon2017}.
+Nevertheless, recent studies have demonstrated that sperm competition in animals\DIFaddbegin \DIFadd{, even within a single ejaculate, }\DIFaddend can alter haploid allele frequencies and increase offspring fitness~\cite{Immler:2014im,Alavioon2017}.
 
 There are various ways by which genes experiencing haploid selection could influence transitions between sex-determining systems. 
 If we assume that haploid selection at any particular locus predominantly occurs in one sex (e.g., meiotic drive during spermatogenesis), then such loci experience a form of sex-specific selection. 
@@ -400,23 +400,29 @@ Neo-W alleles allow Y-associated alleles into females, which may impede or aid t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %life-cycle
-In each generation, we census the genotype frequencies in male and female gametes/gametophytes (hereafter gametes) before gametic competition. 
-A full description of our model, including recursion equations, is given in \nameref{app:recurs}. 
-First, competition occurs among male gametes (sperm/pollen competition) and among female gametes (egg/ovule competition) separately. 
+\DIFaddbegin \DIFadd{A full description of our model, including recursion equations, is given in }\nameref{app:recurs}\DIFadd{. 
+}\DIFaddend In each generation, we census the genotype frequencies in male and female gametes/gametophytes (hereafter gametes) before gametic competition. 
+\DIFdelbegin \DIFdel{A full description of our model, including recursion equations, is given in }%DIFDELCMD < \nameref{app:recurs}%%%
+\DIFdel{. 
+}\DIFdelend First, competition occurs among male gametes (sperm/pollen competition) and among female gametes (egg/ovule competition) separately. 
 Selection during gametic competition depends on the $\mathbf{A}$ locus genotype; relative fitnesses are given by \DIFdelbegin \DIFdel{$w_A^\Hermaphrodite$ and $w_a^\Hermaphrodite$ ($\Hermaphrodite \in \{\female,\male\}$}\DIFdelend \DIFaddbegin \DIFadd{$w_A^\circ$ and $w_a^\circ$ ($\circ \in \{\female,\male\}$}\DIFaddend ; see table \ref{tab:fitnesstable}). %$w_{A}^\male$ and $w_{a}^\male$ for male gametes and $w_{A}^\female$ and $w_{a}^\female$ for female gametes, see table \ref{tab:fitnesstable}. 
 We assume that all gametes compete for fertilization during gametic competition, which implies a polygamous mating system. 
 Gametic competition in monogamous mating systems is, however, equivalent to meiotic drive in our model (described below), as either only alters the frequency of gametes produced by heterozygotes. 
 After gametic competition, conjugation between male and female gametes occurs at random.
 The resulting zygotes develop as males or females, depending on their genotypes at the $\mathbf{X}$ and $\mathbf{M}$ loci. %(and the $\mathbf{M}$ genotype of their mother in the case of maternal control).
-Diploid males and females then experience selection, with relative fitnesses \DIFdelbegin \DIFdel{$w_{AA}^{\Hermaphrodite}$, $w_{Aa}^{\Hermaphrodite}$, and $w_{aa}^{\Hermaphrodite}$}\DIFdelend \DIFaddbegin \DIFadd{$w_{AA}^{\circ}$, $w_{Aa}^{\circ}$, and $w_{aa}^{\circ}$}\DIFaddend . %where $g$ is the diploid genotype at the $\mathbf{A}$ locus ($g \in \{AA, Aa, aa\}$).  
+Diploid males and females then experience \DIFaddbegin \DIFadd{\textcolor{red}{viability(?)} }\DIFaddend selection, with relative fitnesses \DIFdelbegin \DIFdel{$w_{AA}^{\Hermaphrodite}$, $w_{Aa}^{\Hermaphrodite}$, and $w_{aa}^{\Hermaphrodite}$}\DIFdelend \DIFaddbegin \DIFadd{$w_{AA}^{\circ}$, $w_{Aa}^{\circ}$, and $w_{aa}^{\circ}$}\DIFaddend . %where $g$ is the diploid genotype at the $\mathbf{A}$ locus ($g \in \{AA, Aa, aa\}$).  
 %Diploids compete with others of the same sex, where selection depends on the sex of the individual and its genotype at the $\mathbf{A}$ locus.
-The next generation of gametes is produced by meiosis, during which recombination and sex-specific meiotic drive can occur. 
+\DIFaddbegin \DIFadd{\textcolor{red}{We do not consider fertility(?) or sexual selection.}
+}\DIFaddend The next generation of gametes is produced by meiosis, during which recombination and sex-specific meiotic drive can occur. 
 Recombination (i.e., an odd number of cross-overs) occurs between loci $\mathbf{X}$ and $\mathbf{A}$ with probability $r$, between loci $\mathbf{A}$ and $\mathbf{M}$ with probability $R$, and between loci $\mathbf{X}$ and $\mathbf{M}$ with probability $\rho$.
 Any linear order of the loci can be modelled with appropriate choices of $r$, $R$, and $\rho$ (see Fig \ref{fig:model_outline}A and \nameref{tab:chisubstitutions}). 
 Individuals that are heterozygous at the $\mathbf{A}$ locus may experience meiotic drive; a gamete produced by $Aa$ heterozgotes of sex \DIFdelbegin \DIFdel{$\Hermaphrodite$ }\DIFdelend \DIFaddbegin \DIFadd{$\circ$ }\DIFaddend bears allele $A$ with probability \DIFdelbegin \DIFdel{$\alpha^\Hermaphrodite$}\DIFdelend \DIFaddbegin \DIFadd{$\alpha^\circ$}\DIFaddend . 
 Thus, the $\mathbf{A}$ locus can experience sex-specific gametic competition, diploid selection, and/or meiotic drive. 
+\DIFdelbegin %DIFDELCMD < 
 
-\begin{table}[ht]
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \DIFadd{`
+}\DIFaddend \begin{table}[ht]
 %\centering
 \smallskip
 \caption{{\bf Relative fitness of different genotypes in sex \DIFdelbeginFL \DIFdelFL{$\Hermaphrodite \in \{\female,\male\}$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$\circ \in \{\female,\male\}$ }\DIFaddendFL } }
@@ -453,7 +459,7 @@ This is determined by the leading eigenvalue ($\lambda_m^{(XY)}$) of the system 
 %Thus, the system describing the change in frequency of the $m$ allele consists of eight recursion equations. 
 This system simplifies substantially for a dominant neo-Y ($k=0$) or neo-W ($k=1$), see \nameref{app:inv_cond}. 
 The leading eigenvalue for a rare neo-Y or neo-W allele, $m\in\{Y',W'\}$, is the largest value of X that solves $x^2+ b x + c = 0$.  %$(\lambda_m^{(i)})^2+ b \lambda_m^{(i)} + c =0$. 
-The coefficients are $b= - (\Lambda_{mA}^{(XY)} + \Lambda_{ma}^{(XY)})+(\chi_{mA}^{(XY)} + \chi_{ma}^{(XY)})$ and $c = (\Lambda_{mA}^{(XY)} - \chi_{mA}^{(XY)}) (\Lambda_{ma}^{(XY)} - \chi_{ma}^{(XY)}) - \chi_{mA}^{(XY)} \chi_{ma}^{(XY)}$, where $\Lambda_{mi}^{(XY)}>0$ is the multiplicative growth rate (which we will call the ``haplotypic growth rate'') of the neo-sex determination allele $m$ on background $i\in\{A,a\}$ without accounting for loss due to recombination ($R=0$), and $\chi_{mi}^{(XY)}>0$ is the rate at which mutant haplotypes on background $i\in\{A,a\}$ recombine onto the other $\mathbf{A}$ locus background in heterozygotes (proportional to $R$), see Table \ref{tab:haplotype_growth}.
+The coefficients are $b= - (\Lambda_{mA}^{(XY)} + \Lambda_{ma}^{(XY)})+(\chi_{mA}^{(XY)} + \chi_{ma}^{(XY)})$ and $c = (\Lambda_{mA}^{(XY)} - \chi_{mA}^{(XY)}) (\Lambda_{ma}^{(XY)} - \chi_{ma}^{(XY)}) - \chi_{mA}^{(XY)} \chi_{ma}^{(XY)}$, where $\Lambda_{mi}^{(XY)}>0$ is the multiplicative growth rate (which we will call the ``haplotypic growth rate'') of the neo-sex determination allele $m$ on background $i\in\{A,a\}$ without accounting for loss due to recombination ($R=0$), and $\chi_{mi}^{(XY)}>0$ is the rate at which mutant haplotypes on background $i\in\{A,a\}$ recombine onto the other $\mathbf{A}$ locus background in heterozygotes (proportional to $R$\DIFaddbegin \DIFadd{; \textcolor{red}{we call this the ``haplotypic recombination rate"(?)}}\DIFaddend ), see Table \ref{tab:haplotype_growth}.
 In the ancestral population, it is convenient to follow the frequency of the $A$ allele among female gametes (eggs), $p^\female_X$, and among X-bearing, $p^\male_X$, and among Y-bearing, $p^\male_Y$, male gametes (sperm/pollen). 
 We also track the fraction of male gametes that are Y-bearing, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
 We will consider only equilibrium frequencies of alleles, \DIFdelbegin \DIFdel{$\hat{p}^\Hermaphrodite_i$}\DIFdelend \DIFaddbegin \DIFadd{$\hat{p}^\circ_i$}\DIFaddend , and Y-bearing male gametes, $\hat{q}$, when calculating the eigenvalues.  
@@ -664,10 +670,12 @@ However, numerical simulations demonstrate that new sex-determining alleles do n
 
 Here we assume that selection is weak (\DIFdelbegin \DIFdel{$s^\Hermaphrodite$, $t^\Hermaphrodite$, $\alpha_{\Delta}^\Hermaphrodite$ }\DIFdelend \DIFaddbegin \DIFadd{$s^\circ$, $t^\circ$, $\alpha_{\Delta}^\circ$ }\DIFaddend of order $\epsilon<<1$) and thus implicitly assume that all recombination rates ($r$, $R$ and $\rho$) are large relative to selection.
 %, we denote the leading eigenvalues describing the invasion of a neo-Y ($k=0$) and a neo-W ($k=1$) into an ancestrally XY system by $\lambda_{Y',XY}$ and $\lambda_{W',XY}$, respectively. 
-To leading order in selection, the leading eigenvalues are:
+To leading order in selection,
+\DIFdelbegin \DIFdel{the leading eigenvalues are:
+}\DIFdelend 
 
 \begin{equation}
-\lambda_{Y'}^{(XY)} =1+ \frac{1}{4}V_{A}S_{A}^2\frac{ \left( r-R \right) }{r R}+O\left(\epsilon^3 \right) 
+\lambda_{Y'}^{(XY)} = 1 + \frac{1}{4}V_{A}S_{A}^2\frac{ \left( r-R \right) }{r R}+O\left(\epsilon^3 \right) 
 \label{eq:lambda_neoY}
 \end{equation}
 
@@ -745,8 +753,8 @@ Scenario &  Assumptions & neo-W spreads ($\lambda_{W'}^{(XY)}>1$) if \\ [0.5ex] 
 \noalign{\vskip 1mm}
   male drive only & $h^\male=h^\female$, $t^\female=t^\male=\alpha^\female_{\Delta}=0$ & $s^\female s^\male>0$ \\ [0.5ex]
  female drive only & $h^\male=h^\female$, $t^\female=t^\male=\alpha^\male_{\Delta}=0$ & $s^\female s^\male>0$ \\ [0.5ex]
- sperm competition only &  $h^\male=h^\female$, $t^\female=\alpha^\female_{\Delta}=\alpha^\male_{\Delta}=0$ & $s^\female(s^\male-s^\female)>0$ \\ [0.5ex]
-  egg competition only & $h^\male=h^\female$, $t^\male=\alpha^\female_{\Delta}=\alpha^\male_{\Delta}=0$ & $s^\male(s^\female-s^\male)>0$ \\ [0.5ex]
+ \DIFdelbeginFL \DIFdelFL{sperm }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{male gametic }\DIFaddendFL competition only &  $h^\male=h^\female$, $t^\female=\alpha^\female_{\Delta}=\alpha^\male_{\Delta}=0$ & $s^\female(s^\male-s^\female)>0$ \\ [0.5ex]
+  \DIFdelbeginFL \DIFdelFL{egg }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{female gametic }\DIFaddendFL competition only & $h^\male=h^\female$, $t^\male=\alpha^\female_{\Delta}=\alpha^\male_{\Delta}=0$ & $s^\male(s^\female-s^\male)>0$ \\ [0.5ex]
   \hline \hline
   \label{tab:specialcases}
  \end{tabular}
@@ -929,10 +937,11 @@ For example, there are a dozen sex chromosome configurations among Dipteran spec
 
 %Limitation 3: don't consider m alleles with similar k to ancester, no ancestral ESD considered
 In this study, we have only considered new sex-determining alleles of large effect. 
-However, we expect similar selective forces to act on masculinizing/feminizing alleles of weaker effect. 
+However, we expect similar selective forces to act on masculinizing/feminizing alleles of weaker effect.
 For example, small effect masculinizing/feminizing alleles within a threshold model of sex determination can be favoured when linked to loci that experience sexually-antagonistic selection~\cite{Muralidhar2018}. 
 These results echo those for large-effect neo-Y/neo-W alleles~\cite{vanDoorn:2007eu,vanDoorn:2010hu}.
-Finally, while we have considered cis-GSD, trans-GSD, and GSD to ESD transitions, we have not explicitly considered ESD to GSD transitions. 
+\DIFaddbegin \DIFadd{\textcolor{red}{It should be noted, however, that the dynamics of sex-determining alleles with very weak effect will be influenced by genetic drift, which itself has been shown to cause trans-GSD transitions \cite{Veller2017}}.
+}\DIFaddend Finally, while we have considered cis-GSD, trans-GSD, and GSD to ESD transitions, we have not explicitly considered ESD to GSD transitions. 
 Recent models of ESD to GSD transitions~\cite{Ubeda:2015fx,Muralidhar2018} show that that neo-Y/neo-W alleles can be favoured when they arise near to haploid and/or diploid selected loci, which also occurs in our model. 
 
 %Limitation 2: TWO ALLELE DRIVE
