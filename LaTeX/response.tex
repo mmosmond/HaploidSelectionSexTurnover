@@ -14,6 +14,9 @@ reviewers' words\\
 \\
 
 \noindent  Line numbers (L\#) in authors' comments refer to those in the revised PDF.
+\\
+
+\noindent See diff.pdf for highlighted differences between the original submission and the revised version.
 
 \section{Reviewer 1}
 
@@ -31,13 +34,14 @@ The selected locus allows for three modes of selection: gametic selection (weigh
 The ``haplotypic growth rate" plays a really essential role in providing intuition about the results. Similarly the $\chi_{mi}^{(XY)}$ terms also are crucial.  I suggest giving a short name for the chi terms (currently they are the ``rate at which mutant haplotypes on background i recombine onto the other A locus background in heterozygotes"...).   The importance of these becomes clear in Table 2, but I wonder if there is a graphical way to make their meaning even clearer.  
 
 \noindent\paragraph{Response}
-\textcolor{red}{We could call it the ``haplotypic recombination rate" near L153, but I'm not sure how much we will use this term in the text.}
+\textcolor{blue}{We now call these terms the ``dissociative force" as they break down linkage disequilibrium (L162).}
 
 \noindent\subsection{}
 It needs to be stated somewhere that the models are entirely deterministic, implying that the authors assume that the selective forces always exceed the force of random drift. It might be useful to discuss this a bit. Is there evidence that in no case has drift been a key factor in changes of sex determination system?  The discussion mentions alleles of weaker effect, but does not mention that in this scenario, models of weak effects would need to consider drift as well.
 
 \noindent\paragraph{Response}
-\textcolor{red}{We could first mention that the model is deterministic, and hence ignores drift, near L131. As for the role of drift in transitions, we could certainly elaborate on the Veller et al 2017 Genetics paper that discusses how ``drift-induced selection" causes trans-GSD transitions. I've put a possible sentence in near L482: ``It should be noted, however, that the dynamics of sex-determining alleles with very weak effect will be influenced by genetic drift, which itself has been shown to cause trans-GSD transitions (Veller et al 2017)."}
+\textcolor{blue}{We now mention that the model is deterministic, and hence ignores drift (L136). 
+We later mention that drift can in fact be a key factor in transitions: ``It should be noted, however, that the dynamics of sex-determining alleles with very weak effect will be influenced by genetic drift, which itself has been shown to cause trans-GSD transitions (Veller et al 2017)." (L511)}
 
 \noindent\subsection{}
 A glitch appears in the section ``Loose linkage with the ancestral sex-determining region" on line 270, where the text reads, ``To leading order in selection, the leading eigenvalues are..."
@@ -49,7 +53,9 @@ A glitch appears in the section ``Loose linkage with the ancestral sex-determini
 Gametic selection among sperm is a bit different from sperm competition, since the latter involves pair-wise (or multi-way) bouts, whereas gametic selection assigns constant fitnesses to each haplotype. I would replace occurrences of ``sperm competition" with ``male gametic selection", or maybe ``sperm gametic competition". To be consistent, replace ``egg competition" with ``female/egg gametic competition". 
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We have made the suggested replacements. There are two exceptions. In the abstract we use sperm competition as an example of gametic competition, but we now state that this would involve multiple males. In the introduction we mention that sperm competition has been shown to alter allele frequencies and fitness, and in this case we now mention this was shown within a single ejaculate (L68).}
+\textcolor{blue}{We have made the suggested replacements. There is one exception. In the abstract we use the familiar term ``sperm competition" as an example of gametic competition, but we now explicitly state that we imply sperm from multiple males.
+%n the introduction we mention that sperm competition has been shown to alter allele frequencies and fitness, and in this case we now mention this was shown within a single ejaculate (L68).
+}
 
 \noindent\subsection{}
 I am not certain of this, but it seems that a potentially important difference between ESD and GSD has to do with the variance in proportion male? Since ESD (in a constant environment, as is implicitly modeled here) has a binomial sampling of sexes, but GSD might deviate from this.  This might be an issue because Fisherian sex ratio selection acts on the mean and not the variance.
@@ -72,7 +78,15 @@ On the other hand, I am much less sure that this paper will reach beyond experts
 I think the introduction could be simplified so that the context of the study is more obvious. The authors essentially need to make three key points, which are there, but could be better drawn out. First, transitions between sex-determining systems are common, and recent empirical work has given us a much greater appreciation for just how common these transitions are. Second, there are two major mechanisms that are thought induce evolution of new sex-determination mechanisms: (1) selection to stabilize the sex ratio, and (2) hitchhiking between (tightly linked) sex-determination and sexually antagonistic alleles. Third, the authors should clearly outline the major limitations of current theory as a means of motivating their mega-model that captures an array of genetic and selection scenarios that may lead to transitions in sex determination. As I mentioned, these elements can all be found in the introduction, but the pitch can be substantially streamlined to allow readers to easily see: (1) what is the context? (2) What do we currently think drives transitions between SD systems? And (3) what are the holes in the theory and how will the authors address them?
 
 \noindent\paragraph{Response}
-\textcolor{blue}{The introduction is now arranged as follows. The first paragraph discusses how common transitions are. The second and third paragraphs discuss the two major mechanisms currently hypothesized to drive the observed transitions, respectively. The fourth paragraph introduces haploid selection and the fifth talks about its potential implications for transitions, motivating our model. The final, sixth, paragraph briefly mentions our main findings.}
+\textcolor{blue}{
+The introduction has been simplified to be as follows.
+The first paragraph discusses how common transitions are (context). 
+The second and third paragraphs discuss the two major mechanisms currently hypothesized to drive the observed transitions, respectively (current theory). 
+The fourth paragraph explains how assuming ancestrally-tight sex-linkage produces previously unexpected transitions (one hole in current theory, and how we address it).
+The fifth paragraph discusses the potential complications of haploid selection for transitions (another hole in current theory).
+The sixth paragraph describes previous studies on transitions with haploid selection (attempts to address the second hole). 
+The final, seventh, paragraph states how our approach differs from previous attempts and the major findings we uncover (how we address the second hole).  
+}
 
 \noindent\subsection{}
 Likewise, the results yield three major insights:\\
@@ -86,7 +100,18 @@ One potential way to help readers -- particularly those interested in what the p
 One tactic for including analytical details which specialists will want to see, while allowing less mathematically inclined readers to easily find each main result, is to place short and accessible summaries at the close of each section of the Results. Such a tactic has been put to good use in a hugely influential paper by Allen Orr (1998 Evolution), which I expect the authors will be familiar with. Orr presents the major mathematical results of his analysis alongside prominently labelled punchline paragraphs that summarize each of his main results in a concise and easily understandable manner. If the authors choose to take this approach, please be clear to place the take-home messages in context: clearly state whether the result confirms previous theory, or represents a new result or contradiction of an earlier result.
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We now give these 3 main conclusions at the end of the introduction. Further, in the results we now also highlight 5 conclusions in the style of Orr 1998.}
+\textcolor{blue}{
+We now give 3 main conclusions at the end of the introduction (L69) which echo those mentioned by the reviewer (looser linkage can evolve, equal selection to increase or decrease the sex ratio, ESD does not always invade biased sex ratio; all of which suggest haploid selection makes conditions for transitions more permissive).
+These are highlighted again in the results, in the style of Orr 1998:\\
+%(1) transitions are determined by both sex-ratio selection and selection on associated alleles,\\
+%(2) cis- and trans-GSD transitions are qualitatively different,\\
+(1A) ancestrally-tight sex-linkage allows looser sex-linkage to evolve in trans-GSD transitions (with or without haploid selection),\\
+(1B) haploid selection allows looser sex-linkage to evolve in trans-GSD transitions,\\
+(2) when selection is weak relative to recombination, sex-ratio selection is exactly equal in magnitude to the selection imposed by associations with selected alleles, and\\
+(3) transitions from genetic to environmental sex-determination are not straightforwardly predicted by selection to balance the zygotic sex ratio when haploid selection is present.
+\vspace{0.25cm}\\
+These are all new results, although (1A) was shown for the special case of $r=0$, $R=1/2$, and ploidally-antagonistic selection in Kozielska et al 2010, which we now mention immediately below (1A). 
+}
 
 \subsection{MINOR COMMENTS}
 
@@ -112,7 +137,7 @@ L35-37: sentence could use an edit for ease of reading.
 Immediately preceding the paragraph beginning line 44: It would be worth establishing the limitations of previous work. What exactly motivated you to do this mathematical modelling?
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We have rearranged and rewritten the introduction to better motivate our model (see Response 2.1). In particular, paragraph 5 explains how the effect of haploid selection on SD transitions is unclear.}
+\textcolor{blue}{We have rearranged and rewritten the introduction to better motivate our model (see Response 2.1). In particular, paragraphs 6 and 7 explain the previous attempts and our approach, respectively.}
 
 \noindent\subsubsection{}
 L56-57: Rephrase for clarity "individual cases of meiotic drive are generally sex-limited, and exclusively effect male or female gametes". And on line 57, "sex specific" could be changed to "sex-limited".
@@ -124,7 +149,7 @@ L56-57: Rephrase for clarity "individual cases of meiotic drive are generally se
 Lines 80-81: This primary finding is completely aligned with the earlier views of theory that are summarized above. Are you sure you want to lead with this as the main emphasis of the study? It understates what is new.
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We have rewritten the main conclusions to be those three suggested in 2.2 (see Response 2.2).}
+\textcolor{blue}{We have rewritten the main conclusions (see Response 2.2).}
 
 \noindent\subsubsection{}
 M locus is dominant to X. How important is this assumption? Is this compatible with any data (e.g., on feminizing or masculinizing factors in Musca domestica)?
@@ -132,7 +157,7 @@ M locus is dominant to X. How important is this assumption? Is this compatible w
 \noindent\paragraph{Response}
 \textcolor{red}{This is obviously very important, and is commonly assumed (Kozielska et al. 2010, van Doorn and Kirkpatrick 2007, 2010). There are a large number of other possibilities (given 9 genotypes that determine 2 sexes, ie $2^9$), and it seems like these alternatives could either increase or decrease selection on the invader. van Doorn and Kirkpatrick don't give any motivation (from my quick skim), but Kozielska et al. cite the housefly (Musca domestica), where it seems a single W is epistatically dominant over any number of loci with Y alleles. Is this ``compatible" with our model?}
 
-\textcolor{red}{Our analysis shows that the end state of the system depends on the `epistatic dominance' (term removed from our paper?) of the loci. Could draw this out more for this response. The drift-transitions Genetics paper rests on the difference in dominance, I'm pretty sure they have examples and the majority of new GSD systems are epistatically dominant. Also vD\&K 2010. }
+\textcolor{red}{Our analysis shows that the end state of the system depends on the `epistatic dominance' (term removed from our paper?) of the loci. Could draw this out more for this response. The drift-transitions Genetics paper rests on the difference in dominance, I'm pretty sure they have examples and the majority of new GSD systems are epistatically dominant. Also vD\&K 2010 say that there is evidence that epistatic dominance is common, and explain why a completely recessive should not invade. }
 
 \noindent\subsubsection{}
 Paragraph beginning L104: the sex symbols are not ideal. The combined male/female symbol has been used In other contexts to refer to "male and female" rather than representing either/or

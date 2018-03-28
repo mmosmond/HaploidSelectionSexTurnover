@@ -208,23 +208,6 @@ West S.
 \newblock {Sex allocation}.
 \newblock Princeton, NJ: Princeton University Press; 2009.
 
-\bibitem{Kozielska:2010vm}
-Kozielska M, Weissing FJ, Beukeboom LW, Pen I.
-\newblock {Segregation distortion and the evolution of sex-determining
-  mechanisms}.
-\newblock Heredity. 2010;104:100--112.
-
-\bibitem{Hamilton:1967ts}
-Hamilton WD.
-\newblock {Extraordinary sex ratios}.
-\newblock Science. 1967;156(3774):477--488.
-
-\bibitem{Ubeda:2015fx}
-{\'U}beda F, Patten MM, Wild G.
-\newblock {On the origin of sex chromosomes from meiotic drive.}
-\newblock Proceedings of the Royal Society B: Biological Sciences.
-  2015;282(1798):20141932.
-
 \bibitem{Mulcahy:1996ha}
 Mulcahy DL, Sari-Gorla M, Mulcahy GB.
 \newblock {Pollen selection - past, present and future}.
@@ -234,6 +217,33 @@ Mulcahy DL, Sari-Gorla M, Mulcahy GB.
 Joseph S, Kirkpatrick M.
 \newblock {Haploid selection in animals}.
 \newblock Trends in Ecology {\&} Evolution. 2004;19(11):592--597.
+
+\bibitem{Ubeda:2005gw}
+{\'U}beda F, Haig D.
+\newblock {On the evolutionary stability of Mendelian segregation.}
+\newblock Genetics. 2005;170(3):1345--1357.
+
+\bibitem{Lindholm:2016cw}
+Lindholm AK, Dyer KA, Firman RC, Fishman L, Forstmeier W, Holman L, et~al.
+\newblock {The ecology and evolutionary dynamics of meiotic drive.}
+\newblock Trends in Ecology {\&} Evolution. 2016;31(4):315--326.
+
+\bibitem{Kozielska:2010vm}
+Kozielska M, Weissing FJ, Beukeboom LW, Pen I.
+\newblock {Segregation distortion and the evolution of sex-determining
+  mechanisms}.
+\newblock Heredity. 2010;104:100--112.
+
+\bibitem{Ubeda:2015fx}
+{\'U}beda F, Patten MM, Wild G.
+\newblock {On the origin of sex chromosomes from meiotic drive.}
+\newblock Proceedings of the Royal Society B: Biological Sciences.
+  2015;282(1798):20141932.
+
+\bibitem{Hamilton:1967ts}
+Hamilton WD.
+\newblock {Extraordinary sex ratios}.
+\newblock Science. 1967;156(3774):477--488.
 
 \bibitem{Lalanne2004}
 Lalanne E, Michaelidis C, Moore JM, Gagliano W, Johnson A, Patel R, et~al.
@@ -271,16 +281,6 @@ Didion JP, Morgan AP, Yadgary L, Bell TA, McMullan RC, Ortiz~de Solorzano L,
   et~al.
 \newblock {R2d2 drives selfish genetic sweeps in the house mouse}.
 \newblock Molecular Biology and Evolution. 2016;33:1381--1395.
-
-\bibitem{Ubeda:2005gw}
-{\'U}beda F, Haig D.
-\newblock {On the evolutionary stability of Mendelian segregation.}
-\newblock Genetics. 2005;170(3):1345--1357.
-
-\bibitem{Lindholm:2016cw}
-Lindholm AK, Dyer KA, Firman RC, Fishman L, Forstmeier W, Holman L, et~al.
-\newblock {The ecology and evolutionary dynamics of meiotic drive.}
-\newblock Trends in Ecology {\&} Evolution. 2016;31(4):315--326.
 
 \bibitem{Borg:2009jpa}
 Borg M, Brownfield L, Twell D.
@@ -520,5 +520,11 @@ Marais GAB, Nicolas M, Bergero R, Chambrier P, Kejnovsky E, Mon{\'e}ger F,
 \newblock {Evidence for degeneration of the Y chromosome in the dioecious plant
   \emph{Silene latifolia}}.
 \newblock Current Biology. 2008;18(7):545--549.
+
+\bibitem{Veller2017}
+Veller C, Muralidhar P, Constable GWA, Nowak MA.
+\newblock Drift-Induced Selection Between Male and Female Heterogamety.
+\newblock Genetics. 2017;207(2):711--727.
+\newblock doi:{10.1534/genetics.117.300151}.
 
 \end{thebibliography}

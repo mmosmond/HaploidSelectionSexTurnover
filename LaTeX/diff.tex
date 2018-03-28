@@ -1,7 +1,7 @@
 % Template for PLoS
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL main.tex            Sun Mar 25 06:45:15 2018
-%DIF ADD main_revision.tex   Sun Mar 25 13:34:14 2018
+%DIF DEL main.tex           Wed Feb 21 11:05:31 2018
+%DIF ADD main_revised.tex   Wed Mar 28 15:33:27 2018
 % Version 3.4 January 2017
 %
 % % % % % % % % % % % % % % % % % % % % % %
@@ -88,7 +88,11 @@
 % % % % % % % % % % % % % % % % % % % % % % % %
 
 % amsmath and amssymb packages, useful for mathematical formulas and symbols
-\usepackage{amsmath,amssymb}
+%DIF 88c88
+%DIF < \usepackage{amsmath,amssymb}
+%DIF -------
+\usepackage{amsmath}%amssymb %DIF > 
+%DIF -------
 
 % Use adjustwidth environment to exceed column width (see example table in text)
 \usepackage{changepage}
@@ -183,19 +187,25 @@
 
 %reference equations in appendices
 \usepackage{xr}
-\externaldocument{S1Appendix}
-\externaldocument{S2Appendix}
-\externaldocument{S3Appendix}
-
-
+%DIF 183-187c183-185
+%DIF < \externaldocument{S1Appendix}
+%DIF < \externaldocument{S2Appendix}
+%DIF < \externaldocument{S3Appendix}
+%DIF < 
+%DIF < 
+%DIF -------
+\externaldocument{S1Appendix_revised} %DIF > 
+\externaldocument{S2Appendix_revised} %DIF > 
+\externaldocument{S3Appendix_revised} %DIF > 
+%DIF -------
 
 %% END MACROS SECTION
 %DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
 %DIF UNDERLINE PREAMBLE %DIF PREAMBLE
 \RequirePackage[normalem]{ulem} %DIF PREAMBLE
 \RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
-\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
-\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
 %DIF SAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddbegin}{} %DIF PREAMBLE
 \providecommand{\DIFaddend}{} %DIF PREAMBLE
@@ -208,6 +218,50 @@
 \providecommand{\DIFaddendFL}{} %DIF PREAMBLE
 \providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
 \providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
 %DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
@@ -216,7 +270,8 @@
 % Title must be 250 characters or less.
 \begin{flushleft}
 {\Large
-\textbf\newline{Haploid selection, sex ratio bias, and transitions between sex-determining systems} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+\textbf\DIFdelbegin %DIFDELCMD < \newline{Haploid selection, sex ratio bias, and transitions between sex-determining systems} %%%
+\DIFdelend \DIFaddbegin \newline{Haploid selection, sex-ratio bias, and transitions between sex-determining systems} \DIFaddend % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
 }
 \newline
 % Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
@@ -261,18 +316,18 @@ Sarah Perin Otto\textsuperscript{2}
 % Please keep the abstract below 300 words
 %currently 312 words
 \section*{Abstract}
-\DIFdelbegin \DIFdel{Sex }\DIFdelend \DIFaddbegin \DIFadd{Genetic sex }\DIFaddend determination is remarkably dynamic; many taxa display shifts in the location of sex-determining loci or the evolution of entirely new sex-determining systems. 
+Sex determination is remarkably dynamic; many taxa display shifts in the location of sex-determining loci or the evolution of entirely new sex-determining systems. 
 Predominant theories for why we observe such transitions generally conclude that novel sex-determining systems are favoured by selection if they equalise the sex ratio or increase linkage with a sexually-antagonistic locus. 
 We use population genetic models to extend these theories in two ways: 
 (1) We explicitly consider selection on loci very tightly linked to the ancestral sex-determining loci, e.g., within the non-recombining region of the ancestral sex chromosomes. 
 Variation at such loci can favour the spread of new sex-determining systems in which the heterogametic sex changes (XY to ZW or ZW to XY) and the new sex-determining region is less closely linked (or unlinked) to the locus under selection, which is not predicted by previous theory. 
-(2) We also consider selection upon haploid genotypes either during gametic competition (e.g., pollen/sperm competition \DIFaddbegin \DIFadd{involving multiple males}\DIFaddend ) or meiosis (i.e., non-Mendelian segregation), which can cause the zygotic sex ratio to become biased. 
+(2) We \DIFdelbegin \DIFdel{also }\DIFdelend consider selection upon haploid genotypes either during gametic competition (e.g., pollen/sperm competition \DIFaddbegin \DIFadd{involving multiple males}\DIFaddend ) or meiosis (i.e., non-Mendelian segregation), which can cause the zygotic sex ratio to become biased. 
 We find that associations with haploid selected loci can drive transitions between sex-determining systems, without requiring sexually-antagonistic selection in diploids. 
 Unexpectedly, with haploid selection, transitions between male and female heterogamety can also evolve where linkage with the sex-determining locus is weakened. 
-Furthermore, sex ratio biases may increase or decrease with the spread of new sex chromosomes. 
+Furthermore, \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend biases may increase or decrease with the spread of new sex chromosomes. 
 Thus, we find that transitions between sex-determining systems cannot be simply predicted by selection to equalise the sex ratio. 
 Overall, our models reveal that transitions between sex-determining systems, particularly transitions where the heterogametic sex changes, can be driven by loci in previously unpredicted genomic locations that experience selection during diploid and/or haploid phases.
-These results predict conditions under which sex-determining systems are likely to be labile and draw novel connections with sex ratio evolution.
+These results predict conditions under which sex-determining systems are likely to be labile and draw \DIFdelbegin \DIFdel{novel connections with sex ratio }\DIFdelend \DIFaddbegin \DIFadd{connections with sex-ratio }\DIFaddend evolution.
 
 
 % Please keep the Author Summary between 150 and 200 words
@@ -284,9 +339,9 @@ Systems of sex determination are strikingly diverse and labile in many clades.
 This poses the question: what drives transitions between sex-determining systems? 
 Here, we use models to derive conditions under which new sex-determining systems spread. 
 Prevailing views suggest that new sex-determining systems are favoured when they equalize the sex ratio and/or when they are more closely linked to genes that experience differential selection in males and females. 
-Our models extend these theories to include selection upon haploid genotypes (meiotic drive or gametic competition), which causes sex ratio biases and occurs differently in males and females. 
-Surprisingly, we find that neither force (sex ratio selection nor associations with genes that have sex-specific effects) dominates the spread of new sex-determining systems alone. 
-Even more unexpectedly, we find that, to spread, new sex-determining alleles do not necessarily have to arise in closer linkage with genes that are differentially selected in males and females. 
+Our models extend these theories to include selection upon haploid genotypes (meiotic drive or gametic competition), which causes \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend biases and occurs differently in males and females. 
+Surprisingly, we find \DIFdelbegin \DIFdel{that neither force (sex ratio selection nor }\DIFdelend \DIFaddbegin \DIFadd{the two forces (sex-ratio selection and }\DIFaddend associations with genes that have sex-specific effects) \DIFaddbegin \DIFadd{will often be equally strong, and thus neither }\DIFaddend dominates the spread of new sex-determining systems alone. 
+Even more unexpectedly, we find that \DIFdelbegin \DIFdel{, to spread, }\DIFdelend new sex-determining alleles \DIFdelbegin \DIFdel{do not necessarily have to arise in closer linkage with genes that are differentially selected in males and females}\DIFdelend \DIFaddbegin \DIFadd{can spread despite being less closely linked to selected loci under a wide range of conditions}\DIFaddend . 
 Therefore, our models predict loci in previously unexpected genomic locations and/or experiencing various types of selection (including haploid selection) can now be implicated as drivers of transitions between sex-determining systems. 
 
 \linenumbers
@@ -294,73 +349,243 @@ Therefore, our models predict loci in previously unexpected genomic locations an
 % Use "Eq" instead of "Equation" for equation citations.
 \section*{Introduction}
 
+%DIF > TRANSITIONS ARE COMMON
 Animals and angiosperms exhibit extremely diverse sex-determining systems (reviewed in~\cite{Bull:1983vi,Charlesworth:2010it,Beukeboom:2014vb,Bachtrog:2014bx}). 
-Among species with genetic sex determination (GSD) of diploid sexes, some taxa have heterogametic males (XY) and homogametic females (XX), including %non-monotreme? I think monotremes have XY but tonnes of translocations, giving: X1,X2...X6 Y1
+Among species with genetic sex determination (GSD)\DIFdelbegin \DIFdel{of diploid sexes}\DIFdelend , some taxa have heterogametic males (XY) and homogametic females (XX), including %non-monotreme? I think monotremes have XY but tonnes of translocations, giving: X1,X2...X6 Y1
 mammals and most dioecious plants~\cite{Ming:2011iy}; whereas other taxa have homogametic males (ZZ) and heterogametic females (ZW), including Lepidoptera and birds. 
 Within several taxa, the chromosome that harbours the master sex-determining locus changes. 
 For example, transitions of the master sex-determining locus between chromosomes or the evolution of new master sex-determining loci where the heterogametic sex does not change (hereafter `cis-GSD transitions') have occurred in Salmonids~\cite{Li:2011fm,Yano:2012di}, Diptera~\cite{Vicoso:2015hf}, and \textit{Oryzias}~\cite{Myosho:2012fv}. 
 %Presentation at evolution found neo sex chromosome in birds, doesn't seem to be published or bioRxiv yet (consider pers com.), title: A previously unknown neo-sex chromosome mediates plumage divergence and speciation in hybridizing birds Jason Sardell; Elizabeth Cooper; J. Albert C. Uy. I wonder if this is actually a fusion event though?
-In addition, many clades exhibit transitions between male and female heterogamety (XY$\leftrightarrow$ZW, hereafter `trans-GSD transitions'), including snakes~\cite{Gamble2017}, lizards~\cite{Ezaz:2009tk}, eight of 26 teleost fish families~\cite{Mank:2006bt}, true fruit flies (Tephritids,~\cite{Vicoso:2015hf}, amphibians~\cite{Hillis:1990gu}, the angiosperm genus \textit{Silene}~\cite{Slancarova:2013dq}, the angiosperm family \textit{Salicaceae}~\cite{Pucholt2015,Pucholt2017} and Coleoptera and Hemiptera (plate 2~\cite{Beukeboom:2014vb}).
+In addition, many clades exhibit transitions between male and female heterogamety (XY$\leftrightarrow$ZW, hereafter `trans-GSD transitions'), including snakes~\cite{Gamble2017}, lizards~\cite{Ezaz:2009tk}, eight of 26 teleost fish families~\cite{Mank:2006bt}, true fruit flies (Tephritids,~\cite{Vicoso:2015hf}\DIFaddbegin \DIFadd{)}\DIFaddend , amphibians~\cite{Hillis:1990gu}, the angiosperm genus \textit{Silene}~\cite{Slancarova:2013dq}, the angiosperm family \textit{Salicaceae}~\cite{Pucholt2015,Pucholt2017} and Coleoptera and Hemiptera (plate 2~\cite{Beukeboom:2014vb}).
 Indeed, in some cases, both male and female heterogametic sex-determining systems can be found in the same species, as reported in houseflies~\cite{Macdonald1978}, midges~\cite{Thompson1971}, frogs~\cite{Ogata:2007jm}, cichlid fish~\cite{Ser:2010iq}, tilapia~\cite{Lee2004}, sea bass~\cite{Vandeputte2007}, and lab-strains of Zebrafish~\cite{Liew2012,Wilson2014}.
 In addition, multiple transitions have occurred between genetic and environmental sex-determining systems (GSD$\leftrightarrow$ESD), e.g., in reptiles and fishes~\cite{Conover:1987in,Mank:2006bt,Pokorna:2009ui,Ezaz:2009tk,Pen:2010kk,Holleley:2015hc}.
-
-Predominant theories accounting for \DIFdelbegin \DIFdel{the spread of new sex-determining }\DIFdelend \DIFaddbegin \DIFadd{transitions between GSD }\DIFaddend systems by selection involve fitness differences between sexes (e.g., sexually antagonistic selection) or sex ratio selection~\cite{Blaser2012, Beukeboom:2014vb,vanDoorn2014re}. 
-%\citet{Bull:1977wt} shows that direct selection on new sex determination loci can allow them to spread and switch between male and female heterogamety. 
-van Doorn and Kirkpatrick~\cite{vanDoorn:2007eu,vanDoorn:2010hu} and Muralidhar and Veller~\cite{Muralidhar2018} have shown that new sex-determining alleles can be favoured if they arise at loci in close linkage with a locus that experiences sexual antagonism. 
-Tighter linkage allows a stronger favourable association to build up between a male-beneficial allele, and a neo-Y allele, for example. 
-Such associations can favour cis-GSD transitions~\cite{vanDoorn:2007eu}, trans-GSD transitions~\cite{vanDoorn:2010hu}, and new partially-masculinizing or partially-feminizing alleles~\cite{Muralidhar2018}.
-However, any sexually-antagonistic loci that are more closely linked to the ancestral sex-determining locus will develop similar, favourable associations and are expected to hinder the spread of a new sex-determining system. 
-
-The sex ratio is directly determined by the sex-determining system, and it has therefore been suggested that sex ratio selection is a dominant force in the evolution of sex determination (e.g., Bull, 1983, p 66-67 ~\cite{Bull:1983vi}; Buekeboom and Perrin, 2014, Chapter 7~\cite{Beukeboom:2014vb}). 
-`Fisherian' \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend selection favours a 1:1 zygotic sex ratio when assuming that males and females are equally costly to produce~\cite{Fisher:1930wy,Charnov:1982wg}.
-This follows from the fact that, for an autosomal locus, half of the genetic material is inherited from a male and half from a female~\cite{West:2009we}. 
-Thus, if the population sex ratio is biased towards one sex, the average per-individual contribution of genetic material to the next generation from the opposite sex is greater. 
-Therefore, a mutant that increases investment in the rarer sex will spread via the higher per-individual contributions made by that sex. 
-%The default mode of sex ratio selection is `Fisherian' sex ratio selection, which favours equal investment in male and female offspring \citep[i.e., a 1:1 zygotic sex ratio when assuming that males and females are equally costly to produce,][]{Fisher:1930wy,Charnov:1982wg}. 
-%Given that the sex-determining system can directly affect the sex ratio, we might expect Fisherian sex ratio selection to influence the spread of new sex-determining systems. 
-In the case of sex-chromosome evolution, Kozielska et al. (\DIFdelbegin \DIFdel{2014}\DIFdelend \DIFaddbegin \DIFadd{2010}\DIFaddend )~\cite{Kozielska:2010vm} consider systems in which the ancestral sex chromosomes experience meiotic drive (e.g., where driving X or Y chromosomes are inherited disproportionately often), which causes sex ratios to become biased~\cite{Hamilton:1967ts}. 
-They find that masculinizing or feminizing mutations that arise at a new, unlinked locus (i.e., neo-Y or neo-W chromosomes) can then spread, which restore an even sex ratio. 
-\DIFaddbegin \DIFadd{However, starting from ESD, Ubeda et al. (2015)~\mbox{%DIFAUXCMD
-\cite{Ubeda:2015fx} }%DIFAUXCMD
-have numerically shown that sex-specific meiotic drive can allow masculinizing and feminizing mutations to spread (i.e., ESD $\rightarrow$ GSD) despite causing a sex-ratio bias.
+\DIFaddbegin \DIFadd{In sum, accumulating evidence indicates that transitions between sex-determining systems are common~\mbox{%DIFAUXCMD
+\cite{Bachtrog:2014bx}}%DIFAUXCMD
+.
 }\DIFaddend 
 
-Here we use mathematical models to \DIFdelbegin \DIFdel{find }\DIFdelend \DIFaddbegin \DIFadd{clarify }\DIFaddend the conditions under which new sex-determining systems spread when individuals experience selection at both diploid and haploid stages, which allows fitness differences between the sexes and \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend biases to occur simultaneously. 
-Even in animal and plant species that have much larger and more conspicuous diploid phases than haploid phases, many loci experience significant haploid selection through gamete competition and/or meiotic drive~\cite{Mulcahy:1996ha,JOSEPH:2004haa}.
-We use the term `meiotic drive' to refer to the biased (non-Mendelian) segregation of genotypes during gamete production (from one parent \DIFaddbegin \DIFadd{only}\DIFaddend ) and the term `gametic competition' to refer to selection upon haploid genotypes within a gamete/gametophyte pool (\DIFdelbegin \DIFdel{potentially from multiple }\DIFdelend \DIFaddbegin \DIFadd{from many }\DIFaddend parents); the term `haploid selection' encompasses both processes. 
+%DIF > MAJOR MECHANISMS
+%DIF > (1) sex-ratio selection
+Predominant theories accounting for \DIFdelbegin \DIFdel{the spread of new sex-determining }\DIFdelend \DIFaddbegin \DIFadd{transitions between GSD }\DIFaddend systems by selection involve \DIFaddbegin \DIFadd{sex-ratio selection or }\DIFaddend fitness differences between sexes (e.g., sexually antagonistic selection)\DIFdelbegin \DIFdel{or sex ratio selection}\DIFdelend ~\cite{Blaser2012, Beukeboom:2014vb,vanDoorn2014re}. 
+%\citet{Bull:1977wt} shows that direct selection on new sex determination loci can allow them to spread and switch between male and female heterogamety. 
+\DIFdelbegin \DIFdel{van Doorn and Kirkpatrick~\mbox{%DIFAUXCMD
+\cite{vanDoorn:2007eu,vanDoorn:2010hu} }%DIFAUXCMD
+and Muralidhar and Veller~\mbox{%DIFAUXCMD
+\cite{Muralidhar2018} }%DIFAUXCMD
+have shown that new }\DIFdelend \DIFaddbegin \DIFadd{`Fisherian' sex-ratio selection favours a 1:1 zygotic sex ratio when assuming that males and females are equally costly to produce~\mbox{%DIFAUXCMD
+\cite{Fisher:1930wy,Charnov:1982wg}}%DIFAUXCMD
+.
+This follows from the fact that, for an autosomal locus, half of the genetic material is inherited from a male and half from a female~\mbox{%DIFAUXCMD
+\cite{West:2009we}}%DIFAUXCMD
+. 
+Thus, if the sex ratio is biased, an individual of the rarer sex will, on average, contribute more genetic material to the next generation. 
+Selection therefore typically favours mutants that increase investment in the rarer sex.
+Because the sex ratio is directly determined by the }\DIFaddend sex-determining \DIFdelbegin \DIFdel{alleles can be favoured if they arise at loci }\DIFdelend \DIFaddbegin \DIFadd{system, it has been suggested that sex-ratio selection is a particularly dominant force in the evolution of sex determination (e.g., Bull, 1983, p 66-67 ~\mbox{%DIFAUXCMD
+\cite{Bull:1983vi}}%DIFAUXCMD
+; Buekeboom and Perrin, 2014, Chapter 7~\mbox{%DIFAUXCMD
+\cite{Beukeboom:2014vb}}%DIFAUXCMD
+). 
+}
 
-Segregation distortion provides putative evidence of haploid selection and can sometimes be attributed to meiotic drive and/or gametic competition~\cite{Lalanne2004,Fishman2005,Leppala2008,Leppala2013,Didion2015,Didion2016}.
-Where it has been characterized, meiotic drive generally occurs either during the production of male or female gametes only~\cite{Ubeda:2005gw,Lindholm:2016cw}.
+%DIF > MAJOR MECHANISMS
+%DIF > (2) sex-antagonism
+\DIFadd{New genetic sex-determining alleles have been shown to be favoured in they arise }\DIFaddend in close linkage with a locus that experiences sexual antagonism \DIFdelbegin \DIFdel{. 
+}\DIFdelend \DIFaddbegin \DIFadd{~\mbox{%DIFAUXCMD
+\cite{vanDoorn:2007eu,vanDoorn:2010hu,Muralidhar2018}}%DIFAUXCMD
+. 
+%DIF > van Doorn and Kirkpatrick~\cite{vanDoorn:2007eu,vanDoorn:2010hu} and Muralidhar and Veller~\cite{Muralidhar2018} have shown that new sex-determining alleles can be favoured if they arise at loci in close linkage with a locus that experiences sexual antagonism. 
+}\DIFaddend Tighter linkage allows a stronger favourable association to build up between a male-beneficial allele, and a neo-Y allele, for example. 
+Such associations can favour cis-GSD transitions~\cite{vanDoorn:2007eu}, trans-GSD transitions~\cite{vanDoorn:2010hu}, and new partially-masculinizing or partially-feminizing alleles~\cite{Muralidhar2018}.
+However, any sexually-antagonistic loci that are more closely linked to the ancestral sex-determining locus will develop similar, favourable associations and are expected to hinder the spread of a new sex-determining system\DIFaddbegin \DIFadd{~\mbox{%DIFAUXCMD
+\cite{vanDoorn:2007eu,vanDoorn:2010hu}}%DIFAUXCMD
+}\DIFaddend . 
+
+\DIFdelbegin \DIFdel{The sex ratio is directly determined by the }\DIFdelend %DIF > Tight linkage Model Feature and Result
+\DIFaddbegin \DIFadd{One novel feature of the models developed here is that we explicitly \textcolor{red}{(is this wording fair to vD\&K?)} consider loci in very tight linkage with the ancestral }\DIFaddend sex-determining \DIFdelbegin \DIFdel{system, and it has therefore been suggested that sex ratio selection is a dominant force in the evolution of sex determination }\DIFdelend \DIFaddbegin \DIFadd{locus }\DIFaddend (e.g., \DIFdelbegin \DIFdel{Bull, 1983, p 66-67 ~\mbox{%DIFAUXCMD
+\cite{Bull:1983vi}}%DIFAUXCMD
+; Buekeboom andPerrin, 2014, Chapter 7~\mbox{%DIFAUXCMD
+\cite{Beukeboom:2014vb}}%DIFAUXCMD
+). 
+`Fisherian' sex ratio selection favours a 1:1 zygotic sex ratio when assuming that males and females are equally costly to produce~\mbox{%DIFAUXCMD
+\cite{Fisher:1930wy,Charnov:1982wg}}%DIFAUXCMD
+. 
+This follows from the fact that, for an autosomal locus , half of the genetic material is inherited from a male and half from a female~\mbox{%DIFAUXCMD
+\cite{West:2009we}}%DIFAUXCMD
+. 
+Thus, if the population sex ratio is biased towards one sex , the average per-individual contribution of genetic material to the next generation from the opposite sex is greater. 
+Therefore, a mutant that increases investment in }\DIFdelend \DIFaddbegin \DIFadd{within the non-recombining region of a sex chromosome). %DIF >  in the results section: `Tight linkage with the ancestral sex-determining locus'). 
+Our analysis shows that, under various forms of selection, }\DIFaddend the \DIFdelbegin \DIFdel{rarer sex will spread via the higher per-individual contributions made by that sex. 
+%DIF < The default mode of sex ratio selection is `Fisherian' sex ratio selection, which favours equal investment in male and female offspring \citep[i.e., a 1:1 zygotic sex ratio when assuming that males and females are equally costly to produce,][]{Fisher:1930wy,Charnov:1982wg}. 
+%DIF < Given that the sex-determining system can directly affect the sex ratio, we might expect Fisherian sex ratio selection to influence the spread of new sex-determining systems. 
+In the case of sex-chromosome evolution, Kozielska }\DIFdelend \DIFaddbegin \DIFadd{ancestral-X can carry suboptimal alleles for females and/or the ancestral-Y can carry female-beneficial alleles. 
+This, in turn, can favour a new ZW sex-determining locus that has weaker linkage with loci under selection, which has not been predicted by previous theory. 
+That is, very tight linkage with the ancestral GSD locus can favour trans-GSD transitions in which associations with selected loci are actually weakened. 
+}
+
+%DIF > Haploid selection model feature and discussion of why needed
+\DIFadd{Most significantly, we include haploid selection (gametic competition or meiotic drive) in models describing cis-GSD, trans-GSD, and GSD to ESD transitions, which poses an apparent evolutionary problem. 
+On one hand, haploid selection is typically sex-specific in that it usually occurs among gametes produced by one sex only~\mbox{%DIFAUXCMD
+\cite{Mulcahy:1996ha,JOSEPH:2004haa,Ubeda:2005gw,Lindholm:2016cw}}%DIFAUXCMD
+. 
+Therefore, one might expect new sex-determining systems to benefit from close linkage with haploid selected loci, as found for sex-differences in diploid selection~\mbox{%DIFAUXCMD
+\cite{vanDoorn:2007eu,vanDoorn:2010hu, Muralidhar2018}}%DIFAUXCMD
+. 
+On the other hand, associations between sex-determining loci and haploid selected loci generate biased zygotic sex ratios, which should generally hinder the spread of new sex-determining systems. 
+}
+
+%DIF > Previous models with haploid selection
+\DIFadd{Two previous studies have considered the spread of GSD with sex-specific meiotic drive~\mbox{%DIFAUXCMD
+\cite{Kozielska:2010vm,Ubeda:2015fx} }%DIFAUXCMD
+under a limited number of possible genetic architectures and diploid selective regimes. 
+Ubeda }\DIFaddend et al. (\DIFdelbegin \DIFdel{2014)~\mbox{%DIFAUXCMD
+\cite{Kozielska:2010vm} }%DIFAUXCMD
+consider systems in which the ancestral sex chromosomes experience meiotic drive (e. 
+g., where driving X or Y chromosomes are inherited disproportionately often), which causes }\DIFdelend \DIFaddbegin \DIFadd{2015)~\mbox{%DIFAUXCMD
+\cite{Ubeda:2015fx}}%DIFAUXCMD
+, considers ancestral-ESD (with no sex-ratio bias) and numerically show that new GSD alleles can spread if they arise in linkage with meiotic drive loci. 
+For example, a masculinizing allele spreads in association with an allele that is favoured during male meiosis, causing }\DIFaddend sex ratios to become \DIFdelbegin \DIFdel{biased~\mbox{%DIFAUXCMD
+\cite{Hamilton:1967ts}}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{male-biased and thereby suggesting that such beneficial associations overwhelm selection to balance the sex ratio. 
+However, Kozielska et al. (2010)~\mbox{%DIFAUXCMD
+\cite{Kozielska:2010vm} }%DIFAUXCMD
+consider meiotic drive on an ancestral GSD sex chromosome (creating a sex ratio bias)}\DIFaddend . 
+They find that \DIFdelbegin \DIFdel{masculinizing or feminizing mutations that arise at a new, unlinked locus (i.e., neo-Y or neo-W chromosomes) can then spread }\DIFdelend \DIFaddbegin \DIFadd{new}\DIFaddend , \DIFdelbegin \DIFdel{which restore an even }\DIFdelend \DIFaddbegin \DIFadd{completely unlinked, GSD systems can spread if they generate the rarer sex, creating a balanced }\DIFaddend sex ratio. 
+\DIFaddbegin \DIFadd{That is, they conclude that Fisherian sex-ratio selection caused by haploid selection favours new GSD systems. 
+}\DIFaddend 
+
+\DIFdelbegin \DIFdel{Here we use mathematical models to }\DIFdelend %DIF > main results
+\DIFaddbegin \DIFadd{Here, we analytically }\DIFaddend find the conditions under which new \DIFdelbegin \DIFdel{sex-determining systems spread when individuals experience selection at both diploid and haploid stages, which allows fitness differences between the sexes and sex ratio biases to occur simultaneously. 
+Even in animal and plant species that have much larger and more conspicuous diploid phases than haploid phases, many loci experience significant haploid selectionthrough gamete competition and/or meiotic drive~\mbox{%DIFAUXCMD
+\cite{Mulcahy:1996ha,JOSEPH:2004haa}}%DIFAUXCMD
+. 
+We use the term `meiotic drive' to refer to the biased (non-Mendelian) segregation of genotypes during gamete production (from one parent)and the term `gametic competition' to refer to selection upon haploid genotypes within a gamete/gametophyte pool (potentially from multiple parents); the term `haploid selection' encompasses both processes.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Segregation distortion provides putative evidence of haploid selection and can sometimes be attributed to meiotic drive and/or gametic competition~\mbox{%DIFAUXCMD
+\cite{Lalanne2004,Fishman2005,Leppala2008,Leppala2013,Didion2015,Didion2016}}%DIFAUXCMD
+.
+Where it has been characterized, meiotic drive generally occurs either during the production of male or female gametes only~\mbox{%DIFAUXCMD
+\cite{Ubeda:2005gw,Lindholm:2016cw}}%DIFAUXCMD
+.
 Gametic competition is also typically sex specific, occurring primarily among male gametes, because there are typically many more pollen/sperm than required for fertilization.
+Gametic competition may be particularly common in plants, in which 60-70\% of all genes are expressed in the male gametophyte, and these genes exhibit stronger signatures of selection than randomly-chosen genes~\mbox{%DIFAUXCMD
+\cite{Borg:2009jpa,Arunkumar:2013iq,Gossmann:2014dua}}%DIFAUXCMD
+.
+In addition, artificial selection pressures applied to male gametophytes are known to cause a response to selection (e.g.,~\mbox{%DIFAUXCMD
+\cite{Hormaza:1996cv,Ravikumar:2003uo,Hedhly:2004iv,Clarke:2004ir}}%DIFAUXCMD
+). 
+A smaller proportion of genes are thought to be expressed and selected during competition in animal sperm, although precise estimates are uncertain~\mbox{%DIFAUXCMD
+\cite{Zheng:2001fi,JOSEPH:2004haa,Vibranovski:2010et}}%DIFAUXCMD
+. 
+Nevertheless, recent studies have demonstrated that sperm competition in animals can alter haploid allele frequencies and increase offspring fitness~\mbox{%DIFAUXCMD
+\cite{Immler:2014im,Alavioon2017}}%DIFAUXCMD
+.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{There are various ways by which genes experiencing haploid selection could influence transitions between sex-determining systems. 
+If we assume that }\DIFdelend \DIFaddbegin \DIFadd{GSD or ESD systems spread with generic linkage between the loci involved (and generic sex-specific haploid and diploid selection). 
+Strikingly, we reconcile the results of Kozielska et al. (2010)~\mbox{%DIFAUXCMD
+\cite{Kozielska:2010vm} }%DIFAUXCMD
+and Ubeda et al. (2015)~\mbox{%DIFAUXCMD
+\cite{Ubeda:2015fx} }%DIFAUXCMD
+by showing that new GSD systems commonly spread when they increase }\textit{\DIFadd{or}} \DIFadd{decrease linkage with loci that experience haploid selection.
+This result is qualitatively distinct from those for diploid selection alone~\mbox{%DIFAUXCMD
+\cite{vanDoorn:2007eu,vanDoorn:2010hu} }%DIFAUXCMD
+and suggests that }\DIFaddend haploid selection \DIFdelbegin \DIFdel{at any particular locus predominantly occurs in one sex (e. 
+g., meiotic drive during spermatogenesis), then such loci experience a form of sex-specific selection. 
+In this respect, we might expect }\DIFdelend \DIFaddbegin \DIFadd{is more likely to promote transitions between sex-determination systems. 
+However, we also show that transitions involving haploid selection cannot be simply explained by invoking sex-ratio selection. 
+In particular, under a wide range of conditions, we show }\DIFaddend that haploid selection \DIFdelbegin \DIFdel{would affect transitions between }\DIFdelend \DIFaddbegin \DIFadd{drives transitions in }\DIFaddend sex-determining \DIFdelbegin \DIFdel{systems in a similar manner to sex-specific diploid selection (as explored in~\mbox{%DIFAUXCMD
+\cite{vanDoorn:2007eu,vanDoorn:2010hu}}%DIFAUXCMD
+). 
+That is, new masculinizing mutations (neo-Y alleles) could be favoured via associations with alleles that are beneficial in the male haploid stage. 
+On the other hand, sex ratios can also become biased by linkage between the sex-determining locus and a locus that harbours genetic variation in haploid fitness. 
+For example, there are several known cases of sex ratio bias caused by sex-linked meiotic drive alleles (Burt and Trivers, 2006, Chapter 6~\mbox{%DIFAUXCMD
+\cite{Burt:2006}}%DIFAUXCMD
+) or selection among X- and Y-bearing pollen~\mbox{%DIFAUXCMD
+\cite{Lloyd:1974tz,Conn:1981uw,Stehlik:2005ul,Stehlik:2006to,Field:2012fd,Field:2013cc}}%DIFAUXCMD
+. 
+It is not immediately clear how the spread of new sex-determining systems would be influenced by the combination of sex ratio biases and associations with haploid selected alleles. 
+}\DIFdelend \DIFaddbegin \DIFadd{system }\textit{\DIFadd{equally strongly}} \DIFadd{whether sex-ratio biases increase or decrease (and whether sex-ratio biases are present or absent). 
+Finally, we show that ESD may not evolve, even if the sex ratio is initially biased by haploid selection, which would not be predicted by previous theories for transitions to ESD~\mbox{%DIFAUXCMD
+\cite{Charnov:1982wg,Bull:1983vi,West:2009we}}%DIFAUXCMD
+. 
+}\DIFaddend 
+
+\DIFdelbegin \DIFdel{We find that the spread of novel sex-determining systems is influenced by both Fisherian sex ratio selectionand by selection on linked alleles. 
+%DIF < We find that sex ratio biases caused by haploid selection can exert Fisherian sex ratio selection upon novel sex-determiners but that their spread is also determined by selection on genetically-associated alleles. 
+%DIF < Indeed, it is only when haploid-selected loci are tightly linked to the ancestral sex-determining region (and so sex ratio biases are initially large) that we see an asymmetry between selection for XY to ZW transitions and ZW to XY transitions (e.g., because haploid selection in males only causes biased zygotic sex ratios in an ancestrally XY system).
+Surprisingly, Fisherian sex ratio selection does not dominate; it is possible for selection on linked alleles to drive turnover between sex-determining systems despite causing increasingly biased sex ratios. 
+In addition to considering haploid selection, another novel development in our model is that we consider loci that are in very tight linkage with the ancestral sex-determining locus. 
+}\DIFdelend %DIF > Here we use mathematical models to find the conditions under which new sex-determining systems spread when individuals experience selection at both diploid and haploid stages, which allows fitness differences between the sexes and sex ratio biases to occur simultaneously
+\DIFaddbegin 
+
+%DIF > Haploid selection results
+
+%DIF > The sex ratio is directly determined by the sex-determining system, and it has therefore been suggested that sex-ratio selection is a dominant force in the evolution of sex determination (e.g., Bull, 1983, p 66-67 ~\cite{Bull:1983vi}; Buekeboom and Perrin, 2014, Chapter 7~\cite{Beukeboom:2014vb}). 
+%DIF > `Fisherian' sex-ratio selection favours a 1:1 zygotic sex ratio when assuming that males and females are equally costly to produce~\cite{Fisher:1930wy,Charnov:1982wg}.
+%DIF > This follows from the fact that, for an autosomal locus, half of the genetic material is inherited from a male and half from a female~\cite{West:2009we}. 
+%DIF > Thus, if the sex ratio is biased, an individual of the rarer sex will, on average, contribute more genetic material to the next generation. 
+%DIF > Selection therefore favours mutants that increase investment in the rarer sex.
+
+%DIF > The default mode of sex-ratio selection is `Fisherian' sex-ratio selection, which favours equal investment in male and female offspring \citep[i.e., a 1:1 zygotic sex ratio when assuming that males and females are equally costly to produce,][]{Fisher:1930wy,Charnov:1982wg}. 
+%DIF > Given that the sex-determining system can directly affect the sex ratio, we might expect Fisherian sex-ratio selection to influence the spread of new sex-determining systems. 
+%DIF > In the case of sex-chromosome evolution, Kozielska et al. (2010)~\cite{Kozielska:2010vm} consider systems in which the ancestral sex chromosomes experience meiotic drive (e.g., where driving X or Y chromosomes are inherited disproportionately often), which causes sex ratios to become biased~\cite{Hamilton:1967ts}. 
+%DIF > They find that masculinizing or feminizing mutations that arise at a new, unlinked locus (i.e., neo-Y or neo-W chromosomes) can then spread, which restore an even sex ratio. 
+%DIF > However, starting from ESD, Ubeda et al. (2015)~\cite{Ubeda:2015fx} have numerically shown that sex-specific meiotic drive can allow masculinizing and feminizing mutations to spread (i.e., ESD $\rightarrow$ GSD) despite causing a sex-ratio bias.
+
+%DIF > HOLES IN CURRENT THEORY
+%DIF > (1) haploid selection; it exists in many spp
+%DIF > While both opposing selection in the diploid sexes and sex-ratio selection surely influence the evolution of new sex-determining factors, so too might selection in the haploid phase.
+\DIFadd{\textcolor{red}{move to discussion somewhere:
+Even in animal and plant species that have much larger and more conspicuous diploid phases than haploid phases, many loci experience significant haploid selection through gamete competition and/or meiotic drive~\cite{Mulcahy:1996ha,JOSEPH:2004haa}. }
+}
+
+\DIFadd{\textcolor{red}{move to results somewhere:
+We use the term `meiotic drive' to refer to the biased (non-Mendelian) segregation of genotypes during gamete production (from one parent only) and the term `gametic competition' to refer to selection upon haploid genotypes within a gamete/gametophyte pool (from many parents); the term `haploid selection' encompasses both processes. }
+}
+
+\DIFadd{\textcolor{red}{move to discussion somewhere:
+Segregation distortion provides putative evidence of haploid selection and can sometimes be attributed to meiotic drive and/or gametic competition~\cite{Lalanne2004,Fishman2005,Leppala2008,Leppala2013,Didion2015,Didion2016}.
+Where it has been characterized, individual cases of meiotic drive are generally sex-limited, exclusively affecting male or female gametes~\cite{Ubeda:2005gw,Lindholm:2016cw}.
+Gametic competition is also typically sex-limited, occurring primarily among male gametes, because there are typically many more pollen/sperm than required for fertilization.
 Gametic competition may be particularly common in plants, in which 60-70\% of all genes are expressed in the male gametophyte, and these genes exhibit stronger signatures of selection than randomly-chosen genes~\cite{Borg:2009jpa,Arunkumar:2013iq,Gossmann:2014dua}.
 In addition, artificial selection pressures applied to male gametophytes are known to cause a response to selection (e.g.,~\cite{Hormaza:1996cv,Ravikumar:2003uo,Hedhly:2004iv,Clarke:2004ir}). 
 A smaller proportion of genes are thought to be expressed and selected during competition in animal sperm, although precise estimates are uncertain~\cite{Zheng:2001fi,JOSEPH:2004haa,Vibranovski:2010et}. 
-Nevertheless, recent studies have demonstrated that sperm competition in animals\DIFaddbegin \DIFadd{, even within a single ejaculate, }\DIFaddend can alter haploid allele frequencies and increase offspring fitness~\cite{Immler:2014im,Alavioon2017}.
+Nevertheless, recent studies have demonstrated that sperm competition in animals, even within a single ejaculate, can alter haploid allele frequencies and increase offspring fitness~\cite{Immler:2014im,Alavioon2017}.
+}
+}
 
-There are various ways by which genes experiencing haploid selection could influence transitions between sex-determining systems. 
-If we assume that haploid selection at any particular locus predominantly occurs in one sex (e.g., meiotic drive during spermatogenesis), then such loci experience a form of sex-specific selection. 
-In this respect, we might expect that haploid selection would affect transitions between sex-determining systems in a similar manner to sex-specific diploid selection (as explored in~\cite{vanDoorn:2007eu,vanDoorn:2010hu}). 
-That is, new masculinizing mutations (neo-Y alleles) could be favoured via associations with alleles that are beneficial in the male haploid stage \DIFdelbegin \DIFdel{. 
-}\DIFdelend \DIFaddbegin \DIFadd{(e.g., \mbox{%DIFAUXCMD
-\cite{Ubeda:2015fx}}%DIFAUXCMD
-). 
-}\DIFaddend On the other hand, sex ratios can also become biased by linkage between the sex-determining locus and a locus that harbours genetic variation in haploid fitness.
-For example, there are several known cases of \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend bias caused by sex-linked meiotic drive alleles (Burt and Trivers, 2006, Chapter 6~\cite{Burt:2006}) or selection among X- and Y-bearing pollen~\cite{Lloyd:1974tz,Conn:1981uw,Stehlik:2005ul,Stehlik:2006to,Field:2012fd,Field:2013cc}. 
-\DIFaddbegin \DIFadd{Sex-ratio selection can thus select against the spread of linked sex-determining alleles and favour the invasion of alternative, unlinked sex-determination systems \mbox{%DIFAUXCMD
-\cite{Kozielska:2010vm}}%DIFAUXCMD
-.
-%DIF > It is not immediately clear how the spread of new sex-determining systems would be influenced by the combination of sex ratio biases and associations with haploid selected alleles. 
-}\DIFaddend It is not \DIFdelbegin \DIFdel{immediately clear how the spread of }\DIFdelend \DIFaddbegin \DIFadd{yet clear when }\DIFaddend new sex-determining \DIFdelbegin \DIFdel{systems would be influenced by the combination of sex ratio biases and }\DIFdelend \DIFaddbegin \DIFadd{alleles are favoured by }\DIFaddend associations with haploid selected alleles \DIFdelbegin \DIFdel{. 
-}\DIFdelend \DIFaddbegin \DIFadd{vs. sex-ratio bias, especially under a wide range of possible diploid selection regimes (e.g., sex-antagonism, overdominance).	
-}\DIFaddend 
+%DIF > HOLES IN CURRENT THEORY
+%DIF > (2) haploid selection; it can complicate outcomes for SD transitions
+%DIF > There are various ways by which haploid selection could influence transitions between sex-determining systems. 
+%DIF > If we assume that haploid selection at any particular locus predominantly occurs in one sex (e.g., meiotic drive during spermatogenesis), then such loci experience a form of sex-specific selection. 
+%DIF > In this respect, we might expect that haploid selection would affect transitions between sex-determining systems in a similar manner to sex-specific diploid selection (as explored in~\cite{vanDoorn:2007eu,vanDoorn:2010hu}). 
+%DIF > That is, new masculinizing mutations (neo-Y alleles) could be favoured via associations with alleles that are beneficial in the male haploid stage (e.g., \cite{Ubeda:2015fx}). 
+%DIF > Kozielska et al. (2010)~\cite{Kozielska:2010vm} have shown this to be theoretically possible for the special case of perfect linkage between the new sex-determining locus and a locus that experiences meiotic drive in one sex, under a limited number of forms of diploid selection.
+%DIF > Similarly, Ubeda et al. (2015)~\cite{Ubeda:2015fx} numerically show that sex-specific meiotic drive can allow masculinizing and feminizing mutations to spread in an ancestrally environmental-sex-determination system, again under a limited number of forms of diploid selection. 
+%DIF > On the other hand, sex ratios can also become biased by linkage between the sex-determining locus and a locus that harbours genetic variation in haploid fitness, as indeed occurs in the two examples above.
+%DIF > There are also several known empirical cases of sex-ratio bias caused by sex-linked meiotic drive alleles (Burt and Trivers, 2006, Chapter 6~\cite{Burt:2006}) or selection among X- and Y-bearing pollen~\cite{Lloyd:1974tz,Conn:1981uw,Stehlik:2005ul,Stehlik:2006to,Field:2012fd,Field:2013cc}. 
+%DIF > Sex-ratio selection can thus select against the spread of linked sex-determining alleles and favour the invasion of alternative, unlinked sex-determination systems \cite{Kozielska:2010vm,Ubeda:2015fx}.
+%DIF > It is not yet clear when new sex-determining alleles are favoured by associations with haploid selected alleles vs. sex-ratio bias, especially under a wide range of possible diploid selection regimes (e.g., sex-antagonism, overdominance).	
 
-We find that the spread of novel sex-determining systems is influenced by both Fisherian \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend selection and by selection on linked alleles. 
-%We find that sex ratio biases caused by haploid selection can exert Fisherian sex ratio selection upon novel sex-determiners but that their spread is also determined by selection on genetically-associated alleles. 
-%Indeed, it is only when haploid-selected loci are tightly linked to the ancestral sex-determining region (and so sex ratio biases are initially large) that we see an asymmetry between selection for XY to ZW transitions and ZW to XY transitions (e.g., because haploid selection in males only causes biased zygotic sex ratios in an ancestrally XY system).
-\DIFdelbegin \DIFdel{Surprisingly, Fisherian sex ratio }\DIFdelend \DIFaddbegin \DIFadd{Fisherian sex-ratio }\DIFaddend selection does not \DIFaddbegin \DIFadd{always }\DIFaddend dominate; it is possible for selection on linked alleles to drive turnover between sex-determining systems despite causing increasingly biased sex ratios\DIFaddbegin \DIFadd{, and our analytical results elucidate what is required for this to be so}\DIFaddend .
-In addition to considering haploid selection, another novel development in our model is that we consider loci that are in very tight linkage with the ancestral sex-determining locus. 
-%Because sex-determining loci are often found within a region of suppressed recombination, there can be a significant number of tightly linked loci. 
-We find that loci tightly linked with the sex-determining locus can drive transitions in which the heterogametic sex changes, even when the new sex-determining locus is less closely linked to loci under selection (either including haploid selection or not). 
+
+%DIF > We consider both selected loci that are loosely linked to the sex-determining region (e.g., on an autosome) and selected loci that are in very tight linkage with the ancestral sex-determining locus (e.g., within the non-recombining sex-determining region).
+%DIF > Our main findings are three:
+%DIF > (1) transitions between sex-determining systems can decrease or increase sex-ratio bias, and with sufficiently loose linkage between the selected locus and the sex-determining locus, the selective force exerted by sex-ratio selection and favourable associations with haploid-selected alleles are exactly equivalent;
+%DIF > (2) ancestrally-tight sex-linkage and haploid selection allow trans-GSD transitions that weaken sex-linkage; and
+%DIF > (3) haploid selection removes the need for sex-antagonism, increasing the range of scenarios that select for transitions between sex-determining systems.
+
+%DIF > MAIN FINDINGS IN GENERAL TERMS
+%DIF > We find that the spread of novel sex-determining systems is influenced by both Fisherian sex-ratio selection and by selection on linked alleles. 
+%DIF > We find that sex-ratio biases caused by haploid selection can exert Fisherian sex-ratio selection upon novel sex-determiners but that their spread is also determined by selection on genetically-associated alleles. 
+%DIF > Indeed, it is only when haploid-selected loci are tightly linked to the ancestral sex-determining region (and so sex-ratio biases are initially large) that we see an asymmetry between selection for XY to ZW transitions and ZW to XY transitions (e.g., because haploid selection in males only causes biased zygotic sex ratios in an ancestrally XY system).
+%DIF > Fisherian sex-ratio selection does not always dominate; it is possible for selection on linked alleles to drive turnover between sex-determining systems despite causing increasingly biased sex ratios, and our analytical results elucidate what is required for this to be so.
+\DIFaddend %Because sex-determining loci are often found within a region of suppressed recombination, there can be a significant number of tightly linked loci. 
+\DIFdelbegin \DIFdel{We find that loci tightly linked with the sex-determining locus can drive transitions in which the heterogametic sex changes, even when the new sex-determining locus is less closely linked to loci under selection (either including haploid selection or not). 
+}\DIFdelend %DIF > We find that loci tightly linked with the sex-determining locus can drive transitions in which the heterogametic sex changes, even when the new sex-determining locus is less closely linked to loci under selection (either including haploid selection or not). 
 
 \section*{Model}
 
@@ -417,12 +642,11 @@ Diploid males and females then experience \DIFaddbegin \DIFadd{\textcolor{red}{v
 Recombination (i.e., an odd number of cross-overs) occurs between loci $\mathbf{X}$ and $\mathbf{A}$ with probability $r$, between loci $\mathbf{A}$ and $\mathbf{M}$ with probability $R$, and between loci $\mathbf{X}$ and $\mathbf{M}$ with probability $\rho$.
 Any linear order of the loci can be modelled with appropriate choices of $r$, $R$, and $\rho$ (see Fig \ref{fig:model_outline}A and \nameref{tab:chisubstitutions}). 
 Individuals that are heterozygous at the $\mathbf{A}$ locus may experience meiotic drive; a gamete produced by $Aa$ heterozgotes of sex \DIFdelbegin \DIFdel{$\Hermaphrodite$ }\DIFdelend \DIFaddbegin \DIFadd{$\circ$ }\DIFaddend bears allele $A$ with probability \DIFdelbegin \DIFdel{$\alpha^\Hermaphrodite$}\DIFdelend \DIFaddbegin \DIFadd{$\alpha^\circ$}\DIFaddend . 
-Thus, the $\mathbf{A}$ locus can experience sex-specific gametic competition, diploid selection, and/or meiotic drive. 
-\DIFdelbegin %DIFDELCMD < 
+Thus, the $\mathbf{A}$ locus can experience sex-specific gametic competition, diploid selection, and/or meiotic drive.
+\DIFaddbegin \DIFadd{The model is entirely deterministic and hence ignores chance fluctuations in allele frequencies due to genetic drift.
+}\DIFaddend 
 
-%DIFDELCMD < %%%
-\DIFdelend \DIFaddbegin \DIFadd{`
-}\DIFaddend \begin{table}[ht]
+\begin{table}[ht]
 %\centering
 \smallskip
 \caption{{\bf Relative fitness of different genotypes in sex \DIFdelbeginFL \DIFdelFL{$\Hermaphrodite \in \{\female,\male\}$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$\circ \in \{\female,\male\}$ }\DIFaddendFL } }
@@ -454,12 +678,15 @@ We use a superscript to specify the ancestral sex-determining system described, 
 
 \subsection*{Generic invasion by a neo-Y or neo-W}
 
-The evolution of a new sex-determining system requires that a rare mutant allele, $m$, at the novel sex-determining locus, $\mathbf{M}$, increases in frequency when rare. 
+\DIFaddbegin \DIFadd{\textcolor{red}{Discussion of `epistatic dominance' assumption to go here somewhere? The model in the Mathematica file is actual general to this assumption I think (or at least we wrote one that is), which we could mention in the response.}
+}
+
+\DIFaddend The evolution of a new sex-determining system requires that a rare mutant allele, $m$, at the novel sex-determining locus, $\mathbf{M}$, increases in frequency when rare. 
 This is determined by the leading eigenvalue ($\lambda_m^{(XY)}$) of the system of eight equations describing the frequency of eggs and sperm carrying the $m$ allele in the next generation (equations \ref{eq:recursions}). %, evaluated at the above equilibrium.
 %Thus, the system describing the change in frequency of the $m$ allele consists of eight recursion equations. 
 This system simplifies substantially for a dominant neo-Y ($k=0$) or neo-W ($k=1$), see \nameref{app:inv_cond}. 
 The leading eigenvalue for a rare neo-Y or neo-W allele, $m\in\{Y',W'\}$, is the largest value of X that solves $x^2+ b x + c = 0$.  %$(\lambda_m^{(i)})^2+ b \lambda_m^{(i)} + c =0$. 
-The coefficients are $b= - (\Lambda_{mA}^{(XY)} + \Lambda_{ma}^{(XY)})+(\chi_{mA}^{(XY)} + \chi_{ma}^{(XY)})$ and $c = (\Lambda_{mA}^{(XY)} - \chi_{mA}^{(XY)}) (\Lambda_{ma}^{(XY)} - \chi_{ma}^{(XY)}) - \chi_{mA}^{(XY)} \chi_{ma}^{(XY)}$, where $\Lambda_{mi}^{(XY)}>0$ is the multiplicative growth rate (which we will call the ``haplotypic growth rate'') of the neo-sex determination allele $m$ on background $i\in\{A,a\}$ without accounting for loss due to recombination ($R=0$), and $\chi_{mi}^{(XY)}>0$ is the rate at which mutant haplotypes on background $i\in\{A,a\}$ recombine onto the other $\mathbf{A}$ locus background in heterozygotes (proportional to $R$\DIFaddbegin \DIFadd{; \textcolor{red}{we call this the ``haplotypic recombination rate"(?)}}\DIFaddend ), see Table \ref{tab:haplotype_growth}.
+The coefficients are $b= - (\Lambda_{mA}^{(XY)} + \Lambda_{ma}^{(XY)})+(\chi_{mA}^{(XY)} + \chi_{ma}^{(XY)})$ and $c = (\Lambda_{mA}^{(XY)} - \chi_{mA}^{(XY)}) (\Lambda_{ma}^{(XY)} - \chi_{ma}^{(XY)}) - \chi_{mA}^{(XY)} \chi_{ma}^{(XY)}$, where $\Lambda_{mi}^{(XY)}>0$ is the multiplicative growth rate (which we will call the ``haplotypic growth rate'') of the neo-sex determination allele $m$ on background $i\in\{A,a\}$ without accounting for loss due to recombination ($R=0$), and $\chi_{mi}^{(XY)}>0$ is the rate at which mutant haplotypes on background $i\in\{A,a\}$ recombine onto the other $\mathbf{A}$ locus background in heterozygotes (proportional to $R$\DIFaddbegin \DIFadd{; we call this the ``dissociative force" as it breaks down linkage disequilibrium}\DIFaddend ), see Table \ref{tab:haplotype_growth}.
 In the ancestral population, it is convenient to follow the frequency of the $A$ allele among female gametes (eggs), $p^\female_X$, and among X-bearing, $p^\male_X$, and among Y-bearing, $p^\male_Y$, male gametes (sperm/pollen). 
 We also track the fraction of male gametes that are Y-bearing, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
 We will consider only equilibrium frequencies of alleles, \DIFdelbegin \DIFdel{$\hat{p}^\Hermaphrodite_i$}\DIFdelend \DIFaddbegin \DIFadd{$\hat{p}^\circ_i$}\DIFaddend , and Y-bearing male gametes, $\hat{q}$, when calculating the eigenvalues.  
@@ -486,13 +713,16 @@ We will consider only equilibrium frequencies of alleles, \DIFdelbegin \DIFdel{$
   \hline \hline 
    \end{tabular}
    \begin{flushleft} 
-$\bar{p}^{\male}=(1-\hat{q})\hat{p}_X^\male + \hat{q}\hat{p}_Y^\male$ is the average frequency of the $A$ allele among X- and Y-bearing male gametes.
+\DIFaddbeginFL \DIFaddFL{$\hat{p}_X^\female$ is the frequency of $A$ among female gametes.
+}\DIFaddendFL $\bar{p}^{\male}=(1-\hat{q})\hat{p}_X^\male + \hat{q}\hat{p}_Y^\male$ is the average frequency of the $A$ allele among X- and Y-bearing male gametes.
 %      \item $R$ is the probability of recombination between loci $\mathbf{A}$ and $\mathbf{M}$.
 $\zeta$ is the zygotic sex ratio (fraction male).
 \DIFdelbeginFL \DIFdelFL{$\bar{w}^{\Hermaphrodite}_{D}$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$\bar{w}^{\circ}_{D}$ }\DIFaddendFL is the mean fitness of diploids of sex \DIFdelbeginFL \DIFdelFL{$\Hermaphrodite$.
 $\bar{w}_H^\Hermaphrodite$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$\circ$ $\in\{\female,\male\}$.
 $\bar{w}_H^\circ$ }\DIFaddendFL is the mean fitness of haploids from sex \DIFdelbeginFL \DIFdelFL{$\Hermaphrodite$}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$\circ$}\DIFaddendFL , see \nameref{tab:meanfitnesses}.
-\end{flushleft}
+\DIFaddbeginFL \DIFaddFL{$R$ is the rate of recombination between the neo-sex-determiner and the selected locus.
+Selection terms ($w_i^\circ$, $\alpha_\Delta^\circ$) are described in Table \ref{tab:fitnesstable}. 
+}\DIFaddendFL \end{flushleft}
   \label{tab:haplotype_growth}
 \end{table}
 
@@ -510,26 +740,38 @@ Furthermore, it can be shown that the leading eigenvalue declines with $R$, and 
 \end{equation}
 \noindent 
 This condition may or may not be satisfied for the full range of locations of the new sex-determining locus, including $R=1/2$, depending on the nature of selection.  
-Interpreting this condition, if we assume that only the $mA$ haplotype would increase in frequency when $R=0$ ($\Lambda_{ma}^{(XY)}<1<\Lambda_{mA}^{(XY)}$) the first term on the left-hand side of \eqref{eq:lambdasGen} is negative and invasion requires that rate of growth of $mA$ haplotypes ($\Lambda_{mA}^{(i)}-1>0$) and the rate at which $mA$ haplotypes are produced by recombination in $ma$ haplotypes ($\chi_{ma}^{(i)}$) are sufficiently large relative to the rate of decline of $ma$ haplotypes ($1-\Lambda_{ma}^{(i)}>0$) and the rate of loss of $mA$ haplotypes due to recombination ($\chi_{mA}^{(i)}$).
+Interpreting this condition, if we assume that only the $mA$ haplotype would increase in frequency when $R=0$ ($\Lambda_{ma}^{(XY)}<1<\Lambda_{mA}^{(XY)}$) \DIFaddbegin \DIFadd{then }\DIFaddend the first term on the left-hand side of \eqref{eq:lambdasGen} is negative and invasion requires that \DIFdelbegin \DIFdel{rate of growth of }\DIFdelend \DIFaddbegin \DIFadd{growth rate of }\DIFaddend $mA$ haplotypes ($\Lambda_{mA}^{(i)}-1>0$) and the rate at which \DIFdelbegin \DIFdel{$mA$ haplotypes }\DIFdelend \DIFaddbegin \DIFadd{they }\DIFaddend are produced by recombination \DIFdelbegin \DIFdel{in $ma$ haplotypes }\DIFdelend ($\chi_{ma}^{(i)}$) are sufficiently large relative to the rate of decline of $ma$ haplotypes ($1-\Lambda_{ma}^{(i)}>0$) and the rate \DIFdelbegin \DIFdel{of loss of $mA$ haplotypes due to }\DIFdelend \DIFaddbegin \DIFadd{at which $m$ and $A$ are dissociated by }\DIFaddend recombination ($\chi_{mA}^{(i)}$).
 
-We \DIFdelbegin \DIFdel{can draw a number of key points about the }\DIFdelend \DIFaddbegin \DIFadd{draw three main conclusions about the generic }\DIFaddend invasion of neo-Y and neo-W mutations from Table \ref{tab:haplotype_growth}\DIFdelbegin \DIFdel{. 
-First, Fisherian sex ratio selection will favour the spread of a neo-Y and inhibit the spread of a neo-W if the ancestral zygotic sex ratio is biased towards females, }\DIFdelend \DIFaddbegin \DIFadd{:
-}\vspace{0.5cm}
-
-\noindent\textit{\DIFadd{Conclusion 1: Fisherian sex-ratio selection will favour the spread of a neo-Y and inhibit the spread of a neo-W if the ancestral zygotic sex ratio is biased towards females}}\DIFadd{, }\DIFaddend $\zeta<1/2$ (i.e., the first factor of the $\Lambda_{mi}^{(XY)}$ is greater than one for a neo-Y and less than one for a neo-W).
+We \DIFdelbegin \DIFdel{can draw a number of key }\DIFdelend \DIFaddbegin \DIFadd{draw three main }\DIFaddend points about the \DIFaddbegin \DIFadd{generic }\DIFaddend invasion of neo-Y and neo-W mutations from Table \ref{tab:haplotype_growth}.
+First, \DIFdelbegin \DIFdel{Fisherian sex ratio }\DIFdelend \DIFaddbegin \DIFadd{invasion by a neo-Y (neo-W) does not directly depend on the fitness of female (male) diploids. %DIF > (for a given set of equilibrium allele frequencies).
+This is because a dominant neo-Y (neo-W) is always found in males (females), and therefore the frequency of the neo-Y (neo-W), $m$, only changes in males (females), Fig \ref{fig:model_outline}C,D.
+Second, Fisherian sex-ratio }\DIFaddend selection will favour the spread of a \DIFdelbegin \DIFdel{neo-Y }\DIFdelend \DIFaddbegin \DIFadd{neo-W }\DIFaddend and inhibit the spread of a \DIFdelbegin \DIFdel{neo-W }\DIFdelend \DIFaddbegin \DIFadd{neo-Y }\DIFaddend if the ancestral zygotic sex ratio is biased towards \DIFdelbegin \DIFdel{females, $\zeta<1/2$ }\DIFdelend \DIFaddbegin \DIFadd{males }\DIFaddend (i.e., the first factor of the $\Lambda_{mi}^{(XY)}$ is greater than one for a \DIFdelbegin \DIFdel{neo-Y }\DIFdelend \DIFaddbegin \DIFadd{neo-W }\DIFaddend and less than one for a \DIFdelbegin \DIFdel{neo-W)}\DIFdelend \DIFaddbegin \DIFadd{neo-Y when $\zeta>1/2$), as might occur when the ancestral sex-determining locus is linked to a locus experiencing meiotic drive in males, for example}\DIFaddend .
 However, the spread of a neo-Y (neo-W) also depends on the male (female) fitness of associated alleles (see terms involving equilibrium allele frequencies, $\hat{p}$'s).
-\DIFdelbegin \DIFdel{Second, invasion by a neo-Y (neo-W) does not directly depend on the fitness of female (male) diploids}\DIFdelend \DIFaddbegin \vspace{0.5cm}
-
-\noindent\textit{\DIFadd{Conclusion 2: invasion by a neo-Y (neo-W) does not directly depend on the fitness of female (male) diploids}}\DIFaddend . %(for a given set of equilibrium allele frequencies).
+\DIFdelbegin \DIFdel{Second, invasion by a neo-Y (neo-W) does not directly depend on the fitness of female (male) diploids. %DIF < (for a given set of equilibrium allele frequencies).
 This is because a dominant neo-Y (neo-W) is always found in males (females), and therefore the frequency of the neo-Y (neo-W), $m$, only changes in males (females), Fig \ref{fig:model_outline}C,D. 
-\DIFdelbegin \DIFdel{Finally, invasions by a neo-Y and a neo-W are qualitatively different}\DIFdelend \DIFaddbegin \vspace{0.5cm}
-
-\noindent\textit{\DIFadd{Conclusion 3: invasions by a neo-Y and a neo-W are qualitatively different}}\DIFaddend .
-This is because a gamete with the neo-Y always pairs with a female gamete containing an X, Fig \ref{fig:model_outline}C.
+Finally, invasions by a neo-Y and }\DIFdelend \DIFaddbegin \DIFadd{This implies that neither sex-ratio selection or selection on associated alleles dominates the invasion dynamics of }\DIFaddend a \DIFdelbegin \DIFdel{neo-W }\DIFdelend \DIFaddbegin \DIFadd{new sex-determining allele, allowing the sex ratio to become more or less biased during a transition (as previously shown in two special cases; \mbox{%DIFAUXCMD
+\cite{Kozielska:2010vm,Ubeda:2015fx}}%DIFAUXCMD
+). 
+%DIF > That is, 
+%DIF > \vspace{0.5cm}
+%DIF > 
+%DIF > \noindent\textit{Conclusion 1:} 
+%DIF > \textbf{neither sex-ratio selection or selection on associated alleles dominates the invasion dynamics of a new sex-determining allele, allowing the sex ratio to become more or less biased during a transition.}
+%DIF > \textcolor{red}{[as suspected from Kozielska and Ubeda special cases]}
+%DIF > \vspace{0.5cm}
+%DIF > 
+And thirdly, Table \ref{tab:haplotype_growth} also shows that
+%DIF > \vspace{0.5cm}
+%DIF > 
+%DIF > \noindent\textit{Conclusion 2:}
+%DIF > \textbf{cis- and trans-GSD transitions are qualitatively different.}
+%DIF > \textcolor{red}{[already known from van Doorn and Kirkpatrick]}
+%DIF > \vspace{0.5cm}
+%DIF > 
+cis- and trans-GSD transitions }\DIFaddend are qualitatively different.
+This is because\DIFaddbegin \DIFadd{, in an ancestrally XY system, }\DIFaddend a gamete with the neo-Y always pairs with a female gamete containing an X, Fig \ref{fig:model_outline}C.
 By contrast, a gamete with a neo-W can pair with an X- or Y-bearing male gamete, Fig \ref{fig:model_outline}D.
-Consequently, neo-W-bearing females obtain a different frequency of $A$ alleles from mating (when $\hat{p}_X^\male \neq \hat{p}_Y^\male$) compared to ancestral ($MM$) females.
-\DIFaddbegin \vspace{0.5cm}
-\DIFaddend 
+Consequently, neo-W-bearing females obtain a different frequency of $A$ alleles from mating (when $\hat{p}_X^\male \neq \hat{p}_Y^\male$) compared to ancestral ($MM$) females\DIFaddbegin \DIFadd{, which can inhibit or favour its spread}\DIFaddend .
 
 In order to explicitly determine the conditions under which a rare new sex-determining allele spreads, we must calculate the equilibrium frequency of the $A$ allele (i.e., $\hat{p}^\female_X$, $\hat{p}^\male_X$, and $\hat{p}^\male_Y$) and Y-bearing male gametes ($\hat{q}$) in the ancestral population. 
 Since only the $\mathbf{A}$ locus experiences selection directly, any deterministic evolution requires that there is a polymorphism at the $\mathbf{A}$ locus. 
@@ -538,7 +780,7 @@ However, polymorphisms maintained by selection can maintain alleles at intermedi
 Here, we focus on polymorphisms maintained by selection, where the $A$ allele reaches a stable intermediate equilibrium frequency under the ancestral sex-determining system before the new sex-determining allele ($m$) arises. 
 Such polymorphisms can be maintained by heterozygote advantage, sexually-antagonistic selection, ploidally-antagonistic selection, or a combination~\cite{Immler:2012tl}.
 We can analytically calculate the allele frequency of the $A$ allele using two alternative simplifying assumptions: 
-(1) the $\mathbf{A}$ locus is within (or tightly linked to) the non-recombining region around the ancestral sex-determining locus ($r \approx 0$) or (2) selection is weak relative to recombination (\DIFdelbegin \DIFdel{$s^\Hermaphrodite$, $t^\Hermaphrodite$, $\alpha_{\Delta}^\Hermaphrodite$ }\DIFdelend \DIFaddbegin \DIFadd{$s^\circ$, $t^\circ$, $\alpha_{\Delta}^\circ$ }\DIFaddend of order $\epsilon<<1$). 
+(1) the $\mathbf{A}$ locus is within (or tightly linked to) the non-recombining region around the ancestral sex-determining locus ($r \approx 0$) or (2) selection is weak relative to recombination (\DIFdelbegin \DIFdel{$s^\Hermaphrodite$, $t^\Hermaphrodite$, $\alpha_{\Delta}^\Hermaphrodite$ of order $\epsilon<<1$}\DIFdelend \DIFaddbegin \DIFadd{$s^\circ$, $t^\circ$, $\alpha_{\Delta}^\circ$ $<<$ $r$}\DIFaddend ). 
 
 \subsection*{Tight linkage with the ancestral sex-determining locus ($r \approx 0$)}
 
@@ -556,14 +798,23 @@ Therefore, a neo-Y mutation cannot spread in an ancestral XY system ($\lambda_{Y
 In essence, through tight linkage with the $\mathbf{A}$ locus, the ancestral Y becomes strongly specialized on the allele that has the highest fitness across male haploid and diploid phases. 
 Given that the ancestral Y is at this equilibrium, it is not possible for a neo-Y to create males that have higher fitness than the ancestral Y. 
 
-Neo-W alleles, on the other hand, can invade an ancestral XY system under some conditions (the full invasion conditions are given in \nameref{app:inv_cond}; equations \ref{Binvasion} and \ref{Ainvasion})\DIFdelbegin \DIFdel{. 
-Counterintuitively, selection on loci within the non-recombining region around the sex-determining locus can favour the invasion of a less closely linked neo-W, }\DIFdelend \DIFaddbegin \DIFadd{:
+Neo-W alleles, on the other hand, can invade an ancestral XY system under some conditions (the full invasion conditions are given in \nameref{app:inv_cond}; equations \ref{Binvasion} and \ref{Ainvasion}). 
+\DIFdelbegin \DIFdel{Counterintuitively,
+selection on loci within the non-recombining region around the sex-determining locus can favour the invasion of a less closely linked neo-W, whatever the }\DIFdelend \DIFaddbegin \DIFadd{In particular,
 }\vspace{0.5cm}
 
-\noindent\textit{\DIFadd{Conclusion 4: counterintuitively, selection on loci within the non-recombining region around the sex-determining locus ($r\approx0$) can favour the invasion of a less closely linked neo-W ($r<R$)}}\DIFadd{, }\DIFaddend whatever the form of selection maintaining a polymorphism (sexually-antagonistic selection, overdominance, ploidally-antagonistic selection, or some combination, Fig \ref{fig:SexAntagTighter}, \nameref{fig:temporalOverdominance}, \nameref{fig:regionPloidAntag}, and \nameref{fig:SexAntagTighterMaleDrive}).  
+\noindent\textit{\DIFadd{Conclusion 1A:}}
+\textbf{\DIFadd{selection on loci within the non-recombining region around the sex-determining locus ($r\approx0$) allows the invasion of less closely linked sex-determining alleles ($r<R\leq1/2$) during a trans-GSD transition}}\DIFadd{.
+%DIF > \textcolor{red}{[new result for sex-antagonism and overdominance, but already shown by Kozielska for ploidy-antagonism]}
+}\vspace{0.5cm}
+
+\noindent \DIFadd{This does not depend on the }\DIFaddend form of selection maintaining a polymorphism (sexually-antagonistic selection, overdominance, ploidally-antagonistic selection, or some combination, Fig \ref{fig:SexAntagTighter}, \nameref{fig:temporalOverdominance}, \nameref{fig:regionPloidAntag}, and \nameref{fig:SexAntagTighterMaleDrive}).  
 The conditions become more restrictive, however, with increasing recombination ($R$) between the new sex-determining locus and the selected locus.  
-The invasion of completely unlinked neo-W alleles ($R = 1/2$) can occur with overdominance in males or with haploid selection but is not possible with only sexually-antagonistic selection if selection is directional in each diploid sex (see \nameref{file:Mathematica}).
-\DIFaddbegin \vspace{0.5cm}
+The invasion of completely unlinked neo-W alleles ($R = 1/2$) can occur with overdominance in males or with haploid selection \DIFaddbegin \DIFadd{(as shown for the case of male drive opposed by diploid selection in \mbox{%DIFAUXCMD
+\cite{Kozielska:2010vm}}%DIFAUXCMD
+) }\DIFaddend but is not possible with only sexually-antagonistic selection if selection is directional in each diploid sex (see \nameref{file:Mathematica}).
+%DIF > \vspace{0.5cm}
+\DIFaddbegin 
 
 %DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %DIF > Tighter linkage allows looser sex-linkage to evolve, even in absence of haploid selection
@@ -576,7 +827,7 @@ The invasion of completely unlinked neo-W alleles ($R = 1/2$) can occur with ove
 \DIFaddFL{In panel A, linkage is loose enough relative to selection that the analytical results assuming weak selection hold, and a neo-W allele can only invade when it arises at a locus more tightly linked with the selected locus ($R<r$; shaded region).
 In panel B, linkage is tight enough relative to selection that the analytical results assuming weak selection do not hold, and a neo-W can invade even when it is less tightly linked with the selected locus ($r<R$; unshaded region around \text{*}).
 In panel C we vary the recombination rate between the neo-W and the selected locus ($R$) for a fixed recombination rate between the ancestral sex-determining locus and the selected locus ($r=0.005$). 
-Coloured markers show recombination rates for which the temporal dynamics of invasion are plotted in the inset, demonstrating that neo-W alleles can reach pseudo-fixation if they are more (black) or less (red) closely linked to a locus experiencing sexually-antagonistic selection. 
+Coloured markers show recombination rates for which the temporal dynamics of invasion are plotted in the inset, demonstrating that neo-W alleles can reach pseudo-fixation if they are more (black) or less (red) closely linked to a locus experiencing sexually-antagonistic selection (neo-W which are too loosely linked (blue and green) do not invade). 
 A very loosely linked neo-W does not spread in this case (blue and green lines overlap and go to 0 in inset). 
 Fitness parameters are: $w_{AA}^\female = 1.05$, $w_{aa}^\male = 1.2$, $w_{aa}^\female = w_{AA}^\male = 0.85$, $w_{Aa}^\circ = 1$,  $t^\circ = \alpha^\circ_\Delta = 0$.
 %DIF > \textcolor{red}{consider removing panel A, which is repeated in Fig 3.}
@@ -664,11 +915,11 @@ Wherever both haplotypic growth rates are greater than one, invasion by a neo-W 
 
 Assuming selection is weak relative to recombination, van Doorn and Kirkpatrick~\cite{vanDoorn:2010hu} showed that invasion by a neo-W allele occurs under the same conditions as `pseudo-fixation' (at pseudo-fixation the neo-W reaches its maximum frequency among eggs, which is usually 1/2, but can deviate from 1/2 when there is haploid selection before censusing). 
 An equivalent analysis is not possible where recombination rates are low. 
-However, numerical simulations demonstrate that new sex-determining alleles do not necessarily reach pseudo-fixation, which can lead to the stable maintenance of a mixed sex-determining system, in which X, Y, Z, and W alleles all segregate (e.g., \nameref{fig:freqAll}B,C). 
+However, numerical simulations demonstrate that\DIFaddbegin \DIFadd{, with tight sex linkage, }\DIFaddend new sex-determining alleles do not necessarily reach pseudo-fixation, which can lead to the stable maintenance of a mixed sex-determining system, in which X, Y, Z, and W alleles all segregate (e.g., \nameref{fig:freqAll}B,C). 
 
 \subsection*{Loose linkage with the ancestral sex-determining region}
 
-Here we assume that selection is weak (\DIFdelbegin \DIFdel{$s^\Hermaphrodite$, $t^\Hermaphrodite$, $\alpha_{\Delta}^\Hermaphrodite$ }\DIFdelend \DIFaddbegin \DIFadd{$s^\circ$, $t^\circ$, $\alpha_{\Delta}^\circ$ }\DIFaddend of order $\epsilon<<1$) and thus implicitly assume that all recombination rates ($r$, $R$ and $\rho$) are large relative to selection.
+Here we assume that selection is weak (\DIFdelbegin \DIFdel{$s^\Hermaphrodite$, $t^\Hermaphrodite$, $\alpha_{\Delta}^\Hermaphrodite$ of order $\epsilon<<1$}\DIFdelend \DIFaddbegin \DIFadd{$s^\circ$, $t^\circ$, $\alpha_{\Delta}^\circ$ of order $\epsilon$, where $\epsilon$ is some number much less than one}\DIFaddend ) and thus implicitly assume that all recombination rates ($r$, $R$ and $\rho$) are large relative to selection.
 %, we denote the leading eigenvalues describing the invasion of a neo-Y ($k=0$) and a neo-W ($k=1$) into an ancestrally XY system by $\lambda_{Y',XY}$ and $\lambda_{W',XY}$, respectively. 
 To leading order in selection,
 \DIFdelbegin \DIFdel{the leading eigenvalues are:
@@ -721,12 +972,15 @@ In panel B, gametic competition in males ($t^\male = -1/10$, \DIFdelbeginFL \DIF
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 However, with haploid selection and $r<1/2$, the additional term in Eq \eqref{eq:lambda_neoW} can be positive.
-This \DIFdelbegin \DIFdel{can allow neo-W invasion }\DIFdelend \DIFaddbegin \DIFadd{implies: 
+This \DIFdelbegin \DIFdel{can allow neo-W invasion ($\lambda_{W'}^{(XY)}>1$), 
+even when the new sex-determining locus is less closely linked to the selected locus ($R>r$). 
+}\DIFdelend \DIFaddbegin \DIFadd{implies, 
 }\vspace{0.5cm}
 
-\noindent\textit{\DIFadd{Conclusion 5: with intermediate recombination between the ancestral sex-determining allele and a selected locus, $0<r<1/2$, a less closely linked neo-W ($r<R$) can invade}} \DIFaddend ($\lambda_{W'}^{(XY)}>1$)\DIFdelbegin \DIFdel{, even when the new sex-determining locus is less closely linked to the selected locus ($R>r$).
-}\DIFdelend \DIFaddbegin \DIFadd{.
-}\vspace{0.5cm}
+\noindent\textit{\DIFadd{Conclusion 1B:}}\DIFadd{\
+}\textbf{\DIFadd{when there is an intermediate rate of recombination between the ancestral sex-determining allele and a selected locus ($0<r<1/2$), haploid selection allows less closely linked sex-determining alleles ($r<R$) to invade during trans-GSD transitions ($\lambda_{W'}^{(XY)}>1$).}}
+%DIF > \textcolor{red}{[new result because Kozielska had ancestrally-tight sex-linkage and Ubeda had ESD]}
+\vspace{0.5cm}
 
 \DIFaddend %These transitions are unusual because, when $R>r$, associations that selection has built up between alleles more favourable in one sex and alleles that determine sex will be weakened. 
 %Mean diploid fitness therefore decreases during heterogametic transitions that create looser sex-linkage (Fig \ref{fig:Combination_MeanFit}B,D). 
@@ -761,7 +1015,8 @@ Scenario &  Assumptions & neo-W spreads ($\lambda_{W'}^{(XY)}>1$) if \\ [0.5ex] 
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Sex ratio selection is not a good predictor of neo-W invasion into an XY system
+%DIF < Sex ratio selection is not a good predictor of neo-W invasion into an XY system
+%DIF > sex-ratio selection is not a good predictor of neo-W invasion into an XY system
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
 \centering
@@ -778,22 +1033,34 @@ Parameters:  $s^\female =s^\male = 0.2$, $h^\female = h^\male = 0.7$, $t^\female
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Previous research suggests that when the ancestral sex-determining locus is linked to a locus that experiences haploid selection (e.g., meiotic drive), alleles at a new, unlinked sex-determining locus invade to restore equal sex ratios~\cite{Kozielska:2010vm}. 
+Previous research \DIFdelbegin \DIFdel{suggests }\DIFdelend \DIFaddbegin \DIFadd{has shown }\DIFaddend that when the ancestral sex-determining locus is linked to a locus that experiences haploid selection (e.g., meiotic drive), alleles at a new, unlinked sex-determining locus \DIFdelbegin \DIFdel{invade to }\DIFdelend \DIFaddbegin \DIFadd{can invade and }\DIFaddend restore equal sex ratios~\cite{Kozielska:2010vm}. 
 Consider, for example, the case where the $\mathbf{A}$ locus is linked to the ancestral sex-determining locus ($r<1/2$) and experiences meiotic drive in males only ($\alpha^\male_\Delta \neq 0$, $\alpha^\female_\Delta=0$), without gametic competition ($t^\female=t^\male=0$).
 In this case, the zygotic sex ratio can be initially biased only if the ancestral sex-determining system is XY (Fig \ref{fig:model_outline}A and Fig \ref{fig:SexRatioBad}B). 
 %If the ancxestral sex-determining system is ZW, the zygotic sex ratio will be 1:1 because diploid sex is determined by the proportion of Z-bearing versus W-bearing eggs and meiosis in females is fair (Fig \ref{fig:Combination_Turnover}D).
 If Fisherian \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend selection were dominant, we would thus expect a difference in the potential for XY to ZW and ZW to XY transitions. 
-%However, to leading order with selection weak relative to recombination, we find that sex ratio selection favours the spread of a neo-W by an amount equl to the spread of a neo-Y into a ZW system (relabeling XY as the heterogametic sex and reversing the labels of males and females in Table \ref{tab:specialcases})
-%However, to leading order with selection weak relative to recombination, we find that sex ratio selection favours the spread of a neo-W (through the first terms in table \ref{tab:haplotype_growth}) by an amount that is equal in magnitude to the fitness effects of alleles associated with new sex-determining alleles (second terms in table \ref{tab:haplotype_growth}).
-However, invasion by a neo-W allele into an XY system and invasion by a neo-Y allele into a ZW system occur under the same conditions ($\lambda_{Y'}^{(XY)} = \lambda_{W'}^{(ZW)}$ and $\lambda_{W'}^{(XY)}=\lambda_{Y'}^{(ZW)}$, at least to order $\epsilon^2$).
-For example, in Fig \ref{fig:SexRatioBad}A neo-W alleles invade an ancestral-XY system where females are initially rare, equalizing the sex ratio.
+%DIF < However, to leading order with selection weak relative to recombination, we find that sex ratio selection favours the spread of a neo-W by an amount equl to the spread of a neo-Y into a ZW system (relabeling XY as the heterogametic sex and reversing the labels of males and females in Table \ref{tab:specialcases})
+%DIF < However, to leading order with selection weak relative to recombination, we find that sex ratio selection favours the spread of a neo-W (through the first terms in table \ref{tab:haplotype_growth}) by an amount that is equal in magnitude to the fitness effects of alleles associated with new sex-determining alleles (second terms in table \ref{tab:haplotype_growth}).
+%DIF > However, to leading order with selection weak relative to recombination, we find that sex-ratio selection favours the spread of a neo-W by an amount equl to the spread of a neo-Y into a ZW system (relabeling XY as the heterogametic sex and reversing the labels of males and females in Table \ref{tab:specialcases})
+However, invasion by a neo-W allele into an XY system and invasion by a neo-Y allele into a ZW system occur under the same conditions ($\lambda_{Y'}^{(XY)} = \lambda_{W'}^{(ZW)}$ and $\lambda_{W'}^{(XY)}=\lambda_{Y'}^{(ZW)}$, at least to order $\epsilon^2$)\DIFdelbegin \DIFdel{.
+}\DIFdelend \DIFaddbegin \DIFadd{, implying that
+}\vspace{0.5cm}
+
+\noindent\textit{\DIFadd{Conclusion 2:}}
+\textbf{\DIFadd{when selection is weak relative to recombination, sex-ratio selection is exactly equal in magnitude to the selection imposed by associations with selected alleles.}}
+%DIF > \textcolor{red}{[new result]}
+\vspace{0.5cm}
+
+\noindent \DIFaddend For example, in Fig \ref{fig:SexRatioBad}A neo-W alleles invade an ancestral-XY system where females are initially rare, equalizing the sex ratio.
 However, Fig \ref{fig:SexRatioBad}B shows that a neo-Y can invade the resulting ZW system under the same conditions. 
-When $R<1/2$, the invading neo-Y becomes associated with the male meiotic drive allele and the zygotic sex ratio actually evolves to become male-biased \DIFaddbegin \DIFadd{(similar to the scenario considered in \mbox{%DIFAUXCMD
-\cite{Ubeda:2015fx}}%DIFAUXCMD
+When $R<1/2$, the invading neo-Y becomes associated with the male meiotic drive allele and the zygotic sex ratio actually evolves to become male-biased \DIFaddbegin \DIFadd{(as in the scenarios considered in \mbox{%DIFAUXCMD
+\cite{Kozielska:2010vm,Ubeda:2015fx}}%DIFAUXCMD
 )}\DIFaddend .
 In this case, the neo-Y spreads because it is often found in males and can, if it carries the driven allele $a$, benefit from haploid selection in males (Fig \ref{fig:SexRatioBad}B).
-%
-%As selection becomes stronger (or linkage becomes tighter), this symmetry between sex ratio selection and haploid selection is lost, causing differences in the strength of selection favouring the two heterogametic transitions (compare red to black near -25cM and 25 cM in Fig \ref{fig:Combination_Centimorgans}). \textcolor{red}{normalise fitness in sexually antagonistic case}
+\DIFaddbegin 
+
+\DIFaddend %
+%DIF < As selection becomes stronger (or linkage becomes tighter), this symmetry between sex ratio selection and haploid selection is lost, causing differences in the strength of selection favouring the two heterogametic transitions (compare red to black near -25cM and 25 cM in Fig \ref{fig:Combination_Centimorgans}). \textcolor{red}{normalise fitness in sexually antagonistic case}
+%DIF > As selection becomes stronger (or linkage becomes tighter), this symmetry between sex-ratio selection and haploid selection is lost, causing differences in the strength of selection favouring the two heterogametic transitions (compare red to black near -25cM and 25 cM in Fig \ref{fig:Combination_Centimorgans}). \textcolor{red}{normalise fitness in sexually antagonistic case}
 %
 %Why can new sex-determining regions invade when they are more loosely linked to selected loci ($R>r$)?  
 %Consider first the case where both sex-determining-loci are linked to the selected locus ($r<R<1/2$). 
@@ -808,7 +1075,8 @@ Nevertheless, the unlinked neo-Y can spread because diploids bearing it more oft
 \subsection*{Environmental sex determination}
 
 We next consider the case where the new sex-determining mutation, $m$, causes sex to be determined probabilistically or by heterogeneous environmental conditions (environmental sex determination, ESD), with individuals carrying allele $m$ developing as females with probability $k$.
-Here, we do not assume that the environmental conditions that determine sex also differentially affect the fitness of males versus females. 
+\DIFaddbegin \DIFadd{\textcolor{red}{In our deterministic model this means the fraction female is exactly $k$, even when $m$ is rare (exploring the effect of the variance induced by ESD would also be interesting).}
+}\DIFaddend Here, we do not assume that the environmental conditions that determine sex also differentially affect the fitness of males versus females. 
 Such correlations can favour environmental sex-determining systems by allowing each sex to be produced in the environment in which it has highest fitness; in the absence of these correlations, previous theory would predict that ESD is favoured when it produces more equal sex ratios than the ancestral system (see reviews by~\cite{Charnov:1982wg,Bull:1983vi,West:2009we}). %(e.g., maternal condition, mate quality, age, or host size)  
 
 The characteristic polynomial determining the leading eigenvalue (equations \ref{eq:recursions}) does not factor for ESD ($0<k<1$) as it does for a neo-Y ($k=0$) or neo-W ($k=1$) allele. 
@@ -825,9 +1093,11 @@ We therefore focus on weak selection here, where the leading eigenvalue is
 \noindent
 This reduces to $\lambda_{Y'}^{(XY)}$ when $k=0$ and $\lambda_{W'}^{(XY)}$ when $k=1$. 
 
-%Under Fisherian sex ratio selection, autosomal modifiers favour equal investment in male and female offspring, i.e., a 1:1 sex ratio~\cite{Fisher:1930wy,Charnov:1982wg,West:2009we}. 
+%DIF < Under Fisherian sex ratio selection, autosomal modifiers favour equal investment in male and female offspring, i.e., a 1:1 sex ratio~\cite{Fisher:1930wy,Charnov:1982wg,West:2009we}. 
+%DIF > Under Fisherian sex-ratio selection, autosomal modifiers favour equal investment in male and female offspring, i.e., a 1:1 sex ratio~\cite{Fisher:1930wy,Charnov:1982wg,West:2009we}. 
 %A novel environmental sex-determiner that causes half of its carriers to become female and half to become male ($k=1/2$) will be in males half of the time and in females half of the time (like an autosome).
-%In addition, these novel sex-determination alleles equalize the sex ratio and therefore one might expect them to be favoured by Fisherian sex ratio selection when the resident sex ratio is biased.
+%DIF < In addition, these novel sex-determination alleles equalize the sex ratio and therefore one might expect them to be favoured by Fisherian sex ratio selection when the resident sex ratio is biased.
+%DIF > In addition, these novel sex-determination alleles equalize the sex ratio and therefore one might expect them to be favoured by Fisherian sex-ratio selection when the resident sex ratio is biased.
 %However, assuming weak selection, we find that the growth rate of a rare, dominant offspring-controlled neo-ESD allele that produces males or females with equal probability ($k=1/2$) is
 Of particular interest are ESD mutations that cause half of their carriers to develop as females and half as males ($k=1/2$), creating equal sex ratios.
 The spread of such ESD is determined by
@@ -843,15 +1113,12 @@ This is because sex is essentially randomized each generation, %as if the novel 
 preventing associations from building up between alleles at locus $\mathbf{A}$ and sex. 
 Eq \eqref{eq:lambda_ESD} shows that the ESD mutation gets half of the fitness of a feminizing mutation (neo-W) and half of the fitness of a masculinizing mutation (neo-Y), but only has an effect one half of the time (the other half of the time it produces the same sex as the ancestral system would have). 
 As discussed above, $\lambda_{Y'\rvert R=1/2}^{(XY)}$ is necessarily less than one, but $\lambda_{W'\rvert R=1/2}^{(XY)}$ can be greater than one if there is haploid selection.
-That is\DIFdelbegin \DIFdel{, when there is haploid selection, ESD can invade an ancestrally-XY system because it generates females that are either rare or have high fitness, in the same manner as a neo-W.
-}\DIFdelend \DIFaddbegin \DIFadd{:
-}\vspace{0.5cm}
-\DIFaddend 
+That is, \DIFdelbegin \DIFdel{when there is }\DIFdelend \DIFaddbegin \DIFadd{with }\DIFaddend haploid selection, \DIFdelbegin \DIFdel{ESD }\DIFdelend \DIFaddbegin \DIFadd{an allele causing environmental-sex-determination }\DIFaddend can invade an ancestrally-XY system because it generates females that are either rare or have high fitness, in the same manner as a neo-W \DIFdelbegin \DIFdel{. 
+}%DIFDELCMD < 
 
-\DIFaddbegin \noindent\textit{\DIFadd{Conclusion 6: when there is haploid selection, ESD can invade an ancestrally-XY system because it generates females that are either rare or have high fitness, in the same manner as a neo-W}}\DIFadd{.
-}\vspace{0.5cm} 
-
-\DIFaddend %An important result from Eq \eqref{eq:lambda_ESD} is that ESD can invade if there is haploid selection. 
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \DIFadd{(likewise, ESD invades a ZW system for the same reasons a neo-Y can).
+}\DIFaddend %An important result from Eq \eqref{eq:lambda_ESD} is that ESD can invade if there is haploid selection. 
 %When evaluated at $R=1/2$, $\Lambda_{Y',XY}$ is necessarily less than one, but $\Lambda_{W',XY}$ can be greater than one if there is haploid selection, as discussed above. 
 %Previous studies where ESD is favoured have typically assumed that environmental conditions (e.g., maternal condition, mate quality, age, or host size) can differentially affect the fitness of males versus females such that ESD invades because it allows sex determination to depend on the environment \citep[reviewed in][]{Charnov:1982wg,Bull:1983vi,West:2009we}. 
 %Here, ESD mutations can spread because they generate females that are either rare or have high fitness, in the same manner as a neo-W. 
@@ -860,17 +1127,40 @@ Significantly, Eq \eqref{eq:lambda_ESD} is the same whether ESD is invading an a
 Thus, Fisherian \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend selection alone does not easily explain GSD to ESD transitions.
 For example, when the ancestral sex-determining system is XY, but not ZW, the sex ratio is biased by male haploid selection.
 Nevertheless, ESD is equally likely to invade when it equalizes the zygotic sex ratio (through $\lambda_{W'}^{(XY)}$) as when it doesn't (through $\lambda_{Y'}^{(ZW)}$). 
-%This is again because haploid selection can facilitate the turnover of sex chromosomes either through sex ratio biases or through associations between the new sex determining region with selected alleles. 
+%DIF < This is again because haploid selection can facilitate the turnover of sex chromosomes either through sex ratio biases or through associations between the new sex determining region with selected alleles. 
+%DIF > This is again because haploid selection can facilitate the turnover of sex chromosomes either through sex-ratio biases or through associations between the new sex determining region with selected alleles. 
 %With weak selection, these two forces are nearly equal in strength. 
 In addition, we note that ESD may not invade, even if the sex ratio is initially biased (e.g., with drive in males only, $r<1/2$, $h^\female=h^\male$, and $s^\female s^\male<0$, then $\lambda_{W'}^{(XY)}<1$, see Table \ref{tab:specialcases}). 
-We conclude that, as with neo-W and neo-Y loci, associations with selected loci mean that the evolution of ESD is not straightforwardly predicted by selection to balance the zygotic sex ratio when haploid selection is present. 
+We conclude that, as with neo-W and neo-Y loci, associations with selected loci mean that
+\DIFdelbegin \DIFdel{the evolution of ESD is not straightforwardly predicted by selection to balance the zygotic sex ratio when haploid selection is present. 
+}\DIFdelend \DIFaddbegin \vspace{0.5cm}
+\DIFaddend 
 
-\section*{Discussion}
+\DIFaddbegin \noindent\textit{\DIFadd{Conclusion 3:}}
+\textbf{
+\DIFadd{transitions from genetic to environmental sex-determination are not straightforwardly predicted by selection to balance the zygotic sex ratio when haploid selection is present. 
+}}
+%DIF > \textcolor{red}{[new result]}
+
+%DIF > \textcolor{red}{
+%DIF > Somehow need to add two further conclusions suggested by review 2:
+%DIF > \vspace{0.5cm}
+%DIF > \\
+%DIF > \noindent\textit{Conclusion 6: sex-antagonism and tighter sex linkage not required for transitions.}
+%DIF > \vspace{0.5cm}
+%DIF > \\
+%DIF > \noindent\textit{Conclusion 7: haploid selection makes conditions for transitions permissive.}
+%DIF > \vspace{0.5cm}
+%DIF > \\
+%DIF > \noindent Or are these evident from the first 5 conclusions?
+%DIF > }
+
+\DIFaddend \section*{Discussion}
 
 %\textcolor{blue}{maybe re-order to put the results up front and focus on sex ratio less. Somewhere around these first two paragraphs we should include our tight linkage results. At the moment it doesn't make total sense because it assumes that tighter linkage is always favoured unless there is haploid selection.}
 
 %MAIN RESULT
-Two predominant theories explaining the remarkably high frequency of transitions between \DIFaddbegin \DIFadd{genetic }\DIFaddend sex-determining systems are sexually-antagonistic selection and sex ratio selection (reviewed in~\cite{Blaser2012, vanDoorn2014re}).
+Two predominant theories explaining the remarkably high frequency of transitions between \DIFaddbegin \DIFadd{genetic }\DIFaddend sex-determining systems are sexually-antagonistic selection and \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend selection (reviewed in~\cite{Blaser2012, vanDoorn2014re}).
 The former predicts that new sex-determining alleles can invade when they arise in closer linkage with a sexually-antagonistic locus ($r<R$,~\cite{vanDoorn:2007eu,vanDoorn:2010hu, Muralidhar2018}).
 The latter predicts that new sex-determining systems are generally favoured if they result in more equal sex ratios than the ancestral system. 
 %The latter predicts that neo-W alleles will invade an XY system when there is a male bias caused by haploid selection in males, and vice-versa, a neo-Y will invade a ZW system when there is a female bias caused by haploid selection in females~\cite{Kozielska:2010vm,Ubeda:2015fx}.
@@ -880,20 +1170,23 @@ Similarly, even when linkage is weak relative to selection, we show that %new se
 trans-GSD transitions can occur where the new sex-determining locus is less closely linked to the locus under selection if there is haploid selection (e.g., Figs \ref{fig:Combination_Centimorgans} and \ref{fig:SexRatioBad}). 
 
 We find that the spread of new sex-determining systems cannot be simply predicted from their effect on the sex ratio. 
-On one hand, sex ratio biases caused by haploid selection can facilitate trans-GSD transitions or transitions from genetic to environmental sex determination. 
+On one hand, \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend biases caused by haploid selection can facilitate trans-GSD transitions or transitions from genetic to environmental sex determination. 
 For instance, alleles favoured by haploid selection in males often become associated with the Y allele, which leads to a male-biased zygotic sex ratio.
 This male bias increases the potential for a neo-W allele to invade (Table \ref{tab:haplotype_growth}), which can equalize the sex ratio (e.g., see Fig \ref{fig:SexRatioBad}B, for related examples see~\cite{Kozielska:2010vm}).
-%We find that sex ratio biases caused by haploid selection can also affect transitions between sex-determining systems (e.g., see $\zeta$ terms in Table \ref{tab:haplotype_growth}). 
+%DIF < We find that sex ratio biases caused by haploid selection can also affect transitions between sex-determining systems (e.g., see $\zeta$ terms in Table \ref{tab:haplotype_growth}). 
+%DIF > We find that sex-ratio biases caused by haploid selection can also affect transitions between sex-determining systems (e.g., see $\zeta$ terms in Table \ref{tab:haplotype_growth}). 
 %However, the neo-W may not equalize the sex ratio (e.g., if the driving allele also drives in females or affects competition among eggs)
-On the other hand, sex ratio selection can be overwhelmed by additional selective effects, preventing a neo-W or ESD allele from invading, even if it would balance the sex ratio (e.g., when selection acts in opposite directions in male and female diploids, Table \ref{tab:specialcases}). %and equalizing the sex ratio.
-Indeed, transitions between sex-determining systems can generate stronger sex ratio biases (e.g., Fig \ref{fig:SexRatioBad}A and step 1 in~\cite{Ubeda:2015fx}).
+On the other hand, \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend selection can be overwhelmed by additional selective effects, preventing a neo-W or ESD allele from invading, even if it would balance the sex ratio (e.g., when selection acts in opposite directions in male and female diploids, Table \ref{tab:specialcases}). %and equalizing the sex ratio.
+Indeed, transitions between sex-determining systems can generate stronger \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend biases (e.g., Fig \ref{fig:SexRatioBad}A and step 1 in~\cite{Ubeda:2015fx}).
 %For example, where a neo-Y invades and is linked with a locus that experiences haploid selection in male gametes, the sex ratio evolves to become biased \citep[e.g., see Fig \ref{fig:SexRatioBad}A and step 1 in][]{Ubeda:2015fx}.
 %For example, in an ancestral ZW system, haploid selection in males can allow a linked neo-Y to invade, despite the fact that it creates a male-biased sex ratio because the neo-Y becomes associated with the driven allele (Fig \ref{fig:SexRatioBad}A).
 %\textcolor{blue}{and figure 1, where the end of one panel is the same as the beginning of another, however, this figure may change).}
-%What we would like to stress is that sex ratio selection alone cannot predict when new sex-determining systems can evolve.
-Significantly, with weak selection, we find that there is no difference in conditions allowing XY to ZW and ZW to XY transitions, indicating that sex chromosome transitions are not predominantly predicted by their effect on the sex ratio (i.e., the sex ratio bias created by male haploid selection facilitates the spread of a neo-W allele into an XY system to the same degree that male haploid selection drives the spread of a neo-Y into a ZW system with a 1:1 sex ratio). 
-%An asymmetry can develop when sex-linkage is tight (e.g., Fig \ref{fig:Combination_Centimorgans} near -25cM and 25cM) but under most circumstances we do not predict asymmetry between XY to ZW and ZW to XY transitions despite the presence/absence of sex ratio selection. 
-Thus, haploid selection can favour trans-GSD transitions both via sex ratio selection and via selection on alleles associated with the new sex-determining allele, and these selective pressures are often predicted to be of equal magnitude. 
+%DIF < What we would like to stress is that sex ratio selection alone cannot predict when new sex-determining systems can evolve.
+%DIF > What we would like to stress is that sex-ratio selection alone cannot predict when new sex-determining systems can evolve.
+Significantly, with weak selection, we find that there is no difference in conditions allowing XY to ZW and ZW to XY transitions, indicating that sex chromosome transitions are not predominantly predicted by their effect on the sex ratio (i.e., the \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend bias created by male haploid selection facilitates the spread of a neo-W allele into an XY system to the same degree that male haploid selection drives the spread of a neo-Y into a ZW system with a 1:1 sex ratio). 
+%DIF < An asymmetry can develop when sex-linkage is tight (e.g., Fig \ref{fig:Combination_Centimorgans} near -25cM and 25cM) but under most circumstances we do not predict asymmetry between XY to ZW and ZW to XY transitions despite the presence/absence of sex ratio selection. 
+%DIF > An asymmetry can develop when sex-linkage is tight (e.g., Fig \ref{fig:Combination_Centimorgans} near -25cM and 25cM) but under most circumstances we do not predict asymmetry between XY to ZW and ZW to XY transitions despite the presence/absence of sex-ratio selection. 
+Thus, haploid selection can favour trans-GSD transitions both via \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend selection and via selection on alleles associated with the new sex-determining allele, and these selective pressures are often predicted to be of equal magnitude. 
 
 %HAPLOID SELECTION (genomic location of haploid selected loci and comparative patterns) 
 We have shown that the spread of new sex-determining systems can be driven by loci experiencing haploid selection. 
@@ -911,7 +1204,9 @@ If haploid selection is strong but selective differences between male and female
 Among the relatively few dioecious clades in which multiple species have well characterized sex chromosomes~\cite{Ming:2011iy}, trans-GSD transitions have been inferred in \textit{Silene} subsection \textit{Otites}~\cite{Slancarova:2013dq} and in \textit{Salicaceae}~\cite{Pucholt2015,Pucholt2017}.
 %Potentially, successive heterogametic transitions between master regulators of sex-determination could be inferred from careful examination of the molecular pathways by which sex is determined. 
 %Our predictions could also be examined using a suitable proxy for haploid selection, for example, \cite{Lenormand:2005vb} use the outcrossing rate in plants as a proxy for the strength of pollen competition. 
-Assuming that transitions from dioecy to hermaphroditism (equal parental investment in male and female gametes) are favoured in a similar manner to the ESD examined here (equal probability of zygotes developing as males or females), our results suggest that competition during the haploid stage could also drive transitions between dioecy and hermaphroditism, which are frequent in plants~\cite{Kafer2017, Goldberg2017}.
+Assuming that transitions from dioecy to hermaphroditism (equal parental investment in male and female gametes) are favoured in a similar manner to the ESD examined here (equal probability of zygotes developing as males or females), our results suggest that competition \DIFdelbegin \DIFdel{during the haploid stage could also }\DIFdelend \DIFaddbegin \DIFadd{among haploid pollen could }\DIFaddend drive transitions between dioecy and hermaphroditism, which are frequent in plants~\cite{Kafer2017, Goldberg2017}. 
+\DIFaddbegin \DIFadd{To further examine this link, future investigations could examine the combined effects of haploid pollen competition, selfing, and inbreeding depression in allowing transitions between dioecy and hermaphroditism. 
+}\DIFaddend 
 
 In support of their role in sex chromosome turnover, genes expected to be under sexually-antagonistic selection (e.g., those causing bright male colouration) have been found on recently derived sex chromosomes~\cite{Lindholm:2002dw,Tripathi:2009cw,Ser:2010iq}. 
 Our results show, however, that tight ancestral-linkage of polymorphic loci, maintained by sexually-antagonistic selection or otherwise, can also drive trans-GSD transitions. 
@@ -940,9 +1235,12 @@ In this study, we have only considered new sex-determining alleles of large effe
 However, we expect similar selective forces to act on masculinizing/feminizing alleles of weaker effect.
 For example, small effect masculinizing/feminizing alleles within a threshold model of sex determination can be favoured when linked to loci that experience sexually-antagonistic selection~\cite{Muralidhar2018}. 
 These results echo those for large-effect neo-Y/neo-W alleles~\cite{vanDoorn:2007eu,vanDoorn:2010hu}.
-\DIFaddbegin \DIFadd{\textcolor{red}{It should be noted, however, that the dynamics of sex-determining alleles with very weak effect will be influenced by genetic drift, which itself has been shown to cause trans-GSD transitions \cite{Veller2017}}.
-}\DIFaddend Finally, while we have considered cis-GSD, trans-GSD, and GSD to ESD transitions, we have not explicitly considered ESD to GSD transitions. 
-Recent models of ESD to GSD transitions~\cite{Ubeda:2015fx,Muralidhar2018} show that that neo-Y/neo-W alleles can be favoured when they arise near to haploid and/or diploid selected loci, which also occurs in our model. 
+\DIFdelbegin \DIFdel{Finally, while we have considered cis-GSD, trans-GSD, and GSD to ESD transitions, we have not explicitly considered ESD to GSD transitions. 
+Recent models of ESD to GSD transitions~\mbox{%DIFAUXCMD
+\cite{Ubeda:2015fx,Muralidhar2018} }%DIFAUXCMD
+show that }\DIFdelend \DIFaddbegin \DIFadd{It should be noted, however, }\DIFaddend that \DIFdelbegin \DIFdel{neo-Y/neo-W alleles can be favoured when they arise near to haploid and/or diploid selected loci, which also occurs in our model}\DIFdelend \DIFaddbegin \DIFadd{the dynamics of sex-determining alleles with very weak effect will be influenced by genetic drift, which itself has been shown to cause trans-GSD transitions \mbox{%DIFAUXCMD
+\cite{Veller2017}}%DIFAUXCMD
+}\DIFaddend .
 
 %Limitation 2: TWO ALLELE DRIVE
 %Another simplification that we made is that meiotic drive involves only a single locus with two alleles. 
@@ -959,7 +1257,7 @@ We have shown that tight sex-linkage and haploid selection can drive previously 
 In particular, both can select for new sex-determining loci that are more loosely linked to loci under selection. 
 In addition, haploid selection can cause transitions analogous to those caused by purely sexually-antagonistic selection, eliminating the need for differences in selection between male and female diploids.
 We conclude that haploid selection should be considered as a pivotal factor driving transitions between sex-determining systems. 
-\DIFdelbegin \DIFdel{Perhaps counterintuitively}\DIFdelend \DIFaddbegin \DIFadd{Further}\DIFaddend , transitions involving haploid selection can be driven by \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend selection or cause sex ratio biases to evolve; \DIFdelbegin \DIFdel{we do not find Fisherian sex ratio selection to be }\DIFdelend \DIFaddbegin \DIFadd{Fisherian sex-ratio selection is not }\DIFaddend an overwhelming force. 
+\DIFdelbegin \DIFdel{Perhaps counterintuitively}\DIFdelend \DIFaddbegin \DIFadd{Further}\DIFaddend , transitions involving haploid selection can be driven by \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend selection or cause \DIFdelbegin \DIFdel{sex ratio }\DIFdelend \DIFaddbegin \DIFadd{sex-ratio }\DIFaddend biases to evolve; \DIFdelbegin \DIFdel{we do not find Fisherian sex ratio selection to be }\DIFdelend \DIFaddbegin \DIFadd{Fisherian sex-ratio selection is not }\DIFaddend an overwhelming force. 
 Overall, our results suggest several new scenarios under which new sex-determining systems are favoured, which could help to explain why the evolution of sex-determining systems is so dynamic. 
 
 % For figure citations, please use "Fig" instead of "Figure".
@@ -1116,7 +1414,10 @@ We thank Georgy Sandler and Stephen Wright for sharing their results with us and
 % here. See http://journals.plos.org/plosone/s/latex for 
 % step-by-step instructions.
 % 
-\bibliography{sex_chromosomes.bib}
+\DIFdelbegin %DIFDELCMD < \bibliography{sex_chromosomes.bib}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \bibliography{sex_chromosomes}
+\DIFaddend 
 
 %\newpage
 %
@@ -1551,7 +1852,8 @@ We thank Georgy Sandler and Stephen Wright for sharing their results with us and
 %%And when only one haplotype can spread on its own the neo-W invades only when the rate of recombination onto the favourable background is sufficiently larger than the rate of recombination off this background (i.e., equation\ref{eq:lambdasGen} is satisfied).
 %
 %%Haploid selection affects the conclusions outlined above by altering the zygotic sex ratio and exerting direct selection on neo-W haplotypes.
-%%The effect of sex ratio selection is straightforward and can be seen in Eq \eqref{Binvasion}, where male drive and gamete competition for $a$ (which is fixed on the Y and therefore causes a male bias) increases all four terms.
+%DIF < %The effect of sex ratio selection is straightforward and can be seen in Eq \eqref{Binvasion}, where male drive and gamete competition for $a$ (which is fixed on the Y and therefore causes a male bias) increases all four terms.
+%DIF > %The effect of sex-ratio selection is straightforward and can be seen in Eq \eqref{Binvasion}, where male drive and gamete competition for $a$ (which is fixed on the Y and therefore causes a male bias) increases all four terms.
 %%Direct selection on neo-W haplotypes can also be seen in Eq \eqref{Binvasion} by noticing that increasing female drive in favour of $A$ increases the neo-W-$A$ haplotype growth rate ($\Lambda_{mA}$) while female drive and gamete competition in favour of $a$ increases the neo-W-$a$ haplotype growth rate ($\Lambda_{ma}$).
 %%Gamete competition in females does not impact the spread of neo-W-$A$ haplotypes because they are on the same background as the resident X.
 %%Recombination between the selected locus and the neo-W complicates things slightly, as selective advantages for one neo-W haplotype during the haploid stage in females comes at a cost to the other, and thus recombination off the favoured background becomes more detrimental.
@@ -1639,7 +1941,8 @@ We thank Georgy Sandler and Stephen Wright for sharing their results with us and
 %Thus, female haploid selection in favour of the $a$ allele tends to increase $\Lambda_{W'a}^{(XY)}$ and decrease $\Lambda_{W'A}^{(XY)}$, as shown by panels A-C in \nameref{fig:regionFemaleDrive} and \nameref{fig:regionFemaleGS}. 
 %Conversely, female haploid selection in favour of the $A$ allele increases $\Lambda_{W'A}^{(XY)}$ and decreases $\Lambda_{W'a}^{(XY)}$, see panels D-F in \nameref{fig:regionFemaleDrive} and \nameref{fig:regionFemaleGS}. 
 %
-%Thus, the impact of haploid selection on transitions between sex-determining systems must be considered as two sides of a coin: it can generate sex ratio biases that promote transitions that equalize the sex ratio, but it can also direct select for transitions that cause sex ratios to become biased.
+%DIF < Thus, the impact of haploid selection on transitions between sex-determining systems must be considered as two sides of a coin: it can generate sex ratio biases that promote transitions that equalize the sex ratio, but it can also direct select for transitions that cause sex ratios to become biased.
+%DIF > Thus, the impact of haploid selection on transitions between sex-determining systems must be considered as two sides of a coin: it can generate sex-ratio biases that promote transitions that equalize the sex ratio, but it can also direct select for transitions that cause sex ratios to become biased.
 
 \end{document}
 

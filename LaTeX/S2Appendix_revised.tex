@@ -1,0 +1,237 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
+
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+% Extra symbols added
+\usepackage{stix}
+%Three part table - I think this is allowed
+\usepackage[flushleft]{threeparttable}
+
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+
+% amsmath and amssymb packages, useful for mathematical formulas and symbols
+\usepackage{amsmath} %amssymb
+
+% Use adjustwidth environment to exceed column width (see example table in text)
+\usepackage{changepage}
+
+% Use Unicode characters when possible
+\usepackage[utf8x]{inputenc}
+
+% textcomp package and marvosym package for additional characters
+\usepackage{textcomp,marvosym}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+
+% Use nameref to cite supporting information files (see Supporting Information section for more info)
+\usepackage{nameref,hyperref}
+
+% line numbers
+\usepackage[right]{lineno}
+
+% ligatures disabled
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% color can be used to apply background shading to table cells only
+\usepackage[table]{xcolor}
+
+% array package and thick rules for tables
+\usepackage{array}
+
+% create "+" rule type for thick vertical lines
+\newcolumntype{+}{!{\vrule width 2pt}}
+
+% create \thickcline for thick horizontal lines of variable length
+\newlength\savedwidth
+\newcommand\thickcline[1]{%
+  \noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+  \cline{#1}%
+  \noalign{\vskip\arrayrulewidth}%
+  \noalign{\global\arrayrulewidth\savedwidth}%
+}
+
+% \thickhline command for thick horizontal lines that span the table
+\newcommand\thickhline{\noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+\hline
+\noalign{\global\arrayrulewidth\savedwidth}}
+
+
+% Remove comment for double spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% Text layout
+\raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 5.25in 
+\textheight 8.75in
+
+% Bold the 'Fig #' in the caption and separate it from the title/caption with a period
+% Captions will be left justified
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
+\renewcommand{\figurename}{Fig}
+
+% Use the PLoS provided BiBTeX style
+\bibliographystyle{plos2015}
+
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+% Leave date blank
+\date{}
+
+% Header and Footer with logo
+\usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
+\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{27.023pt}
+\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+\fancyheadoffset[L]{2.25in}
+\fancyfootoffset[L]{2.25in}
+\lfoot{\sf PLOS}
+%% Include all macros below
+
+\newcommand{\lorem}{{\bf LOREM}}
+\newcommand{\ipsum}{{\bf IPSUM}}
+
+%reference equations in appendices
+\usepackage{xr}
+\externaldocument{S1Appendix_revised}
+\externaldocument{main_revised}
+\externaldocument{S3Appendix_revised}
+
+%% END MACROS SECTION
+
+\begin{document}
+\vspace*{0.2in}
+
+\setcounter{equation}{0}
+\renewcommand{\theequation}{S2.\arabic{equation}}
+
+\section*{S2 Appendix}
+
+\subsection*{Resident equilibria and stability}
+
+In the resident population (allele $M$ fixed), we follow the frequency of $A$ in X-bearing female gametes, $p^\female_X$, and X-bearing male gametes, $p^\male_X$, and Y-bearing male gametes, $p^\male_Y$.
+We also track the total frequency of Y among male gametes, $q$, which may deviate from $1/2$ due to meiotic drive in males. 
+These four variables determine the frequencies of the six resident gamete types, which sum to one in each sex: $x_{1}^{\female}=\hat{p}_X^\female$, $x_{2}^{\female}=1-\hat{p}_X^\female$, $x_{1}^{\male}=(1-q)\hat{p}_X^\male$, $x_{2}^{\male}=(1-q)(1-\hat{p}_X^\male)$, $y_{1}^{\male}=q \hat{p}_Y^\male$, and $y_{2}^{\male}=q(1-\hat{p}_Y^\male)$. 
+Mean fitnesses in the resident population are given in \nameref{tab:meanfitnesses}.
+
+Various forms of selection can maintain a polymorphism at the $\mathbf{A}$ locus, including sexually antagonistic selection, overdominance, conflicts between diploid selection and selection upon haploid genotypes (ploidally-antagonsitic selection,~\cite{Immler:2012tl}), or a combination of these selective regimes (see below). 
+
+In particular special cases, e.g., no sex-differences in selection or meiotic drive ($s^\male=s^\female$, $h^\male=h^\female$, and $\alpha^\male=\alpha^\female=1/2$), the equilibrium allele frequency and stability can be calculated analytically without assuming anything about the relative strengths of selection and recombination. 
+However, here, we focus on two regimes (tight linkage between $\mathbf{A}$ and $\mathbf{X}$ and weak selection) in order to make fewer assumptions about fitnesses. 
+
+\subsubsection*{Tight linkage between $\mathbf{X}$ and $\mathbf{A}$ loci}
+
+We first calculate the equilibria in the ancestral population when the recombination rate between the $\mathbf{X}$ and $\mathbf{A}$ loci is small ($r$ of order $\epsilon$). 
+Selection at the $\mathbf{A}$ locus will not affect evolution at the novel sex-determining locus, $\mathbf{M}$, if one allele is fixed on all backgrounds. 
+We therefore focus on the five equilibria that maintain both $A$ and $a$ alleles, four of which are given to leading order by:
+
+\begin{subequations}\label{eq:tightequil}
+\begin{align}
+(A)\ \ \ &\hat{p}_{Y}^{\male}=0,
+\ \hat{q}=\frac{1}{2}\left(1 - \alpha_\Delta^\male \frac{ w_{Aa}^{\male} \phi}{w_{Aa}^{\male} \phi+ w_{aa}^{\male} \psi}\right),\\
+&\hat{p}_{X}^{\female}=\frac{w_{a}^{\female} \phi}{w_{a}^{\female} \phi+ w_{A}^{\female} \psi},
+\ \hat{p}_{X}^{\male}=\frac{(1+\alpha_\Delta^\male)w_{Aa}^{\male} \phi}{(1+\alpha_\Delta^\male)w_{Aa}^{\male} \phi +w_{aa}^{\male} \psi} \nonumber \\
+(A')\ \ \ &\hat{p}_{Y}^{\male}=1,
+\ \hat{q}=\frac{1}{2}\left(1 + \alpha_\Delta^\male \frac{w_{Aa}^{\male} \phi'}{w_{Aa}^{\male} \phi' + w_{AA}^{\male} \psi'}\right),\\
+&\hat{p}_{X}^{\female}=1-\frac{w_{A}^{\female} \phi'}{w_{A}^{\female} \phi'+ w_{a}^{\female} \psi'},
+\ \hat{p}_{X}^{\male}=1-\frac{(1-\alpha_\Delta^\male)w_{Aa}^{\male} \phi'}{(1-\alpha_\Delta^\male)w_{Aa}^{\male} \phi'+w_{AA}^{\male} \psi'} \nonumber \\
+(B)\ \ \ &\hat{p}_{Y}^{\male}=0,\ \hat{p}_{X}^{\female}=1,\ \hat{p}_{X}^{\male}=1, \ \hat{q}=(1 -\alpha^\male_\Delta)/2\\
+(B')\ \ \ &\hat{p}_{Y}^{\male}=1,\ \hat{p}_{X}^{\female}=0,\ \hat{p}_{X}^{\male}=0, \ \hat{q}=(1+\alpha^\male_\Delta)/2
+\end{align}
+\end{subequations}
+\begin{equation*}
+\begin{split}
+\phi=&(1+\alpha^\female_\Delta) w_{A}^{\female} w_{Aa}^{\female} \left[ w_{a}^{\male} w_{aa}^{\male} + (1+\alpha_\Delta^\male) w_{A}^{\male} w_{Aa}^{\male} \right]/2 - w_{a}^{\male} w_{a}^{\female} w_{aa}^{\male} w_{aa}^{\female} \\
+\psi=&(1-\alpha^\female_\Delta) w_{a}^{\female} w_{Aa}^{\female} \left[ w_{a}^{\male} w_{aa}^{\male} + (1+\alpha_\Delta^\male) w_{A}^{\male} w_{Aa}^{\male}\right]/2 - (1+\alpha_\Delta^\male) w_{A}^{\male} w_{A}^{\female} w_{Aa}^{\male} w_{AA}^{\female}\\
+\phi'=&(1-\alpha^\female_\Delta) w_{a}^{\female} w_{Aa}^{\female} \left[ w_{A}^{\male} w_{AA}^{\male} + (1-\alpha_\Delta^\male) w_{a}^{\male} w_{Aa}^{\male} \right]/2 - w_{A}^{\male} w_{A}^{\female} w_{AA}^{\male} w_{AA}^{\female}\\
+\psi'=&(1+\alpha^\female_\Delta) w_{A}^{\female} w_{Aa}^{\female} \left[ w_{A}^{\male} w_{AA}^{\male} + (1-\alpha_\Delta^\male) w_{a}^{\male} w_{Aa}^{\male} \right]/2 - (1-\alpha_\Delta^\male) w_{a}^{\male} w_{a}^{\female} w_{Aa}^{\male} w_{aa}^{\female}.
+\end{split}
+\end{equation*}
+
+\noindent
+A fifth equilibrium $(C)$ also exists where $A$ is present at an intermediate frequency on the Y background ($0<\hat{p}_{Y}^{\male}<1$). 
+However, equilibrium $(C)$ is never locally stable when $r \approx 0$ and is therefore not considered further.
+Thus, the Y background can either be fixed for the $a$ allele (equilibria ($A$) and ($B$)) or the $A$ allele (equilibria ($A'$) and ($B'$)).
+The X background can then either be polymorphic (equilibria ($A$) and ($A'$)) or fixed for the alternative allele (equilibria ($B$) and ($B'$)).
+Since equilibria $(A)$ and $(B)$ are equivalent to equilibria $(A')$ and $(B')$ with the labelling of $A$ and $a$ alleles interchanged, we discuss only equilibria $(A)$ and $(B)$, in which the Y background is fixed for the $a$ allele. 
+If there is no haploid selection ($\alpha^{\circ}_\Delta=0$, $w_{A}^{\circ}=w_{a}^{\circ}=1$), these equilibria are equivalent to those found by~\cite{Lloyd1977} and~\cite{Otto2014}.
+
+We next calculate when equilibria $(A)$ and $(B)$ are locally stable for $r=0$. 
+According to the `small parameter theory'~\cite{Karlin:1972ab,Karlin:1972dq}, these stability properties are unaffected by small amounts of recombination between the sex-determining locus and the $\mathbf{A}$ locus, although equilibrium frequencies may be slightly altered. 
+For the $a$ allele to be stably fixed on the Y background we need $\bar{w}_{Ya}^{\male} > \bar{w}_{YA}^{\male}$ where $\bar{w}_{Ya}^{\male} = w_{a}^{\male} \big[\hat{p}_X^\female(1-\alpha^\male_\Delta) w_{A}^{\female} w_{Aa}^{\male} + (1-\hat{p}_X^\female)w_{a}^{\female} w_{aa}^{\male} \big]$ and $\bar{w}_{YA}^{\male} = w_{A}^{\male} \big[ \hat{p}_X^\female w_{A}^{\female} w_{AA}^{\male} + (1-\hat{p}_X^\female)(1+\alpha^\male_\Delta) w_{a}^{\female} w_{Aa}^{\male} \big]$. 
+That is, Y-$a$ haplotypes must have higher fitness than Y-$A$ haplotypes.  
+Substituting in $\hat{p}_X^\female$ from Eq \eqref{eq:tightequil}, fixation of the $a$ allele on the Y background requires that $\gamma_{i}>0$ where $\gamma_{(A)}=w_{a}^{\male} \big[ (1-\alpha^\male_\Delta) w_{Aa}^{\male} \phi + w_{aa}^{\male} \psi \big]-w_{A}^{\male} \big[ w_{AA}^{\male} \phi + (1 + \alpha^{\male}_\Delta)w_{Aa}^{\male} \psi \big]$ for equilibrium $(A)$ and $\gamma_{(B)}=(1-\alpha^{\male}_\Delta)w_{a}^{\male}w_{Aa}^{\male}-w_{A}^{\male}w_{AA}^{\male}$ for equilibrium $(B)$.
+Stability of a polymorphism on the X background (equilibrium $(A)$) further requires that $\phi >0$ and $\psi >0$. 
+Fixation of the $a$ allele on the X background (equilibrium $(B)$) can be stable only if equilibrium $(A)$ is not, as it requires $\psi<0$. %and $2w_{A}^{\female}w_{AA}^{\female}>(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$ or just $4w_{A}^{\female}w_{AA}^{\female}<(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$ (which also prevents $\psi>0$). 
+
+%\textcolor{red}{check last condition and the stability condition below are correct}
+%\textcolor{blue}{The last condition looks good to me, although in your Turnover-norec-MFS.nb you look at YA fixed, so you have to flip everything (so I made Turnover-norec-MFS-MMO.nb to do this).
+%The one issue I can find here is that you can also prevent $\Lambda>1$ when the slope and intercept of the quadratic at $\Lambda=1$ are negative (you only looked at both being positive). In this case we need $4w_{A}^{\female}w_{AA}^{\female}<(1-\alpha_\Delta^{\female})w_{a}^{\female}w_{Aa}^{\female}$, which also prevents $\psi>0$.
+%I've added this in.
+%It could also be the case that the slope and intercept are the same sign but the roots are imaginary - but this is never the case here.
+%Stability condition below looks good to me (from matt version of turnoverSOM-MIKE.nb).}
+
+\subsubsection*{Selection weak relative to recombination}
+
+Here, we assume that selection is weak relative to recombination ($s^\circ$, $t^\circ$, $\alpha_{\Delta}^\circ$ of order $\epsilon$). 
+The maintenance of a polymorphism at the $\mathbf{A}$ locus then requires that
+
+\begin{equation}
+\begin{split}
+0&< - \left[(1-h^\female)s^\female +(1-h^\male) s^\male + t^\female +t^\male + \alpha_{\Delta}^\female+\alpha_{\Delta}^\male\right]\\
+%
+\text{and }\quad 0&<h^\female s^\female +h^\male s^\male + t^\female +t^\male + \alpha_{\Delta}^\female+\alpha_{\Delta}^\male.
+\end{split}
+\end{equation}
+
+\noindent
+which indicates that a polymorphism can be maintained by various selective regimes. 
+
+Given that a polymorphism is maintained at the $\mathbf{A}$ locus by weak selection, the frequencies of $A$ in each type of gamete are the same ($\hat{p}^\female_X=\hat{p}^\male_X=\hat{p}^\male_Y=\bar{p}$) and given, to leading order, by 
+
+\begin{equation}
+\bar{p}=\frac{h^\female s^\female + h^\male s^\male +t^\female+t^\male+\alpha_{\Delta}^\female+\alpha_{\Delta}^\male}
+{(2h^\female-1)s^\female+(2h^\male-1)s^\male}
++O(\epsilon)
+.
+\label{eq:pAve}
+\end{equation}
+
+\noindent
+Differences in frequency between gamete types are of $O(\epsilon)$:
+
+\begin{equation}
+\begin{split}
+\hat{p}^\male_X-\hat{p}^\female_X&=V_{A}\big{(}D^\male - D^\female +\alpha_{\Delta}^\male-\alpha_{\Delta}^\female \big{)}
++O(\epsilon^2)\\
+%
+\hat{p}^\male_Y-\hat{p}^\female_X&=V_{A}\left[D^\male - D^\female+\alpha_{\Delta}^\male-\alpha_{\Delta}^\female+(1-2r)(t^\male-t^\female)\right]/2r
++O(\epsilon^2)\\
+%
+\hat{p}^\male_Y-\hat{p}^\male_X&=V_{A}\left(D^\male - D^\female+\alpha_{\Delta}^\male-\alpha_{\Delta}^\female+t^\male-t^\female\right)(1-2r)/2r
++O(\epsilon^2),
+\end{split}
+\label{eq:freq_diffs}
+\end{equation}
+
+\noindent
+where $V_{A}=\bar{p}(1-\bar{p})$ is the variance in the frequency of $A$ and $D^\circ=\big{[} \bar{p}s^\circ+(1-\bar{p})h^\circ s^\circ\big{]} -\big{[} \bar{p}h^\circ s^\circ+(1-\bar{p}) \big{]}$ corresponds to the difference in fitness between $A$ and $a$ alleles in diploids of sex $\circ \in \{\female,\male\}$. 
+The frequency of Y-bearing male gametes depends upon the difference in the frequency of the $A$ allele between X- and Y-bearing male gametes and the strength of meiotic drive in favour of the $A$ allele in males, $q=1/2+\alpha_{\Delta}^\male(\hat{p}^\male_Y-\hat{p}^\male_X)/2+O(\epsilon^3)$.
+Without gametic competition or drive ($\alpha_{\Delta}^\circ=t^\circ=0$) our results reduce to those of~\cite{vanDoorn:2007eu}.
+
+\bibliography{sex_chromosomes.bib}
+
+\end{document}

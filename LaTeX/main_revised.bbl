@@ -176,6 +176,21 @@ van Doorn GS.
   sex-determining systems}.
 \newblock Cold Spring Harbour Perspectives in Biology. 2014;6:a017681.
 
+\bibitem{Fisher:1930wy}
+Fisher R.
+\newblock {The genetical theory of natural selection}.
+\newblock London: Clarendon Press; 1930.
+
+\bibitem{Charnov:1982wg}
+Charnov EL.
+\newblock {The theory of sex allocation.}
+\newblock Princeton, NJ: Princeton University Press; 1982.
+
+\bibitem{West:2009we}
+West S.
+\newblock {Sex allocation}.
+\newblock Princeton, NJ: Princeton University Press; 2009.
+
 \bibitem{vanDoorn:2007eu}
 van Doorn GS, Kirkpatrick M.
 \newblock {Turnover of sex chromosomes induced by sexual conflict.}
@@ -193,21 +208,6 @@ Muralidhar P, Veller C.
   determination}.
 \newblock Nature Ecology and Evolution. 2018;doi.org/10.1038/s41559-017-0427-9.
 
-\bibitem{Fisher:1930wy}
-Fisher R.
-\newblock {The genetical theory of natural selection}.
-\newblock London: Clarendon Press; 1930.
-
-\bibitem{Charnov:1982wg}
-Charnov EL.
-\newblock {The theory of sex allocation.}
-\newblock Princeton, NJ: Princeton University Press; 1982.
-
-\bibitem{West:2009we}
-West S.
-\newblock {Sex allocation}.
-\newblock Princeton, NJ: Princeton University Press; 2009.
-
 \bibitem{Mulcahy:1996ha}
 Mulcahy DL, Sari-Gorla M, Mulcahy GB.
 \newblock {Pollen selection - past, present and future}.
@@ -217,6 +217,28 @@ Mulcahy DL, Sari-Gorla M, Mulcahy GB.
 Joseph S, Kirkpatrick M.
 \newblock {Haploid selection in animals}.
 \newblock Trends in Ecology {\&} Evolution. 2004;19(11):592--597.
+
+\bibitem{Ubeda:2005gw}
+{\'U}beda F, Haig D.
+\newblock {On the evolutionary stability of Mendelian segregation.}
+\newblock Genetics. 2005;170(3):1345--1357.
+
+\bibitem{Lindholm:2016cw}
+Lindholm AK, Dyer KA, Firman RC, Fishman L, Forstmeier W, Holman L, et~al.
+\newblock {The ecology and evolutionary dynamics of meiotic drive.}
+\newblock Trends in Ecology {\&} Evolution. 2016;31(4):315--326.
+
+\bibitem{Kozielska:2010vm}
+Kozielska M, Weissing FJ, Beukeboom LW, Pen I.
+\newblock {Segregation distortion and the evolution of sex-determining
+  mechanisms}.
+\newblock Heredity. 2010;104:100--112.
+
+\bibitem{Ubeda:2015fx}
+{\'U}beda F, Patten MM, Wild G.
+\newblock {On the origin of sex chromosomes from meiotic drive.}
+\newblock Proceedings of the Royal Society B: Biological Sciences.
+  2015;282(1798):20141932.
 
 \bibitem{Lalanne2004}
 Lalanne E, Michaelidis C, Moore JM, Gagliano W, Johnson A, Patel R, et~al.
@@ -254,16 +276,6 @@ Didion JP, Morgan AP, Yadgary L, Bell TA, McMullan RC, Ortiz~de Solorzano L,
   et~al.
 \newblock {R2d2 drives selfish genetic sweeps in the house mouse}.
 \newblock Molecular Biology and Evolution. 2016;33:1381--1395.
-
-\bibitem{Ubeda:2005gw}
-{\'U}beda F, Haig D.
-\newblock {On the evolutionary stability of Mendelian segregation.}
-\newblock Genetics. 2005;170(3):1345--1357.
-
-\bibitem{Lindholm:2016cw}
-Lindholm AK, Dyer KA, Firman RC, Fishman L, Forstmeier W, Holman L, et~al.
-\newblock {The ecology and evolutionary dynamics of meiotic drive.}
-\newblock Trends in Ecology {\&} Evolution. 2016;31(4):315--326.
 
 \bibitem{Borg:2009jpa}
 Borg M, Brownfield L, Twell D.
@@ -329,58 +341,6 @@ Alavioon G, Hotzy C, Nakhro K, Rudolf S, Scofield DG, Zajitschek S, et~al.
 \newblock {Haploid selection within a single ejaculate increases offspring
   fitness}.
 \newblock PNAS. 2017;114:8053--8058.
-
-\bibitem{Ubeda:2015fx}
-{\'U}beda F, Patten MM, Wild G.
-\newblock {On the origin of sex chromosomes from meiotic drive.}
-\newblock Proceedings of the Royal Society B: Biological Sciences.
-  2015;282(1798):20141932.
-
-\bibitem{Kozielska:2010vm}
-Kozielska M, Weissing FJ, Beukeboom LW, Pen I.
-\newblock {Segregation distortion and the evolution of sex-determining
-  mechanisms}.
-\newblock Heredity. 2010;104:100--112.
-
-\bibitem{Burt:2006}
-Burt A, Trivers R.
-\newblock {Genes in conflict: the biology of selfish genetic elements}.
-\newblock Cambridge, MA: Belknap Press; 2006.
-
-\bibitem{Lloyd:1974tz}
-Lloyd DG.
-\newblock {Female-predominant sex ratios in angiosperms}.
-\newblock Heredity. 1974;32(1):35--44.
-
-\bibitem{Conn:1981uw}
-Conn JS, Blum U.
-\newblock {Sex ratio of \emph{Rumex hastatulus}: the effect of environmental
-  factors and certation}.
-\newblock Evolution. 1981;35(6):1108--1116.
-
-\bibitem{Stehlik:2005ul}
-Stehlik I, Barrett S.
-\newblock {Mechanisms governing sex-ratio variation in dioecious \emph{Rumex
-  nivalis}}.
-\newblock Evolution. 2005;59(4):814--825.
-
-\bibitem{Stehlik:2006to}
-Stehlik I, Barrett SCH.
-\newblock {Pollination intensity influences sex ratios in dioecious Rumex
-  nivalis, a wind-pollinated plant.}
-\newblock Evolution. 2006;60(6):1207--1214.
-
-\bibitem{Field:2012fd}
-Field DL, Pickup M, Barrett SCH.
-\newblock {The influence of pollination intensity on fertilization success,
-  progeny sex ratio, and fitness in a wind-pollinated, dioecious plant}.
-\newblock International Journal of Plant Sciences. 2012;173(2):184--191.
-
-\bibitem{Field:2013cc}
-Field DL, Pickup M, Barrett SCH.
-\newblock {Comparative analyses of sex-ratio variation in dioecious flowering
-  plants.}
-\newblock Evolution. 2013;67(3):661--672.
 
 \bibitem{Immler:2012tl}
 Immler S, Arnqvist G, Otto SP.
