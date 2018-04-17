@@ -21,6 +21,13 @@ Bachtrog D, Mank JE, Peichel CL, Kirkpatrick M, Otto SP, Ashman TL, et~al.
 \newblock {Sex determination: why so many ways of doing it?}
 \newblock PLoS Biol. 2014;12(7):e1001899.
 
+\bibitem{Pennell2018}
+Pennell MW, Mank JE, Peichel CL.
+\newblock Transitions in sex determination and sex chromosomes across
+  vertebrate species.
+\newblock Molecular Ecology. 2018;0(0):1--14.
+\newblock doi:{10.1111/mec.14540}.
+
 \bibitem{Ming:2011iy}
 Ming R, Bendahmane A, Renner SS.
 \newblock {Sex chromosomes in land plants}.
@@ -240,6 +247,45 @@ Kozielska M, Weissing FJ, Beukeboom LW, Pen I.
 \newblock Proceedings of the Royal Society B: Biological Sciences.
   2015;282(1798):20141932.
 
+\bibitem{Kallman1968}
+Kallman K.
+\newblock {Evidence for the existence of transformer genes for sex in the
+  telost \textit{Xiphphorus maculatus}}.
+\newblock Genetics. 1968;60:811--828.
+
+\bibitem{Dubendorfer2002}
+Dubendorfer A, Hediger M, Burghardt G, Bopp D.
+\newblock Musca domestica, a window on the evolution of sex-determining
+  mechanisms in insects.
+\newblock International Journal of Developmental Biology. 2002;46(1):75--79.
+
+\bibitem{Roco2015}
+Roco AS, Olmstead AW, Degitz SJ, Amano T, Zimmerman LB, Bullejos M.
+\newblock {Coexistence of Y, W, and Z sex chromosomes in /textit{Xenopus
+  tropicalis}}.
+\newblock PNAS. 2015;112(34):E4752--E4761.
+
+\bibitem{Holman:2015en}
+Holman L, Price TAR, Wedell N, Kokko H.
+\newblock {Coevolutionary dynamics of polyandry and sex-linked meiotic drive}.
+\newblock Evolution. 2015;69(3):709--720.
+
+\bibitem{Immler:2012tl}
+Immler S, Arnqvist G, Otto SP.
+\newblock {Ploidally antagonistic selection maintains stable genetic
+  polymorphism}.
+\newblock Evolution. 2012;66(1):55--65.
+
+\bibitem{Lloyd1977}
+Lloyd DG, Webb C.
+\newblock {Secondary sex characters in plants}.
+\newblock Botanical Review. 1977;43:177--216.
+
+\bibitem{Otto2014}
+Otto SP.
+\newblock {Selective maintenance of recombination between the sex chromosomes}.
+\newblock Journal of Evolutionary Biology. 2014;27:1431--1442.
+
 \bibitem{Lalanne2004}
 Lalanne E, Michaelidis C, Moore JM, Gagliano W, Johnson A, Patel R, et~al.
 \newblock {Analysis of transposon insertion mutants highlights the diversity of
@@ -276,6 +322,70 @@ Didion JP, Morgan AP, Yadgary L, Bell TA, McMullan RC, Ortiz~de Solorzano L,
   et~al.
 \newblock {R2d2 drives selfish genetic sweeps in the house mouse}.
 \newblock Molecular Biology and Evolution. 2016;33:1381--1395.
+
+\bibitem{Burt:2006}
+Burt A, Trivers R.
+\newblock {Genes in conflict: the biology of selfish genetic elements}.
+\newblock Cambridge, MA: Belknap Press; 2006.
+
+\bibitem{Lloyd:1974tz}
+Lloyd DG.
+\newblock {Female-predominant sex ratios in angiosperms}.
+\newblock Heredity. 1974;32(1):35--44.
+
+\bibitem{Conn:1981uw}
+Conn JS, Blum U.
+\newblock {Sex ratio of \emph{Rumex hastatulus}: the effect of environmental
+  factors and certation}.
+\newblock Evolution. 1981;35(6):1108--1116.
+
+\bibitem{Stehlik:2005ul}
+Stehlik I, Barrett S.
+\newblock {Mechanisms governing sex-ratio variation in dioecious \emph{Rumex
+  nivalis}}.
+\newblock Evolution. 2005;59(4):814--825.
+
+\bibitem{Stehlik:2006to}
+Stehlik I, Barrett SCH.
+\newblock {Pollination intensity influences sex ratios in dioecious Rumex
+  nivalis, a wind-pollinated plant.}
+\newblock Evolution. 2006;60(6):1207--1214.
+
+\bibitem{Field:2012fd}
+Field DL, Pickup M, Barrett SCH.
+\newblock {The influence of pollination intensity on fertilization success,
+  progeny sex ratio, and fitness in a wind-pollinated, dioecious plant}.
+\newblock International Journal of Plant Sciences. 2012;173(2):184--191.
+
+\bibitem{Field:2013cc}
+Field DL, Pickup M, Barrett SCH.
+\newblock {Comparative analyses of sex-ratio variation in dioecious flowering
+  plants.}
+\newblock Evolution. 2013;67(3):661--672.
+
+\bibitem{Immler:2014im}
+Immler S, Hotzy C, Alavioon G, Petersson E, Arnqvist G.
+\newblock {Sperm variation within a single ejaculate affects offspring
+  development in Atlantic salmon}.
+\newblock Biology letters. 2014;10(2):20131040.
+
+\bibitem{Alavioon2017}
+Alavioon G, Hotzy C, Nakhro K, Rudolf S, Scofield DG, Zajitschek S, et~al.
+\newblock {Haploid selection within a single ejaculate increases offspring
+  fitness}.
+\newblock PNAS. 2017;114:8053--8058.
+
+\bibitem{Zheng:2001fi}
+Zheng Y, Deng X, Martin-DeLeon PA.
+\newblock {Lack of sharing of Spam1 (Ph-20) among mouse spermatids and
+  transmission ratio distortion}.
+\newblock Biology of Reproduction. 2001;64(6):1730--1738.
+
+\bibitem{Vibranovski:2010et}
+Vibranovski MD, Chalopin DS, Lopes HF, Long M, Karr TL.
+\newblock {Direct evidence for postmeiotic transcription during
+  \emph{Drosophila melanogaster} spermatogenesis}.
+\newblock Genetics. 2010;186(1):431--433.
 
 \bibitem{Borg:2009jpa}
 Borg M, Brownfield L, Twell D.
@@ -318,68 +428,33 @@ Clarke HJ, Khan TN, Siddique KHM.
   improved chickpea cultivars}.
 \newblock Euphytica. 2004;139(1):65--74.
 
-\bibitem{Zheng:2001fi}
-Zheng Y, Deng X, Martin-DeLeon PA.
-\newblock {Lack of sharing of Spam1 (Ph-20) among mouse spermatids and
-  transmission ratio distortion}.
-\newblock Biology of Reproduction. 2001;64(6):1730--1738.
+\bibitem{Sandler264382}
+Sandler G, Beaudry FEG, Barrett SCH, Wright SI.
+\newblock The effects of haploid selection on Y chromosome evolution in a
+  dioecious plant.
+\newblock bioRxiv. 2018;doi:{10.1101/264382}.
 
-\bibitem{Vibranovski:2010et}
-Vibranovski MD, Chalopin DS, Lopes HF, Long M, Karr TL.
-\newblock {Direct evidence for postmeiotic transcription during
-  \emph{Drosophila melanogaster} spermatogenesis}.
-\newblock Genetics. 2010;186(1):431--433.
+\bibitem{Kafer2017}
+K{\"a}fer J, Marais GAB, Pannell J.
+\newblock {On the rarity of dioecy in flowering plants}.
+\newblock Molecular Ecology. 2017;26:1225--1241.
 
-\bibitem{Immler:2014im}
-Immler S, Hotzy C, Alavioon G, Petersson E, Arnqvist G.
-\newblock {Sperm variation within a single ejaculate affects offspring
-  development in Atlantic salmon}.
-\newblock Biology letters. 2014;10(2):20131040.
+\bibitem{Goldberg2017}
+Goldberg EE, Otto SP, Vamosi JC, Mayrose I, Sabath N, Ming R.
+\newblock {Macroevolutionary synthesis of flowering plant sexual systems}.
+\newblock Evolution. 2017;71:898--912.
 
-\bibitem{Alavioon2017}
-Alavioon G, Hotzy C, Nakhro K, Rudolf S, Scofield DG, Zajitschek S, et~al.
-\newblock {Haploid selection within a single ejaculate increases offspring
-  fitness}.
-\newblock PNAS. 2017;114:8053--8058.
+\bibitem{Lindholm:2002dw}
+Lindholm A, Breden F.
+\newblock {Sex chromosomes and sexual selection in poeciliid fishes.}
+\newblock The American Naturalist. 2002;160 Suppl 6:S214--24.
 
-\bibitem{Kallman1968}
-Kallman K.
-\newblock {Evidence for the existence of transformer genes for sex in the
-  telost \textit{Xiphphorus maculatus}}.
-\newblock Genetics. 1968;60:811--828.
-
-\bibitem{Dubendorfer2002}
-Dubendorfer A, Hediger M, Burghardt G, Bopp D.
-\newblock Musca domestica, a window on the evolution of sex-determining
-  mechanisms in insects.
-\newblock International Journal of Developmental Biology. 2002;46(1):75--79.
-
-\bibitem{Roco2015}
-Roco AS, Olmstead AW, Degitz SJ, Amano T, Zimmerman LB, Bullejos M.
-\newblock {Coexistence of Y, W, and Z sex chromosomes in /textit{Xenopus
-  tropicalis}}.
-\newblock PNAS. 2015;112(34):E4752--E4761.
-
-\bibitem{Holman:2015en}
-Holman L, Price TAR, Wedell N, Kokko H.
-\newblock {Coevolutionary dynamics of polyandry and sex-linked meiotic drive}.
-\newblock Evolution. 2015;69(3):709--720.
-
-\bibitem{Immler:2012tl}
-Immler S, Arnqvist G, Otto SP.
-\newblock {Ploidally antagonistic selection maintains stable genetic
-  polymorphism}.
-\newblock Evolution. 2012;66(1):55--65.
-
-\bibitem{Lloyd1977}
-Lloyd DG, Webb C.
-\newblock {Secondary sex characters in plants}.
-\newblock Botanical Review. 1977;43:177--216.
-
-\bibitem{Otto2014}
-Otto SP.
-\newblock {Selective maintenance of recombination between the sex chromosomes}.
-\newblock Journal of Evolutionary Biology. 2014;27:1431--1442.
+\bibitem{Tripathi:2009cw}
+Tripathi N, Hoffmann M, Willing EM, Lanz C, Weigel D, Dreyer C.
+\newblock {Genetic linkage map of the guppy, \textit{Poecilia reticulata}, and
+  quantitative trait loci analysis of male size and colour variation.}
+\newblock Proceedings of the Royal Society B: Biological Sciences.
+  2009;276(1665):2195--2208.
 
 \bibitem{Kallman1965}
 Kallman K.
@@ -447,34 +522,6 @@ Veyrunes F, Perez J.
 \newblock {X inactivation in a mammal species with three sex chromosomes}.
 \newblock Chromosoma. 2017;doi.org/10.1007/s00412-017-0657-2:1--7.
 \newblock doi:{10.1007/s00412-017-0657-2}.
-
-\bibitem{Sandler264382}
-Sandler G, Beaudry FEG, Barrett SCH, Wright SI.
-\newblock The effects of haploid selection on Y chromosome evolution in a
-  dioecious plant.
-\newblock bioRxiv. 2018;doi:{10.1101/264382}.
-
-\bibitem{Kafer2017}
-K{\"a}fer J, Marais GAB, Pannell J.
-\newblock {On the rarity of dioecy in flowering plants}.
-\newblock Molecular Ecology. 2017;26:1225--1241.
-
-\bibitem{Goldberg2017}
-Goldberg EE, Otto SP, Vamosi JC, Mayrose I, Sabath N, Ming R.
-\newblock {Macroevolutionary synthesis of flowering plant sexual systems}.
-\newblock Evolution. 2017;71:898--912.
-
-\bibitem{Lindholm:2002dw}
-Lindholm A, Breden F.
-\newblock {Sex chromosomes and sexual selection in poeciliid fishes.}
-\newblock The American Naturalist. 2002;160 Suppl 6:S214--24.
-
-\bibitem{Tripathi:2009cw}
-Tripathi N, Hoffmann M, Willing EM, Lanz C, Weigel D, Dreyer C.
-\newblock {Genetic linkage map of the guppy, \textit{Poecilia reticulata}, and
-  quantitative trait loci analysis of male size and colour variation.}
-\newblock Proceedings of the Royal Society B: Biological Sciences.
-  2009;276(1665):2195--2208.
 
 \bibitem{Rice:1996ke}
 Rice WR.
