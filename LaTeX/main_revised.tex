@@ -884,8 +884,8 @@ Nevertheless, the unlinked neo-Y can spread because males bearing it more often 
 
 We next consider the case where the new sex-determining mutation, $m$, causes sex to be determined probabilistically or by heterogeneous environmental conditions (environmental sex determination, ESD), with individuals carrying allele $m$ developing as females with probability $k$.
 %\textcolor{red}{In our deterministic model this means the fraction female is exactly $k$, even when $m$ is rare (exploring the effect of the variance induced by ESD would also be interesting).}
-In our deterministic model this means the fraction female is exactly $k$, even when $m$ is rare (i.e., ESD does not introduce any additional variance in sex determination). 
-Here, we do not assume that the environmental conditions that determine sex also differentially affect the fitness of males versus females. 
+In our deterministic model this means the fraction female in the subpopulation containing $m$ is exactly $k$, even when $m$ is rare (i.e., ESD does not introduce any additional variance in sex determination). 
+Here, we assume that the environmental conditions that determine sex does not differentially affect the fitness of males versus females. 
 Such correlations can favour environmental sex-determining systems by allowing each sex to be produced in the environment in which it has highest fitness; in the absence of these correlations, previous theory would predict that ESD is favoured when it produces more equal sex ratios than the ancestral system (see reviews by~\cite{Charnov:1982wg,Bull:1983vi,West:2009we}). %(e.g., maternal condition, mate quality, age, or host size)  
 
 The characteristic polynomial determining the leading eigenvalue (equations \ref{eq:recursions}) does not factor for ESD ($0<k<1$) as it does for a neo-Y ($k=0$) or neo-W ($k=1$) allele. 
@@ -907,7 +907,7 @@ This reduces to $\lambda_{Y'}^{(XY)}$ when $k=0$ and $\lambda_{W'}^{(XY)}$ when 
 %In addition, these novel sex-determination alleles equalize the sex ratio and therefore one might expect them to be favoured by Fisherian sex-ratio selection when the resident sex ratio is biased.
 %However, assuming weak selection, we find that the growth rate of a rare, dominant offspring-controlled neo-ESD allele that produces males or females with equal probability ($k=1/2$) is
 Of particular interest are ESD mutations that cause half of their carriers to develop as females and half as males ($k=1/2$), creating equal sex ratios.
-The spread of such ESD is determined by
+The spread of such mutations is determined by
 \begin{equation}
 \lambda_{ESD'}^{(XY)} =1+ \frac{1}{2}\frac{(\lambda_{Y'\rvert R=1/2}^{(XY)}-1) + (\lambda_{W'\rvert R=1/2}^{(XY)}-1)}{2} + O\left(\epsilon^3\right),
 %V_A \frac{r}{1-2r}  \frac{s_{f} \left( s^\male - 3 s^\female\right) }{8 {\left( s_{f} + s_{m} \right)}^2} t_{m}^2.
@@ -919,26 +919,27 @@ That is, recombination between the selected locus and the novel sex-determining 
 This is because sex is essentially randomized each generation, %as if the novel sex-determiner were on an unlinked site that half the time acts as a neo-W and half the time as a neo-Y.
 preventing associations from building up between alleles at locus $\mathbf{A}$ and sex. 
 Eq \eqref{eq:lambda_ESD} shows that the ESD mutation gets half of the fitness of a feminizing mutation (neo-W) and half of the fitness of a masculinizing mutation (neo-Y), but only has an effect one half of the time (the other half of the time it produces the same sex as the ancestral system would have). 
-As discussed above, $\lambda_{Y'\rvert R=1/2}^{(XY)}$ is necessarily less than one, but $\lambda_{W'\rvert R=1/2}^{(XY)}$ can be greater than one if there is haploid selection.
-That is, with haploid selection, an allele causing environmental-sex-determination can invade an ancestrally-XY system because it generates females that are either rare or have high fitness, in the same manner as a neo-W (likewise, ESD invades a ZW system for the same reasons a neo-Y can).
+As discussed above, $\lambda_{Y'\rvert R=1/2}^{(XY)}$ is necessarily less than one (cis-GSD transition), but $\lambda_{W'\rvert R=1/2}^{(XY)}$ (trans-GSD transition) can be greater than one if there is haploid selection (see Conclusion 2B).
+That is, with haploid selection, an allele causing environmental-sex-determination can invade an ancestrally-XY system because it generates females that are either rare or have high fitness, in the same manner as a neo-W (likewise, ESD invades a ZW system for the same reasons as a neo-Y can).
 %An important result from Eq \eqref{eq:lambda_ESD} is that ESD can invade if there is haploid selection. 
 %When evaluated at $R=1/2$, $\Lambda_{Y',XY}$ is necessarily less than one, but $\Lambda_{W',XY}$ can be greater than one if there is haploid selection, as discussed above. 
 %Previous studies where ESD is favoured have typically assumed that environmental conditions (e.g., maternal condition, mate quality, age, or host size) can differentially affect the fitness of males versus females such that ESD invades because it allows sex determination to depend on the environment \citep[reviewed in][]{Charnov:1982wg,Bull:1983vi,West:2009we}. 
 %Here, ESD mutations can spread because they generate females that are either rare or have high fitness, in the same manner as a neo-W. 
 
 Significantly, Eq \eqref{eq:lambda_ESD} is the same whether ESD is invading an ancestrally XY or ZW system (because $\lambda_{Y'}^{(XY)} = \lambda_{W'}^{(ZW)}$ and $\lambda_{W'}^{(XY)} = \lambda_{Y'}^{(ZW)}$).
-Thus, Fisherian sex-ratio selection alone does not easily explain GSD to ESD transitions.
-For example, when the ancestral sex-determining system is XY, but not ZW, the sex ratio is biased by male haploid selection.
-Nevertheless, ESD is equally likely to invade when it equalizes the zygotic sex ratio (through $\lambda_{W'}^{(XY)}$) as when it doesn't (through $\lambda_{Y'}^{(ZW)}$). 
+Thus, focusing solely on Fisherian selection to equalize the sex-ratio does not fully explain GSD to ESD transitions.
+For example, when the ancestral sex-determining system is XY the sex ratio is biased by male haploid selection.
+When the ancestral sex-determining system is ZW the sex ratio is not biased.
+Nevertheless, ESD is equally likely to invade both XY and ZW systems, equalizing the zygotic sex ratio in the former case (through $\lambda_{W'}^{(XY)}$) but not in the latter (through $\lambda_{Y'}^{(ZW)}$). 
 %This is again because haploid selection can facilitate the turnover of sex chromosomes either through sex-ratio biases or through associations between the new sex determining region with selected alleles. 
 %With weak selection, these two forces are nearly equal in strength. 
 In addition, we note that ESD may not invade, even if the sex ratio is initially biased (e.g., with drive in males only, $r<1/2$, $h^\female=h^\male$, and $s^\female s^\male<0$, then $\lambda_{W'}^{(XY)}<1$, see Table \ref{tab:specialcases}). 
-We conclude that, as with neo-W and neo-Y loci, associations with selected loci mean that
+We conclude that, as with neo-W and neo-Y loci:
 \vspace{0.5cm}
 
 \noindent\textit{Conclusion 4:}
 \textbf{
-transitions from genetic to environmental sex-determination are not straightforwardly predicted by selection to balance the zygotic sex ratio when haploid selection is present. 
+Transitions from genetic to environmental sex-determination are not straightforwardly predicted by selection to balance the zygotic sex ratio when haploid selection is present. 
 }
 %\textcolor{red}{[new result]}
 
