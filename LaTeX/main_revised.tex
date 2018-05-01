@@ -705,7 +705,7 @@ Assuming selection is weak relative to recombination, van Doorn and Kirkpatrick~
 An equivalent analysis is not possible where recombination rates are low. 
 However, numerical simulations demonstrate that, with tight sex linkage, neo-Y or neo-W alleles do not necessarily reach fixation in males or females, respectively, which can lead to the stable maintenance of a mixed sex-determining system, in which X, Y, and neo-W alleles all segregate (e.g., \nameref{fig:freqAll}B,C).
 
-From the arguments above we conclude that
+From the arguments above and in \nameref{app:inv_cond} we conclude that
 \vspace{0.5cm}
 
 \noindent\textit{Conclusion 2A:}
@@ -717,14 +717,14 @@ Such transitions can lead to polymorphic sex-determination systems.
 \textcolor{red}{[consistent with special case of Kozielska et al 2010]}
 \vspace{0.5cm} 
 
-\nameref{app:inv_cond}) shows that Conclusion 2A holds with or without haploid selection, and further demonstrates that
+\nameref{app:inv_cond} shows that Conclusion 2A holds with or without haploid selection and further demonstrates that
 \vspace{0.5cm}
 
 \noindent\textit{Conclusion 2B:}
 \textbf{
-With tight linkage between a selected locus and the ancestral sex-determining locus ($r\approx0$), haploid selection can drive trans-GSD transitions (XY $\leftrightarrow$ ZW) that weaken sex-linkage ($r<R$), even when selection is sexually-antagonistic with directional selection in each diploid sex.
-These trans-GSD transitions are driven by selection to equalize the sex ratio.
-As in Conclusion 2A, such transitions potentially shift sex determination to a different chromosome ($R=1/2$) and can lead to polymorphic sex-determination systems.}
+With tight linkage between a haploid selected locus and the ancestral sex-determining locus ($r\approx0$), trans-GSD transitions (XY $\leftrightarrow$ ZW) can be driven by selection to better specialize on the ancestrally-non-heterogametic sex and/or sex-ratio selection.
+Such transitions reduce sex ratio bias.
+}
 \textcolor{red}{[consistent with special case of Kozielska et al 2010]}
 
 \subsection*{Loose linkage with the ancestral sex-determining region}
@@ -775,7 +775,7 @@ This implies the following two conclusions:
 %This implies, 
 %\vspace{0.5cm}
 \noindent\textit{Conclusion 3B:}\
-\textbf{New sex-determining alleles (causing trans-GSD transitions, XY $\leftrightarrow$ ZW) can spread even if they arise less closely linked with a locus that experiences selection than the ancestral-sex-determining locus is ($r<R$), requiring haploid selection and some initial sex-linkage ($r<1/2$) as necessary conditions.}
+\textbf{New sex-determining alleles (causing trans-GSD transitions, XY $\leftrightarrow$ ZW) can spread even if they arise less closely linked with a locus that experiences selection than the ancestral-sex-determining locus is ($r<R$), requiring haploid selection and some initial sex-linkage ($r<1/2$).}
 \textcolor{red}{[consistent with examples in Ubeda et al 2015]}  
 \vspace{0.5cm}
 
@@ -943,7 +943,7 @@ That is, recombination between the selected locus and the novel sex-determining 
 This is because sex is essentially randomized each generation, %as if the novel sex-determiner were on an unlinked site that half the time acts as a neo-W and half the time as a neo-Y.
 preventing associations from building up between alleles at locus $\mathbf{A}$ and sex. 
 Eq \eqref{eq:lambda_ESD} shows that the ESD mutation gets half of the fitness of a feminizing mutation (neo-W) and half of the fitness of a masculinizing mutation (neo-Y), but only has an effect one half of the time (the other half of the time it produces the same sex as the ancestral system would have). 
-As discussed above, $\lambda_{Y'\rvert R=1/2}^{(XY)}$ is necessarily less than one (cis-GSD transition), but $\lambda_{W'\rvert R=1/2}^{(XY)}$ (trans-GSD transition) can be greater than one if there is haploid selection (see Conclusion 2B).
+As discussed above, $\lambda_{Y'\rvert R=1/2}^{(XY)}$ is necessarily less than one (cis-GSD transition), but $\lambda_{W'\rvert R=1/2}^{(XY)}$ (trans-GSD transition) can be greater than one if there is haploid selection (see Conclusion 3B).
 That is, with haploid selection, an allele causing environmental-sex-determination can invade an ancestrally-XY system because it generates females that are either rare or have high fitness, in the same manner as a neo-W (likewise, ESD invades a ZW system for the same reasons a neo-Y can).
 %An important result from Eq \eqref{eq:lambda_ESD} is that ESD can invade if there is haploid selection. 
 %When evaluated at $R=1/2$, $\Lambda_{Y',XY}$ is necessarily less than one, but $\Lambda_{W',XY}$ can be greater than one if there is haploid selection, as discussed above. 
@@ -984,9 +984,9 @@ Transitions from genetic to environmental sex-determination are not straightforw
 \section*{Discussion}
 
 New sex-determination systems are typically expected to spread when they equalise the sex ratio and/or when they increase linkage with loci that experience sex-differences in selection~\cite{Blaser2012, vanDoorn2014re}.
-In accordance with the latter mechanism, we find that sex-differences in selection at the haploid stage can favour trans-GSD transitions that tighten sex-linkage (Conclusion 2A). %, as exemplified in~\cite{Ubeda:2015fx} for ESD-GSD transitions. 
-However, we also find that trans-GSD transitions can be favoured in cases where linkage with the sex-determining locus is actually weakened (Conclusions 1A-1C \& 2B, Fig \ref{fig:SexAntagTighter} \& \ref{fig:regionplots}), especially when there is haploid selection (Conclusion 2B, Figs \ref{fig:Combination_Centimorgans} \& \ref{fig:SexRatioBad}). 
-Furthermore, we show that the spread of new sex-determination systems is not dominated by selection to balance the sex ratio (Conclusions 3 \& 4, Fig \ref{fig:SexRatioBad}). 
+In accordance with the latter mechanism, we find that sex-differences in selection at the haploid stage can favour trans-GSD transitions that tighten sex-linkage (Conclusion 3A). %, as exemplified in~\cite{Ubeda:2015fx} for ESD-GSD transitions. 
+However, we also find that trans-GSD transitions can be favoured in cases where linkage with the sex-determining locus is actually weakened (Conclusions 2A, 2B \& 3B, Fig \ref{fig:SexAntagTighter} \& \ref{fig:regionplots}), especially when there is haploid selection (Conclusion 3B, Figs \ref{fig:Combination_Centimorgans} \& \ref{fig:SexRatioBad}). 
+Furthermore, we show that the spread of new sex-determination systems is not dominated by selection to balance the sex ratio (Conclusions 4A \& 4B, Fig \ref{fig:SexRatioBad}). 
 
 %We find that the spread of new sex-determining systems cannot be simply predicted from their effect on the sex ratio. 
 On one hand, sex-ratio biases caused by haploid selection can facilitate trans-GSD transitions or transitions from genetic to environmental sex determination~\cite{Kozielska:2010vm}. 
@@ -1000,7 +1000,7 @@ Indeed, transitions between sex-determining systems can generate stronger sex-ra
 %For example, in an ancestral ZW system, haploid selection in males can allow a linked neo-Y to invade, despite the fact that it creates a male-biased sex ratio because the neo-Y becomes associated with the driven allele (Fig \ref{fig:SexRatioBad}A).
 %\textcolor{blue}{and figure 1, where the end of one panel is the same as the beginning of another, however, this figure may change).}
 %What we would like to stress is that sex-ratio selection alone cannot predict when new sex-determining systems can evolve.
-Significantly, with weak selection, we find that there is no difference in conditions allowing XY to ZW and ZW to XY transitions (Conclusion 3) %, indicating that transitions in sex determination are not predominantly predicted by their effect on the sex ratio (i.e., the sex-ratio bias created by male haploid selection facilitates the spread of a neo-W allele into an XY system to the same degree that male haploid selection drives the spread of a neo-Y into a ZW system with a 1:1 sex ratio). 
+Significantly, with weak selection, we find that there is no difference in conditions allowing XY to ZW and ZW to XY transitions (Conclusion 4A) %, indicating that transitions in sex determination are not predominantly predicted by their effect on the sex ratio (i.e., the sex-ratio bias created by male haploid selection facilitates the spread of a neo-W allele into an XY system to the same degree that male haploid selection drives the spread of a neo-Y into a ZW system with a 1:1 sex ratio). 
 %An asymmetry can develop when sex-linkage is tight (e.g., Fig \ref{fig:Combination_Centimorgans} near -25cM and 25cM) but under most circumstances we do not predict asymmetry between XY to ZW and ZW to XY transitions despite the presence/absence of sex-ratio selection. 
 even when haploid selection always acts in the same sex (e.g., males).  
 That is, the sex-ratio bias created by male haploid selection facilitates the spread of a neo-W allele into an XY system to the same degree that male haploid selection drives the spread of a neo-Y into a ZW system with a 1:1 sex ratio.
@@ -1045,7 +1045,7 @@ Future empirical studies could look for evidence of haploid selection acting on 
 
 New sex-determining alleles have previously been shown to spread when they arise in linkage with loci that experience sex differences in selection because beneficial associations build up between alleles that determine sex and alleles that are favoured in that sex~\cite{vanDoorn:2007eu,vanDoorn:2010hu,Ubeda:2015fx,Muralidhar2018}. 
 In support of this hypothesis, researchers have identified genes on recently derived sex chromosomes that might be under sexually-antagonistic selection~\cite{Lindholm:2002dw,Tripathi:2009cw,Ser:2010iq}. 
-However, we show that, if selected loci are tightly linked to the ancestral sex-determining locus, they can drive trans-GSD transitions which reduce sex-linkage (Conclusions 1A-1C \& 2B), thus widening the range of genomic locations that could be driving observed trans-GSD transitions.
+However, we show that, if selected loci are tightly linked to the ancestral sex-determining locus, they can drive trans-GSD transitions which reduce sex-linkage (Conclusions 2A, 2B, \& 3B), thus widening the range of genomic locations that could be driving observed trans-GSD transitions.
 In addition, we find that polymorphic sex determining systems (X, Y, and neo-W alleles all segregating) can be maintained when a selected locus is tightly linked to the ancestral sex-determining system (e.g., \nameref{fig:freqAll}B and \nameref{fig:freqAll}C), which is not possible with loose linkage~\cite{vanDoorn:2010hu}. 
 These conclusions apply in cases with or without haploid selection. 
 
@@ -1089,10 +1089,10 @@ It should be noted, however, that the dynamics of sex-determining alleles with v
 \section*{Conclusion}
 
 We have shown that tight sex-linkage and haploid selection can drive previously unexpected transitions between sex-determining systems.
-In particular, both can select for new sex-determining loci that are more loosely linked to loci under selection (Conclusions 1A-1C \& 2B). 
-In addition, haploid selection can cause transitions in GSD analogous to those caused by purely sexually-antagonistic selection, eliminating the need for differences in selection between male and female diploids (Conclusion 2A).
+In particular, both can select for new sex-determining loci that are more loosely linked to loci under selection (Conclusions 2A, 2B \& 3B). 
+In addition, haploid selection can cause transitions in GSD analogous to those caused by purely sexually-antagonistic selection, eliminating the need for differences in selection between male and female diploids (Conclusion 2B \& 3B).
 We conclude that haploid selection should be considered as a pivotal factor driving transitions between sex-determining systems. 
-Further, transitions involving haploid selection can be driven by sex-ratio selection or cause sex-ratio biases to evolve; to leading order, selection to balance the sex ratio and the benefits of hitch-hiking with haploid selected alleles are of equal magnitude (Conclusions 3 \& 4). 
+Further, transitions involving haploid selection can be driven by sex-ratio selection or cause sex-ratio biases to evolve; to leading order, selection to balance the sex ratio and the benefits of hitch-hiking with haploid selected alleles are of equal magnitude (Conclusions 4A \& 4B). 
 Overall, our results suggest several new scenarios under which new sex-determining systems are favoured, which could help to explain why the evolution of sex-determining systems is so dynamic. 
 
 % For figure citations, please use "Fig" instead of "Figure".
