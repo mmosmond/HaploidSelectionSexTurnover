@@ -122,19 +122,19 @@
 
 \subsection*{Invasion conditions}
 
-A rare neo-Y or neo-W allele, $m$, will spread in an XY sex-determining system when the leading eigenvalue, $\lambda_m^{(XY)}$, of the Jacobian matrix derived from the eight mutant recursion equations (given by \ref{eq:recursions}c,d,g,h), evaluated at the ancestral equilibrium, is greater than one.
-However, because a neo-Y (neo-W) is always in males (females) and is epistatically dominant to the ancestral sex-determining locus, the characteristic polynomial factors into two quadratics times $(\lambda_m^{(XY)})^4$.  
+A rare sex-determining allele, $m$, will spread in an XY sex-determining system when the leading eigenvalue, $\lambda_m^{(XY)}$, of the Jacobian matrix derived from the eight mutant recursion equations (given by \ref{eq:recursions}c,d,g,h), evaluated at the ancestral equilibrium, is greater than one.
+Because a neo-Y (neo-W) is always in males (females) and is epistatically dominant to the ancestral sex-determining locus, the characteristic polynomial factors into two quadratics times $(\lambda_m^{(XY)})^4$, which greatly simplifies analysis.  
 One quadratic governs the change in the frequency of the new sex determination factor associated with the $A$ and $a$ allele frequencies, summing across backgrounds at the old sex-determining locus (i.e., summing haplotypes bearing the original X and Y alleles). 
 %It is the largest root of this quadratic that determines the spread of the new $m$ allele (see details in \nameref{file:Mathematica}).  
 The second quadratic describes the dynamics of the difference in the $m$-$A$ and $m$-$a$ haplotypes between X and Y backgrounds.  
 Asymptotically, this difference is constrained to grow at a rate equal to or less than the sum while the $m$ allele is rare, because the frequencies can never become negative. 
-We therefore focus on the leading eigenvalue, $\lambda_m^{(XY)}$, which is the largest root of the first quadratic $f(x) = x^2+ b x + c = 0$, as described in the text (details in \nameref{file:Mathematica}).  
+We therefore focus on the leading eigenvalue, $\lambda_m^{(XY)}$, which is the largest root of the quadratic $f(x) = x^2+ b x + c = 0$,  where $b= - (\Lambda_{mA}^{(XY)} + \Lambda_{ma}^{(XY)})+(\chi_{mA}^{(XY)} + \chi_{ma}^{(XY)})$ and $c = (\Lambda_{mA}^{(XY)} - \chi_{mA}^{(XY)}) (\Lambda_{ma}^{(XY)} - \chi_{ma}^{(XY)}) - \chi_{mA}^{(XY)} \chi_{ma}^{(XY)}$ (details in \nameref{file:Mathematica}), see Table \ref{tab:haplotype_growth}.  
 
 When $R=0$ the two roots are $\Lambda_{mA}^{(XY)}$ and $\Lambda_{ma}^{(XY)}$, and the leading eigenvalue is the larger of the two.
 When $R>0$ then $f(\Lambda_{mA}^{(XY)})$ and $f(\Lambda_{ma}^{(XY)})$ are of opposite signs, and the leading eigenvalue must fall between these two quantities (details in \nameref{file:Mathematica}). %(the Perron-Frobenius theorem guarantees that the largest eigenvalue is positive, unique, and real).  
 Thus, $\lambda_m^{(XY)}>1$ if both $\Lambda_{mA}^{(XY)}>1$ and $\Lambda_{ma}^{(XY)}>1$; similarly, $\lambda_m^{(XY)}<1$ if both $\Lambda_{mA}^{(XY)}<1$ and $\Lambda_{ma}^{(XY)}<1$.
 If only one haplotypic growth rate is greater than one ($\Lambda_{ma}^{(XY)}<1<\Lambda_{mA}^{(XY)}$ or $\Lambda_{mA}^{(XY)}<1<\Lambda_{ma}^{(XY)}$), then $\lambda_m^{(XY)}$ is greater than one when condition \eqref{eq:lambdasGen} is met. 
-Thus, the invasion of a new sex-determining allele is determined by the haplotypic growth rates ($\Lambda_{mj}^{(XY)}$ terms), which do not account for loss due to recombination, and the rates at which recombination between the $\mathbf{M}$ and $\mathbf{A}$ loci breaks apart these haplotypes ($\chi_{mj}^{(XY)}$).
+Thus, the invasion of a new sex-determining allele is determined by the haplotypic growth rates ($\Lambda_{mj}^{(XY)}$ terms), which do not account for loss due to recombination, and the dissociative force that breaks apart these haplotypes by recombination ($\chi_{mj}^{(XY)}$). 
 For tight linkage between the ancestral sex-determining locus ($\mathbf{X}$) and the selected locus ($\mathbf{A}$) we can calculate these terms explicitly (see below).
 For weak selection we approximate the leading eigenvalue with a Taylor series. 
 The leading eigenvalue for any $k$ is given up to order $\epsilon^2$ by Eq \eqref{eq:lambda_ESD_k}.
@@ -144,7 +144,7 @@ The leading eigenvalue for any $k$ is given up to order $\epsilon^2$ by Eq \eqre
 Here, we explore the conditions under which a neo-W invades an XY system assuming that the $\mathbf{A}$ locus is initially in tight linkage with the ancestral sex-determining locus ($r \approx 0$). 
 We disregard neo-Y mutations, which never spread given that the ancestral population is at a stable equilibrium (see \nameref{file:Mathematica} for proof). 
 
-Starting with the simpler $(B)$ equilibrium, the terms that determine the leading eigenvalue are
+Starting with the simpler $(B)$ equilibrium, the haplotypic growth rates ($\Lambda_{mi}^{(XY)}$) and dissociative forces ($\chi_{mi}^{(XY)}$) are
 
 \begin{subequations}\label{Binvasion}
 \begin{align}
