@@ -9,14 +9,15 @@
 
 \noindent\textbf{Color code}:\\
 reviewers' words\\
-\textcolor{red}{to do/thoughts/questions between coauthors (temporary)}\\
+%\textcolor{red}{to do/thoughts/questions between coauthors (temporary)}\\
 \textcolor{blue}{authors' response}
 \\
 
 \noindent  Line numbers (L\#) in authors' comments refer to those in the revised PDF.
+\textcolor{red}{check line numbers}
 \\
 
-\noindent See diff.pdf for highlighted differences between the original submission and the revised version.
+\noindent See diff.pdf for all differences between the original submission and the revised version.
 
 \section{Reviewer 1}
 
@@ -28,20 +29,31 @@ The authors devise a satisfyingly simple genetic scenario, with one ancestral se
 The selected locus allows for three modes of selection: gametic selection (weighting the frequencies of gamete genotypes), the usual diploid viability selection, and meiotic drive (where heterozygotes may produce gametes that deviate from 50:50 proportions).  It should be noted that the model does not accommodate fertility or sexual selection.
 
 \noindent\paragraph{Response}
-\textcolor{red}{One could interpret our diploid selection as fertility selection, or am I missing something? Sexual selection does seem like a different model though, with for example, male fitnesses depending on female frequencies; a note such as "We do not consider sexual selection" in the paragraph beginning near L111 might do it?}
+\textcolor{blue}{
+One could interpret our diploid selection as a combination of viability and fertility selection, where fertility selection is independent of the mating partner.
+Fertility selection that depends on the mating pair and sexual selection require a different formulation.
+We now note this in the model section (L120-122):
+``Diploid males and females then experience viability and/or individual-based fertility selection, with relative fitnesses $w_{AA}^{\circ}$, $w_{Aa}^{\circ}$, and $w_{aa}^{\circ}$. 
+We do not consider fertility selection based on the mating pair or sexual selection."
+}
 
 \noindent\subsection{}
 The ``haplotypic growth rate" plays a really essential role in providing intuition about the results. Similarly the $\chi_{mi}^{(XY)}$ terms also are crucial.  I suggest giving a short name for the chi terms (currently they are the ``rate at which mutant haplotypes on background i recombine onto the other A locus background in heterozygotes"...).   The importance of these becomes clear in Table 2, but I wonder if there is a graphical way to make their meaning even clearer.  
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We now call these terms the ``dissociative force" as they break down linkage disequilibrium (L162). We have attempted various graphical schemes for representing the three loci in two sexes and the associations that evolve between them in various scenarios. However, apart from Fig 1, we found these too complicated or opaque to be useful. }
+\textcolor{blue}{
+We now call these terms the ``dissociative force" as they break down linkage disequilibrium (L161). 
+We have attempted various graphical schemes for representing the three loci in two sexes and the associations that evolve between them in various scenarios. 
+However, apart from Fig 1, we found these too complicated or opaque to be useful. 
+}
 
 \noindent\subsection{}
 It needs to be stated somewhere that the models are entirely deterministic, implying that the authors assume that the selective forces always exceed the force of random drift. It might be useful to discuss this a bit. Is there evidence that in no case has drift been a key factor in changes of sex determination system?  The discussion mentions alleles of weaker effect, but does not mention that in this scenario, models of weak effects would need to consider drift as well.
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We now mention that the model is deterministic, and hence ignores drift (L136). 
-When discussing the model limitations, we later mention a study on the effect of drift during trans-GSD transitions, which tend to drift in the direction of epistatically-dominant sex-determining loci: ``It should be noted, however, that the dynamics of sex-determining alleles with very weak effect will be influenced by genetic drift, which itself has been shown to cause trans-GSD transitions (Veller et al 2017)." (L511)}
+\textcolor{blue}{
+We now mention that the model is deterministic, and hence ignores drift (L127-128). 
+When discussing the model limitations at the end of the Discussion we now mention a study on the effect of drift during trans-GSD transitions, which tend to drift in the direction of epistatically-dominant sex-determining loci (L529-532): ``It should be noted, however, that the dynamics of sex-determining alleles with very weak effect will be influenced by genetic drift, which itself has been shown to cause trans-GSD transitions (Veller et al 2017)."}
 
 \noindent\subsection{}
 A glitch appears in the section ``Loose linkage with the ancestral sex-determining region" on line 270, where the text reads, ``To leading order in selection, the leading eigenvalues are..."
@@ -62,7 +74,7 @@ I am not certain of this, but it seems that a potentially important difference b
 
 \noindent\paragraph{Response}
 \textcolor{blue}{In our deterministic model (where the number of binomial trials is infinite), the variance in the fraction male is 0 with ESD, as it is with GSD. 
-We now mention this on L392: ``In our deterministic model this means the fraction female is exactly $k$, even when $m$ is rare (exploring the effect of the variance induced by ESD would also be interesting)."
+We now mention this (L373-375): ``In our deterministic model this means the fraction female in the subpopulation containing $m$ is exactly $k$, even when $m$ is rare (i.e., ESD does not introduce any additional variance in sex determination)."
  }
 
 \noindent\subsection{}
@@ -81,16 +93,16 @@ I think the introduction could be simplified so that the context of the study is
 
 \noindent\paragraph{Response}
 \textcolor{blue}{
-Thank you for these very constructive suggestions. We have simplified the introduction according to the suggested format. 
+Thank you for these very constructive suggestions. We have simplified the introduction according to the suggested format: 
 \begin{enumerate}
-\item{The first paragraph discusses how common transitions are, and now mentions that recent empirical evidence is making this increasingly apparent (lines XXX)}
-\item{The second and third paragraphs lay out the theories thought to drive transitions in sex-determination, as suggested, (1) selection to stabilize the sex ratio, and (2) linkage associations between alleles favoured in one sex and the alleles that determine that sex. }
-\item{Connecting to point (2), we then found it useful to introduce one novel aspect of our model - we consider variation that is very tightly linked to the ancestral sex-determining locus and find the surprising result that transitions in which linkage is reduced can be favoured.}
-\item{Next, we introduce our most significant model feature, haploid selection, which we present as an evolutionary problem (as suggested by reviewer 1) in light of (1) and (2). }
-\item{The sixth paragraph then describes previous studies that have included haploid selection (see also reviewer 3 recommendations). These studies suggest that (1) and (2) are both very important with haploid selection}
-\item{Finally, we lay out our main results in this context. This makes it clear that our general model is necessary to determine the important forces driving transitions in sex determination. We particularly highlight the unexpected conclusions that our model allows us to reach. }
+\item[1.]{The first paragraph discusses how common transitions are, and now mentions that recent empirical evidence is making this increasingly apparent. (L2-20)}
+\item[2-3.]{The second and third paragraphs lay out the two major mechanisms thought to drive transitions in sex-determination, (1) selection to stabilize the sex ratio, and (2) linkage associations between alleles favoured in one sex and the alleles that determine that sex. (L21-29, L30-38) }
+\item[4.]{Connecting to point (2), we then found it useful to introduce one novel aspect of our model -- we consider a selected locus that is very tightly linked to the ancestral sex-determining locus and find the surprising result that transitions in which linkage is reduced can be favoured. (L39-48)}
+\item[5.]{Next, we introduce the most significant model feature, haploid selection, which we present as an evolutionary problem (as suggested by reviewer 1) in light of (1) and (2). (L49-56) }
+\item[6.]{The sixth paragraph then describes previous studies that have included haploid selection (see also reviewer 3 recommendations). These studies suggest that (1) and (2) are both very important with haploid selection and point to the major limitations in solving the evolutionary puzzle. (L57-69)}
+\item[7.]{Finally, we lay out our main results in this context. This makes it clear that our general model is necessary to determine the important forces driving transitions in sex determination. We particularly highlight the unexpected conclusions that our model allows us to reach. (L70-83)}
 \end{enumerate}
-To accommodate these changes, we have moved any discussion of empirical evidence for haploid selection to the discussion. 
+To accommodate these changes, we have moved the discussion of empirical evidence for haploid selection to the discussion (L441-454). 
 }
 
 \noindent\subsection{}
@@ -107,18 +119,21 @@ One tactic for including analytical details which specialists will want to see, 
 \noindent\paragraph{Response}
 \textcolor{blue}{
 %We now give 3 main conclusions at the end of the introduction (L69) which echo those mentioned by the reviewer (looser linkage can evolve, equal selection to increase or decrease the sex ratio, ESD does not always invade biased sex ratio; all of which suggest haploid selection makes conditions for transitions more permissive).
-We now give 4 main conclusions in the results, in the style of Orr 1998:\\
-%(1) transitions are determined by both sex-ratio selection and selection on associated alleles,\\
-%(2) cis- and trans-GSD transitions are qualitatively different,\\
-(1A) ancestrally-tight sex-linkage allows looser sex-linkage to evolve in trans-GSD transitions (with or without haploid selection),\\
-(1B) haploid selection allows looser sex-linkage to evolve in trans-GSD transitions,\\
-(2) transitions can occur when new sex-determining alleles increase linkage with haploid selected loci,\\
-(3) when selection is weak relative to recombination, sex-ratio selection is exactly equal in magnitude to the selection imposed by associations with selected alleles, and\\
-(4) transitions from genetic to environmental sex-determination are not straightforwardly predicted by selection to balance the zygotic sex ratio when haploid selection is present.
-\vspace{0.25cm}\\
-As (1A), (1B), and (2) have some antecedents in the literature, we discuss these immediately below each conclusion. 
+Following this advice, we now highlight our main conclusions in the results section in the style of Orr 1998:
+\begin{enumerate}
+\item[(1A)] ancestrally-tight sex-linkage allows trans-GSD transitions but not cis-GSD transitions (L228-230)
+\item[(1B)] with ancestrally-tight sex-linkage, trans-GSD transitions (which weaken sex-linkage and can lead to polymorphic sex determination systems) are driven by selection to better specialize on the ancestrally-non-heterogametic sex (L282-286)
+\item[(1C)] with ancestrally-tight sex-linkage, haploid selection can spur trans-GSD transitions (which weaken sex-linkage and equalize the sex-ratio) even when selection is sexually-antagonistic in diploids  (L288-293)
+\item[(2A)] when selection is weak relative to ancestral sex-linkage, cis- or trans-GSD transitions can occur when the new sex-determining allele increases linkage with selected loci (L324-326)
+\item[(2B)] when selection is weak relative to ancestral sex-linkage, haploid selection allows trans-GSD transitions to occur even when the new sex-determining allele decreases linkage with the selected locus (L327-330)
+\item[(3)] when selection is weak relative to ancestral sex-linkage, sex-ratio selection is exactly equal in magnitude to the selection imposed by associations with selected alleles (and thus transitions can increase or decrease the sex-ratio bias) (L350-353)
+\item[(4)] transitions from genetic to environmental sex-determination are not straightforwardly predicted by selection to balance the zygotic sex ratio when haploid selection is present (L411-413)
+%\vspace{0.25cm}\\
+\end{enumerate}
+%As (1A), (1B), and (2) have some antecedents in the literature, we discuss these immediately below each conclusion. 
 %We also discuss, immediately below each conclusion, its novelty.
-%These are all new results, although (1A) was shown for the special case of $r=0$, $R=1/2$, and ploidally-antagonistic selection in Kozielska et al 2010, which we now mention immediately below (1A). 
+%These are all new results, although (1A) was shown for the special case of $r=0$, $R=1/2$, and ploidally-antagonistic selection in Kozielska et al 2010, which we now mention immediately below (1A).
+\textcolor{red}{what is new and what is confirmatory?} 
 }
 
 \subsection{MINOR COMMENTS}
@@ -139,25 +154,25 @@ L12: missing a ``)"
 L35-37: sentence could use an edit for ease of reading.
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We have replaced ``Thus, if the population sex ratio is biased towards one sex, the average per-individual contribution of genetic material to the next generation from the opposite sex is greater" with ``Thus, if the sex ratio is biased, an individual of the rarer sex will, on average, contribute more genetic material to the next generation".}
+\textcolor{blue}{We have replaced ``Thus, if the population sex ratio is biased towards one sex, the average per-individual contribution of genetic material to the next generation from the opposite sex is greater" with ``Thus, if the sex ratio is biased, an individual of the rarer sex will, on average, contribute more genetic material to the next generation". (L26-28)}
 
 \noindent\subsubsection{}
 Immediately preceding the paragraph beginning line 44: It would be worth establishing the limitations of previous work. What exactly motivated you to do this mathematical modelling?
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We have rearranged and rewritten the introduction to better motivate our model (see Response 2.1). In particular, paragraphs 6 and 7 explain the previous attempts and our approach, respectively.}
+\textcolor{blue}{We have rearranged and rewritten the introduction to better motivate our model (see Response 2.1). In particular, paragraph 5 presents the role of haploid selection as an evolutionary puzzle and paragraph 6 explains the limitations of previous attempts to solve the puzzle. (L49-69)}
 
 \noindent\subsubsection{}
 L56-57: Rephrase for clarity "individual cases of meiotic drive are generally sex-limited, and exclusively effect male or female gametes". And on line 57, "sex specific" could be changed to "sex-limited".
 
 \noindent\paragraph{Response}
-\textcolor{blue}{Rewritten as suggested.}
+\textcolor{blue}{This section has been substantially rewritten. A roughly corresponding comment now reads: ``...haploid selection is typically sex-specific in that it usually occurs among gametes produced by one sex only." (L51-52)}
 
 \noindent\subsubsection{}
 Lines 80-81: This primary finding is completely aligned with the earlier views of theory that are summarized above. Are you sure you want to lead with this as the main emphasis of the study? It understates what is new.
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We have rewritten the introduction, as well as our main conclusions (see Responses 2.1 and 2.2).}
+\textcolor{blue}{We have rewritten the Introduction as well as our main conclusions in line with this reviewers major comments (see Responses 2.1 and 2.2).}
 
 \noindent\subsubsection{}
 M locus is dominant to X. How important is this assumption? Is this compatible with any data (e.g., on feminizing or masculinizing factors in Musca domestica)?
@@ -169,7 +184,7 @@ As discussed in the supplementary of van Doorn \& Kirkpatrick (2007, Nature), pa
 However, this reduction in parameter space is smooth and does not preclude transitions, meaning the qualitative conclusions are robust.
 Further, there are many systems in which one sex-determining allele is epistatically dominant.
 And finally, our Mathematica file allows for arbitrary epistatic dominance coefficients.
-We now discuss the empirical evidence for epistatic dominance, our general Mathematica file, and the analysis of van Doorn and Kirkpartick when introducing our model (L117).
+We now discuss the empirical evidence for epistatic dominance, our general Mathematica file, and the analysis of van Doorn and Kirkpartick when introducing our model. (L94-105)
 }
 %\textcolor{red}{This is obviously very important, and is commonly assumed (Kozielska et al. 2010, van Doorn and Kirkpatrick 2007, 2010). There are a large number of other possibilities (given 9 genotypes that determine 2 sexes, ie $2^9$), and it seems like these alternatives could either increase or decrease selection on the invader. van Doorn and Kirkpatrick don't give any motivation (from my quick skim), but Kozielska et al. cite the housefly (Musca domestica), where it seems a single W is epistatically dominant over any number of loci with Y alleles. Is this ``compatible" with our model?}
 %
@@ -191,13 +206,13 @@ Table 2: a footnote to the table would be useful in defining the terms in the eq
 L169-170. This statement makes sense, but I wonder when such an initial condition would arise, since invasion criteria are evaluated at an equilibrium state? What ancestral conditions lead to the equilibrium sex-ratio bias, upon which the invasion results are based? This is touched on later, but a statement up front will help to not leave the reader hanging.
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We have flipped the statement to talk about male biased sex-ratios instead, and mention that this is possible at equilibrium under the more familiar scenario of meiotic drive in males.}
+\textcolor{blue}{We have flipped the statement to talk about male biased sex-ratios instead, and mention that this is possible at equilibrium in an XY system under the more familiar scenario of meiotic drive in males. (L183-187)}
 
 \noindent\subsubsection{}
 L195: define the epsilon character, which has not appeared before, or specify the size of the selection parameters relative to recombination, since this is the key point of contrast (e.g., s $<<$ r).
 
 \noindent\paragraph{Response}
-\textcolor{blue}{We have replaced this instance of $\epsilon$ with the more familiar $s<<r$ style assumption. When we introduce $\epsilon$ in the weak selection section we now verbally explain that it is just a number that is much less than one.}
+\textcolor{blue}{We have replaced this instance of $\epsilon$ with the more familiar $s<<r$ style assumption (L210). When we introduce $\epsilon$ in the weak selection section we now verbally explain that it is just a number that is much less than one (L295-296).}
 
 \noindent\subsubsection{}
 Fig. 2, panel C. You might consider using log scale on the y-axis of the inset, since the blue and green curves do not really show.
@@ -232,10 +247,18 @@ The works of Kozielska 2014 and Ubeda 2015 model the combined effects of both ha
 
 \noindent\paragraph{Response}
 %\textcolor{red}{The abstract and summary still seem to be a little over-selling...}
-\textcolor{blue}{We have performed an extensive re-arrangement to improve the clarity of our writing, especially regarding the main results. 
-As described in Response 2.1 and below, we now provide a longer discussion of two papers suggested (Kozielska et al 2010 and Ubeda et al 2015), lines XXXX, and more precisely indicate which of our model features and results are new and unexpected in light of these previous results (e.g., Response 2.2 and lines XXXX).
-While related, these studies considered particular cases that we do not consider at length. For example, Ubeda et al 2015 consider ESD-GSD transitions. Nevertheless, these transitions involve increased linkage with a haploid selection locus, which is precedent for our conclusion 2A (where we consider GSD-GSD transitions). 
-Similarly, Kozielska et al (2010) involves a special case of GSD transitions during which linkage is reduced, which is somewhat similar to conclusion 2B. Nevertheless, the permissive parameter space should be considered surprising. Especially because their main conclusion involved the strong influence of sex-ratio selection, which is explicitly not a driver during many such transitions. In addition, our conclusions 3 and 4 are to show that sex-ratio selection is not an overwhelming force driving transitions in sex determination. 
+\textcolor{blue}{
+We have performed an extensive re-arrangement to improve the clarity of our writing, especially regarding the main results. 
+As described in Response 2.1 (point 6) and below, we now provide a prominent and longer discussion of Kozielska et al 2010 and Ubeda et al 2015 (L57-69) and more precisely indicate which of our model features and results are new and unexpected in light of these previous results (see Response 2.2).
+While related, these two studies considered particular cases that we do not consider at length. 
+For example, Ubeda et al consider ESD-GSD transitions. 
+Nevertheless, these transitions involve increased linkage with a haploid selected locus, which is precedent for our Conclusion 2A (which considers only GSD-GSD transitions).
+We now mention this in the Introduction (L59-61) and again in the Discussion (L432).  
+Similarly, Kozielska et al involves a special case of GSD transitions during which sex-linkage goes from perfect to none, which is is an extreme example of our Conclusion 2B.
+This is twice mentioned (L64-67, L237). 
+Despite this precedent, we find the permissive parameter space allowing GSD-GSD transitions surprising. 
+%Especially because their main conclusion involved the strong influence of sex-ratio selection, which is explicitly not a driver during many such transitions. 
+In addition, our Conclusions 3 and 4 reconcile Kozielska et al and Ubeda et al, explaining that sex-ratio selection is not an overwhelming force driving transitions in sex determination. 
 We believe that our new presentation makes the novel and unexpected features of our results much more apparent. 
 %To be clear, we do not claim to be the first to include both haploid and diploid selection to a model investigating the evolution of new sex-chromosomes and we do not consider the addition of sex-specific selection or analytical results for previously numerical models to be our most significant contributions (again, see Responses 2.1 and 2.2 and below for more detail on what these are). 
 }
@@ -244,39 +267,43 @@ We believe that our new presentation makes the novel and unexpected features of 
 The findings in [SOO] claimed to be surprising (``Surprisingly, we find that neither force (sex ratio selection nor associations with genes that have sex-specific effects) dominates the spread of new sex-determining systems alone.") ... [but this result is rather similar to those in Ubeda et al 2015]. 
 
 \noindent\paragraph{Response}
-\textcolor{blue}{Here, we were referring to the result that $\lambda_{W'}^{XY} = \lambda_{Y'}^{ZW}$ with haploid selection, even when sex-ratio biases evolve to become either stronger or weaker (e.g., $\lambda_{Y'}^{ZW}$ vs. $\lambda_{W'}^{XY}$ with $R<r$ and male meiotic drive) or when sex-ratio biases are either present or absent (e.g., $\lambda_{W'}^{XY}$ vs. $\lambda_{Y'}^{ZW}$ with $r<1/2$, $R=1/2$, and male meiotic drive). The Ubeda et al. (2015) step 2 result shows that associations with a haploid selected locus can favour a new sex-determining allele despite causing biased sex ratios. Nevertheless, it was difficult for us to intuit whether the presence/absence of ancestral sex-ratio bias would have a negligible or overwhelming effect on the evolution of new sex-determining alleles. For example, step 3 of Ubeda et al. (2015) involves the spread of a autosomal meiotic drive suppressor favoured by Fisherian sex-ratio selection and Kozielska et al. (2010) show that ancestral sex-ratio bias can favour new sex determining systems that balance the sex ratio (now discussed in the Introduction, lines 56-66). We found our result, that these forces are exactly equal (with selection weak relative to recombination), such that there is no difference between the propensity for XY-ZW or ZW-XY transitions, to be surprising.
-To clarify our meaning we have rephrased (in Author summary): ``Surprisingly, we find the two forces (sex-ratio selection and associations with genes that have sex-specific effects) will often be equally strong, and thus neither dominates the spread of new sex-determining systems alone." We believe that the re-framing of the introduction/discussion and the emphasis given to specific Conclusions 1-4 will also help to clarify this point over the rest of the paper. }
+\textcolor{blue}{
+Here we were referring to the result that $\lambda_{W'}^{XY} = \lambda_{Y'}^{ZW}$ with haploid selection, even when sex-ratio biases evolve to become either stronger or weaker (e.g., $\lambda_{Y'}^{ZW}$ vs. $\lambda_{W'}^{XY}$ with $R<r$ and male meiotic drive) or when sex-ratio biases are either present or absent (e.g., $\lambda_{W'}^{XY}$ vs. $\lambda_{Y'}^{ZW}$ with $r<1/2$, $R=1/2$, and male meiotic drive).  
+Step 2 in Ubeda et al 2015 shows that associations with a haploid selected locus can favour a new sex-determining allele despite causing biased sex ratios. 
+Nevertheless, it was difficult for us to intuit whether the presence/absence of ancestral sex-ratio bias would have a negligible or overwhelming effect on the evolution of new sex-determining alleles. 
+For example, step 3 of Ubeda et al involves the spread of an autosomal meiotic drive suppressor favoured by Fisherian sex-ratio selection and Kozielska et al 2010 show that ancestral sex-ratio bias can favour new sex determining systems that balance the sex ratio.
+These previous results are now discussed in the Introduction (L57-69). 
+We found our result, that these two forces are exactly equal (with selection weak relative to recombination), such that there is no difference between the propensity for XY-ZW or ZW-XY transitions, to be surprising.
+To clarify our meaning we have rephrased (in Author summary): ``Surprisingly, we find the two forces (selection to equalize the sex-ratio and the benefits of hitch-hiking with driven alleles that distort the sex ratio) will often be equally strong, and thus neither is sufficient to explain the spread of new sex-determining systems in every case." 
+We believe that the re-framing of the Introduction/Discussion and the emphasis given to specific Conclusions 1-4 will help to clarify this point throughout the paper.
+}
 
 \noindent\subsubsection{}
 \noindent and unexpected (``Even more unexpectedly, we find that, to spread, new sex-determining alleles do not necessarily have to arise in closer linkage with genes that are differentially selected in males and females"), are rather similar to those in Ubeda et al 2015. This is a problem that repeats itself over the paper 
 
 \noindent\paragraph{Response}
-\textcolor{blue}{The Ubeda et al 2015 results do indeed show that differential selection between male and female diploids is not required for new sex-determining alleles to spread; they show that a new genetic sex-determining allele can spread from ancestral ESD when it is linked to a locus that experiences sex-specific meiotic drive. 
-In this sentence, we were attempting to stress that new sex determining alleles can spread when they are \textit{less closely linked or completely unlinked} to loci under differential male/female haploid and/or diploid selection. 
+\textcolor{blue}{
+The Ubeda et al 2015 results do indeed show that differential selection between male and female diploids is not required for new sex-determining alleles to spread; they show that a new genetic sex-determining allele can spread from ancestral ESD when it is linked to a locus that experiences sex-specific meiotic drive. 
+In this sentence, we were attempting to stress that new sex determining alleles can spread when they are \textit{less closely linked or even completely unlinked} to loci under differential male/female haploid and/or diploid selection. 
 To our knowledge, this has only been shown for the special case of male meiotic drive in an ancestral XY system with $r=0$ and $R=1/2$ with a neo-W, which is driven by sex-ratio selection (Kozielska et al 2010). 
 We therefore found the large parameter space allowing invasion with $r<R$, sometimes in the absence of sex-ratio selection (or even in the absence of haploid selection), to be very unexpected.
+Nevertheless, we have rephrased (in Author Summary): ``We also find that new sex-determining alleles can spread despite being less closely linked to selected loci, driven by initially tight linkage or haploid selection." 
+The changes to the presentation of the Introduction and Results should also help to clarify this point further (see Responses 2.1 and 2.2).
+%We discuss the related results of Kozielska and Ubeda on lines 261 and 350.
 }
-\textcolor{blue}{To communicate this we have rephrased: ``Even more unexpectedly, we find that new sex-determining alleles can spread despite being less closely linked to selected loci under a wide range of conditions." 
-The changes to the presentation of the Introduction and Results should also help to clarify this point further (e.g., paragraph, lines 40-47, and more clearly highlighted conclusions on lines XXX; see Responses 2.1 and 2.2).  }
-\textcolor{blue}{We discuss the related results of Kozielska and Ubeda on lines 261 and 350.}
 
 \noindent\subsubsection{}
 For example in: Page 2. The authors claim that predominant theories of the evolution of sex-determining systems are two: sexually-antagonistic selection and sex-ratio selection. They ignore other two: inbreeding (Charlesworth 1978) and sex-different drive (Ubeda et al 2015). 
 
 \noindent\paragraph{Response}
 \textcolor{blue}{
-Charlesworth and Charlesworth 1978 (Am Nat and Heredity) discuss the role of inbreeding (and particularly inbreeding depression) in transitions from hermaphroditism to dioecy. 
-As noted on lines 468-472 (original submission), we have only considered GSD-GSD transitions and GSD-ESD transitions.
-For clarity, we have moved this description into the introduction (lines XXX). 
-In addition, where we draw a parallel between ESD and hermaphroditism on lines 451-455 XXX (revision), we now bring up the limitation that our model of ESD does not include inbreeding. }
-
-\textcolor{blue}{
-The line referred to used sexually-antagonistic selection as an example of ``selective differences between the sexes". 
-We believe the phrase 'selective differences between the sexes' includes sex-differences in drive (Ubeda et al 2015), which just occur during haploid rather than diploid selection (see also Response 3.2.6).
-}
-
-\textcolor{blue}{
-We have rephrased the line referred to here to clarify our focus on GSD: ``Predominant theories accounting for transitions between GSD systems by selection involve sex-ratio selection or selective differences between the sexes (e.g., sexually antagonistic selection)".
+First, we believe sex-differences in selection and sex ratio selection are two ``predominant" theories explaining sex-determination transitions. 
+Second, sexually-antagonistic selection was referred to as an example of ``selective differences between the sexes". 
+We believe the phrase 'selective differences between the sexes' includes sex-differences in drive (Ubeda et al 2015), which just occurs during haploid rather than diploid selection (see also Response 3.2.6).
+Finally, Charlesworth and Charlesworth 1978 (Am Nat and Heredity) discuss the role of inbreeding (and particularly inbreeding depression) in transitions from hermaphroditism to dioecy, without regard for genetic sex-determination. 
+As noted on lines 468-472 in the original submission, we have only considered GSD-GSD transitions and GSD-ESD transitions.
+For clarity, we have moved this description into the Introduction (L49-50). 
+In addition, where we draw a parallel between ESD and hermaphroditism (L468-476), we suggest future theory include inbreeding, haploid selection, and sex chromosomes. 
 }
 
 %\textcolor{blue}{
@@ -297,15 +324,13 @@ This would be the same model as Ubeda et al 2015 adding sex-specific viability.
 \noindent\paragraph{Response}
 \textcolor{blue}{
 As we now make clear, we do not look at the same situation as Ubeda et al 2015 and our contribution is not just to add sex-specific viability. 
-In particular, Ubeda starts from ESD. 
+In particular, Ubeda et al start from ESD. 
 Therefore, associations with an ancestral sex-determining locus cannot build up. 
-These lead to some of our most surprising results (e.g., haploid selection favours trans-GSD transitions for a wider variety of genomic locations than diploid selection alone; ESD does not invade despite initial sex-ratio bias). }
-\textcolor{blue}{
-%It is true that Ubeda et al 2015 is a special case of our model. 
-%However, Ubeda et al 2015 was primarily a numerical investigation, providing a less general treatment of this special case and developing less intuition.
-Further, our model and intuition-giving analytical solutions explore a much wider range of scenarios than the numerical results of Ubeda, allowing, for example, sex-specific selection (e.g., sex-antagonism) and various genomic arrangements (any order/linkage of the three loci).
-Our model is thus much more general and clarifies just when one should expect to see the numerical results of Ubeda et al 2015.
-We have rephrased to make this clear (after discussing Ubeda et al 2015, see Response 2.1): ``Here, we analytically find the conditions under which new GSD or ESD systems spread with generic linkage between the loci involved (and generic sex-specific haploid and diploid selection)." (L67-69).
+These lead to some of our most surprising results (e.g., haploid selection favours trans-GSD transitions for a wider variety of genomic locations than diploid selection alone; ESD does not invade despite initial sex-ratio bias).
+Further, our model and intuition-giving analytical solutions explore a much wider range of scenarios than the numerical results of Ubeda et al, allowing, for example, sex-specific selection (e.g., sex-antagonism) and various genomic arrangements (any order/linkage of the three loci).
+Our model is thus much more general and clarifies just when one should expect to see the numerical results of Ubeda et al.
+We have rephrased to make this clear (after discussing Ubeda et al 2015 in the Introduction, see Response 2.1; L70-74): ``Here, we analytically find the conditions under which new GSD or ESD systems spread in ancestral GSD systems with generic linkage between the loci involved and generic sex-specific haploid and diploid selection. 
+Doing so, we reconcile the results of Kozielska et al.\ (2010) and Ubeda et al.\ (2015) by showing when new GSD systems that increase \textit{or} decrease linkage with loci under haploid selection spread."
 }
 
 \noindent\subsubsection{}
@@ -316,7 +341,7 @@ This is a stretch and creates confusion. I consider selection acting on individu
 \noindent\paragraph{Response}
 \textcolor{blue}{In this study, we are referring to organisms, such as animals and angiosperms, in which the type of gamete depends on the sex of the diploid that produced it. In this respect, one could consider gametic selection among sperm, for example, to be a form of male-specific selection. However, as noted here, the dynamics of selection during gametic selection cannot be captured by a diploid selection coefficient, which is why we model selection upon haploid genotypes specifically in two ways. }
 \textcolor{blue}{
-We have attempted to clarify by expanding our explanation of the mating system and the way we model haploid selection (see Response 3.2).}
+We have attempted to clarify by expanding our explanation of the mating system and the way we model haploid selection (see Response 3.2 below).}
 
 \noindent\subsubsection{}
 Lines 70-71: ``In this respect, we might expect that haploid selection would affect transitions between sex-determining systems in a similar manner to sex-specific diploid selection (as explored in [31,32])" 
@@ -326,10 +351,10 @@ Following up my previous comment Ubeda 2015 explores this and shows that both fo
 \noindent\paragraph{Response}
 \textcolor{blue}{In the absence of sex-differences in selection it is true that antagonistic drive is not needed, but \textit{differences} in haploid selection between the sexes are needed (e.g., drive in only one sex, maintained by ploidally-antagonistic selection). 
 If drive was the same in both sexes, $\alpha^{m}=\alpha^{f}$ (and all other male/female selection terms also equal), we show that the new sex-determining allele would not invade (e.g., equation 2 and 3). 
-In this sense haploid selection is similar to sex-specific diploid selection, and together haploid and diploid selection determine the differences in male vs. female fitness, which can drive sex-determination transitions (see Response 3.2.4).
-This sentence meant to introduce the 'sex-specific' aspect of haploid selection in the way Ubeda et al (2015) considers it; i.e., associations with alleles favoured in one sex (or the gametes produced by that sex) should favour a new sex-determining allele.
-We have rephrased to make this clear: ``Therefore, one might expect new sex-determining systems to benefit from close linkage with haploid selected loci, as found for sex-differences in diploid selection" (L51-53).
-We now follow this sentence up with a paragraph that clarifies its meaning by comparing with the results of Kozielska et al (2010) and Ubeda et al (2015).}
+In this sense haploid selection is similar to sex-specific diploid selection, and together haploid and diploid selection determine the differences in male vs.\ female fitness, which can drive sex-determination transitions (see Response 3.2.4).
+This sentence meant to introduce the `sex-specific' aspect of haploid selection in the way Ubeda et al 2015 considers it; associations with alleles favoured in one sex (or the gametes produced by that sex) should favour a new sex-determining allele.
+We have rephrased to make this clear (L52-54): ``Therefore, one might expect new sex-determining systems to benefit from close linkage with haploid selected loci, as found for sex-differences in diploid selection."
+We now follow this sentence up with a paragraph that clarifies its meaning by comparing with the results of Kozielska et al 2010 and Ubeda et al 2015 (see Response 2.1).}
 
 \noindent\subsubsection{}
 Lines 77-78: ``It is not immediately clear how the spread of new sex-determining systems would be influenced by the combination of sex ratio biases and associations with haploid selected allele"
@@ -339,7 +364,7 @@ This is indeed the focus of Ubeda et al 2015.
 \noindent\paragraph{Response}
 \textcolor{blue}{While Ubeda et al 2015 did focus on sex ratio biases and haploid selected alleles, the system started with ESD, where there are no associations (see Response 3.1.4).
 Further, the restricted scope of that numerical study prevents us from generalizing beyond its special case (see Response 3.1.4).
-Lines 48-66 present a refurbished argument for why it is difficult to intuit the implications of haploid selection, while summarizing the results of Ubeda and Kozielska.
+We now present a refurbished argument for why it is difficult to intuit the implications of haploid selection while summarizing the results of Ubeda et al and Kozielska et al 2010 in the Introduction (see Response 2.1).
 }
 
 \noindent\subsubsection{}
@@ -347,19 +372,19 @@ I will not provide further examples, but it is surprising thatI the work of Ubed
 
 \noindent\paragraph{Response}
 \textcolor{blue}{Ubeda et al 2015 was already cited on line 396 of the original submission, where we mentioned that it showed that sex-ratio biases could become more severe during a transition.
-Nevertheless, we now discuss Ubeda et al 2015 in the introduction, results, and discussion (see Responses above).}
+Nevertheless, we now discuss Ubeda et al 2015 in the Introduction, Results, and Discussion (see Responses above).}
 
 \noindent\subsection{}
 In terms of modeling the distinction between meiotic drive and gametic competition is unnecessary and only complicates notation. Furthermore, from biological perspective the division seems blurry with molecular biologists considering that meiotic drive only happens in females and never in males and what is often called meiotic drive in males is gamete competition. I would suggest using a single parameter measuring transmission distortion.
 
 \noindent\paragraph{Response}
 \textcolor{blue}{We do not agree. 
-Given our definition of meiotic drive and gametic competition in the Introduction, the two processes are different.
+Given our definition of meiotic drive and gametic competition (L106-116), the two processes are different.
 In particular, meiotic drive is assumed to occur during meiosis, and thus is ``gametic competition" amongst the gametes produced by a single individual. 
 As such, meiotic drive can only have an effect in heterozygotes.
 Gametic competition on the other hand, is competition amongst all the gametes produced by one sex (e.g., pollen from many male plants).
 Thus allele frequency changes can occur by gametic competition even if all individuals were homozygous (as long as there is a polymorphism).
-We have rephrased our definitions in the Introduction to read: ``We use the term `meiotic drive' to refer to the biased (non-Mendelian) segregation of genotypes during gamete production (from one parent only) and the term `gametic competition' to refer to selection upon haploid genotypes within a gamete/gametophyte pool (from many parents)."
+We highlight these differences in the model section (L106-116).
 }
 
 
