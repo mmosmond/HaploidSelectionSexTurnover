@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{Bull:1983vi}
 Bull JJ.
@@ -323,6 +323,11 @@ Didion JP, Morgan AP, Yadgary L, Bell TA, McMullan RC, Ortiz~de Solorzano L,
 \newblock {R2d2 drives selfish genetic sweeps in the house mouse}.
 \newblock Molecular Biology and Evolution. 2016;33:1381--1395.
 
+\bibitem{Jaenike:2001vb}
+Jaenike J.
+\newblock {Sex chromosome meiotic drive}.
+\newblock Annual Review of Ecology and Systematics. 2001;32:25--49.
+
 \bibitem{Burt:2006}
 Burt A, Trivers R.
 \newblock {Genes in conflict: the biology of selfish genetic elements}.
@@ -363,18 +368,6 @@ Field DL, Pickup M, Barrett SCH.
   plants.}
 \newblock Evolution. 2013;67(3):661--672.
 
-\bibitem{Immler:2014im}
-Immler S, Hotzy C, Alavioon G, Petersson E, Arnqvist G.
-\newblock {Sperm variation within a single ejaculate affects offspring
-  development in Atlantic salmon}.
-\newblock Biology letters. 2014;10(2):20131040.
-
-\bibitem{Alavioon2017}
-Alavioon G, Hotzy C, Nakhro K, Rudolf S, Scofield DG, Zajitschek S, et~al.
-\newblock {Haploid selection within a single ejaculate increases offspring
-  fitness}.
-\newblock PNAS. 2017;114:8053--8058.
-
 \bibitem{Zheng:2001fi}
 Zheng Y, Deng X, Martin-DeLeon PA.
 \newblock {Lack of sharing of Spam1 (Ph-20) among mouse spermatids and
@@ -387,11 +380,50 @@ Vibranovski MD, Chalopin DS, Lopes HF, Long M, Karr TL.
   \emph{Drosophila melanogaster} spermatogenesis}.
 \newblock Genetics. 2010;186(1):431--433.
 
+\bibitem{Immler:2014im}
+Immler S, Hotzy C, Alavioon G, Petersson E, Arnqvist G.
+\newblock {Sperm variation within a single ejaculate affects offspring
+  development in Atlantic salmon}.
+\newblock Biology letters. 2014;10(2):20131040.
+
+\bibitem{Alavioon2017}
+Alavioon G, Hotzy C, Nakhro K, Rudolf S, Scofield DG, Zajitschek S, et~al.
+\newblock {Haploid selection within a single ejaculate increases offspring
+  fitness}.
+\newblock PNAS. 2017;114:8053--8058.
+
 \bibitem{Immler2018}
 Immler S, Otto SP.
 \newblock The evolutionary consequences of selection at the haploid gametic
   stage.
 \newblock The American Naturalist. In Press;.
+
+\bibitem{Tau2007}
+Tau Y, Araripe L, Kingan SB, Ke Y, Xiao H, Hartl DL.
+\newblock {A sex-ratio meiotic drive system in \textit{Drosophila simulans}.
+  II: an X-linked distorter}.
+\newblock PLoS Biology. 2007;5(11):e293.
+\newblock doi:{10.1371/journal.pbio.0050293}.
+
+\bibitem{Cocquet2012}
+Cocquet J, Ellis PJI, Mahadevaiah SK, Affara NA, Vaiman D, Burgoyne PS.
+\newblock {A genetic basis for a postmeiotic X versus Y chromosome intragenomic
+  conflict in the mouse}.
+\newblock PLoS Genetics. 2012;8(9):e1002900.
+\newblock doi:{10.1371/journal.pgen.1002900}.
+
+\bibitem{Helleu2016}
+Helleu Q, G{\'e}rard PR, Dubruille R, Ogereau D, Prud{\textquoteright}homme B,
+  Loppin B, et~al.
+\newblock Rapid evolution of a Y-chromosome heterochromatin protein underlies
+  sex chromosome meiotic drive.
+\newblock PNAS. 2016;113(15):4110--4115.
+\newblock doi:{10.1073/pnas.1519332113}.
+
+\bibitem{Bachtrog2018}
+Bachtrog D, Ellison C, Leonard C, Landeen E, Gibilisco L, Phadnis N.
+\newblock Rampant cryptic sex chromosome drive in Drosophila.
+\newblock bioRxiv. 2018;doi:{10.1101/324368}.
 
 \bibitem{Borg:2009jpa}
 Borg M, Brownfield L, Twell D.
@@ -449,6 +481,12 @@ K{\"a}fer J, Marais GAB, Pannell J.
 Goldberg EE, Otto SP, Vamosi JC, Mayrose I, Sabath N, Ming R.
 \newblock {Macroevolutionary synthesis of flowering plant sexual systems}.
 \newblock Evolution. 2017;71:898--912.
+
+\bibitem{Charlesworth1978}
+Charlesworth B, Charlesworth D.
+\newblock A Model for the Evolution of Dioecy and Gynodioecy.
+\newblock The American Naturalist. 1978;112(988):975--997.
+\newblock doi:{10.1086/283342}.
 
 \bibitem{Lindholm:2002dw}
 Lindholm A, Breden F.
