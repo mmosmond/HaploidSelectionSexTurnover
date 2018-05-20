@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{Bull:1983vi}
 Bull JJ.
@@ -20,6 +20,13 @@ Beukeboom LW, Perrin N.
 Bachtrog D, Mank JE, Peichel CL, Kirkpatrick M, Otto SP, Ashman TL, et~al.
 \newblock {Sex determination: why so many ways of doing it?}
 \newblock PLoS Biol. 2014;12(7):e1001899.
+
+\bibitem{Pennell2018}
+Pennell MW, Mank JE, Peichel CL.
+\newblock Transitions in sex determination and sex chromosomes across
+  vertebrate species.
+\newblock Molecular Ecology. 2018;0(0):1--14.
+\newblock doi:{10.1111/mec.14540}.
 
 \bibitem{Ming:2011iy}
 Ming R, Bendahmane A, Renner SS.
@@ -208,6 +215,17 @@ West S.
 \newblock {Sex allocation}.
 \newblock Princeton, NJ: Princeton University Press; 2009.
 
+\bibitem{Kozielska:2010vm}
+Kozielska M, Weissing FJ, Beukeboom LW, Pen I.
+\newblock {Segregation distortion and the evolution of sex-determining
+  mechanisms}.
+\newblock Heredity. 2010;104:100--112.
+
+\bibitem{Hamilton:1967ts}
+Hamilton WD.
+\newblock {Extraordinary sex ratios}.
+\newblock Science. 1967;156(3774):477--488.
+
 \bibitem{Mulcahy:1996ha}
 Mulcahy DL, Sari-Gorla M, Mulcahy GB.
 \newblock {Pollen selection - past, present and future}.
@@ -217,33 +235,6 @@ Mulcahy DL, Sari-Gorla M, Mulcahy GB.
 Joseph S, Kirkpatrick M.
 \newblock {Haploid selection in animals}.
 \newblock Trends in Ecology {\&} Evolution. 2004;19(11):592--597.
-
-\bibitem{Ubeda:2005gw}
-{\'U}beda F, Haig D.
-\newblock {On the evolutionary stability of Mendelian segregation.}
-\newblock Genetics. 2005;170(3):1345--1357.
-
-\bibitem{Lindholm:2016cw}
-Lindholm AK, Dyer KA, Firman RC, Fishman L, Forstmeier W, Holman L, et~al.
-\newblock {The ecology and evolutionary dynamics of meiotic drive.}
-\newblock Trends in Ecology {\&} Evolution. 2016;31(4):315--326.
-
-\bibitem{Kozielska:2010vm}
-Kozielska M, Weissing FJ, Beukeboom LW, Pen I.
-\newblock {Segregation distortion and the evolution of sex-determining
-  mechanisms}.
-\newblock Heredity. 2010;104:100--112.
-
-\bibitem{Ubeda:2015fx}
-{\'U}beda F, Patten MM, Wild G.
-\newblock {On the origin of sex chromosomes from meiotic drive.}
-\newblock Proceedings of the Royal Society B: Biological Sciences.
-  2015;282(1798):20141932.
-
-\bibitem{Hamilton:1967ts}
-Hamilton WD.
-\newblock {Extraordinary sex ratios}.
-\newblock Science. 1967;156(3774):477--488.
 
 \bibitem{Lalanne2004}
 Lalanne E, Michaelidis C, Moore JM, Gagliano W, Johnson A, Patel R, et~al.
@@ -281,6 +272,16 @@ Didion JP, Morgan AP, Yadgary L, Bell TA, McMullan RC, Ortiz~de Solorzano L,
   et~al.
 \newblock {R2d2 drives selfish genetic sweeps in the house mouse}.
 \newblock Molecular Biology and Evolution. 2016;33:1381--1395.
+
+\bibitem{Ubeda:2005gw}
+{\'U}beda F, Haig D.
+\newblock {On the evolutionary stability of Mendelian segregation.}
+\newblock Genetics. 2005;170(3):1345--1357.
+
+\bibitem{Lindholm:2016cw}
+Lindholm AK, Dyer KA, Firman RC, Fishman L, Forstmeier W, Holman L, et~al.
+\newblock {The ecology and evolutionary dynamics of meiotic drive.}
+\newblock Trends in Ecology {\&} Evolution. 2016;31(4):315--326.
 
 \bibitem{Borg:2009jpa}
 Borg M, Brownfield L, Twell D.
@@ -347,6 +348,12 @@ Alavioon G, Hotzy C, Nakhro K, Rudolf S, Scofield DG, Zajitschek S, et~al.
   fitness}.
 \newblock PNAS. 2017;114:8053--8058.
 
+\bibitem{Ubeda:2015fx}
+{\'U}beda F, Patten MM, Wild G.
+\newblock {On the origin of sex chromosomes from meiotic drive.}
+\newblock Proceedings of the Royal Society B: Biological Sciences.
+  2015;282(1798):20141932.
+
 \bibitem{Burt:2006}
 Burt A, Trivers R.
 \newblock {Genes in conflict: the biology of selfish genetic elements}.
@@ -387,6 +394,29 @@ Field DL, Pickup M, Barrett SCH.
   plants.}
 \newblock Evolution. 2013;67(3):661--672.
 
+\bibitem{Kallman1968}
+Kallman K.
+\newblock {Evidence for the existence of transformer genes for sex in the
+  telost \textit{Xiphphorus maculatus}}.
+\newblock Genetics. 1968;60:811--828.
+
+\bibitem{Dubendorfer2002}
+Dubendorfer A, Hediger M, Burghardt G, Bopp D.
+\newblock Musca domestica, a window on the evolution of sex-determining
+  mechanisms in insects.
+\newblock International Journal of Developmental Biology. 2002;46(1):75--79.
+
+\bibitem{Roco2015}
+Roco AS, Olmstead AW, Degitz SJ, Amano T, Zimmerman LB, Bullejos M.
+\newblock {Coexistence of Y, W, and Z sex chromosomes in /textit{Xenopus
+  tropicalis}}.
+\newblock PNAS. 2015;112(34):E4752--E4761.
+
+\bibitem{Holman:2015en}
+Holman L, Price TAR, Wedell N, Kokko H.
+\newblock {Coevolutionary dynamics of polyandry and sex-linked meiotic drive}.
+\newblock Evolution. 2015;69(3):709--720.
+
 \bibitem{Immler:2012tl}
 Immler S, Arnqvist G, Otto SP.
 \newblock {Ploidally antagonistic selection maintains stable genetic
@@ -403,6 +433,50 @@ Otto SP.
 \newblock {Selective maintenance of recombination between the sex chromosomes}.
 \newblock Journal of Evolutionary Biology. 2014;27:1431--1442.
 
+\bibitem{Jaenike:2001vb}
+Jaenike J.
+\newblock {Sex chromosome meiotic drive}.
+\newblock Annual Review of Ecology and Systematics. 2001;32:25--49.
+
+\bibitem{Immler2018}
+Immler S, Otto SP.
+\newblock The evolutionary consequences of selection at the haploid gametic
+  stage.
+\newblock The American Naturalist. In Press;.
+
+\bibitem{Tau2007}
+Tau Y, Araripe L, Kingan SB, Ke Y, Xiao H, Hartl DL.
+\newblock {A sex-ratio meiotic drive system in \textit{Drosophila simulans}.
+  II: an X-linked distorter}.
+\newblock PLoS Biology. 2007;5(11):e293.
+\newblock doi:{10.1371/journal.pbio.0050293}.
+
+\bibitem{Cocquet2012}
+Cocquet J, Ellis PJI, Mahadevaiah SK, Affara NA, Vaiman D, Burgoyne PS.
+\newblock {A genetic basis for a postmeiotic X versus Y chromosome intragenomic
+  conflict in the mouse}.
+\newblock PLoS Genetics. 2012;8(9):e1002900.
+\newblock doi:{10.1371/journal.pgen.1002900}.
+
+\bibitem{Helleu2016}
+Helleu Q, G{\'e}rard PR, Dubruille R, Ogereau D, Prud{\textquoteright}homme B,
+  Loppin B, et~al.
+\newblock Rapid evolution of a Y-chromosome heterochromatin protein underlies
+  sex chromosome meiotic drive.
+\newblock PNAS. 2016;113(15):4110--4115.
+\newblock doi:{10.1073/pnas.1519332113}.
+
+\bibitem{Bachtrog2018}
+Bachtrog D, Ellison C, Leonard C, Landeen E, Gibilisco L, Phadnis N.
+\newblock Rampant cryptic sex chromosome drive in Drosophila.
+\newblock bioRxiv. 2018;doi:{10.1101/324368}.
+
+\bibitem{Sandler264382}
+Sandler G, Beaudry FEG, Barrett SCH, Wright SI.
+\newblock The effects of haploid selection on Y chromosome evolution in a
+  dioecious plant.
+\newblock bioRxiv. 2018;doi:{10.1101/264382}.
+
 \bibitem{Kafer2017}
 K{\"a}fer J, Marais GAB, Pannell J.
 \newblock {On the rarity of dioecy in flowering plants}.
@@ -412,6 +486,12 @@ K{\"a}fer J, Marais GAB, Pannell J.
 Goldberg EE, Otto SP, Vamosi JC, Mayrose I, Sabath N, Ming R.
 \newblock {Macroevolutionary synthesis of flowering plant sexual systems}.
 \newblock Evolution. 2017;71:898--912.
+
+\bibitem{Charlesworth1978}
+Charlesworth B, Charlesworth D.
+\newblock A Model for the Evolution of Dioecy and Gynodioecy.
+\newblock The American Naturalist. 1978;112(988):975--997.
+\newblock doi:{10.1086/283342}.
 
 \bibitem{Lindholm:2002dw}
 Lindholm A, Breden F.
@@ -425,17 +505,18 @@ Tripathi N, Hoffmann M, Willing EM, Lanz C, Weigel D, Dreyer C.
 \newblock Proceedings of the Royal Society B: Biological Sciences.
   2009;276(1665):2195--2208.
 
+\bibitem{Roberts2009}
+Roberts RB, Ser JR, Kocher TD.
+\newblock Sexual conflict resolved by invasion of a novel xex determiner in
+  Lake Malawi cichlid fishes.
+\newblock Science. 2009;326(5955):998--1001.
+\newblock doi:{10.1126/science.1174705}.
+
 \bibitem{Kallman1965}
 Kallman K.
 \newblock {Genetics and Geography of Sex Determination in the Poeciliid Fish,
   \textit{Xiphphorus maculatus}}.
 \newblock Zoologica. 1965;50(13):151--190.
-
-\bibitem{Kallman1968}
-Kallman K.
-\newblock {Evidence for the existence of transformer genes for sex in the
-  telost \textit{Xiphphorus maculatus}}.
-\newblock Genetics. 1968;60:811--828.
 
 \bibitem{Volff2001}
 Volff JN, Schartl M.
