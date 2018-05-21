@@ -19,19 +19,19 @@ Beukeboom LW, Perrin N.
 \bibitem{Bachtrog:2014bx}
 Bachtrog D, Mank JE, Peichel CL, Kirkpatrick M, Otto SP, Ashman TL, et~al.
 \newblock {Sex determination: why so many ways of doing it?}
-\newblock PLoS Biol. 2014;12(7):e1001899.
+\newblock PLoS Biology. 2014;12(7):e1001899.
 
 \bibitem{Pennell2018}
 Pennell MW, Mank JE, Peichel CL.
 \newblock Transitions in sex determination and sex chromosomes across
   vertebrate species.
-\newblock Molecular Ecology. 2018;0(0):1--14.
+\newblock Molecular Ecology. 2018;Early Online.
 \newblock doi:{10.1111/mec.14540}.
 
 \bibitem{Ming:2011iy}
 Ming R, Bendahmane A, Renner SS.
 \newblock {Sex chromosomes in land plants}.
-\newblock Annu Rev Plant Biol. 2011;62(1):485--514.
+\newblock Annual Review of Plant Biology. 2011;62(1):485--514.
 
 \bibitem{Li:2011fm}
 Li J, Phillips RB, Harwood AS, Koop BF, Davidson WS.
@@ -50,7 +50,7 @@ Yano A, Nicol B, Jouanno E, Quillet E, Fostier A, Guyomard R, et~al.
 \bibitem{Vicoso:2015hf}
 Vicoso B, Bachtrog D.
 \newblock {Numerous transitions of sex chromosomes in Diptera.}
-\newblock PLoS Biol. 2015;13(4):e1002078.
+\newblock PLoS Biology. 2015;13(4):e1002078.
 
 \bibitem{Myosho:2012fv}
 Myosho T, Otake H, Masuyama H, Matsuda M, Kuroki Y, Fujiyama A, et~al.
@@ -139,7 +139,7 @@ Vandeputte M, Dupont-Nivet M, Chavanne H, Chatain B.
 \bibitem{Liew2012}
 Liew WC, Bartfai R, Lim Z, Sreeninvasan R, Siegfried KR, Orban L.
 \newblock {Polygenic sex determination system in Zebrafish}.
-\newblock Plos One. 2012;4:e34397.
+\newblock PLoS One. 2012;4:e34397.
 
 \bibitem{Wilson2014}
 Wilson CA, High SK, McCluskey BM, Amores A, Yan Y, Titus TA, et~al.
@@ -175,7 +175,6 @@ Holleley CE, O'Meally D, Sarre SD, Marshall~Graves JA, Ezaz T, Matsubara K,
 Blaser O, Grossen C, Neuenschwander S, Perrin N.
 \newblock {Sex-chromosome turnovers induced by deleterious mutation load}.
 \newblock Evolution. 2012;67:635--645.
-\newblock doi:{10.5061/dryad.pk14p}.
 
 \bibitem{vanDoorn2014re}
 van Doorn GS.
@@ -198,7 +197,7 @@ van Doorn GS, Kirkpatrick M.
 Muralidhar P, Veller C.
 \newblock {Sexual antagonism and the instability of environmental sex
   determination}.
-\newblock Nature Ecology and Evolution. 2018;doi.org/10.1038/s41559-017-0427-9.
+\newblock Nature Ecology and Evolution. 2018;2:343–351.
 
 \bibitem{Fisher:1930wy}
 Fisher R.
@@ -340,13 +339,13 @@ Vibranovski MD, Chalopin DS, Lopes HF, Long M, Karr TL.
 Immler S, Hotzy C, Alavioon G, Petersson E, Arnqvist G.
 \newblock {Sperm variation within a single ejaculate affects offspring
   development in Atlantic salmon}.
-\newblock Biology letters. 2014;10(2):20131040.
+\newblock Biology Letters. 2014;10(2):20131040.
 
 \bibitem{Alavioon2017}
 Alavioon G, Hotzy C, Nakhro K, Rudolf S, Scofield DG, Zajitschek S, et~al.
 \newblock {Haploid selection within a single ejaculate increases offspring
   fitness}.
-\newblock PNAS. 2017;114:8053--8058.
+\newblock Proceedings of the National Academy of Sciences. 2017;114:8053--8058.
 
 \bibitem{Ubeda:2015fx}
 {\'U}beda F, Patten MM, Wild G.
@@ -410,7 +409,8 @@ Dubendorfer A, Hediger M, Burghardt G, Bopp D.
 Roco AS, Olmstead AW, Degitz SJ, Amano T, Zimmerman LB, Bullejos M.
 \newblock {Coexistence of Y, W, and Z sex chromosomes in /textit{Xenopus
   tropicalis}}.
-\newblock PNAS. 2015;112(34):E4752--E4761.
+\newblock Proceedings of the National Academy of Sciences.
+  2015;112(34):E4752--E4761.
 
 \bibitem{Holman:2015en}
 Holman L, Price TAR, Wedell N, Kokko H.
@@ -442,7 +442,8 @@ Jaenike J.
 Immler S, Otto SP.
 \newblock The evolutionary consequences of selection at the haploid gametic
   stage.
-\newblock The American Naturalist. In Press;.
+\newblock The American Naturalist. In
+  Press;doi:{https://dx.doi.org/10.1086/698483}.
 
 \bibitem{Tau2007}
 Tau Y, Araripe L, Kingan SB, Ke Y, Xiao H, Hartl DL.
@@ -463,7 +464,8 @@ Helleu Q, G{\'e}rard PR, Dubruille R, Ogereau D, Prud{\textquoteright}homme B,
   Loppin B, et~al.
 \newblock Rapid evolution of a Y-chromosome heterochromatin protein underlies
   sex chromosome meiotic drive.
-\newblock PNAS. 2016;113(15):4110--4115.
+\newblock Proceedings of the National Academy of Sciences.
+  2016;113(15):4110--4115.
 \newblock doi:{10.1073/pnas.1519332113}.
 
 \bibitem{Bachtrog2018}
@@ -489,14 +491,13 @@ Goldberg EE, Otto SP, Vamosi JC, Mayrose I, Sabath N, Ming R.
 
 \bibitem{Charlesworth1978}
 Charlesworth B, Charlesworth D.
-\newblock A Model for the Evolution of Dioecy and Gynodioecy.
+\newblock A model for the evolution of dioecy and gynodioecy.
 \newblock The American Naturalist. 1978;112(988):975--997.
-\newblock doi:{10.1086/283342}.
 
 \bibitem{Lindholm:2002dw}
 Lindholm A, Breden F.
-\newblock {Sex chromosomes and sexual selection in poeciliid fishes.}
-\newblock The American Naturalist. 2002;160 Suppl 6:S214--24.
+\newblock {Sex chromosomes and sexual selection in poeciliid fishes}.
+\newblock The American Naturalist. 2002;160(S6):S214--24.
 
 \bibitem{Tripathi:2009cw}
 Tripathi N, Hoffmann M, Willing EM, Lanz C, Weigel D, Dreyer C.
@@ -510,11 +511,10 @@ Roberts RB, Ser JR, Kocher TD.
 \newblock Sexual conflict resolved by invasion of a novel xex determiner in
   Lake Malawi cichlid fishes.
 \newblock Science. 2009;326(5955):998--1001.
-\newblock doi:{10.1126/science.1174705}.
 
 \bibitem{Kallman1965}
 Kallman K.
-\newblock {Genetics and Geography of Sex Determination in the Poeciliid Fish,
+\newblock {Genetics and geography of sex determination in the poeciliid fish,
   \textit{Xiphphorus maculatus}}.
 \newblock Zoologica. 1965;50(13):151--190.
 
@@ -576,8 +576,7 @@ Saunders PA, Franco T, Sottas C, Maurice T, Guila G, Veyrunes F.
 \bibitem{Veyrunes2017}
 Veyrunes F, Perez J.
 \newblock {X inactivation in a mammal species with three sex chromosomes}.
-\newblock Chromosoma. 2017;doi.org/10.1007/s00412-017-0657-2:1--7.
-\newblock doi:{10.1007/s00412-017-0657-2}.
+\newblock Chromosoma. 2017;127(2):261--267.
 
 \bibitem{Rice:1996ke}
 Rice WR.
@@ -587,8 +586,8 @@ Rice WR.
 \bibitem{Charlesworth:2000cc}
 Charlesworth B, Charlesworth D.
 \newblock {The degeneration of Y chromosomes.}
-\newblock Philosophical transactions of the Royal Society of London Series B,
-  Biological sciences. 2000;355(1403):1563--1572.
+\newblock Philosophical Transactions of the Royal Society B: Biological
+  sciences. 2000;355(1403):1563--1572.
 
 \bibitem{Bachtrog:2006ed}
 Bachtrog D.
@@ -604,8 +603,7 @@ Marais GAB, Nicolas M, Bergero R, Chambrier P, Kejnovsky E, Mon{\'e}ger F,
 
 \bibitem{Veller2017}
 Veller C, Muralidhar P, Constable GWA, Nowak MA.
-\newblock Drift-Induced Selection Between Male and Female Heterogamety.
+\newblock Drift-induced selection between male and female heterogamety.
 \newblock Genetics. 2017;207(2):711--727.
-\newblock doi:{10.1534/genetics.117.300151}.
 
 \end{thebibliography}
