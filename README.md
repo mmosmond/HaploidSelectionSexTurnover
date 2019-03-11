@@ -1,6 +1,4 @@
-# PLOIDYSEXTURNOVER
-
-Haploid selection, sex ratio bias, and transitions between sex-determining systems
+# Haploid selection, sex ratio bias, and transitions between sex-determining systems
 
 Michael Scott, Matthew Osmond, Sally Otto
 
